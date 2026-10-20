@@ -1,0 +1,123 @@
+{
+  "overall_passed": true,
+  "verified_total_qa_pairs": 7078,
+  "subject_totals": {
+    "CHIM": 2469,
+    "BIO": 2914,
+    "FIS": 1695
+  },
+  "quiz_type_totals": {
+    "commentati": 1043,
+    "non_commentati": 3965,
+    "completamento": 2070
+  },
+  "checks": {
+    "exact_total_7078_parity": {
+      "passed": true,
+      "jsonl_count": 7078,
+      "json_count": 7078,
+      "csv_count": 7078
+    },
+    "all_84_subsections_exact_bijection": {
+      "passed": true,
+      "verified_subsections": 84,
+      "mismatches": []
+    },
+    "unique_ids_and_global_indexing": {
+      "passed": true,
+      "unique_ids": 7078
+    },
+    "non_empty_stems_and_page_provenance": {
+      "passed": true,
+      "empty_stems": [],
+      "missing_pages": []
+    },
+    "all_5008_mcqs_complete_and_distinct": {
+      "passed": true,
+      "total_mcqs": 5008,
+      "bad_options": [],
+      "bad_answers": [],
+      "unstripped_prefixes": [],
+      "unexpected_duplicate_options": [],
+      "documented_verbatim_book_typos": [
+        "CHIM-C01-NCOM-010",
+        "CHIM-C01-NCOM-069",
+        "CHIM-C02-NCOM-028",
+        "CHIM-C10-NCOM-038",
+        "CHIM-C12-NCOM-157",
+        "FIS-C01-NCOM-046",
+        "FIS-C03-NCOM-023"
+      ]
+    },
+    "all_2070_completamento_blanks_and_answers": {
+      "passed": true,
+      "total_completamento": 2070,
+      "missing_blanks": [],
+      "bad_answers": []
+    },
+    "all_1043_commentati_explanations": {
+      "passed": true,
+      "total_commentati": 1043,
+      "missing_or_short_explanations": []
+    },
+    "zero_running_header_footer_leakage": {
+      "passed": true,
+      "leaked_ids": []
+    },
+    "zero_decimal_comma_subscript_corruptions": {
+      "passed": true,
+      "count": 0,
+      "samples": []
+    },
+    "zero_unjoined_linebreak_hyphenations": {
+      "passed": true,
+      "count": 0,
+      "samples": []
+    },
+    "zero_adjacent_option_bleeds": {
+      "passed": true,
+      "count": 0,
+      "samples": []
+    },
+    "zero_resistance_ohm_misreads": {
+      "passed": true,
+      "count": 0,
+      "samples": []
+    },
+    "zero_mixed_superscript_glyphs": {
+      "passed": true,
+      "count": 0,
+      "samples": []
+    },
+    "clean_true_diagrams_and_all_explicit_visuals_covered": {
+      "passed": true,
+      "figure_count": 118,
+      "missing_explicit_visual_ids": [],
+      "orphan_files_on_disk": [],
+      "missing_files_on_disk": []
+    },
+    "all_7078_question_images_1to1_bijection": {
+      "passed": true,
+      "question_images_on_disk": 7078,
+      "expected_count": 7078,
+      "missing_field_ids": []
+    },
+    "anki_apkg_and_media_integrity": {
+      "passed": true,
+      "apkg_size_bytes": 34224437,
+      "apkg_size_mb": 32.64,
+      "sqlite_notes": 7078,
+      "sqlite_cards": 7078,
+      "distinct_subdecks": 84,
+      "embedded_media_files": 8264,
+      "referenced_card_images": 8264,
+      "missing_zip_media": [],
+      "missing_referenced_images": []
+    },
+    "zero_dark_or_blank_embedded_pngs": {
+      "passed": true,
+      "inspected_png_count": 8264,
+      "bad_pngs": []
+    }
+  }
+}
