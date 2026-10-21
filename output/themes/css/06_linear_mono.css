@@ -6,41 +6,12 @@ html, body, #qa {
   min-height: 100vh !important;
 }
 
-.sf-mode-pill {
-  position: fixed;
-  top: 8px;
-  right: 10px;
-  z-index: 99999;
-  appearance: none;
-  border: 1.5px solid rgba(17, 17, 17, 0.35);
-  background: rgba(15, 23, 42, 0.82);
-  color: #f8fafc;
-  width: 28px;
-  height: 28px;
-  border-radius: 999px;
-  font-size: 13px;
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  opacity: 0.72;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
-  transition: opacity 0.14s ease, transform 0.12s ease, background 0.14s ease;
-  user-select: none;
-}
-.sf-mode-pill:hover {
-  opacity: 1;
-  transform: scale(1.06);
-}
-
 .sf-canvas {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   margin: 0;
-  padding: 20px 14px 32px;
+  padding: 40px 14px 32px;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   text-align: left;
