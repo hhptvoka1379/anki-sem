@@ -1,0 +1,39 @@
+<div id="sf-canvas" class="sf-canvas">
+<button id="sf-theme-toggle" type="button" style="position:absolute;top:8px;left:8px;z-index:5;font-family:'Space Mono',monospace;font-weight:700;font-size:11px;padding:4px 9px;border:2px solid #111;background:#fef08a;color:#111;cursor:pointer;">DARK</button>
+<div class="wrap">
+  <div class="meta">
+    <span class="badge subj-{{SubjectCode}}">{{Subject}}</span>
+    <span class="meta-dim">Cap. {{ChapterNum}} — {{ChapterTitle}}</span>
+    <span class="meta-dim">• {{QuizTypeLabel}} #{{QuestionNum}} (p. {{BookPage}})</span>
+  </div>
+  <div class="stem">{{BackStemHTML}}</div>
+  {{#FigureHTML}}<div class="fig-box">{{FigureHTML}}</div>{{/FigureHTML}}
+  {{BackOptionsHTML}}
+  <div class="ans-banner">{{AnswerBannerHTML}}</div>
+  {{#ExplanationHTML}}<div class="expl-box"><strong>Spiegazione:</strong> {{ExplanationHTML}}</div>{{/ExplanationHTML}}
+  {{#QuestionScanHTML}}<details class="orig-scan"><summary>Scansione originale della domanda (p. {{BookPage}})</summary>{{QuestionScanHTML}}</details>{{/QuestionScanHTML}}
+  {{#SolutionScanHTML}}<details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{SolutionScanHTML}}</details>{{/SolutionScanHTML}}
+</div>
+</div>
+<script>
+(function() {
+  var canvas = document.querySelector('.sf-canvas');
+  var btn = document.getElementById('sf-theme-toggle');
+  if (!canvas || !btn) return;
+  function apply(dark) {
+    canvas.classList.toggle('sf-dark', dark);
+    btn.textContent = dark ? 'LIGHT' : 'DARK';
+    btn.style.background = dark ? '#18181b' : '#fef08a';
+    btn.style.color = dark ? '#fafafa' : '#111';
+    btn.style.borderColor = dark ? '#fafafa' : '#111';
+  }
+  var dark = false;
+  try { dark = localStorage.getItem('sf-theme') === 'dark'; } catch (e) {}
+  apply(dark);
+  btn.addEventListener('click', function() {
+    dark = !dark;
+    apply(dark);
+    try { localStorage.setItem('sf-theme', dark ? 'dark' : 'light'); } catch (e) {}
+  });
+})();
+</script>

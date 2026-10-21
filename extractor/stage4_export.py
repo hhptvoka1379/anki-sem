@@ -130,7 +130,14 @@ def stitch_question_slices_clean(slices: List[dict], get_page_gray) -> np.ndarra
 
 
 ANKI_CSS = """
-.card {
+html, body, #qa {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+}
+.card, .sf-canvas {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   box-sizing: border-box;
@@ -140,13 +147,14 @@ ANKI_CSS = """
   color: #1e293b;
   background-color: #f8fafc;
   margin: 0;
-  padding: 16px 14px 28px 14px;
+  padding: 40px 14px 28px 14px;
   text-align: left;
 }
-.card *, .card *::before, .card *::after {
+.card *, .card *::before, .card *::after,
+.sf-canvas *, .sf-canvas *::before, .sf-canvas *::after {
   box-sizing: border-box;
 }
-.nightMode.card, .night_mode .card {
+.nightMode.card, .night_mode .card, .sf-canvas.sf-dark {
   color: #f1f5f9;
   background-color: #0f172a;
 }
@@ -159,7 +167,7 @@ ANKI_CSS = """
   padding: 18px 20px;
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
 }
-.nightMode .wrap, .night_mode .wrap {
+.nightMode .wrap, .night_mode .wrap, .sf-canvas.sf-dark .wrap {
   background: #1e293b;
   border-color: #334155;
   box-shadow: none;
@@ -181,21 +189,21 @@ ANKI_CSS = """
 .subj-CHIM { background: #dbeafe; color: #1d4ed8; }
 .subj-BIO  { background: #dcfce7; color: #15803d; }
 .subj-FIS  { background: #fef3c7; color: #b45309; }
-.nightMode .subj-CHIM, .night_mode .subj-CHIM { background: #1e3a8a; color: #bfdbfe; }
-.nightMode .subj-BIO,  .night_mode .subj-BIO  { background: #14532d; color: #bbf7d0; }
-.nightMode .subj-FIS,  .night_mode .subj-FIS  { background: #78350f; color: #fde68a; }
+.nightMode .subj-CHIM, .night_mode .subj-CHIM, .sf-canvas.sf-dark .subj-CHIM { background: #1e3a8a; color: #bfdbfe; }
+.nightMode .subj-BIO,  .night_mode .subj-BIO,  .sf-canvas.sf-dark .subj-BIO  { background: #14532d; color: #bbf7d0; }
+.nightMode .subj-FIS,  .night_mode .subj-FIS,  .sf-canvas.sf-dark .subj-FIS  { background: #78350f; color: #fde68a; }
 .meta-dim {
   color: #64748b;
   font-weight: 500;
 }
-.nightMode .meta-dim, .night_mode .meta-dim { color: #94a3b8; }
+.nightMode .meta-dim, .night_mode .meta-dim, .sf-canvas.sf-dark .meta-dim { color: #94a3b8; }
 .stem {
   font-size: 17.5px;
   font-weight: 600;
   margin-bottom: 14px;
   color: #0f172a;
 }
-.nightMode .stem, .night_mode .stem { color: #f8fafc; }
+.nightMode .stem, .night_mode .stem, .sf-canvas.sf-dark .stem { color: #f8fafc; }
 .blank-slot {
   display: inline-block;
   min-width: 84px;
@@ -215,7 +223,7 @@ ANKI_CSS = """
   padding: 1px 8px;
   font-weight: 700;
 }
-.nightMode .blank-filled, .night_mode .blank-filled {
+.nightMode .blank-filled, .night_mode .blank-filled, .sf-canvas.sf-dark .blank-filled {
   background: #14532d;
   color: #bbf7d0;
   border-bottom-color: #4ade80;
@@ -236,15 +244,15 @@ ANKI_CSS = """
   background: #f8fafc;
   cursor: pointer;
 }
-.nightMode .opt, .night_mode .opt {
+.nightMode .opt, .night_mode .opt, .sf-canvas.sf-dark .opt {
   background: #0f172a;
   border-color: #334155;
 }
-.opt.user-picked {
+.opt.user-picked, .sf-canvas.sf-dark .opt.user-picked {
   border-color: #3b82f6;
   background: #eff6ff;
 }
-.nightMode .opt.user-picked, .night_mode .opt.user-picked {
+.nightMode .opt.user-picked, .night_mode .opt.user-picked, .sf-canvas.sf-dark .opt.user-picked {
   border-color: #60a5fa;
   background: #1e3a8a;
 }
@@ -253,7 +261,7 @@ ANKI_CSS = """
   background: #fef2f2;
   color: #991b1b;
 }
-.nightMode .opt.user-wrong, .night_mode .opt.user-wrong {
+.nightMode .opt.user-wrong, .night_mode .opt.user-wrong, .sf-canvas.sf-dark .opt.user-wrong {
   border-color: #f87171;
   background: #450a0a;
   color: #fecaca;
@@ -263,7 +271,7 @@ ANKI_CSS = """
   background: #f0fdf4 !important;
   font-weight: 600;
 }
-.nightMode .opt.correct, .night_mode .opt.correct {
+.nightMode .opt.correct, .night_mode .opt.correct, .sf-canvas.sf-dark .opt.correct {
   border-color: #4ade80 !important;
   background: #14532d !important;
   color: #f0fdf4 !important;
@@ -274,10 +282,10 @@ ANKI_CSS = """
   color: #475569;
 }
 .opt-letter::after { content: "."; }
-.nightMode .opt-letter, .night_mode .opt-letter { color: #cbd5e1; }
+.nightMode .opt-letter, .night_mode .opt-letter, .sf-canvas.sf-dark .opt-letter { color: #cbd5e1; }
 .opt.correct .opt-letter { color: #15803d; }
 .opt.correct .opt-letter::before { content: "✓ "; }
-.nightMode .opt.correct .opt-letter, .night_mode .opt.correct .opt-letter { color: #86efac; }
+.nightMode .opt.correct .opt-letter, .night_mode .opt.correct .opt-letter, .sf-canvas.sf-dark .opt.correct .opt-letter { color: #86efac; }
 .ans-banner {
   margin-top: 16px;
   padding: 12px 15px;
@@ -288,7 +296,7 @@ ANKI_CSS = """
   font-weight: 700;
   font-size: 16.5px;
 }
-.nightMode .ans-banner, .night_mode .ans-banner {
+.nightMode .ans-banner, .night_mode .ans-banner, .sf-canvas.sf-dark .ans-banner {
   background: #14532d;
   border-left-color: #4ade80;
   color: #f0fdf4;
@@ -302,7 +310,7 @@ ANKI_CSS = """
   font-size: 15px;
   line-height: 1.55;
 }
-.nightMode .expl-box, .night_mode .expl-box {
+.nightMode .expl-box, .night_mode .expl-box, .sf-canvas.sf-dark .expl-box {
   background: #0f172a;
   border-color: #334155;
 }
@@ -330,7 +338,8 @@ details.orig-scan summary {
 }
 """
 
-FRONT_TMPL = """
+FRONT_TMPL = """<div id="sf-canvas" class="sf-canvas">
+<button id="sf-theme-toggle" type="button" style="position:absolute;top:8px;left:8px;z-index:5;font-family:'Space Mono',monospace;font-weight:700;font-size:11px;padding:4px 9px;border:2px solid #111;background:#fef08a;color:#111;cursor:pointer;">DARK</button>
 <div class="wrap">
   <div class="meta">
     <span class="badge subj-{{SubjectCode}}">{{Subject}}</span>
@@ -342,6 +351,7 @@ FRONT_TMPL = """
   {{FrontOptionsHTML}}
   {{#QuestionScanHTML}}<details class="orig-scan"><summary>Scansione originale della domanda (p. {{BookPage}})</summary>{{QuestionScanHTML}}</details>{{/QuestionScanHTML}}
 </div>
+</div>
 <script>
 document.querySelectorAll('.opt').forEach(function(el) {
   el.addEventListener('click', function() {
@@ -349,9 +359,32 @@ document.querySelectorAll('.opt').forEach(function(el) {
   });
 });
 </script>
+<script>
+(function() {
+  var canvas = document.querySelector('.sf-canvas');
+  var btn = document.getElementById('sf-theme-toggle');
+  if (!canvas || !btn) return;
+  function apply(dark) {
+    canvas.classList.toggle('sf-dark', dark);
+    btn.textContent = dark ? 'LIGHT' : 'DARK';
+    btn.style.background = dark ? '#18181b' : '#fef08a';
+    btn.style.color = dark ? '#fafafa' : '#111';
+    btn.style.borderColor = dark ? '#fafafa' : '#111';
+  }
+  var dark = false;
+  try { dark = localStorage.getItem('sf-theme') === 'dark'; } catch (e) {}
+  apply(dark);
+  btn.addEventListener('click', function() {
+    dark = !dark;
+    apply(dark);
+    try { localStorage.setItem('sf-theme', dark ? 'dark' : 'light'); } catch (e) {}
+  });
+})();
+</script>
 """
 
-BACK_TMPL = """
+BACK_TMPL = """<div id="sf-canvas" class="sf-canvas">
+<button id="sf-theme-toggle" type="button" style="position:absolute;top:8px;left:8px;z-index:5;font-family:'Space Mono',monospace;font-weight:700;font-size:11px;padding:4px 9px;border:2px solid #111;background:#fef08a;color:#111;cursor:pointer;">DARK</button>
 <div class="wrap">
   <div class="meta">
     <span class="badge subj-{{SubjectCode}}">{{Subject}}</span>
@@ -366,6 +399,29 @@ BACK_TMPL = """
   {{#QuestionScanHTML}}<details class="orig-scan"><summary>Scansione originale della domanda (p. {{BookPage}})</summary>{{QuestionScanHTML}}</details>{{/QuestionScanHTML}}
   {{#SolutionScanHTML}}<details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{SolutionScanHTML}}</details>{{/SolutionScanHTML}}
 </div>
+</div>
+<script>
+(function() {
+  var canvas = document.querySelector('.sf-canvas');
+  var btn = document.getElementById('sf-theme-toggle');
+  if (!canvas || !btn) return;
+  function apply(dark) {
+    canvas.classList.toggle('sf-dark', dark);
+    btn.textContent = dark ? 'LIGHT' : 'DARK';
+    btn.style.background = dark ? '#18181b' : '#fef08a';
+    btn.style.color = dark ? '#fafafa' : '#111';
+    btn.style.borderColor = dark ? '#fafafa' : '#111';
+  }
+  var dark = false;
+  try { dark = localStorage.getItem('sf-theme') === 'dark'; } catch (e) {}
+  apply(dark);
+  btn.addEventListener('click', function() {
+    dark = !dark;
+    apply(dark);
+    try { localStorage.setItem('sf-theme', dark ? 'dark' : 'light'); } catch (e) {}
+  });
+})();
+</script>
 """
 
 
@@ -427,7 +483,7 @@ def run_stage4(
 
     master_css, master_qfmt, master_afmt = build_master_multitheme_bundle(ANKI_CSS)
     model = genanki.Model(
-        model_id=1134323212,
+        model_id=1134323214,
         name="Semestre Filtro — Studio & Esame",
         fields=[
             {"name": "ItemID"},
@@ -609,7 +665,7 @@ def run_stage4(
 
             note = genanki.Note(
                 model=model,
-                guid=genanki.guid_for("semestre-filtro-v4", item_id),
+                guid=genanki.guid_for("semestre-filtro-v5", item_id),
                 fields=[
                     item_id,
                     qb["subject"],
