@@ -407,6 +407,7 @@ def run_verification(output_dir: Path = Path("/home/user/anki-sem/output")) -> D
                 t04_guids = {r[0] for r in c2.execute("SELECT guid FROM notes").fetchall()}
                 t04_dids = {r[0] for r in c2.execute("SELECT DISTINCT did FROM cards").fetchall()}
                 m2_raw, d2_raw = c2.execute("SELECT models, decks FROM col").fetchone()
+                sample_flds_raw = c2.execute("SELECT flds FROM notes WHERE flds LIKE '%opt-letter%' LIMIT 1").fetchone()[0]
                 m2 = json.loads(m2_raw)
                 c2.close()
             m2_obj = next(iter(m2.values()))
@@ -417,11 +418,20 @@ def run_verification(output_dir: Path = Path("/home/user/anki-sem/output")) -> D
             t04_ok = (
                 n2 == EXPECTED_TOTAL_UNIQUE
                 and len(t_media) == len(media_map)
-                and "RISO.ZINE // REG.04" in m2_qfmt
-                and "RISO.ZINE // REG.04" in m2_afmt
-                and "#fde047" in m2_css
+                and "+ RISO.ZINE // REG.04 +" in m2_css
+                and "#fef08a" in m2_css
+                and "16px 16px" in m2_css
+                and "#fffef9" in m2_css
                 and "#ff2e93" in m2_css
-                and "#121018" in m2_css
+                and "#facc15" in m2_css
+                and 'class="sf-canvas"' in m2_qfmt
+                and 'class="sf-canvas"' in m2_afmt
+                and 'class="wrap"' in m2_qfmt
+                and 'class="wrap"' in m2_afmt
+                and ".nightMode" not in m2_css
+                and ".opt-key" not in m2_css
+                and '<span class="opt-letter">A</span><span class="opt-body">' in sample_flds_raw
+                and "min-height: 100vh" in m2_css
                 and m2_css.count("{") == m2_css.count("}")
                 and not PUB_ANY_RE.search(m2_raw)
                 and not PUB_ANY_RE.search(d2_raw)

@@ -20,7 +20,7 @@
     "explicit_card_overrides_applied": 704,
     "items_with_text_or_key_changes": 7078,
     "answer_keys_changed": 42,
-    "explanations_repaired": 217,
+    "explanations_repaired": 215,
     "completamento_repaired": 2070,
     "pre_dedup_items": 7078,
     "deduplicated_redundant_items_removed": 130,
@@ -4902,7 +4902,7 @@
       },
       "answer": "C",
       "answer_text": "Il numero quantico secondario dipende dal numero quantico magnetico",
-      "explanation": "il numero quantico secondario / ha valori che dipendono dal numero quantico principale n (f = 1,2,...n- Il edè sempre inferiore a n stesso. I] numero quantico di spin può essere + %. L'unica affermazione falsa è la C, in quanto in realtà è il numero quantico magnetico m, a dipendere da / (m, = -1,-/+ 1, ...,0,..+#).",
+      "explanation": "il numero quantico secondario / ha valori che dipendono dal numero quantico principale n (f = 1,2,...n- 1) edè sempre inferiore a n stesso. I] numero quantico di spin può essere + %. L'unica affermazione falsa è la C, in quanto in realtà è il numero quantico magnetico m, a dipendere da / (m, = -1,-/+ 1, ...,0,..+#).",
       "question_image": "question_images/CHIM-C02-COMM-023.png",
       "figure_files": [],
       "anki_deck": "Semestre Filtro::01 Chimica e Propedeutica Biochimica::Cap. 02 - Il modello atomico: chimica e orbitali::1. Quiz commentati"
@@ -59765,7 +59765,7 @@
       "qnum": 34,
       "question_book_page": 313,
       "answer_book_page": 601,
-      "question": "Lo schema rappresenta il ciclo dell'ATP. La freccia II rappresenta:",
+      "question": "Lo schema rappresenta il ciclo dell'ATP. La freccia ① rappresenta:",
       "options": {
         "A": "la condensazione dell'ATP",
         "B": "l'idrolisi dell'ATP",
@@ -97518,7 +97518,7 @@
       },
       "answer": "D",
       "answer_text": "Formazione + Trasporto + Attracco > Fusione",
-      "explanation": "Il ciclo segue la sequenza ordinata: (Il formazione della vescicola, (2) trasporto tramite citoscheletro e motori molecolari, (3) attracco al compartimento bersaglio, (4) fusione con la membrana.",
+      "explanation": "Il ciclo segue la sequenza ordinata: (1) formazione della vescicola, (2) trasporto tramite citoscheletro e motori molecolari, (3) attracco al compartimento bersaglio, (4) fusione con la membrana.",
       "question_image": "question_images/BIO-C05-COMM-107.png",
       "figure_files": [],
       "anki_deck": "Semestre Filtro::02 Biologia e Genetica::Cap. 05 - Le strutture cellulari: biogenesi, morfologia e funzioni::1. Quiz commentati"
@@ -98860,7 +98860,7 @@
       "qnum": 12,
       "question_book_page": 485,
       "answer_book_page": 647,
-      "question": "Il trasporto attivo mediato di una sostanza attraverso la membrana cellulare: (Il richiede ATP; (2) richiede un trasportatore; (3) avviene per osmosi; (4) avviene secondo gradiente di concentrazione. Riguardo alle precedenti affermazioni:",
+      "question": "Il trasporto attivo mediato di una sostanza attraverso la membrana cellulare: (1) richiede ATP; (2) richiede un trasportatore; (3) avviene per osmosi; (4) avviene secondo gradiente di concentrazione. Riguardo alle precedenti affermazioni:",
       "options": {
         "A": "è corretta solo la (2)",
         "B": "è corretta solo la (3)",
@@ -164559,7 +164559,7 @@
       "qnum": 7,
       "question_book_page": 834,
       "answer_book_page": 899,
-      "question": "Un fascio di luce che si propaga in acqua (indice di rifrazione n, = 4/3) incide sulla superficie in quiete di una piscina all'aperto (indice di rifrazione dell'aria n, = Il con un angolo di 60° rispetto alla normale. Calcolando l'angolo del raggio rifratto rispetto alla normale, si deduce che:",
+      "question": "Un fascio di luce che si propaga in acqua (indice di rifrazione n, = 4/3) incide sulla superficie in quiete di una piscina all'aperto (indice di rifrazione dell'aria n, = 1) con un angolo di 60° rispetto alla normale. Calcolando l'angolo del raggio rifratto rispetto alla normale, si deduce che:",
       "options": {
         "A": "esso è di 60°",
         "B": "esso è di 45°",

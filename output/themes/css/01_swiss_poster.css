@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Mono:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap');
-html, body {
-  min-height: 100% !important;
-  margin: 0;
+html, body, #qa {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  min-height: 100vh !important;
 }
-.card {
+
+.sf-canvas {
   min-height: 100vh;
+  width: 100%;
   margin: 0;
   padding: 20px 14px 32px;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   text-align: left;
 }
-.card *, .card *::before, .card *::after {
+.sf-canvas *, .sf-canvas *::before, .sf-canvas *::after {
   box-sizing: border-box;
 }
 .fig-box {
@@ -37,12 +41,12 @@ details.orig-scan summary {
   padding: 4px 0;
 }
 
-html, body, .card {
-  background-color: #e6e3dc !important;
+.sf-canvas {
+  background: #e6e3dc;
   color: #0d0d0d;
   font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-html.nightMode, body.nightMode, body.night_mode, .card.nightMode, .night_mode .card { background-color: #0c0c0c !important; color: #f2f0eb; }
+.sf-canvas.sf-dark { background: #0c0c0c; color: #f2f0eb; }
 .swiss-sheet {
   max-width: 780px;
   margin: 0 auto;
@@ -50,20 +54,20 @@ html.nightMode, body.nightMode, body.night_mode, .card.nightMode, .night_mode .c
   border: 2px solid #0d0d0d;
   position: relative;
 }
-.nightMode .swiss-sheet { background: #141414; border-color: #f2f0eb; }
+.sf-canvas.sf-dark .swiss-sheet { background: #141414; border-color: #f2f0eb; }
 .swiss-topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 16px;
   border-bottom: 2px solid #0d0d0d;
-  font-family: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-.nightMode .swiss-topbar { border-bottom-color: #f2f0eb; }
+.sf-canvas.sf-dark .swiss-topbar { border-bottom-color: #f2f0eb; }
 .swiss-red-dot {
   display: inline-block;
   width: 10px;
@@ -84,19 +88,19 @@ html.nightMode, body.nightMode, body.night_mode, .card.nightMode, .night_mode .c
   justify-content: space-between;
   background: #ece8df;
 }
-.nightMode .swiss-rail { background: #1b1b1b; border-right-color: #f2f0eb; }
+.sf-canvas.sf-dark .swiss-rail { background: #1b1b1b; border-right-color: #f2f0eb; }
 @media (max-width: 600px) {
   .swiss-rail { border-right: none; border-bottom: 2px solid #0d0d0d; flex-direction: row; align-items: baseline; }
 }
 .swiss-big-num {
-  font-family: "Archivo Black", "Arial Black", "Inter", sans-serif;
+  font-family: "Archivo Black", "Inter", sans-serif;
   font-size: 46px;
   line-height: 0.92;
   color: #e11d18;
   letter-spacing: -0.04em;
 }
 .swiss-meta-stack {
-  font-family: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 10px;
   line-height: 1.5;
   text-transform: uppercase;
@@ -113,8 +117,8 @@ html.nightMode, body.nightMode, body.night_mode, .card.nightMode, .night_mode .c
 }
 .blank-slot { display: inline-block; min-width: 90px; border-bottom: 3px solid #e11d18; color: transparent; }
 .blank-filled { background: #e11d18; color: #ffffff; padding: 1px 8px; font-weight: 800; }
-.options, .opts { display: flex; flex-direction: column; border-top: 1.5px solid #0d0d0d; margin-top: 14px; }
-.nightMode .options, .opts { border-top-color: #f2f0eb; }
+.options { display: flex; flex-direction: column; border-top: 1.5px solid #0d0d0d; margin-top: 14px; }
+.sf-canvas.sf-dark .options { border-top-color: #f2f0eb; }
 .opt {
   display: flex;
   align-items: baseline;
@@ -123,32 +127,32 @@ html.nightMode, body.nightMode, body.night_mode, .card.nightMode, .night_mode .c
   border-bottom: 1px solid #0d0d0d;
   transition: background 0.1s ease, color 0.1s ease;
 }
-.nightMode .opt { border-bottom-color: #383838; }
+.sf-canvas.sf-dark .opt { border-bottom-color: #383838; }
 .opt:hover { background: #0d0d0d; color: #f4f1ea; }
-.nightMode .opt:hover { background: #f2f0eb; color: #0d0d0d; }
-.opt-letter, .opt-key {
-  font-family: "Archivo Black", "Arial Black", sans-serif;
+.sf-canvas.sf-dark .opt:hover { background: #f2f0eb; color: #0d0d0d; }
+.opt-letter {
+  font-family: "Archivo Black", sans-serif;
   font-size: 14px;
   color: #e11d18;
   min-width: 24px;
 }
-.opt:hover .opt-letter, .opt-key { color: #ff5a52; }
+.opt:hover .opt-letter { color: #ff5a52; }
 .opt.user-picked { background: #0d0d0d; color: #f4f1ea; }
-.opt.user-picked .opt-letter, .opt.user-picked .opt-key, .opt-key { color: #facc15; }
+.opt.user-picked .opt-letter { color: #facc15; }
 .opt.user-wrong { background: #fee2e2; color: #7f1d1d; text-decoration: line-through; }
-.opt.correct, .opt.opt-correct { background: #e11d18; color: #ffffff; font-weight: 700; }
-.opt.correct .opt-letter, .opt.opt-correct .opt-key, .opt.correct .opt-key, .opt-key { color: #ffffff; }
+.opt.correct { background: #e11d18; color: #ffffff; font-weight: 700; }
+.opt.correct .opt-letter { color: #ffffff; }
 .ans-banner {
   margin-top: 18px;
   padding: 12px 14px;
   background: #0d0d0d;
   color: #f4f1ea;
-  font-family: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
 }
-.nightMode .ans-banner { background: #e11d18; color: #ffffff; }
+.sf-canvas.sf-dark .ans-banner { background: #e11d18; color: #ffffff; }
 .expl-box {
   margin-top: 14px;
   padding: 14px 16px;
@@ -157,5 +161,5 @@ html.nightMode, body.nightMode, body.night_mode, .card.nightMode, .night_mode .c
   font-size: 14px;
   line-height: 1.58;
 }
-.nightMode .expl-box { background: #1e1e1e; color: #e5e5e5; }
+.sf-canvas.sf-dark .expl-box { background: #1e1e1e; color: #e5e5e5; }
 .fig-box img, details.orig-scan img { border: 1.5px solid #0d0d0d; padding: 6px; }

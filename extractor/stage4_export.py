@@ -131,6 +131,9 @@ def stitch_question_slices_clean(slices: List[dict], get_page_gray) -> np.ndarra
 
 ANKI_CSS = """
 .card {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 16.5px;
   line-height: 1.55;
@@ -139,6 +142,9 @@ ANKI_CSS = """
   margin: 0;
   padding: 16px 14px 28px 14px;
   text-align: left;
+}
+.card *, .card *::before, .card *::after {
+  box-sizing: border-box;
 }
 .nightMode.card, .night_mode .card {
   color: #f1f5f9;
@@ -214,7 +220,7 @@ ANKI_CSS = """
   color: #bbf7d0;
   border-bottom-color: #4ade80;
 }
-.opts {
+.options {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -242,24 +248,36 @@ ANKI_CSS = """
   border-color: #60a5fa;
   background: #1e3a8a;
 }
-.opt-correct {
+.opt.user-wrong {
+  border-color: #ef4444;
+  background: #fef2f2;
+  color: #991b1b;
+}
+.nightMode .opt.user-wrong, .night_mode .opt.user-wrong {
+  border-color: #f87171;
+  background: #450a0a;
+  color: #fecaca;
+}
+.opt.correct {
   border: 2px solid #16a34a !important;
   background: #f0fdf4 !important;
   font-weight: 600;
 }
-.nightMode .opt-correct, .night_mode .opt-correct {
+.nightMode .opt.correct, .night_mode .opt.correct {
   border-color: #4ade80 !important;
   background: #14532d !important;
   color: #f0fdf4 !important;
 }
-.opt-key {
+.opt-letter {
   font-weight: 700;
   min-width: 22px;
   color: #475569;
 }
-.nightMode .opt-key, .night_mode .opt-key { color: #cbd5e1; }
-.opt-correct .opt-key { color: #15803d; }
-.nightMode .opt-correct .opt-key, .night_mode .opt-correct .opt-key { color: #86efac; }
+.opt-letter::after { content: "."; }
+.nightMode .opt-letter, .night_mode .opt-letter { color: #cbd5e1; }
+.opt.correct .opt-letter { color: #15803d; }
+.opt.correct .opt-letter::before { content: "✓ "; }
+.nightMode .opt.correct .opt-letter, .night_mode .opt.correct .opt-letter { color: #86efac; }
 .ans-banner {
   margin-top: 16px;
   padding: 12px 15px;
@@ -409,7 +427,7 @@ def run_stage4(
 
     master_css, master_qfmt, master_afmt = build_master_multitheme_bundle(ANKI_CSS)
     model = genanki.Model(
-        model_id=1134323208,
+        model_id=1134323210,
         name="Semestre Filtro — Studio & Esame",
         fields=[
             {"name": "ItemID"},
@@ -541,21 +559,18 @@ def run_stage4(
             fig_html = "".join(fig_imgs)
 
             if options:
-                f_opts = ['<div class="opts options">']
-                b_opts = ['<div class="opts options">']
+                f_opts = ['<div class="options">']
+                b_opts = ['<div class="options">']
                 for k in ("A", "B", "C", "D", "E"):
                     ov_esc = html.escape(options[k], quote=False)
-                    f_opts.append(f'<div class="opt"><span class="opt-key opt-letter">{k}.</span><span>{ov_esc}</span></div>')
-                    cls = "opt opt-correct correct" if k == ans_val else "opt"
-                    prefix_mark = "✓ " if k == ans_val else ""
-                    b_opts.append(
-                        f'<div class="{cls}"><span class="opt-key opt-letter">{prefix_mark}{k}.</span><span>{ov_esc}</span></div>'
-                    )
+                    f_opts.append(f'<div class="opt"><span class="opt-letter">{k}</span><span class="opt-body">{ov_esc}</span></div>')
+                    cls = "opt correct" if k == ans_val else "opt"
+                    b_opts.append(f'<div class="{cls}"><span class="opt-letter">{k}</span><span class="opt-body">{ov_esc}</span></div>')
                 f_opts.append("</div>")
                 b_opts.append("</div>")
                 front_opts_html = "".join(f_opts)
                 back_opts_html = "".join(b_opts)
-                ans_banner_html = f"Risposta corretta: {html.escape(ans_val, quote=False)} — {html.escape(correct_option_text, quote=False)}"
+                ans_banner_html = f"Risposta corretta: {html.escape(ans_val, quote=False)}. {html.escape(correct_option_text, quote=False)}"
             else:
                 front_opts_html = ""
                 back_opts_html = ""
@@ -594,14 +609,14 @@ def run_stage4(
 
             note = genanki.Note(
                 model=model,
-                guid=genanki.guid_for("semestre-filtro-v2", item_id),
+                guid=genanki.guid_for("semestre-filtro-v3", item_id),
                 fields=[
                     item_id,
                     qb["subject"],
                     sc,
-                    f"{ch:02d}",
+                    str(ch),
                     qb["chapter_title"],
-                    qt_label,
+                    qt_label.split(". ", 1)[-1],
                     str(qnum),
                     str(q_item["book_page"]),
                     format_front_stem_html(q_item["question_text"], qt),

@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Mono:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap');
-html, body {
-  min-height: 100% !important;
-  margin: 0;
+html, body, #qa {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  min-height: 100vh !important;
 }
-.card {
+
+.sf-canvas {
   min-height: 100vh;
+  width: 100%;
   margin: 0;
   padding: 20px 14px 32px;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   text-align: left;
 }
-.card *, .card *::before, .card *::after {
+.sf-canvas *, .sf-canvas *::before, .sf-canvas *::after {
   box-sizing: border-box;
 }
 .fig-box {
@@ -37,17 +41,17 @@ details.orig-scan summary {
   padding: 4px 0;
 }
 
-html, body, .card, body.nightMode, body.night_mode, .card.nightMode, .night_mode .card {
-  background-color: #ffffff !important;
+.sf-canvas, .sf-canvas.sf-dark {
+  background-color: #ffffff;
   background-image:
     linear-gradient(45deg, #000 25%, transparent 25%),
     linear-gradient(-45deg, #000 25%, transparent 25%),
     linear-gradient(45deg, transparent 75%, #000 75%),
-    linear-gradient(-45deg, transparent 75%, #000 75%) !important;
-  background-size: 4px 4px !important;
-  background-position: 0 0, 0 2px, 2px -2px, -2px 0 !important;
+    linear-gradient(-45deg, transparent 75%, #000 75%);
+  background-size: 4px 4px;
+  background-position: 0 0, 0 2px, 2px -2px, -2px 0;
   color: #000000;
-  font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-family: "Space Mono", monospace;
 }
 .mac-win {
   max-width: 710px;
@@ -98,7 +102,7 @@ html, body, .card, body.nightMode, body.night_mode, .card.nightMode, .night_mode
 .stem { font-size: 15px; font-weight: 700; line-height: 1.55; margin-bottom: 16px; }
 .blank-slot { display: inline-block; min-width: 84px; border-bottom: 2px solid #000000; color: transparent; }
 .blank-filled { background: #000000; color: #ffffff; padding: 1px 7px; font-weight: 700; }
-.options, .opts { display: flex; flex-direction: column; gap: 6px; }
+.options { display: flex; flex-direction: column; gap: 6px; }
 .opt {
   display: flex;
   align-items: center;
@@ -113,7 +117,7 @@ html, body, .card, body.nightMode, body.night_mode, .card.nightMode, .night_mode
   background: #000000;
   color: #ffffff;
 }
-.opt-letter, .opt-key {
+.opt-letter {
   font-weight: 700;
   min-width: 28px;
 }
@@ -125,7 +129,7 @@ html, body, .card, body.nightMode, body.night_mode, .card.nightMode, .night_mode
   text-decoration: line-through;
   border-style: dashed;
 }
-.opt.correct, .opt.opt-correct {
+.opt.correct {
   background: #000000;
   color: #ffffff;
   font-weight: 700;

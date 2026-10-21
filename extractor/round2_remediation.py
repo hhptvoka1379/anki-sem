@@ -825,7 +825,7 @@ ROUND2_SCAN_OVERRIDES = {
             "D": "I batteri invecchiano e muoiono come tutti gli organismi viventi",
         },
     },
-    "BIO-C01-COMM-034": {"q": "Lo schema rappresenta il ciclo dell'ATP. La freccia II rappresenta:"},
+    "BIO-C01-COMM-034": {"q": "Lo schema rappresenta il ciclo dell'ATP. La freccia ① rappresenta:"},
     "BIO-C01-NCOM-117": {"q": "Il citoplasma delle cellule è composto prevalentemente da:"},
     "BIO-C01-NCOM-263": {
         "q": "Il grafico rappresenta l'albero evolutivo di alcune specie. Dal suo studio si deduce che:",

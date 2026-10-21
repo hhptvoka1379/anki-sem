@@ -1251,7 +1251,7 @@ ITALIAN_LEXICAL_FIXES: List[Tuple[re.Pattern, str]] = [
     (re.compile(r"\bJa\s+(?=[a-zà-ÿ]{2,})"), "la "),
     (re.compile(r"^\s*la\s+(?=concentrazione\s+ossidrilionica\b)"), "La "),
     (re.compile(r"\b1\]\s+"), "Il "),
-    (re.compile(r"\b1\)\s+(?=[a-zà-ÿ]{3,})"), "Il "),
+    (re.compile(r"^\s*1\)\s+(?=[a-zà-ÿ]{3,})"), "Il "),
     (re.compile(r"\bI\)\s+(?=ciclo\b)"), "Il "),
     (re.compile(r"\b1\}\s+(?=pH\b)"), "Il "),
     (re.compile(r"\b11\s+(?=pH\b|contributo\b|numero\b|P₂O₅\b|valore\b)"), "Il "),

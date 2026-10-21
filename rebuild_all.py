@@ -53,7 +53,7 @@ from extractor.stage4_export import (
     stable_anki_id,
 )
 
-MODEL_ID = 1134323208
+MODEL_ID = 1134323210
 PUB_RE = re.compile(r"vaedi[s]es|@di[s]es|edi[s]es", re.IGNORECASE)
 
 
@@ -148,21 +148,18 @@ def main() -> None:
         expl_clean = r["explanation"] or ""
 
         if options:
-            f_opts = ['<div class="opts options">']
-            b_opts = ['<div class="opts options">']
+            f_opts = ['<div class="options">']
+            b_opts = ['<div class="options">']
             for k in ("A", "B", "C", "D", "E"):
                 ov_esc = html.escape(options[k], quote=False)
-                f_opts.append(f'<div class="opt"><span class="opt-key opt-letter">{k}.</span><span>{ov_esc}</span></div>')
-                cls = "opt opt-correct correct" if k == ans_val else "opt"
-                prefix_mark = "✓ " if k == ans_val else ""
-                b_opts.append(
-                    f'<div class="{cls}"><span class="opt-key opt-letter">{prefix_mark}{k}.</span><span>{ov_esc}</span></div>'
-                )
+                f_opts.append(f'<div class="opt"><span class="opt-letter">{k}</span><span class="opt-body">{ov_esc}</span></div>')
+                cls = "opt correct" if k == ans_val else "opt"
+                b_opts.append(f'<div class="{cls}"><span class="opt-letter">{k}</span><span class="opt-body">{ov_esc}</span></div>')
             f_opts.append("</div>")
             b_opts.append("</div>")
             front_opts_html = "".join(f_opts)
             back_opts_html = "".join(b_opts)
-            ans_banner_html = f"Risposta corretta: {html.escape(ans_val, quote=False)} — {html.escape(correct_option_text, quote=False)}"
+            ans_banner_html = f"Risposta corretta: {html.escape(ans_val, quote=False)}. {html.escape(correct_option_text, quote=False)}"
         else:
             front_opts_html = ""
             back_opts_html = ""
@@ -196,14 +193,14 @@ def main() -> None:
 
         note = genanki.Note(
             model=model,
-            guid=genanki.guid_for("semestre-filtro-v2", item_id),
+            guid=genanki.guid_for("semestre-filtro-v3", item_id),
             fields=[
                 item_id,
                 r["subject"],
                 sc,
-                f"{ch:02d}",
+                str(ch),
                 r["chapter_title"],
-                qt_label,
+                qt_label.split(". ", 1)[-1],
                 str(qnum),
                 str(r["question_book_page"]),
                 format_front_stem_html(r["question"], qt),

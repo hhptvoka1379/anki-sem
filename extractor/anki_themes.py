@@ -14,13 +14,21 @@ import genanki
 
 GOOGLE_FONTS_IMPORT = """@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Mono:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap');"""
 
-BASE_RESET_CSS = """
-html, body {
-  min-height: 100% !important;
-  margin: 0;
+GOOGLE_FONTS_LINK_HTML = """<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Mono:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">"""
+
+HOST_VIEWPORT_RESET_CSS = """
+html, body, #qa {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  min-height: 100vh !important;
 }
+"""
+
+BASE_RESET_CSS = """
 .card {
   min-height: 100vh;
+  width: 100%;
   margin: 0;
   padding: 20px 14px 32px;
   -webkit-font-smoothing: antialiased;
@@ -60,11 +68,26 @@ def _stable_id(seed: str) -> int:
     return 1_000_000_000 + (int.from_bytes(digest[:8], "big") % 999_000_000)
 
 
+def _convert_card_selectors_to_sf_canvas(css_text: str) -> str:
+    """Map `.card` / `.card.nightMode` rules onto our isolated `#qa` child `.sf-canvas` / `.sf-canvas.sf-dark`
+    so Anki Desktop's automatic `<body class="card card1 isMac nightMode">` NEVER overrides any theme's
+    intended surface palette or splits the viewport background!"""
+    s = css_text
+    s = s.replace(".card:not(.nightMode)", ".sf-canvas:not(.sf-dark)")
+    s = s.replace(".card.nightMode", ".sf-canvas.sf-dark")
+    s = s.replace(".nightMode.card", ".sf-canvas.sf-dark")
+    s = s.replace(".night_mode .card", ".sf-canvas.sf-dark")
+    s = re.sub(r"\.nightMode\s+", ".sf-canvas.sf-dark ", s)
+    s = re.sub(r"\.night_mode\s+", ".sf-canvas.sf-dark ", s)
+    s = re.sub(r"\.card(?![A-Za-z0-9_-])", ".sf-canvas", s)
+    return s
+
+
 # ==============================================================================
-# 10 ART-DIRECTED ANKI DESIGN SYSTEMS (DISTINCT DOM GEOMETRY + TYPE + MATERIAL)
+# EXACT 10 ART-DIRECTED ANKI DESIGN SYSTEMS FROM theme_showcase.html
 # ==============================================================================
 
-THEMES: Dict[str, dict] = {
+RAW_THEMES: Dict[str, dict] = {
     "01_swiss_poster": {
         "num": "01",
         "slug": "01_swiss_poster",
@@ -73,13 +96,13 @@ THEMES: Dict[str, dict] = {
         "accent": "#e11d18",
         "default_dark": False,
         "layout": "swiss",
-        "css": GOOGLE_FONTS_IMPORT + BASE_RESET_CSS + """
+        "css": BASE_RESET_CSS + """
 .card {
-  background-color: #e6e3dc;
+  background: #e6e3dc;
   color: #0d0d0d;
   font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.card.nightMode { background-color: #0c0c0c; color: #f2f0eb; }
+.card.nightMode { background: #0c0c0c; color: #f2f0eb; }
 .swiss-sheet {
   max-width: 780px;
   margin: 0 auto;
@@ -94,7 +117,7 @@ THEMES: Dict[str, dict] = {
   align-items: center;
   padding: 8px 16px;
   border-bottom: 2px solid #0d0d0d;
-  font-family: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -126,14 +149,14 @@ THEMES: Dict[str, dict] = {
   .swiss-rail { border-right: none; border-bottom: 2px solid #0d0d0d; flex-direction: row; align-items: baseline; }
 }
 .swiss-big-num {
-  font-family: "Archivo Black", "Arial Black", "Inter", sans-serif;
+  font-family: "Archivo Black", "Inter", sans-serif;
   font-size: 46px;
   line-height: 0.92;
   color: #e11d18;
   letter-spacing: -0.04em;
 }
 .swiss-meta-stack {
-  font-family: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 10px;
   line-height: 1.5;
   text-transform: uppercase;
@@ -164,7 +187,7 @@ THEMES: Dict[str, dict] = {
 .opt:hover { background: #0d0d0d; color: #f4f1ea; }
 .card.nightMode .opt:hover { background: #f2f0eb; color: #0d0d0d; }
 .opt-letter {
-  font-family: "Archivo Black", "Arial Black", sans-serif;
+  font-family: "Archivo Black", sans-serif;
   font-size: 14px;
   color: #e11d18;
   min-width: 24px;
@@ -180,7 +203,7 @@ THEMES: Dict[str, dict] = {
   padding: 12px 14px;
   background: #0d0d0d;
   color: #f4f1ea;
-  font-family: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
@@ -207,13 +230,13 @@ THEMES: Dict[str, dict] = {
         "accent": "#ff4f00",
         "default_dark": False,
         "layout": "te_hardware",
-        "css": GOOGLE_FONTS_IMPORT + BASE_RESET_CSS + """
+        "css": BASE_RESET_CSS + """
 .card {
-  background-color: #bfc3c9;
+  background: #bfc3c9;
   color: #181a1d;
-  font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
-.card.nightMode { background-color: #111315; color: #e5e7eb; }
+.card.nightMode { background: #111315; color: #e5e7eb; }
 .te-chassis {
   max-width: 720px;
   margin: 0 auto;
@@ -232,7 +255,7 @@ THEMES: Dict[str, dict] = {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: "Space Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-family: "Space Mono", monospace;
   font-size: 10.5px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -272,7 +295,7 @@ THEMES: Dict[str, dict] = {
 .te-screen-hud {
   display: flex;
   justify-content: space-between;
-  font-family: "Space Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-family: "Space Mono", monospace;
   font-size: 11px;
   color: #ff6b2b;
   border-bottom: 1px dashed #2d3540;
@@ -281,7 +304,7 @@ THEMES: Dict[str, dict] = {
 }
 .stem { font-size: 16.5px; font-weight: 500; line-height: 1.52; color: #f8fafc; }
 .blank-slot { display: inline-block; min-width: 84px; border-bottom: 2px solid #ff4f00; color: transparent; }
-.blank-filled { background: #ff4f00; color: #ffffff; padding: 1px 8px; border-radius: 4px; font-family: "Space Mono", ui-monospace, monospace; }
+.blank-filled { background: #ff4f00; color: #ffffff; padding: 1px 8px; border-radius: 4px; font-family: "Space Mono", monospace; }
 .options { display: flex; flex-direction: column; gap: 9px; margin-top: 16px; }
 .opt {
   display: flex;
@@ -315,7 +338,7 @@ THEMES: Dict[str, dict] = {
   border-radius: 7px;
   background: #e5e7eb;
   border: 1px solid #cbd5e1;
-  font-family: "Space Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-family: "Space Mono", monospace;
   font-weight: 700;
   font-size: 13px;
   color: #111827;
@@ -334,7 +357,7 @@ THEMES: Dict[str, dict] = {
   border-radius: 10px;
   background: #101316;
   color: #10b981;
-  font-family: "Space Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-family: "Space Mono", monospace;
   font-size: 13px;
   font-weight: 700;
   border: 1.5px solid #2b3036;
@@ -362,11 +385,11 @@ THEMES: Dict[str, dict] = {
         "accent": "#ff6a00",
         "default_dark": True,
         "layout": "nerv",
-        "css": GOOGLE_FONTS_IMPORT + BASE_RESET_CSS + """
+        "css": BASE_RESET_CSS + """
 .card, .card.nightMode {
-  background-color: #050507;
+  background: #050507;
   color: #ffb000;
-  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-family: "JetBrains Mono", monospace;
 }
 .nerv-frame {
   max-width: 750px;
@@ -457,7 +480,7 @@ THEMES: Dict[str, dict] = {
   border-left: 3px solid #ff6a00;
   background: rgba(255,106,0,0.05);
   color: #fed7aa;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 1.58;
 }
@@ -470,74 +493,48 @@ details.orig-scan summary { color: #ff8800; }
         "num": "04",
         "slug": "04_neobrutalist_bauhaus",
         "name": "Neo-Brutalist Risoprint Zine",
-        "tagline": "Halftone dot-grid riso paper, CMYK ink registration bar, tilted stamp badge & triple misregistration offset press",
+        "tagline": "Halftone dot-grid paper, tilted ink stamp badge, Syne display & hard offset press",
         "accent": "#facc15",
         "default_dark": False,
         "layout": "brutalist",
-        "css": GOOGLE_FONTS_IMPORT + BASE_RESET_CSS + """
+        "css": BASE_RESET_CSS + """
 .card {
-  font-family: "Space Grotesk", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: #fde047;
-  background-image: radial-gradient(#111111 1.35px, transparent 1.35px);
-  background-size: 14px 14px;
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #fef08a;
+  background-image: radial-gradient(#111111 1.15px, transparent 1.15px);
+  background-size: 16px 16px;
   color: #111111;
   line-height: 1.5;
 }
 .card.nightMode {
-  background-color: #121018;
-  background-image: radial-gradient(rgba(250, 204, 21, 0.38) 1.35px, transparent 1.35px);
-  background-size: 14px 14px;
-  color: #fefce8;
+  background-color: #18181b;
+  background-image: radial-gradient(#3f3f46 1.15px, transparent 1.15px);
+  color: #fafafa;
 }
-.riso-sheet {
-  max-width: 735px;
-  margin: 6px auto 0;
-  background: #fffdf5;
-  border: 3.5px solid #111111;
-  border-radius: 0;
-  box-shadow: -6px -6px 0px #ff2e93, 9px 9px 0px #111111;
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fffef9;
+  border: 3px solid #111111;
+  border-radius: 2px;
+  padding: 22px 24px 24px;
+  box-shadow: -3px -3px 0px #ff2e93, 8px 8px 0px #111111;
   position: relative;
 }
-.card.nightMode .riso-sheet {
-  background: #1b1725;
-  border-color: #facc15;
-  box-shadow: -6px -6px 0px #ff2e93, 9px 9px 0px #00bbf9;
-}
-.riso-regbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  padding: 7px 14px;
-  background: #111111;
-  color: #fde047;
-  border-bottom: 3px solid #111111;
-  font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 10.5px;
+.wrap::before {
+  content: "+ RISO.ZINE // REG.04 +";
+  position: absolute;
+  top: 6px;
+  right: 12px;
+  font-family: "Space Mono", monospace;
+  font-size: 9.5px;
   font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-.card.nightMode .riso-regbar {
-  background: #facc15;
+  letter-spacing: 0.08em;
   color: #111111;
-  border-bottom-color: #facc15;
+  opacity: 0.48;
 }
-.riso-inks {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
-.riso-dot {
-  display: inline-block;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  border: 1.5px solid currentColor;
-}
-.riso-body {
-  padding: 20px 24px 24px;
-}
+.card.nightMode .wrap { background: #232329; border-color: #fafafa; box-shadow: -3px -3px 0px #ec4899, 8px 8px 0px #facc15; }
+.card.nightMode .wrap::before { color: #facc15; opacity: 0.7; }
 .meta {
   display: flex;
   flex-wrap: wrap;
@@ -545,101 +542,49 @@ details.orig-scan summary { color: #ff8800; }
   gap: 10px;
   padding-bottom: 14px;
   margin-bottom: 16px;
-  border-bottom: 3px solid #111111;
+  border-bottom: 2.5px solid #111111;
 }
-.card.nightMode .meta { border-bottom-color: #facc15; }
+.card.nightMode .meta { border-bottom-color: #fafafa; }
 .badge {
   display: inline-block;
-  transform: rotate(-2deg);
-  padding: 4px 12px;
+  transform: rotate(-1.8deg);
+  padding: 4px 11px;
   border: 2.5px solid #111111;
-  font-family: "Syne", "Archivo Black", "Arial Black", sans-serif;
+  font-family: "Syne", sans-serif;
   font-weight: 800;
   font-size: 11.5px;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   box-shadow: 3px 3px 0px #111111;
 }
-.card.nightMode .badge { border-color: #111111; box-shadow: 3px 3px 0px #ff2e93; }
 .subj-CHIM { background: #c4b5fd; color: #111111; }
 .subj-BIO  { background: #86efac; color: #111111; }
-.subj-FIS  { background: #67e8f9; color: #111111; }
-.meta-dim {
-  font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-weight: 700;
-  font-size: 11.5px;
-}
-.stem {
-  font-size: 18.5px;
-  font-weight: 700;
-  margin: 14px 0 18px;
-  letter-spacing: -0.015em;
-}
-.blank-slot {
-  display: inline-block;
-  min-width: 88px;
-  background: #fde047;
-  border: 2.5px solid #111111;
-  padding: 0 6px;
-  color: transparent;
-}
-.blank-filled {
-  background: #86efac;
-  color: #111111;
-  border: 2.5px solid #111111;
-  padding: 1px 8px;
-  font-weight: 800;
-}
-.options { display: flex; flex-direction: column; gap: 11px; }
+.subj-FIS  { background: #7dd3fc; color: #111111; }
+.meta-dim { font-family: "Space Mono", monospace; font-weight: 700; font-size: 11.5px; }
+.stem { font-size: 18px; font-weight: 700; margin: 14px 0 18px; letter-spacing: -0.015em; }
+.blank-slot { display: inline-block; min-width: 88px; background: #fde047; border: 2px solid #111111; padding: 0 6px; color: transparent; }
+.blank-filled { background: #86efac; color: #111111; border: 2px solid #111111; padding: 1px 8px; font-weight: 800; }
+.options { display: flex; flex-direction: column; gap: 10px; }
 .opt {
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 11px 14px;
   border: 2.5px solid #111111;
-  border-radius: 0;
   background: #ffffff;
-  color: #111111;
-  box-shadow: 5px 5px 0px #111111;
-  font-weight: 700;
+  box-shadow: 4px 4px 0px #111111;
+  font-weight: 600;
   transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.08s ease;
 }
-.card.nightMode .opt {
-  background: #262033;
-  color: #fefce8;
-  border-color: #facc15;
-  box-shadow: 4px 4px 0px #ff2e93;
-}
-.opt:hover {
-  background: #fde047;
-  color: #111111;
-  transform: translate(-2px, -2px);
-  box-shadow: 7px 7px 0px #111111;
-}
-.card.nightMode .opt:hover {
-  background: #facc15;
-  color: #111111;
-  box-shadow: 6px 6px 0px #ff2e93;
-}
-.opt:active, .opt.user-picked {
-  transform: translate(3px, 3px);
-  box-shadow: 2px 2px 0px #111111;
-  background: #67e8f9;
-  color: #111111;
-}
-.card.nightMode .opt.user-picked {
-  background: #00bbf9;
-  color: #111111;
-  border-color: #ffffff;
-  box-shadow: 2px 2px 0px #facc15;
-}
+.card.nightMode .opt { background: #18181b; border-color: #fafafa; box-shadow: 4px 4px 0px #fafafa; }
+.opt:hover { background: #fde047; color: #111111; transform: translate(-2px, -2px); box-shadow: 6px 6px 0px #111111; }
+.opt:active, .opt.user-picked { transform: translate(3px, 3px); box-shadow: 1px 1px 0px #111111; background: #7dd3fc; color: #111111; }
 .opt-letter {
-  width: 30px;
-  height: 30px;
-  border: 2.5px solid #111111;
+  width: 28px;
+  height: 28px;
+  border: 2px solid #111111;
   background: #facc15;
   color: #111111;
-  font-family: "Syne", "Archivo Black", "Arial Black", sans-serif;
+  font-family: "Syne", sans-serif;
   font-weight: 800;
   font-size: 13px;
   display: inline-flex;
@@ -647,56 +592,30 @@ details.orig-scan summary { color: #ff8800; }
   justify-content: center;
   flex-shrink: 0;
 }
-.opt.user-wrong { background: #ff85a1; color: #111111; border-color: #111111; }
-.card.nightMode .opt.user-wrong { background: #ff2e93; color: #ffffff; border-color: #ffffff; }
-.opt.correct { background: #86efac; color: #111111; border-color: #111111; font-weight: 800; }
-.card.nightMode .opt.correct { background: #4ade80; color: #111111; border-color: #ffffff; box-shadow: 4px 4px 0px #facc15; }
+.opt.user-wrong { background: #fca5a5; color: #111111; }
+.opt.correct { background: #86efac; color: #111111; font-weight: 800; }
 .opt.correct .opt-letter { background: #111111; color: #86efac; }
 .ans-banner {
   margin-top: 18px;
   padding: 12px 15px;
-  border: 3px solid #111111;
-  border-radius: 0;
+  border: 2.5px solid #111111;
   background: #fde047;
   color: #111111;
-  font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-family: "Space Mono", monospace;
   font-size: 13px;
   font-weight: 700;
-  box-shadow: 5px 5px 0px #111111;
-}
-.card.nightMode .ans-banner {
-  background: #facc15;
-  color: #111111;
-  border-color: #ffffff;
-  box-shadow: 5px 5px 0px #ff2e93;
+  box-shadow: 4px 4px 0px #111111;
 }
 .expl-box {
   margin-top: 14px;
   padding: 14px 16px;
   border: 2.5px solid #111111;
-  border-radius: 0;
   background: #f4f4f5;
   color: #111111;
   font-size: 14.5px;
   line-height: 1.56;
-  box-shadow: 4px 4px 0px #ff2e93;
 }
-.card.nightMode .expl-box {
-  background: #251f33;
-  color: #fefce8;
-  border-color: #facc15;
-  box-shadow: 4px 4px 0px #ff2e93;
-}
-.fig-box img, details.orig-scan img {
-  border: 2.5px solid #111111;
-  border-radius: 0;
-  box-shadow: 4px 4px 0px #111111;
-  padding: 6px;
-}
-.card.nightMode .fig-box img, .card.nightMode details.orig-scan img {
-  border-color: #facc15;
-  box-shadow: 4px 4px 0px #ff2e93;
-}
+.fig-box img, details.orig-scan img { border: 2.5px solid #111111; box-shadow: 4px 4px 0px #111111; padding: 6px; }
 """,
     },
 
@@ -708,13 +627,13 @@ details.orig-scan summary { color: #ff8800; }
         "accent": "#7f1d1d",
         "default_dark": False,
         "layout": "editorial",
-        "css": GOOGLE_FONTS_IMPORT + BASE_RESET_CSS + """
+        "css": BASE_RESET_CSS + """
 .card {
-  background-color: #e9e2d4;
+  background: #e9e2d4;
   color: #191614;
-  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
 }
-.card.nightMode { background-color: #141210; color: #f3ede2; }
+.card.nightMode { background: #141210; color: #f3ede2; }
 .ed-page {
   max-width: 720px;
   margin: 0 auto;
@@ -730,7 +649,7 @@ details.orig-scan summary { color: #ff8800; }
   border-bottom: 4px double #191614;
   padding: 8px 0 9px;
   margin-bottom: 22px;
-  font-family: "Inter", -apple-system, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -743,7 +662,7 @@ details.orig-scan summary { color: #ff8800; }
 }
 .card.nightMode .ed-kicker { color: #fda4af; }
 .stem {
-  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.36;
@@ -785,7 +704,7 @@ details.orig-scan summary { color: #ff8800; }
   padding: 10px 0;
   border-top: 1.5px solid #191614;
   border-bottom: 1.5px solid #191614;
-  font-family: "Inter", -apple-system, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 12.5px;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -801,7 +720,7 @@ details.orig-scan summary { color: #ff8800; }
   font-style: italic;
 }
 .card.nightMode .expl-box { background: #24201c; }
-details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
+details.orig-scan { font-family: "Inter", sans-serif; }
 .fig-box img, details.orig-scan img { border: 1px solid #bfb39c; padding: 8px; }
 """,
     },
@@ -814,9 +733,9 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
         "accent": "#52525b",
         "default_dark": True,
         "layout": "standard",
-        "css": GOOGLE_FONTS_IMPORT + BASE_RESET_CSS + """
+        "css": BASE_RESET_CSS + """
 .card {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #fafafa;
   background-image: radial-gradient(#d4d4d8 1px, transparent 1px);
   background-size: 20px 20px;
@@ -826,7 +745,6 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
 .card.nightMode {
   background-color: #09090b;
   background-image: radial-gradient(#27272a 1px, transparent 1px);
-  background-size: 20px 20px;
   color: #fafafa;
 }
 .wrap {
@@ -848,7 +766,7 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 11px;
   color: #71717a;
   padding-bottom: 13px;
@@ -866,7 +784,7 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
 .card.nightMode .badge { background: #fafafa; color: #09090b; }
 .stem { font-size: 16.5px; font-weight: 500; letter-spacing: -0.015em; margin: 14px 0 18px; }
 .blank-slot { display: inline-block; min-width: 82px; border-bottom: 1.5px solid currentColor; color: transparent; }
-.blank-filled { font-family: "JetBrains Mono", ui-monospace, monospace; background: #10b981; color: #052e16; font-weight: 700; padding: 2px 8px; border-radius: 5px; font-size: 14px; }
+.blank-filled { font-family: "JetBrains Mono", monospace; background: #10b981; color: #052e16; font-weight: 700; padding: 2px 8px; border-radius: 5px; font-size: 14px; }
 .options { display: flex; flex-direction: column; gap: 7px; }
 .opt {
   display: flex;
@@ -887,7 +805,7 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
   border-radius: 6px;
   border: 1px solid #d4d4d8;
   box-shadow: 0 1.5px 0 #d4d4d8;
-  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 11.5px;
   font-weight: 700;
   color: #52525b;
@@ -910,7 +828,7 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
   border: 1px solid #27272a;
   background: rgba(16,185,129,0.1);
   color: #34d399;
-  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 12.5px;
   font-weight: 700;
 }
@@ -937,7 +855,7 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
         "accent": "#0284c7",
         "default_dark": True,
         "layout": "blueprint",
-        "css": GOOGLE_FONTS_IMPORT + BASE_RESET_CSS + """
+        "css": BASE_RESET_CSS + """
 .card, .card.nightMode {
   background-color: #082f49;
   background-image:
@@ -947,7 +865,7 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
     linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
   background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
   color: #f0f9ff;
-  font-family: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-family: "IBM Plex Mono", monospace;
 }
 .bp-sheet {
   max-width: 750px;
@@ -970,7 +888,7 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
 .bp-cell:last-child { border-right: none; }
 .bp-body { padding: 20px 24px 24px; }
 .stem {
-  font-family: "Space Grotesk", -apple-system, sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 17.5px;
   font-weight: 600;
   line-height: 1.5;
@@ -1020,7 +938,7 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
   margin-top: 12px;
   padding: 13px 16px;
   border: 1px dashed rgba(255,255,255,0.65);
-  font-family: "Inter", -apple-system, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 1.58;
   color: #e0f2fe;
@@ -1037,13 +955,13 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
         "accent": "#4f46e5",
         "default_dark": False,
         "layout": "split",
-        "css": GOOGLE_FONTS_IMPORT + BASE_RESET_CSS + """
+        "css": BASE_RESET_CSS + """
 .card {
-  font-family: "Plus Jakarta Sans", "Inter", -apple-system, sans-serif;
-  background-color: #e8ecf4;
+  font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+  background: #e8ecf4;
   color: #0f172a;
 }
-.card.nightMode { background-color: #0b101b; color: #f1f5f9; }
+.card.nightMode { background: #0b101b; color: #f1f5f9; }
 .split-shell {
   max-width: 960px;
   margin: 0 auto;
@@ -1159,13 +1077,13 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
         "accent": "#c53030",
         "default_dark": False,
         "layout": "washi",
-        "css": GOOGLE_FONTS_IMPORT + BASE_RESET_CSS + """
+        "css": BASE_RESET_CSS + """
 .card {
-  background-color: #e5dfd3;
+  background: #e5dfd3;
   color: #1f1d1a;
   font-family: "Cormorant Garamond", "Hiragino Mincho ProN", Georgia, serif;
 }
-.card.nightMode { background-color: #161513; color: #ede8dd; }
+.card.nightMode { background: #161513; color: #ede8dd; }
 .washi-card {
   max-width: 720px;
   margin: 0 auto;
@@ -1191,7 +1109,7 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
   border: 2.5px solid #c53030;
   border-radius: 4px;
   color: #c53030;
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 800;
   font-size: 11px;
   line-height: 1.05;
@@ -1204,7 +1122,7 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
   flex-shrink: 0;
 }
 .washi-meta {
-  font-family: "Inter", -apple-system, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 11.5px;
   color: #6b6459;
   letter-spacing: 0.04em;
@@ -1213,7 +1131,7 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
 .stem { font-size: 21px; font-weight: 600; line-height: 1.46; margin-bottom: 18px; }
 .blank-slot { display: inline-block; min-width: 86px; border-bottom: 1.5px solid #c53030; color: transparent; }
 .blank-filled { background: #1e3a5f; color: #f7f3ea; padding: 1px 9px; font-weight: 700; }
-.options { display: flex; flex-direction: column; gap: 7px; font-family: "Inter", -apple-system, sans-serif; font-size: 14.5px; }
+.options { display: flex; flex-direction: column; gap: 7px; font-family: "Inter", sans-serif; font-size: 14.5px; }
 .opt {
   display: flex;
   align-items: center;
@@ -1228,7 +1146,7 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
 .opt:hover { border-left-color: #c53030; background: #f1ece0; }
 .card.nightMode .opt:hover { background: #332f2a; }
 .opt-letter {
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 12px;
   font-weight: 700;
   color: #c53030;
@@ -1243,7 +1161,7 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
   padding: 11px 15px;
   background: #1e3a5f;
   color: #f7f3ea;
-  font-family: "Inter", -apple-system, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 13.5px;
   font-weight: 700;
 }
@@ -1252,7 +1170,7 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
   padding: 14px 16px;
   border-left: 2px solid #c53030;
   background: #f0ebe0;
-  font-family: "Inter", -apple-system, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 1.6;
 }
@@ -1269,7 +1187,7 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
         "accent": "#000000",
         "default_dark": False,
         "layout": "mac1984",
-        "css": GOOGLE_FONTS_IMPORT + BASE_RESET_CSS + """
+        "css": BASE_RESET_CSS + """
 .card, .card.nightMode {
   background-color: #ffffff;
   background-image:
@@ -1280,7 +1198,7 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
   background-size: 4px 4px;
   background-position: 0 0, 0 2px, 2px -2px, -2px 0;
   color: #000000;
-  font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-family: "Space Mono", monospace;
 }
 .mac-win {
   max-width: 710px;
@@ -1388,62 +1306,16 @@ details.orig-scan { font-family: "Inter", -apple-system, sans-serif; }
     },
 }
 
-
-def _upgrade_standalone_canvas_css(css_str: str) -> str:
-    """Ensure standalone single-theme CSS paints html/body/.card across Anki Desktop/Mobile/Droid
-    so Anki's built-in reviewer canvas never washes out any theme in Light or Night mode."""
-    out = css_str
-    out = out.replace(".options {", ".options, .opts {")
-    out = out.replace(".opt-letter {", ".opt-letter, .opt-key {")
-    out = out.replace(".opt.correct {", ".opt.correct, .opt.opt-correct {")
-    out = out.replace(".opt.correct .opt-letter", ".opt.correct .opt-letter, .opt.opt-correct .opt-key, .opt.correct .opt-key")
-    out = out.replace(".opt.user-picked .opt-letter", ".opt.user-picked .opt-letter, .opt.user-picked .opt-key")
-    # Make dark & light canvas rules apply to html, body, and .card with high priority:
-    out = re.sub(
-        r"(?m)^\.card,\s*\.card\.nightMode\s*\{([^\}]*)\}",
-        lambda m: (
-            "html, body, .card, body.nightMode, body.night_mode, .card.nightMode, .night_mode .card {"
-            + re.sub(r"(background(?:-[a-z]+)?\s*:[^;!\}]+)(;)", r"\1 !important\2", m.group(1))
-            + "}"
-        ),
-        out,
-    )
-    out = re.sub(
-        r"(?m)^\.card\.nightMode\s*\{([^\}]*)\}",
-        lambda m: (
-            "html.nightMode, body.nightMode, body.night_mode, .card.nightMode, .night_mode .card {"
-            + re.sub(r"(background(?:-[a-z]+)?\s*:[^;!\}]+)(;)", r"\1 !important\2", m.group(1))
-            + "}"
-        ),
-        out,
-    )
-    out = re.sub(
-        r"(?m)^\.card\s*\{([^\}]*background[^\}]*)\}",
-        lambda m: (
-            "html, body, .card {"
-            + re.sub(r"(background(?:-[a-z]+)?\s*:[^;!\}]+)(;)", r"\1 !important\2", m.group(1))
-            + "}"
-        ),
-        out,
-    )
-    out = re.sub(r"(?m)^\.card\.nightMode\s+", ".nightMode ", out)
-    return out
-
-
-for _tk, _tmeta in THEMES.items():
-    _tmeta["raw_css"] = (
-        _tmeta["css"]
-        .replace(".options {", ".options, .opts {")
-        .replace(".opt-letter {", ".opt-letter, .opt-key {")
-        .replace(".opt.correct {", ".opt.correct, .opt.opt-correct {")
-        .replace(".opt.correct .opt-letter", ".opt.correct .opt-letter, .opt.opt-correct .opt-key, .opt.correct .opt-key")
-        .replace(".opt.user-picked .opt-letter", ".opt.user-picked .opt-letter, .opt.user-picked .opt-key")
-    )
-    _tmeta["css"] = _upgrade_standalone_canvas_css(_tmeta["css"])
+THEMES: Dict[str, dict] = {}
+for _k, _v in RAW_THEMES.items():
+    _entry = dict(_v)
+    _entry["raw_showcase_css"] = _v["css"]
+    _entry["css"] = GOOGLE_FONTS_IMPORT + HOST_VIEWPORT_RESET_CSS + _convert_card_selectors_to_sf_canvas(_v["css"])
+    THEMES[_k] = _entry
 
 
 def _build_layout_shell(layout: str, front_inner: str, back_inner: str, scan_open_attr: str) -> Tuple[str, str]:
-    """Give EVERY art direction its own authentic structural DOM skeleton!"""
+    """Exact 1-to-1 structural DOM shells matching theme_showcase.html across all 10 themes."""
     if layout == "swiss":
         qfmt = f"""
 <div class="swiss-sheet">
@@ -1547,51 +1419,6 @@ def _build_layout_shell(layout: str, front_inner: str, back_inner: str, scan_ope
     <span>[{{{{QuizTypeLabel}}}} #{{{{QuestionNum}}}} // P.{{{{BookPage}}}}]</span>
   </div>
   <div class="nerv-body">{back_inner}</div>
-</div>"""
-        return qfmt, afmt
-
-    if layout == "brutalist":
-        qfmt = f"""
-<div class="riso-sheet">
-  <div class="riso-regbar">
-    <span>┼ RISO.ZINE // REG.04 ┼</span>
-    <span class="riso-inks">
-      <i class="riso-dot" style="background:#ff2e93;"></i>
-      <i class="riso-dot" style="background:#facc15;"></i>
-      <i class="riso-dot" style="background:#00bbf9;"></i>
-      <i class="riso-dot" style="background:#86efac;"></i>
-      &nbsp;PAG. {{{{BookPage}}}}
-    </span>
-  </div>
-  <div class="riso-body">
-    <div class="meta">
-      <span class="badge subj-{{{{SubjectCode}}}}">{{{{Subject}}}}</span>
-      <span class="meta-dim">Cap. {{{{ChapterNum}}}} — {{{{ChapterTitle}}}}</span>
-      <span class="meta-dim">• {{{{QuizTypeLabel}}}} #{{{{QuestionNum}}}}</span>
-    </div>
-    {front_inner}
-  </div>
-</div>"""
-        afmt = f"""
-<div class="riso-sheet">
-  <div class="riso-regbar">
-    <span>┼ RISO.ZINE // REG.04 • VERIFIED ┼</span>
-    <span class="riso-inks">
-      <i class="riso-dot" style="background:#ff2e93;"></i>
-      <i class="riso-dot" style="background:#facc15;"></i>
-      <i class="riso-dot" style="background:#00bbf9;"></i>
-      <i class="riso-dot" style="background:#86efac;"></i>
-      &nbsp;PAG. {{{{BookPage}}}}
-    </span>
-  </div>
-  <div class="riso-body">
-    <div class="meta">
-      <span class="badge subj-{{{{SubjectCode}}}}">{{{{Subject}}}}</span>
-      <span class="meta-dim">Cap. {{{{ChapterNum}}}} — {{{{ChapterTitle}}}}</span>
-      <span class="meta-dim">• {{{{QuizTypeLabel}}}} #{{{{QuestionNum}}}}</span>
-    </div>
-    {back_inner}
-  </div>
 </div>"""
         return qfmt, afmt
 
@@ -1729,7 +1556,7 @@ def _build_layout_shell(layout: str, front_inner: str, back_inner: str, scan_ope
 </div>"""
         return qfmt, afmt
 
-    # "standard" layout
+    # Exact "brutalist" (#04 Neo-Brutalist Risoprint Zine) and "standard" (#06 / #00) layout from theme_showcase.html!
     qfmt = f"""
 <div class="wrap">
   <div class="meta">
@@ -1756,27 +1583,11 @@ def _build_layout_shell(layout: str, front_inner: str, back_inner: str, scan_ope
 # ==============================================================================
 
 
-def _scope_single_selector(sel: str, num: str) -> str:
-    prefix = f'html[data-sf-theme="{num}"]'
-    s = sel.strip()
-    if s == ".card":
-        return f"{prefix}, {prefix} body, {prefix} .card"
-    if s in (".card.nightMode", ".nightMode.card", ".night_mode .card"):
-        return f"{prefix}.nightMode, {prefix} body.nightMode, {prefix} body.night_mode, {prefix} .card.nightMode, {prefix} .night_mode .card"
-    if s.startswith(".card:not(.nightMode)"):
-        rest = s[len(".card:not(.nightMode)") :].strip()
-        return f"{prefix} body:not(.nightMode):not(.night_mode) {rest}, {prefix} .card:not(.nightMode) {rest}"
-    for nm_prefix in (".card.nightMode ", ".nightMode ", ".night_mode "):
-        if s.startswith(nm_prefix):
-            rest = s[len(nm_prefix) :].strip()
-            return f"{prefix} .nightMode {rest}, {prefix} .night_mode {rest}"
-    return f"{prefix} {s}"
-
-
 def _scope_css_block(css_body: str, num: str) -> str:
-    """Deterministically scope every top-level and @media CSS rule under html[data-sf-theme="XX"]."""
-    cleaned = re.sub(r"/\*.*?\*/", "", css_body, flags=re.S)
+    """Scope every selector of a theme cleanly under html[data-sf-theme="XX"]."""
+    cleaned = re.sub(r"/\*.*?\*/", "", _convert_card_selectors_to_sf_canvas(css_body), flags=re.S)
     cleaned = re.sub(r"@import\s+url\([^\)]*\)\s*;", "", cleaned)
+    prefix = f'html[data-sf-theme="{num}"]'
     out = []
     pos = 0
     n = len(cleaned)
@@ -1802,11 +1613,8 @@ def _scope_css_block(css_body: str, num: str) -> str:
             out.append(f"{prelude} {{\n{_scope_css_block(inner, num)}\n}}")
         else:
             raw_sels = [p.strip() for p in prelude.split(",") if p.strip()]
-            scoped_sels = ", ".join(_scope_single_selector(s, num) for s in raw_sels)
-            decl = inner.strip()
-            if any(rs in (".card", ".card.nightMode", ".nightMode.card", ".night_mode .card") for rs in raw_sels):
-                decl = re.sub(r"(background(?:-[a-z]+)?\s*:[^;!\}]+)(;)", r"\1 !important\2", decl)
-            out.append(f"{scoped_sels} {{ {decl} }}")
+            scoped_sels = ", ".join(f"{prefix} {s}" for s in raw_sels)
+            out.append(f"{scoped_sels} {{ {inner.strip()} }}")
         pos = end
     return "\n".join(out)
 
@@ -1831,12 +1639,12 @@ SWITCHER_UI_CSS = """
   gap: 3px;
   background: rgba(15, 23, 42, 0.86);
   color: #f8fafc;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 999px;
   padding: 3px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.24);
 }
 .sf-num-btn {
   appearance: none;
@@ -1864,7 +1672,7 @@ SWITCHER_UI_CSS = """
   display: none;
 }
 .sf-theme-bar:not(.is-open) {
-  opacity: 0.72;
+  opacity: 0.78;
 }
 .sf-theme-bar:not(.is-open):hover,
 .sf-theme-bar.is-open {
@@ -1905,9 +1713,13 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
   <div class="ans-banner">{{AnswerBannerHTML}}</div>
   {{#ExplanationHTML}}<div class="expl-box"><strong>Spiegazione:</strong> {{ExplanationHTML}}</div>{{/ExplanationHTML}}
   {{#QuestionScanHTML}}<details class="orig-scan"><summary>Scansione originale della domanda (p. {{BookPage}})</summary>{{QuestionScanHTML}}</details>{{/QuestionScanHTML}}
-  {{#SolutionScanHTML}}<details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{SolutionScanHTML}}</details>{{/SolutionScanHTML}}"""
+  {{#SolutionScanHTML}}<details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{{{SolutionScanHTML}}}}</details>{{{{/SolutionScanHTML}}}}""".replace(
+        "{{{{SolutionScanHTML}}}}", "{{SolutionScanHTML}}"
+    ).replace(
+        "{{{{/SolutionScanHTML}}}}", "{{/SolutionScanHTML}}"
+    )
 
-    css_sections = [GOOGLE_FONTS_IMPORT, _scope_css_block(default_css, "00")]
+    css_sections = [GOOGLE_FONTS_IMPORT, HOST_VIEWPORT_RESET_CSS, _scope_css_block(default_css, "00")]
     q_tpls = []
     a_tpls = []
 
@@ -1916,25 +1728,30 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
     a_tpls.append(f'<template id="sf-t00">{a0}</template>')
 
     theme_meta_js = [("00", "00 · Classico Pulito (Default)")]
+    default_dark_map = {"00": "auto"}
     for _, tmeta in THEMES.items():
         num = tmeta["num"]
-        css_sections.append(_scope_css_block(tmeta["raw_css"], num))
+        css_sections.append(_scope_css_block(tmeta["raw_showcase_css"], num))
         qt, at = _build_layout_shell(tmeta["layout"], front_inner, back_inner, "")
         q_tpls.append(f'<template id="sf-t{num}">{qt}</template>')
         a_tpls.append(f'<template id="sf-t{num}">{at}</template>')
         theme_meta_js.append((num, f"{num} · {tmeta['name']}"))
+        default_dark_map[num] = bool(tmeta["default_dark"])
 
     css_sections.append(SWITCHER_UI_CSS)
     full_css = "\n\n".join(css_sections)
 
     labels_json = json.dumps(dict(theme_meta_js), ensure_ascii=False)
     nums_json = json.dumps([n for n, _ in theme_meta_js])
+    dark_json = json.dumps(default_dark_map)
 
     shared_runtime_js = f"""
 (function() {{
   var NUMS = {nums_json};
   var LABELS = {labels_json};
-  var side = document.getElementById('sf-root').getAttribute('data-side');
+  var DEFAULT_DARK = {dark_json};
+  var canvas = document.getElementById('sf-canvas');
+  var side = canvas.getAttribute('data-side');
   var itemId = "{{{{ItemID}}}}";
 
   function readTheme() {{
@@ -1955,13 +1772,11 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
   }}
 
   function bindCardInteractions() {{
-    var root = document.getElementById('sf-root');
-    if (!root) return;
-    var opts = root.querySelectorAll('.opt');
+    var opts = canvas.querySelectorAll('.opt');
     var picked = null;
     try {{ picked = sessionStorage.getItem('pick_' + itemId); }} catch(e) {{}}
     opts.forEach(function(el, idx) {{
-      var lEl = el.querySelector('.opt-letter, .opt-key');
+      var lEl = el.querySelector('.opt-letter');
       var letter = lEl ? lEl.textContent.replace(/[().✓\\s]/g, '') : String.fromCharCode(65 + idx);
       if (side === 'front') {{
         if (picked === letter) el.classList.add('user-picked');
@@ -1971,7 +1786,7 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
           opts.forEach(function(o) {{ o.classList.remove('user-picked'); }});
           el.classList.add('user-picked');
         }});
-      }} else if (picked && letter === picked && !el.classList.contains('correct') && !el.classList.contains('opt-correct')) {{
+      }} else if (picked && letter === picked && !el.classList.contains('correct')) {{
         el.classList.add('user-wrong');
       }}
     }});
@@ -1979,22 +1794,24 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
 
   var cur = readTheme();
 
-  function syncNightClass() {{
-    var isNight = document.body && (document.body.classList.contains('nightMode') || document.body.classList.contains('night_mode'));
-    document.documentElement.classList.toggle('nightMode', !!isNight);
+  function syncCanvasSurface() {{
+    var d = DEFAULT_DARK[cur];
+    var useDark = (d === 'auto')
+      ? !!(document.body && (document.body.classList.contains('nightMode') || document.body.classList.contains('night_mode')))
+      : !!d;
+    canvas.className = useDark ? 'sf-canvas sf-dark' : 'sf-canvas';
   }}
 
   function applyTheme(n, showToast) {{
     if (!LABELS[n]) n = '00';
     cur = n;
     saveTheme(n);
-    syncNightClass();
     document.documentElement.setAttribute('data-sf-theme', n);
+    syncCanvasSurface();
     var tpl = document.getElementById('sf-t' + n);
-    var root = document.getElementById('sf-root');
-    if (tpl && root) {{
-      root.innerHTML = '';
-      root.appendChild(tpl.content.cloneNode(true));
+    if (tpl && canvas) {{
+      canvas.innerHTML = '';
+      canvas.appendChild(tpl.content.cloneNode(true));
       bindCardInteractions();
     }}
     var ui = document.getElementById('sf-theme-ui');
@@ -2035,8 +1852,7 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
     ui.querySelectorAll('.sf-choice').forEach(function(btn) {{
       btn.addEventListener('click', function(ev) {{
         ev.stopPropagation();
-        var chosen = btn.getAttribute('data-num');
-        applyTheme(chosen, true);
+        applyTheme(btn.getAttribute('data-num'), true);
       }});
     }});
     document.addEventListener('click', function(ev) {{
@@ -2048,7 +1864,7 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
   }}
 
   if (window.MutationObserver && document.body) {{
-    new MutationObserver(syncNightClass).observe(document.body, {{ attributes: true, attributeFilter: ['class'] }});
+    new MutationObserver(syncCanvasSurface).observe(document.body, {{ attributes: true, attributeFilter: ['class'] }});
   }}
   if (side === 'front' && window._sfLastItem !== itemId) {{
     window._sfLastItem = itemId;
@@ -2069,14 +1885,16 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
     )
 
     master_qfmt = (
-        switcher_html
-        + f'<div id="sf-root" data-side="front">{q0}</div>\n'
+        GOOGLE_FONTS_LINK_HTML
+        + switcher_html
+        + f'<div id="sf-canvas" class="sf-canvas" data-side="front">{q0}</div>\n'
         + "\n".join(q_tpls)
         + f"\n<script>{shared_runtime_js}</script>"
     )
     master_afmt = (
-        switcher_html
-        + f'<div id="sf-root" data-side="back">{a0}</div>\n'
+        GOOGLE_FONTS_LINK_HTML
+        + switcher_html
+        + f'<div id="sf-canvas" class="sf-canvas" data-side="back">{a0}</div>\n'
         + "\n".join(a_tpls)
         + f"\n<script>{shared_runtime_js}</script>"
     )
@@ -2090,9 +1908,10 @@ def build_card_templates(
     type_in_completamento: bool = False,
     auto_open_scan: bool = False,
 ) -> Tuple[str, str]:
-    """Generate distinct structural HTML + sessionStorage JS for a single dedicated theme (NO switcher UI)."""
+    """Generate exact theme_showcase.html HTML + full-viewport `.sf-canvas` wrapper (NO switcher UI)."""
     theme = THEMES[theme_key]
     scan_open_attr = " open" if auto_open_scan else ""
+    canvas_cls = "sf-canvas sf-dark" if theme.get("default_dark") else "sf-canvas"
 
     front_inner = f"""<div class="stem">{{{{FrontStemHTML}}}}</div>
   {{{{#FigureHTML}}}}<div class="fig-box">{{{{FigureHTML}}}}</div>{{{{/FigureHTML}}}}
@@ -2115,14 +1934,6 @@ def build_card_templates(
 <script>
 (function() {{
   document.documentElement.removeAttribute('data-sf-theme');
-  var syncN = function() {{
-    var n = document.body && (document.body.classList.contains('nightMode') || document.body.classList.contains('night_mode'));
-    document.documentElement.classList.toggle('nightMode', !!n);
-  }};
-  syncN();
-  if (window.MutationObserver && document.body) {{
-    new MutationObserver(syncN).observe(document.body, {{ attributes: true, attributeFilter: ['class'] }});
-  }}
   var itemId = "{{{{ItemID}}}}";
   var instantGrade = {instant_js};
   var ansRef = document.getElementById('ans-hidden-ref');
@@ -2130,18 +1941,18 @@ def build_card_templates(
   try {{ sessionStorage.removeItem("pick_" + itemId); }} catch(e) {{}}
   var opts = document.querySelectorAll('.opt');
   opts.forEach(function(el, idx) {{
-    var lEl = el.querySelector('.opt-letter, .opt-key');
-    var letter = lEl ? lEl.textContent.replace(/[().✓\\s]/g, '') : String.fromCharCode(65 + idx);
+    var lEl = el.querySelector('.opt-letter');
+    var letter = lEl ? lEl.textContent.replace(/[()\\s]/g, '') : String.fromCharCode(65 + idx);
     el.addEventListener('click', function() {{
       try {{ sessionStorage.setItem("pick_" + itemId, letter); }} catch(e) {{}}
-      opts.forEach(function(o) {{ o.classList.remove('user-picked', 'correct', 'opt-correct', 'user-wrong'); }});
+      opts.forEach(function(o) {{ o.classList.remove('user-picked', 'correct', 'user-wrong'); }});
       if (instantGrade && ansBanner) {{
         var m = ansBanner.match(/Risposta corretta:\\s*([A-E])/);
         var corr = m ? m[1] : "";
         opts.forEach(function(o) {{
-          var olEl = o.querySelector('.opt-letter, .opt-key');
-          var ol = olEl ? olEl.textContent.replace(/[().✓\\s]/g, '') : "";
-          if (ol === corr) o.classList.add('correct', 'opt-correct');
+          var olEl = o.querySelector('.opt-letter');
+          var ol = olEl ? olEl.textContent.replace(/[()\\s]/g, '') : "";
+          if (ol === corr) o.classList.add('correct');
         }});
         if (letter !== corr) el.classList.add('user-wrong');
       }} else {{
@@ -2156,16 +1967,14 @@ def build_card_templates(
 <script>
 (function() {
   document.documentElement.removeAttribute('data-sf-theme');
-  var n = document.body && (document.body.classList.contains('nightMode') || document.body.classList.contains('night_mode'));
-  document.documentElement.classList.toggle('nightMode', !!n);
   var itemId = "{{ItemID}}";
   try {
     var picked = sessionStorage.getItem("pick_" + itemId);
     if (picked) {
       document.querySelectorAll('.opt').forEach(function(o) {
-        var l = o.querySelector('.opt-letter, .opt-key');
-        var txt = l ? l.textContent.replace(/[().✓\\s]/g, '') : '';
-        if (txt === picked && !o.classList.contains('correct') && !o.classList.contains('opt-correct')) {
+        var l = o.querySelector('.opt-letter');
+        var txt = l ? l.textContent.replace(/[()\\s]/g, '') : '';
+        if (txt === picked && !o.classList.contains('correct')) {
           o.classList.add('user-wrong');
         }
       });
@@ -2174,7 +1983,10 @@ def build_card_templates(
 })();
 </script>"""
 
-    return q_shell + front_script, a_shell + back_script
+    return (
+        f'{GOOGLE_FONTS_LINK_HTML}<div id="sf-canvas" class="{canvas_cls}">{q_shell}</div>{front_script}',
+        f'{GOOGLE_FONTS_LINK_HTML}<div id="sf-canvas" class="{canvas_cls}">{a_shell}</div>{back_script}',
+    )
 
 
 def repackage_apkg_with_theme(
@@ -2187,9 +1999,8 @@ def repackage_apkg_with_theme(
     auto_open_scan: bool = False,
     custom_css_append: str = "",
 ) -> Path:
-    """Build a standalone, single-theme .apkg (NO theme switcher widget) with its OWN distinct
-    Anki `model_id`, Note-Type title, subdeck IDs, and note GUIDs so importing it into Anki NEVER
-    collides with or falls back to `Semestre_Filtro_Complete.apkg`'s CSS!"""
+    """Build a standalone single-theme .apkg (NO theme switcher widget) matching theme_showcase.html
+    pixel-for-pixel, with independent Anki `model_id`, subdeck IDs, and note GUIDs."""
     theme = THEMES[theme_key]
     qfmt, afmt = build_card_templates(
         theme_key=theme_key,
@@ -2199,7 +2010,7 @@ def repackage_apkg_with_theme(
         auto_open_scan=auto_open_scan,
     )
     final_css = theme["css"] + ("\n" + custom_css_append if custom_css_append else "")
-    new_mid = _stable_id(f"SemestreFiltro-ThemeModel-{theme_key}")
+    new_mid = _stable_id(f"SemestreFiltro-ThemeModel-v2-{theme_key}")
     now_sec = int(time.time()) + 30
     root_label = f"Semestre Filtro [{theme['num']} {theme['name']}]"
 
@@ -2251,7 +2062,7 @@ def repackage_apkg_with_theme(
             note_rows = cur.execute("SELECT id, sfld FROM notes").fetchall()
             cur.executemany(
                 "UPDATE notes SET guid = ? WHERE id = ?",
-                [(genanki.guid_for(f"sf-{theme_key}", sfld), nid) for nid, sfld in note_rows],
+                [(genanki.guid_for(f"sf-v2-{theme_key}", sfld), nid) for nid, sfld in note_rows],
             )
             for old_did, new_did in did_remap.items():
                 cur.execute("UPDATE cards SET did = ?, mod = ?, usn = -1 WHERE did = ?", (new_did, now_sec, old_did))
@@ -2281,8 +2092,7 @@ def build_lightweight_theme_switcher_apkg(
     auto_open_scan: bool = False,
     custom_css_append: str = "",
 ) -> Path:
-    """Create a ~15 KB single-theme Note-Type updater .apkg (with strictly newer `mod` timestamp
-    so Anki's 'Update note types' option always accepts the updated CSS & HTML!)."""
+    """Create a ~15 KB single-theme Note-Type updater .apkg matching theme_showcase.html."""
     theme = THEMES[theme_key]
     qfmt, afmt = build_card_templates(
         theme_key=theme_key,

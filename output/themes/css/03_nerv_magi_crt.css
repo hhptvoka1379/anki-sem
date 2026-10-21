@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Mono:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap');
-html, body {
-  min-height: 100% !important;
-  margin: 0;
+html, body, #qa {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  min-height: 100vh !important;
 }
-.card {
+
+.sf-canvas {
   min-height: 100vh;
+  width: 100%;
   margin: 0;
   padding: 20px 14px 32px;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   text-align: left;
 }
-.card *, .card *::before, .card *::after {
+.sf-canvas *, .sf-canvas *::before, .sf-canvas *::after {
   box-sizing: border-box;
 }
 .fig-box {
@@ -37,10 +41,10 @@ details.orig-scan summary {
   padding: 4px 0;
 }
 
-html, body, .card, body.nightMode, body.night_mode, .card.nightMode, .night_mode .card {
-  background-color: #050507 !important;
+.sf-canvas, .sf-canvas.sf-dark {
+  background: #050507;
   color: #ffb000;
-  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-family: "JetBrains Mono", monospace;
 }
 .nerv-frame {
   max-width: 750px;
@@ -84,7 +88,7 @@ html, body, .card, body.nightMode, body.night_mode, .card.nightMode, .night_mode
 }
 .blank-slot { display: inline-block; min-width: 84px; border-bottom: 2px solid #00ff9d; color: transparent; }
 .blank-filled { background: rgba(0,255,157,0.18); color: #00ff9d; border: 1px solid #00ff9d; padding: 1px 8px; }
-.options, .opts { display: flex; flex-direction: column; gap: 8px; }
+.options { display: flex; flex-direction: column; gap: 8px; }
 .opt {
   display: flex;
   align-items: center;
@@ -103,7 +107,7 @@ html, body, .card, body.nightMode, body.night_mode, .card.nightMode, .night_mode
   color: #ffffff;
   transform: translateX(4px);
 }
-.opt-letter, .opt-key {
+.opt-letter {
   font-weight: 800;
   color: #050507;
   background: #ff6a00;
@@ -111,11 +115,11 @@ html, body, .card, body.nightMode, body.night_mode, .card.nightMode, .night_mode
   font-size: 12px;
 }
 .opt.user-picked { background: rgba(0,229,255,0.18); border-color: #00e5ff; color: #e0faff; }
-.opt.user-picked .opt-letter, .opt.user-picked .opt-key, .opt-key { background: #00e5ff; color: #050507; }
+.opt.user-picked .opt-letter { background: #00e5ff; color: #050507; }
 .opt.user-wrong { background: rgba(255,30,56,0.25); border-color: #ff1e38; color: #ffc2c9; }
-.opt.user-wrong .opt-letter, .opt-key { background: #ff1e38; color: #ffffff; }
-.opt.correct, .opt.opt-correct { background: rgba(0,255,157,0.18); border-color: #00ff9d; color: #b8ffe3; font-weight: 700; box-shadow: 0 0 16px rgba(0,255,157,0.2); }
-.opt.correct .opt-letter, .opt.opt-correct .opt-key, .opt.correct .opt-key, .opt-key { background: #00ff9d; color: #050507; }
+.opt.user-wrong .opt-letter { background: #ff1e38; color: #ffffff; }
+.opt.correct { background: rgba(0,255,157,0.18); border-color: #00ff9d; color: #b8ffe3; font-weight: 700; box-shadow: 0 0 16px rgba(0,255,157,0.2); }
+.opt.correct .opt-letter { background: #00ff9d; color: #050507; }
 .ans-banner {
   margin-top: 16px;
   padding: 10px 14px;
@@ -131,7 +135,7 @@ html, body, .card, body.nightMode, body.night_mode, .card.nightMode, .night_mode
   border-left: 3px solid #ff6a00;
   background: rgba(255,106,0,0.05);
   color: #fed7aa;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 1.58;
 }

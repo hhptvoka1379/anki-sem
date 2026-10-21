@@ -140,7 +140,7 @@
     },
     "anki_apkg_and_media_integrity": {
       "passed": true,
-      "apkg_size_bytes": 34542714,
+      "apkg_size_bytes": 34545201,
       "apkg_size_mb": 32.94,
       "sqlite_notes": 6948,
       "sqlite_cards": 6948,
