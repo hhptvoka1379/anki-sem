@@ -6,6 +6,36 @@ html, body, #qa {
   min-height: 100vh !important;
 }
 
+.sf-mode-pill {
+  position: fixed;
+  top: 8px;
+  right: 10px;
+  z-index: 99999;
+  appearance: none;
+  border: 1.5px solid rgba(17, 17, 17, 0.35);
+  background: rgba(15, 23, 42, 0.82);
+  color: #f8fafc;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  font-size: 13px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.72;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+  transition: opacity 0.14s ease, transform 0.12s ease, background 0.14s ease;
+  user-select: none;
+}
+.sf-mode-pill:hover {
+  opacity: 1;
+  transform: scale(1.06);
+}
+
 .sf-canvas {
   min-height: 100vh;
   width: 100%;
@@ -134,8 +164,8 @@ details.orig-scan summary {
   box-shadow: 0 4px 0 #0d0f12;
   color: #f3f4f6;
 }
-.opt:hover { transform: translateY(-1px); border-color: #ff4f00; }
-.opt:active, .opt.user-picked {
+.opt:hover, .sf-canvas.sf-dark .opt:hover { transform: translateY(-1px); border-color: #ff4f00; }
+.opt:active, .opt.user-picked, .sf-canvas.sf-dark .opt:active, .sf-canvas.sf-dark .opt.user-picked {
   transform: translateY(3px);
   box-shadow: 0 1px 0 #7b2600;
   background: #ff4f00;
@@ -157,10 +187,10 @@ details.orig-scan summary {
   justify-content: center;
   flex-shrink: 0;
 }
-.opt.user-picked .opt-letter { background: #111316; color: #ff4f00; border-color: #111316; }
-.opt.user-wrong { background: #ef4444; color: #ffffff; box-shadow: 0 2px 0 #991b1b; }
-.opt.correct { background: #10b981; border-color: #059669; color: #052e16; font-weight: 700; box-shadow: 0 4px 0 #047857; }
-.opt.correct .opt-letter { background: #052e16; color: #6ee7b7; border-color: #052e16; }
+.opt.user-picked .opt-letter, .sf-canvas.sf-dark .opt.user-picked .opt-letter { background: #111316; color: #ff4f00; border-color: #111316; }
+.opt.user-wrong, .sf-canvas.sf-dark .opt.user-wrong { background: #ef4444; color: #ffffff; box-shadow: 0 2px 0 #991b1b; }
+.opt.correct, .sf-canvas.sf-dark .opt.correct { background: #10b981; border-color: #059669; color: #052e16; font-weight: 700; box-shadow: 0 4px 0 #047857; }
+.opt.correct .opt-letter, .sf-canvas.sf-dark .opt.correct .opt-letter { background: #052e16; color: #6ee7b7; border-color: #052e16; }
 .ans-banner {
   margin-top: 16px;
   padding: 11px 15px;

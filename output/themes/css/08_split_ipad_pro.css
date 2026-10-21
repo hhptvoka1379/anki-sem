@@ -6,6 +6,36 @@ html, body, #qa {
   min-height: 100vh !important;
 }
 
+.sf-mode-pill {
+  position: fixed;
+  top: 8px;
+  right: 10px;
+  z-index: 99999;
+  appearance: none;
+  border: 1.5px solid rgba(17, 17, 17, 0.35);
+  background: rgba(15, 23, 42, 0.82);
+  color: #f8fafc;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  font-size: 13px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.72;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+  transition: opacity 0.14s ease, transform 0.12s ease, background 0.14s ease;
+  user-select: none;
+}
+.sf-mode-pill:hover {
+  opacity: 1;
+  transform: scale(1.06);
+}
+
 .sf-canvas {
   min-height: 100vh;
   width: 100%;
@@ -124,11 +154,13 @@ details.orig-scan summary {
 }
 .sf-canvas.sf-dark .opt-letter { background: #283655; color: #c7d2fe; }
 .opt.user-picked { border-color: #4f46e5; background: #e0e7ff; color: #1e1b4b; }
-.opt.user-picked .opt-letter { background: #4f46e5; color: #ffffff; }
+.sf-canvas.sf-dark .opt.user-picked { border-color: #818cf8; background: #283566; color: #e0e7ff; }
+.opt.user-picked .opt-letter, .sf-canvas.sf-dark .opt.user-picked .opt-letter { background: #4f46e5; color: #ffffff; }
 .opt.user-wrong { border-color: #ef4444; background: #fef2f2; color: #991b1b; }
+.sf-canvas.sf-dark .opt.user-wrong { border-color: #f87171; background: rgba(239,68,68,0.22); color: #fecaca; }
 .opt.correct { border-color: #10b981; background: #ecfdf5; color: #064e3b; font-weight: 700; }
-.sf-canvas.sf-dark .opt.correct { background: rgba(16,185,129,0.18); color: #ecfdf5; }
-.opt.correct .opt-letter { background: #10b981; color: #ffffff; }
+.sf-canvas.sf-dark .opt.correct { border-color: #10b981; background: rgba(16,185,129,0.2); color: #ecfdf5; font-weight: 700; }
+.opt.correct .opt-letter, .sf-canvas.sf-dark .opt.correct .opt-letter { background: #10b981; color: #ffffff; }
 .ans-banner {
   margin-top: 14px;
   padding: 11px 14px;

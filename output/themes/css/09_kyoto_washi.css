@@ -6,6 +6,36 @@ html, body, #qa {
   min-height: 100vh !important;
 }
 
+.sf-mode-pill {
+  position: fixed;
+  top: 8px;
+  right: 10px;
+  z-index: 99999;
+  appearance: none;
+  border: 1.5px solid rgba(17, 17, 17, 0.35);
+  background: rgba(15, 23, 42, 0.82);
+  color: #f8fafc;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  font-size: 13px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.72;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+  transition: opacity 0.14s ease, transform 0.12s ease, background 0.14s ease;
+  user-select: none;
+}
+.sf-mode-pill:hover {
+  opacity: 1;
+  transform: scale(1.06);
+}
+
 .sf-canvas {
   min-height: 100vh;
   width: 100%;
@@ -107,7 +137,7 @@ details.orig-scan summary {
 }
 .sf-canvas.sf-dark .opt { background: #292622; border-color: #3d3831; }
 .opt:hover { border-left-color: #c53030; background: #f1ece0; }
-.sf-canvas.sf-dark .opt:hover { background: #332f2a; }
+.sf-canvas.sf-dark .opt:hover { background: #332f2a; border-left-color: #f87171; }
 .opt-letter {
   font-family: "IBM Plex Mono", monospace;
   font-size: 12px;
@@ -115,10 +145,13 @@ details.orig-scan summary {
   color: #c53030;
   min-width: 20px;
 }
+.sf-canvas.sf-dark .opt-letter { color: #f87171; }
 .opt.user-picked { background: #e6eef6; border-left-color: #1e3a5f; color: #1e3a5f; font-weight: 600; }
+.sf-canvas.sf-dark .opt.user-picked { background: #1e3a5f; border-left-color: #93c5fd; color: #f7f3ea; font-weight: 600; }
 .opt.user-wrong { background: #fae8e6; border-left-color: #c53030; color: #9b2c2c; }
-.opt.correct { background: #1e3a5f; color: #f7f3ea; border-color: #1e3a5f; font-weight: 600; }
-.opt.correct .opt-letter { color: #fbd38d; }
+.sf-canvas.sf-dark .opt.user-wrong { background: #451a1a; border-left-color: #f87171; color: #fecaca; }
+.opt.correct, .sf-canvas.sf-dark .opt.correct { background: #1e3a5f; color: #f7f3ea; border-color: #1e3a5f; font-weight: 600; }
+.opt.correct .opt-letter, .sf-canvas.sf-dark .opt.correct .opt-letter { color: #fbd38d; }
 .ans-banner {
   margin-top: 18px;
   padding: 11px 15px;

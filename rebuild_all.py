@@ -53,7 +53,7 @@ from extractor.stage4_export import (
     stable_anki_id,
 )
 
-MODEL_ID = 1134323210
+MODEL_ID = 1134323212
 PUB_RE = re.compile(r"vaedi[s]es|@di[s]es|edi[s]es", re.IGNORECASE)
 
 
@@ -193,7 +193,7 @@ def main() -> None:
 
         note = genanki.Note(
             model=model,
-            guid=genanki.guid_for("semestre-filtro-v3", item_id),
+            guid=genanki.guid_for("semestre-filtro-v4", item_id),
             fields=[
                 item_id,
                 r["subject"],

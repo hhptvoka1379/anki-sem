@@ -381,6 +381,8 @@ def run_verification(output_dir: Path = Path("/home/user/anki-sem/output")) -> D
         "passed": (
             'id="sf-theme-ui"' in master_qfmt
             and 'id="sf-theme-ui"' in master_afmt
+            and 'id="sf-dark-btn"' in master_qfmt
+            and 'id="sf-dark-btn"' in master_afmt
             and all(f'data-num="{n}"' in master_qfmt and f'data-num="{n}"' in master_afmt for n in expected_nums)
             and all(f'id="sf-t{n}"' in master_qfmt and f'id="sf-t{n}"' in master_afmt for n in expected_nums)
             and all(f'html[data-sf-theme="{n}"]' in master_css for n in expected_nums)
@@ -426,6 +428,11 @@ def run_verification(output_dir: Path = Path("/home/user/anki-sem/output")) -> D
                 and "#facc15" in m2_css
                 and 'class="sf-canvas"' in m2_qfmt
                 and 'class="sf-canvas"' in m2_afmt
+                and 'id="sf-mode-pill"' in m2_qfmt
+                and 'id="sf-mode-pill"' in m2_afmt
+                and ".sf-canvas.sf-dark" in m2_css
+                and "#18181b" in m2_css
+                and "#232329" in m2_css
                 and 'class="wrap"' in m2_qfmt
                 and 'class="wrap"' in m2_afmt
                 and ".nightMode" not in m2_css

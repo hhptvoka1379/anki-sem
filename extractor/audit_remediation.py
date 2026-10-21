@@ -1245,6 +1245,7 @@ ITALIAN_LEXICAL_FIXES: List[Tuple[re.Pattern, str]] = [
     (re.compile(r"\bseos\s+PP\s+guire\b"), "seguire"),
     (re.compile(r"(?<=[A-Za-zÀ-ÿ])-\s+(?=[a-zà-ÿ]{2,})"), ""),
     # OCR article misreads ("ll logaritmo" -> "Il logaritmo", "Ja concentrazione" -> "La concentrazione", etc.)
+    (re.compile(r"\b([1-9])\.\s+i\s+(?=[a-zà-ÿ]{2,})"), r"\1. I "),
     (re.compile(r"\bll\s+(?=[a-zà-ÿ0-9])"), "Il "),
     (re.compile(r"\bIi\s+(?=[a-zà-ÿ])"), "Il "),
     (re.compile(r"\bii\s+(?=(?:numero|solvente|fosforo|mantenimento|propanale|volume|valore|pH)\b)"), "il "),

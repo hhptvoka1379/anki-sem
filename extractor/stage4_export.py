@@ -427,7 +427,7 @@ def run_stage4(
 
     master_css, master_qfmt, master_afmt = build_master_multitheme_bundle(ANKI_CSS)
     model = genanki.Model(
-        model_id=1134323210,
+        model_id=1134323212,
         name="Semestre Filtro — Studio & Esame",
         fields=[
             {"name": "ItemID"},
@@ -609,7 +609,7 @@ def run_stage4(
 
             note = genanki.Note(
                 model=model,
-                guid=genanki.guid_for("semestre-filtro-v3", item_id),
+                guid=genanki.guid_for("semestre-filtro-v4", item_id),
                 fields=[
                     item_id,
                     qb["subject"],

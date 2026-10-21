@@ -25,6 +25,38 @@ html, body, #qa {
 }
 """
 
+STANDALONE_DARK_TOGGLE_CSS = """
+.sf-mode-pill {
+  position: fixed;
+  top: 8px;
+  right: 10px;
+  z-index: 99999;
+  appearance: none;
+  border: 1.5px solid rgba(17, 17, 17, 0.35);
+  background: rgba(15, 23, 42, 0.82);
+  color: #f8fafc;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  font-size: 13px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.72;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+  transition: opacity 0.14s ease, transform 0.12s ease, background 0.14s ease;
+  user-select: none;
+}
+.sf-mode-pill:hover {
+  opacity: 1;
+  transform: scale(1.06);
+}
+"""
+
 BASE_RESET_CSS = """
 .card {
   min-height: 100vh;
@@ -69,9 +101,7 @@ def _stable_id(seed: str) -> int:
 
 
 def _convert_card_selectors_to_sf_canvas(css_text: str) -> str:
-    """Map `.card` / `.card.nightMode` rules onto our isolated `#qa` child `.sf-canvas` / `.sf-canvas.sf-dark`
-    so Anki Desktop's automatic `<body class="card card1 isMac nightMode">` NEVER overrides any theme's
-    intended surface palette or splits the viewport background!"""
+    """Map `.card` / `.card.nightMode` rules onto our isolated `#qa` child `.sf-canvas` / `.sf-canvas.sf-dark`."""
     s = css_text
     s = s.replace(".card:not(.nightMode)", ".sf-canvas:not(.sf-dark)")
     s = s.replace(".card.nightMode", ".sf-canvas.sf-dark")
@@ -84,7 +114,7 @@ def _convert_card_selectors_to_sf_canvas(css_text: str) -> str:
 
 
 # ==============================================================================
-# EXACT 10 ART-DIRECTED ANKI DESIGN SYSTEMS FROM theme_showcase.html
+# 10 ART-DIRECTED ANKI DESIGN SYSTEMS (FULL LIGHT + FULL DARK MODE ON ALL 10!)
 # ==============================================================================
 
 RAW_THEMES: Dict[str, dict] = {
@@ -193,11 +223,13 @@ RAW_THEMES: Dict[str, dict] = {
   min-width: 24px;
 }
 .opt:hover .opt-letter { color: #ff5a52; }
-.opt.user-picked { background: #0d0d0d; color: #f4f1ea; }
+.opt.user-picked, .card.nightMode .opt.user-picked { background: #0d0d0d; color: #f4f1ea; }
+.card.nightMode .opt.user-picked { background: #f2f0eb; color: #0d0d0d; }
 .opt.user-picked .opt-letter { color: #facc15; }
-.opt.user-wrong { background: #fee2e2; color: #7f1d1d; text-decoration: line-through; }
-.opt.correct { background: #e11d18; color: #ffffff; font-weight: 700; }
-.opt.correct .opt-letter { color: #ffffff; }
+.card.nightMode .opt.user-picked .opt-letter { color: #e11d18; }
+.opt.user-wrong, .card.nightMode .opt.user-wrong { background: #fee2e2; color: #7f1d1d; text-decoration: line-through; }
+.opt.correct, .card.nightMode .opt.correct { background: #e11d18; color: #ffffff; font-weight: 700; }
+.opt.correct .opt-letter, .card.nightMode .opt.correct .opt-letter { color: #ffffff; }
 .ans-banner {
   margin-top: 18px;
   padding: 12px 14px;
@@ -324,8 +356,8 @@ RAW_THEMES: Dict[str, dict] = {
   box-shadow: 0 4px 0 #0d0f12;
   color: #f3f4f6;
 }
-.opt:hover { transform: translateY(-1px); border-color: #ff4f00; }
-.opt:active, .opt.user-picked {
+.opt:hover, .card.nightMode .opt:hover { transform: translateY(-1px); border-color: #ff4f00; }
+.opt:active, .opt.user-picked, .card.nightMode .opt:active, .card.nightMode .opt.user-picked {
   transform: translateY(3px);
   box-shadow: 0 1px 0 #7b2600;
   background: #ff4f00;
@@ -347,10 +379,10 @@ RAW_THEMES: Dict[str, dict] = {
   justify-content: center;
   flex-shrink: 0;
 }
-.opt.user-picked .opt-letter { background: #111316; color: #ff4f00; border-color: #111316; }
-.opt.user-wrong { background: #ef4444; color: #ffffff; box-shadow: 0 2px 0 #991b1b; }
-.opt.correct { background: #10b981; border-color: #059669; color: #052e16; font-weight: 700; box-shadow: 0 4px 0 #047857; }
-.opt.correct .opt-letter { background: #052e16; color: #6ee7b7; border-color: #052e16; }
+.opt.user-picked .opt-letter, .card.nightMode .opt.user-picked .opt-letter { background: #111316; color: #ff4f00; border-color: #111316; }
+.opt.user-wrong, .card.nightMode .opt.user-wrong { background: #ef4444; color: #ffffff; box-shadow: 0 2px 0 #991b1b; }
+.opt.correct, .card.nightMode .opt.correct { background: #10b981; border-color: #059669; color: #052e16; font-weight: 700; box-shadow: 0 4px 0 #047857; }
+.opt.correct .opt-letter, .card.nightMode .opt.correct .opt-letter { background: #052e16; color: #6ee7b7; border-color: #052e16; }
 .ans-banner {
   margin-top: 16px;
   padding: 11px 15px;
@@ -386,25 +418,38 @@ RAW_THEMES: Dict[str, dict] = {
         "default_dark": True,
         "layout": "nerv",
         "css": BASE_RESET_CSS + """
-.card, .card.nightMode {
+.card {
+  background: #eae6dd;
+  color: #18181b;
+  font-family: "JetBrains Mono", monospace;
+}
+.card.nightMode {
   background: #050507;
   color: #ffb000;
-  font-family: "JetBrains Mono", monospace;
 }
 .nerv-frame {
   max-width: 750px;
   margin: 0 auto;
+  background: #f8f5ee;
+  border: 2px solid #c2410c;
+  padding: 0 0 20px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+.card.nightMode .nerv-frame {
   background:
     repeating-linear-gradient(0deg, rgba(255,136,0,0.03) 0px, rgba(255,136,0,0.03) 1px, transparent 1px, transparent 3px),
     #090a0d;
   border: 1.5px solid #ff6a00;
-  padding: 0 0 20px;
   box-shadow: 0 0 28px rgba(255,106,0,0.16), inset 0 0 40px rgba(255,106,0,0.05);
 }
 .nerv-hazard {
   height: 14px;
+  background: repeating-linear-gradient(-45deg, #ea580c, #ea580c 10px, #18181b 10px, #18181b 20px);
+  border-bottom: 1.5px solid #ea580c;
+}
+.card.nightMode .nerv-hazard {
   background: repeating-linear-gradient(-45deg, #ff6a00, #ff6a00 10px, #090a0d 10px, #090a0d 20px);
-  border-bottom: 1.5px solid #ff6a00;
+  border-bottom-color: #ff6a00;
 }
 .nerv-head {
   display: flex;
@@ -412,41 +457,54 @@ RAW_THEMES: Dict[str, dict] = {
   justify-content: space-between;
   align-items: center;
   padding: 10px 18px;
-  border-bottom: 1px solid rgba(255,106,0,0.4);
+  border-bottom: 1px solid rgba(194,65,12,0.35);
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+.card.nightMode .nerv-head { border-bottom-color: rgba(255,106,0,0.4); }
 .nerv-tag {
-  background: #ff1e38;
-  color: #050507;
+  background: #dc2626;
+  color: #ffffff;
   font-weight: 800;
   padding: 2px 8px;
 }
+.card.nightMode .nerv-tag { background: #ff1e38; color: #050507; }
 .nerv-body { padding: 18px 20px 0; }
 .stem {
   font-size: 15.5px;
   line-height: 1.6;
-  color: #ffdca8;
-  text-shadow: 0 0 8px rgba(255,176,0,0.28);
+  color: #18181b;
   margin-bottom: 16px;
 }
-.blank-slot { display: inline-block; min-width: 84px; border-bottom: 2px solid #00ff9d; color: transparent; }
-.blank-filled { background: rgba(0,255,157,0.18); color: #00ff9d; border: 1px solid #00ff9d; padding: 1px 8px; }
+.card.nightMode .stem {
+  color: #ffdca8;
+  text-shadow: 0 0 8px rgba(255,176,0,0.28);
+}
+.blank-slot { display: inline-block; min-width: 84px; border-bottom: 2px solid #059669; color: transparent; }
+.card.nightMode .blank-slot { border-bottom-color: #00ff9d; }
+.blank-filled { background: #d1fae5; color: #065f46; border: 1px solid #059669; padding: 1px 8px; }
+.card.nightMode .blank-filled { background: rgba(0,255,157,0.18); color: #00ff9d; border-color: #00ff9d; }
 .options { display: flex; flex-direction: column; gap: 8px; }
 .opt {
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 10px 14px;
-  background: rgba(255,106,0,0.06);
-  border: 1px solid rgba(255,106,0,0.45);
+  background: #ffffff;
+  border: 1.5px solid #ea580c;
   clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
-  color: #ffb84d;
+  color: #18181b;
   font-size: 14px;
   transition: all 0.12s ease;
 }
-.opt:hover {
+.card.nightMode .opt {
+  background: rgba(255,106,0,0.06);
+  border: 1px solid rgba(255,106,0,0.45);
+  color: #ffb84d;
+}
+.opt:hover { background: #ffedd5; transform: translateX(4px); }
+.card.nightMode .opt:hover {
   background: rgba(255,106,0,0.2);
   border-color: #ffb000;
   color: #ffffff;
@@ -454,37 +512,52 @@ RAW_THEMES: Dict[str, dict] = {
 }
 .opt-letter {
   font-weight: 800;
-  color: #050507;
-  background: #ff6a00;
+  color: #ffffff;
+  background: #ea580c;
   padding: 2px 7px;
   font-size: 12px;
 }
-.opt.user-picked { background: rgba(0,229,255,0.18); border-color: #00e5ff; color: #e0faff; }
-.opt.user-picked .opt-letter { background: #00e5ff; color: #050507; }
-.opt.user-wrong { background: rgba(255,30,56,0.25); border-color: #ff1e38; color: #ffc2c9; }
-.opt.user-wrong .opt-letter { background: #ff1e38; color: #ffffff; }
-.opt.correct { background: rgba(0,255,157,0.18); border-color: #00ff9d; color: #b8ffe3; font-weight: 700; box-shadow: 0 0 16px rgba(0,255,157,0.2); }
-.opt.correct .opt-letter { background: #00ff9d; color: #050507; }
+.card.nightMode .opt-letter { color: #050507; background: #ff6a00; }
+.opt.user-picked { background: #e0f2fe; border-color: #0284c7; color: #0c4a6e; }
+.card.nightMode .opt.user-picked { background: rgba(0,229,255,0.18); border-color: #00e5ff; color: #e0faff; }
+.opt.user-picked .opt-letter, .card.nightMode .opt.user-picked .opt-letter { background: #00e5ff; color: #050507; }
+.opt.user-wrong { background: #fee2e2; border-color: #dc2626; color: #7f1d1d; }
+.card.nightMode .opt.user-wrong { background: rgba(255,30,56,0.25); border-color: #ff1e38; color: #ffc2c9; }
+.opt.user-wrong .opt-letter, .card.nightMode .opt.user-wrong .opt-letter { background: #ff1e38; color: #ffffff; }
+.opt.correct { background: #d1fae5; border-color: #059669; color: #064e3b; font-weight: 700; }
+.card.nightMode .opt.correct { background: rgba(0,255,157,0.18); border-color: #00ff9d; color: #b8ffe3; font-weight: 700; box-shadow: 0 0 16px rgba(0,255,157,0.2); }
+.opt.correct .opt-letter, .card.nightMode .opt.correct .opt-letter { background: #00ff9d; color: #050507; }
 .ans-banner {
   margin-top: 16px;
   padding: 10px 14px;
+  border: 1.5px solid #059669;
+  background: #ecfdf5;
+  color: #065f46;
+  font-size: 13px;
+  font-weight: 700;
+}
+.card.nightMode .ans-banner {
   border: 1px solid #00ff9d;
   background: rgba(0,255,157,0.1);
   color: #00ff9d;
-  font-size: 13px;
-  font-weight: 700;
 }
 .expl-box {
   margin-top: 12px;
   padding: 13px 15px;
-  border-left: 3px solid #ff6a00;
-  background: rgba(255,106,0,0.05);
-  color: #fed7aa;
+  border-left: 3px solid #ea580c;
+  background: #fff7ed;
+  color: #27272a;
   font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 1.58;
 }
-details.orig-scan summary { color: #ff8800; }
+.card.nightMode .expl-box {
+  border-left-color: #ff6a00;
+  background: rgba(255,106,0,0.05);
+  color: #fed7aa;
+}
+details.orig-scan summary { color: #c2410c; }
+.card.nightMode details.orig-scan summary { color: #ff8800; }
 .fig-box img, details.orig-scan img { border: 1.5px solid #ff6a00; padding: 6px; }
 """,
     },
@@ -534,7 +607,7 @@ details.orig-scan summary { color: #ff8800; }
   opacity: 0.48;
 }
 .card.nightMode .wrap { background: #232329; border-color: #fafafa; box-shadow: -3px -3px 0px #ec4899, 8px 8px 0px #facc15; }
-.card.nightMode .wrap::before { color: #facc15; opacity: 0.7; }
+.card.nightMode .wrap::before { color: #facc15; opacity: 0.72; }
 .meta {
   display: flex;
   flex-wrap: wrap;
@@ -575,9 +648,17 @@ details.orig-scan summary { color: #ff8800; }
   font-weight: 600;
   transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.08s ease;
 }
-.card.nightMode .opt { background: #18181b; border-color: #fafafa; box-shadow: 4px 4px 0px #fafafa; }
-.opt:hover { background: #fde047; color: #111111; transform: translate(-2px, -2px); box-shadow: 6px 6px 0px #111111; }
-.opt:active, .opt.user-picked { transform: translate(3px, 3px); box-shadow: 1px 1px 0px #111111; background: #7dd3fc; color: #111111; }
+.card.nightMode .opt { background: #18181b; border-color: #fafafa; box-shadow: 4px 4px 0px #fafafa; color: #fafafa; }
+.opt:hover, .card.nightMode .opt:hover { background: #fde047; color: #111111; border-color: #111111; transform: translate(-2px, -2px); box-shadow: 6px 6px 0px #111111; }
+.card.nightMode .opt:hover { box-shadow: 6px 6px 0px #ec4899; }
+.opt:active, .opt.user-picked, .card.nightMode .opt:active, .card.nightMode .opt.user-picked {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0px #111111;
+  background: #7dd3fc;
+  color: #111111;
+  border-color: #111111;
+}
+.card.nightMode .opt.user-picked { box-shadow: 1px 1px 0px #fafafa; }
 .opt-letter {
   width: 28px;
   height: 28px;
@@ -592,9 +673,9 @@ details.orig-scan summary { color: #ff8800; }
   justify-content: center;
   flex-shrink: 0;
 }
-.opt.user-wrong { background: #fca5a5; color: #111111; }
-.opt.correct { background: #86efac; color: #111111; font-weight: 800; }
-.opt.correct .opt-letter { background: #111111; color: #86efac; }
+.opt.user-wrong, .card.nightMode .opt.user-wrong { background: #fca5a5; color: #111111; border-color: #111111; }
+.opt.correct, .card.nightMode .opt.correct { background: #86efac; color: #111111; border-color: #111111; font-weight: 800; }
+.opt.correct .opt-letter, .card.nightMode .opt.correct .opt-letter { background: #111111; color: #86efac; }
 .ans-banner {
   margin-top: 18px;
   padding: 12px 15px;
@@ -606,6 +687,7 @@ details.orig-scan summary { color: #ff8800; }
   font-weight: 700;
   box-shadow: 4px 4px 0px #111111;
 }
+.card.nightMode .ans-banner { box-shadow: 4px 4px 0px #ec4899; }
 .expl-box {
   margin-top: 14px;
   padding: 14px 16px;
@@ -615,7 +697,14 @@ details.orig-scan summary { color: #ff8800; }
   font-size: 14.5px;
   line-height: 1.56;
 }
+.card.nightMode .expl-box {
+  background: #18181b;
+  color: #f4f4f5;
+  border-color: #fafafa;
+  box-shadow: 4px 4px 0px #facc15;
+}
 .fig-box img, details.orig-scan img { border: 2.5px solid #111111; box-shadow: 4px 4px 0px #111111; padding: 6px; }
+.card.nightMode .fig-box img, .card.nightMode details.orig-scan img { border-color: #fafafa; box-shadow: 4px 4px 0px #facc15; }
 """,
     },
 
@@ -697,6 +786,7 @@ details.orig-scan summary { color: #ff8800; }
 .opt.user-picked { background: #ede3d1; border-left: 3px solid #881337; }
 .card.nightMode .opt.user-picked { background: #2e2622; border-left-color: #fda4af; }
 .opt.user-wrong { color: #991b1b; text-decoration: line-through; opacity: 0.72; }
+.card.nightMode .opt.user-wrong { color: #fca5a5; text-decoration: line-through; opacity: 0.82; }
 .opt.correct { background: #eef5ee; border-left: 3px solid #166534; color: #14532d; font-weight: 700; }
 .card.nightMode .opt.correct { background: #14291d; color: #bbf7d0; border-left-color: #4ade80; }
 .ans-banner {
@@ -815,12 +905,12 @@ details.orig-scan { font-family: "Inter", sans-serif; }
   flex-shrink: 0;
 }
 .card.nightMode .opt-letter { border-color: #3f3f46; box-shadow: 0 1.5px 0 #3f3f46; color: #a1a1aa; background: #18181b; }
-.opt.user-picked { border-color: #3b82f6; background: rgba(59,130,246,0.12); }
-.opt.user-picked .opt-letter { background: #3b82f6; border-color: #3b82f6; color: #ffffff; box-shadow: none; }
-.opt.user-wrong { border-color: #ef4444; background: rgba(239,68,68,0.12); }
-.opt.user-wrong .opt-letter { background: #ef4444; border-color: #ef4444; color: #ffffff; box-shadow: none; }
-.opt.correct { border-color: #10b981; background: rgba(16,185,129,0.13); font-weight: 600; }
-.opt.correct .opt-letter { background: #10b981; border-color: #10b981; color: #052e16; box-shadow: none; }
+.opt.user-picked, .card.nightMode .opt.user-picked { border-color: #3b82f6; background: rgba(59,130,246,0.14); }
+.opt.user-picked .opt-letter, .card.nightMode .opt.user-picked .opt-letter { background: #3b82f6; border-color: #3b82f6; color: #ffffff; box-shadow: none; }
+.opt.user-wrong, .card.nightMode .opt.user-wrong { border-color: #ef4444; background: rgba(239,68,68,0.14); }
+.opt.user-wrong .opt-letter, .card.nightMode .opt.user-wrong .opt-letter { background: #ef4444; border-color: #ef4444; color: #ffffff; box-shadow: none; }
+.opt.correct, .card.nightMode .opt.correct { border-color: #10b981; background: rgba(16,185,129,0.15); font-weight: 600; }
+.opt.correct .opt-letter, .card.nightMode .opt.correct .opt-letter { background: #10b981; border-color: #10b981; color: #052e16; box-shadow: none; }
 .ans-banner {
   margin-top: 16px;
   padding: 11px 14px;
@@ -856,35 +946,50 @@ details.orig-scan { font-family: "Inter", sans-serif; }
         "default_dark": True,
         "layout": "blueprint",
         "css": BASE_RESET_CSS + """
-.card, .card.nightMode {
+.card {
+  background-color: #eef6ff;
+  background-image:
+    linear-gradient(rgba(3,105,161,0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(3,105,161,0.14) 1px, transparent 1px),
+    linear-gradient(rgba(3,105,161,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(3,105,161,0.06) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  color: #0c4a6e;
+  font-family: "IBM Plex Mono", monospace;
+}
+.card.nightMode {
   background-color: #082f49;
   background-image:
     linear-gradient(rgba(255,255,255,0.09) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.09) 1px, transparent 1px),
     linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
   color: #f0f9ff;
-  font-family: "IBM Plex Mono", monospace;
 }
 .bp-sheet {
   max-width: 750px;
   margin: 0 auto;
-  border: 2px solid rgba(255,255,255,0.85);
-  background: rgba(11, 56, 86, 0.86);
+  border: 2px solid #0369a1;
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(2px);
+}
+.card.nightMode .bp-sheet {
+  border-color: rgba(255,255,255,0.85);
+  background: rgba(11, 56, 86, 0.86);
 }
 .bp-titleblock {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  border-bottom: 2px solid rgba(255,255,255,0.85);
+  border-bottom: 2px solid #0369a1;
   font-size: 11px;
   text-transform: uppercase;
 }
+.card.nightMode .bp-titleblock { border-bottom-color: rgba(255,255,255,0.85); }
 .bp-cell {
   padding: 8px 14px;
-  border-right: 1px solid rgba(255,255,255,0.55);
+  border-right: 1px solid rgba(3,105,161,0.45);
 }
+.card.nightMode .bp-cell { border-right-color: rgba(255,255,255,0.55); }
 .bp-cell:last-child { border-right: none; }
 .bp-body { padding: 20px 24px 24px; }
 .stem {
@@ -892,27 +997,35 @@ details.orig-scan { font-family: "Inter", sans-serif; }
   font-size: 17.5px;
   font-weight: 600;
   line-height: 1.5;
-  color: #ffffff;
+  color: #0c4a6e;
   margin-bottom: 18px;
 }
-.blank-slot { display: inline-block; min-width: 88px; border-bottom: 2px dashed #7dd3fc; color: transparent; }
-.blank-filled { background: #ffffff; color: #082f49; font-weight: 700; padding: 1px 8px; }
+.card.nightMode .stem { color: #ffffff; }
+.blank-slot { display: inline-block; min-width: 88px; border-bottom: 2px dashed #0284c7; color: transparent; }
+.card.nightMode .blank-slot { border-bottom-color: #7dd3fc; }
+.blank-filled { background: #0369a1; color: #ffffff; font-weight: 700; padding: 1px 8px; }
+.card.nightMode .blank-filled { background: #ffffff; color: #082f49; }
 .options { display: flex; flex-direction: column; gap: 8px; }
 .opt {
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 10px 14px;
-  border: 1px solid rgba(255,255,255,0.5);
-  background: rgba(8, 47, 73, 0.55);
+  border: 1.5px solid #0284c7;
+  background: #ffffff;
   font-size: 14px;
   transition: all 0.12s ease;
 }
-.opt:hover { background: rgba(255,255,255,0.16); border-color: #ffffff; }
+.card.nightMode .opt {
+  border: 1px solid rgba(255,255,255,0.5);
+  background: rgba(8, 47, 73, 0.55);
+}
+.opt:hover { background: #e0f2fe; }
+.card.nightMode .opt:hover { background: rgba(255,255,255,0.16); border-color: #ffffff; }
 .opt-letter {
   width: 25px;
   height: 25px;
-  border: 1.5px solid #ffffff;
+  border: 1.5px solid currentColor;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -920,30 +1033,42 @@ details.orig-scan { font-family: "Inter", sans-serif; }
   font-size: 12px;
   flex-shrink: 0;
 }
-.opt.user-picked { background: #ffffff; color: #082f49; font-weight: 700; }
-.opt.user-picked .opt-letter { border-color: #082f49; }
-.opt.user-wrong { background: rgba(239,68,68,0.35); border-color: #fca5a5; }
-.opt.correct { background: #38bdf8; color: #082f49; border-color: #ffffff; font-weight: 700; }
-.opt.correct .opt-letter { background: #082f49; color: #ffffff; border-color: #082f49; }
+.opt.user-picked { background: #0369a1; color: #ffffff; font-weight: 700; }
+.card.nightMode .opt.user-picked { background: #ffffff; color: #082f49; font-weight: 700; }
+.opt.user-wrong { background: #fee2e2; border-color: #ef4444; color: #7f1d1d; }
+.card.nightMode .opt.user-wrong { background: rgba(239,68,68,0.35); border-color: #fca5a5; color: #ffffff; }
+.opt.correct, .card.nightMode .opt.correct { background: #38bdf8; color: #082f49; border-color: #0369a1; font-weight: 700; }
+.card.nightMode .opt.correct { border-color: #ffffff; }
+.opt.correct .opt-letter, .card.nightMode .opt.correct .opt-letter { background: #082f49; color: #ffffff; border-color: #082f49; }
 .ans-banner {
   margin-top: 18px;
   padding: 11px 14px;
-  border: 2px solid #ffffff;
-  background: rgba(56,189,248,0.22);
-  color: #ffffff;
+  border: 2px solid #0369a1;
+  background: #e0f2fe;
+  color: #0c4a6e;
   font-size: 13px;
   font-weight: 700;
+}
+.card.nightMode .ans-banner {
+  border-color: #ffffff;
+  background: rgba(56,189,248,0.22);
+  color: #ffffff;
 }
 .expl-box {
   margin-top: 12px;
   padding: 13px 16px;
-  border: 1px dashed rgba(255,255,255,0.65);
+  border: 1px dashed #0284c7;
   font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 1.58;
+  color: #0f172a;
+}
+.card.nightMode .expl-box {
+  border-color: rgba(255,255,255,0.65);
   color: #e0f2fe;
 }
-.fig-box img, details.orig-scan img { border: 2px solid #ffffff; padding: 6px; }
+.fig-box img, details.orig-scan img { border: 2px solid #0369a1; padding: 6px; }
+.card.nightMode .fig-box img, .card.nightMode details.orig-scan img { border-color: #ffffff; }
 """,
     },
 
@@ -1039,11 +1164,13 @@ details.orig-scan { font-family: "Inter", sans-serif; }
 }
 .card.nightMode .opt-letter { background: #283655; color: #c7d2fe; }
 .opt.user-picked { border-color: #4f46e5; background: #e0e7ff; color: #1e1b4b; }
-.opt.user-picked .opt-letter { background: #4f46e5; color: #ffffff; }
+.card.nightMode .opt.user-picked { border-color: #818cf8; background: #283566; color: #e0e7ff; }
+.opt.user-picked .opt-letter, .card.nightMode .opt.user-picked .opt-letter { background: #4f46e5; color: #ffffff; }
 .opt.user-wrong { border-color: #ef4444; background: #fef2f2; color: #991b1b; }
+.card.nightMode .opt.user-wrong { border-color: #f87171; background: rgba(239,68,68,0.22); color: #fecaca; }
 .opt.correct { border-color: #10b981; background: #ecfdf5; color: #064e3b; font-weight: 700; }
-.card.nightMode .opt.correct { background: rgba(16,185,129,0.18); color: #ecfdf5; }
-.opt.correct .opt-letter { background: #10b981; color: #ffffff; }
+.card.nightMode .opt.correct { border-color: #10b981; background: rgba(16,185,129,0.2); color: #ecfdf5; font-weight: 700; }
+.opt.correct .opt-letter, .card.nightMode .opt.correct .opt-letter { background: #10b981; color: #ffffff; }
 .ans-banner {
   margin-top: 14px;
   padding: 11px 14px;
@@ -1144,7 +1271,7 @@ details.orig-scan { font-family: "Inter", sans-serif; }
 }
 .card.nightMode .opt { background: #292622; border-color: #3d3831; }
 .opt:hover { border-left-color: #c53030; background: #f1ece0; }
-.card.nightMode .opt:hover { background: #332f2a; }
+.card.nightMode .opt:hover { background: #332f2a; border-left-color: #f87171; }
 .opt-letter {
   font-family: "IBM Plex Mono", monospace;
   font-size: 12px;
@@ -1152,10 +1279,13 @@ details.orig-scan { font-family: "Inter", sans-serif; }
   color: #c53030;
   min-width: 20px;
 }
+.card.nightMode .opt-letter { color: #f87171; }
 .opt.user-picked { background: #e6eef6; border-left-color: #1e3a5f; color: #1e3a5f; font-weight: 600; }
+.card.nightMode .opt.user-picked { background: #1e3a5f; border-left-color: #93c5fd; color: #f7f3ea; font-weight: 600; }
 .opt.user-wrong { background: #fae8e6; border-left-color: #c53030; color: #9b2c2c; }
-.opt.correct { background: #1e3a5f; color: #f7f3ea; border-color: #1e3a5f; font-weight: 600; }
-.opt.correct .opt-letter { color: #fbd38d; }
+.card.nightMode .opt.user-wrong { background: #451a1a; border-left-color: #f87171; color: #fecaca; }
+.opt.correct, .card.nightMode .opt.correct { background: #1e3a5f; color: #f7f3ea; border-color: #1e3a5f; font-weight: 600; }
+.opt.correct .opt-letter, .card.nightMode .opt.correct .opt-letter { color: #fbd38d; }
 .ans-banner {
   margin-top: 18px;
   padding: 11px 15px;
@@ -1188,7 +1318,7 @@ details.orig-scan { font-family: "Inter", sans-serif; }
         "default_dark": False,
         "layout": "mac1984",
         "css": BASE_RESET_CSS + """
-.card, .card.nightMode {
+.card {
   background-color: #ffffff;
   background-image:
     linear-gradient(45deg, #000 25%, transparent 25%),
@@ -1200,6 +1330,15 @@ details.orig-scan { font-family: "Inter", sans-serif; }
   color: #000000;
   font-family: "Space Mono", monospace;
 }
+.card.nightMode {
+  background-color: #09090b;
+  background-image:
+    linear-gradient(45deg, #27272a 25%, transparent 25%),
+    linear-gradient(-45deg, #27272a 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #27272a 75%),
+    linear-gradient(-45deg, transparent 75%, #27272a 75%);
+  color: #f4f4f5;
+}
 .mac-win {
   max-width: 710px;
   margin: 0 auto;
@@ -1207,6 +1346,12 @@ details.orig-scan { font-family: "Inter", sans-serif; }
   border: 2px solid #000000;
   box-shadow: 4px 4px 0px #000000;
   color: #000000;
+}
+.card.nightMode .mac-win {
+  background: #09090b;
+  border-color: #f4f4f5;
+  box-shadow: 4px 4px 0px #f4f4f5;
+  color: #f4f4f5;
 }
 .mac-titlebar {
   height: 28px;
@@ -1223,12 +1368,27 @@ details.orig-scan { font-family: "Inter", sans-serif; }
   justify-content: space-between;
   padding: 0 10px;
 }
+.card.nightMode .mac-titlebar {
+  border-bottom-color: #f4f4f5;
+  background: repeating-linear-gradient(
+    0deg,
+    #09090b 0px,
+    #09090b 2px,
+    #f4f4f5 2px,
+    #f4f4f5 4px
+  );
+}
 .mac-close {
   width: 14px;
   height: 14px;
   background: #ffffff;
   border: 2px solid #000000;
   box-shadow: 0 0 0 2px #ffffff;
+}
+.card.nightMode .mac-close {
+  background: #09090b;
+  border-color: #f4f4f5;
+  box-shadow: 0 0 0 2px #09090b;
 }
 .mac-title-plaque {
   background: #ffffff;
@@ -1237,6 +1397,7 @@ details.orig-scan { font-family: "Inter", sans-serif; }
   font-weight: 700;
   letter-spacing: -0.02em;
 }
+.card.nightMode .mac-title-plaque { background: #09090b; color: #f4f4f5; }
 .mac-subbar {
   display: flex;
   justify-content: space-between;
@@ -1245,10 +1406,13 @@ details.orig-scan { font-family: "Inter", sans-serif; }
   font-size: 11px;
   background: #ffffff;
 }
+.card.nightMode .mac-subbar { border-bottom-color: #f4f4f5; background: #09090b; }
 .mac-content { padding: 18px 20px 22px; background: #ffffff; }
+.card.nightMode .mac-content { background: #09090b; }
 .stem { font-size: 15px; font-weight: 700; line-height: 1.55; margin-bottom: 16px; }
-.blank-slot { display: inline-block; min-width: 84px; border-bottom: 2px solid #000000; color: transparent; }
+.blank-slot { display: inline-block; min-width: 84px; border-bottom: 2px solid currentColor; color: transparent; }
 .blank-filled { background: #000000; color: #ffffff; padding: 1px 7px; font-weight: 700; }
+.card.nightMode .blank-filled { background: #f4f4f5; color: #09090b; }
 .options { display: flex; flex-direction: column; gap: 6px; }
 .opt {
   display: flex;
@@ -1260,22 +1424,18 @@ details.orig-scan { font-family: "Inter", sans-serif; }
   color: #000000;
   font-size: 13.5px;
 }
-.opt:hover, .opt.user-picked {
-  background: #000000;
-  color: #ffffff;
+.card.nightMode .opt {
+  border-color: #f4f4f5;
+  background: #09090b;
+  color: #f4f4f5;
 }
-.opt-letter {
-  font-weight: 700;
-  min-width: 28px;
-}
+.opt:hover, .opt.user-picked { background: #000000; color: #ffffff; }
+.card.nightMode .opt:hover, .card.nightMode .opt.user-picked { background: #f4f4f5; color: #09090b; }
+.opt-letter { font-weight: 700; min-width: 28px; }
 .opt-letter::before { content: "("; }
 .opt-letter::after { content: ")"; }
-.opt.user-wrong {
-  background: #ffffff;
-  color: #000000;
-  text-decoration: line-through;
-  border-style: dashed;
-}
+.opt.user-wrong { background: #ffffff; color: #000000; text-decoration: line-through; border-style: dashed; }
+.card.nightMode .opt.user-wrong { background: #09090b; color: #f87171; text-decoration: line-through; border-style: dashed; }
 .opt.correct {
   background: #000000;
   color: #ffffff;
@@ -1283,6 +1443,12 @@ details.orig-scan { font-family: "Inter", sans-serif; }
   box-shadow: 3px 3px 0px #000000;
   outline: 2px solid #ffffff;
   outline-offset: -5px;
+}
+.card.nightMode .opt.correct {
+  background: #f4f4f5;
+  color: #09090b;
+  box-shadow: 3px 3px 0px #f4f4f5;
+  outline: 2px solid #09090b;
 }
 .ans-banner {
   margin-top: 16px;
@@ -1293,6 +1459,7 @@ details.orig-scan { font-family: "Inter", sans-serif; }
   font-size: 12.5px;
   font-weight: 700;
 }
+.card.nightMode .ans-banner { border-color: #f4f4f5; background: #f4f4f5; color: #09090b; }
 .expl-box {
   margin-top: 12px;
   padding: 12px 14px;
@@ -1301,7 +1468,9 @@ details.orig-scan { font-family: "Inter", sans-serif; }
   font-size: 13px;
   line-height: 1.55;
 }
+.card.nightMode .expl-box { border-color: #f4f4f5; background: #09090b; color: #f4f4f5; }
 .fig-box img, details.orig-scan img { border: 2px solid #000000; padding: 6px; }
+.card.nightMode .fig-box img, .card.nightMode details.orig-scan img { border-color: #f4f4f5; }
 """,
     },
 }
@@ -1310,7 +1479,12 @@ THEMES: Dict[str, dict] = {}
 for _k, _v in RAW_THEMES.items():
     _entry = dict(_v)
     _entry["raw_showcase_css"] = _v["css"]
-    _entry["css"] = GOOGLE_FONTS_IMPORT + HOST_VIEWPORT_RESET_CSS + _convert_card_selectors_to_sf_canvas(_v["css"])
+    _entry["css"] = (
+        GOOGLE_FONTS_IMPORT
+        + HOST_VIEWPORT_RESET_CSS
+        + STANDALONE_DARK_TOGGLE_CSS
+        + _convert_card_selectors_to_sf_canvas(_v["css"])
+    )
     THEMES[_k] = _entry
 
 
@@ -1556,7 +1730,6 @@ def _build_layout_shell(layout: str, front_inner: str, back_inner: str, scan_ope
 </div>"""
         return qfmt, afmt
 
-    # Exact "brutalist" (#04 Neo-Brutalist Risoprint Zine) and "standard" (#06 / #00) layout from theme_showcase.html!
     qfmt = f"""
 <div class="wrap">
   <div class="meta">
@@ -1579,7 +1752,7 @@ def _build_layout_shell(layout: str, front_inner: str, back_inner: str, scan_ope
 
 
 # ==============================================================================
-# SCOPED MULTI-THEME CSS & LIVE NUMBER SWITCHER FOR Semestre_Filtro_Complete.apkg
+# SCOPED MULTI-THEME CSS & LIVE NUMBER + DARK MODE BAR FOR Complete.apkg ONLY
 # ==============================================================================
 
 
@@ -1620,7 +1793,7 @@ def _scope_css_block(css_body: str, num: str) -> str:
 
 
 SWITCHER_UI_CSS = """
-/* Compact Theme Switcher Widget (ONLY present in Semestre_Filtro_Complete.apkg) */
+/* Compact Theme + Light/Dark Switcher Widget (ONLY present in Semestre_Filtro_Complete.apkg) */
 .sf-theme-ui {
   position: fixed;
   top: 8px;
@@ -1668,11 +1841,17 @@ SWITCHER_UI_CSS = """
   background: #facc15;
   color: #111111;
 }
-.sf-theme-bar:not(.is-open) .sf-num-btn:not(.is-current-toggle) {
+.sf-dark-btn {
+  padding: 4px 7px;
+  font-size: 12px;
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px 0 0 999px;
+}
+.sf-theme-bar:not(.is-open) .sf-choice {
   display: none;
 }
 .sf-theme-bar:not(.is-open) {
-  opacity: 0.78;
+  opacity: 0.8;
 }
 .sf-theme-bar:not(.is-open):hover,
 .sf-theme-bar.is-open {
@@ -1700,8 +1879,8 @@ SWITCHER_UI_CSS = """
 
 
 def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
-    """Build the complete all-in-one CSS + Front/Back templates WITH the compact `00`..`10`
-    number switcher exclusively for `output/Semestre_Filtro_Complete.apkg`."""
+    """Build the complete all-in-one CSS + Front/Back templates WITH the compact `00`..`10` + `☾/☀`
+    switcher exclusively for `output/Semestre_Filtro_Complete.apkg`."""
     front_inner = """<div class="stem">{{FrontStemHTML}}</div>
   {{#FigureHTML}}<div class="fig-box">{{FigureHTML}}</div>{{/FigureHTML}}
   {{FrontOptionsHTML}}
@@ -1713,11 +1892,7 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
   <div class="ans-banner">{{AnswerBannerHTML}}</div>
   {{#ExplanationHTML}}<div class="expl-box"><strong>Spiegazione:</strong> {{ExplanationHTML}}</div>{{/ExplanationHTML}}
   {{#QuestionScanHTML}}<details class="orig-scan"><summary>Scansione originale della domanda (p. {{BookPage}})</summary>{{QuestionScanHTML}}</details>{{/QuestionScanHTML}}
-  {{#SolutionScanHTML}}<details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{{{SolutionScanHTML}}}}</details>{{{{/SolutionScanHTML}}}}""".replace(
-        "{{{{SolutionScanHTML}}}}", "{{SolutionScanHTML}}"
-    ).replace(
-        "{{{{/SolutionScanHTML}}}}", "{{/SolutionScanHTML}}"
-    )
+  {{#SolutionScanHTML}}<details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{SolutionScanHTML}}</details>{{/SolutionScanHTML}}"""
 
     css_sections = [GOOGLE_FONTS_IMPORT, HOST_VIEWPORT_RESET_CSS, _scope_css_block(default_css, "00")]
     q_tpls = []
@@ -1754,21 +1929,22 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
   var side = canvas.getAttribute('data-side');
   var itemId = "{{{{ItemID}}}}";
 
-  function readTheme() {{
-    try {{ if (window._sfTheme && LABELS[window._sfTheme]) return window._sfTheme; }} catch(e) {{}}
-    try {{ if (window.parent && window.parent._sfTheme && LABELS[window.parent._sfTheme]) return window.parent._sfTheme; }} catch(e) {{}}
-    try {{ var ls = localStorage.getItem('sf_theme'); if (ls && LABELS[ls]) return ls; }} catch(e) {{}}
-    try {{ var ss = sessionStorage.getItem('sf_theme'); if (ss && LABELS[ss]) return ss; }} catch(e) {{}}
-    var m = (document.cookie || '').match(/(?:^|;\\s*)sf_theme=([0-9]{{2}})/);
-    return (m && LABELS[m[1]]) ? m[1] : '00';
+  function readPref(key, validFn, fallback) {{
+    try {{ if (window['_' + key] !== undefined && validFn(window['_' + key])) return window['_' + key]; }} catch(e) {{}}
+    try {{ if (window.parent && window.parent['_' + key] !== undefined && validFn(window.parent['_' + key])) return window.parent['_' + key]; }} catch(e) {{}}
+    try {{ var ls = localStorage.getItem(key); if (ls !== null && validFn(ls)) return ls; }} catch(e) {{}}
+    try {{ var ss = sessionStorage.getItem(key); if (ss !== null && validFn(ss)) return ss; }} catch(e) {{}}
+    var rx = new RegExp('(?:^|;\\\\s*)' + key + '=([^;]+)');
+    var m = (document.cookie || '').match(rx);
+    return (m && validFn(m[1])) ? m[1] : fallback;
   }}
 
-  function saveTheme(n) {{
-    try {{ window._sfTheme = n; }} catch(e) {{}}
-    try {{ if (window.parent) window.parent._sfTheme = n; }} catch(e) {{}}
-    try {{ localStorage.setItem('sf_theme', n); }} catch(e) {{}}
-    try {{ sessionStorage.setItem('sf_theme', n); }} catch(e) {{}}
-    try {{ document.cookie = 'sf_theme=' + n + ';path=/;max-age=31536000;SameSite=Lax'; }} catch(e) {{}}
+  function savePref(key, val) {{
+    try {{ window['_' + key] = val; }} catch(e) {{}}
+    try {{ if (window.parent) window.parent['_' + key] = val; }} catch(e) {{}}
+    try {{ localStorage.setItem(key, val); }} catch(e) {{}}
+    try {{ sessionStorage.setItem(key, val); }} catch(e) {{}}
+    try {{ document.cookie = key + '=' + val + ';path=/;max-age=31536000;SameSite=Lax'; }} catch(e) {{}}
   }}
 
   function bindCardInteractions() {{
@@ -1792,20 +1968,47 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
     }});
   }}
 
-  var cur = readTheme();
+  var cur = readPref('sf_theme', function(v) {{ return !!LABELS[v]; }}, '00');
+  var modePref = readPref('sf_dark_mode', function(v) {{ return v === 'auto' || v === 'dark' || v === 'light'; }}, 'auto');
+
+  function computeIsDark() {{
+    if (modePref === 'dark') return true;
+    if (modePref === 'light') return false;
+    var d = DEFAULT_DARK[cur];
+    if (d === 'auto') {{
+      return !!(document.body && (document.body.classList.contains('nightMode') || document.body.classList.contains('night_mode')));
+    }}
+    return !!d;
+  }}
 
   function syncCanvasSurface() {{
-    var d = DEFAULT_DARK[cur];
-    var useDark = (d === 'auto')
-      ? !!(document.body && (document.body.classList.contains('nightMode') || document.body.classList.contains('night_mode')))
-      : !!d;
-    canvas.className = useDark ? 'sf-canvas sf-dark' : 'sf-canvas';
+    var isDark = computeIsDark();
+    canvas.className = isDark ? 'sf-canvas sf-dark' : 'sf-canvas';
+    var dbtn = document.getElementById('sf-dark-btn');
+    if (dbtn) {{
+      dbtn.textContent = isDark ? '☀' : '☾';
+      dbtn.title = isDark ? 'Passa a Light Mode (Alt+D)' : 'Passa a Dark Mode (Alt+D)';
+    }}
+  }}
+
+  function showToastMsg(msg) {{
+    var ui = document.getElementById('sf-theme-ui');
+    if (!ui) return;
+    var toast = ui.querySelector('.sf-theme-toast');
+    if (toast) toast.textContent = msg;
+    ui.classList.add('show-label');
+    clearTimeout(ui._toastTimer);
+    ui._toastTimer = setTimeout(function() {{
+      if (!ui.querySelector('.sf-theme-bar').classList.contains('is-open')) {{
+        ui.classList.remove('show-label');
+      }}
+    }}, 1400);
   }}
 
   function applyTheme(n, showToast) {{
     if (!LABELS[n]) n = '00';
     cur = n;
-    saveTheme(n);
+    savePref('sf_theme', n);
     document.documentElement.setAttribute('data-sf-theme', n);
     syncCanvasSurface();
     var tpl = document.getElementById('sf-t' + n);
@@ -1821,28 +2024,30 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
       ui.querySelectorAll('.sf-choice').forEach(function(b) {{
         b.classList.toggle('is-active', b.getAttribute('data-num') === n);
       }});
-      var toast = ui.querySelector('.sf-theme-toast');
-      if (toast) toast.textContent = LABELS[n];
-      if (showToast) {{
-        ui.classList.add('show-label');
-        clearTimeout(ui._toastTimer);
-        ui._toastTimer = setTimeout(function() {{
-          if (!ui.querySelector('.sf-theme-bar').classList.contains('is-open')) {{
-            ui.classList.remove('show-label');
-          }}
-        }}, 1400);
-      }}
+      if (showToast) showToastMsg(LABELS[n] + (computeIsDark() ? ' · Dark' : ' · Light'));
     }}
+  }}
+
+  function toggleDarkMode() {{
+    modePref = computeIsDark() ? 'light' : 'dark';
+    savePref('sf_dark_mode', modePref);
+    syncCanvasSurface();
+    showToastMsg(LABELS[cur] + (modePref === 'dark' ? ' · Dark Mode' : ' · Light Mode'));
   }}
 
   var ui = document.getElementById('sf-theme-ui');
   if (ui) {{
     var bar = ui.querySelector('.sf-theme-bar');
+    var dbtn = document.getElementById('sf-dark-btn');
     var tog = ui.querySelector('.is-current-toggle');
+    dbtn.addEventListener('click', function(ev) {{
+      ev.stopPropagation();
+      toggleDarkMode();
+    }});
     tog.addEventListener('click', function(ev) {{
       ev.stopPropagation();
       bar.classList.add('is-open');
-      ui.classList.add('show-label');
+      showToastMsg(LABELS[cur]);
     }});
     tog.addEventListener('contextmenu', function(ev) {{
       ev.preventDefault();
@@ -1863,6 +2068,15 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
     }});
   }}
 
+  if (window._sfKeyHandler) document.removeEventListener('keydown', window._sfKeyHandler);
+  window._sfKeyHandler = function(ev) {{
+    if (ev.altKey && (ev.key === 'd' || ev.key === 'D' || ev.code === 'KeyD')) {{
+      ev.preventDefault();
+      toggleDarkMode();
+    }}
+  }};
+  document.addEventListener('keydown', window._sfKeyHandler);
+
   if (window.MutationObserver && document.body) {{
     new MutationObserver(syncCanvasSurface).observe(document.body, {{ attributes: true, attributeFilter: ['class'] }});
   }}
@@ -1876,6 +2090,7 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
     switcher_html = (
         '<div id="sf-theme-ui" class="sf-theme-ui">'
         '<div class="sf-theme-bar">'
+        '<button type="button" id="sf-dark-btn" class="sf-num-btn sf-dark-btn" title="Dark / Light Mode (Alt+D)">☾</button>'
         '<button type="button" class="sf-num-btn is-current-toggle" title="Cambia tema grafico (00–10)">00</button>'
         + "".join(
             f'<button type="button" class="sf-num-btn sf-choice" data-num="{n}" title="{lbl}">{n}</button>'
@@ -1908,10 +2123,14 @@ def build_card_templates(
     type_in_completamento: bool = False,
     auto_open_scan: bool = False,
 ) -> Tuple[str, str]:
-    """Generate exact theme_showcase.html HTML + full-viewport `.sf-canvas` wrapper (NO switcher UI)."""
+    """Generate standalone single-theme Front/Back HTML WITH 1-click Light/Dark `☾/☀` pill
+    (and NO `00..10` theme switcher!)."""
     theme = THEMES[theme_key]
     scan_open_attr = " open" if auto_open_scan else ""
-    canvas_cls = "sf-canvas sf-dark" if theme.get("default_dark") else "sf-canvas"
+    def_dark = bool(theme.get("default_dark"))
+    canvas_cls = "sf-canvas sf-dark" if def_dark else "sf-canvas"
+    def_dark_js = "true" if def_dark else "false"
+    init_icon = "☀" if def_dark else "☾"
 
     front_inner = f"""<div class="stem">{{{{FrontStemHTML}}}}</div>
   {{{{#FigureHTML}}}}<div class="fig-box">{{{{FigureHTML}}}}</div>{{{{/FigureHTML}}}}
@@ -1928,12 +2147,56 @@ def build_card_templates(
 
     q_shell, a_shell = _build_layout_shell(theme.get("layout", "standard"), front_inner, back_inner, scan_open_attr)
     instant_js = "true" if instant_grade_front else "false"
+    mode_btn_html = f'<button type="button" id="sf-mode-pill" class="sf-mode-pill" title="Dark / Light Mode (Alt+D)">{init_icon}</button>'
+
+    mode_helper_js = f"""
+  document.documentElement.removeAttribute('data-sf-theme');
+  var canvas = document.getElementById('sf-canvas');
+  var mbtn = document.getElementById('sf-mode-pill');
+  var mkey = 'sf_mode_{theme_key}';
+  function getDark() {{
+    try {{ if (window['_' + mkey] !== undefined) return window['_' + mkey] === 'dark'; }} catch(e) {{}}
+    try {{ if (window.parent && window.parent['_' + mkey] !== undefined) return window.parent['_' + mkey] === 'dark'; }} catch(e) {{}}
+    try {{ var ls = localStorage.getItem(mkey); if (ls === 'dark' || ls === 'light') return ls === 'dark'; }} catch(e) {{}}
+    try {{ var ss = sessionStorage.getItem(mkey); if (ss === 'dark' || ss === 'light') return ss === 'dark'; }} catch(e) {{}}
+    var cm = (document.cookie || '').match(new RegExp('(?:^|;\\\\s*)' + mkey + '=(dark|light)'));
+    if (cm) return cm[1] === 'dark';
+    return {def_dark_js};
+  }}
+  function applyDark(d) {{
+    if (canvas) canvas.className = d ? 'sf-canvas sf-dark' : 'sf-canvas';
+    if (mbtn) {{
+      mbtn.textContent = d ? '☀' : '☾';
+      mbtn.title = d ? 'Switch to Light Mode (Alt+D)' : 'Switch to Dark Mode (Alt+D)';
+    }}
+  }}
+  function toggleDark() {{
+    var next = !getDark();
+    var val = next ? 'dark' : 'light';
+    try {{ window['_' + mkey] = val; }} catch(e) {{}}
+    try {{ if (window.parent) window.parent['_' + mkey] = val; }} catch(e) {{}}
+    try {{ localStorage.setItem(mkey, val); }} catch(e) {{}}
+    try {{ sessionStorage.setItem(mkey, val); }} catch(e) {{}}
+    try {{ document.cookie = mkey + '=' + val + ';path=/;max-age=31536000;SameSite=Lax'; }} catch(e) {{}}
+    applyDark(next);
+  }}
+  applyDark(getDark());
+  if (mbtn) mbtn.addEventListener('click', function(ev) {{ ev.stopPropagation(); toggleDark(); }});
+  if (window._sfSoloKey) document.removeEventListener('keydown', window._sfSoloKey);
+  window._sfSoloKey = function(ev) {{
+    if (ev.altKey && (ev.key === 'd' || ev.key === 'D' || ev.code === 'KeyD')) {{
+      ev.preventDefault();
+      toggleDark();
+    }}
+  }};
+  document.addEventListener('keydown', window._sfSoloKey);
+"""
 
     front_script = f"""
 <span id="ans-hidden-ref" style="display:none;">{{{{AnswerBannerHTML}}}}</span>
 <script>
 (function() {{
-  document.documentElement.removeAttribute('data-sf-theme');
+{mode_helper_js}
   var itemId = "{{{{ItemID}}}}";
   var instantGrade = {instant_js};
   var ansRef = document.getElementById('ans-hidden-ref');
@@ -1963,29 +2226,29 @@ def build_card_templates(
 }})();
 </script>"""
 
-    back_script = """
+    back_script = f"""
 <script>
-(function() {
-  document.documentElement.removeAttribute('data-sf-theme');
-  var itemId = "{{ItemID}}";
-  try {
+(function() {{
+{mode_helper_js}
+  var itemId = "{{{{ItemID}}}}";
+  try {{
     var picked = sessionStorage.getItem("pick_" + itemId);
-    if (picked) {
-      document.querySelectorAll('.opt').forEach(function(o) {
+    if (picked) {{
+      document.querySelectorAll('.opt').forEach(function(o) {{
         var l = o.querySelector('.opt-letter');
         var txt = l ? l.textContent.replace(/[()\\s]/g, '') : '';
-        if (txt === picked && !o.classList.contains('correct')) {
+        if (txt === picked && !o.classList.contains('correct')) {{
           o.classList.add('user-wrong');
-        }
-      });
-    }
-  } catch(e) {}
-})();
+        }}
+      }});
+    }}
+  }} catch(e) {{}}
+}})();
 </script>"""
 
     return (
-        f'{GOOGLE_FONTS_LINK_HTML}<div id="sf-canvas" class="{canvas_cls}">{q_shell}</div>{front_script}',
-        f'{GOOGLE_FONTS_LINK_HTML}<div id="sf-canvas" class="{canvas_cls}">{a_shell}</div>{back_script}',
+        f'{GOOGLE_FONTS_LINK_HTML}{mode_btn_html}<div id="sf-canvas" class="{canvas_cls}">{q_shell}</div>{front_script}',
+        f'{GOOGLE_FONTS_LINK_HTML}{mode_btn_html}<div id="sf-canvas" class="{canvas_cls}">{a_shell}</div>{back_script}',
     )
 
 
@@ -1999,8 +2262,8 @@ def repackage_apkg_with_theme(
     auto_open_scan: bool = False,
     custom_css_append: str = "",
 ) -> Path:
-    """Build a standalone single-theme .apkg (NO theme switcher widget) matching theme_showcase.html
-    pixel-for-pixel, with independent Anki `model_id`, subdeck IDs, and note GUIDs."""
+    """Build a standalone single-theme .apkg WITH 1-click Light/Dark `☾/☀` pill (and NO `00..10`
+    theme switcher), plus isolated Anki `model_id`, subdeck IDs, and note GUIDs."""
     theme = THEMES[theme_key]
     qfmt, afmt = build_card_templates(
         theme_key=theme_key,
@@ -2010,7 +2273,7 @@ def repackage_apkg_with_theme(
         auto_open_scan=auto_open_scan,
     )
     final_css = theme["css"] + ("\n" + custom_css_append if custom_css_append else "")
-    new_mid = _stable_id(f"SemestreFiltro-ThemeModel-v2-{theme_key}")
+    new_mid = _stable_id(f"SemestreFiltro-ThemeModel-v3-{theme_key}")
     now_sec = int(time.time()) + 30
     root_label = f"Semestre Filtro [{theme['num']} {theme['name']}]"
 
@@ -2046,7 +2309,7 @@ def repackage_apkg_with_theme(
                     continue
                 old_name = dobj["name"]
                 new_name = re.sub(r"^Semestre Filtro(?=::|$)", root_label, old_name)
-                new_did = _stable_id(f"deck::{theme_key}::{new_name}")
+                new_did = _stable_id(f"deck-v3::{theme_key}::{new_name}")
                 did_remap[old_did] = new_did
                 dobj["id"] = new_did
                 dobj["name"] = new_name
@@ -2062,7 +2325,7 @@ def repackage_apkg_with_theme(
             note_rows = cur.execute("SELECT id, sfld FROM notes").fetchall()
             cur.executemany(
                 "UPDATE notes SET guid = ? WHERE id = ?",
-                [(genanki.guid_for(f"sf-v2-{theme_key}", sfld), nid) for nid, sfld in note_rows],
+                [(genanki.guid_for(f"sf-v3-{theme_key}", sfld), nid) for nid, sfld in note_rows],
             )
             for old_did, new_did in did_remap.items():
                 cur.execute("UPDATE cards SET did = ?, mod = ?, usn = -1 WHERE did = ?", (new_did, now_sec, old_did))
@@ -2092,7 +2355,7 @@ def build_lightweight_theme_switcher_apkg(
     auto_open_scan: bool = False,
     custom_css_append: str = "",
 ) -> Path:
-    """Create a ~15 KB single-theme Note-Type updater .apkg matching theme_showcase.html."""
+    """Create a ~15 KB single-theme Note-Type updater .apkg WITH 1-click Light/Dark `☾/☀` toggle."""
     theme = THEMES[theme_key]
     qfmt, afmt = build_card_templates(
         theme_key=theme_key,
