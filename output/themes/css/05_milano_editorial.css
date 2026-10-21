@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Mono:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap');
+.card {
+  margin: 0;
+  padding: 20px 14px 32px;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+.card *, .card *::before, .card *::after {
+  box-sizing: border-box;
+}
+.fig-box {
+  margin: 14px 0;
+  text-align: center;
+}
+.fig-box img, details.orig-scan img {
+  max-width: 100%;
+  height: auto;
+  background: #ffffff;
+}
+.opt {
+  cursor: pointer;
+  user-select: none;
+}
+details.orig-scan {
+  margin-top: 14px;
+  font-size: 12px;
+}
+details.orig-scan summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 4px 0;
+}
+
+.card {
+  background: #e9e2d4;
+  color: #191614;
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+.card.nightMode { background: #141210; color: #f3ede2; }
+.ed-page {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #faf6ee;
+  border: 1px solid #cfc4b0;
+  padding: 28px 34px 30px;
+  box-shadow: 0 12px 32px rgba(40,30,15,0.08);
+}
+.card.nightMode .ed-page { background: #1c1916; border-color: #3a332b; }
+.ed-masthead {
+  text-align: center;
+  border-top: 2px solid #191614;
+  border-bottom: 4px double #191614;
+  padding: 8px 0 9px;
+  margin-bottom: 22px;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.card.nightMode .ed-masthead { border-color: #e6dfd3; }
+.ed-kicker {
+  color: #881337;
+  font-weight: 800;
+}
+.card.nightMode .ed-kicker { color: #fda4af; }
+.stem {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+.blank-slot { display: inline-block; min-width: 92px; border-bottom: 1.5px solid #881337; color: transparent; }
+.blank-filled { font-style: italic; color: #881337; border-bottom: 2px solid #881337; padding: 0 6px; font-weight: 700; }
+.card.nightMode .blank-filled { color: #fda4af; border-bottom-color: #fda4af; }
+.options, .opts { display: flex; flex-direction: column; gap: 4px; margin-top: 12px; }
+.opt {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 9px 12px;
+  border-bottom: 1px solid #e5dccb;
+  font-size: 19px;
+  line-height: 1.42;
+  transition: all 0.14s ease;
+}
+.card.nightMode .opt { border-bottom-color: #2f2a24; }
+.opt:hover { background: #f1eadb; padding-left: 18px; }
+.card.nightMode .opt:hover { background: #26221e; }
+.opt-letter, .opt-key {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-style: italic;
+  font-size: 22px;
+  color: #881337;
+  min-width: 22px;
+}
+.card.nightMode .opt-letter, .opt-key { color: #fda4af; }
+.opt.user-picked { background: #ede3d1; border-left: 3px solid #881337; }
+.card.nightMode .opt.user-picked { background: #2e2622; border-left-color: #fda4af; }
+.opt.user-wrong { color: #991b1b; text-decoration: line-through; opacity: 0.72; }
+.opt.correct, .opt.opt-correct { background: #eef5ee; border-left: 3px solid #166534; color: #14532d; font-weight: 700; }
+.card.nightMode .opt.correct, .opt.opt-correct { background: #14291d; color: #bbf7d0; border-left-color: #4ade80; }
+.ans-banner {
+  margin-top: 20px;
+  padding: 10px 0;
+  border-top: 1.5px solid #191614;
+  border-bottom: 1.5px solid #191614;
+  font-family: "Inter", sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #881337;
+}
+.card.nightMode .ans-banner { border-color: #d6d3d1; color: #fda4af; }
+.expl-box {
+  margin-top: 16px;
+  padding: 14px 18px;
+  background: #f3ede0;
+  font-size: 17.5px;
+  line-height: 1.55;
+  font-style: italic;
+}
+.card.nightMode .expl-box { background: #24201c; }
+details.orig-scan { font-family: "Inter", sans-serif; }
+.fig-box img, details.orig-scan img { border: 1px solid #bfb39c; padding: 8px; }

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello — Arena.ai Agent</title>
+  <style>
+    :root {
+      --bg: #f6f5f0;
+      --surface: #ffffff;
+      --ink: #17191c;
+      --muted: #5b616b;
+      --line: #dddbd2;
+      --accent: #0f766e;
+      --accent-soft: #e6f4f1;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg: #121417;
+      --surface: #1a1d22;
+      --ink: #eceef2;
+      --muted: #9aa2ae;
+      --line: #2b3038;
+      --accent: #2dd4bf;
+      --accent-soft: #152c2b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 2rem 1.25rem;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    main {
+      width: 100%;
+      max-width: 640px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 2.25rem;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--muted);
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 1.75rem;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    button.theme-toggle {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0.25rem 0.6rem;
+      cursor: pointer;
+    }
+
+    button.theme-toggle:hover {
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    h2 {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .principles {
+      list-style: none;
+      display: grid;
+      gap: 0.65rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .principles li {
+      padding: 0.7rem 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: 0.92rem;
+    }
+
+    .principles strong {
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-right: 0.4rem;
+    }
+
+    pre {
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      background: var(--accent-soft);
+      color: var(--ink);
+      border-radius: 8px;
+      padding: 0.9rem 1rem;
+      overflow-x: auto;
+    }
+
+    footer {
+      margin-top: 1.5rem;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="topbar">
+      <span class="status"><span class="dot"></span> arena.ai / agent-mode</span>
+      <button class="theme-toggle" id="toggle" type="button">toggle theme</button>
+    </div>
+
+    <h1>Hi — I'm a helpful agent on Arena.ai.</h1>
+    <p class="lead">
+      I live inside real repositories, read the code before guessing, keep diffs small,
+      and prefer shipping things that work on the first run.
+    </p>
+
+    <h2>How I like to work</h2>
+    <ul class="principles">
+      <li><strong>01 / inspect first</strong> Read the files, check the state, don't assume.</li>
+      <li><strong>02 / minimal noise</strong> Plain structure and readable code beat clever boilerplate.</li>
+      <li><strong>03 / honest certainty</strong> Say what is verified, flag what isn't.</li>
+    </ul>
+
+    <pre>$ git status --short
+?? index.html   # small, self-contained, zero dependencies</pre>
+
+    <footer>
+      <span>mode: interactive</span>
+      <span id="clock">ready</span>
+    </footer>
+  </main>
+
+  <script>
+    const root = document.documentElement;
+    document.getElementById('toggle').addEventListener('click', () => {
+      root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    });
+    document.getElementById('clock').textContent =
+      'local ' + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  </script>
+</body>
+</html>

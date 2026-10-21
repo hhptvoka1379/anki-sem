@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Mono:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap');
+.card {
+  margin: 0;
+  padding: 20px 14px 32px;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+.card *, .card *::before, .card *::after {
+  box-sizing: border-box;
+}
+.fig-box {
+  margin: 14px 0;
+  text-align: center;
+}
+.fig-box img, details.orig-scan img {
+  max-width: 100%;
+  height: auto;
+  background: #ffffff;
+}
+.opt {
+  cursor: pointer;
+  user-select: none;
+}
+details.orig-scan {
+  margin-top: 14px;
+  font-size: 12px;
+}
+details.orig-scan summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 4px 0;
+}
+
+.card {
+  background: #e5dfd3;
+  color: #1f1d1a;
+  font-family: "Cormorant Garamond", "Hiragino Mincho ProN", Georgia, serif;
+}
+.card.nightMode { background: #161513; color: #ede8dd; }
+.washi-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #f7f3ea;
+  border: 1px solid #d4cbb8;
+  padding: 26px 28px;
+  position: relative;
+  box-shadow: 0 10px 28px rgba(31,29,26,0.07);
+}
+.card.nightMode .washi-card { background: #201e1b; border-color: #3b3730; }
+.washi-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #d4cbb8;
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+}
+.card.nightMode .washi-top { border-bottom-color: #3b3730; }
+.hanko-seal {
+  width: 44px;
+  height: 44px;
+  border: 2.5px solid #c53030;
+  border-radius: 4px;
+  color: #c53030;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 800;
+  font-size: 11px;
+  line-height: 1.05;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotate(3deg);
+  flex-shrink: 0;
+}
+.washi-meta {
+  font-family: "Inter", sans-serif;
+  font-size: 11.5px;
+  color: #6b6459;
+  letter-spacing: 0.04em;
+}
+.card.nightMode .washi-meta { color: #a8a29e; }
+.stem { font-size: 21px; font-weight: 600; line-height: 1.46; margin-bottom: 18px; }
+.blank-slot { display: inline-block; min-width: 86px; border-bottom: 1.5px solid #c53030; color: transparent; }
+.blank-filled { background: #1e3a5f; color: #f7f3ea; padding: 1px 9px; font-weight: 700; }
+.options, .opts { display: flex; flex-direction: column; gap: 7px; font-family: "Inter", sans-serif; font-size: 14.5px; }
+.opt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: #fcfaf5;
+  border: 1px solid #ded6c6;
+  border-left: 3px solid transparent;
+  transition: all 0.14s ease;
+}
+.card.nightMode .opt { background: #292622; border-color: #3d3831; }
+.opt:hover { border-left-color: #c53030; background: #f1ece0; }
+.card.nightMode .opt:hover { background: #332f2a; }
+.opt-letter, .opt-key {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: #c53030;
+  min-width: 20px;
+}
+.opt.user-picked { background: #e6eef6; border-left-color: #1e3a5f; color: #1e3a5f; font-weight: 600; }
+.opt.user-wrong { background: #fae8e6; border-left-color: #c53030; color: #9b2c2c; }
+.opt.correct, .opt.opt-correct { background: #1e3a5f; color: #f7f3ea; border-color: #1e3a5f; font-weight: 600; }
+.opt.correct .opt-letter, .opt.opt-correct .opt-key, .opt.correct .opt-key, .opt-key { color: #fbd38d; }
+.ans-banner {
+  margin-top: 18px;
+  padding: 11px 15px;
+  background: #1e3a5f;
+  color: #f7f3ea;
+  font-family: "Inter", sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+}
+.expl-box {
+  margin-top: 12px;
+  padding: 14px 16px;
+  border-left: 2px solid #c53030;
+  background: #f0ebe0;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.card.nightMode .expl-box { background: #292622; }
+.fig-box img, details.orig-scan img { border: 1px solid #c8beaa; padding: 6px; }
