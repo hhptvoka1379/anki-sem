@@ -326,15 +326,52 @@ html, body, #qa {
   background: #ffffff;
   padding: 4px;
 }
+.stmt-line {
+  display: block;
+  margin-top: 7px;
+  padding-left: 1.15em;
+  text-indent: -1.15em;
+  line-height: 1.52;
+}
+.para-line {
+  display: block;
+  margin-top: 7px;
+  line-height: 1.52;
+}
+.scan-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+  width: 100%;
+}
 details.orig-scan {
-  margin-top: 12px;
+  display: block;
+  width: 100%;
+  margin: 0;
   font-size: 13px;
-  color: #64748b;
+  color: #475569;
+}
+.nightMode details.orig-scan, .night_mode details.orig-scan, .sf-canvas.sf-dark details.orig-scan {
+  color: #cbd5e1;
 }
 details.orig-scan summary {
+  display: block;
+  width: 100%;
   cursor: pointer;
   font-weight: 600;
-  margin-bottom: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+}
+.nightMode details.orig-scan summary, .night_mode details.orig-scan summary, .sf-canvas.sf-dark details.orig-scan summary {
+  background: #0f172a;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+details.orig-scan[open] summary {
+  margin-bottom: 8px;
 }
 """
 
@@ -349,7 +386,7 @@ FRONT_TMPL = """<div id="sf-canvas" class="sf-canvas">
   <div class="stem">{{FrontStemHTML}}</div>
   {{#FigureHTML}}<div class="fig-box">{{FigureHTML}}</div>{{/FigureHTML}}
   {{FrontOptionsHTML}}
-  {{#QuestionScanHTML}}<details class="orig-scan"><summary>Scansione originale della domanda (p. {{BookPage}})</summary>{{QuestionScanHTML}}</details>{{/QuestionScanHTML}}
+  {{#QuestionScanHTML}}<div class="scan-stack"><details class="orig-scan"><summary>Scansione originale della domanda (p. {{BookPage}})</summary>{{QuestionScanHTML}}</details></div>{{/QuestionScanHTML}}
 </div>
 </div>
 <script>
@@ -396,8 +433,10 @@ BACK_TMPL = """<div id="sf-canvas" class="sf-canvas">
   {{BackOptionsHTML}}
   <div class="ans-banner">{{AnswerBannerHTML}}</div>
   {{#ExplanationHTML}}<div class="expl-box"><strong>Spiegazione:</strong> {{ExplanationHTML}}</div>{{/ExplanationHTML}}
-  {{#QuestionScanHTML}}<details class="orig-scan"><summary>Scansione originale della domanda (p. {{BookPage}})</summary>{{QuestionScanHTML}}</details>{{/QuestionScanHTML}}
-  {{#SolutionScanHTML}}<details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{SolutionScanHTML}}</details>{{/SolutionScanHTML}}
+  <div class="scan-stack">
+    {{#QuestionScanHTML}}<details class="orig-scan"><summary>Scansione originale della domanda (p. {{BookPage}})</summary>{{QuestionScanHTML}}</details>{{/QuestionScanHTML}}
+    {{#SolutionScanHTML}}<details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{SolutionScanHTML}}</details>{{/SolutionScanHTML}}
+  </div>
 </div>
 </div>
 <script>
@@ -425,8 +464,40 @@ BACK_TMPL = """<div id="sf-canvas" class="sf-canvas">
 """
 
 
+_LIST_LINE_RE = re.compile(r"^(?:•\s*|[0-9]{1,2}[.)]\s+|[A-Ea-e][.)]\s+)")
+_SUBSCRIPT_TOKEN_RE = re.compile(
+    r"(?<![A-Za-z0-9_])([A-Za-zΑ-Ωα-ωΔ][₀-₉⁰-⁹]?)_([A-Za-z0-9∞+\-]{1,7})(?![A-Za-z0-9_])"
+)
+
+
+def format_inline_html(raw_text: str) -> str:
+    """Escape plain text cleanly without `&#x27;` and render `X_sub` notation as typographic `<sub>`."""
+    if not raw_text:
+        return ""
+    return _SUBSCRIPT_TOKEN_RE.sub(r"\1<sub>\2</sub>", html.escape(raw_text, quote=False))
+
+
+def format_multiline_html(raw_text: str) -> str:
+    """Escape plain text cleanly without `&#x27;`, format `X_sub` as `<sub>`, and render `\n` bullets/statements
+    as hanging-indent `.stmt-line` blocks and equation/paragraph breaks as `.para-line` blocks."""
+    if not raw_text:
+        return ""
+    lines = [format_inline_html(ln) for ln in raw_text.split("\n")]
+    if len(lines) == 1:
+        return lines[0]
+    out = [lines[0]]
+    for ln in lines[1:]:
+        cls = "stmt-line" if _LIST_LINE_RE.match(ln) else "para-line"
+        out.append(f'\n<span class="{cls}">{ln}</span>')
+    return "".join(out)
+
+
+def format_explanation_html(explanation_text: str) -> str:
+    return format_multiline_html(explanation_text)
+
+
 def format_front_stem_html(question_text: str, quiz_type: str) -> str:
-    esc = html.escape(question_text, quote=False).replace("\n", "<br>")
+    esc = format_multiline_html(question_text)
     if quiz_type == "completamento":
         esc = esc.replace("^[_____]", '<sup><span class="blank-slot">&nbsp;&nbsp;&nbsp;</span></sup>')
         esc = esc.replace("_____", '<span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>')
@@ -434,7 +505,7 @@ def format_front_stem_html(question_text: str, quiz_type: str) -> str:
 
 
 def format_back_stem_html(question_text: str, answer_str: str, quiz_type: str) -> str:
-    esc = html.escape(question_text, quote=False).replace("\n", "<br>")
+    esc = format_multiline_html(question_text)
     if quiz_type != "completamento":
         return esc
     parts = [p.strip() for p in re.split(r"\s*[/;]\s*|\s*,\s*(?=[a-zA-ZÀ-ÿ])", answer_str) if p.strip()]
@@ -618,7 +689,7 @@ def run_stage4(
                 f_opts = ['<div class="options">']
                 b_opts = ['<div class="options">']
                 for k in ("A", "B", "C", "D", "E"):
-                    ov_esc = html.escape(options[k], quote=False)
+                    ov_esc = format_inline_html(options[k])
                     f_opts.append(f'<div class="opt"><span class="opt-letter">{k}</span><span class="opt-body">{ov_esc}</span></div>')
                     cls = "opt correct" if k == ans_val else "opt"
                     b_opts.append(f'<div class="{cls}"><span class="opt-letter">{k}</span><span class="opt-body">{ov_esc}</span></div>')
@@ -626,11 +697,11 @@ def run_stage4(
                 b_opts.append("</div>")
                 front_opts_html = "".join(f_opts)
                 back_opts_html = "".join(b_opts)
-                ans_banner_html = f"Risposta corretta: {html.escape(ans_val, quote=False)}. {html.escape(correct_option_text, quote=False)}"
+                ans_banner_html = f"Risposta corretta: {html.escape(ans_val, quote=False)}. {format_inline_html(correct_option_text)}"
             else:
                 front_opts_html = ""
                 back_opts_html = ""
-                ans_banner_html = f"Risposta corretta: {html.escape(ans_val, quote=False)}"
+                ans_banner_html = f"Risposta corretta: {format_inline_html(ans_val)}"
 
             record = {
                 "id": item_id,

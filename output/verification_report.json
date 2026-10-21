@@ -86,7 +86,7 @@
     },
     "clean_true_diagrams_and_all_explicit_visuals_covered": {
       "passed": true,
-      "figure_count": 113,
+      "figure_count": 79,
       "missing_explicit_visual_ids": [],
       "orphan_files_on_disk": [],
       "missing_files_on_disk": []
@@ -145,20 +145,30 @@
     },
     "anki_apkg_and_media_integrity": {
       "passed": true,
-      "apkg_size_bytes": 34549412,
-      "apkg_size_mb": 32.95,
+      "apkg_size_bytes": 34443759,
+      "apkg_size_mb": 32.85,
       "sqlite_notes": 6948,
       "sqlite_cards": 6948,
       "distinct_subdecks": 84,
-      "embedded_media_files": 8127,
-      "referenced_card_images": 8127,
+      "embedded_media_files": 8093,
+      "referenced_card_images": 8093,
       "missing_zip_media": [],
       "missing_referenced_images": []
     },
     "zero_dark_or_blank_embedded_pngs": {
       "passed": true,
-      "inspected_png_count": 8127,
+      "inspected_png_count": 8093,
       "bad_pngs": []
+    },
+    "round3_zero_ocr_corruptions_and_multiline_formatting": {
+      "passed": true,
+      "dirty_hits_count": 0,
+      "dirty_hits_sample": [],
+      "chim_c01_comm_002_verified": true
+    },
+    "round3_stacked_scan_accordions_and_bullet_blocks_in_all_12_themes": {
+      "passed": true,
+      "missing_bundles": []
     }
   }
 }

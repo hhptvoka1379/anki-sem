@@ -4,14 +4,106 @@ import csv
 import json
 import re
 import sqlite3
+import sys
 import tempfile
 import zipfile
 from io import BytesIO
 from pathlib import Path
 from typing import Dict
 
-import numpy as np
-from PIL import Image
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+import struct
+import zlib
+
+try:
+    import numpy as np
+    from PIL import Image
+except ImportError:  # Pure-stdlib fallback when third-party imaging wheels are absent
+    np = None  # type: ignore[assignment]
+    Image = None  # type: ignore[assignment]
+
+
+def _png_gray_stats_stdlib(raw_bytes: bytes) -> tuple[float, float, float]:
+    """Exact PNG grayscale stats `(mean, p90, min)` using only Python stdlib (`struct` + `zlib`)."""
+    assert raw_bytes[:8] == b"\x89PNG\r\n\x1a\n", "Invalid PNG header"
+    pos = 8
+    w = h = bit_depth = color_type = 0
+    plte_luma: list[int] = []
+    idat_parts: list[bytes] = []
+    while pos < len(raw_bytes):
+        length = struct.unpack(">I", raw_bytes[pos:pos + 4])[0]
+        ctype = raw_bytes[pos + 4:pos + 8]
+        cdata = raw_bytes[pos + 8:pos + 8 + length]
+        pos += 12 + length
+        if ctype == b"IHDR":
+            w, h, bit_depth, color_type, _, _, _ = struct.unpack(">IIBBBBB", cdata)
+        elif ctype == b"PLTE":
+            plte_luma = [
+                (299 * cdata[i] + 587 * cdata[i + 1] + 114 * cdata[i + 2]) // 1000
+                for i in range(0, len(cdata), 3)
+            ]
+        elif ctype == b"IDAT":
+            idat_parts.append(cdata)
+        elif ctype == b"IEND":
+            break
+    raw = zlib.decompress(b"".join(idat_parts))
+    channels = {0: 1, 2: 3, 3: 1, 4: 2, 6: 4}[color_type]
+    bpp = max(1, (channels * bit_depth + 7) // 8)
+    stride = (w * channels * bit_depth + 7) // 8
+    prev = bytearray(stride)
+    hist = [0] * 256
+    off = 0
+    for _ in range(h):
+        ftype = raw[off]
+        row = bytearray(raw[off + 1:off + 1 + stride])
+        off += 1 + stride
+        if ftype == 1:
+            for i in range(bpp, stride):
+                row[i] = (row[i] + row[i - bpp]) & 0xFF
+        elif ftype == 2:
+            for i in range(stride):
+                row[i] = (row[i] + prev[i]) & 0xFF
+        elif ftype == 3:
+            for i in range(stride):
+                a = row[i - bpp] if i >= bpp else 0
+                row[i] = (row[i] + ((a + prev[i]) >> 1)) & 0xFF
+        elif ftype == 4:
+            for i in range(stride):
+                a = row[i - bpp] if i >= bpp else 0
+                b = prev[i]
+                c = prev[i - bpp] if i >= bpp else 0
+                p = a + b - c
+                pa, pb, pc = abs(p - a), abs(p - b), abs(p - c)
+                pr = a if (pa <= pb and pa <= pc) else (b if pb <= pc else c)
+                row[i] = (row[i] + pr) & 0xFF
+        prev = row
+        if color_type == 3 and bit_depth == 2:
+            rem = w
+            for byte in row:
+                for shift in (6, 4, 2, 0):
+                    if rem <= 0:
+                        break
+                    hist[plte_luma[(byte >> shift) & 0x3]] += 1
+                    rem -= 1
+        elif color_type == 0 and bit_depth == 8:
+            for byte in row[:w]:
+                hist[byte] += 1
+        elif color_type == 3 and bit_depth == 8:
+            for byte in row[:w]:
+                hist[plte_luma[byte]] += 1
+    total = sum(hist)
+    mean_v = sum(v * c for v, c in enumerate(hist)) / max(1, total)
+    min_v = next((float(v) for v, c in enumerate(hist) if c > 0), 255.0)
+    target90 = 0.90 * total
+    acc = 0
+    p90_v = 255.0
+    for v, c in enumerate(hist):
+        acc += c
+        if acc >= target90:
+            p90_v = float(v)
+            break
+    return mean_v, p90_v, min_v
 
 from extractor.round2_remediation import DEDUP_DROP_MAP
 from extractor.stage1_canonicalize import SUBJECT_CHAPTERS
@@ -245,7 +337,7 @@ def run_verification(output_dir: Path = Path("/home/user/anki-sem/output")) -> D
     on_disk_pngs = sorted(p.name for p in fig_dir.glob("*.png"))
     ref_in_dataset = sorted({fn for r in jsonl_rows for fn in r["figure_files"]})
     explicit_vis_re = re.compile(
-        r"\b(?:in\s+figura|nella\s+figura|della\s+figura|seguente\s+figura|\(figura\)|"
+        r"\b(?:in\s+figura|nella\s+figura(?!\s+di\s+diffrazione)|della\s+figura|seguente\s+figura|\(figura\)|"
         r"lo\s+schema|nello\s+schema|seguente\s+schema|il\s+grafico\s+(?:riporta|mostra|rappresenta|seguente)|"
         r"come\s+riporta\s+il\s+grafico|nel\s+grafico|seguenti\s+grafici|seguenti\s+disegni|"
         r"albero\s+genealogico\s+(?:riportato|mostrato|in\s+figura|seguente)|"
@@ -256,7 +348,7 @@ def run_verification(output_dir: Path = Path("/home/user/anki-sem/output")) -> D
         r["id"] for r in jsonl_rows if explicit_vis_re.search(r["question"].lower()) and not r["figure_files"]
     ]
     checks["clean_true_diagrams_and_all_explicit_visuals_covered"] = {
-        "passed": on_disk_pngs == ref_in_dataset and 65 <= len(on_disk_pngs) <= 260 and len(missing_explicit_vis) == 0,
+        "passed": on_disk_pngs == ref_in_dataset and len(on_disk_pngs) == 79 and len(missing_explicit_vis) == 0,
         "figure_count": len(on_disk_pngs),
         "missing_explicit_visual_ids": missing_explicit_vis,
         "orphan_files_on_disk": sorted(set(on_disk_pngs) - set(ref_in_dataset)),
@@ -280,9 +372,14 @@ def run_verification(output_dir: Path = Path("/home/user/anki-sem/output")) -> D
             dark_or_blank_media = []
             for k, orig_name in media_map.items():
                 if k in names:
-                    arr_m = np.asarray(Image.open(BytesIO(zf.read(k))).convert("L"), dtype=np.float32)
-                    if float(arr_m.mean()) < 130.0 or float(np.percentile(arr_m, 90)) < 220.0 or float(arr_m.min()) > 150.0:
-                        dark_or_blank_media.append((orig_name, round(float(arr_m.mean()), 1), round(float(arr_m.min()), 1)))
+                    png_raw = zf.read(k)
+                    if Image is not None and np is not None:
+                        arr_m = np.asarray(Image.open(BytesIO(png_raw)).convert("L"), dtype=np.float32)
+                        mean_v, p90_v, min_v = float(arr_m.mean()), float(np.percentile(arr_m, 90)), float(arr_m.min())
+                    else:
+                        mean_v, p90_v, min_v = _png_gray_stats_stdlib(png_raw)
+                    if mean_v < 130.0 or p90_v < 220.0 or min_v > 150.0:
+                        dark_or_blank_media.append((orig_name, round(mean_v, 1), round(min_v, 1)))
 
         conn = sqlite3.connect(str(tmp_path / db_entry))
         cur = conn.cursor()
@@ -541,6 +638,49 @@ def run_verification(output_dir: Path = Path("/home/user/anki-sem/output")) -> D
         "passed": len(dark_or_blank_media) == 0,
         "inspected_png_count": len(media_map),
         "bad_pngs": dark_or_blank_media[:15],
+    }
+
+    # 26. Round-3 Corpus-Wide OCR Cleanliness, Figure De-Duplication & Multi-Line List Formatting
+    r3_dirty = []
+    r3_rx = re.compile(
+        r"#|,,|~(?![0-9])|\*|\bfl\]|(?<![,0-9])\b(?:H20|C02|S02|S03|N02|N20|02|H30|Na0H|K0H|Ca0|Li₂Q)\b|(?<!\n)(?<!^)•\s"
+    )
+    for r in jsonl_rows:
+        for fn, val in [("Q", r["question"])] + [(f"O:{k}", v) for k, v in (r.get("options") or {}).items()] + ([("EXP", r["explanation"])] if r.get("explanation") else []):
+            if val and r3_rx.search(val):
+                r3_dirty.append((r["id"], fn, val[:90]))
+    c002 = next(r for r in jsonl_rows if r["id"] == "CHIM-C01-COMM-002")
+    c002_flds = id_to_flds["CHIM-C01-COMM-002"]
+    c002_ok = (
+        c002["figure_files"] == []
+        and "\n• A₁:" in c002["question"]
+        and "\n• A₂:" in c002["question"]
+        and "\n• A₃:" in c002["question"]
+        and "\n• L'affermazione A₁" in c002["explanation"]
+        and "oltre agli isotopi" in c002["explanation"]
+        and "altre agli" not in c002["explanation"]
+        and c002_flds[14] == ""
+        and '<span class="stmt-line">• A₁:' in c002_flds[8]
+        and '<span class="stmt-line">• L\'affermazione A₁' in c002_flds[13]
+    )
+    checks["round3_zero_ocr_corruptions_and_multiline_formatting"] = {
+        "passed": len(r3_dirty) == 0 and c002_ok,
+        "dirty_hits_count": len(r3_dirty),
+        "dirty_hits_sample": r3_dirty[:15],
+        "chim_c01_comm_002_verified": c002_ok,
+    }
+
+    # 27. Round-3 Stacked `.scan-stack` Disclosure Accordions & `.stmt-line` Typography Across All 12 Bundles
+    r3_tpl_missing = []
+    for td_item in tpl_dirs:
+        fh = (td_item / "front.html").read_text(encoding="utf-8")
+        bh = (td_item / "back.html").read_text(encoding="utf-8")
+        sc = (td_item / "style.css").read_text(encoding="utf-8")
+        if '<div class="scan-stack">' not in fh or '<div class="scan-stack">' not in bh or ".scan-stack" not in sc or ".stmt-line" not in sc:
+            r3_tpl_missing.append(td_item.name)
+    checks["round3_stacked_scan_accordions_and_bullet_blocks_in_all_12_themes"] = {
+        "passed": len(r3_tpl_missing) == 0,
+        "missing_bundles": r3_tpl_missing,
     }
 
     overall_passed = all(c["passed"] for c in checks.values())

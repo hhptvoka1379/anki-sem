@@ -69,18 +69,61 @@ BASE_RESET_CSS = """
   height: auto;
   background: #ffffff;
 }
+.options {
+  display: block;
+}
 .opt {
+  display: block;
+  margin-bottom: 8px;
   cursor: pointer;
   user-select: none;
 }
+.options > .opt:last-child {
+  margin-bottom: 0;
+}
+.stmt-line {
+  display: block;
+  margin-top: 7px;
+  padding-left: 1.15em;
+  text-indent: -1.15em;
+  line-height: 1.52;
+}
+.para-line {
+  display: block;
+  margin-top: 7px;
+  line-height: 1.52;
+}
+.scan-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+  width: 100%;
+}
 details.orig-scan {
-  margin-top: 14px;
-  font-size: 12px;
+  display: block;
+  width: 100%;
+  margin: 0;
+  font-size: 12.5px;
+}
+details.orig-scan + details.orig-scan {
+  margin-top: 10px;
 }
 details.orig-scan summary {
+  display: block;
+  width: 100%;
   cursor: pointer;
   font-weight: 600;
-  padding: 4px 0;
+  padding: 7px 11px;
+  border-radius: 6px;
+  border: 1px solid currentColor;
+  opacity: 0.92;
+}
+details.orig-scan summary:hover {
+  opacity: 1;
+}
+details.orig-scan[open] summary {
+  margin-bottom: 8px;
 }
 """
 
@@ -626,10 +669,10 @@ details.orig-scan summary { color: #c2410c; }
 .stem { font-size: 18px; font-weight: 700; margin: 14px 0 18px; letter-spacing: -0.015em; }
 .blank-slot { display: inline-block; min-width: 88px; background: #fde047; border: 2px solid #111111; padding: 0 6px; color: transparent; }
 .blank-filled { background: #86efac; color: #111111; border: 2px solid #111111; padding: 1px 8px; font-weight: 800; }
-.options { display: flex; flex-direction: column; gap: 10px; }
+.options { display: block; display: flex; flex-direction: column; gap: 2px; }
 .opt {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   padding: 11px 14px;
   border: 2.5px solid #111111;
@@ -663,9 +706,9 @@ details.orig-scan summary { color: #c2410c; }
   justify-content: center;
   flex-shrink: 0;
 }
-.opt.user-wrong, .card.nightMode .opt.user-wrong { background: #fca5a5; color: #111111; border-color: #111111; }
-.opt.correct, .card.nightMode .opt.correct { background: #86efac; color: #111111; border-color: #111111; font-weight: 800; }
-.opt.correct .opt-letter, .card.nightMode .opt.correct .opt-letter { background: #111111; color: #86efac; }
+.opt.user-wrong, .card.nightMode .opt.user-wrong { background: #fca5a5 !important; color: #111111 !important; border-color: #111111 !important; }
+.opt.correct, .card.nightMode .opt.correct { background: #86efac !important; color: #111111 !important; border-color: #111111 !important; font-weight: 800; }
+.opt.correct .opt-letter, .card.nightMode .opt.correct .opt-letter { background: #111111 !important; color: #86efac !important; }
 .ans-banner {
   margin-top: 18px;
   padding: 12px 15px;
@@ -680,6 +723,7 @@ details.orig-scan summary { color: #c2410c; }
 .card.nightMode .ans-banner { box-shadow: 4px 4px 0px #ec4899; }
 .expl-box {
   margin-top: 14px;
+  margin-bottom: 14px;
   padding: 14px 16px;
   border: 2.5px solid #111111;
   background: #f4f4f5;
@@ -692,6 +736,24 @@ details.orig-scan summary { color: #c2410c; }
   color: #f4f4f5;
   border-color: #fafafa;
   box-shadow: 4px 4px 0px #facc15;
+}
+details.orig-scan summary {
+  border: 2px solid #111111;
+  border-radius: 0;
+  background: #fef9c3;
+  color: #111111;
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 12px;
+  box-shadow: 3px 3px 0px #111111;
+  opacity: 1;
+}
+.card.nightMode details.orig-scan summary {
+  background: #18181b;
+  color: #fafafa;
+  border-color: #fafafa;
+  box-shadow: 3px 3px 0px #fafafa;
 }
 .fig-box img, details.orig-scan img { border: 2.5px solid #111111; box-shadow: 4px 4px 0px #111111; padding: 6px; }
 .card.nightMode .fig-box img, .card.nightMode details.orig-scan img { border-color: #fafafa; box-shadow: 4px 4px 0px #facc15; }
@@ -1535,7 +1597,7 @@ def _build_layout_shell(layout: str, front_inner: str, back_inner: str, scan_ope
     {{{{#FigureHTML}}}}<div class="fig-box">{{{{FigureHTML}}}}</div>{{{{/FigureHTML}}}}
   </div>
   {{{{FrontOptionsHTML}}}}
-  {{{{#QuestionScanHTML}}}}<details class="orig-scan"{scan_open_attr}><summary>Scansione originale della domanda (p. {{{{BookPage}}}})</summary>{{{{QuestionScanHTML}}}}</details>{{{{/QuestionScanHTML}}}}
+  {{{{#QuestionScanHTML}}}}<div class="scan-stack"><details class="orig-scan"{scan_open_attr}><summary>Scansione originale della domanda (p. {{{{BookPage}}}})</summary>{{{{QuestionScanHTML}}}}</details></div>{{{{/QuestionScanHTML}}}}
 </div>"""
         afmt = f"""
 <div class="te-chassis">
@@ -1555,8 +1617,10 @@ def _build_layout_shell(layout: str, front_inner: str, back_inner: str, scan_ope
   {{{{BackOptionsHTML}}}}
   <div class="ans-banner">{{{{AnswerBannerHTML}}}}</div>
   {{{{#ExplanationHTML}}}}<div class="expl-box"><strong>Spiegazione:</strong> {{{{ExplanationHTML}}}}</div>{{{{/ExplanationHTML}}}}
-  {{{{#QuestionScanHTML}}}}<details class="orig-scan"{scan_open_attr}><summary>Scansione originale della domanda (p. {{{{BookPage}}}})</summary>{{{{QuestionScanHTML}}}}</details>{{{{/QuestionScanHTML}}}}
-  {{{{#SolutionScanHTML}}}}<details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{{{SolutionScanHTML}}}}</details>{{{{/SolutionScanHTML}}}}
+  <div class="scan-stack">
+    {{{{#QuestionScanHTML}}}}<details class="orig-scan"{scan_open_attr}><summary>Scansione originale della domanda (p. {{{{BookPage}}}})</summary>{{{{QuestionScanHTML}}}}</details>{{{{/QuestionScanHTML}}}}
+    {{{{#SolutionScanHTML}}}}<details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{{{SolutionScanHTML}}}}</details>{{{{/SolutionScanHTML}}}}
+  </div>
 </div>"""
         return qfmt, afmt
 
@@ -1632,7 +1696,7 @@ def _build_layout_shell(layout: str, front_inner: str, back_inner: str, scan_ope
       <div class="stem">{{{{FrontStemHTML}}}}</div>
       {{{{#FigureHTML}}}}<div class="fig-box">{{{{FigureHTML}}}}</div>{{{{/FigureHTML}}}}
     </div>
-    {{{{#QuestionScanHTML}}}}<details class="orig-scan"{scan_open_attr}><summary>Scansione originale della domanda (p. {{{{BookPage}}}})</summary>{{{{QuestionScanHTML}}}}</details>{{{{/QuestionScanHTML}}}}
+    {{{{#QuestionScanHTML}}}}<div class="scan-stack"><details class="orig-scan"{scan_open_attr}><summary>Scansione originale della domanda (p. {{{{BookPage}}}})</summary>{{{{QuestionScanHTML}}}}</details></div>{{{{/QuestionScanHTML}}}}
   </div>
   <div class="split-right-well">
     {{{{FrontOptionsHTML}}}}
@@ -1650,13 +1714,13 @@ def _build_layout_shell(layout: str, front_inner: str, back_inner: str, scan_ope
       <div class="stem">{{{{BackStemHTML}}}}</div>
       {{{{#FigureHTML}}}}<div class="fig-box">{{{{FigureHTML}}}}</div>{{{{/FigureHTML}}}}
     </div>
-    {{{{#QuestionScanHTML}}}}<details class="orig-scan"{scan_open_attr}><summary>Scansione originale della domanda (p. {{{{BookPage}}}})</summary>{{{{QuestionScanHTML}}}}</details>{{{{/QuestionScanHTML}}}}
+    {{{{#QuestionScanHTML}}}}<div class="scan-stack"><details class="orig-scan"{scan_open_attr}><summary>Scansione originale della domanda (p. {{{{BookPage}}}})</summary>{{{{QuestionScanHTML}}}}</details></div>{{{{/QuestionScanHTML}}}}
   </div>
   <div class="split-right-well">
     {{{{BackOptionsHTML}}}}
     <div class="ans-banner">{{{{AnswerBannerHTML}}}}</div>
     {{{{#ExplanationHTML}}}}<div class="expl-box"><strong>Spiegazione:</strong> {{{{ExplanationHTML}}}}</div>{{{{/ExplanationHTML}}}}
-    {{{{#SolutionScanHTML}}}}<details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{{{SolutionScanHTML}}}}</details>{{{{/SolutionScanHTML}}}}
+    {{{{#SolutionScanHTML}}}}<div class="scan-stack"><details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{{{SolutionScanHTML}}}}</details></div>{{{{/SolutionScanHTML}}}}
   </div>
 </div>"""
         return qfmt, afmt
@@ -1869,15 +1933,17 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
     front_inner = """<div class="stem">{{FrontStemHTML}}</div>
   {{#FigureHTML}}<div class="fig-box">{{FigureHTML}}</div>{{/FigureHTML}}
   {{FrontOptionsHTML}}
-  {{#QuestionScanHTML}}<details class="orig-scan"><summary>Scansione originale della domanda (p. {{BookPage}})</summary>{{QuestionScanHTML}}</details>{{/QuestionScanHTML}}"""
+  {{#QuestionScanHTML}}<div class="scan-stack"><details class="orig-scan"><summary>Scansione originale della domanda (p. {{BookPage}})</summary>{{QuestionScanHTML}}</details></div>{{/QuestionScanHTML}}"""
 
     back_inner = """<div class="stem">{{BackStemHTML}}</div>
   {{#FigureHTML}}<div class="fig-box">{{FigureHTML}}</div>{{/FigureHTML}}
   {{BackOptionsHTML}}
   <div class="ans-banner">{{AnswerBannerHTML}}</div>
   {{#ExplanationHTML}}<div class="expl-box"><strong>Spiegazione:</strong> {{ExplanationHTML}}</div>{{/ExplanationHTML}}
-  {{#QuestionScanHTML}}<details class="orig-scan"><summary>Scansione originale della domanda (p. {{BookPage}})</summary>{{QuestionScanHTML}}</details>{{/QuestionScanHTML}}
-  {{#SolutionScanHTML}}<details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{SolutionScanHTML}}</details>{{/SolutionScanHTML}}"""
+  <div class="scan-stack">
+    {{#QuestionScanHTML}}<details class="orig-scan"><summary>Scansione originale della domanda (p. {{BookPage}})</summary>{{QuestionScanHTML}}</details>{{/QuestionScanHTML}}
+    {{#SolutionScanHTML}}<details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{SolutionScanHTML}}</details>{{/SolutionScanHTML}}
+  </div>"""
 
     css_sections = [GOOGLE_FONTS_IMPORT, HOST_VIEWPORT_RESET_CSS, _scope_css_block(default_css, "00")]
     q_tpls = []
@@ -2102,15 +2168,17 @@ def build_card_templates(
     front_inner = f"""<div class="stem">{{{{FrontStemHTML}}}}</div>
   {{{{#FigureHTML}}}}<div class="fig-box">{{{{FigureHTML}}}}</div>{{{{/FigureHTML}}}}
   {{{{FrontOptionsHTML}}}}
-  {{{{#QuestionScanHTML}}}}<details class="orig-scan"{scan_open_attr}><summary>Scansione originale della domanda (p. {{{{BookPage}}}})</summary>{{{{QuestionScanHTML}}}}</details>{{{{/QuestionScanHTML}}}}"""
+  {{{{#QuestionScanHTML}}}}<div class="scan-stack"><details class="orig-scan"{scan_open_attr}><summary>Scansione originale della domanda (p. {{{{BookPage}}}})</summary>{{{{QuestionScanHTML}}}}</details></div>{{{{/QuestionScanHTML}}}}"""
 
     back_inner = f"""<div class="stem">{{{{BackStemHTML}}}}</div>
   {{{{#FigureHTML}}}}<div class="fig-box">{{{{FigureHTML}}}}</div>{{{{/FigureHTML}}}}
   {{{{BackOptionsHTML}}}}
   <div class="ans-banner">{{{{AnswerBannerHTML}}}}</div>
   {{{{#ExplanationHTML}}}}<div class="expl-box"><strong>Spiegazione:</strong> {{{{ExplanationHTML}}}}</div>{{{{/ExplanationHTML}}}}
-  {{{{#QuestionScanHTML}}}}<details class="orig-scan"{scan_open_attr}><summary>Scansione originale della domanda (p. {{{{BookPage}}}})</summary>{{{{QuestionScanHTML}}}}</details>{{{{/QuestionScanHTML}}}}
-  {{{{#SolutionScanHTML}}}}<details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{{{SolutionScanHTML}}}}</details>{{{{/SolutionScanHTML}}}}"""
+  <div class="scan-stack">
+    {{{{#QuestionScanHTML}}}}<details class="orig-scan"{scan_open_attr}><summary>Scansione originale della domanda (p. {{{{BookPage}}}})</summary>{{{{QuestionScanHTML}}}}</details>{{{{/QuestionScanHTML}}}}
+    {{{{#SolutionScanHTML}}}}<details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{{{SolutionScanHTML}}}}</details>{{{{/SolutionScanHTML}}}}
+  </div>"""
 
     q_shell, a_shell = _build_layout_shell(theme.get("layout", "standard"), front_inner, back_inner, scan_open_attr)
     instant_js = "true" if instant_grade_front else "false"
@@ -2197,7 +2265,7 @@ def repackage_apkg_with_theme(
         auto_open_scan=auto_open_scan,
     )
     final_css = theme["css"] + ("\n" + custom_css_append if custom_css_append else "")
-    new_mid = _stable_id(f"SemestreFiltro-ThemeModel-v4-{theme_key}")
+    new_mid = _stable_id(f"SemestreFiltro-ThemeModel-v5-{theme_key}")
     now_sec = int(time.time()) + 30
     root_label = f"Semestre Filtro [{theme['num']} {theme['name']}]"
 
@@ -2233,7 +2301,7 @@ def repackage_apkg_with_theme(
                     continue
                 old_name = dobj["name"]
                 new_name = re.sub(r"^Semestre Filtro(?=::|$)", root_label, old_name)
-                new_did = _stable_id(f"deck-v4::{theme_key}::{new_name}")
+                new_did = _stable_id(f"deck-v5::{theme_key}::{new_name}")
                 did_remap[old_did] = new_did
                 dobj["id"] = new_did
                 dobj["name"] = new_name
@@ -2249,7 +2317,7 @@ def repackage_apkg_with_theme(
             note_rows = cur.execute("SELECT id, sfld FROM notes").fetchall()
             cur.executemany(
                 "UPDATE notes SET guid = ? WHERE id = ?",
-                [(_guid_for(f"sf-v4-{theme_key}", sfld), nid) for nid, sfld in note_rows],
+                [(_guid_for(f"sf-v5-{theme_key}", sfld), nid) for nid, sfld in note_rows],
             )
             for old_did, new_did in did_remap.items():
                 cur.execute("UPDATE cards SET did = ?, mod = ?, usn = -1 WHERE did = ?", (new_did, now_sec, old_did))

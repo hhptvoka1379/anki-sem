@@ -13,13 +13,13 @@
       <div class="stem">{{BackStemHTML}}</div>
       {{#FigureHTML}}<div class="fig-box">{{FigureHTML}}</div>{{/FigureHTML}}
     </div>
-    {{#QuestionScanHTML}}<details class="orig-scan"><summary>Scansione originale della domanda (p. {{BookPage}})</summary>{{QuestionScanHTML}}</details>{{/QuestionScanHTML}}
+    {{#QuestionScanHTML}}<div class="scan-stack"><details class="orig-scan"><summary>Scansione originale della domanda (p. {{BookPage}})</summary>{{QuestionScanHTML}}</details></div>{{/QuestionScanHTML}}
   </div>
   <div class="split-right-well">
     {{BackOptionsHTML}}
     <div class="ans-banner">{{AnswerBannerHTML}}</div>
     {{#ExplanationHTML}}<div class="expl-box"><strong>Spiegazione:</strong> {{ExplanationHTML}}</div>{{/ExplanationHTML}}
-    {{#SolutionScanHTML}}<details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{SolutionScanHTML}}</details>{{/SolutionScanHTML}}
+    {{#SolutionScanHTML}}<div class="scan-stack"><details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{SolutionScanHTML}}</details></div>{{/SolutionScanHTML}}
   </div>
 </div>
 </div>

@@ -1434,11 +1434,13 @@ def compute_exact_answer_book_page(
 
 def remediate_dataset(raw_items: List[dict]) -> Tuple[List[dict], dict]:
     """Return a deep-copied, 100% remediated item list + detailed remediation stats."""
+    from extractor.round3_remediation import apply_round3_remediation
+
     items = copy.deepcopy(raw_items)
     sub_counts: Dict[Tuple[str, int, str], int] = {}
     for it in items:
         key = (it["subject_code"], it["chapter_num"], it["quiz_type"])
-        sub_counts[key] = sub_counts.get(key, 0) + 1
+        sub_counts[key] = max(sub_counts.get(key, 0), int(it["qnum"]))
 
     stats = {
         "total_items": len(items),
@@ -1515,6 +1517,8 @@ def remediate_dataset(raw_items: List[dict]) -> Tuple[List[dict], dict]:
             if qt == "completamento":
                 stats["completamento_repaired"] += 1
 
+    r3_stats = apply_round3_remediation(items)
+    stats["round3_remediation"] = r3_stats
     return items, stats
 
 

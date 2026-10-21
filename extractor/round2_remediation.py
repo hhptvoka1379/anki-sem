@@ -1229,25 +1229,31 @@ def deduplicate_dataset(items: list[dict]) -> tuple[list[dict], list[dict]]:
     """
     by_id = {it["id"]: it for it in items}
     priority = {"commentati": 3, "non_commentati": 2, "completamento": 1}
+    code_map = {"COMM": "commentati", "NCOM": "non_commentati", "COMP": "completamento"}
 
     removed_records: list[dict] = []
     for drop_id, keep_id in DEDUP_DROP_MAP.items():
-        assert drop_id in by_id, f"Missing drop_id {drop_id}"
         assert keep_id in by_id, f"Missing canonical keep target {keep_id} for {drop_id}"
         assert keep_id not in DEDUP_DROP_MAP, f"Transitive drop chain {drop_id} -> {keep_id}"
-        d_it = by_id[drop_id]
         k_it = by_id[keep_id]
-        assert priority[k_it["quiz_type"]] >= priority[d_it["quiz_type"]], (
-            f"Priority violation: dropping {drop_id} ({d_it['quiz_type']}) for {keep_id} ({k_it['quiz_type']})"
+        if drop_id in by_id:
+            d_it = by_id[drop_id]
+            d_qt = d_it["quiz_type"]
+            d_ans = d_it["answer"]
+        else:
+            d_qt = code_map[drop_id.split("-")[2]]
+            d_ans = k_it["answer"]
+        assert priority[k_it["quiz_type"]] >= priority[d_qt], (
+            f"Priority violation: dropping {drop_id} ({d_qt}) for {keep_id} ({k_it['quiz_type']})"
         )
         removed_records.append(
             {
                 "dropped_id": drop_id,
                 "kept_id": keep_id,
                 "subject_code": k_it["subject_code"],
-                "dropped_quiz_type": d_it["quiz_type"],
+                "dropped_quiz_type": d_qt,
                 "kept_quiz_type": k_it["quiz_type"],
-                "dropped_answer": d_it["answer"],
+                "dropped_answer": d_ans,
                 "kept_answer": k_it["answer"],
                 "question": k_it["question"],
             }

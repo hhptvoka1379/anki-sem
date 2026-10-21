@@ -28,18 +28,61 @@ html, body, #qa {
   height: auto;
   background: #ffffff;
 }
+.options {
+  display: block;
+}
 .opt {
+  display: block;
+  margin-bottom: 8px;
   cursor: pointer;
   user-select: none;
 }
+.options > .opt:last-child {
+  margin-bottom: 0;
+}
+.stmt-line {
+  display: block;
+  margin-top: 7px;
+  padding-left: 1.15em;
+  text-indent: -1.15em;
+  line-height: 1.52;
+}
+.para-line {
+  display: block;
+  margin-top: 7px;
+  line-height: 1.52;
+}
+.scan-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+  width: 100%;
+}
 details.orig-scan {
-  margin-top: 14px;
-  font-size: 12px;
+  display: block;
+  width: 100%;
+  margin: 0;
+  font-size: 12.5px;
+}
+details.orig-scan + details.orig-scan {
+  margin-top: 10px;
 }
 details.orig-scan summary {
+  display: block;
+  width: 100%;
   cursor: pointer;
   font-weight: 600;
-  padding: 4px 0;
+  padding: 7px 11px;
+  border-radius: 6px;
+  border: 1px solid currentColor;
+  opacity: 0.92;
+}
+details.orig-scan summary:hover {
+  opacity: 1;
+}
+details.orig-scan[open] summary {
+  margin-bottom: 8px;
 }
 
 .sf-canvas {
