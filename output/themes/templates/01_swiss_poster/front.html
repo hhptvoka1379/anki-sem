@@ -1,0 +1,81 @@
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Mono:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<div id="sf-canvas" class="sf-canvas">
+<button id="sf-theme-toggle" type="button" style="position:absolute;top:8px;left:8px;z-index:5;font-family:'Space Mono',monospace;font-weight:700;font-size:11px;padding:4px 9px;border:2px solid #111;background:#fef08a;color:#111;cursor:pointer;">DARK</button>
+
+<div class="swiss-sheet">
+  <div class="swiss-topbar">
+    <span><i class="swiss-red-dot"></i>SEMESTRE FILTRO // ARCHIVIO DIDATTICO</span>
+    <span>+ PAG. {{BookPage}} +</span>
+  </div>
+  <div class="swiss-grid">
+    <div class="swiss-rail">
+      <div class="swiss-big-num">{{QuestionNum}}</div>
+      <div class="swiss-meta-stack">
+        <strong>{{SubjectCode}}</strong><br>
+        CAP. {{ChapterNum}}<br>
+        {{QuizTypeLabel}}
+      </div>
+    </div>
+    <div class="swiss-main">
+      <div class="stem">{{FrontStemHTML}}</div>
+  {{#FigureHTML}}<div class="fig-box">{{FigureHTML}}</div>{{/FigureHTML}}
+  {{FrontOptionsHTML}}
+  {{#QuestionScanHTML}}<details class="orig-scan"><summary>Scansione originale della domanda (p. {{BookPage}})</summary>{{QuestionScanHTML}}</details>{{/QuestionScanHTML}}
+    </div>
+  </div>
+</div>
+</div>
+<span id="ans-hidden-ref" style="display:none;">{{AnswerBannerHTML}}</span>
+<script>
+(function() {
+  document.documentElement.removeAttribute('data-sf-theme');
+  var itemId = "{{ItemID}}";
+  var instantGrade = false;
+  var ansRef = document.getElementById('ans-hidden-ref');
+  var ansBanner = ansRef ? ansRef.textContent : "";
+  try { sessionStorage.removeItem("pick_" + itemId); } catch(e) {}
+  var opts = document.querySelectorAll('.opt');
+  opts.forEach(function(el, idx) {
+    var lEl = el.querySelector('.opt-letter');
+    var letter = lEl ? lEl.textContent.replace(/[()\s]/g, '') : String.fromCharCode(65 + idx);
+    el.addEventListener('click', function() {
+      try { sessionStorage.setItem("pick_" + itemId, letter); } catch(e) {}
+      opts.forEach(function(o) { o.classList.remove('user-picked', 'correct', 'user-wrong'); });
+      if (instantGrade && ansBanner) {
+        var m = ansBanner.match(/Risposta corretta:\s*([A-E])/);
+        var corr = m ? m[1] : "";
+        opts.forEach(function(o) {
+          var olEl = o.querySelector('.opt-letter');
+          var ol = olEl ? olEl.textContent.replace(/[()\s]/g, '') : "";
+          if (ol === corr) o.classList.add('correct');
+        });
+        if (letter !== corr) el.classList.add('user-wrong');
+      } else {
+        el.classList.add('user-picked');
+      }
+    });
+  });
+})();
+</script>
+<script>
+(function() {
+  var canvas = document.querySelector('.sf-canvas');
+  var btn = document.getElementById('sf-theme-toggle');
+  if (!canvas || !btn) return;
+  function apply(dark) {
+    canvas.classList.toggle('sf-dark', dark);
+    btn.textContent = dark ? 'LIGHT' : 'DARK';
+    btn.style.background = dark ? '#18181b' : '#fef08a';
+    btn.style.color = dark ? '#fafafa' : '#111';
+    btn.style.borderColor = dark ? '#fafafa' : '#111';
+  }
+  var dark = false;
+  try { dark = localStorage.getItem('sf-theme') === 'dark'; } catch (e) {}
+  apply(dark);
+  btn.addEventListener('click', function() {
+    dark = !dark;
+    apply(dark);
+    try { localStorage.setItem('sf-theme', dark ? 'dark' : 'light'); } catch (e) {}
+  });
+})();
+</script>
