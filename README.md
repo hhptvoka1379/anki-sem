@@ -48,15 +48,39 @@ Deterministic computer-vision extraction, scan-verified scientific & OCR remedia
 
 ---
 
-## Running Full Rebuild, Verification & Theme Packaging
+## Quick Install, Theme Packaging & Safe Repo Cleanup (`git clone` -> Import -> Delete Repo)
+
+Every `.apkg` package is **100% self-contained** (all `6,948` cards, stylesheets, `DARK`/`LIGHT` toggle scripts, and all `8,127` embedded diagrams & page scans are copied directly into Anki's internal `collection.media` folder on import). Once imported into Anki, **you can safely delete the cloned repository folder completely**:
 
 ```bash
-# Rebuild dataset files, master .apkg, themed .apkg, 10 theme updaters, and audit CSVs:
+git clone <repo-url> anki-sem
+cd anki-sem
+
+# Optional: generate standalone full 6,948-card .apkg files for ALL 10 design systems
+# (100% pure Python 3 standard library — works with built-in macOS/Linux/Windows python3, NO pip install needed!):
+python3 output/themes/build_theme_apkg.py all
+
+# Now double-click whichever .apkg file(s) you want in Finder / File Explorer to import into Anki:
+#   - output/Semestre_Filtro_Complete.apkg                          (All-in-one: 00–10 top-right switcher + top-left DARK/LIGHT toggle)
+#   - output/themes/Semestre_Filtro_04_NeoBrutalist_Risoprint_Zine.apkg  (Standalone #04 Risoprint + top-left DARK/LIGHT toggle)
+#   - output/themes/Semestre_Filtro_01_...apkg .. 10_...apkg        (Any other standalone theme built above)
+#
+# Tip if updating an already-imported Note Type in Anki:
+#   Either enable "Update note types" in Anki's Import dialog, delete the old deck first,
+#   OR paste front.html / back.html / style.css directly from output/themes/templates/<theme>/ into Anki -> Browse -> Cards...
+
+cd ..
+rm -rf anki-sem
+```
+
+---
+
+## Running Full Rebuild & Automated Verification (`25 / 25` Gates)
+
+```bash
+# Rebuild dataset files, master .apkg, themed .apkg, 12 template bundles, 10 theme updaters, and audit CSVs:
 python3 rebuild_all.py
 
-# Run all automated structural, scientific, deduplication, branding, and pixel-level verification gates:
+# Run all 25 automated structural, scientific, deduplication, branding, template-tag, and pixel-level verification gates:
 python3 -m extractor.verify
-
-# Repackage Semestre_Filtro_Complete.apkg into any of the 10 standalone themed .apkg decks:
-python3 output/themes/build_theme_apkg.py 04
 ```

@@ -381,8 +381,10 @@ def run_verification(output_dir: Path = Path("/home/user/anki-sem/output")) -> D
         "passed": (
             'id="sf-theme-ui"' in master_qfmt
             and 'id="sf-theme-ui"' in master_afmt
-            and 'id="sf-dark-btn"' in master_qfmt
-            and 'id="sf-dark-btn"' in master_afmt
+            and 'id="sf-theme-toggle"' in master_qfmt
+            and 'id="sf-theme-toggle"' in master_afmt
+            and "localStorage.getItem('sf-theme')" in master_qfmt
+            and "localStorage.getItem('sf-theme')" in master_afmt
             and all(f'data-num="{n}"' in master_qfmt and f'data-num="{n}"' in master_afmt for n in expected_nums)
             and all(f'id="sf-t{n}"' in master_qfmt and f'id="sf-t{n}"' in master_afmt for n in expected_nums)
             and all(f'html[data-sf-theme="{n}"]' in master_css for n in expected_nums)
@@ -428,8 +430,11 @@ def run_verification(output_dir: Path = Path("/home/user/anki-sem/output")) -> D
                 and "#facc15" in m2_css
                 and 'class="sf-canvas"' in m2_qfmt
                 and 'class="sf-canvas"' in m2_afmt
-                and 'id="sf-mode-pill"' in m2_qfmt
-                and 'id="sf-mode-pill"' in m2_afmt
+                and 'id="sf-theme-toggle"' in m2_qfmt
+                and 'id="sf-theme-toggle"' in m2_afmt
+                and "localStorage.getItem('sf-theme')" in m2_qfmt
+                and "localStorage.getItem('sf-theme')" in m2_afmt
+                and "position: relative;" in m2_css
                 and ".sf-canvas.sf-dark" in m2_css
                 and "#18181b" in m2_css
                 and "#232329" in m2_css
@@ -460,8 +465,43 @@ def run_verification(output_dir: Path = Path("/home/user/anki-sem/output")) -> D
                 c3 = sqlite3.connect(str(Path(td3) / "collection.anki2"))
                 um_raw = c3.execute("SELECT models FROM col").fetchone()[0]
                 c3.close()
-                if "sf-theme-ui" in um_raw:
+                if "sf-theme-ui" in um_raw or "sf-theme-toggle" not in um_raw:
                     updaters_switcher_free = False
+
+    tpl_dirs = sorted(p for p in (output_dir / "themes" / "templates").glob("*") if p.is_dir())
+    tpl_failures = []
+    req_front_ph = {"{{QuestionNum}}", "{{FrontStemHTML}}", "{{FrontOptionsHTML}}"}
+    req_back_ph = {"{{QuestionNum}}", "{{BookPage}}", "{{BackStemHTML}}", "{{BackOptionsHTML}}", "{{AnswerBannerHTML}}"}
+    for td_item in tpl_dirs:
+        fh = (td_item / "front.html").read_text(encoding="utf-8")
+        bh = (td_item / "back.html").read_text(encoding="utf-8")
+        sc = (td_item / "style.css").read_text(encoding="utf-8")
+        ok_item = (
+            re.search(r'<div[^>]*class="sf-canvas[^"]*"[^>]*>\n<button id="sf-theme-toggle"', fh) is not None
+            and re.search(r'<div[^>]*class="sf-canvas[^"]*"[^>]*>\n<button id="sf-theme-toggle"', bh) is not None
+            and fh.count('id="sf-theme-toggle"') == 1
+            and bh.count('id="sf-theme-toggle"') == 1
+            and "localStorage.getItem('sf-theme')" in fh
+            and "localStorage.getItem('sf-theme')" in bh
+            and fh.count("<script>") == fh.count("</script>") >= 1
+            and bh.count("<script>") == bh.count("</script>") >= 1
+            and len(re.findall(r"<div\b", fh)) == fh.count("</div>")
+            and len(re.findall(r"<div\b", bh)) == bh.count("</div>")
+            and all(ph in fh for ph in req_front_ph)
+            and all(ph in bh for ph in req_back_ph)
+            and "position: relative;" in sc
+            and ".sf-canvas.sf-dark" in sc
+            and sc.count("{") == sc.count("}")
+            and (td_item.name == "00_default" or "pick_" in fh)
+        )
+        if not ok_item:
+            tpl_failures.append(td_item.name)
+
+    checks["all_12_theme_templates_tag_placeholder_and_dark_toggle_integrity"] = {
+        "passed": len(tpl_dirs) == 12 and len(tpl_failures) == 0,
+        "template_bundle_count": len(tpl_dirs),
+        "failed_bundles": tpl_failures,
+    }
 
     checks["standalone_risoprint_distinct_from_master_and_switcher_only_in_complete"] = {
         "passed": t04_ok and t04_isolated_and_switcher_free and updaters_switcher_free,

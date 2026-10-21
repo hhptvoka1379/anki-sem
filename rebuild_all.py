@@ -53,7 +53,7 @@ from extractor.stage4_export import (
     stable_anki_id,
 )
 
-MODEL_ID = 1134323212
+MODEL_ID = 1134323214
 PUB_RE = re.compile(r"vaedi[s]es|@di[s]es|edi[s]es", re.IGNORECASE)
 
 
@@ -193,7 +193,7 @@ def main() -> None:
 
         note = genanki.Note(
             model=model,
-            guid=genanki.guid_for("semestre-filtro-v4", item_id),
+            guid=genanki.guid_for("semestre-filtro-v5", item_id),
             fields=[
                 item_id,
                 r["subject"],
@@ -328,12 +328,35 @@ def main() -> None:
     _tmp_apkg.replace(apkg_complete)
     print(f"Wrote {apkg_complete} ({apkg_complete.stat().st_size / 1048576:.2f} MB) ({time.time()-t0:.1f}s)")
 
-    # 3. Build output/themes/* (all 10 standalone CSS files, Theme #04 full .apkg, all 10 ThemeUpdater_*.apkg, gallery HTML)
+    # 3. Build output/themes/* (all 10 standalone CSS files, all 12 standalone template bundles,
+    #    Theme #04 full .apkg, all 10 ThemeUpdater_*.apkg, gallery HTML)
+    from extractor.anki_themes import build_card_templates
+
     themes_dir = out_dir / "themes"
     css_dir = themes_dir / "css"
+    tpl_root = themes_dir / "templates"
     css_dir.mkdir(parents=True, exist_ok=True)
+    tpl_root.mkdir(parents=True, exist_ok=True)
+
+    # Export master_complete + 00_default standalone source files (front.html, back.html, style.css)
+    for b_slug, b_front, b_back, b_css in [
+        ("master_complete", master_qfmt, master_afmt, master_css),
+        ("00_default", FRONT_TMPL, BACK_TMPL, ANKI_CSS),
+    ]:
+        b_dir = tpl_root / b_slug
+        b_dir.mkdir(parents=True, exist_ok=True)
+        (b_dir / "front.html").write_text(b_front, encoding="utf-8")
+        (b_dir / "back.html").write_text(b_back, encoding="utf-8")
+        (b_dir / "style.css").write_text(b_css, encoding="utf-8")
+
     for tkey, tmeta in THEMES.items():
         (css_dir / f"{tkey}.css").write_text(tmeta["css"], encoding="utf-8")
+        tq, ta = build_card_templates(theme_key=tkey)
+        t_dir = tpl_root / tkey
+        t_dir.mkdir(parents=True, exist_ok=True)
+        (t_dir / "front.html").write_text(tq, encoding="utf-8")
+        (t_dir / "back.html").write_text(ta, encoding="utf-8")
+        (t_dir / "style.css").write_text(tmeta["css"], encoding="utf-8")
 
     theme04_key = next(k for k, th in THEMES.items() if th.get("num") == "04" or k.startswith("04"))
     theme04_apkg = themes_dir / "Semestre_Filtro_04_NeoBrutalist_Risoprint_Zine.apkg"
