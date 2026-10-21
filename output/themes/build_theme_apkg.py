@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Zero-dependency CLI tool to repackage Semestre_Filtro_EdiSES_Complete.apkg
+"""Zero-dependency CLI tool to repackage Semestre_Filtro_Complete.apkg
 with ANY of the 10 art-directed Anki design systems in ~0.7 seconds.
 
 Usage:
   python3 output/themes/build_theme_apkg.py            # Lists all 10 themes
-  python3 output/themes/build_theme_apkg.py 04         # Builds full standalone 7,078-card .apkg for #04
+  python3 output/themes/build_theme_apkg.py 04         # Builds full standalone 6,948-card .apkg for #04
   python3 output/themes/build_theme_apkg.py all        # Builds full standalone .apkg for all 10 themes
 """
 from __future__ import annotations
@@ -24,7 +24,7 @@ from extractor.anki_themes import (
 
 
 def main() -> None:
-    src = ROOT / "output" / "Semestre_Filtro_EdiSES_Complete.apkg"
+    src = ROOT / "output" / "Semestre_Filtro_Complete.apkg"
     out_dir = ROOT / "output" / "themes"
     args = [a.strip() for a in sys.argv[1:]]
 
@@ -54,7 +54,7 @@ def main() -> None:
             auto_open_scan=False,
         )
         mb = dest.stat().st_size / (1024 * 1024)
-        print(f"[{time.time()-t0:.2f}s] Built full 7,078-card deck -> {dest.relative_to(ROOT)} ({mb:.2f} MB)")
+        print(f"[{time.time()-t0:.2f}s] Built full 6,948-card deck -> {dest.relative_to(ROOT)} ({mb:.2f} MB)")
 
 
 if __name__ == "__main__":

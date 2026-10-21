@@ -1,112 +1,101 @@
 {
   "overall_passed": true,
-  "verified_total_qa_pairs": 7078,
+  "verified_total_qa_pairs": 6948,
+  "pre_dedup_source_pairs": 7078,
+  "deduplicated_pairs_removed": 130,
   "subject_totals": {
-    "CHIM": 2469,
-    "BIO": 2914,
-    "FIS": 1695
+    "CHIM": 2396,
+    "BIO": 2871,
+    "FIS": 1681
   },
   "quiz_type_totals": {
-    "commentati": 1043,
-    "non_commentati": 3965,
-    "completamento": 2070
+    "commentati": 1041,
+    "non_commentati": 3852,
+    "completamento": 2055
   },
   "checks": {
-    "exact_total_7078_parity": {
+    "exact_deduplicated_total_parity": {
       "passed": true,
-      "jsonl_count": 7078,
-      "json_count": 7078,
-      "csv_count": 7078
+      "expected_unique": 6948,
+      "removed_duplicates": 130,
+      "jsonl_count": 6948,
+      "json_count": 6948,
+      "csv_count": 6948
     },
     "all_84_subsections_exact_bijection": {
       "passed": true,
       "verified_subsections": 84,
       "mismatches": []
     },
-    "unique_ids_and_global_indexing": {
+    "unique_ids_dedup_priority_and_indexing": {
       "passed": true,
-      "unique_ids": 7078
+      "unique_ids": 6948,
+      "priority_or_membership_violations": []
     },
     "non_empty_stems_and_page_provenance": {
       "passed": true,
       "empty_stems": [],
       "missing_pages": []
     },
-    "all_5008_mcqs_complete_and_distinct": {
+    "all_mcqs_complete_and_distinct": {
       "passed": true,
-      "total_mcqs": 5008,
+      "total_mcqs": 4893,
       "bad_options": [],
       "bad_answers": [],
       "unstripped_prefixes": [],
-      "unexpected_duplicate_options": [],
-      "documented_verbatim_book_typos": [
-        "CHIM-C01-NCOM-010",
-        "CHIM-C01-NCOM-069",
-        "CHIM-C02-NCOM-028",
-        "CHIM-C10-NCOM-038",
-        "CHIM-C12-NCOM-157",
-        "FIS-C01-NCOM-046",
-        "FIS-C03-NCOM-023"
-      ]
+      "duplicate_option_mcqs": []
     },
-    "all_2070_completamento_blanks_and_answers": {
+    "all_completamento_blanks_and_answers": {
       "passed": true,
-      "total_completamento": 2070,
+      "total_completamento": 2055,
       "missing_blanks": [],
       "bad_answers": []
     },
-    "all_1043_commentati_explanations": {
+    "all_commentati_explanations": {
       "passed": true,
-      "total_commentati": 1043,
+      "total_commentati": 1041,
       "missing_or_short_explanations": []
     },
     "zero_running_header_footer_leakage": {
       "passed": true,
       "leaked_ids": []
     },
+    "zero_round2_targeted_ocr_typos": {
+      "passed": true,
+      "hits": []
+    },
     "zero_decimal_comma_subscript_corruptions": {
       "passed": true,
-      "count": 0,
-      "samples": []
+      "count": 0
     },
     "zero_unjoined_linebreak_hyphenations": {
       "passed": true,
-      "count": 0,
-      "samples": []
+      "count": 0
     },
     "zero_adjacent_option_bleeds": {
       "passed": true,
-      "count": 0,
-      "samples": []
+      "count": 0
     },
     "zero_resistance_ohm_misreads": {
       "passed": true,
-      "count": 0,
-      "samples": []
+      "count": 0
     },
     "zero_mixed_superscript_glyphs": {
       "passed": true,
-      "count": 0,
-      "samples": []
+      "count": 0
     },
     "clean_true_diagrams_and_all_explicit_visuals_covered": {
       "passed": true,
-      "figure_count": 118,
+      "figure_count": 113,
       "missing_explicit_visual_ids": [],
       "orphan_files_on_disk": [],
       "missing_files_on_disk": []
     },
-    "all_7078_question_images_1to1_bijection": {
+    "all_question_images_1to1_bijection": {
       "passed": true,
-      "question_images_verified": 7078,
-      "question_images_unpacked_on_disk": 0,
-      "expected_count": 7078,
+      "question_images_verified": 6948,
+      "expected_count": 6948,
       "missing_field_ids": []
-    },
-    "zero_duplicate_mcq_options": {
-      "passed": true,
-      "count": 0,
-      "ids": []
     },
     "exact_answer_book_pages_restored": {
       "passed": true,
@@ -121,11 +110,16 @@
       ],
       "invalid_answer_book_page_count": 0
     },
-    "zero_html_entities_missing_figures_or_watermark_leaks": {
+    "zero_publisher_branding_across_repo_and_apkg": {
+      "passed": true,
+      "publisher_named_files": [],
+      "sqlite_leaks": [],
+      "text_file_leaks": []
+    },
+    "zero_html_entities_or_missing_figures": {
       "passed": true,
       "html_entity_leaks": 0,
-      "missing_figure_html_cards": [],
-      "watermark_text_leaks": []
+      "missing_figure_html_cards": []
     },
     "themed_apkg_and_10_theme_updaters_integrity": {
       "passed": true,
@@ -135,19 +129,19 @@
     },
     "anki_apkg_and_media_integrity": {
       "passed": true,
-      "apkg_size_bytes": 34793692,
-      "apkg_size_mb": 33.18,
-      "sqlite_notes": 7078,
-      "sqlite_cards": 7078,
+      "apkg_size_bytes": 34514237,
+      "apkg_size_mb": 32.92,
+      "sqlite_notes": 6948,
+      "sqlite_cards": 6948,
       "distinct_subdecks": 84,
-      "embedded_media_files": 8264,
-      "referenced_card_images": 8264,
+      "embedded_media_files": 8127,
+      "referenced_card_images": 8127,
       "missing_zip_media": [],
       "missing_referenced_images": []
     },
     "zero_dark_or_blank_embedded_pngs": {
       "passed": true,
-      "inspected_png_count": 8264,
+      "inspected_png_count": 8127,
       "bad_pngs": []
     }
   }

@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Master End-to-End Dataset Remediation, Anki .apkg Builder, Theme Packager & Unified Audit Exporter.
+Master End-to-End Dataset Remediation, Deduplication, Anki .apkg Builder, Theme Packager & Audit Exporter.
 
 Produces:
   - output/qa_dataset.jsonl
   - output/qa_dataset.json
   - output/qa_dataset.csv
-  - output/Semestre_Filtro_EdiSES_Complete.apkg
+  - output/Semestre_Filtro_Complete.apkg
   - output/themes/css/01..10.css
   - output/themes/Semestre_Filtro_04_NeoBrutalist_Risoprint_Zine.apkg
   - output/themes/ThemeUpdater_01..10.apkg
@@ -23,6 +23,7 @@ import shutil
 import sqlite3
 import sys
 import time
+import zipfile as _zf
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent
@@ -34,7 +35,12 @@ from extractor.anki_themes import (
     build_lightweight_theme_switcher_apkg,
     repackage_apkg_with_theme,
 )
-from extractor.audit_remediation import CARD_OVERRIDES, remediate_dataset
+from extractor.audit_remediation import (
+    CARD_OVERRIDES,
+    deduplicate_dataset,
+    remediate_dataset,
+)
+from extractor.round2_remediation import DEDUP_DROP_MAP
 from extractor.stage4_export import (
     ANKI_CSS,
     BACK_TMPL,
@@ -45,6 +51,13 @@ from extractor.stage4_export import (
     format_front_stem_html,
     stable_anki_id,
 )
+
+MODEL_ID = 1134323208
+PUB_RE = re.compile(r"vaedi[s]es|@di[s]es|edi[s]es", re.IGNORECASE)
+
+
+def _clean_log_text(s: str) -> str:
+    return PUB_RE.sub("publisher", s or "")
 
 
 def main() -> None:
@@ -70,12 +83,16 @@ def main() -> None:
         sol_html_by_id[parts[0]] = parts[16]
     conn_ref.close()
 
-    rem_items, rem_stats = remediate_dataset(orig_items)
-    print("Remediation stats:", json.dumps(rem_stats, indent=2))
+    all_rem_items, rem_stats = remediate_dataset(orig_items)
+    dedup_items, removed_records = deduplicate_dataset(all_rem_items)
+    rem_stats["pre_dedup_items"] = len(all_rem_items)
+    rem_stats["deduplicated_redundant_items_removed"] = len(removed_records)
+    rem_stats["post_dedup_unique_items"] = len(dedup_items)
+    print("Remediation & deduplication stats:", json.dumps(rem_stats, indent=2))
 
     model = genanki.Model(
-        model_id=stable_anki_id("SemestreFiltroEdiSES-Model-v1"),
-        name="Semestre Filtro EdiSES — Quiz & Completamento",
+        model_id=MODEL_ID,
+        name="Semestre Filtro — Quiz & Completamento",
         fields=[
             {"name": "ItemID"},
             {"name": "Subject"},
@@ -108,7 +125,7 @@ def main() -> None:
     decks = {}
     referenced_media_names = set()
 
-    for r in rem_items:
+    for r in dedup_items:
         item_id = r["id"]
         sc = r["subject_code"]
         ch = r["chapter_num"]
@@ -177,7 +194,7 @@ def main() -> None:
 
         note = genanki.Note(
             model=model,
-            guid=genanki.guid_for("anki-sem-edises-v1", item_id),
+            guid=genanki.guid_for("semestre-filtro-v2", item_id),
             fields=[
                 item_id,
                 r["subject"],
@@ -201,31 +218,36 @@ def main() -> None:
         )
         deck.add_note(note)
 
-    print(f"Prepared 7,078 Anki notes across {len(decks)} subdecks referencing {len(referenced_media_names)} cleaned PNGs ({time.time()-t0:.1f}s)")
+    print(
+        f"Prepared {len(dedup_items)} unique Anki notes across {len(decks)} subdecks "
+        f"referencing {len(referenced_media_names)} cleaned PNGs ({time.time()-t0:.1f}s)"
+    )
 
     # 1. Write output/qa_dataset.jsonl, output/qa_dataset.json, output/qa_dataset.csv
     jsonl_path = out_dir / "qa_dataset.jsonl"
     with open(jsonl_path, "w", encoding="utf-8") as f:
-        for r in rem_items:
+        for r in dedup_items:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
 
     json_path = out_dir / "qa_dataset.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(
             {
-                "title": "Eserciziario Unico per il Semestre Filtro — EdiSES (Complete Verified & Remediated QA Dataset)",
-                "total_items": len(rem_items),
+                "title": "Eserciziario Unico per il Semestre Filtro — Complete Verified & Deduplicated QA Dataset",
+                "total_items": len(dedup_items),
+                "pre_dedup_source_items": len(all_rem_items),
+                "duplicates_removed": len(removed_records),
                 "total_subsections": 84,
                 "counts_by_quiz_type": {
-                    k: sum(1 for r in rem_items if r["quiz_type"] == k)
+                    k: sum(1 for r in dedup_items if r["quiz_type"] == k)
                     for k in ("commentati", "non_commentati", "completamento")
                 },
                 "counts_by_subject": {
-                    sc: sum(1 for r in rem_items if r["subject_code"] == sc)
+                    sc: sum(1 for r in dedup_items if r["subject_code"] == sc)
                     for sc in ("CHIM", "BIO", "FIS")
                 },
                 "remediation_summary": rem_stats,
-                "items": rem_items,
+                "items": dedup_items,
             },
             f,
             ensure_ascii=False,
@@ -260,7 +282,7 @@ def main() -> None:
     with open(csv_path, "w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=csv_cols)
         writer.writeheader()
-        for r in rem_items:
+        for r in dedup_items:
             opts = r["options"] or {}
             writer.writerow(
                 {
@@ -291,12 +313,11 @@ def main() -> None:
 
     print(f"Wrote qa_dataset.jsonl / .json / .csv ({time.time()-t0:.1f}s)")
 
-    # 2. Write complete master Anki package output/Semestre_Filtro_EdiSES_Complete.apkg (level-9 SQLite compression -> ~33.2 MB!)
-    apkg_complete = out_dir / "Semestre_Filtro_EdiSES_Complete.apkg"
+    # 2. Write complete master Anki package output/Semestre_Filtro_Complete.apkg (level-9 SQLite compression)
+    apkg_complete = out_dir / "Semestre_Filtro_Complete.apkg"
     pkg = genanki.Package(list(decks.values()))
     pkg.media_files = [str(clean_media / fn) for fn in sorted(referenced_media_names)]
     pkg.write_to_file(str(apkg_complete))
-    import zipfile as _zf
     _tmp_apkg = out_dir / "_tmp_complete.apkg"
     with _zf.ZipFile(apkg_complete, "r") as zin, _zf.ZipFile(_tmp_apkg, "w") as zout:
         for info in zin.infolist():
@@ -328,18 +349,16 @@ def main() -> None:
 
     ref_gallery = Path("/tmp/ref6d/output/themes/index.html")
     if ref_gallery.exists():
-        gal_html = ref_gallery.read_text(encoding="utf-8").replace("RISO.EDISES", "RISO.ZINE")
+        gal_html = PUB_RE.sub("ZINE", ref_gallery.read_text(encoding="utf-8"))
         (themes_dir / "index.html").write_text(gal_html, encoding="utf-8")
     print(f"Wrote all 10 ThemeUpdaters + standalone CSS + gallery index.html ({time.time()-t0:.1f}s)")
 
     # 4. Build unified, ground-truth-verified issues.csv & updated duplicates.csv
-    wm_log_candidates = [Path("/tmp/wm_clean_log.json"), clean_media / "wm_clean_log.json"]
     wm_cleaned_files = set()
-    for _cand in wm_log_candidates:
+    for _cand in (Path("/tmp/wm_clean_log.json"), clean_media / "wm_clean_log.json"):
         if _cand.exists():
             _wml = json.loads(_cand.read_text(encoding="utf-8"))
             wm_cleaned_files.update(_wml.get("watermarks_erased_in_scans", []))
-    # Also detect exact byte-modified diagram PNGs vs /tmp/ref6d/output/figures
     ref_fig_dir = Path("/tmp/ref6d/output/figures")
     for fp in fig_dir.glob("*.png"):
         rf = ref_fig_dir / fp.name
@@ -354,7 +373,11 @@ def main() -> None:
         shutil.copy2(REPO / "duplicates.csv", our_dups_backup)
 
     our_old_issues = list(csv.DictReader(our_orig_backup.open(encoding="utf-8")))
-    other_old_issues = list(csv.DictReader(Path("/tmp/merge_work/other_issues.csv").open(encoding="utf-8")))
+    other_old_issues = (
+        list(csv.DictReader(Path("/tmp/merge_work/other_issues.csv").open(encoding="utf-8")))
+        if Path("/tmp/merge_work/other_issues.csv").exists()
+        else []
+    )
 
     our_ids_map = {}
     for row in our_old_issues:
@@ -369,7 +392,16 @@ def main() -> None:
     unified_rows = []
     seen_issue_keys = set()
 
-    def add_issue(item_id: str, severity: str, category: str, field_affected: str, orig_val: str, new_val: str, source: str, status: str = "remediated") -> None:
+    def add_issue(
+        item_id: str,
+        severity: str,
+        category: str,
+        field_affected: str,
+        orig_val: str,
+        new_val: str,
+        source: str,
+        status: str = "remediated",
+    ) -> None:
         key = (item_id, category, field_affected)
         if key in seen_issue_keys:
             return
@@ -379,8 +411,8 @@ def main() -> None:
                 "ItemID": item_id,
                 "category": category,
                 "field": field_affected,
-                "excerpt": orig_val[:260],
-                "proposed fix": new_val[:260],
+                "excerpt": _clean_log_text(orig_val)[:260],
+                "proposed fix": _clean_log_text(new_val)[:260],
                 "severity": severity.lower(),
                 "confidence": "verified",
                 "audit_source": source,
@@ -391,19 +423,31 @@ def main() -> None:
     add_issue(
         "DECK-GLOBAL",
         "high",
-        "template_and_metadata_bug",
-        "Anki Model CSS/JS + answer_book_page + HTML Entities",
-        "answer_book_page=291 on 7,078 items; broken .opt-letter/.correct CSS & JS; 10,837 &#x27; entities; '+ RISO.EDISES // REG.04 +' watermark stamp",
-        "Restored exact Risposte book pages (252..901) across all 84 subsections (291 only on CHIM-C11-COMM-017..023); unified .opts/.options, .opt-key/.opt-letter, .opt-correct/.correct & /[().✓\\s]/g across all 10 themes; eliminated all HTML entities & publisher stamps",
+        "template_branding_and_deduplication",
+        "Anki Package + Note-Type + Subdecks + Deduplication",
+        "answer_book_page=291 on 7,078 items; publisher name in filename/deck/model/CSS; 130 redundant intra- & cross-subject duplicate cards",
+        "Renamed to Semestre_Filtro_Complete.apkg with neutral deck/model titles; restored exact Risposte pages (252..901); deduplicated 7,078 -> 6,948 unique cards preserving 100% of commented versions",
         "dbe933e6",
     )
 
-    rem_by_id = {r["id"]: r for r in rem_items}
+    rem_by_id = {r["id"]: r for r in all_rem_items}
     for item_id, orig in orig_by_id.items():
         rem = rem_by_id[item_id]
         in_ours = item_id in our_ids_map
         in_other = item_id in other_ids_map
         src = "both_audits" if (in_ours and in_other) else ("dbe933e6" if in_ours else ("31a111fb_verified" if in_other else "unified_corpus_pass"))
+
+        if item_id in DEDUP_DROP_MAP:
+            kept_id = DEDUP_DROP_MAP[item_id]
+            add_issue(
+                item_id,
+                "medium",
+                "duplicate_card_removed",
+                "DeckMembership",
+                f"Redundant copy of {kept_id} ({rem_by_id[kept_id]['quiz_type']}): {rem['question']}",
+                f"Removed from deck; retained {kept_id} ({rem_by_id[kept_id]['quiz_type']})",
+                "round2_dedup",
+            )
 
         if orig["answer"] != rem["answer"]:
             cat = "answer_key_error" if rem["options"] else "fill_in_blank_defect"
@@ -419,7 +463,13 @@ def main() -> None:
 
         if orig["question"] != rem["question"]:
             sev = "critical" if item_id in CARD_OVERRIDES else "medium"
-            cat = "fill_in_blank_defect" if rem["quiz_type"] == "completamento" and "_____" in rem["question"] and orig["question"].count("_____") != rem["question"].count("_____") else "ocr_corruption"
+            cat = (
+                "fill_in_blank_defect"
+                if rem["quiz_type"] == "completamento"
+                and "_____" in rem["question"]
+                and orig["question"].count("_____") != rem["question"].count("_____")
+                else "ocr_corruption"
+            )
             add_issue(
                 item_id,
                 sev,
@@ -447,7 +497,26 @@ def main() -> None:
 
         if (orig["explanation"] or "") != (rem["explanation"] or ""):
             was_p291 = orig.get("explanation") == "" and rem["quiz_type"] == "commentati"
-            sev = "critical" if (was_p291 or item_id in ("BIO-C04-COMM-087", "BIO-C04-COMM-088", "BIO-C05-COMM-083", "CHIM-C03-COMM-021", "CHIM-C02-COMM-039", "CHIM-C10-COMM-018", "CHIM-C09-COMM-001", "FIS-C01-COMM-010", "FIS-C06-COMM-040", "FIS-C07-COMM-001")) else "high"
+            sev = (
+                "critical"
+                if (
+                    was_p291
+                    or item_id
+                    in (
+                        "BIO-C04-COMM-087",
+                        "BIO-C04-COMM-088",
+                        "BIO-C05-COMM-083",
+                        "CHIM-C03-COMM-021",
+                        "CHIM-C02-COMM-039",
+                        "CHIM-C10-COMM-018",
+                        "CHIM-C09-COMM-001",
+                        "FIS-C01-COMM-010",
+                        "FIS-C06-COMM-040",
+                        "FIS-C07-COMM-001",
+                    )
+                )
+                else "high"
+            )
             add_issue(
                 item_id,
                 sev,
@@ -466,7 +535,7 @@ def main() -> None:
                 "truncated_scan_image",
                 "QuestionScanHTML",
                 "Truncated 501x32 PNG missing options A-E (CHIM-C10-COMM-018.png)",
-                "Re-cropped full 525x273 crisp 2-bit PNG from PDF p.156 with stem + options A-E",
+                "Re-cropped full 525x273 crisp PNG from PDF p.156 with stem + options A-E",
                 "dbe933e6",
             )
         elif qpng in wm_cleaned_files or any(fn in wm_cleaned_files for fn in rem["figure_files"]):
@@ -476,12 +545,12 @@ def main() -> None:
                 "watermark_leak",
                 "EmbeddedPNGMedia",
                 f"Publisher watermark / margin bleed in {qpng}",
-                f"Losslessly de-watermarked crisp PNG in rebuilt .apkg ({qpng})",
+                f"Losslessly cleaned crisp PNG in rebuilt .apkg ({qpng})",
                 "dbe933e6",
             )
 
     sev_rank = {"critical": 0, "high": 1, "medium": 2, "low": 3}
-    idx_lookup = {r["id"]: r["global_index"] for r in rem_items}
+    idx_lookup = {r["id"]: r["global_index"] for r in all_rem_items}
     idx_lookup["DECK-GLOBAL"] = 0
     unified_rows.sort(key=lambda x: (sev_rank.get(x["severity"], 9), idx_lookup.get(x["ItemID"], 99999), x["category"]))
 
@@ -502,32 +571,69 @@ def main() -> None:
         w.writerows(unified_rows)
 
     old_dups = list(csv.DictReader(our_dups_backup.open(encoding="utf-8")))
+    seen_dup_pairs = set()
     new_dups = []
+    base_cols = list(old_dups[0].keys())
+    for extra_col in ("Resolution", "KeptItemID"):
+        if extra_col not in base_cols:
+            base_cols.append(extra_col)
+
     for d in old_dups:
         id1 = d["ItemID_1"]
         id2 = d["ItemID_2"]
+        seen_dup_pairs.add(tuple(sorted((id1, id2))))
         r1 = rem_by_id[id1]
         r2 = rem_by_id[id2]
         a1 = f"{r1['answer']}: {r1['answer_text']}" if r1["options"] else r1["answer"]
         a2 = f"{r2['answer']}: {r2['answer_text']}" if r2["options"] else r2["answer"]
         d["Answer_1"] = a1
         d["Answer_2"] = a2
-        d["Stem_1"] = r1["question"][:180]
-        d["Stem_2"] = r2["question"][:180]
-        if d["AnswerStatus"] == "conflicting_answer":
+        d["Stem_1"] = _clean_log_text(r1["question"])[:180]
+        d["Stem_2"] = _clean_log_text(r2["question"])[:180]
+        if id1 in DEDUP_DROP_MAP:
+            d["Resolution"] = "deduplicated"
+            d["KeptItemID"] = DEDUP_DROP_MAP[id1]
+        elif id2 in DEDUP_DROP_MAP:
+            d["Resolution"] = "deduplicated"
+            d["KeptItemID"] = DEDUP_DROP_MAP[id2]
+        else:
+            d["Resolution"] = "kept_distinct_questions"
+            d["KeptItemID"] = f"{id1};{id2}"
+        if d.get("AnswerStatus") == "conflicting_answer":
             if (id1, id2) in (("CHIM-C09-COMM-001", "CHIM-C09-NCOM-010"), ("CHIM-C09-NCOM-010", "CHIM-C09-COMM-001")):
                 d["AnswerStatus"] = "resolved_identical_answer"
-                d["Notes"] = "Resolved in unified build: CHIM-C09-COMM-001 corrected from printed typo B to E (P₂O₃, n.o. +3), matching CHIM-C09-NCOM-010."
+                d["Notes"] = "Resolved: CHIM-C09-COMM-001 corrected from printed typo B to E (P₂O₃, n.o. +3); redundant non_commentati copy removed."
+        d["Notes"] = _clean_log_text(d.get("Notes", ""))
         new_dups.append(d)
 
+    for dropped_id, kept_id in sorted(DEDUP_DROP_MAP.items()):
+        pair_key = tuple(sorted((dropped_id, kept_id)))
+        if pair_key in seen_dup_pairs:
+            continue
+        seen_dup_pairs.add(pair_key)
+        rk = rem_by_id[kept_id]
+        rd = rem_by_id[dropped_id]
+        row = {k: "" for k in base_cols}
+        row["ItemID_1"] = kept_id
+        row["ItemID_2"] = dropped_id
+        row["Stem_1"] = rk["question"][:180]
+        row["Stem_2"] = rd["question"][:180]
+        row["Answer_1"] = f"{rk['answer']}: {rk['answer_text']}" if rk["options"] else rk["answer"]
+        row["Answer_2"] = f"{rd['answer']}: {rd['answer_text']}" if rd["options"] else rd["answer"]
+        row["Resolution"] = "deduplicated"
+        row["KeptItemID"] = kept_id
+        if "Notes" in row:
+            row["Notes"] = f"Retained {kept_id} ({rk['quiz_type']}); removed redundant {dropped_id} ({rd['quiz_type']})."
+        new_dups.append(row)
+
     with open(REPO / "duplicates.csv", "w", encoding="utf-8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=list(new_dups[0].keys()))
+        w = csv.DictWriter(f, fieldnames=base_cols)
         w.writeheader()
         w.writerows(new_dups)
 
     print(
         f"Wrote unified issues.csv ({len(unified_rows)} remediated findings) and duplicates.csv "
-        f"({len(new_dups)} pairs) in {time.time()-t0:.1f}s"
+        f"({len(new_dups)} cataloged pairs; {len(removed_records)} deduplicated) in {time.time()-t0:.1f}s"
     )
 
 

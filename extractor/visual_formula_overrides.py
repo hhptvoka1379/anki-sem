@@ -97,7 +97,7 @@ VISUAL_MCQ_OVERRIDES: dict[tuple[str, int, str, int], dict] = {
         },
     },
     ("CHIM", 2, "non_commentati", 28): {
-        "opts": {"A": "6", "B": "2", "C": "4", "D": "6", "E": "8"},  # Verbatim EdiSES typo on bp.30: A. 6 and D. 6
+        "opts": {"A": "6", "B": "2", "C": "4", "D": "6", "E": "8"},  # Verbatim printed typo on bp.30: A. 6 and D. 6
     },
     ("CHIM", 2, "non_commentati", 31): {
         "q": "Qual è la configurazione elettronica dell'elemento X che ha numero atomico 16?",

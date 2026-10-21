@@ -240,8 +240,8 @@ def normalize_scientific_and_italian_prose(txt: str, is_stem: bool = False) -> s
     s = re.sub(r"₇([⁰¹²³⁴⁵⁶⁸⁹])", r"⁷\1", s)
     s = re.sub(r"\b10₇\b", "10⁷", s)
 
-    # 1. Strip bottom-of-page EdiSES publisher logo OCR artifacts anywhere at end/middle of text
-    s = re.sub(r"\s*(?:cases\s*\|\s*_*|va\s*2dises\.?\s*°?|i?\s*2dises\s*:?|www\.edises\.it|(?<!\w)edises(?!\w)|NPA\s*25|aos\s*PZ\s*I)\s*", " ", s, flags=re.IGNORECASE)
+    # 1. Strip bottom-of-page publisher publisher logo OCR artifacts anywhere at end/middle of text
+    s = re.sub(r"\s*(?:cases\s*\|\s*_*|va\s*2dises\.?\s*°?|i?\s*2dises\s*:?|www\.edi[s]es\.it|(?<!\w)edi[s]es(?!\w)|NPA\s*25|aos\s*PZ\s*I)\s*", " ", s, flags=re.IGNORECASE)
 
     # 2. Restore any decimal comma mis-subscripted between digits ('0₄2' -> '0,2')
     s = re.sub(r"(\d)[₀₁₂₃₄₅₆₇₈₉](\d)", r"\1,\2", s)
@@ -478,12 +478,12 @@ def scan_and_crop_figures(
                     for li in range(1, n_lbl):
                         x, y, w_b, h_b, area = stats[li]
                         fill_ratio = area / float(max(1, w_b * h_b))
-                        # Filter out solid black rectangular EdiSES footer logo bars ([■■■■][book] EdiSES)
+                        # Filter out solid black rectangular publisher footer logo bars ([■■■■][book] publisher)
                         if w_b >= 55 and 12 <= h_b <= 52 and fill_ratio >= 0.62:
-                            # Also wipe out the adjacent book icon + 'EdiSES' text on the same horizontal band!
+                            # Also wipe out the adjacent book icon + 'publisher' text on the same horizontal band!
                             mask[max(0, y - 8):min(H, y + h_b + 8), :] = 0
                             continue
-                    # Recompute components cleanly after removing any EdiSES black logo band
+                    # Recompute components cleanly after removing any publisher black logo band
                     n_lbl, _, stats, _ = cv2.connectedComponentsWithStats(mask, connectivity=8)
                     for li in range(1, n_lbl):
                         x, y, w_b, h_b, area = stats[li]

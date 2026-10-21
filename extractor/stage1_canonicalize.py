@@ -14,7 +14,7 @@ Handles every forensic anomaly present in the raw PDF:
      (PDF p. 121, 131, 132, 157, 166, 192, 227, 308 -> >0.5pt gap).
   4. Fixes reversed page order at the end of Biologia answers (PDF p.666 <-> PDF p.667 => Book 665 -> 666).
   5. Crops iOS reader chrome on uncropped screenshot PDF p.866 and removes outer border frames on p.670..901.
-  6. Bottom-up EdiSES footer detection & micro-sliver-safe running header stripping (never truncates body lines).
+  6. Bottom-up publisher footer detection & micro-sliver-safe running header stripping (never truncates body lines).
 """
 
 from __future__ import annotations
@@ -153,7 +153,7 @@ def _strip_frame_and_ios_chrome(arr: np.ndarray, pdf_pno: int) -> np.ndarray:
 
 
 def render_clean_p669(doc: pymupdf.Document, dpi: int = 220) -> Tuple[np.ndarray, dict]:
-    """Reconstruct PDF page 669 cleanly from EdiSES vector fonts only (0% Apple Pencil / Scribble)."""
+    """Reconstruct PDF page 669 cleanly from publisher vector fonts only (0% Apple Pencil / Scribble)."""
     src = doc[668]
     raw_dict = src.get_text("dict")
     out_doc = pymupdf.open()
@@ -205,12 +205,12 @@ def render_clean_p669(doc: pymupdf.Document, dpi: int = 220) -> Tuple[np.ndarray
 
 
 def detect_banners_header_footer(arr: np.ndarray) -> Tuple[int, int, List[Tuple[int, int]]]:
-    """Detect solid dark section banners + strip ONLY genuine top running header & bottom EdiSES footer.
+    """Detect solid dark section banners + strip ONLY genuine top running header & bottom publisher footer.
 
     Critical invariant:
       - Footer strip NEVER cuts body content lines (e.g. double-spaced 'completamento' items near y ~ 0.88*h).
         It inspects ONLY the single bottom-most horizontal ink band (`bot_bands[-1]`) near the bottom edge
-        and requires the solid black EdiSES corner bar (or wide bottom-margin isolation >= 72px).
+        and requires the solid black publisher corner bar (or wide bottom-margin isolation >= 72px).
       - Header strip skips micro-border slivers (< 8px tall at top edge) and removes single-line running headers
         cleanly across both full-height and partial-height pages.
     """
@@ -228,7 +228,7 @@ def detect_banners_header_footer(arr: np.ndarray) -> Tuple[int, int, List[Tuple[
             if bh >= max(18, int(h * 0.025)) and int(grp[0]) < int(h * 0.85):
                 banner_bands.append((int(grp[0]), int(grp[-1])))
 
-    # 2. Bottom-up EdiSES footer strip: inspect ONLY the single bottom-most ink band on the page!
+    # 2. Bottom-up publisher footer strip: inspect ONLY the single bottom-most ink band on the page!
     body_y1 = h
     bot_scan_top = int(h * 0.80)
     bot_ink_rows = np.where(row_ink_pixels[bot_scan_top:] > 4)[0]
@@ -254,7 +254,7 @@ def detect_banners_header_footer(arr: np.ndarray) -> Tuple[int, int, List[Tuple[
                     gap_above += 1
                 else:
                     break
-            # Genuine EdiSES footer ALWAYS has the solid black corner bar + whitespace gap above it
+            # Genuine publisher footer ALWAYS has the solid black corner bar + whitespace gap above it
             if fh <= 64 and fy0 > int(h * 0.86) and has_solid_bar and gap_above >= 14:
                 body_y1 = fy0 - 4
 

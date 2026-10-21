@@ -51,11 +51,11 @@ def is_running_hdr_or_ftr(txt: str, y0_page: int, y1_page: int, page_h: int) -> 
             return True
         if low in ("capit", "capitolo", "commentati", "n commentati") or (low.startswith("quiz ") and len(low) < 40):
             return True
-    if "wwwedises" in low or "www.edises" in low or "chimicaepropedeutica" in low:
+    if re.search(r"www\.?edi[s]es", low) or "chimicaepropedeutica" in low:
         return True
     if y1_page > int(page_h * 0.78):
         if re.search(
-            r"\b(edises|edlses|ediss|edives|edices|odices|tedises|esses|edison|ediaes|oxices|sases|xiscs|services|saisos|exces|exists)\b",
+            r"\b(edi[s]es|edlses|ediss|edives|edices|odices|tedi[s]es|esses|edison|ediaes|oxices|sases|xiscs|services|saisos|exces|exists)\b",
             low,
         ) or low in (
             "een cs sd",

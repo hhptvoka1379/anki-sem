@@ -1,6 +1,6 @@
-# Semestre Filtro — Unified Verified QA Dataset & Anki Deck (`7,078` Cards)
+# Semestre Filtro — Verified & Deduplicated QA Dataset & Multi-Theme Anki Deck (`6,948` Unique Cards)
 
-Deterministic computer-vision extraction, dual-audit scientific & OCR remediation, and multi-theme Anki `.apkg` packaging pipeline for **`Eserciziario Unico per il Semestre Filtro`** (*Chimica e Propedeutica Biochimica, Biologia e Genetica, Fisica* — 902 PDF pages).
+Deterministic computer-vision extraction, scan-verified scientific & OCR remediation, intra- and cross-subject deduplication, and multi-theme Anki `.apkg` packaging pipeline for **`Eserciziario Unico per il Semestre Filtro`** (*Chimica e Propedeutica Biochimica, Biologia e Genetica, Fisica* — 902 PDF pages).
 
 ---
 
@@ -8,26 +8,28 @@ Deterministic computer-vision extraction, dual-audit scientific & OCR remediatio
 
 | Artifact | Description | Verified Metric |
 |---|---|---|
-| `output/Semestre_Filtro_EdiSES_Complete.apkg` | Master light/dark-mode Anki package across **84 hierarchical subdecks** (`Materia::Capitolo::Tipo`) embedding **all `7,078` cleaned question scans + `118` lossless de-watermarked diagrams + `1,068` commentary scans** | **`7,078` notes / `7,078` cards (`33.18 MB`, `8,264` verified white-paper PNGs)** |
-| `output/themes/Semestre_Filtro_04_NeoBrutalist_Risoprint_Zine.apkg` | Complete standalone themed `7,078`-card Anki deck with unified CSS/JS option & badge selectors (`RISO.ZINE // REG.04`) | **`7,078` notes / `7,078` cards (`33.18 MB`, `8,264` PNGs)** |
+| `output/Semestre_Filtro_Complete.apkg` | Master light/dark-mode Anki package across **84 hierarchical subdecks** (`Semestre Filtro::Materia::Capitolo::Tipo`) embedding **all `6,948` cleaned question scans + `113` lossless de-watermarked diagrams + commentary scans** | **`6,948` notes / `6,948` cards (`84` subdecks, `0` publisher branding leaks)** |
+| `output/themes/Semestre_Filtro_04_NeoBrutalist_Risoprint_Zine.apkg` | Complete standalone themed `6,948`-card Anki deck with unified CSS/JS option & badge selectors (`RISO.ZINE // REG.04`) | **`6,948` notes / `6,948` cards** |
 | `output/themes/ThemeUpdater_01..10.apkg` & `output/themes/css/*.css` | Instant ~15 KB Anki Note-Type Theme Updaters + standalone CSS stylesheets across all **10 art-directed design systems** + interactive `output/themes/index.html` preview gallery | **`10 / 10` themes & updaters verified** |
-| `output/figures/*.png` | Losslessly de-watermarked genuine inline diagrams (graphs, circuits, pedigrees, cell stages, chemical structures, vectors, tables — `100%` of explicit visual stems populated in `FigureHTML`) | **`118` crisp diagrams (`0` missing `FigureHTML`, `0` orphan/dark PNGs)** |
-| `output/qa_dataset.json` | Full structured UTF-8 JSON dataset with chapter metadata, exact restored `answer_book_page` (`252..901`), options, answers, explanations, and remediation summary | **`7,078` items across `84` subsections** |
-| `output/qa_dataset.jsonl` | Complete UTF-8 JSON Lines dataset (`1` JSON object per verified QA pair, `100.0%` 1-to-1 `question_images/<ID>.png` bijection) | **`7,078` rows** |
-| `output/qa_dataset.csv` | Flat UTF-8 CSV table for spreadsheet / `pandas` inspection | **`7,078` records (`7,079` lines incl. header)** |
-| `output/verification_report.json` | Automated structural, text, formula, duplicate-option, provenance page, HTML-entity, watermark, and pixel-level verification report | **`21 / 21` checks `PASS`** |
-| `issues.csv` & `duplicates.csv` | Unified, ground-truth-verified audit log merging both independent deck audits (`866` remediated item/field findings across `699` cards + `7,071` restored `answer_book_page` records; `344` cataloged duplicate pairs with all conflicts resolved) | **`100%` verified & remediated** |
+| `output/figures/*.png` | Losslessly de-watermarked inline diagrams (graphs, circuits, pedigrees, cell stages, chemical structures, vectors, tables — `100%` of explicit visual stems populated in `FigureHTML`) | **`113` crisp diagrams (`0` missing `FigureHTML`, `0` orphan/dark PNGs)** |
+| `output/qa_dataset.json` | Full structured UTF-8 JSON dataset with chapter metadata, exact restored `answer_book_page` (`252..901`), options, answers, explanations, and remediation/deduplication summary | **`6,948` unique items (`130` exact duplicates removed from `7,078` source items)** |
+| `output/qa_dataset.jsonl` | Complete UTF-8 JSON Lines dataset (`1` JSON object per verified unique QA pair, `100.0%` 1-to-1 `question_images/<ID>.png` bijection) | **`6,948` rows** |
+| `output/qa_dataset.csv` | Flat UTF-8 CSV table for spreadsheet / `pandas` inspection | **`6,948` records (`6,949` lines incl. header)** |
+| `output/verification_report.json` | Automated structural, text, formula, deduplication, provenance page, HTML-entity, branding, and pixel-level verification report | **`22 / 22` checks `PASS`** |
+| `issues.csv` & `duplicates.csv` | Unified ground-truth audit log documenting every remediated text/key/image finding plus every deduplicated pair vs. retained distinct shared-stem question | **`100%` scan-verified & remediated** |
 
 ---
 
-## Exact Breakdown by Subject & Quiz Type
+## Exact Breakdown by Subject & Quiz Type (`6,948` Unique Cards)
 
-| Subject (`subject_code`) | Chapters | `Quiz commentati` | `Quiz non commentati` | `Quiz a completamento` | **Total QA Pairs** |
+| Subject (`subject_code`) | Chapters | `Quiz commentati` | `Quiz non commentati` | `Quiz a completamento` | **Unique Cards** *(Source before dedup)* |
 |---|---:|---:|---:|---:|---:|
-| **Chimica e Propedeutica Biochimica (`CHIM`)** | 13 | 329 | 1,547 | 593 | **2,469** |
-| **Biologia (`BIO`)** | 7 | 494 | 1,577 | 843 | **2,914** |
-| **Fisica (`FIS`)** | 8 | 220 | 841 | 634 | **1,695** |
-| **Grand Total** | **28 (`84` subdecks)** | **1,043** | **3,965** | **2,070** | **7,078** |
+| **Chimica e Propedeutica Biochimica (`CHIM`)** | 13 | 327 | 1,490 | 579 | **`2,396`** *(2,469; −73 redundant copies)* |
+| **Biologia (`BIO`)** | 7 | 494 | 1,535 | 842 | **`2,871`** *(2,914; −43 redundant copies)* |
+| **Fisica (`FIS`)** | 8 | 220 | 827 | 634 | **`1,681`** *(1,695; −14 redundant copies)* |
+| **Grand Total** | **28 (`84` subdecks)** | **`1,041`** | **`3,852`** | **`2,055`** | **`6,948`** *(7,078; −130 redundant copies)* |
+
+> **Deduplication priority guarantee:** Across all `130` intra-subject and cross-subject duplicate pairs removed (`CHIM`, `BIO`, and `FIS`), **100% (`1,041 / 1,041`)** of unique step-by-step `Quiz commentati` explanations are retained (`commentati > non_commentati > completamento`), while genuinely distinct questions sharing short stems (e.g., *"Il fruttosio è:"*, *"La cromatina è:"*, *"I mitocondri sono:"*, *"L'apparato del Golgi:"*) are preserved intact.
 
 ---
 
@@ -36,22 +38,25 @@ Deterministic computer-vision extraction, dual-audit scientific & OCR remediatio
 1. **`stage1_canonicalize.py` — Canonical Page De-duplication & Vector Span Extraction**
    - Reconstructs `894` unannotated canonical book pages (`bp_003`–`bp_901`) from raw PDF XObjects, strips annotations/watermarks/headers, resolves split pages and 8 two-page spreads, fixes swapped pages `666 <-> 667`, and extracts native vector typography on PDF p. `669`.
 2. **`ocr_cache.py` & `stage2_answers.py` — Multi-Engine Answer-Key & Commentary Extraction**
-   - Extracts all `84` `Risposte` subsections (`1,043` `commentati`, `3,965` `non_commentati`, `2,070` `completamento`) and reconstructs missing source PDF page `291` (`CHIM-C11-COMM-017..023`).
+   - Extracts all `84` `Risposte` subsections (`7,078` source items) and reconstructs missing source PDF page `291` (`CHIM-C11-COMM-017..023`).
 3. **`stage3_questions.py`, `quality_refiner.py` & `visual_formula_overrides.py` — Question Alignment, Scientific Lexicon & Diagram Extraction**
-   - Aligns every subsection monotonically, crops `118` genuine inline diagrams cleanly into `output/figures/`, and applies visual formula transcriptions.
-4. **`audit_remediation.py` — Unified Dual-Audit Remediation Engine**
-   - Fixes all verified answer-key errors (`CHIM-C09-COMM-001`, `CHIM-C12-NCOM-289`, `CHIM-C07-NCOM-010`, `FIS-C06-NCOM-133`, `FIS-C06-NCOM-150`, plus `35` `completamento` answers), splits wrapped stems out of Option A (`CHIM-C07-COMM-008`, `CHIM-C07-NCOM-005`, `CHIM-C09-NCOM-058`, `CHIM-C12-NCOM-195`, `CHIM-C11-NCOM-036`, `FIS-C06-NCOM-123`), deduplicates all `8` duplicate-option MCQs (`0 / 5,008` remaining), replaces shifted/wrong/missing explanations, restores `μF`/`μC` vs true `pF`/`pC` capacitance/charge units from original scans, repairs chemical subscripts and physics exponents, removes leaked headers/watermarks, and restores exact printed `answer_book_page` (`252..901`) across all `84` subsections.
-5. **`stage4_export.py`, `anki_themes.py` & `verify.py` — Multi-Theme Anki Packaging & 21-Gate Verification**
-   - Exports `qa_dataset.{json,jsonl,csv}`, `Semestre_Filtro_EdiSES_Complete.apkg`, all `10` Anki themes (`Semestre_Filtro_04_NeoBrutalist_Risoprint_Zine.apkg` + `ThemeUpdater_01..10.apkg`), and enforces **21 automated structural, scientific, provenance, HTML, CSS/JS, and pixel-level verification gates**.
+   - Aligns every subsection monotonically, crops genuine inline diagrams cleanly into `output/figures/`, and applies visual formula transcriptions.
+4. **`audit_remediation.py`, `scan_verified_overrides.py` & `round2_remediation.py` — Scan-Verified Remediation & Deduplication Engine**
+   - Fixes all verified answer-key errors, chemical structural formulas (`-CH₂-`, `-CHO`, `-COOH`, `-OH`, `K₂Cr₂O₇`, `KMnO₄`, `CH₃CH₂OCH₂CH₃`), Greek biological notation (`α`/`β`/`γ`/`σ`, `ΔG`), physics units/exponents, OCR word splits/merges (`ossidrile`, `Usa la circolazione sanguigna`, `a temperatura costante`, `Il logaritmo`, `La concentrazione`, `ossidrilionica`), mid-card running headers in PNG scans, publisher watermarks/branding, and `130` exact intra- & cross-subject duplicate cards (`7,078 -> 6,948`).
+5. **`stage4_export.py`, `anki_themes.py` & `verify.py` — Multi-Theme Anki Packaging & Automated Verification**
+   - Exports `qa_dataset.{json,jsonl,csv}`, `Semestre_Filtro_Complete.apkg`, all `10` Anki themes (`Semestre_Filtro_04_NeoBrutalist_Risoprint_Zine.apkg` + `ThemeUpdater_01..10.apkg`), and enforces **all 22 automated verification gates**.
 
 ---
 
-## Running Verification & Theme Packaging
+## Running Full Rebuild, Verification & Theme Packaging
 
 ```bash
-# Run all 21 structural, content, provenance, CSS/JS, and pixel-level verification gates:
+# Rebuild dataset files, master .apkg, themed .apkg, 10 theme updaters, and audit CSVs:
+python3 rebuild_all.py
+
+# Run all automated structural, scientific, deduplication, branding, and pixel-level verification gates:
 python3 -m extractor.verify
 
-# Repackage the master .apkg into any of the 10 standalone themed .apkg decks:
+# Repackage Semestre_Filtro_Complete.apkg into any of the 10 standalone themed .apkg decks:
 python3 output/themes/build_theme_apkg.py 04
 ```

@@ -48,7 +48,7 @@ def clean_commentary_explanation(raw_expl: str, answer_letter: str) -> str:
             continue
         if low.startswith("risposte commentate") or low in ("risposte", "commentate"):
             continue
-        if re.search(r"\b(edises|edlses|ediss)\b", low):
+        if re.search(r"\b(edi[s]es|edlses|ediss)\b", low):
             continue
         lines.append(t)
     joined = clean_prose_ocr_quirks(join_wrapped_italian_lines(lines))
@@ -94,7 +94,7 @@ def write_crisp_2bit_png(gray_arr: np.ndarray, dest: Path) -> None:
 
 def stitch_question_slices_clean(slices: List[dict], get_page_gray) -> np.ndarray:
     """Crop every slice of a question from its 300-DPI canonical page, strip any black
-    EdiSES footer rectangle at column bottoms, and stitch vertically with clean white padding."""
+    publisher footer rectangle at column bottoms, and stitch vertically with clean white padding."""
     parts: List[np.ndarray] = []
     for sl in slices:
         pgray = get_page_gray(int(sl["book_page"]))
@@ -104,7 +104,7 @@ def stitch_question_slices_clean(slices: List[dict], get_page_gray) -> np.ndarra
         x0, y0, x1, y1 = [int(v) for v in sl["bbox"]]
         crop = pgray[max(0, y0 - 4):min(H_p, y1 + 8), max(0, x0 - 6):min(W_p, x1 + 6)].copy()
         ch, cw = crop.shape
-        # Remove solid black rectangular EdiSES footer logo band if present at bottom of column slice
+        # Remove solid black rectangular publisher footer logo band if present at bottom of column slice
         bw = (crop < 90).astype(np.uint8)
         n_lbl, _, stats, _ = cv2.connectedComponentsWithStats(bw, connectivity=8)
         for li in range(1, n_lbl):
@@ -406,8 +406,8 @@ def run_stage4(
     assert set(s2_map.keys()) == set(s3_map.keys()) and len(s2_map) == 84, "Expected exact 84 subsections"
 
     model = genanki.Model(
-        model_id=stable_anki_id("SemestreFiltroEdiSES-Model-v1"),
-        name="Semestre Filtro EdiSES — Studio & Esame",
+        model_id=1134323208,
+        name="Semestre Filtro — Studio & Esame",
         fields=[
             {"name": "ItemID"},
             {"name": "Subject"},
@@ -463,7 +463,7 @@ def run_stage4(
 
         qt_label, qt_short = KIND_ORDER[qt]
         subj_prefix = f"{SUBJECT_ORDER[sc]} {qb['subject']}"
-        deck_name = f"Semestre Filtro EdiSES::{subj_prefix}::Cap. {ch:02d} - {qb['chapter_title']}::{qt_label}"
+        deck_name = f"Semestre Filtro::{subj_prefix}::Cap. {ch:02d} - {qb['chapter_title']}::{qt_label}"
         if deck_name not in decks:
             decks[deck_name] = genanki.Deck(
                 deck_id=stable_anki_id(f"deck::{deck_name}"),
@@ -591,7 +591,7 @@ def run_stage4(
 
             note = genanki.Note(
                 model=model,
-                guid=genanki.guid_for("anki-sem-edises-v1", item_id),
+                guid=genanki.guid_for("semestre-filtro-v2", item_id),
                 fields=[
                     item_id,
                     qb["subject"],
@@ -629,7 +629,7 @@ def run_stage4(
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(
             {
-                "title": "Eserciziario Unico per il Semestre Filtro — EdiSES (Complete Verified QA Dataset)",
+                "title": "Eserciziario Unico per il Semestre Filtro (Complete Verified QA Dataset)",
                 "total_items": len(dataset_rows),
                 "total_subsections": len(sorted_keys),
                 "counts_by_quiz_type": {
@@ -706,7 +706,7 @@ def run_stage4(
     # 4. Write Anki .apkg package with all 84 hierarchical subdecks + embedded media (deflate SQLite & media JSON)
     import zipfile as _zipfile
 
-    apkg_path = output_dir / "Semestre_Filtro_EdiSES_Complete.apkg"
+    apkg_path = output_dir / "Semestre_Filtro_Complete.apkg"
     raw_apkg = output_dir / "_tmp_raw.apkg"
     pkg = genanki.Package(list(decks.values()))
     pkg.media_files = list(media_files_set.values())

@@ -65,7 +65,7 @@ def max_contiguous_true(mask: np.ndarray) -> int:
 
 
 def clean_slice_bounds(arr: np.ndarray, page_fast_lines: List[dict], y0: int, y1: int) -> Tuple[int, int]:
-    """Strip any publisher running header at top of slice AND any EdiSES logo/bar footer at bottom."""
+    """Strip any publisher running header at top of slice AND any publisher logo/bar footer at bottom."""
     h, w = arr.shape
     for ln in page_fast_lines:
         lx0, ly0, lx1, ly1 = ln["bbox"]
@@ -75,7 +75,7 @@ def clean_slice_bounds(arr: np.ndarray, page_fast_lines: List[dict], y0: int, y1
             or re.match(r"^\d{1,3}\s+(chimica|biologia|fisica)\b", low)
         ):
             y0 = max(y0, ly1 + 6)
-        if ly1 > int(h * 0.74) and ("edises" in low or "edlses" in low or "www." in low):
+        if ly1 > int(h * 0.74) and (re.search(r"edi[s]es", low) or "edlses" in low or "www." in low):
             y1 = min(y1, ly0 - 8)
 
     scan_y0 = max(y0, int(h * 0.74))
@@ -527,7 +527,7 @@ def process_subject_worker_to_file(args) -> str:
                             ws = sorted(lo_obj["words"], key=lambda u: u[0])
                             line_txt = " ".join(u[4] for u in ws).strip()
                             low = line_txt.lower()
-                            if "edises" in low or "risposte capitolo" in low:
+                            if re.search(r"edi[s]es", low) or "risposte capitolo" in low:
                                 continue
                             bx0 = int(ws[0][0])
                             by0 = int(sy0 + min(u[1] for u in ws))

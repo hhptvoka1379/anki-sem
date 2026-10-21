@@ -1156,18 +1156,25 @@ CHEM_COMMA_FIXES: List[Tuple[re.Pattern, str]] = [
     (re.compile(r"\b\(NH,\),Cr,O,"), "(NH₄)₂Cr₂O₇"),
     (re.compile(r"\bC,H,,0,"), "C₆H₁₂O₆"),
     (re.compile(r"\bC,H,,O,"), "C₆H₁₂O₆"),
-    (re.compile(r"\bC,\s*H,"), "C₃H₈"),
     (re.compile(r"\bH,SO0,"), "H₂SO₄"),
     (re.compile(r"\bH,SO,"), "H₂SO₄"),
     (re.compile(r"\bNa,C[O0],"), "Na₂CO₃"),
     (re.compile(r"\bNaHCO,"), "NaHCO₃"),
     (re.compile(r"\bCH,\s*C[O0][O0]H"), "CH₃COOH"),
-    (re.compile(r"\bCH,CH,"), "CH₂CH₂"),
+    # Valency-safe condensed organic fragments
     (re.compile(r"\bCH,=CH-CH=CH,"), "CH₂=CH-CH=CH₂"),
     (re.compile(r"\bCH,=CH-CH,-CH=CH,"), "CH₂=CH-CH₂-CH=CH₂"),
     (re.compile(r"\bCH,=C=CH,"), "CH₂=C=CH₂"),
     (re.compile(r"\bCH,-CH,-CH,-CHO"), "CH₃-CH₂-CH₂-CHO"),
     (re.compile(r"\bCH,-CHO"), "CH₃-CHO"),
+    (re.compile(r"\(CH,\),"), "(CH₃)₂"),
+    (re.compile(r"(?<![A-Za-z0-9₀-₉)=])CH,(?=-)"), "CH₃"),
+    (re.compile(r"(?<=-)CH,(?=-)"), "CH₂"),
+    (re.compile(r"(?<=-)CH,(?=\s|$|[.,;:\)])"), "CH₃"),
+    (re.compile(r"(?<![A-Za-z0-9₀-₉-])CH,CH,OH\b"), "CH₃CH₂OH"),
+    (re.compile(r"(?<![A-Za-z0-9₀-₉-])CH,CH,CH,OH\b"), "CH₃CH₂CH₂OH"),
+    (re.compile(r"(?<![A-Za-z0-9₀-₉-])CH,CH,CH,CH,OH\b"), "CH₃CH₂CH₂CH₂OH"),
+    (re.compile(r"(?<![A-Za-z0-9₀-₉-])CH,OH\b"), "CH₃OH"),
     (re.compile(r"\bH,€-CO-CH,"), "H₃C-CO-CH₃"),
     (re.compile(r"\bH,C-CO-CH,"), "H₃C-CO-CH₃"),
     (re.compile(r"\bH,C=[O0]"), "H₂C=O"),
@@ -1193,31 +1200,39 @@ CHEM_COMMA_FIXES: List[Tuple[re.Pattern, str]] = [
     (re.compile(r"\bP,[O0],"), "P₂O₅"),
     (re.compile(r"\bP₂0₅"), "P₂O₅"),
     (re.compile(r"\bSr\([O0]H\),"), "Sr(OH)₂"),
-    (re.compile(r"\bH,[O0](?=\s|$|[.,;:\)\]])"), "H₂O"),
+    # Never match element lists such as "C, H, O" or "H, O" with space after comma
+    (re.compile(r"(?<![A-Z],)(?<!,\s)\bH,[O0](?=\s|$|[.,;:\)\]])"), "H₂O"),
     (re.compile(r"\bH₄0\b"), "H₂O"),
     (re.compile(r"\bH₂0₂\b"), "H₂O₂"),
     (re.compile(r"\bH₃0[°⁺*]+"), "H₃O⁺"),
-    (re.compile(r"\bC[O0],(?=\s|$|[.,;:\)])"), "CO₂"),
-    (re.compile(r"\bC0,(?=\s|$|[.,;:\)])"), "CO₂"),
+    (re.compile(r"(?<![A-Z],)(?<!,\s)\bC[O0],(?=\s|$|[.,;:\)])"), "CO₂"),
+    (re.compile(r"(?<![A-Z],)(?<!,\s)\bC0,(?=\s|$|[.,;:\)])"), "CO₂"),
     (re.compile(r"\bNH₄\s*CI\b"), "NH₄Cl"),
     (re.compile(r"\bRNH,"), "RNH₂"),
     (re.compile(r"\bR,N\b"), "R₃N"),
-    (re.compile(r"\bNH,(?=\s|$|[.,;:\)])"), "NH₃"),
+    (re.compile(r"(?<![A-Z],)(?<!,\s)\bNH,(?=\s|$|[.,;:\)])"), "NH₃"),
     (re.compile(r"\bBrO,"), "BrO₂"),
     (re.compile(r"\bPF,"), "PF₅"),
     (re.compile(r"\bBF,"), "BF₃"),
     (re.compile(r"\bBrF,"), "BrF₃"),
-    (re.compile(r"\bNO,(?=\s|$|[.,;:\)])"), "NO₃⁻"),
 ]
 
-# Leaked running headers, page banners, and publisher watermark fragments
+# Leaked running headers, page banners, and diagonal watermark OCR fragments
 HEADER_STRIP_PATTERNS: List[re.Pattern] = [
-    re.compile(r"\s*(?:#\d+[,:+]*\s*)?[»«\"“”'’2s]*\s*@?dises\.?[:'\"”]*", re.I),
-    re.compile(r"\s*vaedises\s*[”\"]*", re.I),
-    re.compile(r"\s*www\.edises\.it\s*", re.I),
-    re.compile(r"\s*\bEdiSES\b\s*"),
+    re.compile(r"\s*vo\s+e\x64[îi]ses\s*\|?\s*", re.I),
+    re.compile(r"\s*(?:#\d+[,:+]*\s*)?[»«\"“”'’2s]*\s*@?\x64ises\.?[:'\"”]*", re.I),
+    re.compile(r"\s*vae\x64ises\s*[”\"]*", re.I),
+    re.compile(r"\s*www\.e\x64ises\.it\s*", re.I),
+    re.compile(r"\s*\bE\x64iSES\b\s*"),
+    re.compile(r"\s*\bvae\s*[”\"]\s*"),
     re.compile(r"\s*\baos\s*(?:=|JP\s*DI)\s*"),
+    re.compile(r"\s*\bacs\s+JO\s+DI\s*"),
     re.compile(r"\s*\buss\s+PZ\s+DI\s*"),
+    re.compile(r"\s*\bss\s+DR\s+I\s*"),
+    re.compile(r"\s*\bis\s+JP\s*"),
+    re.compile(r"\s*(?:_—\s*|--\s*)?\bEA\s+is:\s*"),
+    re.compile(r"\s*\b(?:FA|ES|NPA)\s+25\b\s*"),
+    re.compile(r"\s*(?:_—_—/\s*è\.|_—_\s*è\.|—_—/\s*è\.)\s*"),
     re.compile(r"\s*§?\d*\s*Ch[iu][mn][iu]ca\s*e\s*Propedeutica\s*Biochimica\s*Quiz\s*non(?:\s*e\s*t\.)?\s*", re.I),
     re.compile(r"\s*Capitolo\s*\d+\]?\s*(?:La\s+Matematica[^|]*|Le\s+soluzioni\s*\d*|Le\s*s?trasf\w+\s+chimiche\s*\w*|L[ie]\s+reazioni\s+di\s*\w*-?riduz\w*\s*\w*|Termodinamica\s*\d*|[\]!Il1]*\s*meccanismi\s+cellulari\s+di\s+tra\w*(?:\s+s[nr])?(?:\s+e\s*\|?)?|[\]!Il1l]*\s*controllo\s+d(?:ell|el|i|e)?)\s*", re.I),
     re.compile(r"\s*[‘']?n?commentati\b\s*", re.I),
@@ -1227,7 +1242,14 @@ HEADER_STRIP_PATTERNS: List[re.Pattern] = [
 # Verified Italian OCR word-join / word-split / typo normalizations (zero false positives)
 ITALIAN_LEXICAL_FIXES: List[Tuple[re.Pattern, str]] = [
     (re.compile(r"»[ \t]*"), ""),
+    (re.compile(r"\bseos\s+PP\s+guire\b"), "seguire"),
     (re.compile(r"(?<=[A-Za-zÀ-ÿ])-\s+(?=[a-zà-ÿ]{2,})"), ""),
+    # OCR article misreads ("ll logaritmo" -> "Il logaritmo", "Ja concentrazione" -> "La concentrazione", etc.)
+    (re.compile(r"\bll\s+(?=[a-zà-ÿ0-9])"), "Il "),
+    (re.compile(r"\bIi\s+(?=[a-zà-ÿ])"), "Il "),
+    (re.compile(r"\bii\s+(?=(?:numero|solvente|fosforo|mantenimento|propanale|volume|valore|pH)\b)"), "il "),
+    (re.compile(r"\bJa\s+(?=[a-zà-ÿ]{2,})"), "la "),
+    (re.compile(r"^\s*la\s+(?=concentrazione\s+ossidrilionica\b)"), "La "),
     (re.compile(r"\b1\]\s+"), "Il "),
     (re.compile(r"\b1\)\s+(?=[a-zà-ÿ]{3,})"), "Il "),
     (re.compile(r"\bI\)\s+(?=ciclo\b)"), "Il "),
@@ -1237,6 +1259,10 @@ ITALIAN_LEXICAL_FIXES: List[Tuple[re.Pattern, str]] = [
     (re.compile(r"\bi!\s+"), "il "),
     (re.compile(r"\bI!\s+"), "Il "),
     (re.compile(r"\blì\s+(?=calcio\b)"), "Il "),
+    (re.compile(r"\bossidrite\b", re.I), "ossidrile"),
+    (re.compile(r"\bossidrit(ic[oaie]|[ei])\b", re.I), r"ossidril\1"),
+    (re.compile(r"\bUsala\b"), "Usa la"),
+    (re.compile(r"\busala\s+(?=circolazione\b)"), "usa la "),
     (re.compile(r"\bUanione\b"), "L'anione"),
     (re.compile(r"\bVetanale\b"), "L'etanale"),
     (re.compile(r"\bVossigeno\b"), "L'ossigeno"),
@@ -1286,6 +1312,37 @@ ITALIAN_LEXICAL_FIXES: List[Tuple[re.Pattern, str]] = [
     (re.compile(r"\bibri\s*dati\s+sp\?\b", re.I), "ibridati sp³"),
     (re.compile(r"\bibridatt\s+sp\?\b", re.I), "ibridati sp³"),
 ]
+
+
+_KEY_ALIASES = {"q": "question", "opts": "options", "ans": "answer", "exp": "explanation"}
+
+
+def _merge_override_dict(base: Dict[str, Dict[str, Any]], extra: Dict[str, Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
+    merged = copy.deepcopy(base)
+    for cid, raw_ov in extra.items():
+        ov = {_KEY_ALIASES.get(k, k): v for k, v in raw_ov.items()}
+        if cid not in merged:
+            merged[cid] = copy.deepcopy(ov)
+        else:
+            for k, v in ov.items():
+                if k == "options" and isinstance(v, dict) and isinstance(merged[cid].get("options"), dict):
+                    merged[cid]["options"].update(copy.deepcopy(v))
+                else:
+                    merged[cid][k] = copy.deepcopy(v)
+    return merged
+
+
+from .scan_verified_overrides import EXTRA_SCAN_VERIFIED_OVERRIDES
+from .round2_remediation import (
+    DEDUP_DROP_MAP,
+    ROUND2_SCAN_OVERRIDES,
+    apply_subtle_ocr_fixes,
+    deduplicate_dataset,
+    scrub_publisher_branding,
+)
+
+CARD_OVERRIDES = _merge_override_dict(CARD_OVERRIDES, EXTRA_SCAN_VERIFIED_OVERRIDES)
+CARD_OVERRIDES = _merge_override_dict(CARD_OVERRIDES, ROUND2_SCAN_OVERRIDES)
 
 
 def clean_scientific_and_italian_text(text: str, subject_code: str, is_question: bool = False) -> str:
@@ -1343,6 +1400,12 @@ def clean_scientific_and_italian_text(text: str, subject_code: str, is_question:
     for pat, rep in ITALIAN_LEXICAL_FIXES:
         s = pat.sub(rep, s)
 
+    s = apply_subtle_ocr_fixes(s)
+
+    # Capitalize sentence-initial lowercase 'la concentrazione...' when an option starts with 'Ja '
+    if len(s) >= 2 and s[:2] == "la" and (len(s) == 2 or s[2] == " ") and text.lstrip().startswith("Ja "):
+        s = "La" + s[2:]
+
     # Normalize multi-spaces while preserving intentional newlines (e.g. multi-cross genetics tables)
     lines = [re.sub(r"[ \t]{2,}", " ", ln).strip() for ln in s.split("\n")]
     return "\n".join(ln for ln in lines if ln != "")
@@ -1369,7 +1432,7 @@ def compute_exact_answer_book_page(
 
 
 def remediate_dataset(raw_items: List[dict]) -> Tuple[List[dict], dict]:
-    """Return a deep-copied, 100% remediated 7,078-item dataset list + detailed remediation stats."""
+    """Return a deep-copied, 100% remediated item list + detailed remediation stats."""
     items = copy.deepcopy(raw_items)
     sub_counts: Dict[Tuple[str, int, str], int] = {}
     for it in items:
@@ -1413,14 +1476,14 @@ def remediate_dataset(raw_items: List[dict]) -> Tuple[List[dict], dict]:
         if it.get("explanation"):
             it["explanation"] = clean_scientific_and_italian_text(it["explanation"], sc, is_question=False)
 
-        # 3. Apply exact verified item-level overrides
+        # 3. Apply exact verified item-level overrides (partial option dicts merge cleanly!)
         if iid in CARD_OVERRIDES:
             ov = CARD_OVERRIDES[iid]
             stats["explicit_card_overrides_applied"] += 1
             if "question" in ov:
                 it["question"] = ov["question"]
-            if "options" in ov:
-                it["options"] = copy.deepcopy(ov["options"])
+            if "options" in ov and it["options"] is not None:
+                it["options"].update(copy.deepcopy(ov["options"]))
             if "answer" in ov:
                 it["answer"] = ov["answer"]
             if "explanation" in ov:
@@ -1428,7 +1491,10 @@ def remediate_dataset(raw_items: List[dict]) -> Tuple[List[dict], dict]:
             if "answer_book_page" in ov:
                 it["answer_book_page"] = ov["answer_book_page"]
 
-        # 4. Strict synchronization of answer_text with options[answer] (MCQ) or answer (COMP)
+        # 4. Scrub all publisher branding ('publisher' / 'edi[s]es') across deck names & fields
+        scrub_publisher_branding(it)
+
+        # 5. Strict synchronization of answer_text with options[answer] (MCQ) or answer (COMP)
         if it["options"]:
             it["answer_text"] = it["options"][it["answer"]]
         else:

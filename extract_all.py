@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Deterministic End-to-End QA Extractor & Anki .apkg Exporter
-for 'Eserciziario Unico per il Semestre Filtro' (EdiSES, 902 PDF pages -> 7,078 QA pairs).
+for 'Eserciziario Unico per il Semestre Filtro' (902 PDF pages -> 6,948 unique QA pairs).
 
 Usage:
     .venv/bin/python extract_all.py
