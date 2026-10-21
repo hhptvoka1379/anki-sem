@@ -10,7 +10,28 @@ import zipfile
 from pathlib import Path
 from typing import Dict, Tuple
 
-import genanki
+_REPO_ROOT = Path(__file__).resolve().parents[1]
+TOGGLE_BUTTON_HTML = (_REPO_ROOT / "snippets" / "toggle_button.html").read_text(encoding="utf-8").strip()
+TOGGLE_SCRIPT_HTML = (_REPO_ROOT / "snippets" / "toggle_script.html").read_text(encoding="utf-8").strip()
+
+_BASE91_TABLE = [
+    "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w",
+    "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
+    "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "#", "$", "%", "&", "(", ")",
+    "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~",
+]
+
+
+def _guid_for(*values: str) -> str:
+    """Pure Python stdlib Anki Base91 GUID generator (zero external dependencies)."""
+    h = hashlib.sha256("__".join(str(v) for v in values).encode("utf-8")).digest()
+    val = int.from_bytes(h[:8], "big")
+    chars = []
+    while val > 0:
+        val, rem = divmod(val, 91)
+        chars.append(_BASE91_TABLE[rem])
+    return "".join(reversed(chars)) or "a"
+
 
 GOOGLE_FONTS_IMPORT = """@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Mono:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap');"""
 
@@ -25,44 +46,13 @@ html, body, #qa {
 }
 """
 
-STANDALONE_DARK_TOGGLE_CSS = """
-.sf-mode-pill {
-  position: fixed;
-  top: 8px;
-  right: 10px;
-  z-index: 99999;
-  appearance: none;
-  border: 1.5px solid rgba(17, 17, 17, 0.35);
-  background: rgba(15, 23, 42, 0.82);
-  color: #f8fafc;
-  width: 28px;
-  height: 28px;
-  border-radius: 999px;
-  font-size: 13px;
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  opacity: 0.72;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
-  transition: opacity 0.14s ease, transform 0.12s ease, background 0.14s ease;
-  user-select: none;
-}
-.sf-mode-pill:hover {
-  opacity: 1;
-  transform: scale(1.06);
-}
-"""
-
 BASE_RESET_CSS = """
 .card {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   margin: 0;
-  padding: 20px 14px 32px;
+  padding: 40px 14px 32px;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   text-align: left;
@@ -1479,12 +1469,7 @@ THEMES: Dict[str, dict] = {}
 for _k, _v in RAW_THEMES.items():
     _entry = dict(_v)
     _entry["raw_showcase_css"] = _v["css"]
-    _entry["css"] = (
-        GOOGLE_FONTS_IMPORT
-        + HOST_VIEWPORT_RESET_CSS
-        + STANDALONE_DARK_TOGGLE_CSS
-        + _convert_card_selectors_to_sf_canvas(_v["css"])
-    )
+    _entry["css"] = GOOGLE_FONTS_IMPORT + HOST_VIEWPORT_RESET_CSS + _convert_card_selectors_to_sf_canvas(_v["css"])
     THEMES[_k] = _entry
 
 
@@ -1926,29 +1911,29 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
   var LABELS = {labels_json};
   var DEFAULT_DARK = {dark_json};
   var canvas = document.getElementById('sf-canvas');
+  var mount = document.getElementById('sf-card-mount');
   var side = canvas.getAttribute('data-side');
   var itemId = "{{{{ItemID}}}}";
 
-  function readPref(key, validFn, fallback) {{
-    try {{ if (window['_' + key] !== undefined && validFn(window['_' + key])) return window['_' + key]; }} catch(e) {{}}
-    try {{ if (window.parent && window.parent['_' + key] !== undefined && validFn(window.parent['_' + key])) return window.parent['_' + key]; }} catch(e) {{}}
-    try {{ var ls = localStorage.getItem(key); if (ls !== null && validFn(ls)) return ls; }} catch(e) {{}}
-    try {{ var ss = sessionStorage.getItem(key); if (ss !== null && validFn(ss)) return ss; }} catch(e) {{}}
-    var rx = new RegExp('(?:^|;\\\\s*)' + key + '=([^;]+)');
-    var m = (document.cookie || '').match(rx);
-    return (m && validFn(m[1])) ? m[1] : fallback;
+  function readThemeNum() {{
+    try {{ if (window._sfThemeNum && LABELS[window._sfThemeNum]) return window._sfThemeNum; }} catch(e) {{}}
+    try {{ if (window.parent && window.parent._sfThemeNum && LABELS[window.parent._sfThemeNum]) return window.parent._sfThemeNum; }} catch(e) {{}}
+    try {{ var ls = localStorage.getItem('sf_theme_num'); if (ls && LABELS[ls]) return ls; }} catch(e) {{}}
+    try {{ var ss = sessionStorage.getItem('sf_theme_num'); if (ss && LABELS[ss]) return ss; }} catch(e) {{}}
+    var m = (document.cookie || '').match(/(?:^|;\\s*)sf_theme_num=([0-9]{{2}})/);
+    return (m && LABELS[m[1]]) ? m[1] : '00';
   }}
 
-  function savePref(key, val) {{
-    try {{ window['_' + key] = val; }} catch(e) {{}}
-    try {{ if (window.parent) window.parent['_' + key] = val; }} catch(e) {{}}
-    try {{ localStorage.setItem(key, val); }} catch(e) {{}}
-    try {{ sessionStorage.setItem(key, val); }} catch(e) {{}}
-    try {{ document.cookie = key + '=' + val + ';path=/;max-age=31536000;SameSite=Lax'; }} catch(e) {{}}
+  function saveThemeNum(n) {{
+    try {{ window._sfThemeNum = n; }} catch(e) {{}}
+    try {{ if (window.parent) window.parent._sfThemeNum = n; }} catch(e) {{}}
+    try {{ localStorage.setItem('sf_theme_num', n); }} catch(e) {{}}
+    try {{ sessionStorage.setItem('sf_theme_num', n); }} catch(e) {{}}
+    try {{ document.cookie = 'sf_theme_num=' + n + ';path=/;max-age=31536000;SameSite=Lax'; }} catch(e) {{}}
   }}
 
   function bindCardInteractions() {{
-    var opts = canvas.querySelectorAll('.opt');
+    var opts = (mount || canvas).querySelectorAll('.opt');
     var picked = null;
     try {{ picked = sessionStorage.getItem('pick_' + itemId); }} catch(e) {{}}
     opts.forEach(function(el, idx) {{
@@ -1968,26 +1953,23 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
     }});
   }}
 
-  var cur = readPref('sf_theme', function(v) {{ return !!LABELS[v]; }}, '00');
-  var modePref = readPref('sf_dark_mode', function(v) {{ return v === 'auto' || v === 'dark' || v === 'light'; }}, 'auto');
+  var cur = readThemeNum();
 
-  function computeIsDark() {{
-    if (modePref === 'dark') return true;
-    if (modePref === 'light') return false;
+  function syncDefaultDarkIfUnset() {{
+    var explicit = null;
+    try {{ explicit = localStorage.getItem('sf-theme'); }} catch(e) {{}}
+    if (explicit === 'dark' || explicit === 'light') return;
     var d = DEFAULT_DARK[cur];
-    if (d === 'auto') {{
-      return !!(document.body && (document.body.classList.contains('nightMode') || document.body.classList.contains('night_mode')));
-    }}
-    return !!d;
-  }}
-
-  function syncCanvasSurface() {{
-    var isDark = computeIsDark();
-    canvas.className = isDark ? 'sf-canvas sf-dark' : 'sf-canvas';
-    var dbtn = document.getElementById('sf-dark-btn');
-    if (dbtn) {{
-      dbtn.textContent = isDark ? '☀' : '☾';
-      dbtn.title = isDark ? 'Passa a Light Mode (Alt+D)' : 'Passa a Dark Mode (Alt+D)';
+    var isDark = (d === 'auto')
+      ? !!(document.body && (document.body.classList.contains('nightMode') || document.body.classList.contains('night_mode')))
+      : !!d;
+    canvas.classList.toggle('sf-dark', isDark);
+    var btn = document.getElementById('sf-theme-toggle');
+    if (btn) {{
+      btn.textContent = isDark ? 'LIGHT' : 'DARK';
+      btn.style.background = isDark ? '#18181b' : '#fef08a';
+      btn.style.color = isDark ? '#fafafa' : '#111';
+      btn.style.borderColor = isDark ? '#fafafa' : '#111';
     }}
   }}
 
@@ -2008,13 +1990,13 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
   function applyTheme(n, showToast) {{
     if (!LABELS[n]) n = '00';
     cur = n;
-    savePref('sf_theme', n);
+    saveThemeNum(n);
     document.documentElement.setAttribute('data-sf-theme', n);
-    syncCanvasSurface();
+    syncDefaultDarkIfUnset();
     var tpl = document.getElementById('sf-t' + n);
-    if (tpl && canvas) {{
-      canvas.innerHTML = '';
-      canvas.appendChild(tpl.content.cloneNode(true));
+    if (tpl && mount) {{
+      mount.innerHTML = '';
+      mount.appendChild(tpl.content.cloneNode(true));
       bindCardInteractions();
     }}
     var ui = document.getElementById('sf-theme-ui');
@@ -2024,26 +2006,14 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
       ui.querySelectorAll('.sf-choice').forEach(function(b) {{
         b.classList.toggle('is-active', b.getAttribute('data-num') === n);
       }});
-      if (showToast) showToastMsg(LABELS[n] + (computeIsDark() ? ' · Dark' : ' · Light'));
+      if (showToast) showToastMsg(LABELS[n]);
     }}
-  }}
-
-  function toggleDarkMode() {{
-    modePref = computeIsDark() ? 'light' : 'dark';
-    savePref('sf_dark_mode', modePref);
-    syncCanvasSurface();
-    showToastMsg(LABELS[cur] + (modePref === 'dark' ? ' · Dark Mode' : ' · Light Mode'));
   }}
 
   var ui = document.getElementById('sf-theme-ui');
   if (ui) {{
     var bar = ui.querySelector('.sf-theme-bar');
-    var dbtn = document.getElementById('sf-dark-btn');
     var tog = ui.querySelector('.is-current-toggle');
-    dbtn.addEventListener('click', function(ev) {{
-      ev.stopPropagation();
-      toggleDarkMode();
-    }});
     tog.addEventListener('click', function(ev) {{
       ev.stopPropagation();
       bar.classList.add('is-open');
@@ -2068,18 +2038,6 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
     }});
   }}
 
-  if (window._sfKeyHandler) document.removeEventListener('keydown', window._sfKeyHandler);
-  window._sfKeyHandler = function(ev) {{
-    if (ev.altKey && (ev.key === 'd' || ev.key === 'D' || ev.code === 'KeyD')) {{
-      ev.preventDefault();
-      toggleDarkMode();
-    }}
-  }};
-  document.addEventListener('keydown', window._sfKeyHandler);
-
-  if (window.MutationObserver && document.body) {{
-    new MutationObserver(syncCanvasSurface).observe(document.body, {{ attributes: true, attributeFilter: ['class'] }});
-  }}
   if (side === 'front' && window._sfLastItem !== itemId) {{
     window._sfLastItem = itemId;
     try {{ sessionStorage.removeItem('pick_' + itemId); }} catch(e) {{}}
@@ -2090,7 +2048,6 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
     switcher_html = (
         '<div id="sf-theme-ui" class="sf-theme-ui">'
         '<div class="sf-theme-bar">'
-        '<button type="button" id="sf-dark-btn" class="sf-num-btn sf-dark-btn" title="Dark / Light Mode (Alt+D)">☾</button>'
         '<button type="button" class="sf-num-btn is-current-toggle" title="Cambia tema grafico (00–10)">00</button>'
         + "".join(
             f'<button type="button" class="sf-num-btn sf-choice" data-num="{n}" title="{lbl}">{n}</button>'
@@ -2102,18 +2059,29 @@ def build_master_multitheme_bundle(default_css: str) -> Tuple[str, str, str]:
     master_qfmt = (
         GOOGLE_FONTS_LINK_HTML
         + switcher_html
-        + f'<div id="sf-canvas" class="sf-canvas" data-side="front">{q0}</div>\n'
+        + f'\n<div id="sf-canvas" class="sf-canvas" data-side="front">\n{TOGGLE_BUTTON_HTML}\n<div id="sf-card-mount">{q0}</div>\n</div>\n'
         + "\n".join(q_tpls)
-        + f"\n<script>{shared_runtime_js}</script>"
+        + f"\n<script>{shared_runtime_js}</script>\n{TOGGLE_SCRIPT_HTML}"
     )
     master_afmt = (
         GOOGLE_FONTS_LINK_HTML
         + switcher_html
-        + f'<div id="sf-canvas" class="sf-canvas" data-side="back">{a0}</div>\n'
+        + f'\n<div id="sf-canvas" class="sf-canvas" data-side="back">\n{TOGGLE_BUTTON_HTML}\n<div id="sf-card-mount">{a0}</div>\n</div>\n'
         + "\n".join(a_tpls)
-        + f"\n<script>{shared_runtime_js}</script>"
+        + f"\n<script>{shared_runtime_js}</script>\n{TOGGLE_SCRIPT_HTML}"
     )
     return full_css, master_qfmt, master_afmt
+
+
+def _toggle_script_for_theme(default_dark: bool) -> str:
+    """Use `snippets/toggle_script.html` verbatim on light-default themes; on dark-default themes
+    (`03`, `06`, `07`), honor the initial `.sf-dark` class only when `localStorage['sf-theme']` is unset."""
+    if not default_dark:
+        return TOGGLE_SCRIPT_HTML
+    return TOGGLE_SCRIPT_HTML.replace(
+        "  var dark = false;\n  try { dark = localStorage.getItem('sf-theme') === 'dark'; } catch (e) {}",
+        "  var dark = canvas.classList.contains('sf-dark');\n  try { var s = localStorage.getItem('sf-theme'); if (s === 'dark' || s === 'light') dark = s === 'dark'; } catch (e) {}",
+    )
 
 
 def build_card_templates(
@@ -2123,14 +2091,13 @@ def build_card_templates(
     type_in_completamento: bool = False,
     auto_open_scan: bool = False,
 ) -> Tuple[str, str]:
-    """Generate standalone single-theme Front/Back HTML WITH 1-click Light/Dark `☾/☀` pill
-    (and NO `00..10` theme switcher!)."""
+    """Generate standalone single-theme Front/Back HTML using `snippets/toggle_button.html`
+    and `snippets/toggle_script.html` directly (and NO `00..10` theme switcher!)."""
     theme = THEMES[theme_key]
     scan_open_attr = " open" if auto_open_scan else ""
     def_dark = bool(theme.get("default_dark"))
     canvas_cls = "sf-canvas sf-dark" if def_dark else "sf-canvas"
-    def_dark_js = "true" if def_dark else "false"
-    init_icon = "☀" if def_dark else "☾"
+    toggle_js = _toggle_script_for_theme(def_dark)
 
     front_inner = f"""<div class="stem">{{{{FrontStemHTML}}}}</div>
   {{{{#FigureHTML}}}}<div class="fig-box">{{{{FigureHTML}}}}</div>{{{{/FigureHTML}}}}
@@ -2147,56 +2114,12 @@ def build_card_templates(
 
     q_shell, a_shell = _build_layout_shell(theme.get("layout", "standard"), front_inner, back_inner, scan_open_attr)
     instant_js = "true" if instant_grade_front else "false"
-    mode_btn_html = f'<button type="button" id="sf-mode-pill" class="sf-mode-pill" title="Dark / Light Mode (Alt+D)">{init_icon}</button>'
-
-    mode_helper_js = f"""
-  document.documentElement.removeAttribute('data-sf-theme');
-  var canvas = document.getElementById('sf-canvas');
-  var mbtn = document.getElementById('sf-mode-pill');
-  var mkey = 'sf_mode_{theme_key}';
-  function getDark() {{
-    try {{ if (window['_' + mkey] !== undefined) return window['_' + mkey] === 'dark'; }} catch(e) {{}}
-    try {{ if (window.parent && window.parent['_' + mkey] !== undefined) return window.parent['_' + mkey] === 'dark'; }} catch(e) {{}}
-    try {{ var ls = localStorage.getItem(mkey); if (ls === 'dark' || ls === 'light') return ls === 'dark'; }} catch(e) {{}}
-    try {{ var ss = sessionStorage.getItem(mkey); if (ss === 'dark' || ss === 'light') return ss === 'dark'; }} catch(e) {{}}
-    var cm = (document.cookie || '').match(new RegExp('(?:^|;\\\\s*)' + mkey + '=(dark|light)'));
-    if (cm) return cm[1] === 'dark';
-    return {def_dark_js};
-  }}
-  function applyDark(d) {{
-    if (canvas) canvas.className = d ? 'sf-canvas sf-dark' : 'sf-canvas';
-    if (mbtn) {{
-      mbtn.textContent = d ? '☀' : '☾';
-      mbtn.title = d ? 'Switch to Light Mode (Alt+D)' : 'Switch to Dark Mode (Alt+D)';
-    }}
-  }}
-  function toggleDark() {{
-    var next = !getDark();
-    var val = next ? 'dark' : 'light';
-    try {{ window['_' + mkey] = val; }} catch(e) {{}}
-    try {{ if (window.parent) window.parent['_' + mkey] = val; }} catch(e) {{}}
-    try {{ localStorage.setItem(mkey, val); }} catch(e) {{}}
-    try {{ sessionStorage.setItem(mkey, val); }} catch(e) {{}}
-    try {{ document.cookie = mkey + '=' + val + ';path=/;max-age=31536000;SameSite=Lax'; }} catch(e) {{}}
-    applyDark(next);
-  }}
-  applyDark(getDark());
-  if (mbtn) mbtn.addEventListener('click', function(ev) {{ ev.stopPropagation(); toggleDark(); }});
-  if (window._sfSoloKey) document.removeEventListener('keydown', window._sfSoloKey);
-  window._sfSoloKey = function(ev) {{
-    if (ev.altKey && (ev.key === 'd' || ev.key === 'D' || ev.code === 'KeyD')) {{
-      ev.preventDefault();
-      toggleDark();
-    }}
-  }};
-  document.addEventListener('keydown', window._sfSoloKey);
-"""
 
     front_script = f"""
 <span id="ans-hidden-ref" style="display:none;">{{{{AnswerBannerHTML}}}}</span>
 <script>
 (function() {{
-{mode_helper_js}
+  document.documentElement.removeAttribute('data-sf-theme');
   var itemId = "{{{{ItemID}}}}";
   var instantGrade = {instant_js};
   var ansRef = document.getElementById('ans-hidden-ref');
@@ -2224,12 +2147,13 @@ def build_card_templates(
     }});
   }});
 }})();
-</script>"""
+</script>
+{toggle_js}"""
 
     back_script = f"""
 <script>
 (function() {{
-{mode_helper_js}
+  document.documentElement.removeAttribute('data-sf-theme');
   var itemId = "{{{{ItemID}}}}";
   try {{
     var picked = sessionStorage.getItem("pick_" + itemId);
@@ -2244,12 +2168,12 @@ def build_card_templates(
     }}
   }} catch(e) {{}}
 }})();
-</script>"""
+</script>
+{toggle_js}"""
 
-    return (
-        f'{GOOGLE_FONTS_LINK_HTML}{mode_btn_html}<div id="sf-canvas" class="{canvas_cls}">{q_shell}</div>{front_script}',
-        f'{GOOGLE_FONTS_LINK_HTML}{mode_btn_html}<div id="sf-canvas" class="{canvas_cls}">{a_shell}</div>{back_script}',
-    )
+    q_full = f'{GOOGLE_FONTS_LINK_HTML}\n<div id="sf-canvas" class="{canvas_cls}">\n{TOGGLE_BUTTON_HTML}\n{q_shell}\n</div>{front_script}'
+    a_full = f'{GOOGLE_FONTS_LINK_HTML}\n<div id="sf-canvas" class="{canvas_cls}">\n{TOGGLE_BUTTON_HTML}\n{a_shell}\n</div>{back_script}'
+    return q_full, a_full
 
 
 def repackage_apkg_with_theme(
@@ -2262,8 +2186,8 @@ def repackage_apkg_with_theme(
     auto_open_scan: bool = False,
     custom_css_append: str = "",
 ) -> Path:
-    """Build a standalone single-theme .apkg WITH 1-click Light/Dark `☾/☀` pill (and NO `00..10`
-    theme switcher), plus isolated Anki `model_id`, subdeck IDs, and note GUIDs."""
+    """Build a standalone single-theme .apkg (100% pure Python stdlib — zero pip packages required!)
+    using `snippets/toggle_button.html` + `snippets/toggle_script.html`."""
     theme = THEMES[theme_key]
     qfmt, afmt = build_card_templates(
         theme_key=theme_key,
@@ -2273,7 +2197,7 @@ def repackage_apkg_with_theme(
         auto_open_scan=auto_open_scan,
     )
     final_css = theme["css"] + ("\n" + custom_css_append if custom_css_append else "")
-    new_mid = _stable_id(f"SemestreFiltro-ThemeModel-v3-{theme_key}")
+    new_mid = _stable_id(f"SemestreFiltro-ThemeModel-v4-{theme_key}")
     now_sec = int(time.time()) + 30
     root_label = f"Semestre Filtro [{theme['num']} {theme['name']}]"
 
@@ -2309,7 +2233,7 @@ def repackage_apkg_with_theme(
                     continue
                 old_name = dobj["name"]
                 new_name = re.sub(r"^Semestre Filtro(?=::|$)", root_label, old_name)
-                new_did = _stable_id(f"deck-v3::{theme_key}::{new_name}")
+                new_did = _stable_id(f"deck-v4::{theme_key}::{new_name}")
                 did_remap[old_did] = new_did
                 dobj["id"] = new_did
                 dobj["name"] = new_name
@@ -2325,7 +2249,7 @@ def repackage_apkg_with_theme(
             note_rows = cur.execute("SELECT id, sfld FROM notes").fetchall()
             cur.executemany(
                 "UPDATE notes SET guid = ? WHERE id = ?",
-                [(genanki.guid_for(f"sf-v3-{theme_key}", sfld), nid) for nid, sfld in note_rows],
+                [(_guid_for(f"sf-v4-{theme_key}", sfld), nid) for nid, sfld in note_rows],
             )
             for old_did, new_did in did_remap.items():
                 cur.execute("UPDATE cards SET did = ?, mod = ?, usn = -1 WHERE did = ?", (new_did, now_sec, old_did))
