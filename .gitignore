@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 /tmp_work/
 output/question_images/
+output/themes/Semestre_Filtro_*.apkg
