@@ -121,6 +121,17 @@
       "html_entity_leaks": 0,
       "missing_figure_html_cards": []
     },
+    "master_complete_apkg_has_live_theme_switcher_00_to_10": {
+      "passed": true,
+      "brace_balance_ok": true,
+      "theme_count_including_default": 11
+    },
+    "standalone_risoprint_distinct_from_master_and_switcher_only_in_complete": {
+      "passed": true,
+      "standalone_risoprint_valid": true,
+      "isolated_ids_and_no_switcher_in_standalone": true,
+      "no_switcher_in_theme_updaters": true
+    },
     "themed_apkg_and_10_theme_updaters_integrity": {
       "passed": true,
       "theme04_apkg_exists_and_valid": true,
@@ -129,8 +140,8 @@
     },
     "anki_apkg_and_media_integrity": {
       "passed": true,
-      "apkg_size_bytes": 34514237,
-      "apkg_size_mb": 32.92,
+      "apkg_size_bytes": 34542714,
+      "apkg_size_mb": 32.94,
       "sqlite_notes": 6948,
       "sqlite_cards": 6948,
       "distinct_subdecks": 84,

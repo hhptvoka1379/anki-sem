@@ -405,6 +405,9 @@ def run_stage4(
 
     assert set(s2_map.keys()) == set(s3_map.keys()) and len(s2_map) == 84, "Expected exact 84 subsections"
 
+    from extractor.anki_themes import build_master_multitheme_bundle
+
+    master_css, master_qfmt, master_afmt = build_master_multitheme_bundle(ANKI_CSS)
     model = genanki.Model(
         model_id=1134323208,
         name="Semestre Filtro — Studio & Esame",
@@ -430,11 +433,11 @@ def run_stage4(
         templates=[
             {
                 "name": "Domanda → Risposta",
-                "qfmt": FRONT_TMPL,
-                "afmt": BACK_TMPL,
+                "qfmt": master_qfmt,
+                "afmt": master_afmt,
             }
         ],
-        css=ANKI_CSS,
+        css=master_css,
     )
 
     decks: Dict[str, genanki.Deck] = {}

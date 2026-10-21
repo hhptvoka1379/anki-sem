@@ -8,14 +8,14 @@ Deterministic computer-vision extraction, scan-verified scientific & OCR remedia
 
 | Artifact | Description | Verified Metric |
 |---|---|---|
-| `output/Semestre_Filtro_Complete.apkg` | Master light/dark-mode Anki package across **84 hierarchical subdecks** (`Semestre Filtro::Materia::Capitolo::Tipo`) embedding **all `6,948` cleaned question scans + `113` lossless de-watermarked diagrams + commentary scans** | **`6,948` notes / `6,948` cards (`84` subdecks, `0` publisher branding leaks)** |
-| `output/themes/Semestre_Filtro_04_NeoBrutalist_Risoprint_Zine.apkg` | Complete standalone themed `6,948`-card Anki deck with unified CSS/JS option & badge selectors (`RISO.ZINE // REG.04`) | **`6,948` notes / `6,948` cards** |
+| `output/Semestre_Filtro_Complete.apkg` | Master all-in-one Anki package across **84 hierarchical subdecks** (`Semestre Filtro::Materia::Capitolo::Tipo`) with **live in-card `00`–`10` corner theme switcher** across all 11 visual modes + all cleaned scans & diagrams | **`6,948` notes / `6,948` cards (`84` subdecks, `11` live switchable themes)** |
+| `output/themes/Semestre_Filtro_04_NeoBrutalist_Risoprint_Zine.apkg` | Dedicated standalone **Neo-Brutalist Risoprint Zine** `6,948`-card Anki deck (`RISO.ZINE // REG.04`, independent Note-Type & Deck IDs so it never collides with `Complete.apkg`, without theme-switcher UI) | **`6,948` notes / `6,948` cards** |
 | `output/themes/ThemeUpdater_01..10.apkg` & `output/themes/css/*.css` | Instant ~15 KB Anki Note-Type Theme Updaters + standalone CSS stylesheets across all **10 art-directed design systems** + interactive `output/themes/index.html` preview gallery | **`10 / 10` themes & updaters verified** |
 | `output/figures/*.png` | Losslessly de-watermarked inline diagrams (graphs, circuits, pedigrees, cell stages, chemical structures, vectors, tables — `100%` of explicit visual stems populated in `FigureHTML`) | **`113` crisp diagrams (`0` missing `FigureHTML`, `0` orphan/dark PNGs)** |
 | `output/qa_dataset.json` | Full structured UTF-8 JSON dataset with chapter metadata, exact restored `answer_book_page` (`252..901`), options, answers, explanations, and remediation/deduplication summary | **`6,948` unique items (`130` exact duplicates removed from `7,078` source items)** |
 | `output/qa_dataset.jsonl` | Complete UTF-8 JSON Lines dataset (`1` JSON object per verified unique QA pair, `100.0%` 1-to-1 `question_images/<ID>.png` bijection) | **`6,948` rows** |
 | `output/qa_dataset.csv` | Flat UTF-8 CSV table for spreadsheet / `pandas` inspection | **`6,948` records (`6,949` lines incl. header)** |
-| `output/verification_report.json` | Automated structural, text, formula, deduplication, provenance page, HTML-entity, branding, and pixel-level verification report | **`22 / 22` checks `PASS`** |
+| `output/verification_report.json` | Automated structural, text, formula, deduplication, provenance page, HTML-entity, branding, multi-theme switcher, standalone Risoprint isolation, and pixel-level verification report | **`24 / 24` checks `PASS`** |
 | `issues.csv` & `duplicates.csv` | Unified ground-truth audit log documenting every remediated text/key/image finding plus every deduplicated pair vs. retained distinct shared-stem question | **`100%` scan-verified & remediated** |
 
 ---

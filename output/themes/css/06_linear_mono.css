@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Mono:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap');
+html, body {
+  min-height: 100% !important;
+  margin: 0;
+}
 .card {
+  min-height: 100vh;
   margin: 0;
   padding: 20px 14px 32px;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  text-align: left;
 }
 .card *, .card *::before, .card *::after {
   box-sizing: border-box;
@@ -31,17 +37,18 @@ details.orig-scan summary {
   padding: 4px 0;
 }
 
-.card {
-  font-family: "Inter", sans-serif;
-  background-color: #fafafa;
-  background-image: radial-gradient(#d4d4d8 1px, transparent 1px);
-  background-size: 20px 20px;
+html, body, .card {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #fafafa !important;
+  background-image: radial-gradient(#d4d4d8 1px, transparent 1px) !important;
+  background-size: 20px 20px !important;
   color: #09090b;
   line-height: 1.55;
 }
-.card.nightMode {
-  background-color: #09090b;
-  background-image: radial-gradient(#27272a 1px, transparent 1px);
+html.nightMode, body.nightMode, body.night_mode, .card.nightMode, .night_mode .card {
+  background-color: #09090b !important;
+  background-image: radial-gradient(#27272a 1px, transparent 1px) !important;
+  background-size: 20px 20px !important;
   color: #fafafa;
 }
 .wrap {
@@ -53,7 +60,7 @@ details.orig-scan summary {
   padding: 24px 26px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.04);
 }
-.card.nightMode .wrap {
+.nightMode .wrap {
   background: linear-gradient(180deg, #141418 0%, #0e0e11 100%);
   border-color: #27272a;
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.09), 0 18px 40px rgba(0,0,0,0.65);
@@ -63,14 +70,14 @@ details.orig-scan summary {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
   font-size: 11px;
   color: #71717a;
   padding-bottom: 13px;
   margin-bottom: 16px;
   border-bottom: 1px solid #f4f4f5;
 }
-.card.nightMode .meta { border-bottom-color: #1f1f24; }
+.nightMode .meta { border-bottom-color: #1f1f24; }
 .badge {
   padding: 2px 8px;
   border-radius: 5px;
@@ -78,10 +85,10 @@ details.orig-scan summary {
   color: #fafafa;
   font-weight: 700;
 }
-.card.nightMode .badge { background: #fafafa; color: #09090b; }
+.nightMode .badge { background: #fafafa; color: #09090b; }
 .stem { font-size: 16.5px; font-weight: 500; letter-spacing: -0.015em; margin: 14px 0 18px; }
 .blank-slot { display: inline-block; min-width: 82px; border-bottom: 1.5px solid currentColor; color: transparent; }
-.blank-filled { font-family: "JetBrains Mono", monospace; background: #10b981; color: #052e16; font-weight: 700; padding: 2px 8px; border-radius: 5px; font-size: 14px; }
+.blank-filled { font-family: "JetBrains Mono", ui-monospace, monospace; background: #10b981; color: #052e16; font-weight: 700; padding: 2px 8px; border-radius: 5px; font-size: 14px; }
 .options, .opts { display: flex; flex-direction: column; gap: 7px; }
 .opt {
   display: flex;
@@ -93,16 +100,16 @@ details.orig-scan summary {
   background: #ffffff;
   transition: all 0.12s ease;
 }
-.card.nightMode .opt { background: rgba(255,255,255,0.025); border-color: #27272a; }
+.nightMode .opt { background: rgba(255,255,255,0.025); border-color: #27272a; }
 .opt:hover { border-color: #a1a1aa; background: #f4f4f5; }
-.card.nightMode .opt:hover { border-color: #52525b; background: rgba(255,255,255,0.06); }
+.nightMode .opt:hover { border-color: #52525b; background: rgba(255,255,255,0.06); }
 .opt-letter, .opt-key {
   width: 24px;
   height: 24px;
   border-radius: 6px;
   border: 1px solid #d4d4d8;
   box-shadow: 0 1.5px 0 #d4d4d8;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
   font-size: 11.5px;
   font-weight: 700;
   color: #52525b;
@@ -111,7 +118,7 @@ details.orig-scan summary {
   justify-content: center;
   flex-shrink: 0;
 }
-.card.nightMode .opt-letter, .opt-key { border-color: #3f3f46; box-shadow: 0 1.5px 0 #3f3f46; color: #a1a1aa; background: #18181b; }
+.nightMode .opt-letter, .opt-key { border-color: #3f3f46; box-shadow: 0 1.5px 0 #3f3f46; color: #a1a1aa; background: #18181b; }
 .opt.user-picked { border-color: #3b82f6; background: rgba(59,130,246,0.12); }
 .opt.user-picked .opt-letter, .opt.user-picked .opt-key, .opt-key { background: #3b82f6; border-color: #3b82f6; color: #ffffff; box-shadow: none; }
 .opt.user-wrong { border-color: #ef4444; background: rgba(239,68,68,0.12); }
@@ -125,7 +132,7 @@ details.orig-scan summary {
   border: 1px solid #27272a;
   background: rgba(16,185,129,0.1);
   color: #34d399;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
   font-size: 12.5px;
   font-weight: 700;
 }
@@ -139,5 +146,5 @@ details.orig-scan summary {
   font-size: 14px;
   line-height: 1.58;
 }
-.card.nightMode .expl-box { background: #141418; border-color: #27272a; color: #d4d4d8; }
+.nightMode .expl-box { background: #141418; border-color: #27272a; color: #d4d4d8; }
 .fig-box img, details.orig-scan img { border-radius: 8px; border: 1px solid #3f3f46; padding: 6px; }

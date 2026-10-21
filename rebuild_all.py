@@ -33,6 +33,7 @@ import genanki
 from extractor.anki_themes import (
     THEMES,
     build_lightweight_theme_switcher_apkg,
+    build_master_multitheme_bundle,
     repackage_apkg_with_theme,
 )
 from extractor.audit_remediation import (
@@ -90,6 +91,7 @@ def main() -> None:
     rem_stats["post_dedup_unique_items"] = len(dedup_items)
     print("Remediation & deduplication stats:", json.dumps(rem_stats, indent=2))
 
+    master_css, master_qfmt, master_afmt = build_master_multitheme_bundle(ANKI_CSS)
     model = genanki.Model(
         model_id=MODEL_ID,
         name="Semestre Filtro — Quiz & Completamento",
@@ -115,11 +117,11 @@ def main() -> None:
         templates=[
             {
                 "name": "Domanda -> Risposta",
-                "qfmt": FRONT_TMPL,
-                "afmt": BACK_TMPL,
+                "qfmt": master_qfmt,
+                "afmt": master_afmt,
             }
         ],
-        css=ANKI_CSS,
+        css=master_css,
     )
 
     decks = {}

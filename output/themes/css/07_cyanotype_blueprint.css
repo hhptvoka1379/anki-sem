@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Mono:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap');
+html, body {
+  min-height: 100% !important;
+  margin: 0;
+}
 .card {
+  min-height: 100vh;
   margin: 0;
   padding: 20px 14px 32px;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  text-align: left;
 }
 .card *, .card *::before, .card *::after {
   box-sizing: border-box;
@@ -31,16 +37,16 @@ details.orig-scan summary {
   padding: 4px 0;
 }
 
-.card, .card.nightMode {
-  background-color: #082f49;
+html, body, .card, body.nightMode, body.night_mode, .card.nightMode, .night_mode .card {
+  background-color: #082f49 !important;
   background-image:
     linear-gradient(rgba(255,255,255,0.09) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.09) 1px, transparent 1px),
     linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px) !important;
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px !important;
   color: #f0f9ff;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
 }
 .bp-sheet {
   max-width: 750px;
@@ -63,7 +69,7 @@ details.orig-scan summary {
 .bp-cell:last-child { border-right: none; }
 .bp-body { padding: 20px 24px 24px; }
 .stem {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Space Grotesk", -apple-system, sans-serif;
   font-size: 17.5px;
   font-weight: 600;
   line-height: 1.5;
@@ -113,7 +119,7 @@ details.orig-scan summary {
   margin-top: 12px;
   padding: 13px 16px;
   border: 1px dashed rgba(255,255,255,0.65);
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", -apple-system, sans-serif;
   font-size: 14px;
   line-height: 1.58;
   color: #e0f2fe;

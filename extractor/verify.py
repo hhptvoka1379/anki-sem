@@ -291,6 +291,8 @@ def run_verification(output_dir: Path = Path("/home/user/anki-sem/output")) -> D
         distinct_dids = cur.execute("SELECT COUNT(DISTINCT did) FROM cards").fetchone()[0]
         models_raw, decks_raw = cur.execute("SELECT models, decks FROM col").fetchone()
         col_models = json.loads(models_raw)
+        col_decks = json.loads(decks_raw)
+        master_guids = {r[0] for r in cur.execute("SELECT guid FROM notes").fetchall()}
         if PUB_ANY_RE.search(models_raw):
             pub_sqlite_leaks.append("col.models")
         if PUB_ANY_RE.search(decks_raw):
@@ -370,10 +372,30 @@ def run_verification(output_dir: Path = Path("/home/user/anki-sem/output")) -> D
         "missing_figure_html_cards": missing_fig_html,
     }
 
+    master_mobj = next(iter(col_models.values()))
+    master_css = master_mobj["css"]
+    master_qfmt = master_mobj["tmpls"][0]["qfmt"]
+    master_afmt = master_mobj["tmpls"][0]["afmt"]
+    expected_nums = [f"{i:02d}" for i in range(11)]
+    checks["master_complete_apkg_has_live_theme_switcher_00_to_10"] = {
+        "passed": (
+            'id="sf-theme-ui"' in master_qfmt
+            and 'id="sf-theme-ui"' in master_afmt
+            and all(f'data-num="{n}"' in master_qfmt and f'data-num="{n}"' in master_afmt for n in expected_nums)
+            and all(f'id="sf-t{n}"' in master_qfmt and f'id="sf-t{n}"' in master_afmt for n in expected_nums)
+            and all(f'html[data-sf-theme="{n}"]' in master_css for n in expected_nums)
+            and master_css.count("{") == master_css.count("}")
+            and master_css.count("@import") == 1
+        ),
+        "brace_balance_ok": master_css.count("{") == master_css.count("}"),
+        "theme_count_including_default": len(expected_nums),
+    }
+
     theme04_apkg = output_dir / "themes" / "Semestre_Filtro_04_NeoBrutalist_Risoprint_Zine.apkg"
     theme_updaters = sorted((output_dir / "themes").glob("ThemeUpdater_*.apkg"))
     theme_css_files = sorted((output_dir / "themes" / "css").glob("*.css"))
     t04_ok = False
+    t04_isolated_and_switcher_free = False
     if theme04_apkg.exists():
         with zipfile.ZipFile(theme04_apkg, "r") as zt:
             znames = set(zt.namelist())
@@ -382,18 +404,54 @@ def run_verification(output_dir: Path = Path("/home/user/anki-sem/output")) -> D
                 zt.extract("collection.anki2", td2)
                 c2 = sqlite3.connect(str(Path(td2) / "collection.anki2"))
                 n2 = c2.execute("SELECT COUNT(*) FROM notes").fetchone()[0]
+                t04_guids = {r[0] for r in c2.execute("SELECT guid FROM notes").fetchall()}
+                t04_dids = {r[0] for r in c2.execute("SELECT DISTINCT did FROM cards").fetchall()}
                 m2_raw, d2_raw = c2.execute("SELECT models, decks FROM col").fetchone()
                 m2 = json.loads(m2_raw)
                 c2.close()
-            m2_css = "\n".join(v.get("css", "") for v in m2.values())
+            m2_obj = next(iter(m2.values()))
+            m2_css = m2_obj.get("css", "")
+            m2_qfmt = m2_obj["tmpls"][0]["qfmt"]
+            m2_afmt = m2_obj["tmpls"][0]["afmt"]
+            master_dids = {int(k) for k in col_decks.keys() if k != "1"}
             t04_ok = (
                 n2 == EXPECTED_TOTAL_UNIQUE
                 and len(t_media) == len(media_map)
-                and "RISO.ZINE // REG.04" in m2_css
+                and "RISO.ZINE // REG.04" in m2_qfmt
+                and "RISO.ZINE // REG.04" in m2_afmt
+                and "#fde047" in m2_css
+                and "#ff2e93" in m2_css
+                and "#121018" in m2_css
+                and m2_css.count("{") == m2_css.count("}")
                 and not PUB_ANY_RE.search(m2_raw)
                 and not PUB_ANY_RE.search(d2_raw)
                 and all(k in znames for k in t_media.keys())
             )
+            t04_isolated_and_switcher_free = (
+                "sf-theme-ui" not in m2_qfmt
+                and "sf-theme-ui" not in m2_afmt
+                and "sf-theme-ui" not in m2_css
+                and int(m2_obj["id"]) != int(master_mobj["id"])
+                and len(t04_guids & master_guids) == 0
+                and len(t04_dids & master_dids) == 0
+            )
+    updaters_switcher_free = True
+    for up_f in theme_updaters:
+        with zipfile.ZipFile(up_f, "r") as zu:
+            with tempfile.TemporaryDirectory() as td3:
+                zu.extract("collection.anki2", td3)
+                c3 = sqlite3.connect(str(Path(td3) / "collection.anki2"))
+                um_raw = c3.execute("SELECT models FROM col").fetchone()[0]
+                c3.close()
+                if "sf-theme-ui" in um_raw:
+                    updaters_switcher_free = False
+
+    checks["standalone_risoprint_distinct_from_master_and_switcher_only_in_complete"] = {
+        "passed": t04_ok and t04_isolated_and_switcher_free and updaters_switcher_free,
+        "standalone_risoprint_valid": t04_ok,
+        "isolated_ids_and_no_switcher_in_standalone": t04_isolated_and_switcher_free,
+        "no_switcher_in_theme_updaters": updaters_switcher_free,
+    }
     checks["themed_apkg_and_10_theme_updaters_integrity"] = {
         "passed": t04_ok and len(theme_updaters) == 10 and len(theme_css_files) == 10,
         "theme04_apkg_exists_and_valid": t04_ok,
