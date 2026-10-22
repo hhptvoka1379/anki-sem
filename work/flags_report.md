@@ -1,6 +1,6 @@
-# Flagged rows (14)
+# Flagged rows (45)
 
-## ambiguous (5)
+## ambiguous (13)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -9,15 +9,37 @@
 | CHIM-C01-NCOM-077 | CHIM | 1 | 77 | 12 | ambiguous: isotopes are characterized both by uguale numero di protoni and by diverso numero di massa, so two options are true |
 | CHIM-C01-NCOM-092 | CHIM | 1 | 92 | 14 | ambiguous: prozio, deuterio e trizio have both the same atomic number and the same position in the periodic table, so two options are true |
 | CHIM-C02-NCOM-029 | CHIM | 2 | 29 | 30 | ambiguous: minore energia ed e adiacente al nucleo and minore energia e minore distanza dal nucleo state the same condition, so two options are equivalent |
+| CHIM-C03-NCOM-029 | CHIM | 3 | 29 | 43 | ambiguous: two options state the same value, 4 moli with and without a space, so both give the correct number of moles |
+| CHIM-C03-NCOM-033 | CHIM | 3 | 33 | 43 | ambiguous: equal volumes at the same temperature and pressure contain equal molecules, but both the number of atoms (3 per SO₂ molecule against 4 per NH₃ molecule) and the number of grams differ, so two options state unequal quantities |
+| CHIM-C03-NCOM-048 | CHIM | 3 | 48 | 45 | ambiguous: one mole of any ideal gas at the same pressure and temperature both occupies the same volume and contains an Avogadro number of particles, so two options are true |
+| CHIM-C03-NCOM-079 | CHIM | 3 | 79 | 48 | ambiguous: whether 0 counts as a valenza of sulfur depends on using valenza as oxidation number or as number of bonds, so the keyed exclusion cannot be judged from the card |
+| CHIM-C03-NCOM-086 | CHIM | 3 | 86 | 48 | ambiguous: halogens both tend to form negative ions and tend to acquire one electron, so two options state the same true tendency |
+| CHIM-C03-NCOM-113 | CHIM | 3 | 113 | 51 | ambiguous: alkali metals both are not oxidants and give up electrons being oxidized, so two options are true |
+| CHIM-C03-NCOM-157 | CHIM | 3 | 157 | 56 | ambiguous: lead is an element, but diamond is also an elemental substance made only of carbon, so the wording admits two defensible readings |
+| CHIM-C04-NCOM-040 | CHIM | 4 | 40 | 68 | ambiguous: two nitrogen atoms form multiple bonds, which are also covalent bonds, so both the generic and the specific options are true |
 
-## key (2)
+## chem (1)
+
+| id | subj | ch | q | page | flag |
+|---|---|---|---|---|---|
+| CHIM-C03-NCOM-042 | CHIM | 3 | 42 | 44 | chem: sulfuric acid is printed as H₄SO₄, but the keyed 98 g corresponds to H₂SO₄, so the formula in the stem is chemically wrong |
+
+## key (3)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
 | CHIM-C01-NCOM-091 | CHIM | 1 | 91 | 14 | key: suspect - tritium (1 proton, 2 neutrons) losing a neutron becomes deuterium, which is still hydrogen, so idrogeno is defensible while the key says no option is correct |
 | CHIM-C02-NCOM-021 | CHIM | 2 | 21 | 29 | key: suspect - the number of orbitals for a given n is indeed n squared, so as written all five statements are correct and none is NOT correct |
+| CHIM-C03-NCOM-133 | CHIM | 3 | 133 | 53 | key: suspect - the jump after the second ionization energy shows two valence electrons (statement 1), and the third listed value by definition corresponds to X2+ to X3+ plus electron (statement 2), so statements 1 and 2 are both correct while the key says only 1 |
 
-## ocr (7)
+## missing (2)
+
+| id | subj | ch | q | page | flag |
+|---|---|---|---|---|---|
+| CHIM-C03-NCOM-136 | CHIM | 3 | 136 | 53 | missing: the table of successive ionization energies is absent from the card text, so the group cannot be deduced from the jump between values |
+| CHIM-C03-NCOM-137 | CHIM | 3 | 137 | 54 | missing: the table of the first eight ionization energies is garbled into unreadable fragments, so the group cannot be deduced from the sequence |
+
+## ocr (26)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -28,4 +50,23 @@
 | CHIM-C02-NCOM-026 | CHIM | 2 | 26 | 29 | ocr: exponent notation in several options is garbled (s°p°, s4, s'p'), so the competing configurations cannot be read reliably |
 | CHIM-C02-NCOM-035 | CHIM | 2 | 35 | 30 | ocr: key option A reads 35,3p, with the orbital label 3s garbled as the number 35 |
 | CHIM-C02-NCOM-037 | CHIM | 2 | 37 | 31 | ocr: orbital labels in most options are garbled (Gp, Ss, Sp), with level numbers lost or replaced by letters, so the orbitals cannot be compared reliably |
+| CHIM-C03-COMP-014 | CHIM | 3 | 14 | 59 | ocr: the exponent in 6,022x10”* is garbled in the sentence defining the mole, so the number of particles cannot be read |
+| CHIM-C03-COMP-022 | CHIM | 3 | 22 | 60 | ocr: the group range in the sentence reads dal 3B all 88, with the final group label garbled |
+| CHIM-C03-COMP-023 | CHIM | 3 | 23 | 60 | ocr: the example at the end of the sentence reads Il slilclo, a garbled element name |
+| CHIM-C03-COMP-024 | CHIM | 3 | 24 | 60 | ocr: the cloze term BA and the surrounding group notation tA- BA are garbled, so the group range cannot be read |
+| CHIM-C03-NCOM-031 | CHIM | 3 | 31 | 43 | ocr: key option E is heavily garbled (6x 1024 fo3 Ordo tra gh elementi latavobò pericdica 43) and the intended number of molecules cannot be read |
+| CHIM-C03-COMP-033 | CHIM | 3 | 33 | 60 | ocr: the diatomic formulas listed in the sentence are garbled (F,, C,,, Br₂ e 1₂), with lost letters and subscripts |
+| CHIM-C03-NCOM-037 | CHIM | 3 | 37 | 44 | ocr: the formula in the stem reads H,S0, with lost subscripts, so the first substance cannot be identified reliably |
+| CHIM-C03-NCOM-074 | CHIM | 3 | 74 | 47 | ocr: key option A is the digit 1 instead of the iodine symbol I (1/I confusion), so as written no listed symbol can be read reliably as a halogen |
+| CHIM-C03-NCOM-088 | CHIM | 3 | 88 | 49 | ocr: the isotope in the stem is printed only as GX, with its mass and atomic numbers lost, so the position of element X cannot be determined |
+| CHIM-C03-NCOM-141 | CHIM | 3 | 141 | 54 | ocr: key option C is garbled (possledonalo stesso numero di elettro. ni), so the intended statement about outer electrons cannot be read reliably |
+| CHIM-C03-NCOM-179 | CHIM | 3 | 179 | 58 | ocr: halogen symbols in the stem list and in the keyed option are garbled (CI₂ 1 in the stem, E CI, Br as key), so the set of halogens cannot be read reliably |
+| CHIM-C04-NCOM-003 | CHIM | 4 | 3 | 64 | ocr: the keyed option reads reticolo cristallino di font, with the word for ions garbled, so the key text cannot be trusted as written |
+| CHIM-C04-NCOM-009 | CHIM | 4 | 9 | 65 | ocr: the stem prints HCt in place of HCl and a stray superscript, garbling the formula of the gas |
+| CHIM-C04-COMP-012 | CHIM | 4 | 12 | 74 | ocr: the ions in the sentence are printed as Na’ e CT, with charges and the chloride symbol garbled |
+| CHIM-C04-NCOM-012 | CHIM | 4 | 12 | 65 | ocr: the sigma and pi symbols in all options are replaced by ordinary letters (o, n, a), so the bond types cannot be read reliably |
+| CHIM-C04-COMP-025 | CHIM | 4 | 25 | 75 | ocr: the sentence calls the lattice fonico instead of ionico, garbling the adjective that describes the ionic lattice |
+| CHIM-C04-COMP-030 | CHIM | 4 | 30 | 75 | ocr: one example name in the sentence is printed Auoruro in place of fluoruro, garbling the anion nomenclature example |
+| CHIM-C04-NCOM-051 | CHIM | 4 | 51 | 69 | ocr: the keyed option says gruppo f for one of the two element groups, garbling the group label on which the ionic indication depends |
+| CHIM-C04-NCOM-057 | CHIM | 4 | 57 | 69 | ocr: the keyed option prints the digit 0 in place of the oxygen symbol O (0/O confusion), garbling the stated cause |
 

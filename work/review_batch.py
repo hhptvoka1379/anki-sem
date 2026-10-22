@@ -10,11 +10,12 @@ rows = con.execute(
     "WHERE ord BETWEEN ? AND ? ORDER BY ord", (lo, hi)).fetchall()
 for r in rows:
     print(f"== ord={r['ord']} {r['id']} [{r['status']}]")
-    print("Q:", r["question"])
+    q = r["question"] or ""
+    print("Q:", q if len(q) <= 160 else q[:160] + " …")
     if r["answer"]:
         print("KEY:", r["answer"], "|", r["answer_text"])
     else:
-        print("TERM:", r["answer_text"], "| BACK:", r["back_stem"])
+        print("TERM:", r["answer_text"])
     if r["reason"]:
         print(f"REASON ({len(r['reason'])}):", r["reason"])
     if r["flags"]:
