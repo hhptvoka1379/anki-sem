@@ -1,5 +1,5 @@
 {
-  "last_cp_bucket": 1,
-  "last_val100_bucket": 2,
-  "last_commit": "none"
+  "last_cp_bucket": 2,
+  "last_val100_bucket": 5,
+  "last_commit": "c23c834 (checkpoint: 260 done / 10 flagged / 5632 pending)"
 }
