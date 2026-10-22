@@ -1,6 +1,6 @@
-# Flagged rows (45)
+# Flagged rows (65)
 
-## ambiguous (13)
+## ambiguous (16)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -17,6 +17,9 @@
 | CHIM-C03-NCOM-113 | CHIM | 3 | 113 | 51 | ambiguous: alkali metals both are not oxidants and give up electrons being oxidized, so two options are true |
 | CHIM-C03-NCOM-157 | CHIM | 3 | 157 | 56 | ambiguous: lead is an element, but diamond is also an elemental substance made only of carbon, so the wording admits two defensible readings |
 | CHIM-C04-NCOM-040 | CHIM | 4 | 40 | 68 | ambiguous: two nitrogen atoms form multiple bonds, which are also covalent bonds, so both the generic and the specific options are true |
+| CHIM-C04-NCOM-083 | CHIM | 4 | 83 | 72 | ambiguous: methane carbon is sp3, but the central sulfur of sulfuric acid is also tetrahedral and commonly described as sp3, so the atom whose hybridization is meant is not specified |
+| CHIM-C05-NCOM-002 | CHIM | 5 | 2 | 82 | ambiguous: iodine molecules interact by dispersion forces, but carbon dioxide molecules are also nonpolar overall and are commonly classified as interacting through instantaneous dipole induced dipole forces, so exclusivity is not clear |
+| CHIM-C05-NCOM-016 | CHIM | 5 | 16 | 83 | ambiguous: liquid particles have intermolecular attractions both greater than in the gas state and smaller than in the solid state, so two listed comparisons are true |
 
 ## chem (1)
 
@@ -32,14 +35,15 @@
 | CHIM-C02-NCOM-021 | CHIM | 2 | 21 | 29 | key: suspect - the number of orbitals for a given n is indeed n squared, so as written all five statements are correct and none is NOT correct |
 | CHIM-C03-NCOM-133 | CHIM | 3 | 133 | 53 | key: suspect - the jump after the second ionization energy shows two valence electrons (statement 1), and the third listed value by definition corresponds to X2+ to X3+ plus electron (statement 2), so statements 1 and 2 are both correct while the key says only 1 |
 
-## missing (2)
+## missing (3)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
 | CHIM-C03-NCOM-136 | CHIM | 3 | 136 | 53 | missing: the table of successive ionization energies is absent from the card text, so the group cannot be deduced from the jump between values |
 | CHIM-C03-NCOM-137 | CHIM | 3 | 137 | 54 | missing: the table of the first eight ionization energies is garbled into unreadable fragments, so the group cannot be deduced from the sequence |
+| CHIM-C05-NCOM-029 | CHIM | 5 | 29 | 85 | missing: the stem refers to three containers shown in a figure, but no figure or description of their contents/states is present on the card |
 
-## ocr (26)
+## ocr (42)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -69,4 +73,20 @@
 | CHIM-C04-COMP-030 | CHIM | 4 | 30 | 75 | ocr: one example name in the sentence is printed Auoruro in place of fluoruro, garbling the anion nomenclature example |
 | CHIM-C04-NCOM-051 | CHIM | 4 | 51 | 69 | ocr: the keyed option says gruppo f for one of the two element groups, garbling the group label on which the ionic indication depends |
 | CHIM-C04-NCOM-057 | CHIM | 4 | 57 | 69 | ocr: the keyed option prints the digit 0 in place of the oxygen symbol O (0/O confusion), garbling the stated cause |
+| CHIM-C05-NCOM-008 | CHIM | 5 | 8 | 82 | ocr: several formulae have garbled or missing subscripts (CHF with superscript 4, CHCl and CHBr followed by commas), so the compared haloform series cannot be read reliably |
+| CHIM-C05-NCOM-017 | CHIM | 5 | 17 | 83 | ocr: two candidate formulae are garbled as HS and CH with superscript 4, leaving the identities to be ranked for boiling point unreliable |
+| CHIM-C05-NCOM-024 | CHIM | 5 | 24 | 84 | ocr: the keyed separation technique is broken into Di stili azione, garbling the name of the technique on which the answer depends |
+| CHIM-C05-NCOM-025 | CHIM | 5 | 25 | 84 | ocr: phosphine and several formulae are repeatedly printed with missing subscripts (PH. in the stem and PH, in the keyed option), so the compared species are not faithfully represented |
+| CHIM-C06-NCOM-003 | CHIM | 6 | 3 | 94 | ocr: the keyed molarity is printed as 04M without the decimal separator, garbling the numerical result of the calculation |
+| CHIM-C06-NCOM-015 | CHIM | 6 | 15 | 95 | ocr: the compound in the stem is printed with an exclamation mark in place of the final letter of the chloride symbol, garbling the formula to be used |
+| CHIM-C06-NCOM-023 | CHIM | 6 | 23 | 96 | ocr: the keyed option garbles the volume unit as un mi instead of one millilitre, and the amount unit is also misprinted, so the calculated statement cannot be read reliably |
+| CHIM-C06-NCOM-038 | CHIM | 6 | 38 | 98 | ocr: the keyed masses contain garbled factors and exponents (60 = 107? and 36 x 10 degree), so the numerically correct pair cannot be read as printed |
+| CHIM-C06-NCOM-050 | CHIM | 6 | 50 | 99 | ocr: the sucrose formula subscripts are printed as commas and the bar mass begins with the letter S in S0g, so the data required for the molecule count are garbled |
+| CHIM-C06-NCOM-059 | CHIM | 6 | 59 | 100 | ocr: the millilitre unit is printed as mi in both the stem and the keyed final volume, garbling the units used in the dilution calculation |
+| CHIM-C06-NCOM-070 | CHIM | 6 | 70 | 101 | ocr: the keyed ionic products are printed with an apostrophe in place of the sodium charge and no visible chloride charge, garbling the ions produced |
+| CHIM-C06-NCOM-071 | CHIM | 6 | 71 | 101 | ocr: one solvent option is printed as the meaningless word pratico, so it cannot be established whether a suitable polar/protic solvent was actually offered before accepting nessuna |
+| CHIM-C06-NCOM-074 | CHIM | 6 | 74 | 101 | ocr: several formulae and units in the samples are garbled (NaCi, BaCl with a comma, HC?, mi), so the chloride mole counts cannot be reproduced reliably from the printed options |
+| CHIM-C06-NCOM-088 | CHIM | 6 | 88 | 103 | ocr: the symbol offered in one option is rendered only as a quotation mark, evidently losing the Greek pi used for osmotic pressure, so the keyed none-of-the-above cannot be trusted as printed |
+| CHIM-C06-NCOM-099 | CHIM | 6 | 99 | 104 | ocr: one supposedly true option names chromium-like Cr ions instead of chloride ions, creating a second false statement in a NOT-true question |
+| CHIM-C07-NCOM-011 | CHIM | 7 | 11 | 114 | ocr: the equation formulae are garbled in the stem (comma in place of a subscript, plus and minus signs replacing subscripts in the products), so the balancing task cannot be read reliably |
 

@@ -8,7 +8,7 @@
 - Zip was on main (commit d06dd4e), not on this branch's base; retrieved with
   `git show main:uncommented_questions_workpack.zip` into work/.
 - Initial DB query: pending = 5902 (matches TASK.md section 2.3).
-- Current counts (from DB query): done = 505, flagged = 45, pending = 5352.
-- Last processed ord = 549; next pending ord = 550.
-- Last checkpoint commit: c1ec71b (HEAD; checkpoint commits are the 'checkpoint:' ones).
+- Current counts (from DB query): done = 760, flagged = 65, pending = 5077.
+- Last processed ord = 824; next pending ord = 825.
+- Last checkpoint commit: 15a1e93 (HEAD; checkpoint commits are the 'checkpoint:' ones).
 - Open questions asked to the user: none.
