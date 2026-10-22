@@ -1,6 +1,6 @@
-# Flagged rows (38)
+# Flagged rows (61)
 
-## ambiguous (6)
+## ambiguous (7)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -10,21 +10,24 @@
 | CHIM-C03-NCOM-048 | CHIM | 3 | 48 | 45 | ambiguous: per 1 mole di gas ideale a fissati P e T sono vere sia l'opzione D ('occupa sempre lo stesso volume') sia l'opzione E ('contiene un numero di particelle pari a 6,022 × 10²³') |
 | CHIM-C03-NCOM-086 | CHIM | 3 | 86 | 48 | ambiguous: per gli alogeni (configurazione ns² np⁵) sono corrette sia D ('hanno la tendenza a formare ioni negativi') sia E ('hanno la tendenza ad acquistare un elettrone') |
 | CHIM-C04-NCOM-040 | CHIM | 4 | 40 | 68 | ambiguous: due atomi di azoto formano tra loro legami che sono sia covalenti (opzione A) sia multipli come N=N e N≡N (opzione C) |
+| CHIM-C05-NCOM-016 | CHIM | 5 | 16 | 83 | ambiguous: per un liquido le forze di attrazione intermolecolari sono contemporaneamente maggiori di quelle nello stato gassoso (C) e minori di quelle nello stato solido (E) |
 
-## key (2)
+## key (3)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
 | CHIM-C02-NCOM-021 | CHIM | 2 | 21 | 29 | key: suspect - per ogni valore di n il numero di orbitali possibili è realmente n² (2n² è il numero massimo di elettroni), oppure un errore OCR ha alterato la formula nell'opzione B |
 | CHIM-C03-NCOM-133 | CHIM | 3 | 133 | 53 | key: suspect - anche l'affermazione 2 è vera poiché la terza energia di ionizzazione (7730 kJ mol⁻¹) corrisponde a X²⁺(g) → X³⁺(g) + e⁻, rendendo corretta D ('Solo 1 e 2') anziché E ('Solo 1') |
+| CHIM-C05-NCOM-040 | CHIM | 5 | 40 | 86 | key: suspect - la solubilità di HCl in acqua è dovuta alla ionizzazione acido-base completa (HCl + H₂O → H₃O⁺ + Cl⁻, con legame covalente dativo e idratazione ione-dipolo), non alla semplice formazione di legami idrogeno |
 
-## missing (1)
+## missing (2)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
 | CHIM-C03-NCOM-136 | CHIM | 3 | 136 | 53 | missing: tabella dei valori delle energie di ionizzazione assente nell'enunciato ('/_/') |
+| CHIM-C05-NCOM-029 | CHIM | 5 | 29 | 85 | missing: figura dei tre recipienti A, B e C citata nell'enunciato assente nella carta |
 
-## ocr (29)
+## ocr (49)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -57,4 +60,24 @@
 | CHIM-C04-NCOM-012 | CHIM | 4 | 12 | 65 | ocr: lettere greche σ e π corrotte in 'o'/'a' e 'n' in tutte le opzioni e nella chiave C ('Daun legame o e da due legami n') |
 | CHIM-C04-NCOM-029 | CHIM | 4 | 29 | 67 | ocr: risposta D corrotta ('CCl, è una molecola tetraedrica' invece di 'CCl₄') e opzione E corrotta ('atomo di e' invece di 'atomo di C') |
 | CHIM-C04-NCOM-051 | CHIM | 4 | 51 | 69 | ocr: numero romano nella risposta D corrotto in lettera 'f' ('appartiene al gruppo f e l'altro al gruppo VII' al posto di 'gruppo I') |
+| CHIM-C04-NCOM-056 | CHIM | 4 | 56 | 69 | ocr: coppie di simboli chimici corrotte in tutte le opzioni e nella chiave C ('Kecl' per 'K e Cl', 'Stel' per 'S e Cl') |
+| CHIM-C04-NCOM-063 | CHIM | 4 | 63 | 70 | ocr: formula dello ione ammonio nell'enunciato corrotta in 'NHj' anziché 'NH₄⁺' |
+| CHIM-C05-NCOM-008 | CHIM | 5 | 8 | 82 | ocr: formule chimiche nelle opzioni A ('CHF⁴'), B ('CHCL,') e C ('CHBr,') corrotte dalla scansione |
+| CHIM-C05-NCOM-017 | CHIM | 5 | 17 | 83 | ocr: formule chimiche corrotte nelle opzioni C ('HS' per 'H₂S') e D ('CH⁴' per 'CH₄') |
+| CHIM-C05-NCOM-024 | CHIM | 5 | 24 | 84 | ocr: risposta E spezzata dalla scansione ('Di stili azione' al posto di 'Distillazione') |
+| CHIM-C05-NCOM-025 | CHIM | 5 | 25 | 84 | ocr: formule chimiche corrotte nell'enunciato ('PH.'), nelle opzioni ('NH₁', 'NH³', 'PH,') e nella risposta D ('intermotecolari ... PH,') |
+| CHIM-C06-NCOM-003 | CHIM | 6 | 3 | 94 | ocr: virgola decimale omessa nella chiave C ('04M' al posto di '0,4 M') e opzione A corrotta ('IM' per '1 M') |
+| CHIM-C06-NCOM-015 | CHIM | 6 | 15 | 95 | ocr: formula nell'enunciato corrotta in 'NH₄C!' al posto di 'NH₄Cl' e opzioni A ('26,73R') ed E ('106,92') danneggiate |
+| CHIM-C06-NCOM-023 | CHIM | 6 | 23 | 96 | ocr: opzioni C, D e risposta D corrotte dalla scansione ('0,0001 molt di soluto in un mi di soluzione' al posto di '0,0001 moli ... in un mL') |
+| CHIM-C06-NCOM-029 | CHIM | 6 | 29 | 97 | ocr: dati di massa atomica nell'enunciato corrotti dalla scansione ('H = 1u⁻0= 16 u; Na = 23 uj') |
+| CHIM-C06-NCOM-038 | CHIM | 6 | 38 | 98 | ocr: potenze di dieci nella risposta D gravemente corrotte dalla scansione ('60 = 107? gdi acido acetico e 36 x 10° g') |
+| CHIM-C06-NCOM-042 | CHIM | 6 | 42 | 98 | ocr: enunciato e opzione E corrotti dalla scansione ('H,S0, ... soluzione acquosa² M ... 24,52') |
+| CHIM-C06-NCOM-050 | CHIM | 6 | 50 | 99 | ocr: formula del saccarosio e massa della barretta corrotte nell'enunciato ('C,,H,,0,,' per 'C₁₂H₂₂O₁₁' e 'S0g' per '50 g') |
+| CHIM-C06-NCOM-070 | CHIM | 6 | 70 | 101 | ocr: simboli chimici nelle opzioni C ('Nati, CIOH') ed E / risposta ('Na', Cl' al posto di 'Na⁺, Cl⁻') corrotti dalla scansione |
+| CHIM-C06-NCOM-071 | CHIM | 6 | 71 | 101 | ocr: opzione D corrotta in 'pratico' al posto di 'aprotico' o 'protico' |
+| CHIM-C06-NCOM-074 | CHIM | 6 | 74 | 101 | ocr: formule chimiche e unità corrotte nelle opzioni B ('NaCi'), D ('250 mi di BaCl,') ed E ('HC?') |
+| CHIM-C06-NCOM-088 | CHIM | 6 | 88 | 103 | ocr: opzione C ridotta al singolo segno tipografico '‘' dalla scansione |
+| CHIM-C06-NCOM-099 | CHIM | 6 | 99 | 104 | ocr: opzione A corrotta in 'ioni Na’ e joni Cr' al posto di 'ioni Na⁺ e ioni Cl⁻', rendendo falsa anche l'opzione A |
+| CHIM-C07-COMP-004 | CHIM | 7 | 4 | 120 | ocr: simboli di stato corrotti nell'enunciato in '(s, f₄ g. aq)' al posto di '(s, l, g, aq)' |
+| CHIM-C07-NCOM-011 | CHIM | 7 | 11 | 114 | ocr: formule chimiche dell'equazione nell'enunciato gravemente corrotte ('Ca(OH), + H₂SO₄ — CaSO₊ + H₋0') |
 
