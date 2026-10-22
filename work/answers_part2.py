@@ -42,7 +42,8 @@ m('CHIM-C10-COMM-024','D','high',
 m('CHIM-C10-NCOM-017','B','high',
   "L'acido nitroso ha formula HNO₂, con azoto in stato di ossidazione +3; HNO₃ è l'acido nitrico (N +5), NO₂ è l'anidride nitrosa. La formula corretta è quindi HNO₂.")
 m('CHIM-C10-NCOM-018','E','high',
-  "L'anidride (ossido acido) corrispondente all'acido carbonico H₂CO₃ si ottiene per perdita di una molecola d'acqua: H₂CO₃ → H₂O + CO₂. La CO₂ è quindi l'anidride carbonica; CO è il monossido di carbonio, che non dà l'acido carbonico.")
+  "L'anidride (ossido acido) corrispondente all'acido carbonico H₂CO₃ si ottiene per perdita di una molecola d'acqua: H₂CO₃ → H₂O + CO₂. La CO₂ è quindi l'anidride carbonica; CO è il monossido di carbonio, che non dà l'acido carbonico.",
+  ['ambiguous'])
 m('CHIM-C10-NCOM-020','C','high',
   "Nell'H₃PO₃ solo due atomi di idrogeno sono legati all'ossigeno e quindi ionizzabili; il terzo è legato direttamente al fosforo e non è acido. L'acido fosforoso è perciò diprotico.")
 m('CHIM-C10-NCOM-080','A','high',

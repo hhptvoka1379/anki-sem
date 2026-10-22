@@ -1,0 +1,60 @@
+{
+  "rows": 257,
+  "mcq": 239,
+  "cloze": 18,
+  "exact_answer_text": 239,
+  "normalised_answer_text": 239,
+  "min_reason_len": 125,
+  "sha256_full": "97eecd0a57c1d07c329cc071e9f3ae9ccff205d7bb7c816d1d15a88e95fab166",
+  "sha256_concat": "97eecd0a57c1d07c329cc071e9f3ae9ccff205d7bb7c816d1d15a88e95fab166",
+  "chunks": [
+    "chunk_000.jsonl",
+    "chunk_001.jsonl",
+    "chunk_002.jsonl"
+  ],
+  "results": [
+    {
+      "check": "a",
+      "requirement": "257 lines, 257 unique ids, same id set and order as NEEDED.jsonl",
+      "observed": "257 lines, 257 unique, order match True",
+      "status": "PASS"
+    },
+    {
+      "check": "b",
+      "requirement": "type matches the request for all 257",
+      "observed": "mismatches: none",
+      "status": "PASS"
+    },
+    {
+      "check": "c",
+      "requirement": "MCQ: letter in A-E and answer_text == options[letter] (case/space/punct insensitive)",
+      "observed": "239/239 byte-identical, 239/239 equal after normalisation, 0 mismatched ",
+      "status": "PASS"
+    },
+    {
+      "check": "d",
+      "requirement": "cloze: len(answers) == blanks",
+      "observed": "18/18 ok",
+      "status": "PASS"
+    },
+    {
+      "check": "e",
+      "requirement": "confidence in {high,medium,low}; flags subset of the allowed set",
+      "observed": "violations: none",
+      "status": "PASS"
+    },
+    {
+      "check": "f",
+      "requirement": "reason >= 25 chars on every row",
+      "observed": "min 125 chars",
+      "status": "PASS"
+    },
+    {
+      "check": "g",
+      "requirement": "chunk concatenation == full file, same sha256",
+      "observed": "3 chunks, sha256 97eecd0a57c1d07c… == 97eecd0a57c1d07c…: True",
+      "status": "PASS"
+    }
+  ],
+  "all_pass": true
+}

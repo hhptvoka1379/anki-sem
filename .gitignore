@@ -1,0 +1,8 @@
+# Python bytecode from work/*.py
+__pycache__/
+*.pyc
+
+# Source book scan: not part of the answer-key deliverable (23 MB, ~98% of the archive).
+# Kept out of the branch; still available in history (commit 262ba0f) and on disk at
+# /home/user/source-scan/ for anyone re-checking a page by eye.
+Eserciziario Unico per il Semestre Filtro  2-lite-trim.pdf

@@ -1,0 +1,36 @@
+{
+  "rows": 257,
+  "mcq": 239,
+  "cloze": 18,
+  "printed_text_rows": 147,
+  "confidence": {
+    "high": 246,
+    "medium": 11,
+    "low": 0
+  },
+  "flags": {
+    "needs_figure": 9,
+    "ambiguous": 2,
+    "no_correct_option": 0,
+    "multiple_correct": 2,
+    "typo": 3,
+    "out_of_syllabus": 0
+  },
+  "part_modules": [
+    "answers_part1",
+    "answers_part2",
+    "answers_part3",
+    "answers_part4",
+    "answers_part5",
+    "answers_part6"
+  ],
+  "inputs": {
+    "needed": "/tmp/subset2/answer_key_request/NEEDED.jsonl",
+    "overrides": "/home/user/anki-sem/work/answer_text_fixes.py",
+    "parts_dir": "/home/user/anki-sem/work"
+  },
+  "outputs": {
+    "out": "/home/user/anki-sem/answer_key_output.jsonl",
+    "chunks_dir": "/home/user/anki-sem/answer_key_chunks"
+  }
+}
