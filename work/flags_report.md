@@ -1,6 +1,6 @@
-# Flagged rows (142)
+# Flagged rows (168)
 
-## ambiguous (9)
+## ambiguous (11)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -13,6 +13,8 @@
 | CHIM-C05-NCOM-016 | CHIM | 5 | 16 | 83 | ambiguous: per un liquido le forze di attrazione intermolecolari sono contemporaneamente maggiori di quelle nello stato gassoso (C) e minori di quelle nello stato solido (E) |
 | CHIM-C11-NCOM-016 | CHIM | 11 | 16 | 171 | ambiguous: sia A ('protoni' secondo Brønsted-Lowry) sia D ('ioni positivi H⁺' secondo Arrhenius) sono definizioni chimicamente esatte ed equivalenti |
 | CHIM-C11-NCOM-097 | CHIM | 11 | 97 | 179 | ambiguous: sia B ('[OH⁻] > [H₃O⁺]') sia E ('[H⁺] < [OH⁻]') esprimono la medesima disuguaglianza chimica vera a pH > 7 |
+| CHIM-C12-NCOM-078 | CHIM | 12 | 78 | 202 | ambiguous: sia D ('No, mai') sia E ('Gli atomi di idrogeno quaternari non esistono', poiché un carbonio quaternario lega 4 atomi di C e 0 di H) sono entrambe vere; inoltre A contiene 'Si₄' |
+| CHIM-C12-NCOM-085 | CHIM | 12 | 85 | 202 | ambiguous: nel metano CH₄ (simmetria tetraedrica Td) i quattro atomi di idrogeno sono sia 'metilici' (A) sia perfettamente 'equivalenti' (E) |
 
 ## key (3)
 
@@ -30,7 +32,7 @@
 | CHIM-C05-NCOM-029 | CHIM | 5 | 29 | 85 | missing: figura dei tre recipienti A, B e C citata nell'enunciato assente nella carta |
 | CHIM-C08-NCOM-001 | CHIM | 8 | 1 | 125 | missing: l'enunciato fa riferimento a un grafico concentrazione-tempo ('il grafico riporta come varia...') non presente nella scheda |
 
-## ocr (127)
+## ocr (151)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -161,4 +163,28 @@
 | CHIM-C11-NCOM-110 | CHIM | 11 | 110 | 180 | ocr: formule chimiche nelle opzioni D ('[11,0%] > 7 M') ed E / risposta ('[H30*] > [OH]') gravemente corrotte |
 | CHIM-C11-NCOM-121 | CHIM | 11 | 121 | 181 | ocr: esponente del numero di moli nell'enunciato illeggibile ('10°* moli di HCl') |
 | CHIM-C11-NCOM-127 | CHIM | 11 | 127 | 182 | ocr: esponente di [OH⁻] corrotto da '10⁻⁸ M' a '10⁻⁹ M' (e 'H⁴' per 'H⁺'), rendendo [H⁺][OH⁻] = 10⁻¹⁴ compatibile con Kw e rendendo vera A ('ha pH 5,0') contro la chiave D ('non esiste') |
+| CHIM-C11-NCOM-129 | CHIM | 11 | 129 | 182 | ocr: valore del pH nell'enunciato corrotto in apice 'pH³' al posto di 'pH = 3' |
+| CHIM-C11-NCOM-144 | CHIM | 11 | 144 | 184 | ocr: formula ionica nella risposta B corrotta in 'un numero di ioni H j0° inferiore al numero di ioni OH”' |
+| CHIM-C11-NCOM-148 | CHIM | 11 | 148 | 184 | ocr: opzione E corrotta in '\asica', e anche B ('ipotonica', ~168 mOsm/L per KBr 1% contro ~300 mOsm/L del plasma) è vera insieme a D ('neutra') |
+| CHIM-C11-NCOM-156 | CHIM | 11 | 156 | 185 | ocr: concentrazione nell'enunciato corrotta in apice 'soluzione acquosa² molare' al posto di 'soluzione acquosa 2 molare' |
+| CHIM-C11-NCOM-162 | CHIM | 11 | 162 | 185 | ocr: formula del catione sodio nella risposta D corrotta in 'Na°*' al posto di 'Na⁺' |
+| CHIM-C11-NCOM-170 | CHIM | 11 | 170 | 186 | ocr: formula del cloruro di ammonio nell'enunciato corrotta in 'NH₁ CI' al posto di 'NH₄Cl' |
+| CHIM-C12-NCOM-021 | CHIM | 12 | 21 | 197 | ocr: pedici mancanti nella formula di struttura dell'enunciato 'CH,=CHCH=CH,' al posto di 'CH₂=CHCH=CH₂' |
+| CHIM-C12-COMP-029 | CHIM | 12 | 29 | 225 | ocr: formula dell'anidride carbonica corrotta nell'enunciato in 'CO:' al posto di 'CO₂' |
+| CHIM-C12-COMP-032 | CHIM | 12 | 32 | 225 | ocr: formula molecolare del butano corrotta nell'enunciato in '(C+H10)' al posto di '(C₄H₁₀)' |
+| CHIM-C12-COMP-036 | CHIM | 12 | 36 | 225 | ocr: simbolo del triplo legame corrotto nell'enunciato in 'tripli legami C=C' al posto di 'C≡C' |
+| CHIM-C12-NCOM-038 | CHIM | 12 | 38 | 198 | ocr: opzioni A / risposta ('gli ai cali' per 'gli alcoli') e B ('gli ai cani' per 'gli alcani') gravemente corrotte |
+| CHIM-C12-COMP-049 | CHIM | 12 | 49 | 226 | ocr: formula del gruppo amminico dell'anilina corrotta nell'enunciato in '—NH₃' al posto di '—NH₂' |
+| CHIM-C12-COMP-055 | CHIM | 12 | 55 | 226 | ocr: formula del gruppo solfonico corrotta nell'enunciato in '(-SO,H)' al posto di '(-SO₃H)' |
+| CHIM-C12-NCOM-059 | CHIM | 12 | 59 | 200 | ocr: simbolo greco 'σ' nella risposta corretta D corrotto nella singola lettera 'a' |
+| CHIM-C12-COMP-067 | CHIM | 12 | 67 | 226 | ocr: gruppo aldeidico corrotto con carica negativa spuria '-CHO⁻' al posto di '-CHO.' |
+| CHIM-C12-NCOM-068 | CHIM | 12 | 68 | 201 | ocr: simbolo greco 'π' nella risposta corretta B corrotto in 'elettroni n delocalizzati' |
+| CHIM-C12-NCOM-071 | CHIM | 12 | 71 | 201 | ocr: gruppo metilenico corrotto nella risposta C in '-CH₃' al posto di '-CH₂-', rendendo chimicamente falsa C e vera A ('Nessuna delle altre risposte è corretta') |
+| CHIM-C12-NCOM-081 | CHIM | 12 | 81 | 202 | ocr: formula del propano corrotta nell'enunciato in 'CH₃-CH₃-CH₃' (carbonio centrale pentavalente) al posto di 'CH₃-CH₂-CH₃' |
+| CHIM-C12-NCOM-108 | CHIM | 12 | 108 | 204 | ocr: simboli greci dei legami 'σ' e 'π' corrotti in tutte le opzioni incluso C ('Tutti a', 'Tutti 7', 'A volte cea volte n') |
+| CHIM-C12-NCOM-121 | CHIM | 12 | 121 | 205 | ocr: simboli greci dei legami corrotti nelle opzioni e nella risposta A ('o', '‘en', 'n' al posto di 'σ', 'σ e π', 'π') |
+| CHIM-C12-NCOM-129 | CHIM | 12 | 129 | 206 | ocr: formula molecolare del cicloesano corrotta nell'enunciato in '(CH 2)' al posto di '(C₆H₁₂)' |
+| CHIM-C12-NCOM-134 | CHIM | 12 | 134 | 207 | ocr: simboli greci 'σ' e 'π' corrotti nelle opzioni e nella risposta C ('un legame oe un legame n') |
+| CHIM-C12-NCOM-135 | CHIM | 12 | 135 | 207 | ocr: simboli greci 'σ' e 'π' corrotti in tutte le opzioni incluso E ('un legame o e due legami n', 'tre legami') |
+| CHIM-C12-NCOM-141 | CHIM | 12 | 141 | 207 | ocr: simbolo del triplo legame corrotto in '=' in tutte le opzioni incluso D ('CH₃-C=CH' anziché 'CH₃-C≡CH', violando la tetravalenza del carbonio) |
 
