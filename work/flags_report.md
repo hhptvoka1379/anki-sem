@@ -1,6 +1,6 @@
-# Flagged rows (207)
+# Flagged rows (213)
 
-## ambiguous (11)
+## ambiguous (12)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -15,6 +15,7 @@
 | CHIM-C11-NCOM-097 | CHIM | 11 | 97 | 179 | ambiguous: sia B ('[OH⁻] > [H₃O⁺]') sia E ('[H⁺] < [OH⁻]') esprimono la medesima disuguaglianza chimica vera a pH > 7 |
 | CHIM-C12-NCOM-078 | CHIM | 12 | 78 | 202 | ambiguous: sia D ('No, mai') sia E ('Gli atomi di idrogeno quaternari non esistono', poiché un carbonio quaternario lega 4 atomi di C e 0 di H) sono entrambe vere; inoltre A contiene 'Si₄' |
 | CHIM-C12-NCOM-085 | CHIM | 12 | 85 | 202 | ambiguous: nel metano CH₄ (simmetria tetraedrica Td) i quattro atomi di idrogeno sono sia 'metilici' (A) sia perfettamente 'equivalenti' (E) |
+| BIO-C02-NCOM-107 | BIO | 2 | 107 | 370 | ambiguous: oltre alla metilazione istonica (E: es. H3K4me3 attivante contro H3K9me3/H3K27me3 repressiva), anche l'ubiquitinazione istonica (D: H2BK120ub1 attivante contro H2AK119ub1 repressiva in PRC1) attiva o reprime la trascrizione a seconda del residuo |
 
 ## key (10)
 
@@ -44,7 +45,7 @@
 | BIO-C01-NCOM-091 | BIO | 1 | 91 | 326 | missing: l'enunciato chiede di identificare il tipo cellulare rappresentato in una figura non allegata alla scheda |
 | BIO-C01-NCOM-263 | BIO | 1 | 263 | 346 | missing: l'enunciato rimanda allo studio di un grafico dell'albero evolutivo non allegato alla scheda |
 
-## ocr (178)
+## ocr (183)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -226,4 +227,9 @@
 | BIO-C01-NCOM-212 | BIO | 1 | 212 | 339 | ocr: simboli isotopici dell'azoto nell'enunciato multiplo-corrotti in '!5N', '"N', '‘5N' e '1*N' al posto di '¹⁵N' e '¹⁴N' |
 | BIO-C02-NCOM-005 | BIO | 2 | 5 | 359 | ocr: valore numerico nella risposta A corrotto per perdita della virgola decimale in '05Y' al posto di '0,5Y' |
 | BIO-C02-NCOM-006 | BIO | 2 | 6 | 359 | ocr: unità di misura della lunghezza del cromosoma nell'enunciato corrotta in '4 pm' (picometri, 10⁻¹² m) anziché '4 µm' (micrometri, 10⁻⁶ m), rendendo errata di un fattore 10⁶ l'uguaglianza con '40.000 um cioè 4 cm' |
+| BIO-C03-COMP-011 | BIO | 3 | 11 | 410 | ocr: bersaglio del cloze corrotto in 'I' al posto di 'III' (nei procarioti l'enzima principale della sintesi replicativa a ~1000 nt/s è la DNA polimerasi III, mentre la I rimuove i primer) |
+| BIO-C03-COMP-013 | BIO | 3 | 13 | 410 | ocr: lettere greche delle DNA polimerasi eucariotiche corrotte nell'enunciato e nel bersaglio del cloze ('a', '6', 'e' al posto di 'α', 'δ', 'ε') |
+| BIO-C03-COMP-042 | BIO | 3 | 42 | 412 | ocr: lettera greca 'σ' (fattore sigma) corrotta nell'enunciato in 'fattore o' ('necessita di un fattore o per il riconoscimento del promotore') |
+| BIO-C03-COMP-045 | BIO | 3 | 45 | 412 | ocr: nome dell'enzima codificato da lacZ corrotto nell'enunciato in 'f-galattosidasi' al posto di 'β-galattosidasi' |
+| BIO-C03-COMP-046 | BIO | 3 | 46 | 412 | ocr: bersaglio del cloze corrotto nella lettera greca in 'B-galattosidasi' al posto di 'β-galattosidasi' |
 
