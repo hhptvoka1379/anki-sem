@@ -1,4 +1,4 @@
-# Flagged rows (168)
+# Flagged rows (186)
 
 ## ambiguous (11)
 
@@ -16,23 +16,26 @@
 | CHIM-C12-NCOM-078 | CHIM | 12 | 78 | 202 | ambiguous: sia D ('No, mai') sia E ('Gli atomi di idrogeno quaternari non esistono', poiché un carbonio quaternario lega 4 atomi di C e 0 di H) sono entrambe vere; inoltre A contiene 'Si₄' |
 | CHIM-C12-NCOM-085 | CHIM | 12 | 85 | 202 | ambiguous: nel metano CH₄ (simmetria tetraedrica Td) i quattro atomi di idrogeno sono sia 'metilici' (A) sia perfettamente 'equivalenti' (E) |
 
-## key (3)
+## key (4)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
 | CHIM-C02-NCOM-021 | CHIM | 2 | 21 | 29 | key: suspect - per ogni valore di n il numero di orbitali possibili è realmente n² (2n² è il numero massimo di elettroni), oppure un errore OCR ha alterato la formula nell'opzione B |
 | CHIM-C03-NCOM-133 | CHIM | 3 | 133 | 53 | key: suspect - anche l'affermazione 2 è vera poiché la terza energia di ionizzazione (7730 kJ mol⁻¹) corrisponde a X²⁺(g) → X³⁺(g) + e⁻, rendendo corretta D ('Solo 1 e 2') anziché E ('Solo 1') |
 | CHIM-C05-NCOM-040 | CHIM | 5 | 40 | 86 | key: suspect - la solubilità di HCl in acqua è dovuta alla ionizzazione acido-base completa (HCl + H₂O → H₃O⁺ + Cl⁻, con legame covalente dativo e idratazione ione-dipolo), non alla semplice formazione di legami idrogeno |
+| CHIM-C13-NCOM-028 | CHIM | 13 | 28 | 234 | key: suspect - la chiave E ('composti con formula C₆H₁₂O₆') vale solo per gli esosi mentre i monosaccaridi includono anche triosi (C₃H₆O₃), tetrosi e pentosi (C₅H₁₀O₅), rendendo preferibile C ('nessuna definizione è appropriata') |
 
-## missing (3)
+## missing (5)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
 | CHIM-C03-NCOM-136 | CHIM | 3 | 136 | 53 | missing: tabella dei valori delle energie di ionizzazione assente nell'enunciato ('/_/') |
 | CHIM-C05-NCOM-029 | CHIM | 5 | 29 | 85 | missing: figura dei tre recipienti A, B e C citata nell'enunciato assente nella carta |
 | CHIM-C08-NCOM-001 | CHIM | 8 | 1 | 125 | missing: l'enunciato fa riferimento a un grafico concentrazione-tempo ('il grafico riporta come varia...') non presente nella scheda |
+| CHIM-C12-NCOM-161 | CHIM | 12 | 161 | 209 | missing: l'enunciato fa riferimento a strutture molecolari riportate in figura non allegate alla scheda |
+| CHIM-C12-NCOM-271 | CHIM | 12 | 271 | 219 | missing: l'enunciato rimanda esplicitamente a una figura ('vedi figura') non allegata alla scheda |
 
-## ocr (151)
+## ocr (166)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -187,4 +190,19 @@
 | CHIM-C12-NCOM-134 | CHIM | 12 | 134 | 207 | ocr: simboli greci 'σ' e 'π' corrotti nelle opzioni e nella risposta C ('un legame oe un legame n') |
 | CHIM-C12-NCOM-135 | CHIM | 12 | 135 | 207 | ocr: simboli greci 'σ' e 'π' corrotti in tutte le opzioni incluso E ('un legame o e due legami n', 'tre legami') |
 | CHIM-C12-NCOM-141 | CHIM | 12 | 141 | 207 | ocr: simbolo del triplo legame corrotto in '=' in tutte le opzioni incluso D ('CH₃-C=CH' anziché 'CH₃-C≡CH', violando la tetravalenza del carbonio) |
+| CHIM-C12-NCOM-159 | CHIM | 12 | 159 | 209 | ocr: formula dell'anidride carbonica nella risposta B corrotta in apice 'CO² e H₂O' |
+| CHIM-C12-NCOM-164 | CHIM | 12 | 164 | 209 | ocr: formula nell'enunciato corrotta in 'R-NH₃' al posto di 'R-NH₂' |
+| CHIM-C12-NCOM-172 | CHIM | 12 | 172 | 210 | ocr: testo della risposta E corrotto per omissione di parole in 'contengono doppi legami semplici' (ossimoro chimico per 'contengono legami doppi e semplici') |
+| CHIM-C12-NCOM-178 | CHIM | 12 | 178 | 210 | ocr: formula della benzaldeide nella risposta C corrotta per perdita dei pedici in 'CH CH=0' al posto di 'C₆H₅CH=O' |
+| CHIM-C12-NCOM-207 | CHIM | 12 | 207 | 213 | ocr: enunciato e formula chimica corrotti ('4 composto CH,0' al posto di 'Il composto CH₂O') |
+| CHIM-C12-NCOM-217 | CHIM | 12 | 217 | 214 | ocr: formula nell'enunciato chimicamente impossibile ('CH₃-CH₃-NH-CH₃' con carbonio pentavalente) e risposta A corrotta in 'metil-ctil ammina' |
+| CHIM-C12-NCOM-223 | CHIM | 12 | 223 | 214 | ocr: formula nell'enunciato corrotta in 'CH₃-CHOH-CH₃-CH₃-CH₃' con due atomi di carbonio pentavalenti al posto di 'CH₃-CHOH-CH₂-CH₂-CH₃' |
+| CHIM-C12-NCOM-230 | CHIM | 12 | 230 | 215 | ocr: formula dell'ammide nella risposta B corrotta in 'R-CO-NH₃' (azoto neutro tetravalente) al posto di 'R-CO-NH₂' |
+| CHIM-C12-NCOM-238 | CHIM | 12 | 238 | 216 | ocr: formula nell'enunciato corrotta in 'CICR,CH,0H' e nome nella risposta A corrotto in '2-cloroetanoto' |
+| CHIM-C12-NCOM-245 | CHIM | 12 | 245 | 216 | ocr: formula nell'enunciato corrotta in 'CH₃-CH₃-CO-NH-CH₃' con carbonio pentavalente al posto di 'CH₃-CH₂-CO-NH-CH₃' |
+| CHIM-C12-NCOM-253 | CHIM | 12 | 253 | 217 | ocr: formula dell'anilina nella risposta B corrotta in 'CH.NH₃' al posto di 'C₆H₅NH₂' |
+| CHIM-C12-NCOM-254 | CHIM | 12 | 254 | 217 | ocr: formula nell'enunciato troncata e corrotta in 'CH₃-C0-CH,?' al posto di 'CH₃-CO-CH₃' |
+| CHIM-C12-NCOM-276 | CHIM | 12 | 276 | 220 | ocr: prima formula chimica nell'enunciato gravemente corrotta in 'CH⁻-CH₄-0-CH⁻-CH₃' |
+| CHIM-C13-COMP-019 | CHIM | 13 | 19 | 249 | ocr: testo bersaglio del cloze corrotto in 'oli saturi' ('Gli acidi grassi oli saturi...') al posto di 'saturi' |
+| CHIM-C13-NCOM-035 | CHIM | 13 | 35 | 235 | ocr: formula/simbolo del carbonio corrotto nella risposta A in 'hanno sei atomi di e nella molecola' al posto di 'atomi di C' |
 
