@@ -1,4 +1,4 @@
-# Flagged rows (61)
+# Flagged rows (91)
 
 ## ambiguous (7)
 
@@ -20,14 +20,15 @@
 | CHIM-C03-NCOM-133 | CHIM | 3 | 133 | 53 | key: suspect - anche l'affermazione 2 è vera poiché la terza energia di ionizzazione (7730 kJ mol⁻¹) corrisponde a X²⁺(g) → X³⁺(g) + e⁻, rendendo corretta D ('Solo 1 e 2') anziché E ('Solo 1') |
 | CHIM-C05-NCOM-040 | CHIM | 5 | 40 | 86 | key: suspect - la solubilità di HCl in acqua è dovuta alla ionizzazione acido-base completa (HCl + H₂O → H₃O⁺ + Cl⁻, con legame covalente dativo e idratazione ione-dipolo), non alla semplice formazione di legami idrogeno |
 
-## missing (2)
+## missing (3)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
 | CHIM-C03-NCOM-136 | CHIM | 3 | 136 | 53 | missing: tabella dei valori delle energie di ionizzazione assente nell'enunciato ('/_/') |
 | CHIM-C05-NCOM-029 | CHIM | 5 | 29 | 85 | missing: figura dei tre recipienti A, B e C citata nell'enunciato assente nella carta |
+| CHIM-C08-NCOM-001 | CHIM | 8 | 1 | 125 | missing: l'enunciato fa riferimento a un grafico concentrazione-tempo ('il grafico riporta come varia...') non presente nella scheda |
 
-## ocr (49)
+## ocr (78)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -80,4 +81,33 @@
 | CHIM-C06-NCOM-099 | CHIM | 6 | 99 | 104 | ocr: opzione A corrotta in 'ioni Na’ e joni Cr' al posto di 'ioni Na⁺ e ioni Cl⁻', rendendo falsa anche l'opzione A |
 | CHIM-C07-COMP-004 | CHIM | 7 | 4 | 120 | ocr: simboli di stato corrotti nell'enunciato in '(s, f₄ g. aq)' al posto di '(s, l, g, aq)' |
 | CHIM-C07-NCOM-011 | CHIM | 7 | 11 | 114 | ocr: formule chimiche dell'equazione nell'enunciato gravemente corrotte ('Ca(OH), + H₂SO₄ — CaSO₊ + H₋0') |
+| CHIM-C07-NCOM-019 | CHIM | 7 | 19 | 115 | ocr: equazione chimica nell'enunciato gravemente corrotta ('a NH₃ +b0,--4N0+cH,0') |
+| CHIM-C07-NCOM-022 | CHIM | 7 | 22 | 115 | ocr: pedici nell'equazione ('aNH, + bO,') e opzione E ('a=3;b= 1⁻c=3') corrotti dalla scansione |
+| CHIM-C07-NCOM-027 | CHIM | 7 | 27 | 116 | ocr: formule chimiche e masse atomiche nell'enunciato gravemente corrotte ('Mg + H,S0, — MgSO, ... 5=32;0=16') |
+| CHIM-C07-COMP-035 | CHIM | 7 | 35 | 121 | ocr: formula dello ione idrossido corrotta in '0H7' al posto di 'OH⁻' |
+| CHIM-C07-NCOM-042 | CHIM | 7 | 42 | 118 | ocr: equazioni chimiche nelle opzioni A, B, C e D gravemente corrotte dalla scansione ('H⁻0° + Ci-', 'H, + Br, -2 HBr', 'CaCl₂ + Ca” + 2 CF') |
+| CHIM-C07-NCOM-043 | CHIM | 7 | 43 | 118 | ocr: equazione nell'enunciato corrotta in '2 KI + Br, —2 KBr+1₂' al posto di '2 KI + Br₂ → 2 KBr + I₂' |
+| CHIM-C07-NCOM-044 | CHIM | 7 | 44 | 118 | ocr: semireazioni e reazioni nell'enunciato gravemente corrotte e fuse ('ZH’ + Ze" → H⁻ ... Cut — Cu?* + e- ... Mg — Me²⁺ + 2e”') |
+| CHIM-C07-NCOM-050 | CHIM | 7 | 50 | 119 | ocr: equazione nell'enunciato corrotta in 'CO² ... C+ 0² + CO₂' e chiave D ('nessuna delle risposte') ambigua rispetto a B ('spontanea', poiché C + O₂ → CO₂ ha ΔG° < 0) |
+| CHIM-C08-NCOM-016 | CHIM | 8 | 16 | 127 | ocr: equazione chimica nell'enunciato corrotta in 'N2;,) + 3H.,,, = 2NH3,' e opzione C corrotta in 'K?' |
+| CHIM-C09-COMP-013 | CHIM | 9 | 13 | 144 | ocr: formula dell'acqua corrotta nell'enunciato in 'H.0' al posto di 'H₂O' |
+| CHIM-C09-COMP-014 | CHIM | 9 | 14 | 144 | ocr: formula dell'acqua corrotta nell'enunciato in 'H0' al posto di 'H₂O' |
+| CHIM-C09-NCOM-031 | CHIM | 9 | 31 | 133 | ocr: opzioni B ('Le-l') e D ('402') gravemente corrotte dalla scansione |
+| CHIM-C09-NCOM-038 | CHIM | 9 | 38 | 134 | ocr: formula dello ione ammonio 'NH₄⁺' corrotta nell'enunciato in 'NH;', omettendo pedice e carica '+1' |
+| CHIM-C09-NCOM-042 | CHIM | 9 | 42 | 135 | ocr: simboli chimici nelle opzioni gravemente corrotti ('Hed', 'Cel', '0e0' al posto di 'O e O') |
+| CHIM-C09-NCOM-052 | CHIM | 9 | 52 | 135 | ocr: equazione nell'enunciato ('2 NaCl + Br, > Cl, + 2 NaBr') e testo della risposta C ('tleloro si ossida è il bromo si riduce') corrotti dalla scansione |
+| CHIM-C09-NCOM-053 | CHIM | 9 | 53 | 136 | ocr: cariche ioniche nelle opzioni D ('Cd.”') ed E / risposta ('passa da Cda Cd,') corrotte dalla scansione |
+| CHIM-C09-NCOM-054 | CHIM | 9 | 54 | 136 | ocr: carica dello ione piombo corrotta nell'enunciato in 'Pb?*' al posto di 'Pb²⁺' |
+| CHIM-C09-NCOM-060 | CHIM | 9 | 60 | 136 | ocr: equazione nell'enunciato ('2 HBr +1₂ — 2 Hi + Br,') e testo della risposta B ('fodio') corrotti dalla scansione |
+| CHIM-C09-NCOM-061 | CHIM | 9 | 61 | 136 | ocr: carica dello ione zinco corrotta nell'enunciato in 'Zn?*' al posto di 'Zn²⁺' |
+| CHIM-C09-NCOM-062 | CHIM | 9 | 62 | 136 | ocr: carica dello ione ferroso corrotta nell'enunciato in 'Fe⁴⁴' al posto di 'Fe²⁺' |
+| CHIM-C09-NCOM-083 | CHIM | 9 | 83 | 139 | ocr: carica dello ione cobalto corrotta nell'enunciato in 'Co?*' al posto di 'Co²⁺' |
+| CHIM-C09-NCOM-087 | CHIM | 9 | 87 | 139 | ocr: formula dell'ossigeno corrotta nell'enunciato in '2 Zn + 0₄ — 2 ZnO', rendendo letteralmente vera l'opzione A ('c'è un errore') contro la chiave E |
+| CHIM-C09-NCOM-088 | CHIM | 9 | 88 | 139 | ocr: cariche nell'enunciato corrotte in 'Cu?*+2e°— Cu' al posto di 'Cu²⁺ + 2e⁻ → Cu' |
+| CHIM-C09-NCOM-096 | CHIM | 9 | 96 | 140 | ocr: semireazione nell'enunciato corrotta in 'Cu⁺ - le” —Cu?*' al posto di 'Cu⁺ − 1e⁻ → Cu²⁺' |
+| CHIM-C09-NCOM-098 | CHIM | 9 | 98 | 140 | ocr: carica dello ione rameico corrotta in 'Cu?*' nell'enunciato e nella risposta C (e 'Cu?' in E) |
+| CHIM-C09-NCOM-109 | CHIM | 9 | 109 | 141 | ocr: equazione e cariche ioniche corrotte nell'enunciato ('Fe + Cu2⁴ + Fe?* + Cu') e nella risposta C ('Cu?*') |
+| CHIM-C09-NCOM-115 | CHIM | 9 | 115 | 142 | ocr: testo della risposta corretta A corrotto dalla scansione in 'WCusi ossida' al posto di 'il Cu si ossida' |
+| CHIM-C09-NCOM-117 | CHIM | 9 | 117 | 142 | ocr: cariche ioniche e stechiometria nell'equazione dell'enunciato corrotte ('4 Fe3* + NH₃ — 4 Fe?* +N₂+4H⁺') |
+| CHIM-C09-NCOM-119 | CHIM | 9 | 119 | 142 | ocr: formule chimiche nell'enunciato corrotte in '2 NaBr + CI₂ — Br, + 2NaCi' |
 
