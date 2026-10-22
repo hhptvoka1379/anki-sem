@@ -1,6 +1,6 @@
-# Flagged rows (91)
+# Flagged rows (142)
 
-## ambiguous (7)
+## ambiguous (9)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -11,6 +11,8 @@
 | CHIM-C03-NCOM-086 | CHIM | 3 | 86 | 48 | ambiguous: per gli alogeni (configurazione ns² np⁵) sono corrette sia D ('hanno la tendenza a formare ioni negativi') sia E ('hanno la tendenza ad acquistare un elettrone') |
 | CHIM-C04-NCOM-040 | CHIM | 4 | 40 | 68 | ambiguous: due atomi di azoto formano tra loro legami che sono sia covalenti (opzione A) sia multipli come N=N e N≡N (opzione C) |
 | CHIM-C05-NCOM-016 | CHIM | 5 | 16 | 83 | ambiguous: per un liquido le forze di attrazione intermolecolari sono contemporaneamente maggiori di quelle nello stato gassoso (C) e minori di quelle nello stato solido (E) |
+| CHIM-C11-NCOM-016 | CHIM | 11 | 16 | 171 | ambiguous: sia A ('protoni' secondo Brønsted-Lowry) sia D ('ioni positivi H⁺' secondo Arrhenius) sono definizioni chimicamente esatte ed equivalenti |
+| CHIM-C11-NCOM-097 | CHIM | 11 | 97 | 179 | ambiguous: sia B ('[OH⁻] > [H₃O⁺]') sia E ('[H⁺] < [OH⁻]') esprimono la medesima disuguaglianza chimica vera a pH > 7 |
 
 ## key (3)
 
@@ -28,7 +30,7 @@
 | CHIM-C05-NCOM-029 | CHIM | 5 | 29 | 85 | missing: figura dei tre recipienti A, B e C citata nell'enunciato assente nella carta |
 | CHIM-C08-NCOM-001 | CHIM | 8 | 1 | 125 | missing: l'enunciato fa riferimento a un grafico concentrazione-tempo ('il grafico riporta come varia...') non presente nella scheda |
 
-## ocr (78)
+## ocr (127)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -110,4 +112,53 @@
 | CHIM-C09-NCOM-115 | CHIM | 9 | 115 | 142 | ocr: testo della risposta corretta A corrotto dalla scansione in 'WCusi ossida' al posto di 'il Cu si ossida' |
 | CHIM-C09-NCOM-117 | CHIM | 9 | 117 | 142 | ocr: cariche ioniche e stechiometria nell'equazione dell'enunciato corrotte ('4 Fe3* + NH₃ — 4 Fe?* +N₂+4H⁺') |
 | CHIM-C09-NCOM-119 | CHIM | 9 | 119 | 142 | ocr: formule chimiche nell'enunciato corrotte in '2 NaBr + CI₂ — Br, + 2NaCi' |
+| CHIM-C09-NCOM-126 | CHIM | 9 | 126 | 143 | ocr: formule chimiche nell'enunciato corrotte in 'Pb₂ si trasforma in PbCL,' con perdita dei pedici/stati di ossidazione reali |
+| CHIM-C09-NCOM-128 | CHIM | 9 | 128 | 143 | ocr: formula del cloruro di zinco nell'enunciato corrotta in 'ZnCl₄' al posto di 'ZnCl₂' |
+| CHIM-C10-COMP-002 | CHIM | 10 | 2 | 162 | ocr: formula generale degli idracidi corrotta in 'H-X⁻' al posto di 'HₙX,' (con carica negativa spuria e perdita del pedice) |
+| CHIM-C10-NCOM-005 | CHIM | 10 | 5 | 152 | ocr: enunciato corrotto in 'un atomo di diossigeno' (per 'un atomo di ossigeno'), creando contraddizione chimica tra 'ossido' (O + 2e⁻ → O²⁻) e 'perossido' (O₂ + 2e⁻ → O₂²⁻) |
+| CHIM-C10-NCOM-008 | CHIM | 10 | 8 | 152 | ocr: formula chimica nell'enunciato priva di pedici e corrotta in 'Ci, 0,' al posto di 'Cl₂O₇', impedendo di distinguere le quattro anidridi del cloro |
+| CHIM-C10-COMP-009 | CHIM | 10 | 9 | 162 | ocr: pedice generico corrotto in 'X₂O₃' al posto di 'X₂Oₙ' (o 'XₘOₙ'), rendendo chimicamente falso l'enunciato generale per ossidi acidi come CO₂, SO₂, SO₃, N₂O₅, Cl₂O₇ |
+| CHIM-C10-COMP-016 | CHIM | 10 | 16 | 162 | ocr: pedici generici nella formula dell'ossiacido corrotti in 'H,XO,' al posto di 'HₙXOₘ' |
+| CHIM-C10-NCOM-016 | CHIM | 10 | 16 | 153 | ocr: formule chimiche corrotte in tutte le opzioni ('H,S0,', 'SO,', 'HNO,', 'H₃PO₁' per 'H₃PO₄'), rendendo chimicamente errate anche le opzioni B–E |
+| CHIM-C10-COMP-017 | CHIM | 10 | 17 | 162 | ocr: formula dell'acido solforico corrotta nell'enunciato in 'H2S0,' (priva del pedice '₄') |
+| CHIM-C10-NCOM-017 | CHIM | 10 | 17 | 153 | ocr: formula nella risposta corretta B corrotta in 'HNO₄' al posto di 'HNO₂' (e opzione A 'H⁰NQO⁴') |
+| CHIM-C10-NCOM-018 | CHIM | 10 | 18 | 153 | ocr: opzione A trasformata in 'CO₂' (formula corretta) mentre la risposta indicata E è corrotta in 'CÒ,' |
+| CHIM-C10-COMP-024 | CHIM | 10 | 24 | 163 | ocr: pedice generico corrotto nella formula 'M20,,' al posto di 'M₂Oₙ,' |
+| CHIM-C10-COMP-033 | CHIM | 10 | 33 | 163 | ocr: enunciato corrotto con testo redazionale spurio ('da correggere in' al posto di 'usa il termine') |
+| CHIM-C10-COMP-035 | CHIM | 10 | 35 | 163 | ocr: pedice mancante nella formula '(Fe(OH),)' al posto di '(Fe(OH)₂)', necessaria a identificare lo stato di ossidazione +2 |
+| CHIM-C10-NCOM-037 | CHIM | 10 | 37 | 155 | ocr: formula nell'enunciato corrotta in 'ALO,' al posto di 'Al₂O₃', priva dei pedici richiesti per la nomenclatura IUPAC |
+| CHIM-C10-NCOM-053 | CHIM | 10 | 53 | 156 | ocr: formula dello ione nitrito nella risposta A corrotta in 'NO²' al posto di 'NO₂⁻' (priva della carica negativa e con pedice in apice) |
+| CHIM-C10-NCOM-054 | CHIM | 10 | 54 | 156 | ocr: pedici mancanti nella formula dell'enunciato 'Na,SO,' |
+| CHIM-C10-NCOM-080 | CHIM | 10 | 80 | 159 | ocr: campo answer_text corrotto in 'C,' anziché 'ClO₄⁻' |
+| CHIM-C10-NCOM-096 | CHIM | 10 | 96 | 160 | ocr: formula nella risposta E gravemente corrotta in '(NH₄)₃50₃' al posto di '(NH₄)₂SO₃' (pedice errato e cifre '50' al posto di 'SO') |
+| CHIM-C10-NCOM-099 | CHIM | 10 | 99 | 160 | ocr: formula dello ione clorato nella risposta B corrotta in 'CIO⁻”' al posto di 'ClO₃⁻' |
+| CHIM-C11-NCOM-006 | CHIM | 11 | 6 | 170 | ocr: segni di disuguaglianza '>' sostituiti da '+' nelle opzioni incluso B ('Acido solforico + acido solforoso + acido cianidrico') |
+| CHIM-C11-NCOM-007 | CHIM | 11 | 7 | 170 | ocr: carica del protone nella risposta C corrotta in 'cede ioni H°' al posto di 'cede ioni H⁺' |
+| CHIM-C11-NCOM-009 | CHIM | 11 | 9 | 170 | ocr: formula nell'enunciato priva di pedice ('HNO,') e risposta C corrotta in 'monopratico' |
+| CHIM-C11-COMP-011 | CHIM | 11 | 11 | 188 | ocr: formula dello ione idrossonio corrotta nell'enunciato in 'Hy0°' al posto di 'H₃O⁺' |
+| CHIM-C11-NCOM-014 | CHIM | 11 | 14 | 171 | ocr: opzione B corrotta in 'HNO,' senza pedice, rendendola indistinguibile tra 'HNO₃' (forte) e 'HNO₂' (acido debole al pari di E 'HCN') |
+| CHIM-C11-NCOM-015 | CHIM | 11 | 15 | 171 | ocr: numerazione nell'enunciato ('L CH₃COOH') e risposta A ('Solole2') corrotte dalla scansione |
+| CHIM-C11-COMP-021 | CHIM | 11 | 21 | 188 | ocr: pedici delle tre costanti corrotti nell'enunciato in 'K, e K, ... (K,,)' al posto di 'Kₐ e Kb ... (Kw)' |
+| CHIM-C11-NCOM-021 | CHIM | 11 | 21 | 171 | ocr: formula dell'acido carbonico nell'enunciato corrotta in 'HCO,' al posto di 'H₂CO₃' |
+| CHIM-C11-COMP-022 | CHIM | 11 | 22 | 189 | ocr: formule ioniche corrotte sia nel completamento ('HO') sia nell'enunciato ('edu.') al posto di 'H₃O⁺ e OH⁻' |
+| CHIM-C11-NCOM-034 | CHIM | 11 | 34 | 173 | ocr: tutte le formule ioniche nelle opzioni e nella risposta E corrotte dalla scansione ('S02', 'HPO', 'HSO;', 'NH;') |
+| CHIM-C11-NCOM-037 | CHIM | 11 | 37 | 173 | ocr: formule chimiche nelle opzioni e nella risposta A gravemente corrotte ('(1,0,', 'Na,O', 'Al,O,') |
+| CHIM-C11-NCOM-042 | CHIM | 11 | 42 | 174 | ocr: pedici mancanti nelle formule delle opzioni A ('NH,CI') e B / risposta ('CH,COONa') |
+| CHIM-C11-NCOM-048 | CHIM | 11 | 48 | 174 | ocr: opzione C ridotta al singolo punto interrogativo '?' dalla scansione |
+| CHIM-C11-NCOM-051 | CHIM | 11 | 51 | 175 | ocr: potenze di dieci corrotte nelle opzioni B ('10°') ed E / risposta ('107 moli/litro' al posto di '10⁻⁹ moli/litro') |
+| CHIM-C11-NCOM-054 | CHIM | 11 | 54 | 175 | ocr: formula ed elementi nell'enunciato corrotti dalla scansione ('H₂SO₄/_,)' e '5=32' al posto di 'S=32') |
+| CHIM-C11-NCOM-055 | CHIM | 11 | 55 | 175 | ocr: formula dello ione idrossonio corrotta nell'enunciato in 'H₂O*' al posto di 'H₃O⁺' |
+| CHIM-C11-NCOM-058 | CHIM | 11 | 58 | 175 | ocr: formula ionica e unità nell'enunciato corrotte in 'H₂O* è 1,0 x 10⁻⁸ mol dm”*' |
+| CHIM-C11-NCOM-063 | CHIM | 11 | 63 | 176 | ocr: esponente nella risposta A corrotto in '[H°)> 107 M' al posto di '[H⁺] > 10⁻⁷ M' |
+| CHIM-C11-NCOM-065 | CHIM | 11 | 65 | 176 | ocr: esponenti delle concentrazioni nelle opzioni C ('10-? M') e D ('10°* M') illeggibili |
+| CHIM-C11-NCOM-070 | CHIM | 11 | 70 | 177 | ocr: unità nell'enunciato ('2 mol dm~') e testo della risposta E ('Il valore dei pi aumenta di 2') corrotti dalla scansione |
+| CHIM-C11-NCOM-082 | CHIM | 11 | 82 | 178 | ocr: valore numerico nella risposta corretta D corrotto in apice 'Sciogliere⁴ g' al posto di 'Sciogliere 4 g' |
+| CHIM-C11-NCOM-087 | CHIM | 11 | 87 | 178 | ocr: opzioni C ('ò') e D ('10°’') gravemente corrotte dalla scansione |
+| CHIM-C11-NCOM-090 | CHIM | 11 | 90 | 178 | ocr: base del logaritmo corrotta in tutte le opzioni incluso D ('pH = -log,,, 0.004') |
+| CHIM-C11-NCOM-099 | CHIM | 11 | 99 | 179 | ocr: formula nell'enunciato corrotta in '(H⁴])' e opzione B corrotta in 'ApH =5', rendendo vere sia B (pH = 5) sia D (pH = 2) |
+| CHIM-C11-NCOM-100 | CHIM | 11 | 100 | 179 | ocr: unità di misura nell'enunciato gravemente corrotte ('0,2 mot dm', '0,1 mot dm³', '0,2 moi dm-*', '0,1 mol dm"?') |
+| CHIM-C11-NCOM-106 | CHIM | 11 | 106 | 180 | ocr: testo della risposta corretta D corrotto in '3 concentrazione di ioni H⁺' al posto di 'la concentrazione di ioni H⁺' |
+| CHIM-C11-NCOM-110 | CHIM | 11 | 110 | 180 | ocr: formule chimiche nelle opzioni D ('[11,0%] > 7 M') ed E / risposta ('[H30*] > [OH]') gravemente corrotte |
+| CHIM-C11-NCOM-121 | CHIM | 11 | 121 | 181 | ocr: esponente del numero di moli nell'enunciato illeggibile ('10°* moli di HCl') |
+| CHIM-C11-NCOM-127 | CHIM | 11 | 127 | 182 | ocr: esponente di [OH⁻] corrotto da '10⁻⁸ M' a '10⁻⁹ M' (e 'H⁴' per 'H⁺'), rendendo [H⁺][OH⁻] = 10⁻¹⁴ compatibile con Kw e rendendo vera A ('ha pH 5,0') contro la chiave D ('non esiste') |
 
