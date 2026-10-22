@@ -131,17 +131,22 @@ def run_checkpoint(con, meta):
 
 def format_rows(rows):
     out = []
+    last_ch = None
     for r in rows:
+        ch = (r["subject_code"], r["chapter_num"], r["chapter_title"])
+        if ch != last_ch:
+            out.append(f"### {ch[0]} C{ch[1]:02d}: {ch[2]}")
+            last_ch = ch
         if r["quiz_type"] == "Quiz non commentati":
             out.append(
-                f"[{r['ord']}] {r['id']} | {r['subject_code']} C{r['chapter_num']:02d} ({r['chapter_title']}) p.{r['page']} q.{r['qnum']} | MCQ\n"
+                f"[{r['ord']}] {r['id']} | MCQ\n"
                 f"  Q: {r['question']}\n"
                 f"  A: {r['option_a']} || B: {r['option_b']} || C: {r['option_c']} || D: {r['option_d']} || E: {r['option_e']}\n"
                 f"  KEY: {r['answer']} -> {r['answer_text']}"
             )
         else:
             out.append(
-                f"[{r['ord']}] {r['id']} | {r['subject_code']} C{r['chapter_num']:02d} ({r['chapter_title']}) p.{r['page']} q.{r['qnum']} | CLOZE\n"
+                f"[{r['ord']}] {r['id']} | CLOZE\n"
                 f"  Q: {r['question']}\n"
                 f"  BACK: {r['back_stem']}\n"
                 f"  TERM: {r['answer_text']}"
