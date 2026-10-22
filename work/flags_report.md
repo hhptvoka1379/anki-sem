@@ -1,6 +1,6 @@
-# Flagged rows (65)
+# Flagged rows (86)
 
-## ambiguous (16)
+## ambiguous (20)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -20,12 +20,17 @@
 | CHIM-C04-NCOM-083 | CHIM | 4 | 83 | 72 | ambiguous: methane carbon is sp3, but the central sulfur of sulfuric acid is also tetrahedral and commonly described as sp3, so the atom whose hybridization is meant is not specified |
 | CHIM-C05-NCOM-002 | CHIM | 5 | 2 | 82 | ambiguous: iodine molecules interact by dispersion forces, but carbon dioxide molecules are also nonpolar overall and are commonly classified as interacting through instantaneous dipole induced dipole forces, so exclusivity is not clear |
 | CHIM-C05-NCOM-016 | CHIM | 5 | 16 | 83 | ambiguous: liquid particles have intermolecular attractions both greater than in the gas state and smaller than in the solid state, so two listed comparisons are true |
+| CHIM-C07-NCOM-050 | CHIM | 7 | 50 | 119 | ambiguous: production of heat only establishes that the reaction is exothermic, a label not listed, but the carbon combustion shown is also commonly described as spontaneous, so the keyed none-of-the-above is not uniquely justified |
+| CHIM-C08-NCOM-013 | CHIM | 8 | 13 | 126 | ambiguous: concentration-based equilibrium constants in school treatments may carry units depending on stoichiometric coefficients, whereas the thermodynamic equilibrium constant based on activities is dimensionless, and the question does not specify which convention is meant |
+| CHIM-C08-NCOM-019 | CHIM | 8 | 19 | 127 | ambiguous: whether an equilibrium constant is always dimensionless depends on whether a school concentration-based Kc or the thermodynamic activity-based constant is meant, so the intended false statement is convention-dependent |
+| CHIM-C09-NCOM-079 | CHIM | 9 | 79 | 138 | ambiguous: besides the broad statement that one or more elements change oxidation state, it is also true in every redox reaction that an element increases its oxidation number, so two listed characterisations are true |
 
-## chem (1)
+## chem (2)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
 | CHIM-C03-NCOM-042 | CHIM | 3 | 42 | 44 | chem: sulfuric acid is printed as H₄SO₄, but the keyed 98 g corresponds to H₂SO₄, so the formula in the stem is chemically wrong |
+| CHIM-C09-NCOM-128 | CHIM | 9 | 128 | 143 | chem: the product is written as ZnCl4 instead of a chemically valid zinc chloride formula, so the reaction is damaged and should not be silently corrected |
 
 ## key (3)
 
@@ -35,15 +40,16 @@
 | CHIM-C02-NCOM-021 | CHIM | 2 | 21 | 29 | key: suspect - the number of orbitals for a given n is indeed n squared, so as written all five statements are correct and none is NOT correct |
 | CHIM-C03-NCOM-133 | CHIM | 3 | 133 | 53 | key: suspect - the jump after the second ionization energy shows two valence electrons (statement 1), and the third listed value by definition corresponds to X2+ to X3+ plus electron (statement 2), so statements 1 and 2 are both correct while the key says only 1 |
 
-## missing (3)
+## missing (4)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
 | CHIM-C03-NCOM-136 | CHIM | 3 | 136 | 53 | missing: the table of successive ionization energies is absent from the card text, so the group cannot be deduced from the jump between values |
 | CHIM-C03-NCOM-137 | CHIM | 3 | 137 | 54 | missing: the table of the first eight ionization energies is garbled into unreadable fragments, so the group cannot be deduced from the sequence |
 | CHIM-C05-NCOM-029 | CHIM | 5 | 29 | 85 | missing: the stem refers to three containers shown in a figure, but no figure or description of their contents/states is present on the card |
+| CHIM-C08-NCOM-001 | CHIM | 8 | 1 | 125 | missing: the stem refers to a concentration-versus-time graph, but no graph or plotted values are present on the card |
 
-## ocr (42)
+## ocr (57)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -89,4 +95,19 @@
 | CHIM-C06-NCOM-088 | CHIM | 6 | 88 | 103 | ocr: the symbol offered in one option is rendered only as a quotation mark, evidently losing the Greek pi used for osmotic pressure, so the keyed none-of-the-above cannot be trusted as printed |
 | CHIM-C06-NCOM-099 | CHIM | 6 | 99 | 104 | ocr: one supposedly true option names chromium-like Cr ions instead of chloride ions, creating a second false statement in a NOT-true question |
 | CHIM-C07-NCOM-011 | CHIM | 7 | 11 | 114 | ocr: the equation formulae are garbled in the stem (comma in place of a subscript, plus and minus signs replacing subscripts in the products), so the balancing task cannot be read reliably |
+| CHIM-C07-NCOM-019 | CHIM | 7 | 19 | 115 | ocr: the equation in the stem has zeroes and punctuation in place of oxygen subscripts, the reaction arrow and product subscripts, so the requested coefficient cannot be derived from the printed equation |
+| CHIM-C07-NCOM-022 | CHIM | 7 | 22 | 115 | ocr: the reaction formulae are garbled with commas and a zero in place of subscripts and letters, so the species whose coefficients are requested cannot be read reliably |
+| CHIM-C07-NCOM-027 | CHIM | 7 | 27 | 116 | ocr: the reaction formulae and the sulfur/oxygen atomic-mass symbols are garbled with commas and zeroes, so the theoretical-yield calculation cannot be read reliably |
+| CHIM-C07-COMP-035 | CHIM | 7 | 35 | 121 | ocr: the hydroxide ion in the cloze sentence is printed as 0H7 instead of OH-, garbling the defining chemical species |
+| CHIM-C07-NCOM-044 | CHIM | 7 | 44 | 118 | ocr: the five half-reactions/reactions to classify have charges, electron symbols and element symbols extensively garbled, so the oxidation/reduction counts cannot be read reliably |
+| CHIM-C08-NCOM-007 | CHIM | 8 | 7 | 126 | ocr: one option is printed as INI ordine, leaving unclear whether the first-order option required by v = k[A] was present before accepting none-of-the-above |
+| CHIM-C09-NCOM-038 | CHIM | 9 | 38 | 134 | ocr: the species in the stem is printed as NH; with a semicolon replacing the expected subscript and charge, so the ion whose oxidation-number sum is requested is not legible |
+| CHIM-C09-NCOM-042 | CHIM | 9 | 42 | 135 | ocr: the keyed bond is printed with zeroes in place of the oxygen symbols (0e0), garbling the oxygen-oxygen linkage characteristic of peroxides |
+| CHIM-C09-NCOM-052 | CHIM | 9 | 52 | 135 | ocr: the halogen subscripts in the reaction are rendered as commas and the keyed option is garbled at its beginning, so the written redox equation is not faithfully legible |
+| CHIM-C09-NCOM-053 | CHIM | 9 | 53 | 136 | ocr: the cadmium species and charges in the competing options are rendered with stray punctuation, so the initial and final cadmium states cannot be read reliably |
+| CHIM-C09-NCOM-060 | CHIM | 9 | 60 | 136 | ocr: iodine is printed with a leading digit one and several formulae have punctuation or misread letters, so the redox equation to classify cannot be reconstructed reliably from the card |
+| CHIM-C09-NCOM-062 | CHIM | 9 | 62 | 136 | ocr: the final iron species is printed as Fe with superscript 44 instead of a legible charge, so it is impossible to tell whether the change increases or decreases the oxidation state |
+| CHIM-C09-NCOM-087 | CHIM | 9 | 87 | 139 | ocr: molecular oxygen in the reaction is printed as zero with subscript 4, making the equation as printed erroneous and conflicting with the keyed redox classification |
+| CHIM-C09-NCOM-117 | CHIM | 9 | 117 | 142 | ocr: the iron-ion charges are garbled and the equation as printed does not balance nitrogen, hydrogen or charge, so the redox changes cannot be assessed from a reliable equation |
+| CHIM-C09-NCOM-126 | CHIM | 9 | 126 | 143 | ocr: the lead reactant and the chloride product are printed with ambiguous subscripts and punctuation (Pb2 and PbCL followed by commas), so the species transformed cannot be identified reliably |
 
