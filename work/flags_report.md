@@ -1,4 +1,4 @@
-# Flagged rows (186)
+# Flagged rows (198)
 
 ## ambiguous (11)
 
@@ -16,7 +16,7 @@
 | CHIM-C12-NCOM-078 | CHIM | 12 | 78 | 202 | ambiguous: sia D ('No, mai') sia E ('Gli atomi di idrogeno quaternari non esistono', poiché un carbonio quaternario lega 4 atomi di C e 0 di H) sono entrambe vere; inoltre A contiene 'Si₄' |
 | CHIM-C12-NCOM-085 | CHIM | 12 | 85 | 202 | ambiguous: nel metano CH₄ (simmetria tetraedrica Td) i quattro atomi di idrogeno sono sia 'metilici' (A) sia perfettamente 'equivalenti' (E) |
 
-## key (4)
+## key (8)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -24,8 +24,12 @@
 | CHIM-C03-NCOM-133 | CHIM | 3 | 133 | 53 | key: suspect - anche l'affermazione 2 è vera poiché la terza energia di ionizzazione (7730 kJ mol⁻¹) corrisponde a X²⁺(g) → X³⁺(g) + e⁻, rendendo corretta D ('Solo 1 e 2') anziché E ('Solo 1') |
 | CHIM-C05-NCOM-040 | CHIM | 5 | 40 | 86 | key: suspect - la solubilità di HCl in acqua è dovuta alla ionizzazione acido-base completa (HCl + H₂O → H₃O⁺ + Cl⁻, con legame covalente dativo e idratazione ione-dipolo), non alla semplice formazione di legami idrogeno |
 | CHIM-C13-NCOM-028 | CHIM | 13 | 28 | 234 | key: suspect - la chiave E ('composti con formula C₆H₁₂O₆') vale solo per gli esosi mentre i monosaccaridi includono anche triosi (C₃H₆O₃), tetrosi e pentosi (C₅H₁₀O₅), rendendo preferibile C ('nessuna definizione è appropriata') |
+| CHIM-C13-NCOM-126 | CHIM | 13 | 126 | 243 | key: suspect - la chiave B parla impropriamente di 'configurazione' anziché di 'conformazione' tridimensionale nativa (opzione E), confondendo configurazione stereochimica covalente e conformazione spaziale |
+| CHIM-C13-NCOM-156 | CHIM | 13 | 156 | 246 | key: suspect - la chiave E classifica l'adenina (6-amminopurina, C₅H₅N₅) come 'ammina aromatica secondaria', mentre il gruppo amminico esociclico –NH₂ in C6 è primario e l'NH endociclico appartiene all'anello eteroaromatico purinico |
+| BIO-C01-NCOM-012 | BIO | 1 | 12 | 318 | key: suspect - il costituente chimico principale delle cellule in massa totale è l'acqua (~70%), rendendo difendibile E ('Nessuna delle risposte è corretta'); la chiave C ('Proteine') vale solo per la frazione organica/peso secco non specificata nell'enunciato |
+| BIO-C01-NCOM-015 | BIO | 1 | 15 | 318 | key: suspect - la massa totale degli esseri viventi è costituita per il 65–80% da acqua (composto inorganico, opzione A), mentre i composti organici (chiave E) prevalgono solo considerando il peso secco non specificato nell'enunciato |
 
-## missing (5)
+## missing (6)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -34,8 +38,9 @@
 | CHIM-C08-NCOM-001 | CHIM | 8 | 1 | 125 | missing: l'enunciato fa riferimento a un grafico concentrazione-tempo ('il grafico riporta come varia...') non presente nella scheda |
 | CHIM-C12-NCOM-161 | CHIM | 12 | 161 | 209 | missing: l'enunciato fa riferimento a strutture molecolari riportate in figura non allegate alla scheda |
 | CHIM-C12-NCOM-271 | CHIM | 12 | 271 | 219 | missing: l'enunciato rimanda esplicitamente a una figura ('vedi figura') non allegata alla scheda |
+| BIO-C01-NCOM-056 | BIO | 1 | 56 | 323 | missing: l'enunciato chiede di identificare la struttura 'A' in una figura del microscopio ottico non allegata alla scheda |
 
-## ocr (166)
+## ocr (173)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -205,4 +210,11 @@
 | CHIM-C12-NCOM-276 | CHIM | 12 | 276 | 220 | ocr: prima formula chimica nell'enunciato gravemente corrotta in 'CH⁻-CH₄-0-CH⁻-CH₃' |
 | CHIM-C13-COMP-019 | CHIM | 13 | 19 | 249 | ocr: testo bersaglio del cloze corrotto in 'oli saturi' ('Gli acidi grassi oli saturi...') al posto di 'saturi' |
 | CHIM-C13-NCOM-035 | CHIM | 13 | 35 | 235 | ocr: formula/simbolo del carbonio corrotto nella risposta A in 'hanno sei atomi di e nella molecola' al posto di 'atomi di C' |
+| CHIM-C13-NCOM-104 | CHIM | 13 | 104 | 241 | ocr: opzione corretta C corrotta in 'Beb' al posto di 'B e D' (legami covalenti peptidici e disolfuro), con ulteriore ambiguità rispetto a E ('solo di tipo B') |
+| CHIM-C13-NCOM-109 | CHIM | 13 | 109 | 241 | ocr: testo della risposta B contaminato da numero di pagina/refuso tipografico ('amminoacido naturale 242 =') |
+| BIO-C01-NCOM-003 | BIO | 1 | 3 | 317 | ocr: nome dell'elemento nella risposta D corrotto in 'lo dio' al posto di 'Iodio' |
+| BIO-C01-NCOM-021 | BIO | 1 | 21 | 319 | ocr: opzione B corrotta in 'Sono composti da C₃ H₂O' al posto di 'Sono composti da C, H, O', rendendo false sia B sia la chiave E ('Vengono ridotti...') |
+| BIO-C01-NCOM-052 | BIO | 1 | 52 | 322 | ocr: simbolo dell'unità di misura nella risposta C corrotto in '(pm)' (picometro, 10⁻¹² m) anziché '(µm)' (micrometro, 10⁻⁶ m), in presenza anche di E ('Nessuna delle risposte è corretta') |
+| BIO-C01-NCOM-058 | BIO | 1 | 58 | 323 | ocr: opzione E contaminata dall'intestazione e dal numero di pagina del volume ('ifunghi organizzazione biologica e molecolare della vita 323') |
+| BIO-C01-COMP-066 | BIO | 1 | 66 | 351 | ocr: omissione del sostantivo 'legami' prima della lacuna ('I {{c1::covalenti}} si formano...'), rendendo la frase incompleta per il completamento |
 
