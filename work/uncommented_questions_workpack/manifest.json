@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-10-23T00:35:18+02:00",
+  "source_db": "/Users/db/Library/Application Support/Anki2/db/collection.anki2",
+  "source_stats": {
+    "cards": 6952,
+    "revlog": 1698,
+    "notes": 6948
+  },
+  "counts": {
+    "total_without_reason": 5902,
+    "work_queue_pending": 5902,
+    "mcq_cards": 3848,
+    "cloze_cards": 2054,
+    "examples_with_reason": 4
+  },
+  "columns": [
+    "ord",
+    "id",
+    "quiz_type",
+    "subject_code",
+    "chapter_num",
+    "chapter_title",
+    "qnum",
+    "page",
+    "question",
+    "option_a",
+    "option_b",
+    "option_c",
+    "option_d",
+    "option_e",
+    "answer",
+    "answer_text",
+    "back_stem",
+    "reason",
+    "flags",
+    "status",
+    "ref_hash",
+    "updated_at",
+    "scan"
+  ],
+  "statuses": {
+    "pending": "work queue (MCQ and cloze), fill reason",
+    "done": "reason written and validated",
+    "flagged": "damaged/ambiguous card, needs human review"
+  },
+  "sha256": {
+    "questions.db": "f2d0f723f30f8cb3095059636e3e3c627e40d035bb81383b4c9970fdb92eb96d",
+    "questions.csv": "23492692b4fe5e68efc46f299f64d01859b568fba22443031169aacce0f6efde"
+  }
+}
