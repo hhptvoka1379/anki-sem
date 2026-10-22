@@ -1,6 +1,6 @@
-# Flagged rows (83)
+# Flagged rows (143)
 
-## ambiguous (8)
+## ambiguous (9)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -12,6 +12,7 @@
 | CHIM-C04-NCOM-040 | CHIM | 4 | 40 | 68 | ambiguous: both option_a ('legami covalenti') and key option_c ('legami multipli') are chemically true for two nitrogen atoms (N≡N in N₂ is a multiple covalent bond) |
 | CHIM-C04-NCOM-083 | CHIM | 4 | 83 | 72 | ambiguous: central S (tetrahedral AX₄) and -OH oxygens in H₂SO₄ (option_a) are also sp³-hybridized alongside C in CH₄ (key B); stem omits 'del carbonio' |
 | CHIM-C05-NCOM-002 | CHIM | 5 | 2 | 82 | ambiguous: CO₂ is linear with zero net dipole moment (μ = 0), so under standard IMF rules both CO₂, CO₂ (option_a) and I₂, I₂ (key D) lack permanent molecular dipoles (possible OCR/typo for 'CO, CO' in option_a) |
+| CHIM-C05-NCOM-016 | CHIM | 5 | 16 | 83 | ambiguous: both option_c ('maggiori di quelle presenti nello stato gassoso') and key option_e ('minori di quelle presenti nello stato solido') are physically true (solid > liquid > gas) |
 
 ## chem (3)
 
@@ -21,21 +22,24 @@
 | CHIM-C03-NCOM-038 | CHIM | 3 | 38 | 44 | chem: option_d (key) states molar mass in 'g' ('18,01 g') instead of 'g/mol' |
 | CHIM-C03-NCOM-042 | CHIM | 3 | 42 | 44 | chem: formula in stem 'H₄SO₄' is wrong for sulfuric acid (should be H₂SO₄); also option_e '40%' garbled |
 
-## key (3)
+## key (4)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
 | CHIM-C02-NCOM-021 | CHIM | 2 | 21 | 29 | key: suspect — option_b (n² orbitals per level n) is true, likely OCR loss from 2n²; also '/' for 'l' in option_a |
 | CHIM-C03-NCOM-079 | CHIM | 3 | 79 | 48 | key: suspect — 0 (option_c) is an oxidation number of elemental sulfur, not a valence (sulfur valences are 2, 4, 6), making key E questionable |
 | CHIM-C03-NCOM-133 | CHIM | 3 | 133 | 53 | key: suspect — both statements 1 and 2 are true (7730 kJ/mol is the 3rd ionization energy X²⁺(g) → X³⁺(g) + e⁻, matching Mg), so D (Solo 1 e 2) is correct rather than key E (Solo 1) |
+| CHIM-C05-NCOM-040 | CHIM | 5 | 40 | 86 | key: suspect — HCl is a strong acid that ionizes completely in water (HCl + H₂O → H₃O⁺ + Cl⁻) stabilized by ion-dipole hydration and dative bond formation, whereas classic H-bonds involve F, O, N rather than Cl |
 
-## missing (1)
+## missing (3)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
 | CHIM-C03-NCOM-136 | CHIM | 3 | 136 | 53 | missing: ionization energy numerical values missing from stem table due to OCR; also option_b 'Gruppo²' garbled |
+| CHIM-C05-NCOM-029 | CHIM | 5 | 29 | 85 | missing: stem references 'nei tre recipienti rappresentati in figura' (containers A, B, C), but the figure is absent |
+| CHIM-C08-NCOM-001 | CHIM | 8 | 1 | 125 | missing: question references a concentration-vs-time graph ('il grafico riporta...') not included in the card |
 
-## ocr (68)
+## ocr (124)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -107,4 +111,60 @@
 | CHIM-C04-NCOM-057 | CHIM | 4 | 57 | 69 | ocr: oxygen symbol 'O' corrupted to digit '0' in answer option_a |
 | CHIM-C04-NCOM-063 | CHIM | 4 | 63 | 70 | ocr: ammonium ion formula 'NH₄⁺' corrupted to 'NHj' in stem |
 | CHIM-C05-NCOM-008 | CHIM | 5 | 8 | 82 | ocr: formulas corrupted in options A, B, C ('CHF⁴' for 'CHF₃', 'CHCL,' for 'CHCl₃', 'CHBr,' for 'CHBr₃') |
+| CHIM-C05-NCOM-017 | CHIM | 5 | 17 | 83 | ocr: formulas corrupted in option_c ('HS' for 'H₂S') and option_d ('CH⁴' for 'CH₄') |
+| CHIM-C05-NCOM-024 | CHIM | 5 | 24 | 84 | ocr: answer option_e 'Distillazione' garbled as 'Di stili azione' |
+| CHIM-C05-NCOM-025 | CHIM | 5 | 25 | 84 | ocr: formulas NH₃ and PH₃ corrupted across stem and options ('PH.', 'NH₁', 'PH,' in answer option_d, 'NH³') |
+| CHIM-C05-COMP-026 | CHIM | 5 | 26 | 88 | ocr: article 'Il' corrupted to number '41' at start of cloze sentence |
+| CHIM-C05-COMP-027 | CHIM | 5 | 27 | 88 | ocr: article 'Il' corrupted to '01' at start of cloze sentence |
+| CHIM-C05-NCOM-042 | CHIM | 5 | 42 | 86 | ocr: chlorine symbol 'Cl' corrupted to lowercase 'cl' ('Nacl') in option_e |
+| CHIM-C06-NCOM-003 | CHIM | 6 | 3 | 94 | ocr: answer option_c '0,4 M' missing decimal comma ('04M'), and option_a '1 M' corrupted to 'IM' |
+| CHIM-C06-NCOM-005 | CHIM | 6 | 5 | 94 | ocr: number '1' corrupted to '/' ('soluzione /') in option_b |
+| CHIM-C06-NCOM-006 | CHIM | 6 | 6 | 94 | ocr: number '5' in '5 M' corrupted to 'SM' in option_e |
+| CHIM-C06-NCOM-007 | CHIM | 6 | 7 | 94 | ocr: concentration option_c corrupted to 'LON' |
+| CHIM-C06-NCOM-009 | CHIM | 6 | 9 | 95 | ocr: '0,3 L' corrupted to unitless '0,34' in option_c |
+| CHIM-C06-NCOM-013 | CHIM | 6 | 13 | 95 | ocr: oxygen symbol 'O' corrupted to '0' ('0=16') and closing bracket ']' corrupted to 'J' ('K=39 J') in stem |
+| CHIM-C06-NCOM-015 | CHIM | 6 | 15 | 95 | ocr: formula 'NH₄Cl' corrupted to 'NH₄C!' in stem, and unit 'g' corrupted in option_a ('26,73R') and option_e ('106,92') |
+| CHIM-C06-NCOM-023 | CHIM | 6 | 23 | 96 | ocr: unit 'mL' corrupted to 'mi' in options C and D (answer), and '1 L' corrupted to 'I L' in option_e |
+| CHIM-C06-NCOM-028 | CHIM | 6 | 28 | 96 | ocr: volume options corrupted in option_c ('IL' for '1 L') and option_e ('SL' for '5 L') |
+| CHIM-C06-NCOM-029 | CHIM | 6 | 29 | 97 | ocr: atomic mass data corrupted in stem ('1u⁻0= 16 u; Na = 23 uj' for '1 u; O = 16 u; Na = 23 u]') |
+| CHIM-C06-NCOM-031 | CHIM | 6 | 31 | 97 | ocr: unit 'g' missing in option_d ('122' for '122 g') |
+| CHIM-C06-NCOM-038 | CHIM | 6 | 38 | 98 | ocr: scientific notation corrupted in answer option_d ('60 = 107? gdi acido acetico e 36 x 10° g') |
+| CHIM-C06-NCOM-041 | CHIM | 6 | 41 | 98 | ocr: units and numbers corrupted across options ('100 mi', 'mo!', '10itri') |
+| CHIM-C06-NCOM-042 | CHIM | 6 | 42 | 98 | ocr: stem corrupted ('H,S0,' for 'H₂SO₄' and 'acquosa² M' for 'acquosa 2 M') and unit 'g' corrupted in option_e ('24,52') |
+| CHIM-C06-NCOM-050 | CHIM | 6 | 50 | 99 | ocr: sucrose formula 'C₁₂H₂₂O₁₁' corrupted to 'C,,H,,0,,,' and mass '50 g' corrupted to 'S0g' in stem |
+| CHIM-C06-NCOM-055 | CHIM | 6 | 55 | 99 | ocr: formula 'NaCl' corrupted to 'NaC!' in stem |
+| CHIM-C06-NCOM-059 | CHIM | 6 | 59 | 100 | ocr: unit 'mL' corrupted to 'mi' in stem ('50 mi'), answer option_a ('1.500 mi'), and option_e ('300 mi.') |
+| CHIM-C06-NCOM-063 | CHIM | 6 | 63 | 100 | ocr: unit 'mL' corrupted to 'mi' in stem ('10 mi') and options B and C ('240 mi', '60 mi') |
+| CHIM-C06-NCOM-070 | CHIM | 6 | 70 | 101 | ocr: ion formulas 'Na⁺, Cl⁻' corrupted to 'Na', Cl' in answer option_e, and 'Nati, CIOH' in option_c |
+| CHIM-C06-NCOM-071 | CHIM | 6 | 71 | 101 | ocr: option_d 'pratico' is an OCR corruption of 'protico' or 'aprotico', making key A unverifiable without scan |
+| CHIM-C06-NCOM-074 | CHIM | 6 | 74 | 101 | ocr: formulas and units corrupted across options ('NaCi' in answer option_b, '250 mi di BaCl,' in option_d, 'HC?' in option_e) |
+| CHIM-C06-NCOM-075 | CHIM | 6 | 75 | 101 | ocr: formula 'NaCl' corrupted to 'NaC!' in stem |
+| CHIM-C06-NCOM-088 | CHIM | 6 | 88 | 103 | ocr: symbol in option_c corrupted to stray quotation mark '‘' |
+| CHIM-C06-NCOM-096 | CHIM | 6 | 96 | 104 | ocr: formula 'KCl' corrupted to 'KC]' in option_a |
+| CHIM-C06-NCOM-099 | CHIM | 6 | 99 | 104 | ocr: ion formulas 'Na⁺' and 'Cl⁻' corrupted to 'Na’' and 'Cr' in option_a |
+| CHIM-C07-COMP-004 | CHIM | 7 | 4 | 120 | ocr: liquid state symbol 'l' corrupted to 'f₄' in '(s, f₄ g. aq)' |
+| CHIM-C07-NCOM-011 | CHIM | 7 | 11 | 114 | ocr: formulas and arrow corrupted in stem ('Ca(OH), + H₂SO₄ — CaSO₊ + H₋0') |
+| CHIM-C07-NCOM-018 | CHIM | 7 | 18 | 114 | ocr: stray brace '{i' for 'Il' in answer option_c |
+| CHIM-C07-NCOM-019 | CHIM | 7 | 19 | 115 | ocr: chemical equation severely corrupted in stem ('a NH₃ +b0,--4N0+cH,0') |
+| CHIM-C07-NCOM-022 | CHIM | 7 | 22 | 115 | ocr: formulas corrupted in stem ('aNH, + bO, -> cNO + 6H₂0') and superscript '⁻' in option_e |
+| CHIM-C07-NCOM-027 | CHIM | 7 | 27 | 116 | ocr: formulas and atomic weight symbols corrupted in stem ('H,S0, — MgSO,', '5=32;0=16') |
+| CHIM-C07-NCOM-031 | CHIM | 7 | 31 | 116 | ocr: unit 'g' corrupted to digit '8' in option_a ('2008' for '200g') |
+| CHIM-C07-NCOM-033 | CHIM | 7 | 33 | 116 | ocr: unit 'g' corrupted to digit '8' in option_c ('128') and arrow corrupted to '-acqua' in stem |
+| CHIM-C07-COMP-034 | CHIM | 7 | 34 | 121 | ocr: proton formula 'H⁺' corrupted to 'H’' in stem |
+| CHIM-C07-NCOM-034 | CHIM | 7 | 34 | 116 | ocr: oxygen formula 'O₂' corrupted to '0₂' (digit zero) in stem |
+| CHIM-C07-COMP-035 | CHIM | 7 | 35 | 121 | ocr: hydroxide ion formula 'OH⁻' corrupted to '0H7' in stem |
+| CHIM-C07-NCOM-037 | CHIM | 7 | 37 | 117 | ocr: unit 'g' corrupted across options ('250c', '442', '125c') |
+| CHIM-C07-NCOM-040 | CHIM | 7 | 40 | 117 | ocr: oxygen formula 'O₂' corrupted to '0₂' (digit zero) and 'moli' to 'moti' in stem |
+| CHIM-C07-NCOM-042 | CHIM | 7 | 42 | 118 | ocr: severe formula corruption across options A-D ('H⁻0° + Ci-', 'H, + Br,', 'NiCI,', 'Ca” + 2 CF') |
+| CHIM-C07-NCOM-043 | CHIM | 7 | 43 | 118 | ocr: formulas 'Br₂' and 'I₂' corrupted to 'Br,' and '1₂' in stem |
+| CHIM-C07-NCOM-044 | CHIM | 7 | 44 | 118 | ocr: half-reactions in stem and option_e severely garbled ('ZH’ + Ze"', 'Cut — Cu?*', 'Me²⁺', 'Redox: i') |
+| CHIM-C07-NCOM-050 | CHIM | 7 | 50 | 119 | ocr: formulas and arrow corrupted in stem ('CO²', 'C+ 0² + CO₂') |
+| CHIM-C07-NCOM-051 | CHIM | 7 | 51 | 119 | ocr: Gibbs free energy symbol 'ΔG' corrupted to 'AG' in stem |
+| CHIM-C07-NCOM-052 | CHIM | 7 | 52 | 119 | ocr: thermodynamic delta symbols corrupted to 'A' across options ('AK', 'AG', 'AS') including answer_text |
+| CHIM-C07-NCOM-053 | CHIM | 7 | 53 | 119 | ocr: nitrogen formula 'N₂' corrupted to 'N,' in option_c |
+| CHIM-C08-NCOM-004 | CHIM | 8 | 4 | 125 | ocr: number '1 atm' corrupted to 'i atm' in option_d |
+| CHIM-C08-NCOM-007 | CHIM | 8 | 7 | 126 | ocr: Roman numeral 'III ordine' corrupted to 'INI ordine' in option_e |
+| CHIM-C08-NCOM-009 | CHIM | 8 | 9 | 126 | ocr: option_e is bleed-through from CHIM-C08-NCOM-003 option_a |
+| CHIM-C08-NCOM-013 | CHIM | 8 | 13 | 126 | ocr: unit 'moli/litri' corrupted to 'moli/litel' in option_c |
+| CHIM-C08-NCOM-015 | CHIM | 8 | 15 | 127 | ocr: equilibrium constant subscript corrupted to comma in stem ('costante di equilibrio K,') |
 

@@ -2,8 +2,8 @@
 
 - **Branch**: `arena/cc130265-anki-sem` (Note: Arena Agent Mode locks the session to `arena/cc130265-anki-sem`; `main` is untouched and no PR is opened.)
 - **Counts (from DB)**:
-  - `done`: 517
-  - `flagged`: 83
-  - `pending`: 5302
-- **Last checkpoint**: `checkpoint: 517 done / 83 flagged / 5302 pending` (previous commit: `55207d9`)
+  - `done`: 782
+  - `flagged`: 143
+  - `pending`: 4977
+- **Last checkpoint commit**: pending commit for `782 done / 143 flagged / 4977 pending` (previous: `775f058`)
 - **Open questions asked to user**: None
