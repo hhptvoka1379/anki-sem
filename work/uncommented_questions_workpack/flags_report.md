@@ -1,6 +1,6 @@
-# Flagged rows (339)
+# Flagged rows (361)
 
-## ambiguous (20)
+## ambiguous (21)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -24,8 +24,9 @@
 | CHIM-C13-NCOM-029 | CHIM | 13 | 29 | 234 | ambiguous: sucrose is a disaccharide (option_a), which in IUPAC/biochemistry nomenclature is also an oligosaccharide of 2–10 units (option_c, OCR 'otigosaccaride') |
 | CHIM-C13-NCOM-031 | CHIM | 13 | 31 | 234 | ambiguous: fructose is chemically a sugar ('uno zucchero', option_d) and functionally/commercially also a sweetener ('un dolcificante', option_c) |
 | CHIM-C13-NCOM-032 | CHIM | 13 | 32 | 234 | ambiguous: fructose is a polyhydroxyketone possessing both a ketonic group (option_c) and multiple alcoholic -OH groups (option_e, OCR/gender 'alcolica') |
+| BIO-C01-NCOM-015 | BIO | 1 | 15 | 318 | ambiguous: by wet mass living organisms consist mainly of water (~65–85%, an inorganic compound, option_a), whereas organic compounds (option_e) predominate only on a dry-weight basis |
 
-## chem (11)
+## chem (12)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -40,8 +41,9 @@
 | CHIM-C10-COMP-009 | CHIM | 10 | 9 | 162 | chem: acidic oxides do not all have formula X₂O₃ (only oxidation state +3 does) |
 | CHIM-C12-NCOM-010 | CHIM | 12 | 10 | 195 | chem: answer_text describes only positional isomerism on the same skeleton rather than isomerism in general |
 | CHIM-C12-NCOM-209 | CHIM | 12 | 209 | 213 | chem: oxidation of an alcohol depends on substitution class / alpha-hydrogens on the C-OH carbon, not total H atoms in the molecule as stated in answer_text ('Dipende da quanti atomi di idrogeno l'alcool contiene') |
+| CHIM-C13-NCOM-156 | CHIM | 13 | 156 | 246 | chem: adenine (6-aminopurine) bears a primary exocyclic amino group (-NH₂) on a purine heterocycle, not 'un'ammina aromatica secondaria' as stated in answer_text |
 
-## key (11)
+## key (13)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -56,6 +58,8 @@
 | CHIM-C11-NCOM-127 | CHIM | 11 | 127 | 182 | key: suspect — at 25 °C [H⁺] = 10⁻⁵ M and [OH⁻] = 10⁻⁹ M give [H⁺][OH⁻] = 10⁻¹⁴ = K_w (a valid pH 5,0 solution, likely OCR of 10⁻⁸ M -> 10⁻⁹ M), contradicting key D ('non esiste') |
 | CHIM-C12-NCOM-071 | CHIM | 12 | 71 | 201 | key: suspect — consecutive alkanes in the homologous series differ by a -CH₂- unit (14 u), not -CH₃, making option_a ('Nessuna delle altre risposte è corretta') true as written |
 | CHIM-C13-NCOM-028 | CHIM | 13 | 28 | 234 | key: suspect — monosaccharides follow (CH₂O)ₙ with n = 3–7 (e.g. trioses C₃H₆O₃, pentoses C₅H₁₀O₅), not exclusively C₆H₁₂O₆ (hexoses only), making option_c ('nessuna definizione è appropriata') superior to option_e |
+| CHIM-C13-NCOM-126 | CHIM | 13 | 126 | 243 | key: suspect — tertiary structure defines the 3D native folding ('conformazione', option_e) via rotations about single bonds, whereas stereochemical 'configurazione' (option_b) is fixed by covalent bonds |
+| BIO-C01-NCOM-012 | BIO | 1 | 12 | 318 | key: suspect — water (H₂O, ~70–80% of cell mass) is the main chemical constituent of cells; proteins (~15–18%) predominate only among organic molecules, making option_e ('Nessuna delle risposte è corretta') defensible |
 
 ## missing (5)
 
@@ -67,7 +71,7 @@
 | CHIM-C12-NCOM-161 | CHIM | 12 | 161 | 209 | missing: molecular structure figure referenced in stem ('riportate in figura') is absent |
 | CHIM-C12-NCOM-271 | CHIM | 12 | 271 | 219 | missing: figure referenced in stem ('vedi figura') is absent |
 
-## ocr (308)
+## ocr (326)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -379,4 +383,22 @@
 | CHIM-C12-NCOM-308 | CHIM | 12 | 308 | 223 | ocr: oxygen symbols 'OO' corrupted to digits '00' in stem formula 'CH₃C00CH₂CH₃' |
 | CHIM-C13-COMP-019 | CHIM | 13 | 19 | 249 | ocr: answer_text corrupted to 'oli saturi' instead of 'saturi' |
 | CHIM-C13-NCOM-035 | CHIM | 13 | 35 | 235 | ocr: carbon symbol 'C' corrupted to 'e' in answer_text ('hanno sei atomi di e nella molecola') |
+| CHIM-C13-NCOM-042 | CHIM | 13 | 42 | 235 | ocr: option_e is a full statement ('Il saccarosio contiene solo glucosio') mismatched with compound-selection stem |
+| CHIM-C13-NCOM-044 | CHIM | 13 | 44 | 235 | ocr: digit '4' corrupted to superscript '⁴' in option_a ('contengono⁴ gruppi alcolici') |
+| CHIM-C13-NCOM-059 | CHIM | 13 | 59 | 237 | ocr: chemical formulas 'H₂' and 'O₂' corrupted to 'H²' and '0₋' in options C and E |
+| CHIM-C13-NCOM-067 | CHIM | 13 | 67 | 237 | ocr: page-footer bleed '238 =' merged into option_b ("L'acido pantotenico 238 =") and 'L'albumina' corrupted to 'Valbumina' in option_a |
+| CHIM-C13-NCOM-075 | CHIM | 13 | 75 | 238 | ocr: chemical name 'pentanolo' corrupted to non-chemical word 'pentacolo' in option_c |
+| CHIM-C13-NCOM-104 | CHIM | 13 | 104 | 241 | ocr: statement index 'B e D' corrupted to 'Beb' in answer_text |
+| CHIM-C13-NCOM-109 | CHIM | 13 | 109 | 241 | ocr: page-footer bleed '242 =' merged into answer_text ('amminoacido naturale 242 =') |
+| CHIM-C13-NCOM-120 | CHIM | 13 | 120 | 242 | ocr: 'carbossilico' corrupted to 'carbossiIkco' in answer_text |
+| CHIM-C13-NCOM-159 | CHIM | 13 | 159 | 246 | ocr: '1 atomo di carbonio' corrupted to 'la tomo di carbonio' in option_a |
+| CHIM-C13-NCOM-162 | CHIM | 13 | 162 | 246 | ocr: conjunction 'o' corrupted to digit '0' and 'desossiribosio' corrupted to 'desassiribosio' in answer_text |
+| CHIM-C13-NCOM-170 | CHIM | 13 | 170 | 247 | ocr: element name 'Zolfo' corrupted to 'Zolto' in answer_text |
+| CHIM-C13-NCOM-176 | CHIM | 13 | 176 | 248 | ocr: oxygen symbol 'O' corrupted to digit '0' in stem ('CH₂0') and option_b ('C₂H₄0₄') |
+| BIO-C01-NCOM-003 | BIO | 1 | 3 | 317 | ocr: trace element name 'Iodio' corrupted to 'lo dio' in answer_text |
+| BIO-C01-NCOM-021 | BIO | 1 | 21 | 319 | ocr: 'C e H₂O' (or 'C, H, O') corrupted to false chemical formula 'C₃ H₂O' in option_b in a false-statement question |
+| BIO-C01-NCOM-025 | BIO | 1 | 25 | 319 | ocr: statement index 'Solo 1 e 3' corrupted to 'Solole3' in option_b |
+| BIO-C01-NCOM-031 | BIO | 1 | 31 | 320 | ocr: statement index 'Solo 1 e 2' corrupted to 'Solo le2' in option_c |
+| BIO-C01-COMP-034 | BIO | 1 | 34 | 349 | ocr: conjunction 'o' corrupted to digit '0' ('fimbrie 0 pili') in question/back_stem |
+| BIO-C01-NCOM-052 | BIO | 1 | 52 | 322 | ocr: unit symbol '(µm)' corrupted to '(pm)' (picometer) in keyed option_c while option_e ('Nessuna delle risposte è corretta') is present |
 
