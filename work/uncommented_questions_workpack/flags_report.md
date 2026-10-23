@@ -1,6 +1,6 @@
-# Flagged rows (943)
+# Flagged rows (997)
 
-## ambiguous (93)
+## ambiguous (103)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -97,8 +97,18 @@
 | FIS-C06-COMP-001 | FIS | 6 | 1 | 823 | ambiguous: cloze prompt 'attrae oggetti neutri è chiamato ...' does not specify conductors vs insulators, admitting 'polarizzazione' (for neutral dielectrics like paper bits) as well as 'induzione' (or 'induzione elettrostatica') |
 | FIS-C06-NCOM-001 | FIS | 6 | 1 | 796 | ambiguous: omits 'relativa' vs 'assoluta' — relative permittivity ε_r is dimensionless (ruling out option_d), whereas absolute permittivity ε = ε₀·ε_r of a medium in SI (F/m) is dimensional, making option_d also true alongside option_b |
 | FIS-C06-NCOM-011 | FIS | 6 | 11 | 797 | ambiguous: option_e states a merely intermediate position ('in posizione intermedia') as sufficient for zero force, whereas for Q₁ = Q₂ ≠ 0 the net force on Q₃ vanishes ONLY at the exact midpoint (making option_d 'nessuna delle altre risposte è corretta' arguably true) |
+| FIS-C06-COMP-106 | FIS | 6 | 106 | 827 | ambiguous: 'L'area della spira' does not specify a rectangular/parallelogram loop (circular loops have A = πr², triangular ½bh) |
+| FIS-C06-COMP-127 | FIS | 6 | 127 | 829 | ambiguous: blank 'anche se non è presente una ___' equally accepts synonymous 'pila' or 'sorgente (di tensione)' alongside 'batteria' |
+| FIS-C06-COMP-132 | FIS | 6 | 132 | 829 | ambiguous: blank equally accepts full 'forza elettromotrice' (or 'tensione'/'differenza di potenziale', since 1 Wb/s = 1 V) alongside abbreviated 'f.e.m.' |
+| FIS-C06-NCOM-157 | FIS | 6 | 157 | 816 | ambiguous: option_e ('convergono più di due terminali', i.e. ≥ 3 terminals) is practically equivalent to option_a ('convergono almeno tre rami') as a definition of a circuit node |
+| FIS-C07-COMP-008 | FIS | 7 | 8 | 841 | ambiguous: in y = A sin(kx − ωt + φ), φ is strictly the 'costante di fase' or 'fase iniziale' (whereas the full argument kx − ωt + φ is the 'fase'), making bare 'fase' under-determined/imprecise |
+| FIS-C07-COMP-020 | FIS | 7 | 20 | 841 | ambiguous: after 'il rapporto spazio/___', 'tempo' is at least as natural and physically valid as 'periodo' (which normally pairs with 'lunghezza d'onda/periodo') |
+| FIS-C07-COMP-034 | FIS | 7 | 34 | 842 | ambiguous: prism apex angle has no universal symbol Φ (Italian optics texts commonly denote it α or A; Φ is a diagram-specific label in one textbook) |
+| FIS-C07-COMP-048 | FIS | 7 | 48 | 843 | ambiguous: blank 'dovuta a riflessione e ___' equally accepts 'dispersione' (essential to separate white sunlight into colors in water droplets) alongside 'rifrazione' |
+| FIS-C07-NCOM-048 | FIS | 7 | 48 | 839 | ambiguous: for d = 4a (λL/a = 32 mm), the standard textbook single-slit approximation places the first lateral maximum at (3/2)λL/a = 48 mm (option_d), whereas the exact root tan β = β gives 1,4303 × 32 ≈ 45,8 mm (option_b), and 'poste a distanza 4a' can also be read edge-to-edge (d = 5a) |
+| FIS-C08-COMP-051 | FIS | 8 | 51 | 851 | ambiguous: blanked stem 'L'emissione di particelle di alta energia dal decadimento si chiama radiazione ___' does not uniquely determine 'ionizzante' over 'nucleare' or 'corpuscolare' |
 
-## chem (59)
+## chem (64)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -161,8 +171,13 @@
 | FIS-C05-COMP-044 | FIS | 5 | 44 | 786 | chem: work done BY an expanding gas ('compiuto da un gas che si espande') is +P·ΔV > 0, whereas −P·ΔV is the work done ON the gas |
 | FIS-C06-COMP-034 | FIS | 6 | 34 | 824 | chem: with standard ΔV = V_f − V_i (as in COMP-036), work done by the electric field is W = −q ΔV = q(V_i − V_f), missing the minus sign |
 | FIS-C06-COMP-050 | FIS | 6 | 50 | 825 | chem: as written, U = 4CV² is false (electrostatic energy stored in a capacitor is U = ½CV²) |
+| FIS-C06-COMP-112 | FIS | 6 | 112 | 828 | chem: solenoid axial field is B = μ₀ n I = μ₀(N/L)I with turn density n = N/L; writing uppercase N without dividing by length L has wrong dimensions (T·m) |
+| FIS-C06-NCOM-133 | FIS | 6 | 133 | 813 | chem: pressing the positive pole of one coin-shaped cell against the positive pole of the adjacent one places them in opposing series (net emf = 0), not in parallel; in marine electric fish (e.g. Torpedo), cells align + to − within short columns while many columns are arranged side-by-side in parallel |
+| FIS-C07-NCOM-014 | FIS | 7 | 14 | 834 | chem: stem says 'tra il fuoco e l’asse ottico della lente' instead of 'centro ottico' (or 'la lente'); since the focus lies on the optical axis, the axial object distance p relative to f is undefined |
+| FIS-C07-COMP-045 | FIS | 7 | 45 | 843 | chem: without defining media 1 and 2, under the standard 1 → 2 incidence convention total internal reflection requires n₁ > n₂ (n₂ < n₁), opposite to 'n₂ maggiore di n₁' |
+| FIS-C08-NCOM-014 | FIS | 8 | 14 | 847 | chem: option_a omits 'termico/lento' and 'naturale' (²³³U is also thermally fissile, and ²³⁸U undergoes fission with fast neutrons >1 MeV) |
 
-## key (31)
+## key (33)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -197,8 +212,10 @@
 | FIS-C03-NCOM-011 | FIS | 3 | 11 | 711 | key: suspect |
 | FIS-C03-NCOM-048 | FIS | 3 | 48 | 716 | key: suspect |
 | FIS-C06-NCOM-013 | FIS | 6 | 13 | 797 | key: suspect — question asks about 'campo elettrico' in general (not electrostatic) and explicitly includes option_b ('Può esistere in presenza di fenomeni di induzione elettromagnetica'), which is physically true by Faraday-Maxwell's law ∮E·dl = −dΦ(B)/dt, whereas keyed option_a holds only in electrostatics |
+| FIS-C06-NCOM-133 | FIS | 6 | 133 | 813 | key: suspect |
+| FIS-C07-NCOM-048 | FIS | 7 | 48 | 839 | key: suspect |
 
-## missing (27)
+## missing (34)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -229,8 +246,15 @@
 | FIS-C03-NCOM-090 | FIS | 3 | 90 | 721 | missing: references 'così come illustrato in figura' (needed to see the vector sense orientation between force and displacement) |
 | FIS-C03-NCOM-184 | FIS | 3 | 184 | 734 | missing: references 'L'asta in figura' without an attached diagram (needed for senses of p and q and rod masslessness) |
 | FIS-C06-NCOM-039 | FIS | 6 | 39 | 800 | missing: references 'uno dei percorsi indicati in figura' with no figure provided |
+| FIS-C06-NCOM-123 | FIS | 6 | 123 | 811 | missing: options explicitly reference a missing figure ('vedi figura') |
+| FIS-C06-NCOM-151 | FIS | 6 | 151 | 815 | missing: references a circuit diagram ('mostrato in figura') that is not provided |
+| FIS-C06-NCOM-152 | FIS | 6 | 152 | 816 | missing: references a circuit diagram ('mostrato in figura') that is not provided |
+| FIS-C06-NCOM-186 | FIS | 6 | 186 | 820 | missing: references a diagram ('rappresentati in figura') needed for I₁ and wire separation d |
+| FIS-C06-NCOM-191 | FIS | 6 | 191 | 821 | missing: references a diagram ('mostrato in figura') showing the geometry and placement of circuit C |
+| FIS-C07-NCOM-049 | FIS | 7 | 49 | 839 | missing: references a figure ('gli angoli indicati nella figura seguente') needed for the polarizer angles |
+| FIS-C07-NCOM-050 | FIS | 7 | 50 | 839 | missing: references a missing figure ('rappresentata dalla figura seguente') |
 
-## ocr (803)
+## ocr (841)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -1037,4 +1061,42 @@
 | FIS-C06-NCOM-087 | FIS | 6 | 87 | 806 | ocr: corrupted exponent in option_c ('V²⁰') |
 | FIS-C06-COMP-090 | FIS | 6 | 90 | 827 | ocr: compound unit multiplication dots corrupted to hyphens ('1 N-s/C- metro') in question and back_stem |
 | FIS-C06-NCOM-102 | FIS | 6 | 102 | 808 | ocr: comma in 'resistenza R,' corrupted to subscript '4' ('resistenza R₄') in option_e |
+| FIS-C06-COMP-106 | FIS | 6 | 106 | 827 | ocr: article "l'" misread as uppercase 'I’' ('per I’ altezza') in question and back_stem |
+| FIS-C06-COMP-109 | FIS | 6 | 109 | 828 | ocr: Greek symbols 'τ' and 'μ' in 'τ = μ × B' corrupted to Latin 't' and 'p' ('t = px B') in question and back_stem |
+| FIS-C06-NCOM-110 | FIS | 6 | 110 | 809 | ocr: injected scan garbage 'os PZ' in option_a |
+| FIS-C06-COMP-112 | FIS | 6 | 112 | 828 | ocr: permeability symbol 'μ₀' corrupted to 'Ho' ('B = Ho N I') in question and back_stem |
+| FIS-C06-NCOM-114 | FIS | 6 | 114 | 810 | ocr: injected scan garbage 'SS 255' in option_a |
+| FIS-C06-NCOM-118 | FIS | 6 | 118 | 810 | ocr: '1 ohm' corrupted to '1 chm' in option_c/answer_text and '1o0hm' in option_a, plus multiplication dots corrupted to hyphens in options A and E |
+| FIS-C06-NCOM-120 | FIS | 6 | 120 | 811 | ocr: unit 'ohm · metro' fused into 'ohmmetro' (the Italian name of the resistance-measuring instrument) in option_c/answer_text, plus 'ρ' -> 'r' in question |
+| FIS-C06-NCOM-124 | FIS | 6 | 124 | 811 | ocr: injected scan garbage 'acs OZ I' in option_a |
+| FIS-C06-NCOM-125 | FIS | 6 | 125 | 812 | ocr: '1 volt' corrupted to 'i volt' in option_d |
+| FIS-C06-NCOM-126 | FIS | 6 | 126 | 812 | ocr: subscript '2' in 'V₂' corrupted to comma ('tensione V, pari a') in question |
+| FIS-C06-NCOM-127 | FIS | 6 | 127 | 812 | ocr: '240 ohm' corrupted to '2400hm' (letter 'o' misread as digit '0', altering value and unit) in option_a |
+| FIS-C06-NCOM-132 | FIS | 6 | 132 | 812 | ocr: '20 ohm' corrupted to '200hm' (letter 'o' misread as digit '0', altering value and unit) in option_d |
+| FIS-C06-NCOM-144 | FIS | 6 | 144 | 814 | ocr: editorial print-error note embedded in option_e ('[refuso di stampa p.814: doppia riga E con R = R₁ + R₂ + R₃]') |
+| FIS-C06-NCOM-149 | FIS | 6 | 149 | 815 | ocr: dropped subscripts in 'R = R₁, R = R₂, R = R₃' make symbol R denote each individual resistor and simultaneously the equivalent sum R = R₁ + R₂ + R₃ |
+| FIS-C06-NCOM-151 | FIS | 6 | 151 | 815 | ocr: comma in 'pari ad R,' corrupted to subscript '4' ('pari ad R₄') |
+| FIS-C06-NCOM-156 | FIS | 6 | 156 | 816 | ocr: digits '0' and '5' corrupted to letters 'O' and 'S' in option_a ('OkW'), option_b ('SW'), and option_e ('SkW') |
+| FIS-C06-NCOM-167 | FIS | 6 | 167 | 817 | ocr: injected scan garbage 'pass. =' in option_b |
+| FIS-C06-NCOM-171 | FIS | 6 | 171 | 818 | ocr: stray scan artifact '/ E' in option_e ('rilucente / E') |
+| FIS-C06-NCOM-191 | FIS | 6 | 191 | 821 | ocr: circuit label 'C' corrupted to 'e' ('il circuito e') in options B and E |
+| FIS-C06-NCOM-194 | FIS | 6 | 194 | 822 | ocr: exponent 's⁻¹' corrupted to '10s"!' in option_b (and unit in '60s' in option_e) |
+| FIS-C07-NCOM-006 | FIS | 7 | 6 | 833 | ocr: injected scan garbage 'os PZ' in option_e |
+| FIS-C07-NCOM-007 | FIS | 7 | 7 | 834 | ocr: subscripts '1' and '2' in 'n₁ = 4/3' and 'n₂ = 1' both corrupted to commas ('n, = 4/3' and 'n, = 1') in question |
+| FIS-C07-NCOM-010 | FIS | 7 | 10 | 834 | ocr: image-distance symbol 'q' corrupted to 'g' in question and option_d and to digit '9' ('1/p-1/9=1/f') in option_c |
+| FIS-C07-NCOM-018 | FIS | 7 | 18 | 835 | ocr: multiplication dot in '500 · 100 = 50.000 metri' corrupted to minus sign ('500 - 100 = 50.000 metri') in option_e |
+| FIS-C07-COMP-019 | FIS | 7 | 19 | 841 | ocr: '/ 2' in 'λ / 2' corrupted to '12' ('λ (lambda) 12') in question and back_stem |
+| FIS-C07-NCOM-023 | FIS | 7 | 23 | 835 | ocr: injected scan garbage 'os PZ' in option_a (answer_text) |
+| FIS-C07-NCOM-037 | FIS | 7 | 37 | 837 | ocr: Greek symbol 'λ' corrupted to Latin 'A' throughout question and all five options ('A= c/f') |
+| FIS-C07-COMP-038 | FIS | 7 | 38 | 842 | ocr: 'n₁ sin θ₁ = n₂ sin θ₂' corrupted to 'n, sin @, = n, sin @,' in question and back_stem |
+| FIS-C07-NCOM-040 | FIS | 7 | 40 | 837 | ocr: injected scan garbage 'os PZ' in question |
+| FIS-C07-NCOM-043 | FIS | 7 | 43 | 838 | ocr: stray scan artifact '—_ E' in option_e |
+| FIS-C07-COMP-045 | FIS | 7 | 45 | 843 | ocr: subscripts '2' and '1' in 'n₂' and 'n₁' corrupted to 'n,' and 'n' in back_stem |
+| FIS-C07-NCOM-053 | FIS | 7 | 53 | 840 | ocr: injected scan garbage 'SS 255' in option_a |
+| FIS-C08-NCOM-004 | FIS | 8 | 4 | 846 | ocr: injected scan garbage '= iss' in option_e (answer_text) |
+| FIS-C08-NCOM-006 | FIS | 8 | 6 | 846 | ocr: mass number in '¹⁴C' corrupted to '!4C' in question |
+| FIS-C08-COMP-009 | FIS | 8 | 9 | 849 | ocr: subscript 'max' in 'K_max' corrupted to 'K__,' in question and back_stem |
+| FIS-C08-COMP-013 | FIS | 8 | 13 | 849 | ocr: Greek symbol 'λ' in 'λ = h/p' corrupted to Latin 'A' ('A = h/p') in question and back_stem |
+| FIS-C08-NCOM-014 | FIS | 8 | 14 | 847 | ocr: "L'isotopo" corrupted to 'Visotopo' in option_a/answer_text and "l'uranio" to 'Yuranio' in option_b |
+| FIS-C08-COMP-029 | FIS | 8 | 29 | 850 | ocr: unit '· s' in 'J · s' corrupted to '“Ss' in question and back_stem |
 
