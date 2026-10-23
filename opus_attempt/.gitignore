@@ -7,3 +7,5 @@ work/qa-pipeline/
 work/gatecheck/
 work/gates/test/out/
 work/buildscript/test/*.apkg
+.env
+.env.*
