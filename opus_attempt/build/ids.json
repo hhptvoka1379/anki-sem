@@ -1,0 +1,11 @@
+{
+  "_comment": "Written once at v1.0 setup. Never change these. Deck IDs for chapter/type subdecks are added by scripts/build.py under deck_ids, keyed SUBJ-Cnn[-TYPE], and never changed once written.",
+  "model_id": 2014733439,
+  "model_name": "Semestre Filtro — Quiz & Completamento",
+  "deck_ids": {
+    "ROOT": 1542174541,
+    "CHIM": 1987541744,
+    "BIO": 1919654686,
+    "FIS": 1518292685
+  }
+}

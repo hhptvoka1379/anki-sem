@@ -1,0 +1,4 @@
+.venv/
+work/ocr/tmp.*/
+work/anki-test/
+node_modules/
