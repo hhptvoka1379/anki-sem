@@ -1,6 +1,6 @@
-# Flagged rows (194)
+# Flagged rows (196)
 
-## ambiguous (50)
+## ambiguous (51)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -54,6 +54,7 @@
 | BIO-C05-NCOM-032 | BIO | 5 | 32 | 488 | ambiguous: oxygen and carbon dioxide cross by simple diffusion, which is itself passive transport, so both listed terms are correct at different levels of specificity |
 | BIO-C05-NCOM-035 | BIO | 5 | 35 | 488 | ambiguous: uptake and release occur by simple diffusion, which is itself passive transport, so both listed mechanisms are correct descriptions |
 | BIO-C05-NCOM-092 | BIO | 5 | 92 | 494 | ambiguous: the main nuclear location is omitted, but chloroplasts and mitochondria in the cytoplasm also contain genetic information, so 'none correct' is not unambiguously true |
+| BIO-C05-NCOM-215 | BIO | 5 | 215 | 506 | ambiguous: both peroxisomes and lysosomes lack their own DNA and ribosomes, so the keyed single answer is not unique |
 
 ## chem (14)
 
@@ -74,7 +75,7 @@
 | CHIM-C12-NCOM-245 | CHIM | 12 | 245 | 216 | chem: the displayed CH3-CH3-CO-NH-CH3 structure gives the second carbon five bonds; an amide of this skeleton requires a CH2 group before the carbonyl |
 | CHIM-C12-NCOM-253 | CHIM | 12 | 253 | 217 | chem: aniline is C6H5-NH2, whereas the keyed formula is printed with CH and NH3 fragments that do not represent a neutral phenylamine |
 
-## key (23)
+## key (24)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -101,6 +102,7 @@
 | BIO-C04-NCOM-160 | BIO | 4 | 160 | 453 | key: suspect - achondroplasia is caused primarily by gain-of-function variants in FGFR3, not by deficient production of chondrin as the stem and keyed explanation assume |
 | BIO-C04-NCOM-183 | BIO | 4 | 183 | 456 | key: suspect - plasma anti-A occurs in both group B and group O people, so anti-A alone cannot determine that the group is probably B |
 | BIO-C05-NCOM-020 | BIO | 5 | 20 | 486 | key: suspect - intermediate filaments are anchored and organized at desmosomes chiefly by desmoplakin; desmin is itself an intermediate-filament protein, mainly in muscle, not the general desmosomal stabilizer |
+| BIO-C05-NCOM-253 | BIO | 5 | 253 | 509 | key: suspect — Sec24 selects cargo for COPII vesicles, whereas the question says COPI; no listed option names the COPI cargo-selecting coatomer |
 
 ## missing (15)
 
