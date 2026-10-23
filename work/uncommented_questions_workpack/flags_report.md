@@ -1,6 +1,6 @@
-# Flagged rows (726)
+# Flagged rows (808)
 
-## ambiguous (69)
+## ambiguous (78)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -73,8 +73,17 @@
 | BIO-C07-NCOM-154 | BIO | 7 | 154 | 583 | ambiguous: both Cdk1 (option_d) and Cdk2 (option_a) are inhibited by Wee1 phosphorylation on Tyr15 |
 | BIO-C07-NCOM-164 | BIO | 7 | 164 | 584 | ambiguous: the nuclear envelope (option_e), the nucleolus (option_b), and the fragmented Golgi apparatus (option_c) all reorganize during telophase |
 | FIS-C02-NCOM-015 | FIS | 2 | 15 | 689 | ambiguous: without v₀ = 0, displacement s = v₀t + ½at² is not purely proportional to t² (option_b), while option_d ('varia al variare del tempo') is also true |
+| FIS-C02-NCOM-030 | FIS | 2 | 30 | 691 | ambiguous: 'moto di caduta naturale' can denote Galilean free fall (making both option_b and option_c "l'accelerazione è costante" true) or real atmospheric fall with drag (where initial velocity is unspecified and speed approaches a constant terminal velocity) |
+| FIS-C02-NCOM-041 | FIS | 2 | 41 | 693 | ambiguous: normal (centripetal) acceleration a_n = v²/R vanishes on any rectilinear trajectory (1/R = 0), so both simple harmonic motion along a line (option_d) and uniformly accelerated rectilinear motion (option_e) have zero normal acceleration |
+| FIS-C02-NCOM-054 | FIS | 2 | 54 | 695 | ambiguous: both option_a ('2π rad/h', completing one 2π rad revolution per hour) and option_c ('costante') are true for the minute hand of a clock |
+| FIS-C02-NCOM-074 | FIS | 2 | 74 | 697 | ambiguous: a helical trajectory is also 'curvilinea' (option_b) |
+| FIS-C02-NCOM-076 | FIS | 2 | 76 | 698 | ambiguous: minimum river-crossing time with unconstrained landing point is t_min = L/v_boat, independent of current speed (option_e 'resta invariato'); option_c holds only if zero downstream drift to the directly opposite point is required, which the stem omits |
+| FIS-C03-NCOM-010 | FIS | 3 | 10 | 711 | ambiguous: if the body's velocity at the instant forces cease is zero (e.g. balanced forces removed simultaneously), it remains at rest rather than moving in uniform rectilinear motion |
+| FIS-C03-NCOM-013 | FIS | 3 | 13 | 711 | ambiguous: alongside option_c ('sicuramente su di esso agisce una forza'), centripetal acceleration is vectorially time-varying in direction (option_a) and motion in vacuum is free of medium friction (option_e) |
+| FIS-C03-COMP-023 | FIS | 3 | 23 | 736 | ambiguous: an Atwood machine comprises two masses connected by an ideal string ('fune') over an ideal pulley ('carrucola'/'puleggia'), both feminine singular nouns fitting 'una ... ideale' |
+| FIS-C03-COMP-065 | FIS | 3 | 65 | 738 | ambiguous: cloze 'il [...] è uguale alla variazione di energia cinetica' equally accepts 'lavoro', 'lavoro totale', or 'lavoro netto' rather than the specific two-word phrase 'lavoro compiuto' |
 
-## chem (45)
+## chem (52)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -123,8 +132,15 @@
 | BIO-C07-NCOM-155 | BIO | 7 | 155 | 583 | chem: many protozoa also exhibit closed mitosis alongside fungi and unicellular algae |
 | BIO-C07-NCOM-156 | BIO | 7 | 156 | 583 | chem: Cdc20 is the coactivator of APC/C, whereas Mad2 and BubR1/Bub3 are the mitotic checkpoint proteins that sequester Cdc20 to inhibit APC/C |
 | FIS-C02-COMP-016 | FIS | 2 | 16 | 699 | chem: instantaneous scalar speed /v/ is non-negative (>= 0), not strictly positive, as it equals zero whenever a particle is at rest or at a turning point |
+| FIS-C02-NCOM-044 | FIS | 2 | 44 | 694 | chem: for α = 90° (which satisfies α ≠ 0), a projectile launched straight upward follows a rectilinear trajectory rather than a parabola |
+| FIS-C02-NCOM-074 | FIS | 2 | 74 | 697 | chem: an 'elicoide' (helicoid) is a 2D ruled surface whereas the 1D space trajectory is a cylindrical helix ('elica cilindrica') |
+| FIS-C03-COMP-028 | FIS | 3 | 28 | 736 | chem: internal forces leave unchanged the center-of-mass motion of the system itself, not 'del sistema esterno' |
+| FIS-C03-NCOM-038 | FIS | 3 | 38 | 714 | chem: apparent weight M(g + a_y) exceeds Mg whenever upward acceleration a_y > 0, which occurs both when accelerating upward and when decelerating while moving downward, making 'solo' in option_e false |
+| FIS-C03-COMP-099 | FIS | 3 | 99 | 739 | chem: kinetic friction opposes relative velocity between surfaces, not necessarily displacement in a given inertial frame (e.g. a crate dropped onto a moving conveyor belt is accelerated forward by kinetic friction, which does positive work on it; only net frictional work on the pair of surfaces is always negative) |
+| FIS-C03-COMP-100 | FIS | 3 | 100 | 739 | chem: false in general — when kinetic energy decreases under conservative forces (e.g. a body rising in gravity or compressing an ideal spring), the lost kinetic energy converts into potential energy rather than internal energy |
+| FIS-C03-NCOM-104 | FIS | 3 | 104 | 723 | chem: 'A quale altezza deve essere lanciato ... affinché acquisti' reverses 'lasciato cadere da quale altezza' (rising to peak height h reduces kinetic energy rather than acquiring 100 km/h) |
 
-## key (26)
+## key (30)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -154,8 +170,12 @@
 | BIO-C05-NCOM-253 | BIO | 5 | 253 | 509 | key: suspect |
 | BIO-C06-NCOM-067 | BIO | 6 | 67 | 540 | key: suspect |
 | BIO-C07-NCOM-035 | BIO | 7 | 35 | 570 | key: suspect |
+| FIS-C02-NCOM-027 | FIS | 2 | 27 | 691 | key: suspect |
+| FIS-C02-NCOM-076 | FIS | 2 | 76 | 698 | key: suspect |
+| FIS-C03-NCOM-011 | FIS | 3 | 11 | 711 | key: suspect |
+| FIS-C03-NCOM-048 | FIS | 3 | 48 | 716 | key: suspect |
 
-## missing (23)
+## missing (25)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -182,8 +202,10 @@
 | BIO-C07-NCOM-114 | BIO | 7 | 114 | 579 | missing: question refers to a diagram ('Lo schema rappresenta...') missing from the card |
 | BIO-C07-NCOM-115 | BIO | 7 | 115 | 579 | missing: question refers to a figure ('Lo schema della figura rappresenta...') missing from the card |
 | FIS-C01-NCOM-090 | FIS | 1 | 90 | 681 | missing: question depends on force orientations shown in a missing figure ('nel verso indicato in figura') |
+| FIS-C03-NCOM-036 | FIS | 3 | 36 | 714 | missing: references 'Il sistema mostrato in figura' needed to identify which of masses m₁ and m₂ lies on the inclined plane versus hangs vertically |
+| FIS-C03-NCOM-090 | FIS | 3 | 90 | 721 | missing: references 'così come illustrato in figura' (needed to see the vector sense orientation between force and displacement) |
 
-## ocr (613)
+## ocr (683)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -800,4 +822,74 @@
 | FIS-C02-NCOM-011 | FIS | 2 | 11 | 689 | ocr: exponents corrupted to '*' in option_b ('lunghezza/(tempo)*') and '?' in option_e ('(lunghezza)?/tempo') |
 | FIS-C02-NCOM-014 | FIS | 2 | 14 | 689 | ocr: "l'atleta" corrupted to 'Fatleta' in question |
 | FIS-C02-NCOM-019 | FIS | 2 | 19 | 690 | ocr: stray '=' symbol bled into option_c ('11,0 m/s =') |
+| FIS-C02-NCOM-020 | FIS | 2 | 20 | 690 | ocr: unit 'm/s' and 'in N s' fused into 'm/sin4s', 'm/sin10s', 'm/sin8s' in options A/C/D/E |
+| FIS-C02-COMP-021 | FIS | 2 | 21 | 700 | ocr: subscript '0' in initial velocity 'v₀' corrupted to lowercase letter 'o' ('vo') in question and back_stem |
+| FIS-C02-NCOM-021 | FIS | 2 | 21 | 690 | ocr: speed unit 'm·s⁻¹' corrupted to 'ms!' in question |
+| FIS-C02-NCOM-022 | FIS | 2 | 22 | 690 | ocr: formula '(v₂ − v₁)/(t₂ − t₁)' severely garbled to '(v, “% vi) / (t₂ * t,)' in option_c/answer_text |
+| FIS-C02-NCOM-027 | FIS | 2 | 27 | 691 | ocr: exponents and multiplication dots corrupted across options A/C/D ('101/2 / (2-9,8)', '51/2 /9,8', '21/2.9,8-10') |
+| FIS-C02-NCOM-037 | FIS | 2 | 37 | 692 | ocr: exponent '²' corrupted to '?' ('1/2 mgt?') in option_a |
+| FIS-C02-NCOM-039 | FIS | 2 | 39 | 693 | ocr: 'Sì,' corrupted to subscripted 'Si₄' in option_c |
+| FIS-C02-NCOM-043 | FIS | 2 | 43 | 693 | ocr: stray text 'nos =' bled into option_b |
+| FIS-C02-NCOM-044 | FIS | 2 | 44 | 694 | ocr: Greek angle symbol 'α' corrupted to 'a' ('inclinazione a diversa da 0') in question |
+| FIS-C02-COMP-045 | FIS | 2 | 45 | 701 | ocr: subscript in initial speed 'v₀' (or 'v_i') corrupted to comma ('v, cos θ') in question and back_stem |
+| FIS-C02-COMP-046 | FIS | 2 | 46 | 701 | ocr: subscript in initial speed 'v₀' (or 'v_i') corrupted to comma ('v, sen θ') in question and back_stem |
+| FIS-C02-NCOM-047 | FIS | 2 | 47 | 694 | ocr: stray garbage '—t--' bled into option_e/answer_text |
+| FIS-C02-NCOM-051 | FIS | 2 | 51 | 694 | ocr: scientific notation '4·10²' corrupted to '4-102' in option_b |
+| FIS-C02-COMP-053 | FIS | 2 | 53 | 701 | ocr: vertical coordinate 'y' corrupted to unit vector symbol 'ĵ' in answer_text and back_stem |
+| FIS-C02-COMP-057 | FIS | 2 | 57 | 701 | ocr: 'Δt' corrupted to 'At' in back_stem |
+| FIS-C02-NCOM-061 | FIS | 2 | 61 | 696 | ocr: initial/center speed symbol 'V₀' and multiplication dot corrupted across question and options ('V,', 'V, - R', '2-Vo', 'V⁰') |
+| FIS-C02-NCOM-064 | FIS | 2 | 64 | 696 | ocr: '2π' corrupted to '27' in option_c/answer_text ('45 (27)/60') and to '21' in options B and D |
+| FIS-C02-NCOM-065 | FIS | 2 | 65 | 696 | ocr: angular velocity expression corrupted to 'ns"!' in option_d |
+| FIS-C02-NCOM-066 | FIS | 2 | 66 | 696 | ocr: '2π' corrupted to '2n' in options C/D and '2a' in option_e |
+| FIS-C02-NCOM-075 | FIS | 2 | 75 | 697 | ocr: stray text 'css. JP' bled into option_a |
+| FIS-C03-NCOM-002 | FIS | 3 | 2 | 710 | ocr: multiplication dot '·' corrupted to '-', '+', and '→' across options A/B/E ('F-cotg 30°', 'F+tg 30°', 'F → sen 30°') |
+| FIS-C03-NCOM-010 | FIS | 3 | 10 | 711 | ocr: "l'azione" corrupted to 'Fazione' in question |
+| FIS-C03-NCOM-011 | FIS | 3 | 11 | 711 | ocr: radical symbol '√' severely corrupted across options A/B/C/D ('2FV3', '2F/2', 'FY2', 'FS3' in answer_text) |
+| FIS-C03-NCOM-015 | FIS | 3 | 15 | 711 | ocr: stray text 'os PZ' bled into option_e |
+| FIS-C03-NCOM-020 | FIS | 3 | 20 | 712 | ocr: stray text '_ =' in option_a and digits/units corrupted in options B/E ('801/s', 'SJ/s') |
+| FIS-C03-COMP-026 | FIS | 3 | 26 | 736 | ocr: 'a g sen θ' corrupted to 'ag sen 0' (Greek 'θ' turned into digit '0') in back_stem |
+| FIS-C03-COMP-028 | FIS | 3 | 28 | 736 | ocr: 'del sistema stesso' (or center-of-mass motion of the system) corrupted/garbled to 'del sistema esterno' in question, answer_text, and back_stem |
+| FIS-C03-NCOM-029 | FIS | 3 | 29 | 713 | ocr: subscripts '1' and '2' obliterated into commas, 'j', and ')' across question and all options ('m, e m, = 2 m,', 'a,/a,=2', 'aj= a)') |
+| FIS-C03-NCOM-033 | FIS | 3 | 33 | 713 | ocr: exponents in powers of 10 corrupted across options A–D ('107', '108', and '10⁶' turned into '10°' in option_d/answer_text) |
+| FIS-C03-COMP-035 | FIS | 3 | 35 | 736 | ocr: subscript 's' and equals sign '=' dropped in back_stem ('f, max μs (mu) n') and normal-force symbol case mismatch ('N' vs 'n') |
+| FIS-C03-NCOM-035 | FIS | 3 | 35 | 714 | ocr: distance '3 m' corrupted to superscript exponent 'percorso³ m' in question |
+| FIS-C03-NCOM-038 | FIS | 3 | 38 | 714 | ocr: 'M,' corrupted to subscripted 'M₂' in question |
+| FIS-C03-NCOM-044 | FIS | 3 | 44 | 715 | ocr: 'd,' corrupted to subscripted 'd₄' in question and force symbol 'F' corrupted to 'È' ('1/2 È') in option_a |
+| FIS-C03-COMP-045 | FIS | 3 | 45 | 737 | ocr: noun 'velocità' obliterated into '/' ('La / limite') in question and back_stem |
+| FIS-C03-NCOM-045 | FIS | 3 | 45 | 715 | ocr: '70·9,8 N' corrupted to '70-98 N' in option_c/answer_text (and multiplication dots corrupted in options A/E) |
+| FIS-C03-NCOM-046 | FIS | 3 | 46 | 715 | ocr: stray text 'iss =' bled into option_e |
+| FIS-C03-COMP-047 | FIS | 3 | 47 | 737 | ocr: Greek symbol 'τ' (tau) for time constant corrupted to Latin 't' ('t = m/b') in question and back_stem |
+| FIS-C03-NCOM-048 | FIS | 3 | 48 | 716 | ocr: decimal comma dropped in option_a/answer_text ('98N' instead of '9,8 N') |
+| FIS-C03-NCOM-050 | FIS | 3 | 50 | 716 | ocr: acceleration unit 'm/s²' corrupted to speed unit 'm/s' ('9,8 m/s') in question |
+| FIS-C03-NCOM-051 | FIS | 3 | 51 | 716 | ocr: '50 N' corrupted to 'SON' in option_e |
+| FIS-C03-COMP-058 | FIS | 3 | 58 | 738 | ocr: displacement vector 'Δr' corrupted to 'Ar' ('W = F Ar cos θ') in question and back_stem |
+| FIS-C03-NCOM-058 | FIS | 3 | 58 | 717 | ocr: 'S.I.' corrupted to 'S.L' in question and multiplication dots corrupted in options A/E ('Nes' for 'N·s', 'N-m' for 'N·m') |
+| FIS-C03-NCOM-067 | FIS | 3 | 67 | 718 | ocr: subscripts '1' and '2' in 'Gm₁m₂/r²' corrupted to commas ('Gm,m,/r²') in question |
+| FIS-C03-NCOM-069 | FIS | 3 | 69 | 718 | ocr: digit '5' corrupted to 'S' ('S anni') in option_e |
+| FIS-C03-COMP-073 | FIS | 3 | 73 | 738 | ocr: 'Δr' corrupted to 'Ar' and Greek 'θ' corrupted to digit '8' ('W = F Ar cos 8') in question and back_stem |
+| FIS-C03-NCOM-073 | FIS | 3 | 73 | 719 | ocr: orbital radius 'R' corrupted to 'A' ('distanza A') and subscript in 'v₀' corrupted to comma ('v,') in question and options B/D |
+| FIS-C03-NCOM-074 | FIS | 3 | 74 | 719 | ocr: multiplication dot and subscripts in 'F = G·M₁M₂/R²' corrupted to subtraction and flat digit ('F = G - MM1/R²') in question |
+| FIS-C03-NCOM-077 | FIS | 3 | 77 | 719 | ocr: stray text 'uss =' bled into question |
+| FIS-C03-NCOM-078 | FIS | 3 | 78 | 720 | ocr: formula/unit corrupted in option_a ('21/2g') and '3 s' corrupted to '35' in option_c |
+| FIS-C03-COMP-079 | FIS | 3 | 79 | 738 | ocr: Greek symbol 'Δ' corrupted to digit '4' ('4 K' instead of 'ΔK') in question and back_stem |
+| FIS-C03-NCOM-082 | FIS | 3 | 82 | 720 | ocr: multiplication dots corrupted to '-' and '>' across options A/C/D/E ('70kg- 1,5 m-9,81 m/s²' in answer_text, '1/2 > 70kg- 15 m-') |
+| FIS-C03-NCOM-083 | FIS | 3 | 83 | 720 | ocr: multiplication dots '·' corrupted to subtraction hyphens '-' across options A/C/D/E ('massa - velocità = forza', etc.) |
+| FIS-C03-NCOM-084 | FIS | 3 | 84 | 721 | ocr: 'pari a 1' (or 'pari a L') corrupted to 'parial' in option_b |
+| FIS-C03-NCOM-085 | FIS | 3 | 85 | 721 | ocr: 'F·d' corrupted to 'F-d' in option_a and 'tra F e d' fused into 'tra F ed' (erasing variable 'd') in option_c |
+| FIS-C03-NCOM-087 | FIS | 3 | 87 | 721 | ocr: stray text '1+' bled into option_b/answer_text ('non solo nei casi C, D, E 1+') |
+| FIS-C03-COMP-090 | FIS | 3 | 90 | 739 | ocr: 'ΔE_mec' (or 'ΔE_m') corrupted to 'AE,' in question and back_stem |
+| FIS-C03-NCOM-091 | FIS | 3 | 91 | 722 | ocr: multiplication dots corrupted to '-' and '°' across options A/B/C/E ('m-h', 'm-g°L', 'm-L', 'm-g-h') |
+| FIS-C03-NCOM-092 | FIS | 3 | 92 | 722 | ocr: unit 'J' corrupted to ')' ('9,8)') in option_d |
+| FIS-C03-NCOM-093 | FIS | 3 | 93 | 722 | ocr: angle symbol corrupted to 't' in question, 'kJ' corrupted to 'kj' in option_d/answer_text, and '56 kJ' garbled to '56 k]J hi' in option_e |
+| FIS-C03-NCOM-098 | FIS | 3 | 98 | 722 | ocr: '8,5 m/s?' corrupted to '8,5 m/s²' (turning speed unit into acceleration unit and dropping '?') in question |
+| FIS-C03-NCOM-103 | FIS | 3 | 103 | 723 | ocr: exponents corrupted in option_a ('(110/140)3') and option_e ('(140/110)!/2') |
+| FIS-C03-NCOM-104 | FIS | 3 | 104 | 723 | ocr: '100 km/h?' corrupted to '100 km/h²' in question |
+| FIS-C03-COMP-105 | FIS | 3 | 105 | 740 | ocr: Greek 'Δ' corrupted to 'A' ('AK + AU' instead of 'ΔK + ΔU') in question and back_stem |
+| FIS-C03-NCOM-105 | FIS | 3 | 105 | 723 | ocr: '10⁷' -> '107' and '72 km/h?' -> '72 km/h²' in question, and unit 'l' (liters) corrupted to digit '1' across all options ('0,051' for '0,05 l', '31' for '3 l', etc.) |
+| FIS-C03-NCOM-106 | FIS | 3 | 106 | 723 | ocr: stray text 'os PP' bled into option_c |
+| FIS-C03-NCOM-113 | FIS | 3 | 113 | 724 | ocr: compound unit multiplication dot corrupted to spaced hyphen ('watt - secondi' in option_c/answer_text, 'kcal - N', 'calorie - secondi') |
+| FIS-C03-NCOM-114 | FIS | 3 | 114 | 724 | ocr: compound unit multiplication dot corrupted to spaced hyphen ('N - m/s') in option_c/answer_text |
+| FIS-C03-NCOM-116 | FIS | 3 | 116 | 724 | ocr: compound unit multiplication dot corrupted to colon ('Newton: metro') in option_e |
+| FIS-C03-NCOM-118 | FIS | 3 | 118 | 725 | ocr: compound unit multiplication dot corrupted to hyphen ('1N-m') in option_b |
+| FIS-C03-NCOM-125 | FIS | 3 | 125 | 726 | ocr: 'pari a 1' (or 'pari a L') corrupted to 'parial' in option_c |
 
