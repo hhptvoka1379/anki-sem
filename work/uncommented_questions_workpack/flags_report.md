@@ -1,6 +1,6 @@
-# Flagged rows (361)
+# Flagged rows (386)
 
-## ambiguous (21)
+## ambiguous (28)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -25,8 +25,15 @@
 | CHIM-C13-NCOM-031 | CHIM | 13 | 31 | 234 | ambiguous: fructose is chemically a sugar ('uno zucchero', option_d) and functionally/commercially also a sweetener ('un dolcificante', option_c) |
 | CHIM-C13-NCOM-032 | CHIM | 13 | 32 | 234 | ambiguous: fructose is a polyhydroxyketone possessing both a ketonic group (option_c) and multiple alcoholic -OH groups (option_e, OCR/gender 'alcolica') |
 | BIO-C01-NCOM-015 | BIO | 1 | 15 | 318 | ambiguous: by wet mass living organisms consist mainly of water (~65–85%, an inorganic compound, option_a), whereas organic compounds (option_e) predominate only on a dry-weight basis |
+| BIO-C01-COMP-075 | BIO | 1 | 75 | 351 | ambiguous: front stem ('consente la risalita nei vasi conduttori ... grazie alla forza di adesione tra molecole') also fits 'capillarità' and conflates cohesion (between water molecules) with adhesion (to vessel walls) |
+| BIO-C01-COMP-080 | BIO | 1 | 80 | 352 | ambiguous: front stem mentioning micelle formation points toward 'anfipatiche' as well as 'apolari' |
+| BIO-C01-NCOM-105 | BIO | 1 | 105 | 328 | ambiguous: non-mutually-exclusive options pit taxonomic identity ('batteri', option_c) against metabolic mode ('anaerobici e non fotosintetizzanti', option_d) |
+| BIO-C01-COMP-115 | BIO | 1 | 115 | 354 | ambiguous: reaction spontaneity is indicated by the change ΔG ('variazione di energia libera di Gibbs'), making the bare front stem ambiguous |
+| BIO-C01-NCOM-148 | BIO | 1 | 148 | 333 | ambiguous: oxygenic photosynthesis both produces atmospheric O₂ essential for aerobic life (option_a) and converts solar into chemical energy (option_d, though chemolithoautotrophs do not rely on photosynthetic organic matter) |
+| BIO-C01-NCOM-242 | BIO | 1 | 242 | 343 | ambiguous: 'una variazione in una popolazione' can mean either the origin of a new heritable variant ('mutazione', option_c) or a shift in population trait/allele frequencies ('selezione naturale', option_a) |
+| BIO-C01-NCOM-244 | BIO | 1 | 244 | 343 | ambiguous: non-adaptive evolution by genetic drift or gene flow requires genetic variation (1) without obligatorily requiring natural selection (2), making option_b ('Solo 1') defensible |
 
-## chem (12)
+## chem (14)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -42,8 +49,10 @@
 | CHIM-C12-NCOM-010 | CHIM | 12 | 10 | 195 | chem: answer_text describes only positional isomerism on the same skeleton rather than isomerism in general |
 | CHIM-C12-NCOM-209 | CHIM | 12 | 209 | 213 | chem: oxidation of an alcohol depends on substitution class / alpha-hydrogens on the C-OH carbon, not total H atoms in the molecule as stated in answer_text ('Dipende da quanti atomi di idrogeno l'alcool contiene') |
 | CHIM-C13-NCOM-156 | CHIM | 13 | 156 | 246 | chem: adenine (6-aminopurine) bears a primary exocyclic amino group (-NH₂) on a purine heterocycle, not 'un'ammina aromatica secondaria' as stated in answer_text |
+| BIO-C01-COMP-080 | BIO | 1 | 80 | 352 | chem: purely nonpolar molecules coalesce/phase-separate in water rather than forming micelles, which require amphipathic molecules possessing a polar head group |
+| BIO-C01-NCOM-098 | BIO | 1 | 98 | 327 | chem: stem falsely states that ribosomes (~20–30 nm) are observable under an optical microscope (resolution limit ~200 nm) |
 
-## key (13)
+## key (15)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -60,8 +69,10 @@
 | CHIM-C13-NCOM-028 | CHIM | 13 | 28 | 234 | key: suspect — monosaccharides follow (CH₂O)ₙ with n = 3–7 (e.g. trioses C₃H₆O₃, pentoses C₅H₁₀O₅), not exclusively C₆H₁₂O₆ (hexoses only), making option_c ('nessuna definizione è appropriata') superior to option_e |
 | CHIM-C13-NCOM-126 | CHIM | 13 | 126 | 243 | key: suspect — tertiary structure defines the 3D native folding ('conformazione', option_e) via rotations about single bonds, whereas stereochemical 'configurazione' (option_b) is fixed by covalent bonds |
 | BIO-C01-NCOM-012 | BIO | 1 | 12 | 318 | key: suspect — water (H₂O, ~70–80% of cell mass) is the main chemical constituent of cells; proteins (~15–18%) predominate only among organic molecules, making option_e ('Nessuna delle risposte è corretta') defensible |
+| BIO-C01-NCOM-174 | BIO | 1 | 174 | 335 | key: suspect — while animals cannot assimilate inorganic nitrates, many heterotrophic fungi and bacteria assimilate or respire nitrates (NO₃⁻), making option_e ('Nessuna delle risposte è corretta') defensible |
+| BIO-C01-NCOM-216 | BIO | 1 | 216 | 340 | key: suspect — assembling 3 mononucleotides from free bases, deoxyribose, and phosphate requires 3 × 2 = 6 condensations, plus 2 phosphodiester condensations to join them into a 3-nucleotide chain = 8 total (option_a), contradicting keyed 6 (option_d) |
 
-## missing (5)
+## missing (8)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -70,8 +81,11 @@
 | CHIM-C08-NCOM-001 | CHIM | 8 | 1 | 125 | missing: question references a concentration-vs-time graph ('il grafico riporta...') not included in the card |
 | CHIM-C12-NCOM-161 | CHIM | 12 | 161 | 209 | missing: molecular structure figure referenced in stem ('riportate in figura') is absent |
 | CHIM-C12-NCOM-271 | CHIM | 12 | 271 | 219 | missing: figure referenced in stem ('vedi figura') is absent |
+| BIO-C01-NCOM-056 | BIO | 1 | 56 | 323 | missing: question refers to structure 'A' on an optical microscope figure not included in the card |
+| BIO-C01-NCOM-091 | BIO | 1 | 91 | 326 | missing: question requires inspecting a cell figure not included in the card |
+| BIO-C01-NCOM-263 | BIO | 1 | 263 | 346 | missing: question requires inspecting an evolutionary tree diagram not included in the card |
 
-## ocr (326)
+## ocr (340)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -401,4 +415,18 @@
 | BIO-C01-NCOM-031 | BIO | 1 | 31 | 320 | ocr: statement index 'Solo 1 e 2' corrupted to 'Solo le2' in option_c |
 | BIO-C01-COMP-034 | BIO | 1 | 34 | 349 | ocr: conjunction 'o' corrupted to digit '0' ('fimbrie 0 pili') in question/back_stem |
 | BIO-C01-NCOM-052 | BIO | 1 | 52 | 322 | ocr: unit symbol '(µm)' corrupted to '(pm)' (picometer) in keyed option_c while option_e ('Nessuna delle risposte è corretta') is present |
+| BIO-C01-NCOM-058 | BIO | 1 | 58 | 323 | ocr: page-footer text ('organizzazione biologica e molecolare della vita 323') bled into option_e |
+| BIO-C01-COMP-066 | BIO | 1 | 66 | 351 | ocr: noun 'legami' dropped before cloze ('I [legami] covalenti si formano...'), making front stem prompt for a plural noun rather than adjective 'covalenti' |
+| BIO-C01-NCOM-067 | BIO | 1 | 67 | 324 | ocr: statement index 'Solo 1 e 2' corrupted to 'Solole2' in option_a |
+| BIO-C01-COMP-083 | BIO | 1 | 83 | 352 | ocr: general carbohydrate formula 'Cₙ(H₂O)ₙ' corrupted to 'C,(H20),' in question/back_stem |
+| BIO-C01-NCOM-089 | BIO | 1 | 89 | 326 | ocr: statement indices 'Solo 1 e 4' and 'Solo 1 e 2' corrupted to 'Solole4' and 'Solole2' in option_c and option_e |
+| BIO-C01-COMP-093 | BIO | 1 | 93 | 353 | ocr: comma after 'RNA' corrupted to subscript digit '₁' ('RNA₁') in question/back_stem |
+| BIO-C01-COMP-111 | BIO | 1 | 111 | 354 | ocr: thermodynamic symbol 'ΔG' corrupted to 'AG' in question/back_stem |
+| BIO-C01-COMP-112 | BIO | 1 | 112 | 354 | ocr: thermodynamic symbol 'ΔG' corrupted to 'AG' in question/back_stem |
+| BIO-C01-COMP-115 | BIO | 1 | 115 | 354 | ocr: leading article dropped at start of sentence before cloze |
+| BIO-C01-COMP-120 | BIO | 1 | 120 | 354 | ocr: chemical formulas 'CO₂' and 'FADH₂' corrupted to 'COz' and 'FADH,' in question/back_stem |
+| BIO-C01-NCOM-130 | BIO | 1 | 130 | 331 | ocr: chemical formula 'O₂' corrupted to '0₂' (digit zero) in option_d |
+| BIO-C01-NCOM-132 | BIO | 1 | 132 | 331 | ocr: statement index 'Solo 1 e 2' corrupted to 'Solole2' in option_a |
+| BIO-C01-NCOM-212 | BIO | 1 | 212 | 339 | ocr: isotope mass numbers '¹⁵N' and '¹⁴N' corrupted to '!5N'/'‘5N' and '"N'/'1*N' in question |
+| BIO-C01-NCOM-244 | BIO | 1 | 244 | 343 | ocr: statement index 'Solo 1 e 2' corrupted to 'Solo le2' in keyed option_a |
 
