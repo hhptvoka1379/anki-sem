@@ -1,6 +1,6 @@
-# Flagged rows (228)
+# Flagged rows (241)
 
-## ambiguous (13)
+## ambiguous (16)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -17,8 +17,11 @@
 | CHIM-C12-NCOM-085 | CHIM | 12 | 85 | 202 | ambiguous: nel metano CH₄ (simmetria tetraedrica Td) i quattro atomi di idrogeno sono sia 'metilici' (A) sia perfettamente 'equivalenti' (E) |
 | BIO-C02-NCOM-107 | BIO | 2 | 107 | 370 | ambiguous: oltre alla metilazione istonica (E: es. H3K4me3 attivante contro H3K9me3/H3K27me3 repressiva), anche l'ubiquitinazione istonica (D: H2BK120ub1 attivante contro H2AK119ub1 repressiva in PRC1) attiva o reprime la trascrizione a seconda del residuo |
 | BIO-C03-NCOM-216 | BIO | 3 | 216 | 407 | ambiguous: le opzioni A ('Degenerazione') ed E ('Degenerazione') sono identiche carattere per carattere |
+| BIO-C03-NCOM-234 | BIO | 3 | 234 | 408 | ambiguous: tutti e cinque i processi elencati (trascrizione, replicazione del DNA, sintesi anabolica di zuccheri, importazione di proteine mitocondriali tramite mtHsp70 e degradazione proteasomica) richiedono fisiologicamente l'idrolisi di ATP |
+| BIO-C04-NCOM-017 | BIO | 4 | 17 | 434 | ambiguous: le opzioni A ('allele') e B ('allelomorfo', termine originario di Bateson di cui 'allele' è l'abbreviazione) sono sinonimi esatti in genetica |
+| BIO-C04-NCOM-121 | BIO | 4 | 121 | 447 | ambiguous: sia A ('dallo spermatozoo', gamete eterogametico che apporta X oppure Y) sia D ('dai cromosomi', coppia sessuale XX/XY con il gene SRY) sono risposte biologicamente corrette alla domanda 'Il sesso dell'uomo è determinato:' |
 
-## key (12)
+## key (14)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -34,8 +37,10 @@
 | BIO-C01-NCOM-216 | BIO | 1 | 216 | 340 | key: suspect - unire 9 unità monomeriche distinte (3 basi + 3 deossiribosi + 3 fosfati) in un'unica catena trinucleotidica richiede 3 condensazioni N-glicosidiche + 3 condensazioni 5'-fosfoesteree + 2 condensazioni 3'-fosfodiesteriche = 8 reazioni di condensazione (opzione A), mentre la chiave D = 6 omette i 2 legami fosfodiesterici tra nucleotidi |
 | BIO-C03-NCOM-076 | BIO | 3 | 76 | 391 | key: suspect - il codice genetico non è la sequenza di basi del DNA di un organismo (definizione di genoma/informazione genetica in D), bensì il sistema universale di regole di corrispondenza tra le 64 triplette e i 20 amminoacidi; con E ('nessuna delle altre risposte è corretta') presente, la chiave D è concettualmente errata |
 | BIO-C03-COMP-123 | BIO | 3 | 123 | 417 | key: suspect - i fattori di elongazione (EF-Tu/eEF1A, EF-G/eEF2) mediano l'ingresso dell'amminoacil-tRNA nel sito A e la traslocazione, ma non catalizzano il legame peptidico, che è catalizzato dall'rRNA peptidil-transferasico della subunità maggiore |
+| BIO-C04-NCOM-057 | BIO | 4 | 57 | 440 | key: suspect - la donna con genitore albino è portatrice obbligata Aa, ma il marito normale con genitori e nonni tutti normali ha solo la rara frequenza di portatore della popolazione generale (~1/70), sicché la probabilità di un figlio albino è ~1/280 ('A: Praticamente nulla') e non 'D: 25%' |
+| BIO-C04-NCOM-076 | BIO | 4 | 76 | 442 | key: suspect - avendo già 2 figlie su una famiglia pianificata di 6 figli totali (quesito classico di Griffiths), restano 4 nascite indipendenti e la probabilità di avere tutte figlie è (1/2)⁴ = 1/16 (D), non (1/2)⁶ = 1/64 (E); inoltre il testo non chiarisce se i 6 figli siano totali o aggiuntivi |
 
-## missing (9)
+## missing (13)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -48,8 +53,12 @@
 | BIO-C01-NCOM-091 | BIO | 1 | 91 | 326 | missing: l'enunciato chiede di identificare il tipo cellulare rappresentato in una figura non allegata alla scheda |
 | BIO-C01-NCOM-263 | BIO | 1 | 263 | 346 | missing: l'enunciato rimanda allo studio di un grafico dell'albero evolutivo non allegato alla scheda |
 | BIO-C03-NCOM-064 | BIO | 3 | 64 | 390 | missing: l'enunciato rimanda esplicitamente a una figura assente ('In figura è rappresentato uno schema...') con residui OCR illeggibili delle etichette ('a Pi EI io') |
+| BIO-C04-NCOM-035 | BIO | 4 | 35 | 436 | missing: manca completamente la tabella dei cinque incroci/righe a cui rimandano l'enunciato e tutte le opzioni ('Riga 1'–'Riga 5') |
+| BIO-C04-NCOM-130 | BIO | 4 | 130 | 448 | missing: manca completamente l'albero genealogico a cui rimandano l'enunciato e tutte le sigle individuali delle opzioni (F₁-₃, F₂-₁, P-₁, F₂-₂, F₁-₂) |
+| BIO-C04-NCOM-132 | BIO | 4 | 132 | 449 | missing: manca completamente l'albero genealogico in figura necessario per determinare il genotipo della femmina di F₃ |
+| BIO-C04-NCOM-152 | BIO | 4 | 152 | 451 | missing: manca completamente l'albero genealogico in figura necessario per stabilire i genotipi degli individui in F₁, F₂ e F₃ |
 
-## ocr (194)
+## ocr (198)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -247,4 +256,8 @@
 | BIO-C03-NCOM-169 | BIO | 3 | 169 | 402 | ocr: grave corruzione del nome e del coefficiente dell'rRNA nell'enunciato ('FRNA 1858' al posto di 'rRNA 18S', oltre a 'RNA polimerasi II]' in C) |
 | BIO-C03-NCOM-170 | BIO | 3 | 170 | 402 | ocr: nome della classe di RNA corrotto nell'enunciato in '(RNA' al posto di 'tRNA' ('sintesi di (RNA e rRNA 5S') |
 | BIO-C03-NCOM-189 | BIO | 3 | 189 | 404 | ocr: nome dello snRNA nella risposta corretta C corrotto in 'US' al posto di 'U5' |
+| BIO-C03-NCOM-239 | BIO | 3 | 239 | 409 | ocr: lettera greca nella risposta corretta A corrotta in cifra numerica ('Foglietti 8' al posto di 'Foglietti β', oltre ad 'a-eliche' in B) |
+| BIO-C04-NCOM-030 | BIO | 4 | 30 | 436 | ocr: pedici e virgole corrotti nell'enunciato e nelle opzioni ('in F,?', '25% AA₄ 50% Aa, 25% aa', '50% Aa₄ 50% aa') |
+| BIO-C04-NCOM-135 | BIO | 4 | 135 | 449 | ocr: opzione E gravemente contaminata dall'intestazione di pagina ('impossibile da prevedere missione e controllo dei caratten selvatici e mutati 449') |
+| BIO-C04-NCOM-150 | BIO | 4 | 150 | 451 | ocr: intestazione di pagina inserita nel mezzo della parola 'spina bifida' ('la spina bifinissione e controllo det caratteri selvatici e mutati 451 da') |
 
