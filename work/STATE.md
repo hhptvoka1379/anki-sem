@@ -10,5 +10,5 @@
 - **Exports**:
   - `work/uncommented_questions_workpack/reasons_done.jsonl` (`4905` records; length min `117` / mean `249` / max `417`)
   - `work/uncommented_questions_workpack/flags_report.md` (`997` flagged cards)
-- **Last checkpoint commit**: `045476d` (checkpoint: 4657 done / 943 flagged / 302 pending; superseded by final commit on `arena/cc130265-anki-sem`)
+- **Last checkpoint commit**: `ba395fa` (checkpoint: 4905 done / 997 flagged / 0 pending (final))
 - **Open questions asked to user**: None
