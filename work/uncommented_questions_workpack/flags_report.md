@@ -1,6 +1,6 @@
-# Flagged rows (570)
+# Flagged rows (614)
 
-## ambiguous (51)
+## ambiguous (55)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -55,8 +55,12 @@
 | BIO-C05-NCOM-092 | BIO | 5 | 92 | 494 | ambiguous: question omits 'prevalentemente nelle cellule eucariotiche', while chloroplasts (option_b, cpDNA) and prokaryotic cytoplasm (option_d, nucleoid) genuinely contain genetic information alongside the eukaryotic nucleus |
 | BIO-C05-NCOM-125 | BIO | 5 | 125 | 497 | ambiguous: in the net equation of glycolysis (glucose + 2 NAD+ + 2 ADP + 2 Pi -> 2 pyruvate + 2 NADH + 2 H+ + 2 ATP + 2 H2O), both reduced NAD (option_e) and H2O released at the enolase step (option_a) are genuine net products |
 | BIO-C05-NCOM-140 | BIO | 5 | 140 | 499 | ambiguous: cellular respiration (option_e) is the main pathway (~30–32 ATP/glucose), but fermentation of monosaccharides (option_d) also transfers chemical energy from glucose into ATP (2 ATP/glucose) |
+| BIO-C05-NCOM-190 | BIO | 5 | 190 | 503 | ambiguous: cytoplasmic 45S pre-rRNA is transcribed in the nucleolus (option_d), but mitochondrial 12S and 16S rRNAs are also genuinely transcribed inside mitochondria (option_c) from mtDNA |
+| BIO-C05-NCOM-204 | BIO | 5 | 204 | 505 | ambiguous: both Mitofusins Mfn1/Mfn2 (option_b, outer mitochondrial membrane fusion) and Opa1 (option_e, inner mitochondrial membrane fusion) are dynamin-related GTPases that regulate mitochondrial fusion |
+| BIO-C05-NCOM-209 | BIO | 5 | 209 | 505 | ambiguous: option_a is clearly true, but option_e ('È derivato interamente dal genoma batterico ancestrale') is also evolutionarily true for animal mtDNA (which descends wholly from the ancestral alpha-proteobacterial genome, though retaining only a small fraction of its genes) |
+| BIO-C05-NCOM-215 | BIO | 5 | 215 | 506 | ambiguous: both peroxisomes (option_d) and lysosomes (option_e) lack their own DNA and ribosomes, making both options scientifically correct |
 
-## chem (31)
+## chem (36)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -91,8 +95,13 @@
 | BIO-C05-NCOM-127 | BIO | 5 | 127 | 497 | chem: option_c ('avviene in tutte le cellule') is overbroad because mature mammalian erythrocytes and obligate fermentative bacteria lack cellular respiration |
 | BIO-C05-NCOM-136 | BIO | 5 | 136 | 498 | chem: under hypoxic exertion human skeletal muscle performs lactic fermentation (not anaerobic respiration, which uses non-O2 inorganic electron acceptors in prokaryotes), while glycogenolysis (option_a) genuinely occurs in exercising muscle |
 | BIO-C05-NCOM-174 | BIO | 5 | 174 | 502 | chem: option_e pairs Rab with Ran as regulators of vesicular transport, whereas Ran regulates non-vesicular nucleocytoplasmic transport across nuclear pores |
+| BIO-C05-NCOM-253 | BIO | 5 | 253 | 509 | chem: Sec24 (option_d) is the cargo-selecting subunit of COPII vesicles budding from the ER, not COPI coatomer vesicles |
+| BIO-C06-COMP-022 | BIO | 6 | 22 | 553 | chem: CAM (Cell Adhesion Molecules) encompasses cadherins, selectins, integrins, and Ig-CAMs; only Ig-CAMs belong to the immunoglobulin superfamily |
+| BIO-C06-NCOM-051 | BIO | 6 | 51 | 539 | chem: tight junctions are paracellular claudin/occludin seals rather than membrane carrier proteins, and transepithelial exchange also involves lipid diffusion, claudin ion pores, and transcytosis |
+| BIO-C06-COMP-054 | BIO | 6 | 54 | 555 | chem: steroid hormones such as testosterone and estradiol derive from cholesterol (colesterolo via pregnenolone), not from cortisol (cortisolo) |
+| BIO-C06-NCOM-067 | BIO | 6 | 67 | 540 | chem: gap-junction channel pore diameter is ~1.5 nm (excluding macromolecules >1 kDa), not 15 nm |
 
-## key (23)
+## key (25)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -119,6 +128,8 @@
 | BIO-C04-NCOM-183 | BIO | 4 | 183 | 456 | key: suspect — anti-A antibodies are naturally present in both group 0 and group B plasma, and group 0 (~40%) is ~4x more frequent than group B (~10%), making option_b ('probabilmente 0') or option_a ('non si può determinare' without testing anti-B) better supported than option_d |
 | BIO-C04-NCOM-204 | BIO | 4 | 204 | 459 | key: suspect — deleting nucleotide 7 (G) turns CUG-AUC-GUA-AUG-CGC into CUG-AUC-UAA-UGC-GC, where the 3rd codon UAA is an ochre stop codon causing immediate chain termination after Ile (option_c) rather than an altered downstream amino acid sequence (option_e) |
 | BIO-C05-NCOM-136 | BIO | 5 | 136 | 498 | key: suspect |
+| BIO-C05-NCOM-253 | BIO | 5 | 253 | 509 | key: suspect |
+| BIO-C06-NCOM-067 | BIO | 6 | 67 | 540 | key: suspect |
 
 ## missing (16)
 
@@ -141,7 +152,7 @@
 | BIO-C04-NCOM-162 | BIO | 4 | 162 | 453 | missing: pedigree figure ('seguente albero genealogico') referenced in question and options is absent from card |
 | BIO-C05-NCOM-030 | BIO | 5 | 30 | 487 | missing: schematic figure of plant cells 1 and 2 referenced in question is absent from card |
 
-## ocr (480)
+## ocr (519)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -625,4 +636,43 @@
 | BIO-C05-NCOM-172 | BIO | 5 | 172 | 502 | ocr: chemical formula 'O₂' corrupted to '0₂' (digit zero) in option_a |
 | BIO-C05-NCOM-180 | BIO | 5 | 180 | 502 | ocr: Greek letter 'α' corrupted to 'a' ('Importina a') in option_c |
 | BIO-C05-NCOM-184 | BIO | 5 | 184 | 503 | ocr: molecular acronym 'NF-κB' corrupted to 'NFxB' (Greek 'κ' turned into 'x') in option_a |
+| BIO-C05-NCOM-186 | BIO | 5 | 186 | 503 | ocr: 'I nucleoli' corrupted to '[ nucleoli' (stray bracket glyph) in option_e |
+| BIO-C05-NCOM-189 | BIO | 5 | 189 | 503 | ocr: Greek letter 'α' corrupted to 'a' ('Importina a') in answer_text and option_c |
+| BIO-C05-NCOM-195 | BIO | 5 | 195 | 504 | ocr: subscript '₂' corrupted to period '.' ('fosfolipasi A.' for 'fosfolipasi A₂') in option_c |
+| BIO-C05-NCOM-199 | BIO | 5 | 199 | 504 | ocr: chemical formula 'QH₂' corrupted to 'QH.' ('Coenzima QH.') in option_b |
+| BIO-C05-NCOM-200 | BIO | 5 | 200 | 504 | ocr: 'F₀ e F₁' corrupted to 'FoeFi' in answer_text/option_b, 'α e β' to 'aeB' in option_a, and 'FADH₂' to 'FADH₋' in option_c |
+| BIO-C05-NCOM-201 | BIO | 5 | 201 | 504 | ocr: Roman numeral 'II' corrupted to 'Il' ('Complesso Il') in option_b |
+| BIO-C05-NCOM-202 | BIO | 5 | 202 | 505 | ocr: Roman numeral 'II' corrupted to 'I!' ('Complesso I!') in answer_text/option_b and Greek 'α' to 'a' in option_e |
+| BIO-C05-NCOM-217 | BIO | 5 | 217 | 506 | ocr: 'Pex5' corrupted to 'PexS5' in answer_text/option_c and Greek 'α' to 'a' ('Importina a') in option_b |
+| BIO-C05-NCOM-218 | BIO | 5 | 218 | 506 | ocr: receptor name 'Pex5' corrupted to 'PexS' (digit '5' replaced by 'S') in option_a |
+| BIO-C05-NCOM-219 | BIO | 5 | 219 | 506 | ocr: Greek letter 'β' corrupted to 'B' ('B-ossidazione') in option_b |
+| BIO-C05-NCOM-230 | BIO | 5 | 230 | 507 | ocr: question mark '?' corrupted to superscript minus '⁻' ('N-glicosilazioni⁻') in question |
+| BIO-C05-NCOM-231 | BIO | 5 | 231 | 507 | ocr: GTPase name 'Rab5' corrupted to 'RabS' (digit '5' replaced by 'S') in option_c |
+| BIO-C05-NCOM-234 | BIO | 5 | 234 | 508 | ocr: mutation notation 'ΔF508' corrupted to 'AFS08' ('Δ' -> 'A' and '5' -> 'S') in question |
+| BIO-C05-NCOM-253 | BIO | 5 | 253 | 509 | ocr: Roman numeral in 'COPII' likely truncated to 'COPI' in question |
+| BIO-C05-NCOM-266 | BIO | 5 | 266 | 510 | ocr: GTPase name 'Rab5' corrupted to 'RabS' (digit '5' replaced by 'S') in option_a |
+| BIO-C05-NCOM-270 | BIO | 5 | 270 | 511 | ocr: chemical formula 'O₂' corrupted to '02' in option_c and answer_text |
+| BIO-C05-NCOM-273 | BIO | 5 | 273 | 511 | ocr: Roman numerals I, III, and II corrupted to 'Complesso i' in option_a, 'Complesso Il!' in option_b, and 'Complesso Il' in option_c and answer_text |
+| BIO-C05-NCOM-279 | BIO | 5 | 279 | 512 | ocr: chemical formulas 'FADH₂' and 'O₂' corrupted to 'FADH,' in option_b and '0,' in option_e |
+| BIO-C05-NCOM-281 | BIO | 5 | 281 | 512 | ocr: Greek letter 'β' corrupted to 'B' ('B-ossidazione') in option_e and apostrophe dropped in 'LATP' in question |
+| BIO-C05-NCOM-292 | BIO | 5 | 292 | 513 | ocr: Greek letter 'γ' corrupted to 'y' ('y-tubulina') in option_a |
+| BIO-C05-NCOM-296 | BIO | 5 | 296 | 513 | ocr: calcium ion charge 'Ca²⁺' corrupted to 'Ca⁴⁺' in option_c |
+| BIO-C05-NCOM-297 | BIO | 5 | 297 | 513 | ocr: Greek letters α, β, and γ corrupted to 'a-tubulina' in option_a, 'B-tubulina' in option_b, and 'y-tubulina' in option_d and answer_text |
+| BIO-C05-NCOM-303 | BIO | 5 | 303 | 514 | ocr: Greek letters γ and β corrupted to 'y' ('Tubulina y') in option_c and '8' ('Actina 8') in option_d |
+| BIO-C06-COMP-005 | BIO | 6 | 5 | 552 | ocr: comma after 'GAG' corrupted to subscript '₄' ('GAG₄') and article 'I' corrupted to '1' in question and back_stem |
+| BIO-C06-NCOM-008 | BIO | 6 | 8 | 535 | ocr: Roman numeral II corrupted to 'Il' ('RNA polimerasi Il') in option_d |
+| BIO-C06-COMP-011 | BIO | 6 | 11 | 552 | ocr: integrin symbol 'α₆β₄' corrupted to 'a,8,' in question and back_stem |
+| BIO-C06-NCOM-017 | BIO | 6 | 17 | 536 | ocr: commas corrupted to subscripts in 'p53₃' (option_b) and 'GAP₄' (option_e) |
+| BIO-C06-COMP-022 | BIO | 6 | 22 | 553 | ocr: 'superfamiglia' split into 'su per famiglia' in question and back_stem |
+| BIO-C06-NCOM-031 | BIO | 6 | 31 | 537 | ocr: 'Rb e p53' fused into garbled token 'Rbep53' in option_e |
+| BIO-C06-NCOM-040 | BIO | 6 | 40 | 538 | ocr: 'chemiotassi' garbled into 'che mio tassi' in option_d |
+| BIO-C06-NCOM-043 | BIO | 6 | 43 | 538 | ocr: 'superfamiglia' split into 'su per famiglia' in option_d and answer_text |
+| BIO-C06-COMP-054 | BIO | 6 | 54 | 555 | ocr: 'colesterolo' corrupted or miswritten as 'cortisolo' in question and back_stem |
+| BIO-C06-COMP-060 | BIO | 6 | 60 | 555 | ocr: duplicated preposition 'di' across stem and answer_text ('recettori di {{c1::di superficie}}') |
+| BIO-C06-COMP-063 | BIO | 6 | 63 | 555 | ocr: 'I GPCR' corrupted to '[GPCR' in question and back_stem |
+| BIO-C06-COMP-064 | BIO | 6 | 64 | 555 | ocr: Greek subunit symbols α, β, and γ corrupted to 'a, B e y' in question and back_stem |
+| BIO-C06-COMP-065 | BIO | 6 | 65 | 556 | ocr: Greek subunit symbol 'α' corrupted to 'a' in question, back_stem, and answer_text |
+| BIO-C06-COMP-066 | BIO | 6 | 66 | 556 | ocr: Greek subunit symbols 'βγ' corrupted to 'By' in question, back_stem, and answer_text |
+| BIO-C06-COMP-067 | BIO | 6 | 67 | 556 | ocr: Greek subunit symbol 'α' corrupted to 'a' ('subunità a') in question and back_stem |
+| BIO-C06-NCOM-067 | BIO | 6 | 67 | 540 | ocr: decimal separator dropped in '1,5 nm' -> '15nm' in option_e and answer_text |
 
