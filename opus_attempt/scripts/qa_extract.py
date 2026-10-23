@@ -113,6 +113,9 @@ def main():
                 empty = [k for k, v in opts.items() if not (v or "").strip()]
                 if empty:
                     flag("FAIL", rid, "empty-option", ",".join(empty))
+                for k2, v in opts.items():
+                    if v and norm(r.get("stem")).endswith(norm(v)) and len(norm(v)) > 3:
+                        flag("WARN", rid, "stem-ends-with-option", k2)
                 vals = [norm(v) for v in opts.values()]
                 if len(set(vals)) < 5:
                     flag("WARN", rid, "identical-options", "check scan; keep as printed")

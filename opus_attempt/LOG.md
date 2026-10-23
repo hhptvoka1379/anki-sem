@@ -28,6 +28,12 @@ Update after every chapter, every gate, and before any context clear. See `RULES
 ## Not working / tried and failed
 - `anki -b <folder> file.apkg` while Anki is already running prints "Already running; reusing existing instance" and imports into the real profile. Never launch Anki.app.
 
+## DeepSeek extraction (2026-10-23)
+- CHIM ch.1: 178/178 records in `work/deepseek/chim01/extracted.jsonl` via `scripts/ds_extract.py` + `scripts/deepseek_batch.py --mode live` (deepinfra/fp8, reasoning off for page jobs). Cost: $0.0215 total incl. tests. QA vs 75 controls: 72 match; 3 remaining are not DeepSeek errors (NCOM-050 Haiku control wrong, verified on scan: "appartengono"; NCOM-036 table needs figure; COMM-002 separators).
+- Batch API rejects base64 images (needs public URLs); user chose live calls for image jobs; batch only for text jobs.
+- Fixed model habits deterministically in the parser: page-break merge, numbered question filed as continuation, handwritten answer in COMP blanks, option text appended to stem, line-end hyphens (dictionary-checked).
+- Open WARN needing a scan check: NCOM-058, 060, 070, 081, 098, 101, 118 (numbers not in OCR), 069/070 identical options, NCOM-022/036 figures.
+
 ## Next
 (All agents stopped 2026-10-23 at user request: usage too high. pagemap (Opus), croptool, qa-pipeline were killed mid-task; only CHIM ch.1 map exists, `work/croptool/crop.py` is unfinished/untested, qa-pipeline findings lost. OCR script still running, no tokens. Commit 6febc7c not pushed yet: each push runs an Opus review per commit via the pre-push hook, so batch pushes.)
 1. Workers are Haiku medium (DECISIONS). Done: NCOM 6–50 (`work/x-chim01-ncom-a/`, QA clean, 10/10 gold controls). Chunk cost: 92.6k tok, 164 s, 45 records. Open: NCOM-022 needs a figure crop; NCOM-050 worker note (option A 'carbonio e azoto') goes to derivation.

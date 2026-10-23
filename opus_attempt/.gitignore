@@ -9,3 +9,6 @@ work/gates/test/out/
 work/buildscript/test/*.apkg
 .env
 .env.*
+work/deepseek/*/pages/
+work/deepseek/*/test*
+work/adjudicate/
