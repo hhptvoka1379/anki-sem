@@ -1,6 +1,6 @@
-# Flagged rows (128)
+# Flagged rows (148)
 
-## ambiguous (29)
+## ambiguous (31)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -33,8 +33,10 @@
 | CHIM-C11-NCOM-172 | CHIM | 11 | 172 | 186 | ambiguous: the choices Solo le 2 and Solo 2 select the same single true statement, making the keyed option non-unique |
 | CHIM-C12-NCOM-078 | CHIM | 12 | 78 | 202 | ambiguous: the keyed No, mai and the statement that quaternary hydrogen atoms do not exist convey the same impossibility, because a quaternary carbon has no attached hydrogen |
 | CHIM-C12-NCOM-085 | CHIM | 12 | 85 | 202 | ambiguous: all four hydrogens in methane can be described both as methyl hydrogens and as chemically equivalent hydrogens, so two options are true |
+| CHIM-C12-NCOM-148 | CHIM | 12 | 148 | 208 | ambiguous: both saying aromatic compounds cannot be hydrocarbons and saying they contain only hydrocarbons are false categorical statements, since both aromatic hydrocarbons and heteroaromatic compounds exist |
+| CHIM-C13-NCOM-032 | CHIM | 13 | 32 | 234 | ambiguous: fructose presents both a ketonic group and multiple alcoholic hydroxy groups, so the chetonico and alcolica options can both be defended |
 
-## chem (8)
+## chem (14)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -46,8 +48,14 @@
 | CHIM-C12-COMP-049 | CHIM | 12 | 49 | 226 | chem: aniline bears a neutral amino group -NH2 attached to the ring, whereas the card states -NH3 without the positive charge of an anilinium group |
 | CHIM-C12-COMP-067 | CHIM | 12 | 67 | 226 | chem: the aldehyde functional group is neutral -CHO, while the card prints it with a negative superscript charge |
 | CHIM-C12-NCOM-081 | CHIM | 12 | 81 | 202 | chem: the displayed CH3-CH3-CH3 chain gives the central carbon five bonds; neutral propane should have a central CH2, so the carbon classification cannot be based on the formula as written |
+| CHIM-C12-NCOM-164 | CHIM | 12 | 164 | 209 | chem: a neutral primary amine has the structure R-NH2, whereas R-NH3 as printed would require a positive charge to be a primary ammonium ion |
+| CHIM-C12-NCOM-217 | CHIM | 12 | 217 | 214 | chem: the displayed CH3-CH3-NH-CH3 chain assigns five bonds to the second carbon; methyl-ethylamine requires the central carbon of the ethyl group to be CH2 |
+| CHIM-C12-NCOM-223 | CHIM | 12 | 223 | 214 | chem: in the displayed carbon chain two internal CH3 groups would each have five bonds; an alcohol chain of this kind requires CH2 groups, so the structure is invalid as written |
+| CHIM-C12-NCOM-230 | CHIM | 12 | 230 | 215 | chem: the keyed amide formula R-CO-NH3 gives nitrogen four bonds without a positive charge; a neutral primary amide is R-CO-NH2, so no displayed formula is chemically correct as written |
+| CHIM-C12-NCOM-245 | CHIM | 12 | 245 | 216 | chem: the displayed CH3-CH3-CO-NH-CH3 structure gives the second carbon five bonds; an amide of this skeleton requires a CH2 group before the carbonyl |
+| CHIM-C12-NCOM-253 | CHIM | 12 | 253 | 217 | chem: aniline is C6H5-NH2, whereas the keyed formula is printed with CH and NH3 fragments that do not represent a neutral phenylamine |
 
-## key (8)
+## key (9)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -59,8 +67,9 @@
 | CHIM-C11-NCOM-051 | CHIM | 11 | 51 | 175 | key: suspect computed hydrogen-ion concentration is 10^-9 mol/L, but the keyed option is printed as 107 and another exponent is also illegible |
 | CHIM-C11-NCOM-127 | CHIM | 11 | 127 | 182 | key: suspect at 25 C concentrations 10^-5 M H+ and 10^-9 M OH- have product 10^-14, so the aqueous solution exists and has pH 5 rather than being impossible |
 | CHIM-C12-NCOM-071 | CHIM | 12 | 71 | 201 | key: suspect successive members of a homologous series differ by a CH2 unit, not by a -CH3 group as printed in the keyed option |
+| CHIM-C13-NCOM-028 | CHIM | 13 | 28 | 234 | key: suspect: only hexose monosaccharides have formula C6H12O6, while monosaccharides may contain from three to seven carbon atoms, so the keyed universal definition is false and the no-appropriate-definition option is defensible |
 
-## missing (4)
+## missing (5)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -68,8 +77,9 @@
 | CHIM-C03-NCOM-137 | CHIM | 3 | 137 | 54 | missing: the table of the first eight ionization energies is garbled into unreadable fragments, so the group cannot be deduced from the sequence |
 | CHIM-C05-NCOM-029 | CHIM | 5 | 29 | 85 | missing: the stem refers to three containers shown in a figure, but no figure or description of their contents/states is present on the card |
 | CHIM-C08-NCOM-001 | CHIM | 8 | 1 | 125 | missing: the stem refers to a concentration-versus-time graph, but no graph or plotted values are present on the card |
+| CHIM-C12-NCOM-161 | CHIM | 12 | 161 | 209 | missing: the molecular structures labelled A, B and C are said to be shown in a figure, but no figure is present on the card |
 
-## ocr (79)
+## ocr (89)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -152,4 +162,14 @@
 | CHIM-C12-NCOM-059 | CHIM | 12 | 59 | 200 | ocr: the keyed bond-type option is reduced to the single letter a and another option is also fragmented, so the single-bond wording cannot be read |
 | CHIM-C12-NCOM-108 | CHIM | 12 | 108 | 204 | ocr: the sigma and pi bond symbols in the options are rendered as unrelated letters and digits, including the keyed Tutti a, so the bond type cannot be read |
 | CHIM-C12-NCOM-121 | CHIM | 12 | 121 | 205 | ocr: the sigma and pi option labels are rendered as o and n, and another option is punctuation, so the intended bond-type symbols are not legible |
+| CHIM-C12-NCOM-134 | CHIM | 12 | 134 | 207 | ocr: the sigma and pi symbols in every bond-composition option are rendered as o, oe, n or a, so the keyed composition of the double bond is not legible |
+| CHIM-C12-NCOM-135 | CHIM | 12 | 135 | 207 | ocr: the sigma and pi symbols in the options are rendered as o and n, so the keyed composition of the triple bond cannot be distinguished reliably |
+| CHIM-C12-NCOM-141 | CHIM | 12 | 141 | 207 | ocr: the propyne options print the carbon-carbon multiple bond as a double-bond sign, so the required terminal triple bond is not legible in the keyed structural formula |
+| CHIM-C12-NCOM-172 | CHIM | 12 | 172 | 210 | ocr: the keyed phrase reads doppi legami semplici, which does not coherently state that unsaturated fatty acids contain carbon-carbon double bonds |
+| CHIM-C12-NCOM-178 | CHIM | 12 | 178 | 210 | ocr: all benzaldehyde structural options lose or garble the phenyl subscripts and aldehyde ending, so the required C6H5-CHO structure is not legibly represented |
+| CHIM-C12-NCOM-207 | CHIM | 12 | 207 | 213 | ocr: the formula in the stem is printed as CH,0, with punctuation and a zero replacing the subscript and oxygen letter needed to identify formaldehyde |
+| CHIM-C12-NCOM-238 | CHIM | 12 | 238 | 216 | ocr: the compound formula is printed as CICR,CH,0H with substituted letters, punctuation and a zero, so neither the halogen position nor chain length can be read reliably |
+| CHIM-C12-NCOM-276 | CHIM | 12 | 276 | 220 | ocr: the first compound is printed with minus signs, an impossible CH4 group and a zero in place of oxygen, so the ether structure that must be classified is not chemically legible |
+| CHIM-C13-COMP-019 | CHIM | 13 | 19 | 249 | ocr: the cloze term is stored as oli saturi, which does not fit the sentence about fatty acids; the chemically appropriate adjective would be saturi |
+| CHIM-C13-NCOM-035 | CHIM | 13 | 35 | 235 | ocr: the keyed option reads sei atomi di e, with the letter e replacing the carbon symbol needed to explain why hexoses have that name |
 
