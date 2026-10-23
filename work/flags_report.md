@@ -1,6 +1,6 @@
-# Flagged rows (173)
+# Flagged rows (181)
 
-## ambiguous (41)
+## ambiguous (46)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -45,6 +45,11 @@
 | BIO-C03-NCOM-106 | BIO | 3 | 106 | 395 | ambiguous: translation requires the coordinated action of ribosomes, mRNA, charged tRNA and aminoacyl-tRNA synthetases; both tRNAs as adaptors and synthetases as code-establishing enzymes can be described as permitting it, so no listed category is uniquely sufficient |
 | BIO-C03-NCOM-121 | BIO | 3 | 121 | 397 | ambiguous: expressing existing DNA as a folded protein proceeds by transcription, translation and folding, whereas DNA duplication is not a required first step; no option includes folding, and the keyed sequence instead states the broader hereditary dogma |
 | BIO-C03-NCOM-154 | BIO | 3 | 154 | 401 | ambiguous: prokaryotic transcription can produce both monocistronic and polycistronic mRNAs, so the wording 'può dare origine' makes both listed mRNA types true |
+| BIO-C03-NCOM-216 | BIO | 3 | 216 | 407 | ambiguous: options A and E both state Degenerazione, so two identical options express the correct property |
+| BIO-C03-NCOM-234 | BIO | 3 | 234 | 408 | ambiguous: transcription, DNA replication, sugar synthesis, mitochondrial protein import, and proteasomal degradation all require ATP or ATP-dependent steps, so the stem does not identify a single answer |
+| BIO-C04-NCOM-017 | BIO | 4 | 17 | 434 | ambiguous: allele and allelomorfo are synonymous terms for alternative forms of a gene at the same locus, so two options are correct |
+| BIO-C04-NCOM-057 | BIO | 4 | 57 | 440 | ambiguous: the woman is an obligate carrier, but the unaffected man's carrier probability is not specified and cannot be inferred merely from unaffected parents and grandparents |
+| BIO-C04-NCOM-076 | BIO | 4 | 76 | 442 | ambiguous: if six is the total planned family size, the two existing daughters leave only four future births and the conditional probability is 1/16; 1/64 requires six additional future births |
 
 ## chem (14)
 
@@ -65,7 +70,7 @@
 | CHIM-C12-NCOM-245 | CHIM | 12 | 245 | 216 | chem: the displayed CH3-CH3-CO-NH-CH3 structure gives the second carbon five bonds; an amide of this skeleton requires a CH2 group before the carbonyl |
 | CHIM-C12-NCOM-253 | CHIM | 12 | 253 | 217 | chem: aniline is C6H5-NH2, whereas the keyed formula is printed with CH and NH3 fragments that do not represent a neutral phenylamine |
 
-## key (18)
+## key (20)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -87,8 +92,10 @@
 | BIO-C03-NCOM-076 | BIO | 3 | 76 | 391 | key: suspect - the genetic code is the correspondence between nucleotide triplets and amino acids, not the DNA base sequence itself, and none of the options states that correspondence precisely |
 | BIO-C03-NCOM-102 | BIO | 3 | 102 | 395 | key: suspect - a 150-amino-acid protein requires 150 amino-acid codons plus a stop codon, so a complete translated mRNA has at least 151 codons rather than the keyed 150 |
 | BIO-C03-COMP-123 | BIO | 3 | 123 | 417 | key: suspect - elongation factors deliver aminoacyl-tRNA and drive translocation, but peptide-bond formation is catalysed by the large-subunit rRNA, not by these factors |
+| BIO-C03-NCOM-222 | BIO | 3 | 222 | 407 | key: suspect - the cap is specifically recognized by eIF4E in eIF4F, which then recruits the 43S complex containing the 40S subunit; no ribosomal subunit directly recognizes the cap |
+| BIO-C04-NCOM-038 | BIO | 4 | 38 | 437 | key: suspect - in this chapter's own numbering the first Mendel law is dominance/uniformity and segregation is the second law, so the keyed statement is misnumbered |
 
-## missing (8)
+## missing (9)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -100,6 +107,7 @@
 | BIO-C01-NCOM-056 | BIO | 1 | 56 | 323 | missing: the stem asks for structure A in a figure of an optical microscope, but no figure is present on the card |
 | BIO-C01-NCOM-091 | BIO | 1 | 91 | 326 | missing: the question requires identification from an accompanying figure, but no figure is present on the card |
 | BIO-C01-NCOM-263 | BIO | 1 | 263 | 346 | missing: the question requires an evolutionary-tree graph, but no graph is present in the card |
+| BIO-C04-NCOM-035 | BIO | 4 | 35 | 436 | missing: the referenced table with rows 1-5 is absent, so the keyed row cannot be checked from the card |
 
 ## ocr (92)
 
