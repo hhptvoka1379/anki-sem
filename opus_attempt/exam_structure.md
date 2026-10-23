@@ -82,9 +82,9 @@ MUR names seven Unità Didattiche per subject, each with a CFU weight [S5, S6, S
 - Multiple choice: five options, exactly one correct [S2 point 4].
 - Completamento: the student writes the missing answer, "espressiva di un solo e univoco concetto", in block capitals [S2 points 4 and 16]. The 2025 MUR guidelines say a fill-in answer can be a single word, a number, or a mathematical expression, possibly a single character [S13]; the 2026 decree does not repeat this detail.
 - Scoring: +1 per correct answer, 0 per omitted answer, −0,1 per wrong answer [S1 art. 8 c. 1; S8]. The score of each exam is the sum of the multiple-choice and completamento points [S2 point 18]. Exams are graded out of 30, with lode worth one point [S1 art. 8 c. 1]; the maximum for the three exams together is 93 points [S1 art. 8 c. 2]. The news release says 31 questions allow "fino a 30 e lode" [S8].
-- Time: 50 minutes per subject exam, with a 30-minute break between exams [S1 art. 7 c. 3; S2 point 6; S3 art. 1 c. 3; S8]. All three exams are held the same day, at the same time in every university [S1 art. 7 c. 1; S2 point 2].
+- Time: 50 minutes per subject exam [S1 art. 7 c. 3], with a 30-minute break between exams [S2 point 6; S3 art. 1 c. 3; S8]. All three exams are held the same day, at the same time in every university [S1 art. 7 c. 1; S2 point 2].
 - Passing threshold: 18/30 per exam [S1 art. 8 c. 3-5; S1 art. 10 c. 1]. If a student sits both sessions of the same subject, the higher score counts automatically, provided it is at least 18/30 [S1 art. 8 c. 4; S2 point 23].
-- Ranking: the national ranking has three sections: students who passed all three exams, then two, then one; within a section, by score [S1 art. 10 c. 1; S8]. Missing credits for a failed subject can be recovered at the assigned university before the second semester [S1 art. 10 c. 1 b-c; S8].
+- Ranking: the national ranking has three sections: students who passed all three exams, then two, then one [S1 art. 10 c. 1; S8]; within a section, by score [S1 art. 10 c. 2]. Missing credits for a failed subject can be recovered at the assigned university before the second semester [S1 art. 10 c. 1 b-c; S8].
 - Dates 2026/27: first session Thursday 10 December 2026, second session Monday 11 January 2027, both from 11:00 Italian time [S3 art. 1 c. 1]. Results on 23 December and 20 January [S8].
 - Content: identical in every university, set according to the Syllabus [S2 point 3; S3 art. 1 c. 2].
 
@@ -93,7 +93,7 @@ MUR names seven Unità Didattiche per subject, each with a CFU weight [S5, S6, S
 - 31 questions per exam: 15 multiple choice and 16 completamento [S9 art. 5 c. 3; S10 point 4]. Completamento was defined as a blank for the one missing word, "una sola è la parola corretta" [S10 point 4].
 - 45 minutes per exam, 15-minute breaks [S9 art. 5 c. 4; S10 point 6].
 - Penalty for a wrong answer: originally −0,25 [S9 art. 6 c. 1], changed to −0,10 by D.M. 557/2025 [S11; S12].
-- Passing threshold 18/30 in each exam, no compensation between exams [S9 art. 6 c. 3; S12].
+- Passing threshold 18/30 in each exam, no compensation between exams [S9 art. 7 c. 1; "no compensation" only in S12].
 - Sessions: 20 November 2025 and 10 December 2025, 11:00 [S14].
 
 ## Gaps

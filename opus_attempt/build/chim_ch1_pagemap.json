@@ -1,0 +1,23 @@
+{
+  "subject": "CHIM",
+  "chapter": 1,
+  "title": "La matematica e la chimica",
+  "pdf_pages": [12, 29],
+  "printed_pages": [3, 20],
+  "offset": 9,
+  "sections": [
+    {"quiz_type": "COMM", "label": "Quiz commentati", "pdf_pages": [12, 13], "printed_pages": [3, 4], "question_numbers": [1, 10], "question_count": 10,
+     "note": "PDF 13 (p.4) holds only the end of Q8 to Q10; rest of the page is blank. PDF 12 is the chapter opener and has no running header."},
+    {"quiz_type": "NCOM", "label": "Quiz non commentati", "pdf_pages": [14, 26], "printed_pages": [5, 17], "question_numbers": [1, 121], "question_count": 121,
+     "note": "PDF 14 is the section opener (no running header); Q121 is the last item on PDF 26 (p.17)."},
+    {"quiz_type": "COMP", "label": "Quiz a completamento", "pdf_pages": [27, 29], "printed_pages": [18, 20], "question_numbers": [1, 47], "question_count": 47,
+     "note": "PDF 27 is the section opener (no running header); Q47 is the last item on PDF 29 (p.20). Scans have handwritten fill-ins in the blanks; ignore them."}
+  ],
+  "solution_pages": [
+    {"quiz_type": "COMM", "pdf_pages": [256, 257], "printed_pages": [252, 253], "format": "answer letter + reasoning paragraph, in the CHIM RISPOSTE section (not inline)", "question_numbers": [1, 10]},
+    {"quiz_type": "NCOM", "pdf_pages": [257, 257], "printed_pages": [253, 253], "format": "key-only table", "question_numbers": [1, 121]},
+    {"quiz_type": "COMP", "pdf_pages": [258, 258], "printed_pages": [254, 254], "format": "word list", "question_numbers": [1, 47]}
+  ],
+  "solutions_offset": 4,
+  "notes": "Answer keys and reasoning are never inline: all three quiz types are keyed in the CHIM 'RISPOSTE' section (book p.252-308). The PDF-to-printed offset is 9 in the chapter but 4 on the solution pages, because the printed numbering skips page numbers between them (see page_map.json offset_changes)."
+}

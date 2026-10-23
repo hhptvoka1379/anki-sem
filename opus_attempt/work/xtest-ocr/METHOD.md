@@ -1,0 +1,9 @@
+# xtest-ocr method notes (OCR-first)
+- Records: 40 (COMM 10, NCOM 15, COMP 15) in extracted.jsonl. No ocr_fallback_needed flags; every span was resolved.
+- Image opens: 9 total. Full pages at 130 dpi: PDF 12, 13, 14, 15, 27, 257 (6). Crops/pages at 250 dpi: PDF 15 crop (1), PDF 256 (1). One re-view of 257 key table (counted in the 6 via the file read; key table image view was needed anyway).
+- Why opened: p12 is two-column with heavy handwriting, OCR column order scrambled and option letters lost (Q2 sub-statements A1-A3, Q4 options sit in the right column top). p13/p14/p15 to confirm Q8 options, Q10/Q11 atoms, Q13 formula H4P2O7, Q16 label. p27 to confirm blanks beside handwriting. p256 because OCR garbled exponents in COMM Q2 reasoning. p257 to verify the key table.
+- OCR error types seen: handwriting read as junk text (marks, circles, X); circled/crossed option letters turned into symbols ("@", "x", "©") or letters lost; two-column interleaving (p12); subscripts/superscripts lost (A₁, 10⁻³¹, H₄P₂O₇ read as H,P,O,); garbled exponents in solutions (10-°?7); typos (thoraon for thoron, Comundque); handwriting inside COMP blanks produced junk; "A" vs "(A)" circle prefix.
+- Not checked on image: NCOM key digits 1-15 beyond OCR agreement (the table was viewed and matches); COMP word list from OCR only (p258 not viewed; plain printed text, no low-confidence words).
+- Unsure records: COMM-002 (book inconsistency: stem 10⁻³¹..10⁻²⁹ kg vs reasoning 10⁻²⁷..10⁻²⁵ kg; stem rebuilt from image), NCOM-010 (options C and E both print "Ne"), NCOM-008 (key C "N" while D is N⁺), COMM-008 (stem spans PDF 12-13; pdf_page set to 12).
+- Handwriting never used for any answer; keys come only from RISPOSTE pages.
+- Wall time: about 3 min of tool time plus model reasoning; shell timer showed 83 s since first command (exact total not measured).
