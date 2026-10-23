@@ -1,6 +1,6 @@
-# Flagged rows (808)
+# Flagged rows (871)
 
-## ambiguous (78)
+## ambiguous (86)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -82,8 +82,16 @@
 | FIS-C03-NCOM-013 | FIS | 3 | 13 | 711 | ambiguous: alongside option_c ('sicuramente su di esso agisce una forza'), centripetal acceleration is vectorially time-varying in direction (option_a) and motion in vacuum is free of medium friction (option_e) |
 | FIS-C03-COMP-023 | FIS | 3 | 23 | 736 | ambiguous: an Atwood machine comprises two masses connected by an ideal string ('fune') over an ideal pulley ('carrucola'/'puleggia'), both feminine singular nouns fitting 'una ... ideale' |
 | FIS-C03-COMP-065 | FIS | 3 | 65 | 738 | ambiguous: cloze 'il [...] è uguale alla variazione di energia cinetica' equally accepts 'lavoro', 'lavoro totale', or 'lavoro netto' rather than the specific two-word phrase 'lavoro compiuto' |
+| FIS-C03-NCOM-130 | FIS | 3 | 130 | 726 | ambiguous: omits that both bodies start from rest (v₀ = 0), and 'velocità' without 'in modulo' conflicts between equal final scalar speeds √(2gh) (option_c) and different final velocity vectors (vertical vs parallel to the incline, making option_b true) |
+| FIS-C03-COMP-138 | FIS | 3 | 138 | 741 | ambiguous: cloze 'legata al [...] di un corpo' equally accepts 'moto' or 'movimento' |
+| FIS-C03-NCOM-141 | FIS | 3 | 141 | 728 | ambiguous: omits whether the drop occurs in vacuum (or from what height in air); for equal-diameter cork and lead spheres falling in air (implied by option_b 'nell'aria'), air drag and buoyancy slow the light cork sphere so lead arrives first (option_d) unless height is very small or air is neglected (option_e) |
+| FIS-C03-NCOM-176 | FIS | 3 | 176 | 732 | ambiguous: omits that the rope attached to the ceiling at B is vertical (T = 50 N holds only for a vertical rope) |
+| FIS-C04-COMP-024 | FIS | 4 | 24 | 760 | ambiguous: cloze prompt 'misurare la pressione di un ...' admits 'fluido' (since manometers measure pressure in both liquids and gases) as well as 'gas' |
+| FIS-C05-COMP-008 | FIS | 5 | 8 | 784 | ambiguous: unprompted multi-word parenthetical cloze target 'cubica (o volumica)' |
+| FIS-C05-COMP-012 | FIS | 5 | 12 | 784 | ambiguous: cloze prompt 'si indica con ...' does not disambiguate between standard symbols 'k', 'k_B', and unsubscripted 'kB' |
+| FIS-C05-COMP-037 | FIS | 5 | 37 | 785 | ambiguous: 'Δm' is undefined out of context (mass of liquid increases, mass of solid decreases, total mass Δm = 0) |
 
-## chem (52)
+## chem (56)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -139,6 +147,10 @@
 | FIS-C03-COMP-099 | FIS | 3 | 99 | 739 | chem: kinetic friction opposes relative velocity between surfaces, not necessarily displacement in a given inertial frame (e.g. a crate dropped onto a moving conveyor belt is accelerated forward by kinetic friction, which does positive work on it; only net frictional work on the pair of surfaces is always negative) |
 | FIS-C03-COMP-100 | FIS | 3 | 100 | 739 | chem: false in general — when kinetic energy decreases under conservative forces (e.g. a body rising in gravity or compressing an ideal spring), the lost kinetic energy converts into potential energy rather than internal energy |
 | FIS-C03-NCOM-104 | FIS | 3 | 104 | 723 | chem: 'A quale altezza deve essere lanciato ... affinché acquisti' reverses 'lasciato cadere da quale altezza' (rising to peak height h reduces kinetic energy rather than acquiring 100 km/h) |
+| FIS-C03-COMP-142 | FIS | 3 | 142 | 741 | chem: massless particles (m = 0, such as photons) travel at c and carry nonzero momentum p = E/c = h/λ; naive substitution m = 0 into classical p = mv is invalid |
+| FIS-C04-COMP-016 | FIS | 4 | 16 | 759 | chem: in laminar flow adjacent fluid layers slide past each other with different velocities (dv/dy ≠ 0, e.g. Poiseuille parabolic profile); what is absent is transverse mixing/eddies between layers, not relative motion |
+| FIS-C04-NCOM-081 | FIS | 4 | 81 | 757 | chem: false universal claim ('sempre'): in a widening horizontal Venturi diffuser (decelerating flow) or in a constant-section vertical downward pipe, a fluid flows steadily from lower static pressure to higher static pressure |
+| FIS-C05-NCOM-018 | FIS | 5 | 18 | 769 | chem: question asks for heat capacity 'in chilocalorie' whereas heat capacity has units of kcal/°C (energy per unit temperature) |
 
 ## key (30)
 
@@ -175,7 +187,7 @@
 | FIS-C03-NCOM-011 | FIS | 3 | 11 | 711 | key: suspect |
 | FIS-C03-NCOM-048 | FIS | 3 | 48 | 716 | key: suspect |
 
-## missing (25)
+## missing (26)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -204,8 +216,9 @@
 | FIS-C01-NCOM-090 | FIS | 1 | 90 | 681 | missing: question depends on force orientations shown in a missing figure ('nel verso indicato in figura') |
 | FIS-C03-NCOM-036 | FIS | 3 | 36 | 714 | missing: references 'Il sistema mostrato in figura' needed to identify which of masses m₁ and m₂ lies on the inclined plane versus hangs vertically |
 | FIS-C03-NCOM-090 | FIS | 3 | 90 | 721 | missing: references 'così come illustrato in figura' (needed to see the vector sense orientation between force and displacement) |
+| FIS-C03-NCOM-184 | FIS | 3 | 184 | 734 | missing: references 'L'asta in figura' without an attached diagram (needed for senses of p and q and rod masslessness) |
 
-## ocr (683)
+## ocr (739)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -892,4 +905,60 @@
 | FIS-C03-NCOM-116 | FIS | 3 | 116 | 724 | ocr: compound unit multiplication dot corrupted to colon ('Newton: metro') in option_e |
 | FIS-C03-NCOM-118 | FIS | 3 | 118 | 725 | ocr: compound unit multiplication dot corrupted to hyphen ('1N-m') in option_b |
 | FIS-C03-NCOM-125 | FIS | 3 | 125 | 726 | ocr: 'pari a 1' (or 'pari a L') corrupted to 'parial' in option_c |
+| FIS-C03-NCOM-136 | FIS | 3 | 136 | 727 | ocr: compound unit multiplication dot corrupted to hyphen ('980kg- m/s') in option_a |
+| FIS-C03-COMP-138 | FIS | 3 | 138 | 741 | ocr: stray characters '-_' bled into back_stem |
+| FIS-C03-COMP-139 | FIS | 3 | 139 | 741 | ocr: multiplication sign in 'F × Δt' fused as 'Fx Δt' (indistinguishable from x-component 'Fₓ') in question and back_stem |
+| FIS-C03-NCOM-148 | FIS | 3 | 148 | 729 | ocr: compound unit multiplication dots corrupted to ':' and '-' across options B/C/D/E ('newton - secondi' in answer_text, 'newton: metri', etc.) |
+| FIS-C03-COMP-156 | FIS | 3 | 156 | 742 | ocr: symbol 'I' dropped before '=' in question/back_stem and '½' corrupted to '%' ('%M R²') in back_stem |
+| FIS-C03-NCOM-159 | FIS | 3 | 159 | 730 | ocr: 'Δt' corrupted to 'At' across question and all options (including option_d/answer_text 'F=mv/At') and 'v²' corrupted to 'v?' in option_a |
+| FIS-C03-NCOM-163 | FIS | 3 | 163 | 731 | ocr: question mark '?' corrupted to superscript minus sign '⁻' ('Terra-Luna⁻') in question |
+| FIS-C03-NCOM-164 | FIS | 3 | 164 | 731 | ocr: subscripts, multiplication dots, and powers of 10 severely corrupted throughout question ('6 1024', '6+ 10°', '2 - 103°', '7 + 10°', '1,5 - 101!') |
+| FIS-C03-COMP-167 | FIS | 3 | 167 | 743 | ocr: Greek symbol 'ω' (omega) for angular velocity corrupted to Latin 'w' ('L = I w') in question and back_stem |
+| FIS-C03-NCOM-170 | FIS | 3 | 170 | 732 | ocr: words fused and compound unit dot corrupted to colon ('simisurainN:s') in option_c |
+| FIS-C03-NCOM-176 | FIS | 3 | 176 | 732 | ocr: '50 N' corrupted to 'SON' in option_c/answer_text |
+| FIS-C03-NCOM-177 | FIS | 3 | 177 | 733 | ocr: subscript '2' in 'M₂' corrupted to exponent 'M²' and subscripts '1' and '2' in 'L₁/L₂' obliterated into commas ('L,/L,') in question |
+| FIS-C03-COMP-179 | FIS | 3 | 179 | 743 | ocr: Greek symbol 'ω' (omega) for angular frequency corrupted to Latin 'w' ('wt') in question and back_stem |
+| FIS-C03-COMP-181 | FIS | 3 | 181 | 743 | ocr: fraction '½' corrupted to percent sign '%' ('K = %m v²') in back_stem |
+| FIS-C03-COMP-182 | FIS | 3 | 182 | 743 | ocr: fraction '½' corrupted to '14' ('U = 14 k x²') in back_stem |
+| FIS-C03-NCOM-182 | FIS | 3 | 182 | 733 | ocr: '5 N' corrupted to 'SN' in option_d |
+| FIS-C03-COMP-184 | FIS | 3 | 184 | 743 | ocr: 'v_max' corrupted to 'vp,' in back_stem |
+| FIS-C03-NCOM-184 | FIS | 3 | 184 | 734 | ocr: garbled diagram text bleed 'q 4 H p—— 3 i/3 + Pp' appended to question |
+| FIS-C03-COMP-185 | FIS | 3 | 185 | 743 | ocr: 'a_max' corrupted to 'a,' and multiplication dot corrupted to 'x' in back_stem |
+| FIS-C03-NCOM-185 | FIS | 3 | 185 | 734 | ocr: lever-arm subscripts 'r' and 'p' corrupted across all options, turning 'G = X_p / X_r' into 'G=Xp/ Xp' in option_c/answer_text and 'X_r' into 'X,' in options A, B, D, E |
+| FIS-C03-COMP-186 | FIS | 3 | 186 | 743 | ocr: Greek symbol 'ω' (omega) corrupted to Latin 'w' in question and back_stem |
+| FIS-C03-COMP-191 | FIS | 3 | 191 | 744 | ocr: angle symbol 'θ' corrupted to digit '8' ('sen 8') and multiplication dot corrupted to 'x' in back_stem |
+| FIS-C03-COMP-192 | FIS | 3 | 192 | 744 | ocr: Greek symbol 'ω' corrupted to 'w' and square-root symbol '√' corrupted to 'V' ('w = V(g / L )') in back_stem |
+| FIS-C03-COMP-193 | FIS | 3 | 193 | 744 | ocr: Greek symbol 'φ' dropped completely from back_stem ('Il parametro è detto costante di fase:') |
+| FIS-C03-COMP-195 | FIS | 3 | 195 | 744 | ocr: Greek symbol 'ω' (omega) corrupted to Latin 'w' ('w t') in question and back_stem |
+| FIS-C04-NCOM-001 | FIS | 4 | 1 | 747 | ocr: '2 g/cm³; 2' corrupted to '2g/cm3³2' in option_c/answer_text and 'cm³' corrupted to 'cm5' in option_d |
+| FIS-C04-COMP-003 | FIS | 4 | 3 | 759 | ocr: '1,013 × 10⁵' corrupted to '1.013 x 105' (exponent flattened to '105' and decimal comma turned to period) in back_stem |
+| FIS-C04-NCOM-003 | FIS | 4 | 3 | 747 | ocr: '5 g/cm³' corrupted to 'S g/cm³' in option_a |
+| FIS-C04-COMP-017 | FIS | 4 | 17 | 759 | ocr: subscript '1' in 'v₁' corrupted to comma ('A₁ v, = A₂ v₂') in question and back_stem |
+| FIS-C04-NCOM-020 | FIS | 4 | 20 | 749 | ocr: compound unit multiplication dots corrupted to hyphens ('Litri - atmosfere' in option_c and 'W-sec' in option_e) |
+| FIS-C04-COMP-023 | FIS | 4 | 23 | 760 | ocr: surface pressure 'P₀' corrupted to 'Py' and Greek density symbol 'ρ' corrupted to 'p' ('P = Py + pg h') in question and back_stem |
+| FIS-C04-NCOM-028 | FIS | 4 | 28 | 750 | ocr: compound unit multiplication dot corrupted to hyphen/minus sign ('Il prodotto litri - atmosfere') in question |
+| FIS-C04-NCOM-029 | FIS | 4 | 29 | 750 | ocr: exponent '5' in '1,2 × 10⁵' flattened to '105' ('1,2 x 105 Pascal') in question |
+| FIS-C04-NCOM-034 | FIS | 4 | 34 | 750 | ocr: '10³ cm²' corrupted to '10° cm₋' and 'm/s²' corrupted to 'm/s’' in question, plus 'e 3 N' corrupted to 'e³ N' in option_b |
+| FIS-C04-NCOM-036 | FIS | 4 | 36 | 751 | ocr: multiplication dots corrupted to minus signs ('d-g-h' instead of 'd·g·h') in options B, C/answer_text, and E |
+| FIS-C04-NCOM-039 | FIS | 4 | 39 | 751 | ocr: cross-sectional area unit 'cm²' corrupted to volume unit 'cm³' in options A/answer_text, B, D, and E |
+| FIS-C04-NCOM-041 | FIS | 4 | 41 | 751 | ocr: '1 atm' corrupted to 'latm' in option_a |
+| FIS-C04-NCOM-051 | FIS | 4 | 51 | 753 | ocr: sphere subscripts corrupted to comma ('S,' in question) and superscripts ('S²' in option_a, 'S¹' in option_c/answer_text) |
+| FIS-C04-NCOM-060 | FIS | 4 | 60 | 754 | ocr: subscripts '1' and '2' obliterated into commas ('P,>P,', 'D,<D,') in options A–D/answer_text, plus 'P₁' -> 'P¹' and 'D₂,' -> 'D₂₄' in question |
+| FIS-C04-NCOM-061 | FIS | 4 | 61 | 754 | ocr: stray scan garbage '/ = ee' appended to option_c |
+| FIS-C04-NCOM-063 | FIS | 4 | 63 | 754 | ocr: 'identico ad A,' corrupted to chemical/subscript token 'A₄' in question |
+| FIS-C04-NCOM-066 | FIS | 4 | 66 | 755 | ocr: stray scan token '1+' injected inside option_c |
+| FIS-C04-NCOM-070 | FIS | 4 | 70 | 756 | ocr: exponent '3' in '1,6 g/cm³' corrupted to apostrophe ('1,6 g/cm'') in option_c |
+| FIS-C04-NCOM-073 | FIS | 4 | 73 | 756 | ocr: density symbol 'ρ' corrupted to 'p' and exponent '3' in 'g/cm³' corrupted to apostrophe ('p = 1 g/cm’') in question |
+| FIS-C04-NCOM-083 | FIS | 4 | 83 | 757 | ocr: stray scan garbage 'uss PP I' appended to option_a |
+| FIS-C04-NCOM-084 | FIS | 4 | 84 | 758 | ocr: compound unit multiplication dot corrupted to hyphen ('litri - minuti') in option_e |
+| FIS-C04-NCOM-085 | FIS | 4 | 85 | 758 | ocr: stray margin label 'E' bled into sentence ('ogni secondo E è assai minore') in option_e |
+| FIS-C04-NCOM-086 | FIS | 4 | 86 | 758 | ocr: exponent '2' in '4 cm²' corrupted to question mark ('4 cm??') in question |
+| FIS-C05-COMP-008 | FIS | 5 | 8 | 784 | ocr: Greek symbols 'Δ' and 'β' corrupted to Latin 'A' and 'B' ('AV = B Vi AT' instead of 'ΔV = β Vᵢ ΔT') in question and back_stem |
+| FIS-C05-COMP-011 | FIS | 5 | 11 | 784 | ocr: compound unit multiplication dot corrupted to hyphen ('J/mol-K' instead of 'J/(mol·K)') in question and back_stem |
+| FIS-C05-NCOM-013 | FIS | 5 | 13 | 768 | ocr: compound unit multiplication dots corrupted to hyphens and colon across all options ('0,092 cal/(g-°C)' in option_b/answer_text, 'cal: g/°C' in option_a, 'kcal - g/°C' in options C–D) |
+| FIS-C05-NCOM-018 | FIS | 5 | 18 | 769 | ocr: compound unit dot corrupted to hyphen ('kcal/kg - °C') in question |
+| FIS-C05-NCOM-021 | FIS | 5 | 21 | 769 | ocr: compound unit multiplication dot corrupted to hyphen ('1 kcal/(kg - °C)') in question |
+| FIS-C05-NCOM-023 | FIS | 5 | 23 | 769 | ocr: symbol 'Q' corrupted to digit '0' in option_a/answer_text ('0/4' instead of 'Q/4'), option_b ('30/4' instead of '3Q/4'), and option_e ('20/3' instead of '2Q/3') |
+| FIS-C05-NCOM-024 | FIS | 5 | 24 | 769 | ocr: stray scan garbage 'iss =' appended to option_b/answer_text |
+| FIS-C05-COMP-037 | FIS | 5 | 37 | 785 | ocr: Greek symbol 'Δ' corrupted to 'A' ('Am' instead of 'Δm') in question and back_stem |
 
