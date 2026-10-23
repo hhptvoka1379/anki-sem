@@ -1,4 +1,4 @@
-# Flagged rows (417)
+# Flagged rows (438)
 
 ## ambiguous (30)
 
@@ -41,7 +41,7 @@
 |---|---|---|---|---|---|
 | BIO-C05-COMP-102 | BIO | 5 | 102 | 521 | chem: formula chimica del substrato nell'enunciato corrotta dall'OCR in 'H.0' al posto di 'H₂O₂' ('converte l'H.0 in acqua e ossigeno') |
 
-## key (24)
+## key (25)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -69,8 +69,9 @@
 | FIS-C04-NCOM-081 | FIS | 4 | 81 | 757 | key: suspect - un fluido non scorre 'sempre' da pressione statica maggiore a minore (es. nel tratto divergente di un tubo di Venturi orizzontale scorre contro gradiente di pressione, e in un fluido statico o discendente p cresce con la profondità); A vale solo per condotto viscoso orizzontale a sezione costante |
 | FIS-C06-NCOM-013 | FIS | 6 | 13 | 797 | key: suspect - per la legge di Faraday-Maxwell (rot E = −∂B/∂t) in presenza di induzione elettromagnetica esistono linee del campo elettrico chiuse (opzione B corretta nei test ufficiali), mentre la chiave indicata A vale solo in regime elettrostatico |
 | FIS-C06-NCOM-133 | FIS | 6 | 133 | 813 | key: suspect - collegare il polo positivo di una cellula contro il polo positivo dell'adiacente (opzione C) pone i generatori in opposizione/antiserie annullando la tensione netta (ΔV = 0), non in parallelo (che negli organi elettrici delle torpedini marine è ottenuto affiancando colonne parallele collegate agli stessi conduttori comuni dorsale/ventrale, rendendo corretta D) |
+| FIS-C07-COMP-045 | FIS | 7 | 45 | 843 | key: suspect - la riflessione totale interna passando dal mezzo n₁ al mezzo n₂ richiede n₂ minore di n₁ (non 'maggiore'), e in back_stem i pedici sono corrotti in 'se n, è maggiore di n' |
 
-## missing (28)
+## missing (34)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -102,8 +103,14 @@
 | FIS-C06-COMP-105 | FIS | 6 | 105 | 827 | missing: enunciato privo di soggetto contestuale ('Il momento massimo è dato da τ = I A B' senza specificare il momento torcente magnetico su una singola spira piana immersa in un campo magnetico B) |
 | FIS-C06-COMP-106 | FIS | 6 | 106 | 827 | missing: enunciato estrapolato fuori contesto ('L'area della spira è il prodotto della base per I’ altezza', valido solo per una particolare spira rettangolare e con 'I’' corrotto) |
 | FIS-C06-NCOM-123 | FIS | 6 | 123 | 811 | missing: figura dei cinque grafici assente ('vedi figura') |
+| FIS-C06-NCOM-151 | FIS | 6 | 151 | 815 | missing: schema elettrico mancante nell'enunciato ('il ramo di un circuito mostrato in figura') |
+| FIS-C06-NCOM-152 | FIS | 6 | 152 | 816 | missing: schema elettrico mancante nell'enunciato ('il ramo di circuito mostrato in figura') |
+| FIS-C06-NCOM-186 | FIS | 6 | 186 | 820 | missing: figura mancante nell'enunciato ('i due fili rappresentati in figura', da cui mancano la corrente I₁ e la distanza tra i fili) |
+| FIS-C06-NCOM-191 | FIS | 6 | 191 | 821 | missing: figura mancante nell'enunciato ('il piano cartesiano mostrato in figura' e 'il circuito C mostrato in figura') |
+| FIS-C07-NCOM-049 | FIS | 7 | 49 | 839 | missing: figura mancante nell'enunciato ('gli angoli indicati nella figura seguente') |
+| FIS-C07-NCOM-050 | FIS | 7 | 50 | 839 | missing: figura mancante nell'enunciato ('la cui distribuzione di intensità è rappresentata dalla figura seguente') |
 
-## ocr (334)
+## ocr (348)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -441,4 +448,18 @@
 | FIS-C06-COMP-112 | FIS | 6 | 112 | 828 | ocr: formula del campo del solenoide corrotta ('B = Ho N I' invece di 'B = μ₀ n I', con 'μ₀' trasformato in 'Ho' e densità lineare 'n = N/L' sostituita da 'N') |
 | FIS-C06-NCOM-118 | FIS | 6 | 118 | 810 | ocr: nome dell'unità corrotto nell'opzione corretta C ('1 chm =1 volt / 1 ampere' invece di '1 ohm = 1 volt / 1 ampere') e nell'opzione A ('1o0hm') |
 | FIS-C06-NCOM-126 | FIS | 6 | 126 | 812 | ocr: pedice corrotto nell'enunciato ('una nuova tensione V, pari a' invece di 'V₂ pari a') |
+| FIS-C06-NCOM-144 | FIS | 6 | 144 | 814 | ocr: nota redazionale e refuso di stampa inclusi nell'opzione E ('[refuso di stampa p.814: doppia riga E con R = R₁ + R₂ + R₃]') |
+| FIS-C07-NCOM-010 | FIS | 7 | 10 | 834 | ocr: lettera 'q' corrotta in 'g' nell'enunciato e nell'opzione D ('p+g= 1/f') e nella cifra '9' nell'opzione C ('1/p-1/9=1/f') |
+| FIS-C07-COMP-019 | FIS | 7 | 19 | 841 | ocr: frazione '/ 2' corrotta nel numero '12' ('pari a λ (lambda) 12' invece di 'λ / 2') |
+| FIS-C07-NCOM-023 | FIS | 7 | 23 | 835 | ocr: intestazione di pagina 'os PZ' presente nell'opzione corretta A ('propagazione os PZ') |
+| FIS-C07-NCOM-037 | FIS | 7 | 37 | 837 | ocr: lettera greca 'λ' corrotta nella lettera 'A' nell'enunciato e in tutte le opzioni ('A= c/f' invece di 'λ = c/f', e 'A=1/f') |
+| FIS-C07-COMP-038 | FIS | 7 | 38 | 842 | ocr: pedici e lettere greche corrotti nell'equazione ('n, sin @, = n, sin @,' invece di 'n₁ sin θ₁ = n₂ sin θ₂') |
+| FIS-C07-NCOM-040 | FIS | 7 | 40 | 837 | ocr: intestazione di pagina 'os PZ' alla fine dell'enunciato ('Le onde radio sono onde: os PZ') |
+| FIS-C08-NCOM-004 | FIS | 8 | 4 | 846 | ocr: testo estraneo corrotto '= iss' nell'opzione corretta E ('si trasforma in un protone = iss') |
+| FIS-C08-NCOM-006 | FIS | 8 | 6 | 846 | ocr: numero di massa corrotto in '!4C' nell'enunciato ('carbonio-14 (!4C)' invece di '¹⁴C') |
+| FIS-C08-COMP-009 | FIS | 8 | 9 | 849 | ocr: pedice corrotto nell'equazione dell'effetto fotoelettrico ('K__, = hf- φ' invece di 'K_max = h f − φ') |
+| FIS-C08-COMP-013 | FIS | 8 | 13 | 849 | ocr: lettera greca 'λ' corrotta nella lettera 'A' nell'equazione ('A = h/p' invece di 'λ = h / p') |
+| FIS-C08-NCOM-014 | FIS | 8 | 14 | 847 | ocr: articolo corrotto nell'opzione corretta A ('Visotopo 235' invece di 'L'isotopo 235') e nell'opzione B ('Yuranio' invece di 'l'uranio'), oltre all'omissione di 'neutroni lenti/termici' |
+| FIS-C08-COMP-020 | FIS | 8 | 20 | 850 | ocr: cognome corrotto nell'enunciato ('L'equazione di Schrédinger' invece di 'Schrödinger') |
+| FIS-C08-COMP-029 | FIS | 8 | 29 | 850 | ocr: unità di misura corrotta nell'enunciato ('6,63 x 10⁻³⁴ J “Ss.' invece di '6,63 × 10⁻³⁴ J · s') |
 

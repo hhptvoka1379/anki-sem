@@ -1,9 +1,26 @@
-# Workpack State
+# Run State — `work/questions.db`
 
-- **Branch**: `arena/0c53ca03-anki-sem` (Arena fixed session branch; requested working branch name `explanations/run-1` noted)
-- **Done**: 5253
-- **Flagged**: 417
-- **Pending**: 232
-- **Total**: 5902
-- **Last checkpoint commit**: `057b50e (checkpoint: 5013 done / 382 flagged / 507 pending)`
-- **Open questions to user**: None
+- **Branch:** `arena/0c53ca03-anki-sem` *(Arena session-locked branch; the prompt requested `explanations/run-1`, which is disallowed by Arena's branch policy — all commits and pushes stay strictly on `arena/0c53ca03-anki-sem`, never touching `main` and without opening a PR; likewise `send_user_message_async` is not exposed by this runtime).*
+- **Status:** **COMPLETE (`v_pending = 0`)**
+- **DB Counts (`SELECT status, count(*) FROM questions GROUP BY status`):**
+  - `done`: **5,464** (`3,515` `Quiz non commentati` + `1,949` `Quiz a completamento`)
+  - `flagged`: **438** (`333` `Quiz non commentati` + `105` `Quiz a completamento`)
+  - `pending`: **0**
+  - **Total:** **5,902** (`100.00%` processed)
+- **Subject Totals:**
+  - `CHIM` (`C01..C13`, `ord = 0..2063`, `2,064` cards): **`1,874 done` / `190 flagged` (`9.21%`) / `0 pending`** (including all `6/6` `CHEM_JUDGEMENT.md` benchmark cards flagged)
+  - `BIO` (`C01..C07`, `ord = 2064..4440`, `2,377` cards): **`2,258 done` / `119 flagged` (`5.01%`) / `0 pending`**
+  - `FIS` (`C01..C08`, `ord = 4441..5901`, `1,461` cards): **`1,332 done` / `129 flagged` (`8.83%`) / `0 pending`**
+- **Flags by Prefix (`438` total):**
+  - `ocr`: **348** (`CHIM`: 168, `BIO`: 74, `FIS`: 106)
+  - `missing`: **34** (`CHIM`: 5, `BIO`: 17, `FIS`: 12)
+  - `ambiguous`: **30** (`CHIM`: 11, `BIO`: 14, `FIS`: 5)
+  - `key: suspect`: **25** (`CHIM`: 6, `BIO`: 13, `FIS`: 6)
+  - `chem`: **1** (`BIO`: 1 — `BIO-C05-COMP-102`)
+- **Validation & Export:**
+  - `python3 validate.py` (strict mode, no `--allow-pending`): **EXIT CODE `0`** (`PASS: rows=5902 pending=0 done=5464 flagged=438`; casefolded duplicate reasons `> 1`: **`0`**)
+  - `python3 export_reasons.py`: `work/reasons_done.jsonl` (**5,464** records; length `min = 87`, `mean = 213`, `max = 448`) & `work/flags_report.md` (**438** flagged items)
+- **Checkpoints Pushed (`22` checkpoints):**
+  - Previous checkpoint commit: `4119144` (`checkpoint: 5253 done / 417 flagged / 232 pending`)
+  - Final checkpoint commit: committed with `"checkpoint: 5464 done / 438 flagged / 0 pending"` and pushed to `origin arena/0c53ca03-anki-sem`.
+- **Open Questions for User:** None blocking completion; see human-review summary of the `25` `key: suspect`, `30` `ambiguous`, `34` `missing` (unattached figures/tables/pedigrees), `1` `chem`, and `348` `ocr` cards in `work/flags_report.md`.
