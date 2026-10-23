@@ -29,8 +29,9 @@ Update after every chapter, every gate, and before any context clear. See `RULES
 - `anki -b <folder> file.apkg` while Anki is already running prints "Already running; reusing existing instance" and imports into the real profile. Never launch Anki.app.
 
 ## Next
-1. When `work/pagemap/chim_ch1.json` appears: split CHIM ch.1 into ≤50-card chunks; start Sonnet extraction workers (OCR from `work/ocr/`, image only when unsure), then blind derivation workers.
-2. Review template / build / gate drafts; promote to `templates/` and `scripts/`.
-3. Adjudicate disagreements (Opus), explanations + second-worker check, build `Semestre_Filtro_v1.0.apkg` for CHIM-C01, run all §7 gates, renders.
-4. Push, notify, AskUserQuestion for pilot approval; meanwhile workers extract CHIM ch.2 only.
-If restarted: re-run `scripts/ocr_all.sh` (resumes); check which work/ outputs exist before restarting any agent.
+(All agents stopped 2026-10-23 at user request: usage too high. pagemap (Opus), croptool, qa-pipeline were killed mid-task; only CHIM ch.1 map exists, `work/croptool/crop.py` is unfinished/untested, qa-pipeline findings lost. OCR script still running, no tokens. Commit 6febc7c not pushed yet: each push runs an Opus review per commit via the pre-push hook, so batch pushes.)
+1. Wait for the user's pace decision before starting any worker.
+2. CHIM ch.1 extraction, image-first (DECISIONS), one worker at a time: COMM 1–10 + NCOM 1–50, NCOM 51–121, COMP 1–47 (the 40 test records already cover COMM 1–10, NCOM 1–15, COMP 1–15; reuse them).
+3. Crops: finish crop.py myself or one small worker; check a sample.
+4. Blind derivation, adjudication, explanations, build, gates, renders, pilot approval question.
+5. Rest of page map later, only per chapter as needed.
