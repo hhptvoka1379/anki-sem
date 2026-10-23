@@ -1,6 +1,6 @@
-# Flagged rows (167)
+# Flagged rows (173)
 
-## ambiguous (38)
+## ambiguous (41)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -42,6 +42,9 @@
 | BIO-C01-NCOM-135 | BIO | 1 | 135 | 331 | ambiguous: AMP contains a phosphoester bond, which is also an ester bond, so both the phosphoester and generic ester options are chemically applicable |
 | BIO-C03-NCOM-003 | BIO | 3 | 3 | 384 | ambiguous: genes are indeed hereditary units as keyed, but genes are also literally present in mitochondria through the mitochondrial genome, so the keyed description is not the only true option |
 | BIO-C03-NCOM-019 | BIO | 3 | 19 | 385 | ambiguous: RNA polymerase is both an enzyme and a protein, and both classifications are offered as alternatives |
+| BIO-C03-NCOM-106 | BIO | 3 | 106 | 395 | ambiguous: translation requires the coordinated action of ribosomes, mRNA, charged tRNA and aminoacyl-tRNA synthetases; both tRNAs as adaptors and synthetases as code-establishing enzymes can be described as permitting it, so no listed category is uniquely sufficient |
+| BIO-C03-NCOM-121 | BIO | 3 | 121 | 397 | ambiguous: expressing existing DNA as a folded protein proceeds by transcription, translation and folding, whereas DNA duplication is not a required first step; no option includes folding, and the keyed sequence instead states the broader hereditary dogma |
+| BIO-C03-NCOM-154 | BIO | 3 | 154 | 401 | ambiguous: prokaryotic transcription can produce both monocistronic and polycistronic mRNAs, so the wording 'può dare origine' makes both listed mRNA types true |
 
 ## chem (14)
 
@@ -62,7 +65,7 @@
 | CHIM-C12-NCOM-245 | CHIM | 12 | 245 | 216 | chem: the displayed CH3-CH3-CO-NH-CH3 structure gives the second carbon five bonds; an amide of this skeleton requires a CH2 group before the carbonyl |
 | CHIM-C12-NCOM-253 | CHIM | 12 | 253 | 217 | chem: aniline is C6H5-NH2, whereas the keyed formula is printed with CH and NH3 fragments that do not represent a neutral phenylamine |
 
-## key (15)
+## key (18)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -81,6 +84,9 @@
 | BIO-C02-NCOM-072 | BIO | 2 | 72 | 367 | key: suspect - sister-chromatid cohesion is specifically associated with the pairing domain and cohesins, which is offered separately from the generic keyed centromere |
 | BIO-C03-NCOM-007 | BIO | 3 | 7 | 384 | key: suspect - the general seat of genes is chromosomes, which is not listed, but mitochondria also contain genes, so keying none of the listed answers is not strictly correct |
 | BIO-C03-COMP-011 | BIO | 3 | 11 | 410 | key: suspect - in prokaryotes the principal high-speed replicative enzyme is DNA polymerase III, not DNA polymerase I, whose main role is primer removal and gap filling |
+| BIO-C03-NCOM-076 | BIO | 3 | 76 | 391 | key: suspect - the genetic code is the correspondence between nucleotide triplets and amino acids, not the DNA base sequence itself, and none of the options states that correspondence precisely |
+| BIO-C03-NCOM-102 | BIO | 3 | 102 | 395 | key: suspect - a 150-amino-acid protein requires 150 amino-acid codons plus a stop codon, so a complete translated mRNA has at least 151 codons rather than the keyed 150 |
+| BIO-C03-COMP-123 | BIO | 3 | 123 | 417 | key: suspect - elongation factors deliver aminoacyl-tRNA and drive translocation, but peptide-bond formation is catalysed by the large-subunit rRNA, not by these factors |
 
 ## missing (8)
 
