@@ -19,7 +19,7 @@ SUB_SUP = str.maketrans("₀₁₂₃₄₅₆₇₈₉⁰¹²³⁴⁵⁶⁷⁸�
 
 def norm(s):
     """Lowercase, strip accents, map sub/superscripts to plain digits, collapse spaces."""
-    s = unicodedata.normalize("NFD", (s or "").translate(SUB_SUP))
+    s = unicodedata.normalize("NFD", (s or "").translate(SUB_SUP).replace("’", "'"))
     s = "".join(c for c in s if not unicodedata.combining(c)).lower()
     return re.sub(r"\s+", " ", s).strip()
 

@@ -30,8 +30,8 @@ Update after every chapter, every gate, and before any context clear. See `RULES
 
 ## Next
 (All agents stopped 2026-10-23 at user request: usage too high. pagemap (Opus), croptool, qa-pipeline were killed mid-task; only CHIM ch.1 map exists, `work/croptool/crop.py` is unfinished/untested, qa-pipeline findings lost. OCR script still running, no tokens. Commit 6febc7c not pushed yet: each push runs an Opus review per commit via the pre-push hook, so batch pushes.)
-1. Wait for the user's pace decision before starting any worker.
-2. CHIM ch.1 extraction, image-first (DECISIONS), one worker at a time: COMM 1–10 + NCOM 1–50, NCOM 51–121, COMP 1–47 (the 40 test records already cover COMM 1–10, NCOM 1–15, COMP 1–15; reuse them).
+1. Workers are Haiku medium (DECISIONS). Done: NCOM 6–50 (`work/x-chim01-ncom-a/`, QA clean, 10/10 gold controls). Chunk cost: 92.6k tok, 164 s, 45 records. Open: NCOM-022 needs a figure crop; NCOM-050 worker note (option A 'carbonio e azoto') goes to derivation.
+2. Remaining CHIM ch.1 extraction, one Haiku worker at a time with 10 gold controls each: NCOM 51–121 (two chunks), COMP 16–47 (the 40 test records already cover COMM 1–10, NCOM 1–15, COMP 1–15; reuse them).
 3. Crops: finish crop.py myself or one small worker; check a sample.
 4. Blind derivation, adjudication, explanations, build, gates, renders, pilot approval question.
 5. Rest of page map later, only per chapter as needed.
