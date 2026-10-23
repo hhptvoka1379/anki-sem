@@ -1,6 +1,6 @@
-# Flagged rows (386)
+# Flagged rows (420)
 
-## ambiguous (28)
+## ambiguous (36)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -32,8 +32,16 @@
 | BIO-C01-NCOM-148 | BIO | 1 | 148 | 333 | ambiguous: oxygenic photosynthesis both produces atmospheric O₂ essential for aerobic life (option_a) and converts solar into chemical energy (option_d, though chemolithoautotrophs do not rely on photosynthetic organic matter) |
 | BIO-C01-NCOM-242 | BIO | 1 | 242 | 343 | ambiguous: 'una variazione in una popolazione' can mean either the origin of a new heritable variant ('mutazione', option_c) or a shift in population trait/allele frequencies ('selezione naturale', option_a) |
 | BIO-C01-NCOM-244 | BIO | 1 | 244 | 343 | ambiguous: non-adaptive evolution by genetic drift or gene flow requires genetic variation (1) without obligatorily requiring natural selection (2), making option_b ('Solo 1') defensible |
+| BIO-C02-NCOM-042 | BIO | 2 | 42 | 363 | ambiguous: while 'meiosi' (option_c) is the general reductional division, 'oogenesi' (option_a) is female meiotic gametogenesis and likewise produces a haploid cell |
+| BIO-C02-NCOM-072 | BIO | 2 | 72 | 367 | ambiguous: both the whole 'centromero' (option_e) and specifically its inner 'dominio di appaiamento' (option_b) mediate sister-chromatid cohesion |
+| BIO-C02-NCOM-107 | BIO | 2 | 107 | 370 | ambiguous: while histone 'Metilazione' (option_e) activates or represses transcription depending on residue, histone monoubiquitination ('Legame con ubiquitina', option_d) likewise activates transcription on H2BK120 and represses it on H2AK119 |
+| BIO-C03-NCOM-003 | BIO | 3 | 3 | 384 | ambiguous: mitochondria do contain extranuclear genes in mtDNA ('presenti nei mitocondri', option_b), while option_c uses archaic 'particelle submicroscopiche' phrasing for DNA sequences |
+| BIO-C03-NCOM-007 | BIO | 3 | 7 | 384 | ambiguous: while most eukaryotic genes reside on nuclear chromosomes (intended behind option_a), mitochondria (option_d) also harbor an extranuclear genome containing 37 genes |
+| BIO-C03-NCOM-019 | BIO | 3 | 19 | 385 | ambiguous: RNA polymerase is a protein enzyme, making both 'un enzima' (option_d) and 'una proteina' (option_e) biologically correct |
+| BIO-C03-NCOM-038 | BIO | 3 | 38 | 387 | ambiguous: while 'Acido ribonucleico' (option_c) is the exact name/acronym expansion, RNA is also an 'Acido nucleico' (option_b) |
+| BIO-C03-NCOM-044 | BIO | 3 | 44 | 388 | ambiguous: while 'Ribosomi' (option_d) are the ribonucleoprotein complexes catalyzing peptide synthesis, 'Mitocondri' (option_c) are membrane-bound organelles that also synthesize polypeptide chains via mitoribosomes (as tested in BIO-C03-NCOM-001) |
 
-## chem (14)
+## chem (17)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -51,8 +59,11 @@
 | CHIM-C13-NCOM-156 | CHIM | 13 | 156 | 246 | chem: adenine (6-aminopurine) bears a primary exocyclic amino group (-NH₂) on a purine heterocycle, not 'un'ammina aromatica secondaria' as stated in answer_text |
 | BIO-C01-COMP-080 | BIO | 1 | 80 | 352 | chem: purely nonpolar molecules coalesce/phase-separate in water rather than forming micelles, which require amphipathic molecules possessing a polar head group |
 | BIO-C01-NCOM-098 | BIO | 1 | 98 | 327 | chem: stem falsely states that ribosomes (~20–30 nm) are observable under an optical microscope (resolution limit ~200 nm) |
+| BIO-C02-NCOM-033 | BIO | 2 | 33 | 362 | chem: 'le cellule germinali' includes diploid germ-line cells (primordial germ cells, spermatogonia, oogonia, primary gametocytes) in addition to haploid post-meiotic gametes |
+| BIO-C02-NCOM-119 | BIO | 2 | 119 | 371 | chem: CAG trinucleotide repeats (3 bp unit) in exon 1 of HTT are a microsatellite (STR, 1-6 bp unit), not a minisatellite as stated in question |
+| BIO-C03-COMP-050 | BIO | 3 | 50 | 412 | chem: garbled qualifier 'inattivo' attached to 'allolattosio' ('L\'allolattosio inattivo ... agisce come induttore'), whereas allolactose is the active inducer that makes the repressor inactive |
 
-## key (15)
+## key (17)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -71,6 +82,8 @@
 | BIO-C01-NCOM-012 | BIO | 1 | 12 | 318 | key: suspect — water (H₂O, ~70–80% of cell mass) is the main chemical constituent of cells; proteins (~15–18%) predominate only among organic molecules, making option_e ('Nessuna delle risposte è corretta') defensible |
 | BIO-C01-NCOM-174 | BIO | 1 | 174 | 335 | key: suspect — while animals cannot assimilate inorganic nitrates, many heterotrophic fungi and bacteria assimilate or respire nitrates (NO₃⁻), making option_e ('Nessuna delle risposte è corretta') defensible |
 | BIO-C01-NCOM-216 | BIO | 1 | 216 | 340 | key: suspect — assembling 3 mononucleotides from free bases, deoxyribose, and phosphate requires 3 × 2 = 6 condensations, plus 2 phosphodiester condensations to join them into a 3-nucleotide chain = 8 total (option_a), contradicting keyed 6 (option_d) |
+| BIO-C02-NCOM-072 | BIO | 2 | 72 | 367 | key: suspect (options A-C name the three ultrastructural centromere domains—centrale, di appaiamento, del cinetocore—among which 'il dominio di appaiamento' in option_b is specifically defined as responsible for sister-chromatid cohesion) |
+| BIO-C03-COMP-011 | BIO | 3 | 11 | 410 | key: suspect (in prokaryotes the main replicative enzyme working at ~1000 nt/s is DNA polymerase III, not DNA polymerase I) |
 
 ## missing (8)
 
@@ -85,7 +98,7 @@
 | BIO-C01-NCOM-091 | BIO | 1 | 91 | 326 | missing: question requires inspecting a cell figure not included in the card |
 | BIO-C01-NCOM-263 | BIO | 1 | 263 | 346 | missing: question requires inspecting an evolutionary tree diagram not included in the card |
 
-## ocr (340)
+## ocr (364)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -429,4 +442,28 @@
 | BIO-C01-NCOM-132 | BIO | 1 | 132 | 331 | ocr: statement index 'Solo 1 e 2' corrupted to 'Solole2' in option_a |
 | BIO-C01-NCOM-212 | BIO | 1 | 212 | 339 | ocr: isotope mass numbers '¹⁵N' and '¹⁴N' corrupted to '!5N'/'‘5N' and '"N'/'1*N' in question |
 | BIO-C01-NCOM-244 | BIO | 1 | 244 | 343 | ocr: statement index 'Solo 1 e 2' corrupted to 'Solo le2' in keyed option_a |
+| BIO-C02-NCOM-005 | BIO | 2 | 5 | 359 | ocr: decimal '0,5Y' corrupted to '05Y' in keyed option_a and Roman numeral 'II' corrupted to 'Il' in question |
+| BIO-C02-NCOM-006 | BIO | 2 | 6 | 359 | ocr: unit '4 µm' corrupted to '4 pm' (picometers) in question and 'µm' corrupted to 'pm'/'um' in options |
+| BIO-C02-NCOM-037 | BIO | 2 | 37 | 362 | ocr: number '2' corrupted to superscript '²' attached to word ('presenti²') in option_d |
+| BIO-C02-NCOM-048 | BIO | 2 | 48 | 363 | ocr: diploid notation '2n' corrupted to '2"' in both species formulas ('2" = 44' and '2" = 62') in question |
+| BIO-C02-NCOM-059 | BIO | 2 | 59 | 365 | ocr: 'L'intera serie di loci' corrupted to 'l'intera specie di loci' in question (and 'uno zigote' merged as 'unozigote' in option_a) |
+| BIO-C02-NCOM-060 | BIO | 2 | 60 | 365 | ocr: closing quote corrupted to superscript degree sign on chromosome symbol ('cromosoma Y°') alongside 'B. La han' and 'fosseroun' in question |
+| BIO-C02-NCOM-092 | BIO | 2 | 92 | 369 | ocr: sex-chromosome notation 'XO' corrupted to 'xO' in option_c |
+| BIO-C02-NCOM-098 | BIO | 2 | 98 | 369 | ocr: Roman numeral 'II' corrupted to 'Il' in option_b ('RNA polimerasi Il') |
+| BIO-C02-NCOM-117 | BIO | 2 | 117 | 371 | ocr: Greek letter 'α' corrupted to 'a' in answer_text/option_b ('DNA satellite a' for 'DNA satellite α') |
+| BIO-C02-NCOM-129 | BIO | 2 | 129 | 372 | ocr: Greek letter 'α' corrupted to 'a' in option_c ('DNA satellite a' for 'DNA satellite α') |
+| BIO-C03-NCOM-001 | BIO | 3 | 1 | 384 | ocr: statement index '1' corrupted to 'l' in option_a ('Solole3' for 'Solo 1 e 3') |
+| BIO-C03-COMP-002 | BIO | 3 | 2 | 410 | ocr: initial article "L'" corrupted to 'LV' before blank in question and back_stem |
+| BIO-C03-NCOM-009 | BIO | 3 | 9 | 384 | ocr: 'nel nucleolo' split into 'nel nucleo lo' in option_c (colliding with 'nel nucleo', alongside 'nelmesosoma' and 'neiribosomi') |
+| BIO-C03-COMP-010 | BIO | 3 | 10 | 410 | ocr: prime symbol in "5'-3'" corrupted to double quote "5'-3\"" in question and back_stem |
+| BIO-C03-COMP-011 | BIO | 3 | 11 | 410 | ocr: Roman numeral 'III' likely corrupted to 'I' in answer_text |
+| BIO-C03-COMP-013 | BIO | 3 | 13 | 410 | ocr: Greek letters α, δ, ε corrupted to 'a' (in answer_text), digit '6', and 'e' in question and back_stem |
+| BIO-C03-NCOM-022 | BIO | 3 | 22 | 386 | ocr: conjunction missing in option_c/answer_text ('RNA proteine' for 'RNA e proteine' or 'RNA o proteine') |
+| BIO-C03-COMP-028 | BIO | 3 | 28 | 411 | ocr: 'insulator' corrupted into four separate syllables 'in su la tor' in question and back_stem |
+| BIO-C03-NCOM-038 | BIO | 3 | 38 | 387 | ocr: "l'RNA" corrupted to "I'’RNA" in question (and 'Acidolattico' in option_a) |
+| BIO-C03-COMP-042 | BIO | 3 | 42 | 412 | ocr: Greek letter 'σ' corrupted to 'o' in 'fattore o' (reading like Italian conjunction 'o') in question and back_stem |
+| BIO-C03-COMP-045 | BIO | 3 | 45 | 412 | ocr: Greek letter 'β' corrupted to 'f' in 'f-galattosidasi' (alongside 'lacA.che') in question and back_stem |
+| BIO-C03-COMP-046 | BIO | 3 | 46 | 412 | ocr: Greek letter 'β' corrupted to 'B' in answer_text 'B-galattosidasi' |
+| BIO-C03-COMP-055 | BIO | 3 | 55 | 413 | ocr: 'traduzionale' corrupted to 'tradizionale' in question and back_stem |
+| BIO-C03-NCOM-058 | BIO | 3 | 58 | 389 | ocr: statement index '1' corrupted to 'l' in option_c ('Solole2' for 'Solo 1 e 2') |
 
