@@ -1,0 +1,331 @@
+html, body, #qa {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+}
+
+.sf-canvas {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 40px 14px 32px;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  text-align: left;
+}
+.sf-canvas *, .sf-canvas *::before, .sf-canvas *::after {
+  box-sizing: border-box;
+}
+.fig-box {
+  margin: 14px 0;
+  text-align: center;
+}
+.fig-box img, details.orig-scan img {
+  max-width: 100%;
+  height: auto;
+  background: #ffffff;
+}
+.options {
+  display: block;
+}
+.opt {
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+.options > .opt:last-child {
+  margin-bottom: 0;
+}
+.stmt-line {
+  display: block;
+  margin-top: 7px;
+  padding-left: 1.15em;
+  text-indent: -1.15em;
+  line-height: 1.52;
+}
+.para-line {
+  display: block;
+  margin-top: 7px;
+  line-height: 1.52;
+}
+.scan-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+  width: 100%;
+}
+details.orig-scan {
+  display: block;
+  width: 100%;
+  margin: 0;
+  font-size: 12.5px;
+}
+details.orig-scan + details.orig-scan {
+  margin-top: 10px;
+}
+details.orig-scan summary {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 7px 11px;
+  border-radius: 6px;
+  border: 1px solid currentColor;
+  opacity: 0.92;
+}
+details.orig-scan summary:hover {
+  opacity: 1;
+}
+details.orig-scan[open] summary {
+  margin-bottom: 8px;
+}
+
+.sf-canvas {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #fef08a;
+  background-image: radial-gradient(#111111 1.15px, transparent 1.15px);
+  background-size: 16px 16px;
+  color: #111111;
+  line-height: 1.5;
+}
+.sf-canvas.sf-dark {
+  background-color: #18181b;
+  background-image: radial-gradient(#3f3f46 1.15px, transparent 1.15px);
+  color: #fafafa;
+}
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fffef9;
+  border: 3px solid #111111;
+  border-radius: 2px;
+  padding: 22px 24px 24px;
+  box-shadow: -3px -3px 0px #ff2e93, 8px 8px 0px #111111;
+  position: relative;
+}
+.wrap::before {
+  content: "+ RISO.ZINE // REG.04 +";
+  position: absolute;
+  top: 6px;
+  right: 12px;
+  font-family: "Space Mono", monospace;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #111111;
+  opacity: 0.48;
+}
+.sf-canvas.sf-dark .wrap { background: #232329; border-color: #fafafa; box-shadow: -3px -3px 0px #ec4899, 8px 8px 0px #facc15; }
+.sf-canvas.sf-dark .wrap::before { color: #facc15; opacity: 0.72; }
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 14px;
+  margin-bottom: 16px;
+  border-bottom: 2.5px solid #111111;
+}
+.sf-canvas.sf-dark .meta { border-bottom-color: #fafafa; }
+.badge {
+  display: inline-block;
+  transform: rotate(-1.8deg);
+  padding: 4px 11px;
+  border: 2.5px solid #111111;
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 0px #111111;
+}
+.subj-CHIM { background: #c4b5fd; color: #111111; }
+.subj-BIO  { background: #86efac; color: #111111; }
+.subj-FIS  { background: #7dd3fc; color: #111111; }
+.meta-dim { font-family: "Space Mono", monospace; font-weight: 700; font-size: 11.5px; }
+.stem { font-size: 18px; font-weight: 700; margin: 14px 0 18px; letter-spacing: -0.015em; }
+.blank-slot { display: inline-block; min-width: 88px; background: #fde047; border: 2px solid #111111; padding: 0 6px; color: transparent; }
+.blank-filled { background: #86efac; color: #111111; border: 2px solid #111111; padding: 1px 8px; font-weight: 800; }
+.options { display: block; display: flex; flex-direction: column; gap: 2px; }
+.opt {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 11px 14px;
+  border: 2.5px solid #111111;
+  background: #ffffff;
+  box-shadow: 4px 4px 0px #111111;
+  font-weight: 600;
+  transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.08s ease;
+}
+.sf-canvas.sf-dark .opt { background: #18181b; border-color: #fafafa; box-shadow: 4px 4px 0px #fafafa; color: #fafafa; }
+.opt:hover, .sf-canvas.sf-dark .opt:hover { background: #fde047; color: #111111; border-color: #111111; transform: translate(-2px, -2px); box-shadow: 6px 6px 0px #111111; }
+.sf-canvas.sf-dark .opt:hover { box-shadow: 6px 6px 0px #ec4899; }
+.opt:active, .opt.user-picked, .sf-canvas.sf-dark .opt:active, .sf-canvas.sf-dark .opt.user-picked {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0px #111111;
+  background: #7dd3fc;
+  color: #111111;
+  border-color: #111111;
+}
+.sf-canvas.sf-dark .opt.user-picked { box-shadow: 1px 1px 0px #fafafa; }
+.opt-letter {
+  width: 28px;
+  height: 28px;
+  border: 2px solid #111111;
+  background: #facc15;
+  color: #111111;
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.opt.user-wrong, .sf-canvas.sf-dark .opt.user-wrong { background: #fca5a5 !important; color: #111111 !important; border-color: #111111 !important; }
+.opt.correct, .sf-canvas.sf-dark .opt.correct { background: #86efac !important; color: #111111 !important; border-color: #111111 !important; font-weight: 800; }
+.opt.correct .opt-letter, .sf-canvas.sf-dark .opt.correct .opt-letter { background: #111111 !important; color: #86efac !important; }
+.ans-banner {
+  margin-top: 18px;
+  padding: 12px 15px;
+  border: 2.5px solid #111111;
+  background: #fde047;
+  color: #111111;
+  font-family: "Space Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 4px 4px 0px #111111;
+}
+.sf-canvas.sf-dark .ans-banner { box-shadow: 4px 4px 0px #ec4899; }
+.expl-box {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  padding: 14px 16px;
+  border: 2.5px solid #111111;
+  background: #f4f4f5;
+  color: #111111;
+  font-size: 14.5px;
+  line-height: 1.56;
+}
+.sf-canvas.sf-dark .expl-box {
+  background: #18181b;
+  color: #f4f4f5;
+  border-color: #fafafa;
+  box-shadow: 4px 4px 0px #facc15;
+}
+details.orig-scan summary {
+  border: 2px solid #111111;
+  border-radius: 0;
+  background: #fef9c3;
+  color: #111111;
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 12px;
+  box-shadow: 3px 3px 0px #111111;
+  opacity: 1;
+}
+.sf-canvas.sf-dark details.orig-scan summary {
+  background: #18181b;
+  color: #fafafa;
+  border-color: #fafafa;
+  box-shadow: 3px 3px 0px #fafafa;
+}
+.fig-box img, details.orig-scan img { border: 2.5px solid #111111; box-shadow: 4px 4px 0px #111111; padding: 6px; }
+.sf-canvas.sf-dark .fig-box img, .sf-canvas.sf-dark details.orig-scan img { border-color: #fafafa; box-shadow: 4px 4px 0px #facc15; }
+
+/* ===== Extra rules (template worker) ===== */
+html, body { overflow-x: hidden; }
+.sf-canvas { padding: 40px 16px 32px; }
+.sf-canvas img { max-width: 100%; height: auto; }
+.sf-canvas table { max-width: 100%; }
+.wrap { word-wrap: break-word; overflow-wrap: anywhere; }
+.meta { flex-direction: column; align-items: flex-start; gap: 8px; }
+.badge, .subj-CHIM, .subj-BIO, .subj-FIS { background: #c4b5fd; color: #111111; max-width: 100%; }
+.opt-text { min-width: 0; }
+@media (max-width: 480px) {
+  .wrap { padding: 20px 16px 20px; }
+  .stem { font-size: 17px; }
+}
+[hidden] { display: none !important; }
+.type-label { margin: 16px 0 6px; font-family: "Space Mono", monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.type-box { font-family: "Space Mono", monospace; font-size: 16px; }
+.type-box input { width: 100%; max-width: 100%; font: inherit; padding: 8px 10px; border: 2.5px solid #111111; background: #ffffff; color: #111111; box-shadow: 4px 4px 0px #111111; }
+.type-box code#typeans { display: inline-block; max-width: 100%; padding: 2px 8px; border: 2px solid #111111; background: #ffffff; color: #111111; font-family: "Space Mono", monospace; font-size: 17px; white-space: normal; }
+.type-box .typeGood { background: #86efac; }
+.type-box .typeBad { background: #fca5a5; }
+.type-box .typeMissed { background: #fde047; }
+.sf-accepted { margin-top: 12px; font-family: "Space Mono", monospace; font-size: 12.5px; font-weight: 700; }
+.sf-ok { display: inline-block; margin-right: 8px; padding: 3px 9px; border: 2.5px solid #111111; background: #86efac; color: #111111; font-weight: 800; box-shadow: 3px 3px 0px #111111; }
+.note-box { margin: 14px 0; padding: 14px 16px; border: 2.5px solid #111111; background: #fdba74; color: #111111; font-size: 14.5px; line-height: 1.56; box-shadow: 4px 4px 0px #111111; }
+.sf-canvas.sf-dark .note-box { border-color: #fafafa; box-shadow: 4px 4px 0px #ec4899; }
+
+/* Dark mode by default when Anki is in night mode (mirrors .sf-dark rules; .sf-light = per-device override) */
+.nightMode .sf-canvas:not(.sf-light),
+.night_mode .sf-canvas:not(.sf-light) {
+  background-color: #18181b;
+  background-image: radial-gradient(#3f3f46 1.15px, transparent 1.15px);
+  color: #fafafa;
+}
+.nightMode .sf-canvas:not(.sf-light) .wrap,
+.night_mode .sf-canvas:not(.sf-light) .wrap { background: #232329; border-color: #fafafa; box-shadow: -3px -3px 0px #ec4899, 8px 8px 0px #facc15; }
+.nightMode .sf-canvas:not(.sf-light) .wrap::before,
+.night_mode .sf-canvas:not(.sf-light) .wrap::before { color: #facc15; opacity: 0.72; }
+.nightMode .sf-canvas:not(.sf-light) .meta,
+.night_mode .sf-canvas:not(.sf-light) .meta { border-bottom-color: #fafafa; }
+.nightMode .sf-canvas:not(.sf-light) .opt,
+.night_mode .sf-canvas:not(.sf-light) .opt { background: #18181b; border-color: #fafafa; box-shadow: 4px 4px 0px #fafafa; color: #fafafa; }
+.nightMode .sf-canvas:not(.sf-light) .opt:hover,
+.night_mode .sf-canvas:not(.sf-light) .opt:hover { background: #fde047; color: #111111; border-color: #111111; transform: translate(-2px, -2px); box-shadow: 6px 6px 0px #111111; }
+.nightMode .sf-canvas:not(.sf-light) .opt:hover,
+.night_mode .sf-canvas:not(.sf-light) .opt:hover { box-shadow: 6px 6px 0px #ec4899; }
+.nightMode .sf-canvas:not(.sf-light) .opt:active,
+.night_mode .sf-canvas:not(.sf-light) .opt:active,
+.nightMode .sf-canvas:not(.sf-light) .opt.user-picked,
+.night_mode .sf-canvas:not(.sf-light) .opt.user-picked {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0px #111111;
+  background: #7dd3fc;
+  color: #111111;
+  border-color: #111111;
+}
+.nightMode .sf-canvas:not(.sf-light) .opt.user-picked,
+.night_mode .sf-canvas:not(.sf-light) .opt.user-picked { box-shadow: 1px 1px 0px #fafafa; }
+.nightMode .sf-canvas:not(.sf-light) .opt.user-wrong,
+.night_mode .sf-canvas:not(.sf-light) .opt.user-wrong { background: #fca5a5 !important; color: #111111 !important; border-color: #111111 !important; }
+.nightMode .sf-canvas:not(.sf-light) .opt.correct,
+.night_mode .sf-canvas:not(.sf-light) .opt.correct { background: #86efac !important; color: #111111 !important; border-color: #111111 !important; font-weight: 800; }
+.nightMode .sf-canvas:not(.sf-light) .opt.correct .opt-letter,
+.night_mode .sf-canvas:not(.sf-light) .opt.correct .opt-letter { background: #111111 !important; color: #86efac !important; }
+.nightMode .sf-canvas:not(.sf-light) .ans-banner,
+.night_mode .sf-canvas:not(.sf-light) .ans-banner { box-shadow: 4px 4px 0px #ec4899; }
+.nightMode .sf-canvas:not(.sf-light) .expl-box,
+.night_mode .sf-canvas:not(.sf-light) .expl-box {
+  background: #18181b;
+  color: #f4f4f5;
+  border-color: #fafafa;
+  box-shadow: 4px 4px 0px #facc15;
+}
+.nightMode .sf-canvas:not(.sf-light) details.orig-scan summary,
+.night_mode .sf-canvas:not(.sf-light) details.orig-scan summary {
+  background: #18181b;
+  color: #fafafa;
+  border-color: #fafafa;
+  box-shadow: 3px 3px 0px #fafafa;
+}
+.nightMode .sf-canvas:not(.sf-light) .fig-box img,
+.night_mode .sf-canvas:not(.sf-light) .fig-box img,
+.nightMode .sf-canvas:not(.sf-light) details.orig-scan img,
+.night_mode .sf-canvas:not(.sf-light) details.orig-scan img { border-color: #fafafa; box-shadow: 4px 4px 0px #facc15; }
+.nightMode .sf-canvas:not(.sf-light) .note-box,
+.night_mode .sf-canvas:not(.sf-light) .note-box { border-color: #fafafa; box-shadow: 4px 4px 0px #ec4899; }
+
+/* ===== Bundled fonts ===== */
+@font-face { font-family: "Space Grotesk"; src: url("_SpaceGrotesk-Variable.ttf") format("truetype"); font-weight: 300 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Space Mono"; src: url("_SpaceMono-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Space Mono"; src: url("_SpaceMono-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Syne"; src: url("_Syne-Variable.ttf") format("truetype"); font-weight: 400 800; font-style: normal; font-display: swap; }

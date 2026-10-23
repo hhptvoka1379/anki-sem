@@ -13,8 +13,7 @@ Update after every chapter, every gate, and before any context clear. See `RULES
 ## In flight (background, started 2026-10-23)
 - Opus `pagemap` → `work/pagemap/chim_ch1.json` first, then `work/pagemap/page_map.json`.
 - Opus MUR research → `sources/mur/`, `exam_structure.md`.
-- Sonnet `template` → `work/template/{front.html,back.html,style.css,sample_fields.json,NOTES.md}`.
-- Sonnet `buildscript` → `work/buildscript/build.py` (+fields.py, tests).
+- Sonnet `template` DONE (65k tok, 101 s); Sonnet `buildscript` DONE (57k tok, 92 s). Orchestrator reviewed templates vs reference (structure + tap-to-pick + theme scripts kept; Google Fonts links removed; typed_answer.js embedded; NoteHTML box), aligned `fields.py` HTML to `work/template/sample_fields.json`, fixed font path, promoted to `templates/` and `scripts/build.py`+`scripts/fields.py`. Synthetic 3-note build with real templates: OK (3 notes, 7 media). Not yet checked: Anki import, renders, `{{type:}}` inside a `{{#TypedAnswer}}` section.
 - Sonnet `gates` → `work/gates/run_gates.py`, `render.js`.
 - Script `scripts/ocr_all.sh` → `work/ocr/pNNN.{txt,tsv}` (re-runnable, skips done pages).
 - Chunk cost log: none yet.

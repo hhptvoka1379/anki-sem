@@ -1,0 +1,112 @@
+<div id="sf-canvas" class="sf-canvas">
+<button id="sf-theme-toggle" type="button" style="position:absolute;top:8px;left:8px;z-index:5;font-family:'Space Mono',monospace;font-weight:700;font-size:11px;padding:4px 9px;border:2px solid #111;background:#fef08a;color:#111;cursor:pointer;">DARK</button>
+
+<div class="wrap">
+  <div class="meta">
+    <span class="badge subj-{{SubjectCode}}">{{Subject}}</span>
+    <span class="meta-dim">Cap. {{ChapterNum}} — {{ChapterTitle}} • {{QuizTypeLabel}} #{{QuestionNum}} (p. {{BookPage}})</span>
+  </div>
+  <div class="stem">{{BackStemHTML}}</div>
+  {{#FigureHTML}}<div class="fig-box">{{FigureHTML}}</div>{{/FigureHTML}}
+  {{BackOptionsHTML}}
+  {{#TypedAnswer}}<div class="type-label">La tua risposta</div><div class="type-box">{{type:TypedAnswer}}</div>
+  <div id="sf-typed" class="sf-accepted" data-main="{{text:TypedAnswer}}" data-accepted="{{text:AcceptedAnswers}}">
+    <span id="sf-accepted-ok" class="sf-ok" hidden>Risposta accettata</span>
+    {{#AcceptedAnswers}}<span class="sf-accepted-list">Risposte accettate: {{AcceptedAnswers}}</span>{{/AcceptedAnswers}}
+  </div>{{/TypedAnswer}}
+  <div class="ans-banner">{{AnswerBannerHTML}}</div>
+  {{#NoteHTML}}<div class="note-box"><strong>Nota:</strong> {{NoteHTML}}</div>{{/NoteHTML}}
+  {{#ExplanationHTML}}<div class="expl-box"><strong>Spiegazione:</strong> {{ExplanationHTML}}</div>{{/ExplanationHTML}}
+  <div class="scan-stack">
+    {{#QuestionScanHTML}}<details class="orig-scan"><summary>Scansione originale della domanda (p. {{BookPage}})</summary>{{QuestionScanHTML}}</details>{{/QuestionScanHTML}}
+    {{#SolutionScanHTML}}<details class="orig-scan"><summary>Risoluzione grafica originale del libro</summary>{{SolutionScanHTML}}</details>{{/SolutionScanHTML}}
+  </div>
+</div>
+</div>
+<script>
+(function() {
+  document.documentElement.removeAttribute('data-sf-theme');
+  var itemId = "{{ItemID}}";
+  try {
+    var picked = sessionStorage.getItem("pick_" + itemId);
+    if (picked) {
+      document.querySelectorAll('.opt').forEach(function(o) {
+        var l = o.querySelector('.opt-letter');
+        var txt = l ? l.textContent.replace(/[()\s]/g, '') : '';
+        if (txt === picked && !o.classList.contains('correct')) {
+          o.classList.add('user-wrong');
+        }
+      });
+    }
+  } catch(e) {}
+})();
+</script>
+<script>
+// Optional: marks a typed answer as accepted. Without it, accepted answers are still listed above.
+(function() {
+// Reads the typed text out of Anki's comparison block and checks it against accepted answers.
+function typedFrom(el){
+  if(!el) return null;
+  if(el.tagName==='INPUT') return el.value;
+  var arrow=el.querySelector('#typearrow');
+  if(!arrow) return el.textContent;           // exact match: one line only
+  var out='';
+  for(var n=el.firstChild;n;n=n.nextSibling){
+    if(n.nodeName==='BR') break;                // first line = what the user typed
+    if(n.classList && n.classList.contains('typeMissed')) continue;
+    out+=n.textContent;
+  }
+  return out;
+}
+function norm(s){
+  return (s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase()
+    .replace(/[’`]/g,"'").replace(/^\s*(?:(?:il|lo|la|i|gli|le|un|uno|una)\s+|(?:l|un|dell|nell|all|sull)'\s*)/,'').replace(/\s+/g,' ').trim();
+}
+function accepted(typed,main,variants){
+  var t=norm(typed); if(!t) return false;
+  return [main].concat(variants.split('|')).some(function(a){return norm(a)===t;});
+}
+  try {
+    var root = document.getElementById('sf-typed');
+    if (!root) return;
+    var typed = typedFrom(document.getElementById('typeans'));
+    var ok = accepted(typed, root.getAttribute('data-main') || '', root.getAttribute('data-accepted') || '');
+    var badge = document.getElementById('sf-accepted-ok');
+    if (ok && badge) badge.hidden = false;
+  } catch (e) {}
+})();
+</script>
+<script>
+(function() {
+  var canvas = document.querySelector('.sf-canvas');
+  var btn = document.getElementById('sf-theme-toggle');
+  if (!canvas || !btn) return;
+  // Default follows Anki's night mode; the button stores a per-device override.
+  function ankiNight() {
+    var els = [document.documentElement, document.body];
+    for (var i = 0; i < els.length; i++) {
+      if (els[i] && els[i].classList && (els[i].classList.contains('nightMode') || els[i].classList.contains('night_mode'))) return true;
+    }
+    return false;
+  }
+  var override = null;
+  try { override = localStorage.getItem('sf-theme'); } catch (e) {}
+  function apply() {
+    var dark = override === 'dark' || (override !== 'light' && ankiNight());
+    canvas.classList.toggle('sf-dark', override === 'dark');
+    canvas.classList.toggle('sf-light', override === 'light');
+    btn.textContent = dark ? 'LIGHT' : 'DARK';
+    btn.style.background = dark ? '#18181b' : '#fef08a';
+    btn.style.color = dark ? '#fafafa' : '#111';
+    btn.style.borderColor = dark ? '#fafafa' : '#111';
+    return dark;
+  }
+  apply();
+  btn.addEventListener('click', function() {
+    var dark = apply();
+    override = dark ? 'light' : 'dark';
+    apply();
+    try { localStorage.setItem('sf-theme', override); } catch (e) {}
+  });
+})();
+</script>
