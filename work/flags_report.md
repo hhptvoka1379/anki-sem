@@ -1,6 +1,6 @@
-# Flagged rows (181)
+# Flagged rows (193)
 
-## ambiguous (46)
+## ambiguous (49)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -50,6 +50,9 @@
 | BIO-C04-NCOM-017 | BIO | 4 | 17 | 434 | ambiguous: allele and allelomorfo are synonymous terms for alternative forms of a gene at the same locus, so two options are correct |
 | BIO-C04-NCOM-057 | BIO | 4 | 57 | 440 | ambiguous: the woman is an obligate carrier, but the unaffected man's carrier probability is not specified and cannot be inferred merely from unaffected parents and grandparents |
 | BIO-C04-NCOM-076 | BIO | 4 | 76 | 442 | ambiguous: if six is the total planned family size, the two existing daughters leave only four future births and the conditional probability is 1/16; 1/64 requires six additional future births |
+| BIO-C04-NCOM-204 | BIO | 4 | 204 | 459 | ambiguous: deleting nucleotide 7 yields CUG-AUC-UAA, so an immediate stop/interruption follows Ile; interruption and a changed downstream sequence both describe outcomes of the frameshift |
+| BIO-C05-NCOM-032 | BIO | 5 | 32 | 488 | ambiguous: oxygen and carbon dioxide cross by simple diffusion, which is itself passive transport, so both listed terms are correct at different levels of specificity |
+| BIO-C05-NCOM-035 | BIO | 5 | 35 | 488 | ambiguous: uptake and release occur by simple diffusion, which is itself passive transport, so both listed mechanisms are correct descriptions |
 
 ## chem (14)
 
@@ -70,7 +73,7 @@
 | CHIM-C12-NCOM-245 | CHIM | 12 | 245 | 216 | chem: the displayed CH3-CH3-CO-NH-CH3 structure gives the second carbon five bonds; an amide of this skeleton requires a CH2 group before the carbonyl |
 | CHIM-C12-NCOM-253 | CHIM | 12 | 253 | 217 | chem: aniline is C6H5-NH2, whereas the keyed formula is printed with CH and NH3 fragments that do not represent a neutral phenylamine |
 
-## key (20)
+## key (23)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -94,8 +97,11 @@
 | BIO-C03-COMP-123 | BIO | 3 | 123 | 417 | key: suspect - elongation factors deliver aminoacyl-tRNA and drive translocation, but peptide-bond formation is catalysed by the large-subunit rRNA, not by these factors |
 | BIO-C03-NCOM-222 | BIO | 3 | 222 | 407 | key: suspect - the cap is specifically recognized by eIF4E in eIF4F, which then recruits the 43S complex containing the 40S subunit; no ribosomal subunit directly recognizes the cap |
 | BIO-C04-NCOM-038 | BIO | 4 | 38 | 437 | key: suspect - in this chapter's own numbering the first Mendel law is dominance/uniformity and segregation is the second law, so the keyed statement is misnumbered |
+| BIO-C04-NCOM-160 | BIO | 4 | 160 | 453 | key: suspect - achondroplasia is caused primarily by gain-of-function variants in FGFR3, not by deficient production of chondrin as the stem and keyed explanation assume |
+| BIO-C04-NCOM-183 | BIO | 4 | 183 | 456 | key: suspect - plasma anti-A occurs in both group B and group O people, so anti-A alone cannot determine that the group is probably B |
+| BIO-C05-NCOM-020 | BIO | 5 | 20 | 486 | key: suspect - intermediate filaments are anchored and organized at desmosomes chiefly by desmoplakin; desmin is itself an intermediate-filament protein, mainly in muscle, not the general desmosomal stabilizer |
 
-## missing (9)
+## missing (15)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -108,6 +114,12 @@
 | BIO-C01-NCOM-091 | BIO | 1 | 91 | 326 | missing: the question requires identification from an accompanying figure, but no figure is present on the card |
 | BIO-C01-NCOM-263 | BIO | 1 | 263 | 346 | missing: the question requires an evolutionary-tree graph, but no graph is present in the card |
 | BIO-C04-NCOM-035 | BIO | 4 | 35 | 436 | missing: the referenced table with rows 1-5 is absent, so the keyed row cannot be checked from the card |
+| BIO-C04-NCOM-130 | BIO | 4 | 130 | 448 | missing: the referenced pedigree is absent, so the genotypes and deduction cannot be checked from the card |
+| BIO-C04-NCOM-132 | BIO | 4 | 132 | 449 | missing: the referenced pedigree figure is absent, so the F3 female's genotype cannot be derived or checked from the card |
+| BIO-C04-NCOM-152 | BIO | 4 | 152 | 451 | missing: the referenced pedigree figure is absent, so the asserted F2 female genotype cannot be derived or checked from the card |
+| BIO-C04-NCOM-156 | BIO | 4 | 156 | 452 | missing: the referenced pedigree figure is absent, so the asserted F3 female genotype cannot be derived or checked from the card |
+| BIO-C04-NCOM-162 | BIO | 4 | 162 | 453 | missing: the referenced pedigree is absent, so the F1, F2, and F3 genotypes cannot be derived or checked from the card |
+| BIO-C05-NCOM-030 | BIO | 5 | 30 | 487 | missing: the referenced figure of the two plant cells is absent, so their conditions and the keyed option cannot be checked from the card |
 
 ## ocr (92)
 
