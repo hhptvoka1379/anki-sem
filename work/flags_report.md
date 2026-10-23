@@ -1,6 +1,6 @@
-# Flagged rows (148)
+# Flagged rows (155)
 
-## ambiguous (31)
+## ambiguous (34)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -35,6 +35,9 @@
 | CHIM-C12-NCOM-085 | CHIM | 12 | 85 | 202 | ambiguous: all four hydrogens in methane can be described both as methyl hydrogens and as chemically equivalent hydrogens, so two options are true |
 | CHIM-C12-NCOM-148 | CHIM | 12 | 148 | 208 | ambiguous: both saying aromatic compounds cannot be hydrocarbons and saying they contain only hydrocarbons are false categorical statements, since both aromatic hydrocarbons and heteroaromatic compounds exist |
 | CHIM-C13-NCOM-032 | CHIM | 13 | 32 | 234 | ambiguous: fructose presents both a ketonic group and multiple alcoholic hydroxy groups, so the chetonico and alcolica options can both be defended |
+| CHIM-C13-NCOM-126 | CHIM | 13 | 126 | 243 | ambiguous: tertiary structure is both the overall three-dimensional configuration and a determinant of stability/interactions, while the keyed wording and the conformations option overlap and cannot be uniquely separated |
+| BIO-C01-NCOM-015 | BIO | 1 | 15 | 318 | ambiguous: by wet mass organisms are mostly water, an inorganic compound, whereas organic compounds dominate mainly dry matter, so the principamente wording can justify two different answers |
+| BIO-C01-NCOM-021 | BIO | 1 | 21 | 319 | ambiguous: as printed, the statement that carbohydrates are composed of C3 H2O and the keyed statement that cells reduce them to CO2, H2O and energy are both false, so the false statement is not unique |
 
 ## chem (14)
 
@@ -55,7 +58,7 @@
 | CHIM-C12-NCOM-245 | CHIM | 12 | 245 | 216 | chem: the displayed CH3-CH3-CO-NH-CH3 structure gives the second carbon five bonds; an amide of this skeleton requires a CH2 group before the carbonyl |
 | CHIM-C12-NCOM-253 | CHIM | 12 | 253 | 217 | chem: aniline is C6H5-NH2, whereas the keyed formula is printed with CH and NH3 fragments that do not represent a neutral phenylamine |
 
-## key (9)
+## key (11)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -68,6 +71,8 @@
 | CHIM-C11-NCOM-127 | CHIM | 11 | 127 | 182 | key: suspect at 25 C concentrations 10^-5 M H+ and 10^-9 M OH- have product 10^-14, so the aqueous solution exists and has pH 5 rather than being impossible |
 | CHIM-C12-NCOM-071 | CHIM | 12 | 71 | 201 | key: suspect successive members of a homologous series differ by a CH2 unit, not by a -CH3 group as printed in the keyed option |
 | CHIM-C13-NCOM-028 | CHIM | 13 | 28 | 234 | key: suspect: only hexose monosaccharides have formula C6H12O6, while monosaccharides may contain from three to seven carbon atoms, so the keyed universal definition is false and the no-appropriate-definition option is defensible |
+| CHIM-C13-NCOM-156 | CHIM | 13 | 156 | 246 | key: suspect: adenine is 6-aminopurine, a purine nitrogenous base with a primary exocyclic amino group, not a secondary aromatic amine; no chemically correct class is offered |
+| BIO-C01-NCOM-012 | BIO | 1 | 12 | 318 | key: suspect: water is the principal chemical constituent by mass of most cells and is not listed, so the none option is defensible while proteins are only the main dry organic fraction |
 
 ## missing (5)
 
@@ -79,7 +84,7 @@
 | CHIM-C08-NCOM-001 | CHIM | 8 | 1 | 125 | missing: the stem refers to a concentration-versus-time graph, but no graph or plotted values are present on the card |
 | CHIM-C12-NCOM-161 | CHIM | 12 | 161 | 209 | missing: the molecular structures labelled A, B and C are said to be shown in a figure, but no figure is present on the card |
 
-## ocr (89)
+## ocr (91)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -172,4 +177,6 @@
 | CHIM-C12-NCOM-276 | CHIM | 12 | 276 | 220 | ocr: the first compound is printed with minus signs, an impossible CH4 group and a zero in place of oxygen, so the ether structure that must be classified is not chemically legible |
 | CHIM-C13-COMP-019 | CHIM | 13 | 19 | 249 | ocr: the cloze term is stored as oli saturi, which does not fit the sentence about fatty acids; the chemically appropriate adjective would be saturi |
 | CHIM-C13-NCOM-035 | CHIM | 13 | 35 | 235 | ocr: the keyed option reads sei atomi di e, with the letter e replacing the carbon symbol needed to explain why hexoses have that name |
+| CHIM-C13-NCOM-104 | CHIM | 13 | 104 | 241 | ocr: the combination options and especially the keyed Beb are garbled, so it cannot be read reliably whether the intended set includes disulfide bonds besides peptide bonds |
+| BIO-C01-NCOM-003 | BIO | 1 | 3 | 317 | ocr: the keyed trace element is printed as lo dio rather than iodio, so the option does not legibly name an element |
 
