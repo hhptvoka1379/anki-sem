@@ -1,6 +1,6 @@
-# Flagged rows (301)
+# Flagged rows (315)
 
-## ambiguous (24)
+## ambiguous (25)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -28,6 +28,7 @@
 | BIO-C06-NCOM-133 | BIO | 6 | 133 | 546 | ambiguous: oltre alla cascata canonica delle MAP chinasi (C), Ras-GTP lega e attiva direttamente anche la subunità catalitica p110 della via PI3K-AKT (A); inoltre opzione B riporta 'NF-xB' |
 | BIO-C07-NCOM-035 | BIO | 7 | 35 | 570 | ambiguous: chiave D ('i punti di attacco del fuso mitotico') imprecisa e confondibile con i cinetocori/centromeri; i microtubuli del fuso nucleano dal materiale pericentriolare del centrosoma, mentre i centrioli sono cilindri 9×3 di triplette di microtubuli |
 | BIO-C07-NCOM-064 | BIO | 7 | 64 | 574 | ambiguous: la mitosi è una divisione equazionale che conserva la ploidia iniziale sia a partire da cellule aploidi (opzione C, es. lieviti, funghi, gametofiti vegetali) sia da cellule diploidi (opzione E): C ed E sono entrambe scientificamente vere |
+| BIO-C07-NCOM-164 | BIO | 7 | 164 | 584 | ambiguous: alla fine della telofase si riorganizzano contemporaneamente sia l'involucro nucleare (E), sia il nucleolo (B), sia l'apparato di Golgi frammentato in mitosi (C) |
 
 ## chem (1)
 
@@ -35,7 +36,7 @@
 |---|---|---|---|---|---|
 | BIO-C05-COMP-102 | BIO | 5 | 102 | 521 | chem: formula chimica del substrato nell'enunciato corrotta dall'OCR in 'H.0' al posto di 'H₂O₂' ('converte l'H.0 in acqua e ossigeno') |
 
-## key (18)
+## key (19)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -57,8 +58,9 @@
 | BIO-C05-COMP-048 | BIO | 5 | 48 | 517 | key: suspect - errore biochimico nel testo: le importine legano e trasportano il carico NLS nel nucleo in assenza di Ran-GTP (il legame nucleare di Ran-GTP provoca invece il distacco del carico dall'importina), mentre sono le esportine a formare complessi cooperativi con carico e Ran-GTP |
 | BIO-C06-COMP-054 | BIO | 6 | 54 | 555 | key: suspect - errore biochimico nel testo: gli ormoni steroidei come testosterone ed estradiolo derivano dal colesterolo, non dal cortisolo |
 | BIO-C07-COMP-028 | BIO | 7 | 28 | 591 | key: suspect - errore biofisico nel testo: la chinesina-14 (motore diretto verso l'estremità minus) sui microtubuli antiparalleli tira e avvicina i poli del fuso tra loro (antagonizzando la chinesina-5), non li spinge lontani l'uno dall'altro |
+| BIO-C07-NCOM-156 | BIO | 7 | 156 | 583 | key: suspect - Cdc20 è il co-attivatore di APC/C, non il suo inibitore; nel complesso del checkpoint mitotico (MCC) l'inibizione è mediata da Mad2 e BubR1 che sequestrano Cdc20 |
 
-## missing (20)
+## missing (23)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -82,8 +84,11 @@
 | BIO-C07-NCOM-040 | BIO | 7 | 40 | 571 | missing: manca completamente la figura citata nell'enunciato ('Dall'osservazione della figura, si può dedurre che essa rappresenta:') |
 | BIO-C07-NCOM-044 | BIO | 7 | 44 | 571 | missing: manca completamente la figura citata nell'enunciato ('La figura rappresenta una cellula... Dalla sua osservazione si può dedurre che...') |
 | BIO-C07-NCOM-055 | BIO | 7 | 55 | 573 | missing: l'enunciato e tutte le opzioni rinviano a una figura assente ('La figura mostra...', 'vedi figura') |
+| BIO-C07-NCOM-114 | BIO | 7 | 114 | 579 | missing: manca lo schema grafico del ciclo vitale umano citato nel testo (corrotto in testo residuo 'Adulto VA N Processo A... T_T na') |
+| BIO-C07-NCOM-115 | BIO | 7 | 115 | 579 | missing: manca completamente lo schema grafico citato nell'enunciato ('Lo schema della figura rappresenta... Processo A / LD [OZ') |
+| FIS-C01-NCOM-090 | FIS | 1 | 90 | 681 | missing: manca la figura necessaria per conoscere il verso delle tre forze lungo i lati del triangolo equilatero (oltre a formula corrotta 'p3/2/2' nell'opzione A) |
 
-## ocr (238)
+## ocr (247)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -325,4 +330,13 @@
 | BIO-C07-NCOM-024 | BIO | 7 | 24 | 569 | ocr: opzione corretta B corrotta in 'fasi G,-S-G,' (pedici numerici persi e resi identici per 'G₁-S-G₂') |
 | BIO-C07-NCOM-043 | BIO | 7 | 43 | 571 | ocr: nell'opzione D 'meiosi II' è stato corrotto in 'meiosi I]', rendendo vera anche l'affermazione D ('La riduzione del numero dei cromosomi avviene durante la meiosi I') oltre a C |
 | BIO-C07-COMP-094 | BIO | 7 | 94 | 595 | ocr: bersaglio del cloze fuso senza spazio in 'eatme' anziché 'eat me' (o 'eat-me') |
+| BIO-C07-COMP-101 | BIO | 7 | 101 | 596 | ocr: bersaglio del cloze spostato fuori posizione ('La MOMP {{c1::intrinseca}} ... è l'evento chiave della via.' anziché '... è l'evento chiave della via {{c1::intrinseca}}.') |
+| BIO-C07-NCOM-137 | BIO | 7 | 137 | 581 | ocr: nell'enunciato 'C,' è stato corrotto nel simbolo con pedice 'C₄' ('pari a C₄ quale sarà'), ambiguo rispetto alle opzioni '2C', '8C', '4C', 'C' |
+| BIO-C07-NCOM-153 | BIO | 7 | 153 | 583 | ocr: testo marginale estraneo 'Ila' fuso nella risposta corretta C ('Checkpoint metafase/anafase Ila') |
+| BIO-C07-NCOM-188 | BIO | 7 | 188 | 586 | ocr: opzione corretta D riporta la sigla genica corrotta 'blimpl' (elle minuscola finale) anziché 'Blimp1' |
+| FIS-C01-NCOM-002 | FIS | 1 | 2 | 673 | ocr: opzione corretta D corrotta in 'Kelvinz' anziché 'kelvin' (o 'Kelvin') |
+| FIS-C01-NCOM-036 | FIS | 1 | 36 | 676 | ocr: nell'enunciato 'L'erg' è stato corrotto nella parola inesistente 'Verg' |
+| FIS-C01-NCOM-038 | FIS | 1 | 38 | 676 | ocr: testo estraneo corrotto 'SAR ss' nell'opzione E ('Temperatura assoluta SAR ss') |
+| FIS-C01-NCOM-083 | FIS | 1 | 83 | 680 | ocr: il simbolo 'l' della larghezza è corrotto in '/' nell'enunciato e nella cifra '1' nell'opzione corretta A |
+| FIS-C02-NCOM-004 | FIS | 2 | 4 | 688 | ocr: unità di misura corrotte nelle opzioni D ('costantev=4m-s1' per 'v = 4 m·s⁻¹') e C ('m-s~' per 'm·s⁻²') |
 
