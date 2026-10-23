@@ -1,6 +1,6 @@
-# Flagged rows (315)
+# Flagged rows (339)
 
-## ambiguous (25)
+## ambiguous (28)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -29,6 +29,9 @@
 | BIO-C07-NCOM-035 | BIO | 7 | 35 | 570 | ambiguous: chiave D ('i punti di attacco del fuso mitotico') imprecisa e confondibile con i cinetocori/centromeri; i microtubuli del fuso nucleano dal materiale pericentriolare del centrosoma, mentre i centrioli sono cilindri 9×3 di triplette di microtubuli |
 | BIO-C07-NCOM-064 | BIO | 7 | 64 | 574 | ambiguous: la mitosi è una divisione equazionale che conserva la ploidia iniziale sia a partire da cellule aploidi (opzione C, es. lieviti, funghi, gametofiti vegetali) sia da cellule diploidi (opzione E): C ed E sono entrambe scientificamente vere |
 | BIO-C07-NCOM-164 | BIO | 7 | 164 | 584 | ambiguous: alla fine della telofase si riorganizzano contemporaneamente sia l'involucro nucleare (E), sia il nucleolo (B), sia l'apparato di Golgi frammentato in mitosi (C) |
+| FIS-C02-NCOM-044 | FIS | 2 | 44 | 694 | ambiguous: per α = 90° (angolo diverso da 0° e lancio verso l'alto) la traiettoria è rettilinea (E) e non parabolica (C); inoltre 'a diversa da 0' presenta probabile corruzione OCR |
+| FIS-C02-NCOM-054 | FIS | 2 | 54 | 695 | ambiguous: sia A ('2π rad/h') sia C ('costante') sono affermazioni fisicamente vere per la lancetta dei minuti |
+| FIS-C03-COMP-028 | FIS | 3 | 28 | 736 | ambiguous: formulazione incoerente ('non influenzano il moto del sistema esterno'); le forze interne hanno risultante nulla e non alterano il moto del centro di massa del sistema stesso |
 
 ## chem (1)
 
@@ -36,7 +39,7 @@
 |---|---|---|---|---|---|
 | BIO-C05-COMP-102 | BIO | 5 | 102 | 521 | chem: formula chimica del substrato nell'enunciato corrotta dall'OCR in 'H.0' al posto di 'H₂O₂' ('converte l'H.0 in acqua e ossigeno') |
 
-## key (19)
+## key (21)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -59,8 +62,10 @@
 | BIO-C06-COMP-054 | BIO | 6 | 54 | 555 | key: suspect - errore biochimico nel testo: gli ormoni steroidei come testosterone ed estradiolo derivano dal colesterolo, non dal cortisolo |
 | BIO-C07-COMP-028 | BIO | 7 | 28 | 591 | key: suspect - errore biofisico nel testo: la chinesina-14 (motore diretto verso l'estremità minus) sui microtubuli antiparalleli tira e avvicina i poli del fuso tra loro (antagonizzando la chinesina-5), non li spinge lontani l'uno dall'altro |
 | BIO-C07-NCOM-156 | BIO | 7 | 156 | 583 | key: suspect - Cdc20 è il co-attivatore di APC/C, non il suo inibitore; nel complesso del checkpoint mitotico (MCC) l'inibizione è mediata da Mad2 e BubR1 che sequestrano Cdc20 |
+| FIS-C02-NCOM-076 | FIS | 2 | 76 | 698 | key: suspect - il tempo minimo di attraversamento si ottiene puntando la barca perpendicolarmente alle sponde (t_min = L / v_barca) e resta invariato (E) al variare della corrente, mentre C vale solo imponendo deriva nulla a valle |
+| FIS-C03-NCOM-011 | FIS | 3 | 11 | 711 | key: suspect - per due forze uguali F ad angolo α = 30° il risultante ha modulo 2F cos 15° = F√(2 + √3) ≈ 1,93 F (mentre F√3 vale per α = 60°); inoltre radici corrotte da OCR in '2FV3', 'FY2', 'FS3' |
 
-## missing (23)
+## missing (24)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -87,8 +92,9 @@
 | BIO-C07-NCOM-114 | BIO | 7 | 114 | 579 | missing: manca lo schema grafico del ciclo vitale umano citato nel testo (corrotto in testo residuo 'Adulto VA N Processo A... T_T na') |
 | BIO-C07-NCOM-115 | BIO | 7 | 115 | 579 | missing: manca completamente lo schema grafico citato nell'enunciato ('Lo schema della figura rappresenta... Processo A / LD [OZ') |
 | FIS-C01-NCOM-090 | FIS | 1 | 90 | 681 | missing: manca la figura necessaria per conoscere il verso delle tre forze lungo i lati del triangolo equilatero (oltre a formula corrotta 'p3/2/2' nell'opzione A) |
+| FIS-C03-NCOM-036 | FIS | 3 | 36 | 714 | missing: manca la figura necessaria per sapere quale tra le due masse m₁ ed m₂ si trova sul piano inclinato di angolo α |
 
-## ocr (247)
+## ocr (265)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -339,4 +345,22 @@
 | FIS-C01-NCOM-038 | FIS | 1 | 38 | 676 | ocr: testo estraneo corrotto 'SAR ss' nell'opzione E ('Temperatura assoluta SAR ss') |
 | FIS-C01-NCOM-083 | FIS | 1 | 83 | 680 | ocr: il simbolo 'l' della larghezza è corrotto in '/' nell'enunciato e nella cifra '1' nell'opzione corretta A |
 | FIS-C02-NCOM-004 | FIS | 2 | 4 | 688 | ocr: unità di misura corrotte nelle opzioni D ('costantev=4m-s1' per 'v = 4 m·s⁻¹') e C ('m-s~' per 'm·s⁻²') |
+| FIS-C02-NCOM-021 | FIS | 2 | 21 | 690 | ocr: unità di misura corrotta nell'enunciato ('12,0 ms!' invece di '12,0 m·s⁻¹') |
+| FIS-C02-NCOM-022 | FIS | 2 | 22 | 690 | ocr: formula gravemente corrotta nell'opzione corretta C ('a = (v, “% vi) / (t₂ * t,)' invece di 'a = (v₂ − v₁) / (t₂ − t₁)') |
+| FIS-C02-NCOM-027 | FIS | 2 | 27 | 691 | ocr: esponenti e segni corrotti nell'opzione corretta A ('101/2 / (2-9,8)' invece di '10² / (2 · 9,8)') e nelle altre opzioni |
+| FIS-C02-COMP-045 | FIS | 2 | 45 | 701 | ocr: pedice corrotto nella formula 'v, cos θ' invece di 'v_i cos θ' (o 'v₀ cos θ') |
+| FIS-C02-COMP-046 | FIS | 2 | 46 | 701 | ocr: pedice corrotto nella formula 'v, sen θ' invece di 'v_i sen θ' (o 'v₀ sen θ') |
+| FIS-C02-NCOM-047 | FIS | 2 | 47 | 694 | ocr: testo estraneo corrotto '—t--' nell'opzione corretta E ('costante nel tempo —t--') |
+| FIS-C02-COMP-053 | FIS | 2 | 53 | 701 | ocr: coordinata verticale 'y' corrotta nel versore 'ĵ' nello spazio da completare ('per x e ĵ') |
+| FIS-C02-NCOM-061 | FIS | 2 | 61 | 696 | ocr: simboli e operatori corrotti nell'enunciato ('V,') e nell'opzione corretta B ('2-Vo' invece di '2·V₀') |
+| FIS-C02-NCOM-064 | FIS | 2 | 64 | 696 | ocr: il simbolo '2π' è stato corrotto in '27' nell'opzione corretta C ('45 (27)/60 = 4,7') e in '21' nelle opzioni B e D |
+| FIS-C03-NCOM-029 | FIS | 3 | 29 | 713 | ocr: tutti i pedici numerici '1' e '2' sono corrotti in virgole o lettere ('m, e m, = 2 m,', 'a,/a,=2', 'aj= a)'), rendendo indistinguibili i due corpi |
+| FIS-C03-NCOM-033 | FIS | 3 | 33 | 713 | ocr: esponenti corrotti in tutte le opzioni numeriche, inclusa la risposta D ('6x 107 x 0,1 = 6 x 10° Newton' invece di '6 × 10⁷ × 0,1 = 6 × 10⁶ N') |
+| FIS-C03-NCOM-035 | FIS | 3 | 35 | 714 | ocr: valore numerico corrotto nell'enunciato ('ha percorso³ m' invece di 'ha percorso 3 m') |
+| FIS-C03-COMP-045 | FIS | 3 | 45 | 737 | ocr: parola mancante/corrotta nell'enunciato ('La / limite' invece di 'La velocità limite') |
+| FIS-C03-NCOM-045 | FIS | 3 | 45 | 715 | ocr: operatore e virgola decimale corrotti nell'opzione corretta C ('70-98 N' invece di '70 · 9,8 N') |
+| FIS-C03-NCOM-048 | FIS | 3 | 48 | 716 | ocr: virgola decimale omessa nell'opzione corretta A ('98N' invece di '9,8 N', errato di un fattore 10 per una massa di 1 kg) |
+| FIS-C03-COMP-058 | FIS | 3 | 58 | 738 | ocr: simbolo di spostamento 'Δr' corrotto in 'Ar' nella formula ('W = F Ar cos θ') |
+| FIS-C03-COMP-073 | FIS | 3 | 73 | 738 | ocr: simboli corrotti nella formula dell'enunciato ('W = F Ar cos 8' invece di 'W = F Δr cos θ') |
+| FIS-C03-NCOM-073 | FIS | 3 | 73 | 719 | ocr: simboli corrotti nell'enunciato ('v,' e 'distanza A' invece di 'v₀' e 'distanza R') |
 
