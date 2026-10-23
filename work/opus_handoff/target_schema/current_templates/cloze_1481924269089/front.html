@@ -1,0 +1,60 @@
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Mono:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet"><button type="button" id="sf-mode-pill" class="sf-mode-pill" title="Dark / Light Mode (Alt+D)">☾</button><div id="sf-canvas" class="sf-canvas">
+<div class="wrap is-front">
+  <div class="meta">
+    <span class="badge subj-{{SubjectCode}}">{{Subject}}</span>
+    <span class="meta-dim">Cap. {{ChapterNum}} — {{ChapterTitle}}</span>
+    <span class="meta-dim">• {{QuizTypeLabel}} #{{QuestionNum}} (p. {{BookPage}})</span>
+  </div>
+  <div class="stem">{{cloze:FrontStemHTML}}</div>
+  {{#FigureHTML}}<div class="fig-box">{{FigureHTML}}</div>{{/FigureHTML}}
+  <div class="type-slot">
+    <div class="type-label">Scrivi la risposta</div>
+    {{type:cloze:FrontStemHTML}}
+  </div>
+  {{#QuestionScanHTML}}<div class="scan-wrap"><div class="scan-label">Dal libro · p. {{BookPage}}</div><div class="scan-box">{{QuestionScanHTML}}</div></div>{{/QuestionScanHTML}}
+</div></div>
+<script>
+(function() {
+
+  document.documentElement.removeAttribute('data-sf-theme');
+  var canvas = document.getElementById('sf-canvas');
+  var mbtn = document.getElementById('sf-mode-pill');
+  var mkey = 'sf_mode_04_neobrutalist_bauhaus';
+  function getDark() {
+    try { if (window['_' + mkey] !== undefined) return window['_' + mkey] === 'dark'; } catch(e) {}
+    try { if (window.parent && window.parent['_' + mkey] !== undefined) return window.parent['_' + mkey] === 'dark'; } catch(e) {}
+    try { var ls = localStorage.getItem(mkey); if (ls === 'dark' || ls === 'light') return ls === 'dark'; } catch(e) {}
+    try { var ss = sessionStorage.getItem(mkey); if (ss === 'dark' || ss === 'light') return ss === 'dark'; } catch(e) {}
+    var cm = (document.cookie || '').match(new RegExp('(?:^|;\\s*)' + mkey + '=(dark|light)'));
+    if (cm) return cm[1] === 'dark';
+    return false;
+  }
+  function applyDark(d) {
+    if (canvas) canvas.className = d ? 'sf-canvas sf-dark' : 'sf-canvas';
+    if (mbtn) {
+      mbtn.textContent = d ? '☀' : '☾';
+      mbtn.title = d ? 'Switch to Light Mode (Alt+D)' : 'Switch to Dark Mode (Alt+D)';
+    }
+  }
+  function toggleDark() {
+    var next = !getDark();
+    var val = next ? 'dark' : 'light';
+    try { window['_' + mkey] = val; } catch(e) {}
+    try { if (window.parent) window.parent['_' + mkey] = val; } catch(e) {}
+    try { localStorage.setItem(mkey, val); } catch(e) {}
+    try { sessionStorage.setItem(mkey, val); } catch(e) {}
+    try { document.cookie = mkey + '=' + val + ';path=/;max-age=31536000;SameSite=Lax'; } catch(e) {}
+    applyDark(next);
+  }
+  applyDark(getDark());
+  if (mbtn) mbtn.addEventListener('click', function(ev) { ev.stopPropagation(); toggleDark(); });
+  if (window._sfSoloKey) document.removeEventListener('keydown', window._sfSoloKey);
+  window._sfSoloKey = function(ev) {
+    if (ev.altKey && (ev.key === 'd' || ev.key === 'D' || ev.code === 'KeyD')) {
+      ev.preventDefault();
+      toggleDark();
+    }
+  };
+  document.addEventListener('keydown', window._sfSoloKey);
+})();
+</script>

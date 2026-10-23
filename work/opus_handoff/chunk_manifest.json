@@ -1,0 +1,2950 @@
+{
+  "chunk_size_cap": 45,
+  "total_chunks": 196,
+  "total_items": 7078,
+  "live_existing_items": 6948,
+  "restored_130_items": 130,
+  "items_needing_attention": 1140,
+  "chunks": [
+    {
+      "chunk_num": 1,
+      "path": "chunks/CHIM-C01/chunk_001_CHIM-C01_COMM_001-010.jsonl",
+      "chapter_key": "CHIM-C01",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        10
+      ],
+      "total_items": 10,
+      "in_current_apkg": 10,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 10
+    },
+    {
+      "chunk_num": 2,
+      "path": "chunks/CHIM-C01/chunk_002_CHIM-C01_NCOM_001-045.jsonl",
+      "chapter_key": "CHIM-C01",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 42,
+      "restored_130_items": 3,
+      "items_needing_attention": 5,
+      "clean_ready_items": 40
+    },
+    {
+      "chunk_num": 3,
+      "path": "chunks/CHIM-C01/chunk_003_CHIM-C01_NCOM_046-090.jsonl",
+      "chapter_key": "CHIM-C01",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 1,
+      "clean_ready_items": 44
+    },
+    {
+      "chunk_num": 4,
+      "path": "chunks/CHIM-C01/chunk_004_CHIM-C01_NCOM_091-121.jsonl",
+      "chapter_key": "CHIM-C01",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        121
+      ],
+      "total_items": 31,
+      "in_current_apkg": 31,
+      "restored_130_items": 0,
+      "items_needing_attention": 6,
+      "clean_ready_items": 25
+    },
+    {
+      "chunk_num": 5,
+      "path": "chunks/CHIM-C01/chunk_005_CHIM-C01_COMP_001-045.jsonl",
+      "chapter_key": "CHIM-C01",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 45
+    },
+    {
+      "chunk_num": 6,
+      "path": "chunks/CHIM-C01/chunk_006_CHIM-C01_COMP_046-047.jsonl",
+      "chapter_key": "CHIM-C01",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        46,
+        47
+      ],
+      "total_items": 2,
+      "in_current_apkg": 2,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 2
+    },
+    {
+      "chunk_num": 7,
+      "path": "chunks/CHIM-C02/chunk_007_CHIM-C02_COMM_001-040.jsonl",
+      "chapter_key": "CHIM-C02",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        40
+      ],
+      "total_items": 40,
+      "in_current_apkg": 40,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 40
+    },
+    {
+      "chunk_num": 8,
+      "path": "chunks/CHIM-C02/chunk_008_CHIM-C02_NCOM_001-042.jsonl",
+      "chapter_key": "CHIM-C02",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        42
+      ],
+      "total_items": 42,
+      "in_current_apkg": 42,
+      "restored_130_items": 0,
+      "items_needing_attention": 8,
+      "clean_ready_items": 34
+    },
+    {
+      "chunk_num": 9,
+      "path": "chunks/CHIM-C02/chunk_009_CHIM-C02_COMP_001-045.jsonl",
+      "chapter_key": "CHIM-C02",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 1,
+      "clean_ready_items": 44
+    },
+    {
+      "chunk_num": 10,
+      "path": "chunks/CHIM-C02/chunk_010_CHIM-C02_COMP_046-046.jsonl",
+      "chapter_key": "CHIM-C02",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        46,
+        46
+      ],
+      "total_items": 1,
+      "in_current_apkg": 1,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 1
+    },
+    {
+      "chunk_num": 11,
+      "path": "chunks/CHIM-C03/chunk_011_CHIM-C03_COMM_001-025.jsonl",
+      "chapter_key": "CHIM-C03",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        25
+      ],
+      "total_items": 25,
+      "in_current_apkg": 25,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 25
+    },
+    {
+      "chunk_num": 12,
+      "path": "chunks/CHIM-C03/chunk_012_CHIM-C03_NCOM_001-045.jsonl",
+      "chapter_key": "CHIM-C03",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 42,
+      "restored_130_items": 3,
+      "items_needing_attention": 13,
+      "clean_ready_items": 32
+    },
+    {
+      "chunk_num": 13,
+      "path": "chunks/CHIM-C03/chunk_013_CHIM-C03_NCOM_046-090.jsonl",
+      "chapter_key": "CHIM-C03",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 14,
+      "clean_ready_items": 31
+    },
+    {
+      "chunk_num": 14,
+      "path": "chunks/CHIM-C03/chunk_014_CHIM-C03_NCOM_091-135.jsonl",
+      "chapter_key": "CHIM-C03",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        135
+      ],
+      "total_items": 45,
+      "in_current_apkg": 42,
+      "restored_130_items": 3,
+      "items_needing_attention": 8,
+      "clean_ready_items": 37
+    },
+    {
+      "chunk_num": 15,
+      "path": "chunks/CHIM-C03/chunk_015_CHIM-C03_NCOM_136-180.jsonl",
+      "chapter_key": "CHIM-C03",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        136,
+        180
+      ],
+      "total_items": 45,
+      "in_current_apkg": 42,
+      "restored_130_items": 3,
+      "items_needing_attention": 12,
+      "clean_ready_items": 33
+    },
+    {
+      "chunk_num": 16,
+      "path": "chunks/CHIM-C03/chunk_016_CHIM-C03_NCOM_181-181.jsonl",
+      "chapter_key": "CHIM-C03",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        181,
+        181
+      ],
+      "total_items": 1,
+      "in_current_apkg": 1,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 1
+    },
+    {
+      "chunk_num": 17,
+      "path": "chunks/CHIM-C03/chunk_017_CHIM-C03_COMP_001-038.jsonl",
+      "chapter_key": "CHIM-C03",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        38
+      ],
+      "total_items": 38,
+      "in_current_apkg": 38,
+      "restored_130_items": 0,
+      "items_needing_attention": 5,
+      "clean_ready_items": 33
+    },
+    {
+      "chunk_num": 18,
+      "path": "chunks/CHIM-C04/chunk_018_CHIM-C04_COMM_001-020.jsonl",
+      "chapter_key": "CHIM-C04",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        20
+      ],
+      "total_items": 20,
+      "in_current_apkg": 20,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 20
+    },
+    {
+      "chunk_num": 19,
+      "path": "chunks/CHIM-C04/chunk_019_CHIM-C04_NCOM_001-045.jsonl",
+      "chapter_key": "CHIM-C04",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 10,
+      "clean_ready_items": 35
+    },
+    {
+      "chunk_num": 20,
+      "path": "chunks/CHIM-C04/chunk_020_CHIM-C04_NCOM_046-090.jsonl",
+      "chapter_key": "CHIM-C04",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 43,
+      "restored_130_items": 2,
+      "items_needing_attention": 10,
+      "clean_ready_items": 35
+    },
+    {
+      "chunk_num": 21,
+      "path": "chunks/CHIM-C04/chunk_021_CHIM-C04_NCOM_091-092.jsonl",
+      "chapter_key": "CHIM-C04",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        92
+      ],
+      "total_items": 2,
+      "in_current_apkg": 1,
+      "restored_130_items": 1,
+      "items_needing_attention": 1,
+      "clean_ready_items": 1
+    },
+    {
+      "chunk_num": 22,
+      "path": "chunks/CHIM-C04/chunk_022_CHIM-C04_COMP_001-031.jsonl",
+      "chapter_key": "CHIM-C04",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        31
+      ],
+      "total_items": 31,
+      "in_current_apkg": 31,
+      "restored_130_items": 0,
+      "items_needing_attention": 4,
+      "clean_ready_items": 27
+    },
+    {
+      "chunk_num": 23,
+      "path": "chunks/CHIM-C05/chunk_023_CHIM-C05_COMM_001-025.jsonl",
+      "chapter_key": "CHIM-C05",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        25
+      ],
+      "total_items": 25,
+      "in_current_apkg": 25,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 25
+    },
+    {
+      "chunk_num": 24,
+      "path": "chunks/CHIM-C05/chunk_024_CHIM-C05_NCOM_001-044.jsonl",
+      "chapter_key": "CHIM-C05",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        44
+      ],
+      "total_items": 44,
+      "in_current_apkg": 40,
+      "restored_130_items": 4,
+      "items_needing_attention": 13,
+      "clean_ready_items": 31
+    },
+    {
+      "chunk_num": 25,
+      "path": "chunks/CHIM-C05/chunk_025_CHIM-C05_COMP_001-042.jsonl",
+      "chapter_key": "CHIM-C05",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        42
+      ],
+      "total_items": 42,
+      "in_current_apkg": 40,
+      "restored_130_items": 2,
+      "items_needing_attention": 4,
+      "clean_ready_items": 38
+    },
+    {
+      "chunk_num": 26,
+      "path": "chunks/CHIM-C06/chunk_026_CHIM-C06_COMM_001-025.jsonl",
+      "chapter_key": "CHIM-C06",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        25
+      ],
+      "total_items": 25,
+      "in_current_apkg": 24,
+      "restored_130_items": 1,
+      "items_needing_attention": 1,
+      "clean_ready_items": 24
+    },
+    {
+      "chunk_num": 27,
+      "path": "chunks/CHIM-C06/chunk_027_CHIM-C06_NCOM_001-045.jsonl",
+      "chapter_key": "CHIM-C06",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 15,
+      "clean_ready_items": 30
+    },
+    {
+      "chunk_num": 28,
+      "path": "chunks/CHIM-C06/chunk_028_CHIM-C06_NCOM_046-090.jsonl",
+      "chapter_key": "CHIM-C06",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 9,
+      "clean_ready_items": 36
+    },
+    {
+      "chunk_num": 29,
+      "path": "chunks/CHIM-C06/chunk_029_CHIM-C06_NCOM_091-100.jsonl",
+      "chapter_key": "CHIM-C06",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        100
+      ],
+      "total_items": 10,
+      "in_current_apkg": 10,
+      "restored_130_items": 0,
+      "items_needing_attention": 2,
+      "clean_ready_items": 8
+    },
+    {
+      "chunk_num": 30,
+      "path": "chunks/CHIM-C06/chunk_030_CHIM-C06_COMP_001-041.jsonl",
+      "chapter_key": "CHIM-C06",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        41
+      ],
+      "total_items": 41,
+      "in_current_apkg": 38,
+      "restored_130_items": 3,
+      "items_needing_attention": 3,
+      "clean_ready_items": 38
+    },
+    {
+      "chunk_num": 31,
+      "path": "chunks/CHIM-C07/chunk_031_CHIM-C07_COMM_001-030.jsonl",
+      "chapter_key": "CHIM-C07",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        30
+      ],
+      "total_items": 30,
+      "in_current_apkg": 30,
+      "restored_130_items": 0,
+      "items_needing_attention": 2,
+      "clean_ready_items": 28
+    },
+    {
+      "chunk_num": 32,
+      "path": "chunks/CHIM-C07/chunk_032_CHIM-C07_NCOM_001-045.jsonl",
+      "chapter_key": "CHIM-C07",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 14,
+      "clean_ready_items": 31
+    },
+    {
+      "chunk_num": 33,
+      "path": "chunks/CHIM-C07/chunk_033_CHIM-C07_NCOM_046-055.jsonl",
+      "chapter_key": "CHIM-C07",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        55
+      ],
+      "total_items": 10,
+      "in_current_apkg": 10,
+      "restored_130_items": 0,
+      "items_needing_attention": 4,
+      "clean_ready_items": 6
+    },
+    {
+      "chunk_num": 34,
+      "path": "chunks/CHIM-C07/chunk_034_CHIM-C07_COMP_001-041.jsonl",
+      "chapter_key": "CHIM-C07",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        41
+      ],
+      "total_items": 41,
+      "in_current_apkg": 41,
+      "restored_130_items": 0,
+      "items_needing_attention": 3,
+      "clean_ready_items": 38
+    },
+    {
+      "chunk_num": 35,
+      "path": "chunks/CHIM-C08/chunk_035_CHIM-C08_COMM_001-008.jsonl",
+      "chapter_key": "CHIM-C08",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        8
+      ],
+      "total_items": 8,
+      "in_current_apkg": 8,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 8
+    },
+    {
+      "chunk_num": 36,
+      "path": "chunks/CHIM-C08/chunk_036_CHIM-C08_NCOM_001-019.jsonl",
+      "chapter_key": "CHIM-C08",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        19
+      ],
+      "total_items": 19,
+      "in_current_apkg": 19,
+      "restored_130_items": 0,
+      "items_needing_attention": 7,
+      "clean_ready_items": 12
+    },
+    {
+      "chunk_num": 37,
+      "path": "chunks/CHIM-C08/chunk_037_CHIM-C08_COMP_001-029.jsonl",
+      "chapter_key": "CHIM-C08",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        29
+      ],
+      "total_items": 29,
+      "in_current_apkg": 29,
+      "restored_130_items": 0,
+      "items_needing_attention": 1,
+      "clean_ready_items": 28
+    },
+    {
+      "chunk_num": 38,
+      "path": "chunks/CHIM-C09/chunk_038_CHIM-C09_COMM_001-006.jsonl",
+      "chapter_key": "CHIM-C09",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        6
+      ],
+      "total_items": 6,
+      "in_current_apkg": 6,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 6
+    },
+    {
+      "chunk_num": 39,
+      "path": "chunks/CHIM-C09/chunk_039_CHIM-C09_NCOM_001-045.jsonl",
+      "chapter_key": "CHIM-C09",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 40,
+      "restored_130_items": 5,
+      "items_needing_attention": 14,
+      "clean_ready_items": 31
+    },
+    {
+      "chunk_num": 40,
+      "path": "chunks/CHIM-C09/chunk_040_CHIM-C09_NCOM_046-090.jsonl",
+      "chapter_key": "CHIM-C09",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 41,
+      "restored_130_items": 4,
+      "items_needing_attention": 16,
+      "clean_ready_items": 29
+    },
+    {
+      "chunk_num": 41,
+      "path": "chunks/CHIM-C09/chunk_041_CHIM-C09_NCOM_091-130.jsonl",
+      "chapter_key": "CHIM-C09",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        130
+      ],
+      "total_items": 40,
+      "in_current_apkg": 36,
+      "restored_130_items": 4,
+      "items_needing_attention": 16,
+      "clean_ready_items": 24
+    },
+    {
+      "chunk_num": 42,
+      "path": "chunks/CHIM-C09/chunk_042_CHIM-C09_COMP_001-044.jsonl",
+      "chapter_key": "CHIM-C09",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        44
+      ],
+      "total_items": 44,
+      "in_current_apkg": 40,
+      "restored_130_items": 4,
+      "items_needing_attention": 9,
+      "clean_ready_items": 35
+    },
+    {
+      "chunk_num": 43,
+      "path": "chunks/CHIM-C10/chunk_043_CHIM-C10_COMM_001-030.jsonl",
+      "chapter_key": "CHIM-C10",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        30
+      ],
+      "total_items": 30,
+      "in_current_apkg": 29,
+      "restored_130_items": 1,
+      "items_needing_attention": 1,
+      "clean_ready_items": 29
+    },
+    {
+      "chunk_num": 44,
+      "path": "chunks/CHIM-C10/chunk_044_CHIM-C10_NCOM_001-045.jsonl",
+      "chapter_key": "CHIM-C10",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 11,
+      "clean_ready_items": 34
+    },
+    {
+      "chunk_num": 45,
+      "path": "chunks/CHIM-C10/chunk_045_CHIM-C10_NCOM_046-090.jsonl",
+      "chapter_key": "CHIM-C10",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 41,
+      "restored_130_items": 4,
+      "items_needing_attention": 9,
+      "clean_ready_items": 36
+    },
+    {
+      "chunk_num": 46,
+      "path": "chunks/CHIM-C10/chunk_046_CHIM-C10_NCOM_091-103.jsonl",
+      "chapter_key": "CHIM-C10",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        103
+      ],
+      "total_items": 13,
+      "in_current_apkg": 11,
+      "restored_130_items": 2,
+      "items_needing_attention": 4,
+      "clean_ready_items": 9
+    },
+    {
+      "chunk_num": 47,
+      "path": "chunks/CHIM-C10/chunk_047_CHIM-C10_COMP_001-038.jsonl",
+      "chapter_key": "CHIM-C10",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        38
+      ],
+      "total_items": 38,
+      "in_current_apkg": 38,
+      "restored_130_items": 0,
+      "items_needing_attention": 8,
+      "clean_ready_items": 30
+    },
+    {
+      "chunk_num": 48,
+      "path": "chunks/CHIM-C11/chunk_048_CHIM-C11_COMM_001-040.jsonl",
+      "chapter_key": "CHIM-C11",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        40
+      ],
+      "total_items": 40,
+      "in_current_apkg": 40,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 40
+    },
+    {
+      "chunk_num": 49,
+      "path": "chunks/CHIM-C11/chunk_049_CHIM-C11_NCOM_001-045.jsonl",
+      "chapter_key": "CHIM-C11",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 42,
+      "restored_130_items": 3,
+      "items_needing_attention": 16,
+      "clean_ready_items": 29
+    },
+    {
+      "chunk_num": 50,
+      "path": "chunks/CHIM-C11/chunk_050_CHIM-C11_NCOM_046-090.jsonl",
+      "chapter_key": "CHIM-C11",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 17,
+      "clean_ready_items": 28
+    },
+    {
+      "chunk_num": 51,
+      "path": "chunks/CHIM-C11/chunk_051_CHIM-C11_NCOM_091-135.jsonl",
+      "chapter_key": "CHIM-C11",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        135
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 11,
+      "clean_ready_items": 34
+    },
+    {
+      "chunk_num": 52,
+      "path": "chunks/CHIM-C11/chunk_052_CHIM-C11_NCOM_136-173.jsonl",
+      "chapter_key": "CHIM-C11",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        136,
+        173
+      ],
+      "total_items": 38,
+      "in_current_apkg": 38,
+      "restored_130_items": 0,
+      "items_needing_attention": 8,
+      "clean_ready_items": 30
+    },
+    {
+      "chunk_num": 53,
+      "path": "chunks/CHIM-C11/chunk_053_CHIM-C11_COMP_001-042.jsonl",
+      "chapter_key": "CHIM-C11",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        42
+      ],
+      "total_items": 42,
+      "in_current_apkg": 42,
+      "restored_130_items": 0,
+      "items_needing_attention": 8,
+      "clean_ready_items": 34
+    },
+    {
+      "chunk_num": 54,
+      "path": "chunks/CHIM-C12/chunk_054_CHIM-C12_COMM_001-040.jsonl",
+      "chapter_key": "CHIM-C12",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        40
+      ],
+      "total_items": 40,
+      "in_current_apkg": 40,
+      "restored_130_items": 0,
+      "items_needing_attention": 1,
+      "clean_ready_items": 39
+    },
+    {
+      "chunk_num": 55,
+      "path": "chunks/CHIM-C12/chunk_055_CHIM-C12_NCOM_001-045.jsonl",
+      "chapter_key": "CHIM-C12",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 7,
+      "clean_ready_items": 38
+    },
+    {
+      "chunk_num": 56,
+      "path": "chunks/CHIM-C12/chunk_056_CHIM-C12_NCOM_046-090.jsonl",
+      "chapter_key": "CHIM-C12",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 7,
+      "clean_ready_items": 38
+    },
+    {
+      "chunk_num": 57,
+      "path": "chunks/CHIM-C12/chunk_057_CHIM-C12_NCOM_091-135.jsonl",
+      "chapter_key": "CHIM-C12",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        135
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 5,
+      "clean_ready_items": 40
+    },
+    {
+      "chunk_num": 58,
+      "path": "chunks/CHIM-C12/chunk_058_CHIM-C12_NCOM_136-180.jsonl",
+      "chapter_key": "CHIM-C12",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        136,
+        180
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 14,
+      "clean_ready_items": 31
+    },
+    {
+      "chunk_num": 59,
+      "path": "chunks/CHIM-C12/chunk_059_CHIM-C12_NCOM_181-225.jsonl",
+      "chapter_key": "CHIM-C12",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        181,
+        225
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 12,
+      "clean_ready_items": 33
+    },
+    {
+      "chunk_num": 60,
+      "path": "chunks/CHIM-C12/chunk_060_CHIM-C12_NCOM_226-270.jsonl",
+      "chapter_key": "CHIM-C12",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        226,
+        270
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 13,
+      "clean_ready_items": 32
+    },
+    {
+      "chunk_num": 61,
+      "path": "chunks/CHIM-C12/chunk_061_CHIM-C12_NCOM_271-309.jsonl",
+      "chapter_key": "CHIM-C12",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        271,
+        309
+      ],
+      "total_items": 39,
+      "in_current_apkg": 34,
+      "restored_130_items": 5,
+      "items_needing_attention": 11,
+      "clean_ready_items": 28
+    },
+    {
+      "chunk_num": 62,
+      "path": "chunks/CHIM-C12/chunk_062_CHIM-C12_COMP_001-045.jsonl",
+      "chapter_key": "CHIM-C12",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 3,
+      "clean_ready_items": 42
+    },
+    {
+      "chunk_num": 63,
+      "path": "chunks/CHIM-C12/chunk_063_CHIM-C12_COMP_046-088.jsonl",
+      "chapter_key": "CHIM-C12",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        46,
+        88
+      ],
+      "total_items": 43,
+      "in_current_apkg": 43,
+      "restored_130_items": 0,
+      "items_needing_attention": 5,
+      "clean_ready_items": 38
+    },
+    {
+      "chunk_num": 64,
+      "path": "chunks/CHIM-C13/chunk_064_CHIM-C13_COMM_001-030.jsonl",
+      "chapter_key": "CHIM-C13",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        30
+      ],
+      "total_items": 30,
+      "in_current_apkg": 30,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 30
+    },
+    {
+      "chunk_num": 65,
+      "path": "chunks/CHIM-C13/chunk_065_CHIM-C13_NCOM_001-045.jsonl",
+      "chapter_key": "CHIM-C13",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 8,
+      "clean_ready_items": 37
+    },
+    {
+      "chunk_num": 66,
+      "path": "chunks/CHIM-C13/chunk_066_CHIM-C13_NCOM_046-090.jsonl",
+      "chapter_key": "CHIM-C13",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 4,
+      "clean_ready_items": 41
+    },
+    {
+      "chunk_num": 67,
+      "path": "chunks/CHIM-C13/chunk_067_CHIM-C13_NCOM_091-135.jsonl",
+      "chapter_key": "CHIM-C13",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        135
+      ],
+      "total_items": 45,
+      "in_current_apkg": 42,
+      "restored_130_items": 3,
+      "items_needing_attention": 7,
+      "clean_ready_items": 38
+    },
+    {
+      "chunk_num": 68,
+      "path": "chunks/CHIM-C13/chunk_068_CHIM-C13_NCOM_136-178.jsonl",
+      "chapter_key": "CHIM-C13",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        136,
+        178
+      ],
+      "total_items": 43,
+      "in_current_apkg": 39,
+      "restored_130_items": 4,
+      "items_needing_attention": 9,
+      "clean_ready_items": 34
+    },
+    {
+      "chunk_num": 69,
+      "path": "chunks/CHIM-C13/chunk_069_CHIM-C13_COMP_001-045.jsonl",
+      "chapter_key": "CHIM-C13",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 1,
+      "clean_ready_items": 44
+    },
+    {
+      "chunk_num": 70,
+      "path": "chunks/CHIM-C13/chunk_070_CHIM-C13_COMP_046-066.jsonl",
+      "chapter_key": "CHIM-C13",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        46,
+        66
+      ],
+      "total_items": 21,
+      "in_current_apkg": 21,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 21
+    },
+    {
+      "chunk_num": 71,
+      "path": "chunks/BIO-C01/chunk_071_BIO-C01_COMM_001-045.jsonl",
+      "chapter_key": "BIO-C01",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 45
+    },
+    {
+      "chunk_num": 72,
+      "path": "chunks/BIO-C01/chunk_072_BIO-C01_COMM_046-050.jsonl",
+      "chapter_key": "BIO-C01",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        46,
+        50
+      ],
+      "total_items": 5,
+      "in_current_apkg": 5,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 5
+    },
+    {
+      "chunk_num": 73,
+      "path": "chunks/BIO-C01/chunk_073_BIO-C01_NCOM_001-045.jsonl",
+      "chapter_key": "BIO-C01",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 6,
+      "clean_ready_items": 39
+    },
+    {
+      "chunk_num": 74,
+      "path": "chunks/BIO-C01/chunk_074_BIO-C01_NCOM_046-090.jsonl",
+      "chapter_key": "BIO-C01",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 6,
+      "clean_ready_items": 39
+    },
+    {
+      "chunk_num": 75,
+      "path": "chunks/BIO-C01/chunk_075_BIO-C01_NCOM_091-135.jsonl",
+      "chapter_key": "BIO-C01",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        135
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 6,
+      "clean_ready_items": 39
+    },
+    {
+      "chunk_num": 76,
+      "path": "chunks/BIO-C01/chunk_076_BIO-C01_NCOM_136-180.jsonl",
+      "chapter_key": "BIO-C01",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        136,
+        180
+      ],
+      "total_items": 45,
+      "in_current_apkg": 43,
+      "restored_130_items": 2,
+      "items_needing_attention": 4,
+      "clean_ready_items": 41
+    },
+    {
+      "chunk_num": 77,
+      "path": "chunks/BIO-C01/chunk_077_BIO-C01_NCOM_181-225.jsonl",
+      "chapter_key": "BIO-C01",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        181,
+        225
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 4,
+      "clean_ready_items": 41
+    },
+    {
+      "chunk_num": 78,
+      "path": "chunks/BIO-C01/chunk_078_BIO-C01_NCOM_226-264.jsonl",
+      "chapter_key": "BIO-C01",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        226,
+        264
+      ],
+      "total_items": 39,
+      "in_current_apkg": 38,
+      "restored_130_items": 1,
+      "items_needing_attention": 4,
+      "clean_ready_items": 35
+    },
+    {
+      "chunk_num": 79,
+      "path": "chunks/BIO-C01/chunk_079_BIO-C01_COMP_001-045.jsonl",
+      "chapter_key": "BIO-C01",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 1,
+      "clean_ready_items": 44
+    },
+    {
+      "chunk_num": 80,
+      "path": "chunks/BIO-C01/chunk_080_BIO-C01_COMP_046-090.jsonl",
+      "chapter_key": "BIO-C01",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 4,
+      "clean_ready_items": 41
+    },
+    {
+      "chunk_num": 81,
+      "path": "chunks/BIO-C01/chunk_081_BIO-C01_COMP_091-122.jsonl",
+      "chapter_key": "BIO-C01",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        91,
+        122
+      ],
+      "total_items": 32,
+      "in_current_apkg": 32,
+      "restored_130_items": 0,
+      "items_needing_attention": 5,
+      "clean_ready_items": 27
+    },
+    {
+      "chunk_num": 82,
+      "path": "chunks/BIO-C02/chunk_082_BIO-C02_COMM_001-030.jsonl",
+      "chapter_key": "BIO-C02",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        30
+      ],
+      "total_items": 30,
+      "in_current_apkg": 30,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 30
+    },
+    {
+      "chunk_num": 83,
+      "path": "chunks/BIO-C02/chunk_083_BIO-C02_NCOM_001-045.jsonl",
+      "chapter_key": "BIO-C02",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 5,
+      "clean_ready_items": 40
+    },
+    {
+      "chunk_num": 84,
+      "path": "chunks/BIO-C02/chunk_084_BIO-C02_NCOM_046-090.jsonl",
+      "chapter_key": "BIO-C02",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 39,
+      "restored_130_items": 6,
+      "items_needing_attention": 10,
+      "clean_ready_items": 35
+    },
+    {
+      "chunk_num": 85,
+      "path": "chunks/BIO-C02/chunk_085_BIO-C02_NCOM_091-129.jsonl",
+      "chapter_key": "BIO-C02",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        129
+      ],
+      "total_items": 39,
+      "in_current_apkg": 39,
+      "restored_130_items": 0,
+      "items_needing_attention": 6,
+      "clean_ready_items": 33
+    },
+    {
+      "chunk_num": 86,
+      "path": "chunks/BIO-C02/chunk_086_BIO-C02_COMP_001-045.jsonl",
+      "chapter_key": "BIO-C02",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 1,
+      "clean_ready_items": 44
+    },
+    {
+      "chunk_num": 87,
+      "path": "chunks/BIO-C02/chunk_087_BIO-C02_COMP_046-058.jsonl",
+      "chapter_key": "BIO-C02",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        46,
+        58
+      ],
+      "total_items": 13,
+      "in_current_apkg": 13,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 13
+    },
+    {
+      "chunk_num": 88,
+      "path": "chunks/BIO-C03/chunk_088_BIO-C03_COMM_001-045.jsonl",
+      "chapter_key": "BIO-C03",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 45
+    },
+    {
+      "chunk_num": 89,
+      "path": "chunks/BIO-C03/chunk_089_BIO-C03_COMM_046-055.jsonl",
+      "chapter_key": "BIO-C03",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        46,
+        55
+      ],
+      "total_items": 10,
+      "in_current_apkg": 10,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 10
+    },
+    {
+      "chunk_num": 90,
+      "path": "chunks/BIO-C03/chunk_090_BIO-C03_NCOM_001-045.jsonl",
+      "chapter_key": "BIO-C03",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 9,
+      "clean_ready_items": 36
+    },
+    {
+      "chunk_num": 91,
+      "path": "chunks/BIO-C03/chunk_091_BIO-C03_NCOM_046-090.jsonl",
+      "chapter_key": "BIO-C03",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 40,
+      "restored_130_items": 5,
+      "items_needing_attention": 9,
+      "clean_ready_items": 36
+    },
+    {
+      "chunk_num": 92,
+      "path": "chunks/BIO-C03/chunk_092_BIO-C03_NCOM_091-135.jsonl",
+      "chapter_key": "BIO-C03",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        135
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 10,
+      "clean_ready_items": 35
+    },
+    {
+      "chunk_num": 93,
+      "path": "chunks/BIO-C03/chunk_093_BIO-C03_NCOM_136-180.jsonl",
+      "chapter_key": "BIO-C03",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        136,
+        180
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 18,
+      "clean_ready_items": 27
+    },
+    {
+      "chunk_num": 94,
+      "path": "chunks/BIO-C03/chunk_094_BIO-C03_NCOM_181-225.jsonl",
+      "chapter_key": "BIO-C03",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        181,
+        225
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 14,
+      "clean_ready_items": 31
+    },
+    {
+      "chunk_num": 95,
+      "path": "chunks/BIO-C03/chunk_095_BIO-C03_NCOM_226-246.jsonl",
+      "chapter_key": "BIO-C03",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        226,
+        246
+      ],
+      "total_items": 21,
+      "in_current_apkg": 21,
+      "restored_130_items": 0,
+      "items_needing_attention": 6,
+      "clean_ready_items": 15
+    },
+    {
+      "chunk_num": 96,
+      "path": "chunks/BIO-C03/chunk_096_BIO-C03_COMP_001-045.jsonl",
+      "chapter_key": "BIO-C03",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 7,
+      "clean_ready_items": 38
+    },
+    {
+      "chunk_num": 97,
+      "path": "chunks/BIO-C03/chunk_097_BIO-C03_COMP_046-090.jsonl",
+      "chapter_key": "BIO-C03",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 11,
+      "clean_ready_items": 34
+    },
+    {
+      "chunk_num": 98,
+      "path": "chunks/BIO-C03/chunk_098_BIO-C03_COMP_091-135.jsonl",
+      "chapter_key": "BIO-C03",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        91,
+        135
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 4,
+      "clean_ready_items": 41
+    },
+    {
+      "chunk_num": 99,
+      "path": "chunks/BIO-C03/chunk_099_BIO-C03_COMP_136-153.jsonl",
+      "chapter_key": "BIO-C03",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        136,
+        153
+      ],
+      "total_items": 18,
+      "in_current_apkg": 18,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 18
+    },
+    {
+      "chunk_num": 100,
+      "path": "chunks/BIO-C04/chunk_100_BIO-C04_COMM_001-045.jsonl",
+      "chapter_key": "BIO-C04",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 1,
+      "clean_ready_items": 44
+    },
+    {
+      "chunk_num": 101,
+      "path": "chunks/BIO-C04/chunk_101_BIO-C04_COMM_046-088.jsonl",
+      "chapter_key": "BIO-C04",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        46,
+        88
+      ],
+      "total_items": 43,
+      "in_current_apkg": 43,
+      "restored_130_items": 0,
+      "items_needing_attention": 1,
+      "clean_ready_items": 42
+    },
+    {
+      "chunk_num": 102,
+      "path": "chunks/BIO-C04/chunk_102_BIO-C04_NCOM_001-045.jsonl",
+      "chapter_key": "BIO-C04",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 7,
+      "clean_ready_items": 38
+    },
+    {
+      "chunk_num": 103,
+      "path": "chunks/BIO-C04/chunk_103_BIO-C04_NCOM_046-090.jsonl",
+      "chapter_key": "BIO-C04",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 11,
+      "clean_ready_items": 34
+    },
+    {
+      "chunk_num": 104,
+      "path": "chunks/BIO-C04/chunk_104_BIO-C04_NCOM_091-135.jsonl",
+      "chapter_key": "BIO-C04",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        135
+      ],
+      "total_items": 45,
+      "in_current_apkg": 41,
+      "restored_130_items": 4,
+      "items_needing_attention": 15,
+      "clean_ready_items": 30
+    },
+    {
+      "chunk_num": 105,
+      "path": "chunks/BIO-C04/chunk_105_BIO-C04_NCOM_136-180.jsonl",
+      "chapter_key": "BIO-C04",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        136,
+        180
+      ],
+      "total_items": 45,
+      "in_current_apkg": 42,
+      "restored_130_items": 3,
+      "items_needing_attention": 19,
+      "clean_ready_items": 26
+    },
+    {
+      "chunk_num": 106,
+      "path": "chunks/BIO-C04/chunk_106_BIO-C04_NCOM_181-224.jsonl",
+      "chapter_key": "BIO-C04",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        181,
+        224
+      ],
+      "total_items": 44,
+      "in_current_apkg": 43,
+      "restored_130_items": 1,
+      "items_needing_attention": 11,
+      "clean_ready_items": 33
+    },
+    {
+      "chunk_num": 107,
+      "path": "chunks/BIO-C04/chunk_107_BIO-C04_COMP_001-045.jsonl",
+      "chapter_key": "BIO-C04",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 45
+    },
+    {
+      "chunk_num": 108,
+      "path": "chunks/BIO-C04/chunk_108_BIO-C04_COMP_046-080.jsonl",
+      "chapter_key": "BIO-C04",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        46,
+        80
+      ],
+      "total_items": 35,
+      "in_current_apkg": 35,
+      "restored_130_items": 0,
+      "items_needing_attention": 1,
+      "clean_ready_items": 34
+    },
+    {
+      "chunk_num": 109,
+      "path": "chunks/BIO-C05/chunk_109_BIO-C05_COMM_001-045.jsonl",
+      "chapter_key": "BIO-C05",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 45
+    },
+    {
+      "chunk_num": 110,
+      "path": "chunks/BIO-C05/chunk_110_BIO-C05_COMM_046-090.jsonl",
+      "chapter_key": "BIO-C05",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 45
+    },
+    {
+      "chunk_num": 111,
+      "path": "chunks/BIO-C05/chunk_111_BIO-C05_COMM_091-135.jsonl",
+      "chapter_key": "BIO-C05",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        91,
+        135
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 45
+    },
+    {
+      "chunk_num": 112,
+      "path": "chunks/BIO-C05/chunk_112_BIO-C05_COMM_136-147.jsonl",
+      "chapter_key": "BIO-C05",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        136,
+        147
+      ],
+      "total_items": 12,
+      "in_current_apkg": 12,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 12
+    },
+    {
+      "chunk_num": 113,
+      "path": "chunks/BIO-C05/chunk_113_BIO-C05_NCOM_001-045.jsonl",
+      "chapter_key": "BIO-C05",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 43,
+      "restored_130_items": 2,
+      "items_needing_attention": 11,
+      "clean_ready_items": 34
+    },
+    {
+      "chunk_num": 114,
+      "path": "chunks/BIO-C05/chunk_114_BIO-C05_NCOM_046-090.jsonl",
+      "chapter_key": "BIO-C05",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 1,
+      "clean_ready_items": 44
+    },
+    {
+      "chunk_num": 115,
+      "path": "chunks/BIO-C05/chunk_115_BIO-C05_NCOM_091-135.jsonl",
+      "chapter_key": "BIO-C05",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        135
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 5,
+      "clean_ready_items": 40
+    },
+    {
+      "chunk_num": 116,
+      "path": "chunks/BIO-C05/chunk_116_BIO-C05_NCOM_136-180.jsonl",
+      "chapter_key": "BIO-C05",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        136,
+        180
+      ],
+      "total_items": 45,
+      "in_current_apkg": 42,
+      "restored_130_items": 3,
+      "items_needing_attention": 12,
+      "clean_ready_items": 33
+    },
+    {
+      "chunk_num": 117,
+      "path": "chunks/BIO-C05/chunk_117_BIO-C05_NCOM_181-225.jsonl",
+      "chapter_key": "BIO-C05",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        181,
+        225
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 15,
+      "clean_ready_items": 30
+    },
+    {
+      "chunk_num": 118,
+      "path": "chunks/BIO-C05/chunk_118_BIO-C05_NCOM_226-270.jsonl",
+      "chapter_key": "BIO-C05",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        226,
+        270
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 6,
+      "clean_ready_items": 39
+    },
+    {
+      "chunk_num": 119,
+      "path": "chunks/BIO-C05/chunk_119_BIO-C05_NCOM_271-308.jsonl",
+      "chapter_key": "BIO-C05",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        271,
+        308
+      ],
+      "total_items": 38,
+      "in_current_apkg": 37,
+      "restored_130_items": 1,
+      "items_needing_attention": 8,
+      "clean_ready_items": 30
+    },
+    {
+      "chunk_num": 120,
+      "path": "chunks/BIO-C05/chunk_120_BIO-C05_COMP_001-045.jsonl",
+      "chapter_key": "BIO-C05",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 45
+    },
+    {
+      "chunk_num": 121,
+      "path": "chunks/BIO-C05/chunk_121_BIO-C05_COMP_046-090.jsonl",
+      "chapter_key": "BIO-C05",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 2,
+      "clean_ready_items": 43
+    },
+    {
+      "chunk_num": 122,
+      "path": "chunks/BIO-C05/chunk_122_BIO-C05_COMP_091-135.jsonl",
+      "chapter_key": "BIO-C05",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        91,
+        135
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 6,
+      "clean_ready_items": 39
+    },
+    {
+      "chunk_num": 123,
+      "path": "chunks/BIO-C05/chunk_123_BIO-C05_COMP_136-180.jsonl",
+      "chapter_key": "BIO-C05",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        136,
+        180
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 45
+    },
+    {
+      "chunk_num": 124,
+      "path": "chunks/BIO-C05/chunk_124_BIO-C05_COMP_181-225.jsonl",
+      "chapter_key": "BIO-C05",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        181,
+        225
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 45
+    },
+    {
+      "chunk_num": 125,
+      "path": "chunks/BIO-C06/chunk_125_BIO-C06_COMM_001-045.jsonl",
+      "chapter_key": "BIO-C06",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 45
+    },
+    {
+      "chunk_num": 126,
+      "path": "chunks/BIO-C06/chunk_126_BIO-C06_COMM_046-050.jsonl",
+      "chapter_key": "BIO-C06",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        46,
+        50
+      ],
+      "total_items": 5,
+      "in_current_apkg": 5,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 5
+    },
+    {
+      "chunk_num": 127,
+      "path": "chunks/BIO-C06/chunk_127_BIO-C06_NCOM_001-045.jsonl",
+      "chapter_key": "BIO-C06",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 5,
+      "clean_ready_items": 40
+    },
+    {
+      "chunk_num": 128,
+      "path": "chunks/BIO-C06/chunk_128_BIO-C06_NCOM_046-090.jsonl",
+      "chapter_key": "BIO-C06",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 2,
+      "clean_ready_items": 43
+    },
+    {
+      "chunk_num": 129,
+      "path": "chunks/BIO-C06/chunk_129_BIO-C06_NCOM_091-135.jsonl",
+      "chapter_key": "BIO-C06",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        135
+      ],
+      "total_items": 45,
+      "in_current_apkg": 43,
+      "restored_130_items": 2,
+      "items_needing_attention": 9,
+      "clean_ready_items": 36
+    },
+    {
+      "chunk_num": 130,
+      "path": "chunks/BIO-C06/chunk_130_BIO-C06_NCOM_136-180.jsonl",
+      "chapter_key": "BIO-C06",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        136,
+        180
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 6,
+      "clean_ready_items": 39
+    },
+    {
+      "chunk_num": 131,
+      "path": "chunks/BIO-C06/chunk_131_BIO-C06_NCOM_181-192.jsonl",
+      "chapter_key": "BIO-C06",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        181,
+        192
+      ],
+      "total_items": 12,
+      "in_current_apkg": 12,
+      "restored_130_items": 0,
+      "items_needing_attention": 4,
+      "clean_ready_items": 8
+    },
+    {
+      "chunk_num": 132,
+      "path": "chunks/BIO-C06/chunk_132_BIO-C06_COMP_001-045.jsonl",
+      "chapter_key": "BIO-C06",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 3,
+      "clean_ready_items": 42
+    },
+    {
+      "chunk_num": 133,
+      "path": "chunks/BIO-C06/chunk_133_BIO-C06_COMP_046-090.jsonl",
+      "chapter_key": "BIO-C06",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 11,
+      "clean_ready_items": 34
+    },
+    {
+      "chunk_num": 134,
+      "path": "chunks/BIO-C06/chunk_134_BIO-C06_COMP_091-095.jsonl",
+      "chapter_key": "BIO-C06",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        91,
+        95
+      ],
+      "total_items": 5,
+      "in_current_apkg": 5,
+      "restored_130_items": 0,
+      "items_needing_attention": 1,
+      "clean_ready_items": 4
+    },
+    {
+      "chunk_num": 135,
+      "path": "chunks/BIO-C07/chunk_135_BIO-C07_COMM_001-045.jsonl",
+      "chapter_key": "BIO-C07",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 45
+    },
+    {
+      "chunk_num": 136,
+      "path": "chunks/BIO-C07/chunk_136_BIO-C07_COMM_046-074.jsonl",
+      "chapter_key": "BIO-C07",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        46,
+        74
+      ],
+      "total_items": 29,
+      "in_current_apkg": 29,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 29
+    },
+    {
+      "chunk_num": 137,
+      "path": "chunks/BIO-C07/chunk_137_BIO-C07_NCOM_001-045.jsonl",
+      "chapter_key": "BIO-C07",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 14,
+      "clean_ready_items": 31
+    },
+    {
+      "chunk_num": 138,
+      "path": "chunks/BIO-C07/chunk_138_BIO-C07_NCOM_046-090.jsonl",
+      "chapter_key": "BIO-C07",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 6,
+      "clean_ready_items": 39
+    },
+    {
+      "chunk_num": 139,
+      "path": "chunks/BIO-C07/chunk_139_BIO-C07_NCOM_091-135.jsonl",
+      "chapter_key": "BIO-C07",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        135
+      ],
+      "total_items": 45,
+      "in_current_apkg": 39,
+      "restored_130_items": 6,
+      "items_needing_attention": 12,
+      "clean_ready_items": 33
+    },
+    {
+      "chunk_num": 140,
+      "path": "chunks/BIO-C07/chunk_140_BIO-C07_NCOM_136-180.jsonl",
+      "chapter_key": "BIO-C07",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        136,
+        180
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 16,
+      "clean_ready_items": 29
+    },
+    {
+      "chunk_num": 141,
+      "path": "chunks/BIO-C07/chunk_141_BIO-C07_NCOM_181-214.jsonl",
+      "chapter_key": "BIO-C07",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        181,
+        214
+      ],
+      "total_items": 34,
+      "in_current_apkg": 34,
+      "restored_130_items": 0,
+      "items_needing_attention": 8,
+      "clean_ready_items": 26
+    },
+    {
+      "chunk_num": 142,
+      "path": "chunks/BIO-C07/chunk_142_BIO-C07_COMP_001-045.jsonl",
+      "chapter_key": "BIO-C07",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 5,
+      "clean_ready_items": 40
+    },
+    {
+      "chunk_num": 143,
+      "path": "chunks/BIO-C07/chunk_143_BIO-C07_COMP_046-090.jsonl",
+      "chapter_key": "BIO-C07",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 1,
+      "clean_ready_items": 44
+    },
+    {
+      "chunk_num": 144,
+      "path": "chunks/BIO-C07/chunk_144_BIO-C07_COMP_091-110.jsonl",
+      "chapter_key": "BIO-C07",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        91,
+        110
+      ],
+      "total_items": 20,
+      "in_current_apkg": 20,
+      "restored_130_items": 0,
+      "items_needing_attention": 3,
+      "clean_ready_items": 17
+    },
+    {
+      "chunk_num": 145,
+      "path": "chunks/FIS-C01/chunk_145_FIS-C01_COMM_001-025.jsonl",
+      "chapter_key": "FIS-C01",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        25
+      ],
+      "total_items": 25,
+      "in_current_apkg": 25,
+      "restored_130_items": 0,
+      "items_needing_attention": 2,
+      "clean_ready_items": 23
+    },
+    {
+      "chunk_num": 146,
+      "path": "chunks/FIS-C01/chunk_146_FIS-C01_NCOM_001-045.jsonl",
+      "chapter_key": "FIS-C01",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 11,
+      "clean_ready_items": 34
+    },
+    {
+      "chunk_num": 147,
+      "path": "chunks/FIS-C01/chunk_147_FIS-C01_NCOM_046-090.jsonl",
+      "chapter_key": "FIS-C01",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 10,
+      "clean_ready_items": 35
+    },
+    {
+      "chunk_num": 148,
+      "path": "chunks/FIS-C01/chunk_148_FIS-C01_NCOM_091-093.jsonl",
+      "chapter_key": "FIS-C01",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        93
+      ],
+      "total_items": 3,
+      "in_current_apkg": 3,
+      "restored_130_items": 0,
+      "items_needing_attention": 1,
+      "clean_ready_items": 2
+    },
+    {
+      "chunk_num": 149,
+      "path": "chunks/FIS-C01/chunk_149_FIS-C01_COMP_001-029.jsonl",
+      "chapter_key": "FIS-C01",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        29
+      ],
+      "total_items": 29,
+      "in_current_apkg": 29,
+      "restored_130_items": 0,
+      "items_needing_attention": 5,
+      "clean_ready_items": 24
+    },
+    {
+      "chunk_num": 150,
+      "path": "chunks/FIS-C02/chunk_150_FIS-C02_COMM_001-020.jsonl",
+      "chapter_key": "FIS-C02",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        20
+      ],
+      "total_items": 20,
+      "in_current_apkg": 20,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 20
+    },
+    {
+      "chunk_num": 151,
+      "path": "chunks/FIS-C02/chunk_151_FIS-C02_NCOM_001-045.jsonl",
+      "chapter_key": "FIS-C02",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 15,
+      "clean_ready_items": 30
+    },
+    {
+      "chunk_num": 152,
+      "path": "chunks/FIS-C02/chunk_152_FIS-C02_NCOM_046-078.jsonl",
+      "chapter_key": "FIS-C02",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        78
+      ],
+      "total_items": 33,
+      "in_current_apkg": 33,
+      "restored_130_items": 0,
+      "items_needing_attention": 11,
+      "clean_ready_items": 22
+    },
+    {
+      "chunk_num": 153,
+      "path": "chunks/FIS-C02/chunk_153_FIS-C02_COMP_001-045.jsonl",
+      "chapter_key": "FIS-C02",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 4,
+      "clean_ready_items": 41
+    },
+    {
+      "chunk_num": 154,
+      "path": "chunks/FIS-C02/chunk_154_FIS-C02_COMP_046-060.jsonl",
+      "chapter_key": "FIS-C02",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        46,
+        60
+      ],
+      "total_items": 15,
+      "in_current_apkg": 15,
+      "restored_130_items": 0,
+      "items_needing_attention": 3,
+      "clean_ready_items": 12
+    },
+    {
+      "chunk_num": 155,
+      "path": "chunks/FIS-C03/chunk_155_FIS-C03_COMM_001-045.jsonl",
+      "chapter_key": "FIS-C03",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 45
+    },
+    {
+      "chunk_num": 156,
+      "path": "chunks/FIS-C03/chunk_156_FIS-C03_COMM_046-050.jsonl",
+      "chapter_key": "FIS-C03",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        46,
+        50
+      ],
+      "total_items": 5,
+      "in_current_apkg": 5,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 5
+    },
+    {
+      "chunk_num": 157,
+      "path": "chunks/FIS-C03/chunk_157_FIS-C03_NCOM_001-045.jsonl",
+      "chapter_key": "FIS-C03",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 13,
+      "clean_ready_items": 32
+    },
+    {
+      "chunk_num": 158,
+      "path": "chunks/FIS-C03/chunk_158_FIS-C03_NCOM_046-090.jsonl",
+      "chapter_key": "FIS-C03",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 17,
+      "clean_ready_items": 28
+    },
+    {
+      "chunk_num": 159,
+      "path": "chunks/FIS-C03/chunk_159_FIS-C03_NCOM_091-135.jsonl",
+      "chapter_key": "FIS-C03",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        135
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 14,
+      "clean_ready_items": 31
+    },
+    {
+      "chunk_num": 160,
+      "path": "chunks/FIS-C03/chunk_160_FIS-C03_NCOM_136-180.jsonl",
+      "chapter_key": "FIS-C03",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        136,
+        180
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 10,
+      "clean_ready_items": 35
+    },
+    {
+      "chunk_num": 161,
+      "path": "chunks/FIS-C03/chunk_161_FIS-C03_NCOM_181-185.jsonl",
+      "chapter_key": "FIS-C03",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        181,
+        185
+      ],
+      "total_items": 5,
+      "in_current_apkg": 5,
+      "restored_130_items": 0,
+      "items_needing_attention": 3,
+      "clean_ready_items": 2
+    },
+    {
+      "chunk_num": 162,
+      "path": "chunks/FIS-C03/chunk_162_FIS-C03_COMP_001-045.jsonl",
+      "chapter_key": "FIS-C03",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 5,
+      "clean_ready_items": 40
+    },
+    {
+      "chunk_num": 163,
+      "path": "chunks/FIS-C03/chunk_163_FIS-C03_COMP_046-090.jsonl",
+      "chapter_key": "FIS-C03",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 6,
+      "clean_ready_items": 39
+    },
+    {
+      "chunk_num": 164,
+      "path": "chunks/FIS-C03/chunk_164_FIS-C03_COMP_091-135.jsonl",
+      "chapter_key": "FIS-C03",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        91,
+        135
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 4,
+      "clean_ready_items": 41
+    },
+    {
+      "chunk_num": 165,
+      "path": "chunks/FIS-C03/chunk_165_FIS-C03_COMP_136-180.jsonl",
+      "chapter_key": "FIS-C03",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        136,
+        180
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 7,
+      "clean_ready_items": 38
+    },
+    {
+      "chunk_num": 166,
+      "path": "chunks/FIS-C03/chunk_166_FIS-C03_COMP_181-196.jsonl",
+      "chapter_key": "FIS-C03",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        181,
+        196
+      ],
+      "total_items": 16,
+      "in_current_apkg": 15,
+      "restored_130_items": 1,
+      "items_needing_attention": 10,
+      "clean_ready_items": 6
+    },
+    {
+      "chunk_num": 167,
+      "path": "chunks/FIS-C04/chunk_167_FIS-C04_COMM_001-010.jsonl",
+      "chapter_key": "FIS-C04",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        10
+      ],
+      "total_items": 10,
+      "in_current_apkg": 10,
+      "restored_130_items": 0,
+      "items_needing_attention": 1,
+      "clean_ready_items": 9
+    },
+    {
+      "chunk_num": 168,
+      "path": "chunks/FIS-C04/chunk_168_FIS-C04_NCOM_001-045.jsonl",
+      "chapter_key": "FIS-C04",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 10,
+      "clean_ready_items": 35
+    },
+    {
+      "chunk_num": 169,
+      "path": "chunks/FIS-C04/chunk_169_FIS-C04_NCOM_046-088.jsonl",
+      "chapter_key": "FIS-C04",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        88
+      ],
+      "total_items": 43,
+      "in_current_apkg": 43,
+      "restored_130_items": 0,
+      "items_needing_attention": 12,
+      "clean_ready_items": 31
+    },
+    {
+      "chunk_num": 170,
+      "path": "chunks/FIS-C04/chunk_170_FIS-C04_COMP_001-030.jsonl",
+      "chapter_key": "FIS-C04",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        30
+      ],
+      "total_items": 30,
+      "in_current_apkg": 30,
+      "restored_130_items": 0,
+      "items_needing_attention": 5,
+      "clean_ready_items": 25
+    },
+    {
+      "chunk_num": 171,
+      "path": "chunks/FIS-C05/chunk_171_FIS-C05_COMM_001-040.jsonl",
+      "chapter_key": "FIS-C05",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        40
+      ],
+      "total_items": 40,
+      "in_current_apkg": 40,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 40
+    },
+    {
+      "chunk_num": 172,
+      "path": "chunks/FIS-C05/chunk_172_FIS-C05_NCOM_001-045.jsonl",
+      "chapter_key": "FIS-C05",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 6,
+      "clean_ready_items": 39
+    },
+    {
+      "chunk_num": 173,
+      "path": "chunks/FIS-C05/chunk_173_FIS-C05_NCOM_046-090.jsonl",
+      "chapter_key": "FIS-C05",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 10,
+      "clean_ready_items": 35
+    },
+    {
+      "chunk_num": 174,
+      "path": "chunks/FIS-C05/chunk_174_FIS-C05_NCOM_091-127.jsonl",
+      "chapter_key": "FIS-C05",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        127
+      ],
+      "total_items": 37,
+      "in_current_apkg": 35,
+      "restored_130_items": 2,
+      "items_needing_attention": 7,
+      "clean_ready_items": 30
+    },
+    {
+      "chunk_num": 175,
+      "path": "chunks/FIS-C05/chunk_175_FIS-C05_COMP_001-045.jsonl",
+      "chapter_key": "FIS-C05",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 6,
+      "clean_ready_items": 39
+    },
+    {
+      "chunk_num": 176,
+      "path": "chunks/FIS-C05/chunk_176_FIS-C05_COMP_046-077.jsonl",
+      "chapter_key": "FIS-C05",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        46,
+        77
+      ],
+      "total_items": 32,
+      "in_current_apkg": 32,
+      "restored_130_items": 0,
+      "items_needing_attention": 6,
+      "clean_ready_items": 26
+    },
+    {
+      "chunk_num": 177,
+      "path": "chunks/FIS-C06/chunk_177_FIS-C06_COMM_001-045.jsonl",
+      "chapter_key": "FIS-C06",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 45
+    },
+    {
+      "chunk_num": 178,
+      "path": "chunks/FIS-C06/chunk_178_FIS-C06_COMM_046-050.jsonl",
+      "chapter_key": "FIS-C06",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        46,
+        50
+      ],
+      "total_items": 5,
+      "in_current_apkg": 5,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 5
+    },
+    {
+      "chunk_num": 179,
+      "path": "chunks/FIS-C06/chunk_179_FIS-C06_NCOM_001-045.jsonl",
+      "chapter_key": "FIS-C06",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 23,
+      "clean_ready_items": 22
+    },
+    {
+      "chunk_num": 180,
+      "path": "chunks/FIS-C06/chunk_180_FIS-C06_NCOM_046-090.jsonl",
+      "chapter_key": "FIS-C06",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 14,
+      "clean_ready_items": 31
+    },
+    {
+      "chunk_num": 181,
+      "path": "chunks/FIS-C06/chunk_181_FIS-C06_NCOM_091-135.jsonl",
+      "chapter_key": "FIS-C06",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        91,
+        135
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 12,
+      "clean_ready_items": 33
+    },
+    {
+      "chunk_num": 182,
+      "path": "chunks/FIS-C06/chunk_182_FIS-C06_NCOM_136-180.jsonl",
+      "chapter_key": "FIS-C06",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        136,
+        180
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 8,
+      "clean_ready_items": 37
+    },
+    {
+      "chunk_num": 183,
+      "path": "chunks/FIS-C06/chunk_183_FIS-C06_NCOM_181-197.jsonl",
+      "chapter_key": "FIS-C06",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        181,
+        197
+      ],
+      "total_items": 17,
+      "in_current_apkg": 17,
+      "restored_130_items": 0,
+      "items_needing_attention": 3,
+      "clean_ready_items": 14
+    },
+    {
+      "chunk_num": 184,
+      "path": "chunks/FIS-C06/chunk_184_FIS-C06_COMP_001-045.jsonl",
+      "chapter_key": "FIS-C06",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 6,
+      "clean_ready_items": 39
+    },
+    {
+      "chunk_num": 185,
+      "path": "chunks/FIS-C06/chunk_185_FIS-C06_COMP_046-090.jsonl",
+      "chapter_key": "FIS-C06",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        46,
+        90
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 6,
+      "clean_ready_items": 39
+    },
+    {
+      "chunk_num": 186,
+      "path": "chunks/FIS-C06/chunk_186_FIS-C06_COMP_091-135.jsonl",
+      "chapter_key": "FIS-C06",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        91,
+        135
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 5,
+      "clean_ready_items": 40
+    },
+    {
+      "chunk_num": 187,
+      "path": "chunks/FIS-C06/chunk_187_FIS-C06_COMP_136-138.jsonl",
+      "chapter_key": "FIS-C06",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        136,
+        138
+      ],
+      "total_items": 3,
+      "in_current_apkg": 3,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 3
+    },
+    {
+      "chunk_num": 188,
+      "path": "chunks/FIS-C07/chunk_188_FIS-C07_COMM_001-015.jsonl",
+      "chapter_key": "FIS-C07",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        15
+      ],
+      "total_items": 15,
+      "in_current_apkg": 15,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 15
+    },
+    {
+      "chunk_num": 189,
+      "path": "chunks/FIS-C07/chunk_189_FIS-C07_NCOM_001-045.jsonl",
+      "chapter_key": "FIS-C07",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 9,
+      "clean_ready_items": 36
+    },
+    {
+      "chunk_num": 190,
+      "path": "chunks/FIS-C07/chunk_190_FIS-C07_NCOM_046-054.jsonl",
+      "chapter_key": "FIS-C07",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        46,
+        54
+      ],
+      "total_items": 9,
+      "in_current_apkg": 9,
+      "restored_130_items": 0,
+      "items_needing_attention": 4,
+      "clean_ready_items": 5
+    },
+    {
+      "chunk_num": 191,
+      "path": "chunks/FIS-C07/chunk_191_FIS-C07_COMP_001-045.jsonl",
+      "chapter_key": "FIS-C07",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 44,
+      "restored_130_items": 1,
+      "items_needing_attention": 7,
+      "clean_ready_items": 38
+    },
+    {
+      "chunk_num": 192,
+      "path": "chunks/FIS-C07/chunk_192_FIS-C07_COMP_046-050.jsonl",
+      "chapter_key": "FIS-C07",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        46,
+        50
+      ],
+      "total_items": 5,
+      "in_current_apkg": 5,
+      "restored_130_items": 0,
+      "items_needing_attention": 1,
+      "clean_ready_items": 4
+    },
+    {
+      "chunk_num": 193,
+      "path": "chunks/FIS-C08/chunk_193_FIS-C08_COMM_001-010.jsonl",
+      "chapter_key": "FIS-C08",
+      "quiz_type_short": "COMM",
+      "qnum_range": [
+        1,
+        10
+      ],
+      "total_items": 10,
+      "in_current_apkg": 10,
+      "restored_130_items": 0,
+      "items_needing_attention": 0,
+      "clean_ready_items": 10
+    },
+    {
+      "chunk_num": 194,
+      "path": "chunks/FIS-C08/chunk_194_FIS-C08_NCOM_001-019.jsonl",
+      "chapter_key": "FIS-C08",
+      "quiz_type_short": "NCOM",
+      "qnum_range": [
+        1,
+        19
+      ],
+      "total_items": 19,
+      "in_current_apkg": 17,
+      "restored_130_items": 2,
+      "items_needing_attention": 5,
+      "clean_ready_items": 14
+    },
+    {
+      "chunk_num": 195,
+      "path": "chunks/FIS-C08/chunk_195_FIS-C08_COMP_001-045.jsonl",
+      "chapter_key": "FIS-C08",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        1,
+        45
+      ],
+      "total_items": 45,
+      "in_current_apkg": 45,
+      "restored_130_items": 0,
+      "items_needing_attention": 3,
+      "clean_ready_items": 42
+    },
+    {
+      "chunk_num": 196,
+      "path": "chunks/FIS-C08/chunk_196_FIS-C08_COMP_046-054.jsonl",
+      "chapter_key": "FIS-C08",
+      "quiz_type_short": "COMP",
+      "qnum_range": [
+        46,
+        54
+      ],
+      "total_items": 9,
+      "in_current_apkg": 9,
+      "restored_130_items": 0,
+      "items_needing_attention": 1,
+      "clean_ready_items": 8
+    }
+  ]
+}
