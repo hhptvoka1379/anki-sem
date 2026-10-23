@@ -1,6 +1,6 @@
-# Flagged rows (546)
+# Flagged rows (570)
 
-## ambiguous (48)
+## ambiguous (51)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -52,8 +52,11 @@
 | BIO-C05-NCOM-031 | BIO | 5 | 31 | 487 | ambiguous: pinocytosis (option_c) is the specific subtype for fluid uptake, but it is itself a form of endocytosis (option_b), making both terms scientifically applicable |
 | BIO-C05-NCOM-032 | BIO | 5 | 32 | 488 | ambiguous: simple diffusion of O2 and CO2 across the erythrocyte membrane (option_b) is itself a form of passive transport (option_e), making both options scientifically correct |
 | BIO-C05-NCOM-035 | BIO | 5 | 35 | 488 | ambiguous: simple diffusion of O2 and CO2 across the plasma membrane (option_a) is itself a form of passive transport across the plasma membrane (option_e), making both options scientifically correct |
+| BIO-C05-NCOM-092 | BIO | 5 | 92 | 494 | ambiguous: question omits 'prevalentemente nelle cellule eucariotiche', while chloroplasts (option_b, cpDNA) and prokaryotic cytoplasm (option_d, nucleoid) genuinely contain genetic information alongside the eukaryotic nucleus |
+| BIO-C05-NCOM-125 | BIO | 5 | 125 | 497 | ambiguous: in the net equation of glycolysis (glucose + 2 NAD+ + 2 ADP + 2 Pi -> 2 pyruvate + 2 NADH + 2 H+ + 2 ATP + 2 H2O), both reduced NAD (option_e) and H2O released at the enolase step (option_a) are genuine net products |
+| BIO-C05-NCOM-140 | BIO | 5 | 140 | 499 | ambiguous: cellular respiration (option_e) is the main pathway (~30–32 ATP/glucose), but fermentation of monosaccharides (option_d) also transfers chemical energy from glucose into ATP (2 ATP/glucose) |
 
-## chem (25)
+## chem (31)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -82,8 +85,14 @@
 | BIO-C04-NCOM-160 | BIO | 4 | 160 | 453 | chem: achondroplasia is caused by an autosomal dominant gain-of-function mutation in the FGFR3 receptor gene rather than lack of 'condrina' (an obsolete histological term for cartilage matrix, not a single gene-encoded protein) |
 | BIO-C04-NCOM-185 | BIO | 4 | 185 | 456 | chem: question calls all three alleles (A, B, 0) codominant, which would yield 6 phenotypes; 4 phenotypes occur because only I^A and I^B are codominant while i (0) is recessive to both |
 | BIO-C05-NCOM-020 | BIO | 5 | 20 | 486 | chem: desmin (option_a) is a muscle-specific intermediate filament subunit rather than the desmosomal plaque linker protein (desmoplakin) that anchors intermediate filaments in desmosomes |
+| BIO-C05-COMP-048 | BIO | 5 | 48 | 517 | chem: factually inaccurate Ran cycle—importins bind and import NLS cargo into the nucleus without Ran-GTP, whereas nuclear Ran-GTP binds importin to dissociate and release the cargo (cooperative cargo–Ran-GTP complexes are formed by exportins, not importins) |
+| BIO-C05-COMP-094 | BIO | 5 | 94 | 520 | chem: only C-terminal PTS1 is a tripeptide (SKL, 3 amino acids), whereas N-terminal PTS2 is a 9-amino-acid consensus motif ((R/K)-(L/V/I)-X5-(H/Q)-(L/A)), not 3 amino acids |
+| BIO-C05-COMP-098 | BIO | 5 | 98 | 521 | chem: ATP in peroxisomal matrix import is required for Pex1/Pex6-mediated receptor recycling/export rather than initial PTS cargo recognition |
+| BIO-C05-NCOM-127 | BIO | 5 | 127 | 497 | chem: option_c ('avviene in tutte le cellule') is overbroad because mature mammalian erythrocytes and obligate fermentative bacteria lack cellular respiration |
+| BIO-C05-NCOM-136 | BIO | 5 | 136 | 498 | chem: under hypoxic exertion human skeletal muscle performs lactic fermentation (not anaerobic respiration, which uses non-O2 inorganic electron acceptors in prokaryotes), while glycogenolysis (option_a) genuinely occurs in exercising muscle |
+| BIO-C05-NCOM-174 | BIO | 5 | 174 | 502 | chem: option_e pairs Rab with Ran as regulators of vesicular transport, whereas Ran regulates non-vesicular nucleocytoplasmic transport across nuclear pores |
 
-## key (22)
+## key (23)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -109,6 +118,7 @@
 | BIO-C04-NCOM-076 | BIO | 4 | 76 | 442 | key: suspect — given the couple already has 2 daughters (P=1), having an all-female 6-child family requires only the 4 remaining births to be female, giving (1/2)^4 = 1/16 (option_d) rather than (1/2)^6 = 1/64 (option_e), unless 'sei figli' meant 6 additional children |
 | BIO-C04-NCOM-183 | BIO | 4 | 183 | 456 | key: suspect — anti-A antibodies are naturally present in both group 0 and group B plasma, and group 0 (~40%) is ~4x more frequent than group B (~10%), making option_b ('probabilmente 0') or option_a ('non si può determinare' without testing anti-B) better supported than option_d |
 | BIO-C04-NCOM-204 | BIO | 4 | 204 | 459 | key: suspect — deleting nucleotide 7 (G) turns CUG-AUC-GUA-AUG-CGC into CUG-AUC-UAA-UGC-GC, where the 3rd codon UAA is an ochre stop codon causing immediate chain termination after Ile (option_c) rather than an altered downstream amino acid sequence (option_e) |
+| BIO-C05-NCOM-136 | BIO | 5 | 136 | 498 | key: suspect |
 
 ## missing (16)
 
@@ -131,7 +141,7 @@
 | BIO-C04-NCOM-162 | BIO | 4 | 162 | 453 | missing: pedigree figure ('seguente albero genealogico') referenced in question and options is absent from card |
 | BIO-C05-NCOM-030 | BIO | 5 | 30 | 487 | missing: schematic figure of plant cells 1 and 2 referenced in question is absent from card |
 
-## ocr (463)
+## ocr (480)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -598,4 +608,21 @@
 | BIO-C05-NCOM-026 | BIO | 5 | 26 | 487 | ocr: 'il' corrupted to 'i)' ('per i) trasporto?') in question |
 | BIO-C05-NCOM-030 | BIO | 5 | 30 | 487 | ocr: figure labels bled as garbled text 'Ge) I 2' at end of question |
 | BIO-C05-NCOM-034 | BIO | 5 | 34 | 488 | ocr: 'è ' corrupted to '@' ('@una forma di trasporto attivo') in option_a |
+| BIO-C05-NCOM-077 | BIO | 5 | 77 | 492 | ocr: unit 'μm' corrupted to 'pm' ('0,25 pm e 0,75 pm') in question |
+| BIO-C05-COMP-088 | BIO | 5 | 88 | 520 | ocr: unit 'μm' corrupted to 'pm' ('0,5 pm') in question |
+| BIO-C05-COMP-091 | BIO | 5 | 91 | 520 | ocr: Greek letter 'β' corrupted to 'B' ('B-ossidazione') in answer_text and question |
+| BIO-C05-COMP-098 | BIO | 5 | 98 | 521 | ocr: hyphen corrupted to stray guillemet '«' ('ATP «dipendente') in question |
+| BIO-C05-COMP-101 | BIO | 5 | 101 | 521 | ocr: chemical formula 'H₂O₂' corrupted to 'H202' (oxygen 'O' replaced by digit '0') in question |
+| BIO-C05-COMP-102 | BIO | 5 | 102 | 521 | ocr: chemical formula 'H₂O₂' severely corrupted to 'H.0' in question |
+| BIO-C05-NCOM-106 | BIO | 5 | 106 | 495 | ocr: Roman numerals corrupted in question ('li)' for 'II)') and options ('Inl), in Il)' in option_a, 'Solo in 1)' in option_b) |
+| BIO-C05-COMP-123 | BIO | 5 | 123 | 522 | ocr: Roman numeral 'II' corrupted to 'Il' in answer_text and question ('COP Il') |
+| BIO-C05-NCOM-127 | BIO | 5 | 127 | 497 | ocr: chemical formula 'O₂' corrupted to '0₂' (digit zero) in option_d |
+| BIO-C05-NCOM-132 | BIO | 5 | 132 | 498 | ocr: chemical formula 'O₂' corrupted to '0₂' (digit zero) in question |
+| BIO-C05-NCOM-147 | BIO | 5 | 147 | 499 | ocr: molecular name "L'AMP ciclico" corrupted to 'LAMP ciclico' (colliding with lysosomal protein acronym LAMP) in question |
+| BIO-C05-NCOM-153 | BIO | 5 | 153 | 500 | ocr: chloride symbol 'Cl⁻' corrupted to 'CI' (capital 'I', missing charge) in option_d ('Canali del CI') |
+| BIO-C05-NCOM-160 | BIO | 5 | 160 | 501 | ocr: '0 mV' corrupted to 'OmV' (letter 'O' instead of digit '0') in option_b |
+| BIO-C05-NCOM-167 | BIO | 5 | 167 | 501 | ocr: Roman numeral 'II' corrupted to 'Il' ('Polimerasi Il') in option_b |
+| BIO-C05-NCOM-172 | BIO | 5 | 172 | 502 | ocr: chemical formula 'O₂' corrupted to '0₂' (digit zero) in option_a |
+| BIO-C05-NCOM-180 | BIO | 5 | 180 | 502 | ocr: Greek letter 'α' corrupted to 'a' ('Importina a') in option_c |
+| BIO-C05-NCOM-184 | BIO | 5 | 184 | 503 | ocr: molecular acronym 'NF-κB' corrupted to 'NFxB' (Greek 'κ' turned into 'x') in option_a |
 
