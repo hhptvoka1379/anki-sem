@@ -12,3 +12,9 @@ work/buildscript/test/*.apkg
 work/deepseek/*/pages/
 work/deepseek/*/test*
 work/adjudicate/
+work/deepseek/*/jobs.jsonl
+work/deepseek/*/results.jsonl
+work/deepseek/*/*/*jobs.jsonl
+work/deepseek/*/*/*results.jsonl
+work/deepseek/*/*.raw.json
+work/deepseek/*/*/*.raw.json
