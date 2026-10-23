@@ -1,0 +1,719 @@
+from __future__ import annotations
+
+import csv
+import json
+import re
+import sqlite3
+import sys
+import tempfile
+import zipfile
+from io import BytesIO
+from pathlib import Path
+from typing import Dict
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+import struct
+import zlib
+
+try:
+    import numpy as np
+    from PIL import Image
+except ImportError:  # Pure-stdlib fallback when third-party imaging wheels are absent
+    np = None  # type: ignore[assignment]
+    Image = None  # type: ignore[assignment]
+
+
+def _png_gray_stats_stdlib(raw_bytes: bytes) -> tuple[float, float, float]:
+    """Exact PNG grayscale stats `(mean, p90, min)` using only Python stdlib (`struct` + `zlib`)."""
+    assert raw_bytes[:8] == b"\x89PNG\r\n\x1a\n", "Invalid PNG header"
+    pos = 8
+    w = h = bit_depth = color_type = 0
+    plte_luma: list[int] = []
+    idat_parts: list[bytes] = []
+    while pos < len(raw_bytes):
+        length = struct.unpack(">I", raw_bytes[pos:pos + 4])[0]
+        ctype = raw_bytes[pos + 4:pos + 8]
+        cdata = raw_bytes[pos + 8:pos + 8 + length]
+        pos += 12 + length
+        if ctype == b"IHDR":
+            w, h, bit_depth, color_type, _, _, _ = struct.unpack(">IIBBBBB", cdata)
+        elif ctype == b"PLTE":
+            plte_luma = [
+                (299 * cdata[i] + 587 * cdata[i + 1] + 114 * cdata[i + 2]) // 1000
+                for i in range(0, len(cdata), 3)
+            ]
+        elif ctype == b"IDAT":
+            idat_parts.append(cdata)
+        elif ctype == b"IEND":
+            break
+    raw = zlib.decompress(b"".join(idat_parts))
+    channels = {0: 1, 2: 3, 3: 1, 4: 2, 6: 4}[color_type]
+    bpp = max(1, (channels * bit_depth + 7) // 8)
+    stride = (w * channels * bit_depth + 7) // 8
+    prev = bytearray(stride)
+    hist = [0] * 256
+    off = 0
+    for _ in range(h):
+        ftype = raw[off]
+        row = bytearray(raw[off + 1:off + 1 + stride])
+        off += 1 + stride
+        if ftype == 1:
+            for i in range(bpp, stride):
+                row[i] = (row[i] + row[i - bpp]) & 0xFF
+        elif ftype == 2:
+            for i in range(stride):
+                row[i] = (row[i] + prev[i]) & 0xFF
+        elif ftype == 3:
+            for i in range(stride):
+                a = row[i - bpp] if i >= bpp else 0
+                row[i] = (row[i] + ((a + prev[i]) >> 1)) & 0xFF
+        elif ftype == 4:
+            for i in range(stride):
+                a = row[i - bpp] if i >= bpp else 0
+                b = prev[i]
+                c = prev[i - bpp] if i >= bpp else 0
+                p = a + b - c
+                pa, pb, pc = abs(p - a), abs(p - b), abs(p - c)
+                pr = a if (pa <= pb and pa <= pc) else (b if pb <= pc else c)
+                row[i] = (row[i] + pr) & 0xFF
+        prev = row
+        if color_type == 3 and bit_depth == 2:
+            rem = w
+            for byte in row:
+                for shift in (6, 4, 2, 0):
+                    if rem <= 0:
+                        break
+                    hist[plte_luma[(byte >> shift) & 0x3]] += 1
+                    rem -= 1
+        elif color_type == 0 and bit_depth == 8:
+            for byte in row[:w]:
+                hist[byte] += 1
+        elif color_type == 3 and bit_depth == 8:
+            for byte in row[:w]:
+                hist[plte_luma[byte]] += 1
+    total = sum(hist)
+    mean_v = sum(v * c for v, c in enumerate(hist)) / max(1, total)
+    min_v = next((float(v) for v, c in enumerate(hist) if c > 0), 255.0)
+    target90 = 0.90 * total
+    acc = 0
+    p90_v = 255.0
+    for v, c in enumerate(hist):
+        acc += c
+        if acc >= target90:
+            p90_v = float(v)
+            break
+    return mean_v, p90_v, min_v
+
+from extractor.round2_remediation import DEDUP_DROP_MAP
+from extractor.stage1_canonicalize import SUBJECT_CHAPTERS
+
+EXPECTED_SOURCE_COUNTS = {
+    ("CHIM", 1): (10, 121, 47),
+    ("CHIM", 2): (40, 42, 46),
+    ("CHIM", 3): (25, 181, 38),
+    ("CHIM", 4): (20, 92, 31),
+    ("CHIM", 5): (25, 44, 42),
+    ("CHIM", 6): (25, 100, 41),
+    ("CHIM", 7): (30, 55, 41),
+    ("CHIM", 8): (8, 19, 29),
+    ("CHIM", 9): (6, 130, 44),
+    ("CHIM", 10): (30, 103, 38),
+    ("CHIM", 11): (40, 173, 42),
+    ("CHIM", 12): (40, 309, 88),
+    ("CHIM", 13): (30, 178, 66),
+    ("BIO", 1): (50, 264, 122),
+    ("BIO", 2): (30, 129, 58),
+    ("BIO", 3): (55, 246, 153),
+    ("BIO", 4): (88, 224, 80),
+    ("BIO", 5): (147, 308, 225),
+    ("BIO", 6): (50, 192, 95),
+    ("BIO", 7): (74, 214, 110),
+    ("FIS", 1): (25, 93, 29),
+    ("FIS", 2): (20, 78, 60),
+    ("FIS", 3): (50, 185, 196),
+    ("FIS", 4): (10, 88, 30),
+    ("FIS", 5): (40, 127, 77),
+    ("FIS", 6): (50, 197, 138),
+    ("FIS", 7): (15, 54, 50),
+    ("FIS", 8): (10, 19, 54),
+}
+
+EXPECTED_TOTAL_UNIQUE = 7078 - len(DEDUP_DROP_MAP)  # 6,948 unique cards
+
+HDR_LEAK_RE = re.compile(
+    r"(chimicaepropedeutica|wwwedi[s]es|www\.edi[s]es|\bedi[s]es\b|\bedlses\b|\bedives\b|\bedices\b|"
+    r"\bodices\b|\btedi[s]es\b|\besses\b|\b2di[s]es\b|cases\s*\|\s*_|"
+    r"quiz a completamento|quiz non commentati|quiz commentati|risposte commentate)",
+    re.I,
+)
+
+PUB_ANY_RE = re.compile(r"edi[s]es|@di[s]es|vaedi[s]es", re.I)
+
+
+def run_verification(output_dir: Path = Path("/home/user/anki-sem/output")) -> Dict:
+    repo_dir = output_dir.parent
+    jsonl_path = output_dir / "qa_dataset.jsonl"
+    json_path = output_dir / "qa_dataset.json"
+    csv_path = output_dir / "qa_dataset.csv"
+    apkg_path = output_dir / "Semestre_Filtro_Complete.apkg"
+    fig_dir = output_dir / "figures"
+
+    jsonl_rows = [json.loads(line) for line in open(jsonl_path, encoding="utf-8") if line.strip()]
+    json_payload = json.load(open(json_path, encoding="utf-8"))
+    csv_rows = list(csv.DictReader(open(csv_path, encoding="utf-8")))
+
+    checks: Dict[str, Dict] = {}
+
+    # 1. Exact Post-Deduplication Total & Cross-Format Parity (6,948 unique cards)
+    checks["exact_deduplicated_total_parity"] = {
+        "passed": (
+            len(jsonl_rows) == EXPECTED_TOTAL_UNIQUE
+            and len(json_payload["items"]) == EXPECTED_TOTAL_UNIQUE
+            and len(csv_rows) == EXPECTED_TOTAL_UNIQUE
+        ),
+        "expected_unique": EXPECTED_TOTAL_UNIQUE,
+        "removed_duplicates": len(DEDUP_DROP_MAP),
+        "jsonl_count": len(jsonl_rows),
+        "json_count": len(json_payload["items"]),
+        "csv_count": len(csv_rows),
+    }
+
+    # 2. Exact 84 Subsection Accounting (Source Count - Verified Dropped Duplicates == Live Count)
+    subsection_mismatches = []
+    code_map = {"COMM": "commentati", "NCOM": "non_commentati", "COMP": "completamento"}
+    dropped_by_sub: Dict[tuple, set] = {}
+    for did in DEDUP_DROP_MAP:
+        sc_d, ch_s, qt_s, qn_s = did.split("-")
+        dropped_by_sub.setdefault((sc_d, int(ch_s[1:]), code_map[qt_s]), set()).add(int(qn_s))
+
+    for _, sc, ch, _, _, _ in SUBJECT_CHAPTERS:
+        exp_comm, exp_ncom, exp_comp = EXPECTED_SOURCE_COUNTS[(sc, ch)]
+        for qt, src_n in (("commentati", exp_comm), ("non_commentati", exp_ncom), ("completamento", exp_comp)):
+            sub_items = [r for r in jsonl_rows if r["subject_code"] == sc and r["chapter_num"] == ch and r["quiz_type"] == qt]
+            qnums = [r["qnum"] for r in sub_items]
+            dropped_qnums = dropped_by_sub.get((sc, ch, qt), set())
+            expected_qnums = [q for q in range(1, src_n + 1) if q not in dropped_qnums]
+            if qnums != expected_qnums:
+                subsection_mismatches.append(
+                    {"section": f"{sc}-C{ch:02d}-{qt}", "got": len(sub_items), "expected": len(expected_qnums)}
+                )
+
+    checks["all_84_subsections_exact_bijection"] = {
+        "passed": len(subsection_mismatches) == 0,
+        "verified_subsections": 84 - len(subsection_mismatches),
+        "mismatches": subsection_mismatches,
+    }
+
+    # 3. Unique IDs, Disjointness from DEDUP_DROP_MAP & Contiguous Global Index 1..N
+    ids = [r["id"] for r in jsonl_rows]
+    id_set = set(ids)
+    g_idxs = [r["global_index"] for r in jsonl_rows]
+    prio = {"commentati": 3, "non_commentati": 2, "completamento": 1}
+    qt_from_id = lambda cid: code_map[cid.split("-")[2]]
+    prio_violations = [
+        (d, k) for d, k in DEDUP_DROP_MAP.items() if prio[qt_from_id(k)] < prio[qt_from_id(d)] or k not in id_set or d in id_set
+    ]
+    checks["unique_ids_dedup_priority_and_indexing"] = {
+        "passed": (
+            len(id_set) == EXPECTED_TOTAL_UNIQUE
+            and g_idxs == list(range(1, EXPECTED_TOTAL_UNIQUE + 1))
+            and len(prio_violations) == 0
+        ),
+        "unique_ids": len(id_set),
+        "priority_or_membership_violations": prio_violations,
+    }
+
+    # 4. Complete Stems & Book Pages on All Items
+    empty_stems = [r["id"] for r in jsonl_rows if not r["question"] or len(r["question"].strip()) < 4]
+    missing_pages = [r["id"] for r in jsonl_rows if not r["question_book_page"] or not r["answer_book_page"]]
+    checks["non_empty_stems_and_page_provenance"] = {
+        "passed": len(empty_stems) == 0 and len(missing_pages) == 0,
+        "empty_stems": empty_stems,
+        "missing_pages": missing_pages,
+    }
+
+    # 5. Complete 5 Distinct Options A..E & Answer Key Validity Across All MCQs
+    mcq_rows = [r for r in jsonl_rows if r["quiz_type"] in ("commentati", "non_commentati")]
+    bad_mcq_opts = []
+    bad_mcq_ans = []
+    unstripped_opt_prefixes = []
+    dup_opt_ids = []
+    for r in mcq_rows:
+        opts = r["options"]
+        if not isinstance(opts, dict) or list(opts.keys()) != ["A", "B", "C", "D", "E"] or any(not opts[k].strip() for k in "ABCDE"):
+            bad_mcq_opts.append(r["id"])
+        if r["answer"] not in ("A", "B", "C", "D", "E") or r["answer_text"] != opts.get(r["answer"]):
+            bad_mcq_ans.append(r["id"])
+        for k in "ABCDE":
+            if re.match(r"^[ABCDE][\.\)]\s+\S", opts[k]):
+                unstripped_opt_prefixes.append((r["id"], k))
+        vals = [opts[k].strip() for k in "ABCDE"]
+        if len(set(vals)) != 5:
+            dup_opt_ids.append(r["id"])
+
+    checks["all_mcqs_complete_and_distinct"] = {
+        "passed": (
+            len(bad_mcq_opts) == 0
+            and len(bad_mcq_ans) == 0
+            and len(unstripped_opt_prefixes) == 0
+            and len(dup_opt_ids) == 0
+        ),
+        "total_mcqs": len(mcq_rows),
+        "bad_options": bad_mcq_opts,
+        "bad_answers": bad_mcq_ans,
+        "unstripped_prefixes": unstripped_opt_prefixes,
+        "duplicate_option_mcqs": dup_opt_ids,
+    }
+
+    # 6. Complete Blank Markers & Unmerged Answers Across All Completamento Items
+    comp_rows = [r for r in jsonl_rows if r["quiz_type"] == "completamento"]
+    missing_blanks = [r["id"] for r in comp_rows if "_____" not in r["question"]]
+    bad_comp_answers = [
+        (r["id"], r["answer"])
+        for r in comp_rows
+        if not r["answer"].strip() or re.search(r"(?:^|\s)\d{1,3}[\.\)]\s+[A-Za-zÀ-ÿ]", r["answer"])
+    ]
+    checks["all_completamento_blanks_and_answers"] = {
+        "passed": len(missing_blanks) == 0 and len(bad_comp_answers) == 0,
+        "total_completamento": len(comp_rows),
+        "missing_blanks": missing_blanks,
+        "bad_answers": bad_comp_answers,
+    }
+
+    # 7. Complete Step-by-Step Explanations Across All Quiz Commentati Items
+    comm_rows = [r for r in jsonl_rows if r["quiz_type"] == "commentati"]
+    bad_explanations = [
+        r["id"] for r in comm_rows if not r["explanation"] or len(r["explanation"].strip()) < 12
+    ]
+    checks["all_commentati_explanations"] = {
+        "passed": len(comm_rows) == 1041 and len(bad_explanations) == 0,
+        "total_commentati": len(comm_rows),
+        "missing_or_short_explanations": bad_explanations,
+    }
+
+    # 8. Zero Running Header / Footer / Watermark Leakage & Zero Targeted OCR Typos
+    header_leaks = []
+    targeted_typos = []
+    typo_rx = re.compile(
+        r"ossidrit|\b(?:a|la)\s*T\s*=\s*K\b|\bUsala\b|\bll\s+[a-zà-ÿ0-9]|\bJa\s+[a-zà-ÿ]|(?<!\S)(?:i\]|1\]|I\}|i\})\s+"
+    )
+    dec_sub_corruptions = []
+    unjoined_hyphens = []
+    option_bleeds = []
+    ohm_corruptions = []
+    mixed_sup7 = []
+
+    for r in jsonl_rows:
+        fields = [("Q", r["question"]), ("Ans", r["answer"]), ("Expl", r["explanation"] or "")]
+        if r["options"]:
+            for k, v in r["options"].items():
+                fields.append((f"Opt.{k}", v))
+                if re.search(r"\s[A-E][\.\)]\s*\S", v):
+                    option_bleeds.append((r["id"], k, v))
+                if re.search(r"\b(?:resistenz|resistor|ohm)\w*", r["question"].lower()) and re.match(r"^\d+0$", v.strip()):
+                    ohm_corruptions.append((r["id"], k, v))
+        for fn, txt in fields:
+            if HDR_LEAK_RE.search(txt):
+                header_leaks.append((r["id"], fn))
+            if typo_rx.search(txt):
+                targeted_typos.append((r["id"], fn, typo_rx.findall(txt)))
+            if re.search(r"\d[₀₁₂₃₄₅₆₇₈₉]\d", txt):
+                dec_sub_corruptions.append((r["id"], fn, txt[:80]))
+            if re.search(r"[A-Za-zÀ-ÿ]-(?<!\bmono-)\s+[a-zà-ÿ]{2,}", txt):
+                unjoined_hyphens.append((r["id"], fn, txt[:80]))
+            if re.search(r"[⁰¹²³⁴⁵⁶⁸⁹⁻⁺]₇|(?<![A-Za-z₀-₉])₇[⁰¹²³⁴⁵⁶⁸⁹]|\b10₇\b", txt):
+                mixed_sup7.append((r["id"], fn, txt[:80]))
+
+    checks["zero_running_header_footer_leakage"] = {"passed": len(header_leaks) == 0, "leaked_ids": header_leaks}
+    checks["zero_round2_targeted_ocr_typos"] = {"passed": len(targeted_typos) == 0, "hits": targeted_typos}
+    checks["zero_decimal_comma_subscript_corruptions"] = {"passed": len(dec_sub_corruptions) == 0, "count": len(dec_sub_corruptions)}
+    checks["zero_unjoined_linebreak_hyphenations"] = {"passed": len(unjoined_hyphens) == 0, "count": len(unjoined_hyphens)}
+    checks["zero_adjacent_option_bleeds"] = {"passed": len(option_bleeds) == 0, "count": len(option_bleeds)}
+    checks["zero_resistance_ohm_misreads"] = {"passed": len(ohm_corruptions) == 0, "count": len(ohm_corruptions)}
+    checks["zero_mixed_superscript_glyphs"] = {"passed": len(mixed_sup7) == 0, "count": len(mixed_sup7)}
+
+    # 14. Genuine Non-Text Diagram Figure Verification + 100% Explicit Visual Stem Coverage
+    on_disk_pngs = sorted(p.name for p in fig_dir.glob("*.png"))
+    ref_in_dataset = sorted({fn for r in jsonl_rows for fn in r["figure_files"]})
+    explicit_vis_re = re.compile(
+        r"\b(?:in\s+figura|nella\s+figura(?!\s+di\s+diffrazione)|della\s+figura|seguente\s+figura|\(figura\)|"
+        r"lo\s+schema|nello\s+schema|seguente\s+schema|il\s+grafico\s+(?:riporta|mostra|rappresenta|seguente)|"
+        r"come\s+riporta\s+il\s+grafico|nel\s+grafico|seguenti\s+grafici|seguenti\s+disegni|"
+        r"albero\s+genealogico\s+(?:riportato|mostrato|in\s+figura|seguente)|"
+        r"mostrato\s+in\s+figura|rappresentat[oaie]\s+in\s+figura|"
+        r"nella\s+tabella|seguente\s+tabella|tabella\s+seguente)\b"
+    )
+    missing_explicit_vis = [
+        r["id"] for r in jsonl_rows if explicit_vis_re.search(r["question"].lower()) and not r["figure_files"]
+    ]
+    checks["clean_true_diagrams_and_all_explicit_visuals_covered"] = {
+        "passed": on_disk_pngs == ref_in_dataset and len(on_disk_pngs) == 79 and len(missing_explicit_vis) == 0,
+        "figure_count": len(on_disk_pngs),
+        "missing_explicit_visual_ids": missing_explicit_vis,
+        "orphan_files_on_disk": sorted(set(on_disk_pngs) - set(ref_in_dataset)),
+        "missing_files_on_disk": sorted(set(ref_in_dataset) - set(on_disk_pngs)),
+    }
+
+    expected_q_imgs = sorted(f"{r['id']}.png" for r in jsonl_rows)
+    missing_q_img_field = [r["id"] for r in jsonl_rows if r.get("question_image") != f"question_images/{r['id']}.png"]
+
+    # 15. Anki .apkg Structural, SQLite, Publisher-Free & Media Integrity Check
+    pub_sqlite_leaks = []
+    with tempfile.TemporaryDirectory() as tmpd:
+        tmp_path = Path(tmpd)
+        with zipfile.ZipFile(apkg_path, "r") as zf:
+            names = set(zf.namelist())
+            db_entry = "collection.anki21" if "collection.anki21" in names else "collection.anki2"
+            zf.extract(db_entry, tmp_path)
+            zf.extract("media", tmp_path)
+            media_map = json.loads((tmp_path / "media").read_text(encoding="utf-8"))
+            missing_zip_media = [k for k in media_map.keys() if k not in names]
+            dark_or_blank_media = []
+            for k, orig_name in media_map.items():
+                if k in names:
+                    png_raw = zf.read(k)
+                    if Image is not None and np is not None:
+                        arr_m = np.asarray(Image.open(BytesIO(png_raw)).convert("L"), dtype=np.float32)
+                        mean_v, p90_v, min_v = float(arr_m.mean()), float(np.percentile(arr_m, 90)), float(arr_m.min())
+                    else:
+                        mean_v, p90_v, min_v = _png_gray_stats_stdlib(png_raw)
+                    if mean_v < 130.0 or p90_v < 220.0 or min_v > 150.0:
+                        dark_or_blank_media.append((orig_name, round(mean_v, 1), round(min_v, 1)))
+
+        conn = sqlite3.connect(str(tmp_path / db_entry))
+        cur = conn.cursor()
+        note_count = cur.execute("SELECT COUNT(*) FROM notes").fetchone()[0]
+        card_count = cur.execute("SELECT COUNT(*) FROM cards").fetchone()[0]
+        distinct_dids = cur.execute("SELECT COUNT(DISTINCT did) FROM cards").fetchone()[0]
+        models_raw, decks_raw = cur.execute("SELECT models, decks FROM col").fetchone()
+        col_models = json.loads(models_raw)
+        col_decks = json.loads(decks_raw)
+        master_guids = {r[0] for r in cur.execute("SELECT guid FROM notes").fetchall()}
+        if PUB_ANY_RE.search(models_raw):
+            pub_sqlite_leaks.append("col.models")
+        if PUB_ANY_RE.search(decks_raw):
+            pub_sqlite_leaks.append("col.decks")
+        flds_all = [row[0] for row in cur.execute("SELECT flds FROM notes").fetchall()]
+        conn.close()
+
+        referenced_imgs = set()
+        html_entity_leaks = []
+        missing_fig_html = []
+        for fstr in flds_all:
+            parts = fstr.split("\x1f")
+            if "&#x27;" in fstr or "&#39;" in fstr:
+                html_entity_leaks.append(parts[0])
+            if PUB_ANY_RE.search(fstr):
+                pub_sqlite_leaks.append(parts[0])
+            referenced_imgs.update(re.findall(r'<img src="([^"]+)">', fstr))
+        media_filenames = set(media_map.values())
+        missing_ref_imgs = sorted(referenced_imgs - media_filenames)
+        q_imgs_effective = sorted(fn for fn in media_filenames if fn in set(expected_q_imgs))
+
+    id_to_flds = {fstr.split("\x1f")[0]: fstr.split("\x1f") for fstr in flds_all}
+    for r in jsonl_rows:
+        if r["figure_files"]:
+            fh = id_to_flds[r["id"]][14]
+            if not all(f'<img src="{fn}">' in fh for fn in r["figure_files"]):
+                missing_fig_html.append(r["id"])
+
+    checks["all_question_images_1to1_bijection"] = {
+        "passed": (
+            len(q_imgs_effective) == EXPECTED_TOTAL_UNIQUE
+            and q_imgs_effective == expected_q_imgs
+            and len(missing_q_img_field) == 0
+        ),
+        "question_images_verified": len(q_imgs_effective),
+        "expected_count": EXPECTED_TOTAL_UNIQUE,
+        "missing_field_ids": missing_q_img_field[:10],
+    }
+
+    p291_ids = [r["id"] for r in jsonl_rows if r.get("answer_book_page") == 291]
+    expected_p291 = [f"CHIM-C11-COMM-{i:03d}" for i in range(17, 24)]
+    bad_ans_bp = [
+        r["id"] for r in jsonl_rows
+        if not isinstance(r.get("answer_book_page"), int) or not (252 <= r["answer_book_page"] <= 901)
+    ]
+    checks["exact_answer_book_pages_restored"] = {
+        "passed": p291_ids == expected_p291 and len(bad_ans_bp) == 0,
+        "page_291_ids": p291_ids,
+        "invalid_answer_book_page_count": len(bad_ans_bp),
+    }
+
+    bad_filenames = [
+        str(p.relative_to(repo_dir))
+        for p in repo_dir.rglob("*")
+        if ".git" not in p.parts and PUB_ANY_RE.search(p.name)
+    ]
+    pub_text_leaks = []
+    for p in sorted(repo_dir.rglob("*")):
+        if ".git" in p.parts or p.is_dir() or p.suffix in (".pdf", ".png", ".apkg", ".pyc"):
+            continue
+        try:
+            if PUB_ANY_RE.search(p.read_text(encoding="utf-8")):
+                pub_text_leaks.append(str(p.relative_to(repo_dir)))
+        except Exception:
+            continue
+
+    checks["zero_publisher_branding_across_repo_and_apkg"] = {
+        "passed": len(bad_filenames) == 0 and len(pub_sqlite_leaks) == 0 and len(pub_text_leaks) == 0,
+        "publisher_named_files": bad_filenames,
+        "sqlite_leaks": pub_sqlite_leaks,
+        "text_file_leaks": pub_text_leaks,
+    }
+
+    checks["zero_html_entities_or_missing_figures"] = {
+        "passed": len(html_entity_leaks) == 0 and len(missing_fig_html) == 0,
+        "html_entity_leaks": len(html_entity_leaks),
+        "missing_figure_html_cards": missing_fig_html,
+    }
+
+    master_mobj = next(iter(col_models.values()))
+    master_css = master_mobj["css"]
+    master_qfmt = master_mobj["tmpls"][0]["qfmt"]
+    master_afmt = master_mobj["tmpls"][0]["afmt"]
+    expected_nums = [f"{i:02d}" for i in range(11)]
+    checks["master_complete_apkg_has_live_theme_switcher_00_to_10"] = {
+        "passed": (
+            'id="sf-theme-ui"' in master_qfmt
+            and 'id="sf-theme-ui"' in master_afmt
+            and 'id="sf-theme-toggle"' in master_qfmt
+            and 'id="sf-theme-toggle"' in master_afmt
+            and "localStorage.getItem('sf-theme')" in master_qfmt
+            and "localStorage.getItem('sf-theme')" in master_afmt
+            and all(f'data-num="{n}"' in master_qfmt and f'data-num="{n}"' in master_afmt for n in expected_nums)
+            and all(f'id="sf-t{n}"' in master_qfmt and f'id="sf-t{n}"' in master_afmt for n in expected_nums)
+            and all(f'html[data-sf-theme="{n}"]' in master_css for n in expected_nums)
+            and master_css.count("{") == master_css.count("}")
+            and master_css.count("@import") == 1
+        ),
+        "brace_balance_ok": master_css.count("{") == master_css.count("}"),
+        "theme_count_including_default": len(expected_nums),
+    }
+
+    theme04_apkg = output_dir / "themes" / "Semestre_Filtro_04_NeoBrutalist_Risoprint_Zine.apkg"
+    theme_updaters = sorted((output_dir / "themes").glob("ThemeUpdater_*.apkg"))
+    theme_css_files = sorted((output_dir / "themes" / "css").glob("*.css"))
+    t04_ok = False
+    t04_isolated_and_switcher_free = False
+    if theme04_apkg.exists():
+        with zipfile.ZipFile(theme04_apkg, "r") as zt:
+            znames = set(zt.namelist())
+            t_media = json.loads(zt.read("media").decode("utf-8"))
+            with tempfile.TemporaryDirectory() as td2:
+                zt.extract("collection.anki2", td2)
+                c2 = sqlite3.connect(str(Path(td2) / "collection.anki2"))
+                n2 = c2.execute("SELECT COUNT(*) FROM notes").fetchone()[0]
+                t04_guids = {r[0] for r in c2.execute("SELECT guid FROM notes").fetchall()}
+                t04_dids = {r[0] for r in c2.execute("SELECT DISTINCT did FROM cards").fetchall()}
+                m2_raw, d2_raw = c2.execute("SELECT models, decks FROM col").fetchone()
+                sample_flds_raw = c2.execute("SELECT flds FROM notes WHERE flds LIKE '%opt-letter%' LIMIT 1").fetchone()[0]
+                m2 = json.loads(m2_raw)
+                c2.close()
+            m2_obj = next(iter(m2.values()))
+            m2_css = m2_obj.get("css", "")
+            m2_qfmt = m2_obj["tmpls"][0]["qfmt"]
+            m2_afmt = m2_obj["tmpls"][0]["afmt"]
+            master_dids = {int(k) for k in col_decks.keys() if k != "1"}
+            t04_ok = (
+                n2 == EXPECTED_TOTAL_UNIQUE
+                and len(t_media) == len(media_map)
+                and "+ RISO.ZINE // REG.04 +" in m2_css
+                and "#fef08a" in m2_css
+                and "16px 16px" in m2_css
+                and "#fffef9" in m2_css
+                and "#ff2e93" in m2_css
+                and "#facc15" in m2_css
+                and 'class="sf-canvas"' in m2_qfmt
+                and 'class="sf-canvas"' in m2_afmt
+                and 'id="sf-theme-toggle"' in m2_qfmt
+                and 'id="sf-theme-toggle"' in m2_afmt
+                and "localStorage.getItem('sf-theme')" in m2_qfmt
+                and "localStorage.getItem('sf-theme')" in m2_afmt
+                and "position: relative;" in m2_css
+                and ".sf-canvas.sf-dark" in m2_css
+                and "#18181b" in m2_css
+                and "#232329" in m2_css
+                and 'class="wrap"' in m2_qfmt
+                and 'class="wrap"' in m2_afmt
+                and ".nightMode" not in m2_css
+                and ".opt-key" not in m2_css
+                and '<span class="opt-letter">A</span><span class="opt-body">' in sample_flds_raw
+                and "min-height: 100vh" in m2_css
+                and m2_css.count("{") == m2_css.count("}")
+                and not PUB_ANY_RE.search(m2_raw)
+                and not PUB_ANY_RE.search(d2_raw)
+                and all(k in znames for k in t_media.keys())
+            )
+            t04_isolated_and_switcher_free = (
+                "sf-theme-ui" not in m2_qfmt
+                and "sf-theme-ui" not in m2_afmt
+                and "sf-theme-ui" not in m2_css
+                and int(m2_obj["id"]) != int(master_mobj["id"])
+                and len(t04_guids & master_guids) == 0
+                and len(t04_dids & master_dids) == 0
+            )
+    updaters_switcher_free = True
+    for up_f in theme_updaters:
+        with zipfile.ZipFile(up_f, "r") as zu:
+            with tempfile.TemporaryDirectory() as td3:
+                zu.extract("collection.anki2", td3)
+                c3 = sqlite3.connect(str(Path(td3) / "collection.anki2"))
+                um_raw = c3.execute("SELECT models FROM col").fetchone()[0]
+                c3.close()
+                if "sf-theme-ui" in um_raw or "sf-theme-toggle" not in um_raw:
+                    updaters_switcher_free = False
+
+    tpl_dirs = sorted(p for p in (output_dir / "themes" / "templates").glob("*") if p.is_dir())
+    tpl_failures = []
+    req_front_ph = {"{{QuestionNum}}", "{{FrontStemHTML}}", "{{FrontOptionsHTML}}"}
+    req_back_ph = {"{{QuestionNum}}", "{{BookPage}}", "{{BackStemHTML}}", "{{BackOptionsHTML}}", "{{AnswerBannerHTML}}"}
+    for td_item in tpl_dirs:
+        fh = (td_item / "front.html").read_text(encoding="utf-8")
+        bh = (td_item / "back.html").read_text(encoding="utf-8")
+        sc = (td_item / "style.css").read_text(encoding="utf-8")
+        ok_item = (
+            re.search(r'<div[^>]*class="sf-canvas[^"]*"[^>]*>\n<button id="sf-theme-toggle"', fh) is not None
+            and re.search(r'<div[^>]*class="sf-canvas[^"]*"[^>]*>\n<button id="sf-theme-toggle"', bh) is not None
+            and fh.count('id="sf-theme-toggle"') == 1
+            and bh.count('id="sf-theme-toggle"') == 1
+            and "localStorage.getItem('sf-theme')" in fh
+            and "localStorage.getItem('sf-theme')" in bh
+            and fh.count("<script>") == fh.count("</script>") >= 1
+            and bh.count("<script>") == bh.count("</script>") >= 1
+            and len(re.findall(r"<div\b", fh)) == fh.count("</div>")
+            and len(re.findall(r"<div\b", bh)) == bh.count("</div>")
+            and all(ph in fh for ph in req_front_ph)
+            and all(ph in bh for ph in req_back_ph)
+            and "position: relative;" in sc
+            and ".sf-canvas.sf-dark" in sc
+            and sc.count("{") == sc.count("}")
+            and (td_item.name == "00_default" or "pick_" in fh)
+        )
+        if not ok_item:
+            tpl_failures.append(td_item.name)
+
+    checks["all_12_theme_templates_tag_placeholder_and_dark_toggle_integrity"] = {
+        "passed": len(tpl_dirs) == 12 and len(tpl_failures) == 0,
+        "template_bundle_count": len(tpl_dirs),
+        "failed_bundles": tpl_failures,
+    }
+
+    checks["standalone_risoprint_distinct_from_master_and_switcher_only_in_complete"] = {
+        "passed": t04_ok and t04_isolated_and_switcher_free and updaters_switcher_free,
+        "standalone_risoprint_valid": t04_ok,
+        "isolated_ids_and_no_switcher_in_standalone": t04_isolated_and_switcher_free,
+        "no_switcher_in_theme_updaters": updaters_switcher_free,
+    }
+    checks["themed_apkg_and_10_theme_updaters_integrity"] = {
+        "passed": t04_ok and len(theme_updaters) == 10 and len(theme_css_files) == 10,
+        "theme04_apkg_exists_and_valid": t04_ok,
+        "theme_updater_count": len(theme_updaters),
+        "theme_css_count": len(theme_css_files),
+    }
+
+    checks["anki_apkg_and_media_integrity"] = {
+        "passed": (
+            note_count == EXPECTED_TOTAL_UNIQUE
+            and card_count == EXPECTED_TOTAL_UNIQUE
+            and distinct_dids == 84
+            and len(missing_zip_media) == 0
+            and len(missing_ref_imgs) == 0
+            and len(media_map) == len(referenced_imgs)
+            and set(on_disk_pngs).issubset(media_filenames)
+        ),
+        "apkg_size_bytes": apkg_path.stat().st_size,
+        "apkg_size_mb": round(apkg_path.stat().st_size / (1024 * 1024), 2),
+        "sqlite_notes": note_count,
+        "sqlite_cards": card_count,
+        "distinct_subdecks": distinct_dids,
+        "embedded_media_files": len(media_map),
+        "referenced_card_images": len(referenced_imgs),
+        "missing_zip_media": missing_zip_media,
+        "missing_referenced_images": missing_ref_imgs,
+    }
+
+    checks["zero_dark_or_blank_embedded_pngs"] = {
+        "passed": len(dark_or_blank_media) == 0,
+        "inspected_png_count": len(media_map),
+        "bad_pngs": dark_or_blank_media[:15],
+    }
+
+    # 26. Round-3 Corpus-Wide OCR Cleanliness, Figure De-Duplication & Multi-Line List Formatting
+    r3_dirty = []
+    r3_rx = re.compile(
+        r"#|,,|~(?![0-9])|\*|\bfl\]|(?<![,0-9])\b(?:H20|C02|S02|S03|N02|N20|02|H30|Na0H|K0H|Ca0|Li₂Q)\b|(?<!\n)(?<!^)•\s"
+    )
+    for r in jsonl_rows:
+        for fn, val in [("Q", r["question"])] + [(f"O:{k}", v) for k, v in (r.get("options") or {}).items()] + ([("EXP", r["explanation"])] if r.get("explanation") else []):
+            if val and r3_rx.search(val):
+                r3_dirty.append((r["id"], fn, val[:90]))
+    c002 = next(r for r in jsonl_rows if r["id"] == "CHIM-C01-COMM-002")
+    c002_flds = id_to_flds["CHIM-C01-COMM-002"]
+    c002_ok = (
+        c002["figure_files"] == []
+        and "\n• A₁:" in c002["question"]
+        and "\n• A₂:" in c002["question"]
+        and "\n• A₃:" in c002["question"]
+        and "\n• L'affermazione A₁" in c002["explanation"]
+        and "oltre agli isotopi" in c002["explanation"]
+        and "altre agli" not in c002["explanation"]
+        and c002_flds[14] == ""
+        and '<span class="stmt-line">• A₁:' in c002_flds[8]
+        and '<span class="stmt-line">• L\'affermazione A₁' in c002_flds[13]
+    )
+    checks["round3_zero_ocr_corruptions_and_multiline_formatting"] = {
+        "passed": len(r3_dirty) == 0 and c002_ok,
+        "dirty_hits_count": len(r3_dirty),
+        "dirty_hits_sample": r3_dirty[:15],
+        "chim_c01_comm_002_verified": c002_ok,
+    }
+
+    # 27. Round-3 Stacked `.scan-stack` Disclosure Accordions & `.stmt-line` Typography Across All 12 Bundles
+    r3_tpl_missing = []
+    for td_item in tpl_dirs:
+        fh = (td_item / "front.html").read_text(encoding="utf-8")
+        bh = (td_item / "back.html").read_text(encoding="utf-8")
+        sc = (td_item / "style.css").read_text(encoding="utf-8")
+        if '<div class="scan-stack">' not in fh or '<div class="scan-stack">' not in bh or ".scan-stack" not in sc or ".stmt-line" not in sc:
+            r3_tpl_missing.append(td_item.name)
+    checks["round3_stacked_scan_accordions_and_bullet_blocks_in_all_12_themes"] = {
+        "passed": len(r3_tpl_missing) == 0,
+        "missing_bundles": r3_tpl_missing,
+    }
+
+    overall_passed = all(c["passed"] for c in checks.values())
+    report = {
+        "overall_passed": overall_passed,
+        "verified_total_qa_pairs": len(jsonl_rows),
+        "pre_dedup_source_pairs": 7078,
+        "deduplicated_pairs_removed": len(DEDUP_DROP_MAP),
+        "subject_totals": {
+            sc: sum(1 for r in jsonl_rows if r["subject_code"] == sc)
+            for sc in ("CHIM", "BIO", "FIS")
+        },
+        "quiz_type_totals": {
+            qt: sum(1 for r in jsonl_rows if r["quiz_type"] == qt)
+            for qt in ("commentati", "non_commentati", "completamento")
+        },
+        "checks": checks,
+    }
+
+    report_path = output_dir / "verification_report.json"
+    with open(report_path, "w", encoding="utf-8") as f:
+        json.dump(report, f, ensure_ascii=False, indent=2)
+
+    print("=================================================================")
+    print(f"OVERALL VERIFICATION PASSED: {overall_passed} ({sum(c['passed'] for c in checks.values())} / {len(checks)} checks)")
+    for name, res in checks.items():
+        status = "PASS" if res["passed"] else "FAIL"
+        print(f"  [{status}] {name}")
+    print("=================================================================")
+    if not overall_passed:
+        raise AssertionError(f"Verification failed: {json.dumps(report, ensure_ascii=False, indent=2)}")
+    return report
+
+
+if __name__ == "__main__":
+    run_verification()

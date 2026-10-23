@@ -1,0 +1,174 @@
+{
+  "overall_passed": true,
+  "verified_total_qa_pairs": 6948,
+  "pre_dedup_source_pairs": 7078,
+  "deduplicated_pairs_removed": 130,
+  "subject_totals": {
+    "CHIM": 2396,
+    "BIO": 2871,
+    "FIS": 1681
+  },
+  "quiz_type_totals": {
+    "commentati": 1041,
+    "non_commentati": 3852,
+    "completamento": 2055
+  },
+  "checks": {
+    "exact_deduplicated_total_parity": {
+      "passed": true,
+      "expected_unique": 6948,
+      "removed_duplicates": 130,
+      "jsonl_count": 6948,
+      "json_count": 6948,
+      "csv_count": 6948
+    },
+    "all_84_subsections_exact_bijection": {
+      "passed": true,
+      "verified_subsections": 84,
+      "mismatches": []
+    },
+    "unique_ids_dedup_priority_and_indexing": {
+      "passed": true,
+      "unique_ids": 6948,
+      "priority_or_membership_violations": []
+    },
+    "non_empty_stems_and_page_provenance": {
+      "passed": true,
+      "empty_stems": [],
+      "missing_pages": []
+    },
+    "all_mcqs_complete_and_distinct": {
+      "passed": true,
+      "total_mcqs": 4893,
+      "bad_options": [],
+      "bad_answers": [],
+      "unstripped_prefixes": [],
+      "duplicate_option_mcqs": []
+    },
+    "all_completamento_blanks_and_answers": {
+      "passed": true,
+      "total_completamento": 2055,
+      "missing_blanks": [],
+      "bad_answers": []
+    },
+    "all_commentati_explanations": {
+      "passed": true,
+      "total_commentati": 1041,
+      "missing_or_short_explanations": []
+    },
+    "zero_running_header_footer_leakage": {
+      "passed": true,
+      "leaked_ids": []
+    },
+    "zero_round2_targeted_ocr_typos": {
+      "passed": true,
+      "hits": []
+    },
+    "zero_decimal_comma_subscript_corruptions": {
+      "passed": true,
+      "count": 0
+    },
+    "zero_unjoined_linebreak_hyphenations": {
+      "passed": true,
+      "count": 0
+    },
+    "zero_adjacent_option_bleeds": {
+      "passed": true,
+      "count": 0
+    },
+    "zero_resistance_ohm_misreads": {
+      "passed": true,
+      "count": 0
+    },
+    "zero_mixed_superscript_glyphs": {
+      "passed": true,
+      "count": 0
+    },
+    "clean_true_diagrams_and_all_explicit_visuals_covered": {
+      "passed": true,
+      "figure_count": 79,
+      "missing_explicit_visual_ids": [],
+      "orphan_files_on_disk": [],
+      "missing_files_on_disk": []
+    },
+    "all_question_images_1to1_bijection": {
+      "passed": true,
+      "question_images_verified": 6948,
+      "expected_count": 6948,
+      "missing_field_ids": []
+    },
+    "exact_answer_book_pages_restored": {
+      "passed": true,
+      "page_291_ids": [
+        "CHIM-C11-COMM-017",
+        "CHIM-C11-COMM-018",
+        "CHIM-C11-COMM-019",
+        "CHIM-C11-COMM-020",
+        "CHIM-C11-COMM-021",
+        "CHIM-C11-COMM-022",
+        "CHIM-C11-COMM-023"
+      ],
+      "invalid_answer_book_page_count": 0
+    },
+    "zero_publisher_branding_across_repo_and_apkg": {
+      "passed": true,
+      "publisher_named_files": [],
+      "sqlite_leaks": [],
+      "text_file_leaks": []
+    },
+    "zero_html_entities_or_missing_figures": {
+      "passed": true,
+      "html_entity_leaks": 0,
+      "missing_figure_html_cards": []
+    },
+    "master_complete_apkg_has_live_theme_switcher_00_to_10": {
+      "passed": true,
+      "brace_balance_ok": true,
+      "theme_count_including_default": 11
+    },
+    "all_12_theme_templates_tag_placeholder_and_dark_toggle_integrity": {
+      "passed": true,
+      "template_bundle_count": 12,
+      "failed_bundles": []
+    },
+    "standalone_risoprint_distinct_from_master_and_switcher_only_in_complete": {
+      "passed": true,
+      "standalone_risoprint_valid": true,
+      "isolated_ids_and_no_switcher_in_standalone": true,
+      "no_switcher_in_theme_updaters": true
+    },
+    "themed_apkg_and_10_theme_updaters_integrity": {
+      "passed": true,
+      "theme04_apkg_exists_and_valid": true,
+      "theme_updater_count": 10,
+      "theme_css_count": 10
+    },
+    "anki_apkg_and_media_integrity": {
+      "passed": true,
+      "apkg_size_bytes": 34443759,
+      "apkg_size_mb": 32.85,
+      "sqlite_notes": 6948,
+      "sqlite_cards": 6948,
+      "distinct_subdecks": 84,
+      "embedded_media_files": 8093,
+      "referenced_card_images": 8093,
+      "missing_zip_media": [],
+      "missing_referenced_images": []
+    },
+    "zero_dark_or_blank_embedded_pngs": {
+      "passed": true,
+      "inspected_png_count": 8093,
+      "bad_pngs": []
+    },
+    "round3_zero_ocr_corruptions_and_multiline_formatting": {
+      "passed": true,
+      "dirty_hits_count": 0,
+      "dirty_hits_sample": [],
+      "chim_c01_comm_002_verified": true
+    },
+    "round3_stacked_scan_accordions_and_bullet_blocks_in_all_12_themes": {
+      "passed": true,
+      "missing_bundles": []
+    }
+  }
+}

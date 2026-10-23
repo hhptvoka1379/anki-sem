@@ -1,0 +1,22 @@
+<script>
+(function() {
+  var canvas = document.querySelector('.sf-canvas');
+  var btn = document.getElementById('sf-theme-toggle');
+  if (!canvas || !btn) return;
+  function apply(dark) {
+    canvas.classList.toggle('sf-dark', dark);
+    btn.textContent = dark ? 'LIGHT' : 'DARK';
+    btn.style.background = dark ? '#18181b' : '#fef08a';
+    btn.style.color = dark ? '#fafafa' : '#111';
+    btn.style.borderColor = dark ? '#fafafa' : '#111';
+  }
+  var dark = false;
+  try { dark = localStorage.getItem('sf-theme') === 'dark'; } catch (e) {}
+  apply(dark);
+  btn.addEventListener('click', function() {
+    dark = !dark;
+    apply(dark);
+    try { localStorage.setItem('sf-theme', dark ? 'dark' : 'light'); } catch (e) {}
+  });
+})();
+</script>

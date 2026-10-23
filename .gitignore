@@ -1,0 +1,39 @@
+# ---------------------------------------------------------------------------
+# anki-sem working folder
+# ---------------------------------------------------------------------------
+
+# Source / generated PDFs (large binaries - not uploaded)
+*.pdf
+*.PDF
+*.pdf alias
+
+# Generated Anki packages and collection databases
+*.apkg
+*.colpkg
+*.db
+
+# Build / transfer archives
+*.zip
+
+# Nested clone of this same remote (would become an embedded repo)
+/repo/
+
+# Generated audit outputs (fully regenerable from the scripts + source PDF)
+/audit/out/
+
+# Generated / extracted Anki working outputs (regenerable)
+/workingdir/apkg/
+/workingdir/colpkg/
+/workingdir/final/
+/workingdir/slim/
+/workingdir/slim-final/
+/workingdir/slim2/
+/workingdir/tmp/
+
+# Python environment and caches
+.venv/
+__pycache__/
+*.py[cod]
+
+# macOS junk
+.DS_Store

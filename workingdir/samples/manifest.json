@@ -1,0 +1,1375 @@
+{
+ "agent1": {
+  "label": "CHIM notation",
+  "cards": [
+   {
+    "id": "CHIM-C12-NCOM-078",
+    "subject": "CHIM",
+    "chapter": "12",
+    "chapter_title": "La chimica organica",
+    "qtype": "Quiz non commentati",
+    "qnum": "78",
+    "page": "202",
+    "stem": "Si possono avere atomi di idrogeno quaternari in un alcano?",
+    "options": [
+     [
+      "A",
+      "Si₄ talvolta"
+     ],
+     [
+      "B",
+      "Sì, sempre"
+     ],
+     [
+      "C",
+      "Sì, dipende dall'alcano considerato"
+     ],
+     [
+      "D",
+      "No, mai"
+     ],
+     [
+      "E",
+      "Gli atomi di idrogeno quaternari non esistono"
+     ]
+    ],
+    "answer": "Risposta corretta: D. No, mai",
+    "explanation": "",
+    "q_img": "CHIM-C12-NCOM-078.png",
+    "sol_img": null,
+    "notation": true
+   },
+   {
+    "id": "CHIM-C04-NCOM-027",
+    "subject": "CHIM",
+    "chapter": "4",
+    "chapter_title": "I legami tra ioni e tra atomi",
+    "qtype": "Quiz non commentati",
+    "qnum": "27",
+    "page": "66",
+    "stem": "1 due atomi di idrogeno nella molecola H₂ da quale legame sono uniti?",
+    "options": [
+     [
+      "A",
+      "Covalente omopolare"
+     ],
+     [
+      "B",
+      "Nessuna delle risposte è corretta"
+     ],
+     [
+      "C",
+      "Covalente eteropolare"
+     ],
+     [
+      "D",
+      "lo nico"
+     ],
+     [
+      "E",
+      "Idrogeno"
+     ]
+    ],
+    "answer": "Risposta corretta: A. Covalente omopolare",
+    "explanation": "",
+    "q_img": "CHIM-C04-NCOM-027.png",
+    "sol_img": null,
+    "notation": true
+   },
+   {
+    "id": "CHIM-C06-NCOM-060",
+    "subject": "CHIM",
+    "chapter": "6",
+    "chapter_title": "Le soluzioni",
+    "qtype": "Quiz non commentati",
+    "qnum": "60",
+    "page": "100",
+    "stem": "Determina quanti mL di una soluzione acquosa 10 N di HCl si devono prelevare per preparare 500 mL di una soluzione 10⁻² N:",
+    "options": [
+     [
+      "A",
+      "0,5"
+     ],
+     [
+      "B",
+      "5,0"
+     ],
+     [
+      "C",
+      "10"
+     ],
+     [
+      "D",
+      "6,0"
+     ],
+     [
+      "E",
+      "5,5"
+     ]
+    ],
+    "answer": "Risposta corretta: A. 0,5",
+    "explanation": "",
+    "q_img": "CHIM-C06-NCOM-060.png",
+    "sol_img": null,
+    "notation": true
+   },
+   {
+    "id": "CHIM-C12-NCOM-251",
+    "subject": "CHIM",
+    "chapter": "12",
+    "chapter_title": "La chimica organica",
+    "qtype": "Quiz non commentati",
+    "qnum": "251",
+    "page": "217",
+    "stem": "La formula CH₃CH₂CH₂CH₂CHO corrisponde a:",
+    "options": [
+     [
+      "A",
+      "idrato di carbonio"
+     ],
+     [
+      "B",
+      "pentanale"
+     ],
+     [
+      "C",
+      "acido propionico"
+     ],
+     [
+      "D",
+      "ossido di metilene"
+     ],
+     [
+      "E",
+      "composto inesistente"
+     ]
+    ],
+    "answer": "Risposta corretta: B. pentanale",
+    "explanation": "",
+    "q_img": "CHIM-C12-NCOM-251.png",
+    "sol_img": null,
+    "notation": true
+   },
+   {
+    "id": "CHIM-C10-NCOM-067",
+    "subject": "CHIM",
+    "chapter": "10",
+    "chapter_title": "La nomenclatura dei composti inorganici",
+    "qtype": "Quiz non commentati",
+    "qnum": "67",
+    "page": "157",
+    "stem": "Il fosfato tricalcico corrisponde alla formula:",
+    "options": [
+     [
+      "A",
+      "Ca(H₂PO₄)₂"
+     ],
+     [
+      "B",
+      "Ca₃(PO₄)₂"
+     ],
+     [
+      "C",
+      "Ca(PO₃)₂"
+     ],
+     [
+      "D",
+      "CaHPO₄"
+     ],
+     [
+      "E",
+      "Ca₂PO₄"
+     ]
+    ],
+    "answer": "Risposta corretta: B. Ca₃(PO₄)₂",
+    "explanation": "",
+    "q_img": "CHIM-C10-NCOM-067.png",
+    "sol_img": null,
+    "notation": true
+   }
+  ]
+ },
+ "agent2": {
+  "label": "CHIM notation",
+  "cards": [
+   {
+    "id": "CHIM-C04-NCOM-085",
+    "subject": "CHIM",
+    "chapter": "4",
+    "chapter_title": "I legami tra ioni e tra atomi",
+    "qtype": "Quiz non commentati",
+    "qnum": "85",
+    "page": "72",
+    "stem": "Due atomi di carbonio formano fra loro un triplo legame solo se si trovano nello stato di ibridazione:",
+    "options": [
+     [
+      "A",
+      "se non sono ibridizzati"
+     ],
+     [
+      "B",
+      "sp²"
+     ],
+     [
+      "C",
+      "sp"
+     ],
+     [
+      "D",
+      "sp³"
+     ],
+     [
+      "E",
+      "sp⁻³"
+     ]
+    ],
+    "answer": "Risposta corretta: C. sp",
+    "explanation": "",
+    "q_img": "CHIM-C04-NCOM-085.png",
+    "sol_img": null,
+    "notation": true
+   },
+   {
+    "id": "CHIM-C06-NCOM-011",
+    "subject": "CHIM",
+    "chapter": "6",
+    "chapter_title": "Le soluzioni",
+    "qtype": "Quiz non commentati",
+    "qnum": "11",
+    "page": "95",
+    "stem": "L'anidride carbonica (CO₂) si distribuisce con un determinato coefficiente fra la fase gassosa e la fase acquosa. Una sola delle seguenti affermazioni è corretta. Quale? La concentrazione della CO₂ nella fase acquosa:",
+    "options": [
+     [
+      "A",
+      "è indipendente dalla temperatura"
+     ],
+     [
+      "B",
+      "è Indipendente dal pH della fase acquosa"
+     ],
+     [
+      "C",
+      "aumenta quando la temperatura diminuisce"
+     ],
+     [
+      "D",
+      "aumenta quando la temperatura aumenta"
+     ],
+     [
+      "E",
+      "diminuisce quando la temperatura diminuisce"
+     ]
+    ],
+    "answer": "Risposta corretta: C. aumenta quando la temperatura diminuisce",
+    "explanation": "",
+    "q_img": "CHIM-C06-NCOM-011.png",
+    "sol_img": null,
+    "notation": true
+   },
+   {
+    "id": "CHIM-C04-NCOM-086",
+    "subject": "CHIM",
+    "chapter": "4",
+    "chapter_title": "I legami tra ioni e tra atomi",
+    "qtype": "Quiz non commentati",
+    "qnum": "86",
+    "page": "72",
+    "stem": "Quale delle seguenti sostanze presenta ibridazione sp³ e ha angoli diversi dal valore di 109,5°?",
+    "options": [
+     [
+      "A",
+      "Metano"
+     ],
+     [
+      "B",
+      "Etene"
+     ],
+     [
+      "C",
+      "Azoto"
+     ],
+     [
+      "D",
+      "Tetracloruro di carbonio"
+     ],
+     [
+      "E",
+      "Ammoniaca"
+     ]
+    ],
+    "answer": "Risposta corretta: E. Ammoniaca",
+    "explanation": "",
+    "q_img": "CHIM-C04-NCOM-086.png",
+    "sol_img": null,
+    "notation": true
+   },
+   {
+    "id": "CHIM-C05-COMM-015",
+    "subject": "CHIM",
+    "chapter": "5",
+    "chapter_title": "I legami tra le molecole e proprietà delle sostanze",
+    "qtype": "Quiz commentati",
+    "qnum": "15",
+    "page": "79",
+    "stem": "“l’acqua è un liquido dotato di ottime proprietà solventi. Molti sali, come ad esempio il cloruro di sodio, si sciolgono rapidamente in acqua, mentre sono praticamente insolubili in solventi apolari come i) doroformio e il benzene. Questa proprietà è una conseguenza del carattere di polare della molecola dell'acqua. Il reticolo cristallino di un sale è tenuto insieme da attrazioni elettrostatiche molto forti tra ioni positivi e ioni negativi. Quando il cioruro di sodio cristallino è posto in acqua, le molecole polari di quest'ultima sono fortemente attratte dagli ioni Na’ e Cl-, e strappano questi ioni al reticolo”. Indicare quale delle seguenti affermazioni PUÒ essere dedotta dalla lettura del brano precedente.",
+    "options": [
+     [
+      "A",
+      "Tutte le sostanze si sciolgono in acqua"
+     ],
+     [
+      "B",
+      "Nessuna sostanza si scioglie in cloroformio o in benzene"
+     ],
+     [
+      "C",
+      "L'acqua è costituita da ioni"
+     ],
+     [
+      "D",
+      "Le molecole d'acqua interagiscono con Na⁺ e Cl"
+     ],
+     [
+      "E",
+      "Nell'acquaesiste un reticolo cristallino"
+     ]
+    ],
+    "answer": "Risposta corretta: D. Le molecole d'acqua interagiscono con Na⁺ e Cl",
+    "explanation": "L'acqua è un liquido molecolare polare che scioglie la stragrande maggioranza dei sali (composti ionici). Le molecole polari dell'acqua circondano con la loro estremità polare positiva gli ioni Ci-, e con quella negativa gli ioni Na‘. Formano così legami ionedipolo e il reticolo cristallino del sale si rompe. Gli ioni vanno in soluzione, circondati da molecole d'acqua.",
+    "q_img": "CHIM-C05-COMM-015.png",
+    "sol_img": "sol_CHIM_C05_Q015_1.png",
+    "notation": true
+   },
+   {
+    "id": "CHIM-C11-NCOM-088",
+    "subject": "CHIM",
+    "chapter": "11",
+    "chapter_title": "Acidità e basicità",
+    "qtype": "Quiz non commentati",
+    "qnum": "88",
+    "page": "178",
+    "stem": "Una soluzione ha pH = 1. Il valore di [OH⁻] è:",
+    "options": [
+     [
+      "A",
+      "[OH⁻] = 10⁻¹ M"
+     ],
+     [
+      "B",
+      "[OH⁻] = 1 M"
+     ],
+     [
+      "C",
+      "[OH⁻] = 10⁻⁹ M"
+     ],
+     [
+      "D",
+      "nessuna delle altre risposte è corretta"
+     ],
+     [
+      "E",
+      "[OH⁻] = 10⁻¹³ M"
+     ]
+    ],
+    "answer": "Risposta corretta: E. [OH⁻] = 10⁻¹³ M",
+    "explanation": "",
+    "q_img": "CHIM-C11-NCOM-088.png",
+    "sol_img": null,
+    "notation": true
+   }
+  ]
+ },
+ "agent3": {
+  "label": "CHIM notation",
+  "cards": [
+   {
+    "id": "CHIM-C03-NCOM-003",
+    "subject": "CHIM",
+    "chapter": "3",
+    "chapter_title": "Ordine tra gli elementi: la tavola periodica",
+    "qtype": "Quiz non commentati",
+    "qnum": "3",
+    "page": "40",
+    "stem": "L'unità di misura usata per esprimere il peso atomico relativo è:",
+    "options": [
+     [
+      "A",
+      "g (grammo)"
+     ],
+     [
+      "B",
+      "nessuna delle risposte è corretta"
+     ],
+     [
+      "C",
+      "g/eV (grammo/elettronvolt)"
+     ],
+     [
+      "D",
+      "μg (microgrammo)"
+     ],
+     [
+      "E",
+      "g · cm⁻³"
+     ]
+    ],
+    "answer": "Risposta corretta: B. nessuna delle risposte è corretta",
+    "explanation": "",
+    "q_img": "CHIM-C03-NCOM-003.png",
+    "sol_img": null,
+    "notation": true
+   },
+   {
+    "id": "CHIM-C01-NCOM-058",
+    "subject": "CHIM",
+    "chapter": "1",
+    "chapter_title": "La matematica e la chimica",
+    "qtype": "Quiz non commentati",
+    "qnum": "58",
+    "page": "11",
+    "stem": "Quale dei seguenti atomi contiene il maggior numero di neutroni?",
+    "options": [
+     [
+      "A",
+      "¹²⁰₅₀Sn"
+     ],
+     [
+      "B",
+      "¹²³₅₁Sb"
+     ],
+     [
+      "C",
+      "¹²⁸₅₂Te"
+     ],
+     [
+      "D",
+      "¹²⁷₅₃I"
+     ],
+     [
+      "E",
+      "¹³³₅₅Cs"
+     ]
+    ],
+    "answer": "Risposta corretta: E. ¹³³₅₅Cs",
+    "explanation": "",
+    "q_img": "CHIM-C01-NCOM-058.png",
+    "sol_img": null,
+    "notation": true
+   },
+   {
+    "id": "CHIM-C09-NCOM-094",
+    "subject": "CHIM",
+    "chapter": "9",
+    "chapter_title": "Le reazioni di ossido-riduzione",
+    "qtype": "Quiz non commentati",
+    "qnum": "94",
+    "page": "140",
+    "stem": "Quali di questi composti ha proprieta ossidanti?",
+    "options": [
+     [
+      "A",
+      "NaCl"
+     ],
+     [
+      "B",
+      "H,"
+     ],
+     [
+      "C",
+      "HCl"
+     ],
+     [
+      "D",
+      "Na"
+     ],
+     [
+      "E",
+      "H₂O₂"
+     ]
+    ],
+    "answer": "Risposta corretta: E. H₂O₂",
+    "explanation": "",
+    "q_img": "CHIM-C09-NCOM-094.png",
+    "sol_img": null,
+    "notation": true
+   },
+   {
+    "id": "CHIM-C11-COMM-021",
+    "subject": "CHIM",
+    "chapter": "11",
+    "chapter_title": "Acidità e basicità",
+    "qtype": "Quiz commentati",
+    "qnum": "21",
+    "page": "167",
+    "stem": "A seguito dell'aggiunta di 0,1 mol di HCl ad una soluzione acquosa di 1 L di CH₃C00H 0,1 M:",
+    "options": [
+     [
+      "A",
+      "l'acidità della soluzione dipende in ugual misura da CH₃COOH e da HC)"
+     ],
+     [
+      "B",
+      "l'equilibrio di fonizzazione di CH₃COOH si sposta verso destra e il pH della soluzione è dovuto solo all'HCi"
+     ],
+     [
+      "C",
+      "l'equilibrio di ionizzazione di CH₃COOH st sposta verso destra e Il pH della soluzione dipende sia da CH₃COOH che da HCl"
+     ],
+     [
+      "D",
+      "l'equilibrio di ionizzazione di CH₃COOH non si sposta e il pH della soluzione dipende solo dall’HC)"
+     ],
+     [
+      "E",
+      "l'equilibrio di ionizzazione di CH₃COOH si sposta verso sinistra e il pH della soluzione è dovuto solo all'HC!"
+     ]
+    ],
+    "answer": "Risposta corretta: E. l'equilibrio di ionizzazione di CH₃COOH si sposta verso sinistra e il pH della soluzione è dovuto solo all'HC!",
+    "explanation": "L'aggiunta di 0,1 mol di HCl (acido forte completamente dissociato) in 1 L introduce una concentrazione [H₃O⁺] = 0,1 M di ione a comune nell'equilibrio CH₃COOH + H₂O ⇌ CH₃COO⁻ + H₃O⁺. Per il principio di Le Chatelier l'equilibrio di ionizzazione dell'acido acetico retrocede fortemente verso sinistra e il pH della soluzione è determinato praticamente solo dall'HCl.",
+    "q_img": "CHIM-C11-COMM-021.png",
+    "sol_img": null,
+    "notation": true
+   },
+   {
+    "id": "CHIM-C07-COMM-027",
+    "subject": "CHIM",
+    "chapter": "7",
+    "chapter_title": "Le trasformazioni chimiche",
+    "qtype": "Quiz commentati",
+    "qnum": "27",
+    "page": "111",
+    "stem": "Quando l'acqua viene sottoposta all'azione di un agente ossidante forte, che cosa si forma?",
+    "options": [
+     [
+      "A",
+      "H₂"
+     ],
+     [
+      "B",
+      "O₂"
+     ],
+     [
+      "C",
+      "H₂ e O₂"
+     ],
+     [
+      "D",
+      "H⁺ e OH⁻"
+     ],
+     [
+      "E",
+      "H⁺ e e⁻"
+     ]
+    ],
+    "answer": "Risposta corretta: B. O₂",
+    "explanation": "Un ossidante forte può ossidare solo l'ossigeno dell'acqua (poiché l'idrogeno si trova già al numero di ossidazione massimo +1), secondo la semireazione 2 H₂O → O₂ + 4 H⁺ + 4 e⁻, liberando O₂.",
+    "q_img": "CHIM-C07-COMM-027.png",
+    "sol_img": "sol_CHIM_C07_Q027_1.png",
+    "notation": true
+   }
+  ]
+ },
+ "agent4": {
+  "label": "CHIM random",
+  "cards": [
+   {
+    "id": "CHIM-C06-COMP-024",
+    "subject": "CHIM",
+    "chapter": "6",
+    "chapter_title": "Le soluzioni",
+    "qtype": "Quiz a completamento",
+    "qnum": "24",
+    "page": "106",
+    "stem": "Un composto contiene molecole d'acqua legate nella sua struttura cristallina.",
+    "options": [],
+    "answer": "Risposta corretta: idrato",
+    "explanation": "",
+    "q_img": "CHIM-C06-COMP-024.png",
+    "sol_img": null,
+    "notation": false
+   },
+   {
+    "id": "CHIM-C13-NCOM-103",
+    "subject": "CHIM",
+    "chapter": "13",
+    "chapter_title": "Sostanze organiche di interesse biologico",
+    "qtype": "Quiz non commentati",
+    "qnum": "103",
+    "page": "241",
+    "stem": "Il legame peptidico è un legame del tipo:",
+    "options": [
+     [
+      "A",
+      "acetaltico"
+     ],
+     [
+      "B",
+      "acetalico"
+     ],
+     [
+      "C",
+      "estereo"
+     ],
+     [
+      "D",
+      "etereo"
+     ],
+     [
+      "E",
+      "ammidico"
+     ]
+    ],
+    "answer": "Risposta corretta: E. ammidico",
+    "explanation": "",
+    "q_img": "CHIM-C13-NCOM-103.png",
+    "sol_img": null,
+    "notation": false
+   },
+   {
+    "id": "CHIM-C07-COMP-012",
+    "subject": "CHIM",
+    "chapter": "7",
+    "chapter_title": "Le trasformazioni chimiche",
+    "qtype": "Quiz a completamento",
+    "qnum": "12",
+    "page": "120",
+    "stem": "La legge di massa afferma che in una reazione chimica gli atomi non si creano né sl distruggono.",
+    "options": [],
+    "answer": "Risposta corretta: conservazione della",
+    "explanation": "",
+    "q_img": "CHIM-C07-COMP-012.png",
+    "sol_img": null,
+    "notation": false
+   },
+   {
+    "id": "CHIM-C09-COMP-032",
+    "subject": "CHIM",
+    "chapter": "9",
+    "chapter_title": "Le reazioni di ossido-riduzione",
+    "qtype": "Quiz a completamento",
+    "qnum": "32",
+    "page": "145",
+    "stem": "0 è il più forte agente ossidante.",
+    "options": [],
+    "answer": "Risposta corretta: fluoro",
+    "explanation": "",
+    "q_img": "CHIM-C09-COMP-032.png",
+    "sol_img": null,
+    "notation": false
+   },
+   {
+    "id": "CHIM-C11-NCOM-161",
+    "subject": "CHIM",
+    "chapter": "11",
+    "chapter_title": "Acidità e basicità",
+    "qtype": "Quiz non commentati",
+    "qnum": "161",
+    "page": "185",
+    "stem": "Il bicarbonato, usato come antiacido e come digestivo, è:",
+    "options": [
+     [
+      "A",
+      "cloruro di carbonio"
+     ],
+     [
+      "B",
+      "carbonato di magnesio"
+     ],
+     [
+      "C",
+      "carbonato acido di calcio"
+     ],
+     [
+      "D",
+      "carbonato di calcio"
+     ],
+     [
+      "E",
+      "tdrogenocarbonato di sodio"
+     ]
+    ],
+    "answer": "Risposta corretta: E. tdrogenocarbonato di sodio",
+    "explanation": "",
+    "q_img": "CHIM-C11-NCOM-161.png",
+    "sol_img": null,
+    "notation": false
+   }
+  ]
+ },
+ "agent5": {
+  "label": "FIS",
+  "cards": [
+   {
+    "id": "FIS-C02-NCOM-032",
+    "subject": "FIS",
+    "chapter": "2",
+    "chapter_title": "Cinematica",
+    "qtype": "Quiz non commentati",
+    "qnum": "32",
+    "page": "692",
+    "stem": "Due sferette, rispettivamente di acciaio e di gomma, vengono lasciate cadere nel vuoto dalla medesima altezza H. Quale delle due sferette tocca prima il suolo?",
+    "options": [
+     [
+      "A",
+      "La sferetta più pesante"
+     ],
+     [
+      "B",
+      "Nessuna delle altre risposte è corretta"
+     ],
+     [
+      "C",
+      "La sferetta d'acciaio"
+     ],
+     [
+      "D",
+      "La sferetta più leggera"
+     ],
+     [
+      "E",
+      "La sferetta di gomma"
+     ]
+    ],
+    "answer": "Risposta corretta: B. Nessuna delle altre risposte è corretta",
+    "explanation": "",
+    "q_img": "FIS-C02-NCOM-032.png",
+    "sol_img": null,
+    "notation": false
+   },
+   {
+    "id": "FIS-C07-COMP-012",
+    "subject": "FIS",
+    "chapter": "7",
+    "chapter_title": "Onde e ottica",
+    "qtype": "Quiz a completamento",
+    "qnum": "12",
+    "page": "841",
+    "stem": "La potenza trasmessa da un’onda è proporzionale al quadrato dell’ .",
+    "options": [],
+    "answer": "Risposta corretta: ampiezza",
+    "explanation": "",
+    "q_img": "FIS-C07-COMP-012.png",
+    "sol_img": null,
+    "notation": false
+   },
+   {
+    "id": "FIS-C06-COMP-020",
+    "subject": "FIS",
+    "chapter": "6",
+    "chapter_title": "Elettricità ed elettromagnetismo",
+    "qtype": "Quiz a completamento",
+    "qnum": "20",
+    "page": "823",
+    "stem": "La densita lineare di carica si indica con il simbolo .",
+    "options": [],
+    "answer": "Risposta corretta: λ (lambda)",
+    "explanation": "",
+    "q_img": "FIS-C06-COMP-020.png",
+    "sol_img": null,
+    "notation": false
+   },
+   {
+    "id": "FIS-C05-NCOM-018",
+    "subject": "FIS",
+    "chapter": "5",
+    "chapter_title": "Termodinamica",
+    "qtype": "Quiz non commentati",
+    "qnum": "18",
+    "page": "769",
+    "stem": "Un metro cubo di un certo metallo (densità relativa = 7; calore specifico = 1/6 kcal/kg - °C) ha capacità termica (in chilocalorie) pari a:",
+    "options": [
+     [
+      "A",
+      "7/6"
+     ],
+     [
+      "B",
+      "1/42"
+     ],
+     [
+      "C",
+      "6/7"
+     ],
+     [
+      "D",
+      "1/42.000"
+     ],
+     [
+      "E",
+      "nessuna delle altre risposte è corretta"
+     ]
+    ],
+    "answer": "Risposta corretta: E. nessuna delle altre risposte è corretta",
+    "explanation": "",
+    "q_img": "FIS-C05-NCOM-018.png",
+    "sol_img": null,
+    "notation": false
+   },
+   {
+    "id": "FIS-C08-COMM-010",
+    "subject": "FIS",
+    "chapter": "8",
+    "chapter_title": "Fisica nucleare",
+    "qtype": "Quiz commentati",
+    "qnum": "10",
+    "page": "845",
+    "stem": "Quale delle seguenti radiazioni ha il massimo potere di penetrazione?",
+    "options": [
+     [
+      "A",
+      "Particelle alfa"
+     ],
+     [
+      "B",
+      "Raggi beta"
+     ],
+     [
+      "C",
+      "Raggi gamma"
+     ],
+     [
+      "D",
+      "Neutroni lenti"
+     ],
+     [
+      "E",
+      "Onde radio acs OZ I"
+     ]
+    ],
+    "answer": "Risposta corretta: C. Raggi gamma",
+    "explanation": "Raggi gamma. I raggi gamma sono fotoni ad altissima energia e penetrano anche diversi centimetri di piombo.",
+    "q_img": "FIS-C08-COMM-010.png",
+    "sol_img": "sol_FIS_C08_Q010_1.png",
+    "notation": false
+   }
+  ]
+ },
+ "agent6": {
+  "label": "BIO",
+  "cards": [
+   {
+    "id": "BIO-C03-COMP-048",
+    "subject": "BIO",
+    "chapter": "3",
+    "chapter_title": "Il flusso dell'informazione",
+    "qtype": "Quiz a completamento",
+    "qnum": "48",
+    "page": "412",
+    "stem": "La è un enzima accessorio dell’operone Lac, con funzione non del tutto chiarita.",
+    "options": [],
+    "answer": "Risposta corretta: trans-acetilasi",
+    "explanation": "",
+    "q_img": "BIO-C03-COMP-048.png",
+    "sol_img": null,
+    "notation": false
+   },
+   {
+    "id": "BIO-C07-COMM-047",
+    "subject": "BIO",
+    "chapter": "7",
+    "chapter_title": "Il controllo della proliferazione e della sopravvivenza cellulare",
+    "qtype": "Quiz commentati",
+    "qnum": "47",
+    "page": "563",
+    "stem": "Qual è il complesso ciclina-Cdk attivato direttamente dall'aumento delle cicline D durante la fase G1 del ciclo cellulare?",
+    "options": [
+     [
+      "A",
+      "Ciclina E-Cdk2"
+     ],
+     [
+      "B",
+      "Ciclina A-Cdk2"
+     ],
+     [
+      "C",
+      "Ciclina B-Cdki"
+     ],
+     [
+      "D",
+      "Ciclina F-Cdk3"
+     ],
+     [
+      "E",
+      "Ciclina D-Cdk4/6"
+     ]
+    ],
+    "answer": "Risposta corretta: E. Ciclina D-Cdk4/6",
+    "explanation": "La seconda “ondata” trascrizionale indotta dai fattori di crescita include le cicline D. Queste si associano a Cdk4/6. Il complesso ciclina D-CdK4/6 determina la fosforilazione di Rb, evento chiave per la progressione dalla fase G1 alla fase S.",
+    "q_img": "BIO-C07-COMM-047.png",
+    "sol_img": "sol_BIO_C07_Q047_1.png",
+    "notation": false
+   },
+   {
+    "id": "BIO-C03-COMP-096",
+    "subject": "BIO",
+    "chapter": "3",
+    "chapter_title": "Il flusso dell'informazione",
+    "qtype": "Quiz a completamento",
+    "qnum": "96",
+    "page": "415",
+    "stem": "Il è un meccanismo in cui RNA provenienti da diversi trascritti vengono uniti insieme.",
+    "options": [],
+    "answer": "Risposta corretta: trans-splicing",
+    "explanation": "",
+    "q_img": "BIO-C03-COMP-096.png",
+    "sol_img": null,
+    "notation": false
+   },
+   {
+    "id": "BIO-C05-NCOM-291",
+    "subject": "BIO",
+    "chapter": "5",
+    "chapter_title": "Le strutture cellulari: biogenesi, morfologia e funzioni",
+    "qtype": "Quiz non commentati",
+    "qnum": "291",
+    "page": "513",
+    "stem": "Quale proteina motrice è fondamentale per il movimento delle ciglia e dei flagelli?",
+    "options": [
+     [
+      "A",
+      "Chinesina"
+     ],
+     [
+      "B",
+      "Actina"
+     ],
+     [
+      "C",
+      "Dineina assonemale"
+     ],
+     [
+      "D",
+      "Miosina V"
+     ],
+     [
+      "E",
+      "MAP2"
+     ]
+    ],
+    "answer": "Risposta corretta: C. Dineina assonemale",
+    "explanation": "",
+    "q_img": "BIO-C05-NCOM-291.png",
+    "sol_img": null,
+    "notation": false
+   },
+   {
+    "id": "BIO-C04-NCOM-184",
+    "subject": "BIO",
+    "chapter": "4",
+    "chapter_title": "I meccanismi cellulari di trasmissione e controllo dei caratteri selvatici e mutati",
+    "qtype": "Quiz non commentati",
+    "qnum": "184",
+    "page": "456",
+    "stem": "Una madre ha gruppo sanguigno 0, mentre il padre è AB. Eventuali figli potranno essere:",
+    "options": [
+     [
+      "A",
+      "tutti 0"
+     ],
+     [
+      "B",
+      "AB; A; B; 0"
+     ],
+     [
+      "C",
+      "tutti AB"
+     ],
+     [
+      "D",
+      "ABoO"
+     ],
+     [
+      "E",
+      "AoB"
+     ]
+    ],
+    "answer": "Risposta corretta: E. AoB",
+    "explanation": "",
+    "q_img": "BIO-C04-NCOM-184.png",
+    "sol_img": null,
+    "notation": false
+   }
+  ]
+ },
+ "agent7": {
+  "label": "solution crops + notation",
+  "cards": [
+   {
+    "id": "CHIM-C10-COMM-026",
+    "subject": "CHIM",
+    "chapter": "10",
+    "chapter_title": "La nomenclatura dei composti inorganici",
+    "qtype": "Quiz commentati",
+    "qnum": "26",
+    "page": "150",
+    "stem": "Se l'ossido di potassio reagisce con l'acqua si forma:",
+    "options": [
+     [
+      "A",
+      "una soluzione basica"
+     ],
+     [
+      "B",
+      "un sale"
+     ],
+     [
+      "C",
+      "una soluzione acida"
+     ],
+     [
+      "D",
+      "potassio libero e acqua ossigenata"
+     ],
+     [
+      "E",
+      "una soluzione eterogenea"
+     ]
+    ],
+    "answer": "Risposta corretta: A. una soluzione basica",
+    "explanation": "Dalla reazione degli ossidi dei metalli alcalini con l'acqua si formano gli idrossidi, caratterizzati dal comportamento da basi forti. Essi contengono un gruppo ossidrilico che è la base più forte che può esistere in acqua. Infatti il gruppo OH⁻ strappa quantitativamente protoni all'acqua.",
+    "q_img": "CHIM-C10-COMM-026.png",
+    "sol_img": "sol_CHIM_C10_Q026_1.png",
+    "notation": true
+   },
+   {
+    "id": "BIO-C05-COMM-109",
+    "subject": "BIO",
+    "chapter": "5",
+    "chapter_title": "Le strutture cellulari: biogenesi, morfologia e funzioni",
+    "qtype": "Quiz commentati",
+    "qnum": "109",
+    "page": "479",
+    "stem": "Nell'endocitosi della transferrina, cosa viene riciclato alla membrana plasmatica?",
+    "options": [
+     [
+      "A",
+      "Il ferro Fe³⁺"
+     ],
+     [
+      "B",
+      "L'endosoma tardivo"
+     ],
+     [
+      "C",
+      "Il recettore della transferrina"
+     ],
+     [
+      "D",
+      "La ferritina"
+     ],
+     [
+      "E",
+      "LEGF"
+     ]
+    ],
+    "answer": "Risposta corretta: C. Il recettore della transferrina",
+    "explanation": "Dopo il rilascio del ferro nel compartimento endosomiale acido, il recettore della transferrina ritorna alla membrana plasmatica per essere riutilizzato.",
+    "q_img": "BIO-C05-COMM-109.png",
+    "sol_img": "sol_BIO_C05_Q109_1.png",
+    "notation": true
+   },
+   {
+    "id": "BIO-C04-COMM-057",
+    "subject": "BIO",
+    "chapter": "4",
+    "chapter_title": "I meccanismi cellulari di trasmissione e controllo dei caratteri selvatici e mutati",
+    "qtype": "Quiz commentati",
+    "qnum": "57",
+    "page": "427",
+    "stem": "La talassemia è una malattia ereditaria dovuta a mutazioni nei geni delle catene globiniche: la condizione omozigote mutata determina una forma grave detta “talassemia maior”, mentre la condizione eterozigote determina una forma lieve/microcitemica chiamata “talassemia minor”. Un uomo con talassemia minor sposa una donna sana (omozigote normale). Quale probabilità c'è che nascano dalla coppia figli con talassemia minor?",
+    "options": [
+     [
+      "A",
+      "Nessuna"
+     ],
+     [
+      "B",
+      "25%"
+     ],
+     [
+      "C",
+      "50%"
+     ],
+     [
+      "D",
+      "75%"
+     ],
+     [
+      "E",
+      "100%"
+     ]
+    ],
+    "answer": "Risposta corretta: C. 50%",
+    "explanation": "La talassemia segue un'ereditarietà autosomica recessiva rispetto alla forma grave (maior, genotipo tt), con espressione microcitemica lieve negli eterozigoti (talassemia minor, genotipo Tt), mentre gli individui sani hanno genotipo omozigote normale (TT). Dall'incrocio Tt × TT metà dei gameti paterni porta l'allele mutato t e metà l'allele normale T, mentre tutti i gameti materni portano T: la progenie sarà per il 50% TT (sana) e per il 50% Tt (talassemia minor).",
+    "q_img": "BIO-C04-COMM-057.png",
+    "sol_img": "sol_BIO_C04_Q057_1.png",
+    "notation": true
+   },
+   {
+    "id": "CHIM-C09-COMM-001",
+    "subject": "CHIM",
+    "chapter": "9",
+    "chapter_title": "Le reazioni di ossido-riduzione",
+    "qtype": "Quiz commentati",
+    "qnum": "1",
+    "page": "130",
+    "stem": "Indicare il composto in cui il fosforo ha il più basso numero di ossidazione.",
+    "options": [
+     [
+      "A",
+      "Nessuna delle risposte è corretta"
+     ],
+     [
+      "B",
+      "HPO₃"
+     ],
+     [
+      "C",
+      "H₃PO₄"
+     ],
+     [
+      "D",
+      "P₂O₅"
+     ],
+     [
+      "E",
+      "P₂O₃"
+     ]
+    ],
+    "answer": "Risposta corretta: E. P₂O₃",
+    "explanation": "Per determinare il numero di ossidazione del fosforo in ciascun composto, consideriamo che l'ossigeno ha n.o. -2 e l'idrogeno +1. La somma deve dare zero: • HPO₃: +1 + x + 3(-2) = 0 → x = +5 • H₃PO₄: 3(+1) + x + 4(-2) = 0 → x = +5 • P₂O₅: 2x + 5(-2) = 0 → x = +5 • P₂O₃: 2x + 3(-2) = 0 → x = +3. Il fosforo ha quindi il numero di ossidazione più basso (+3) in P₂O₃ (risposta E). Negli altri composti ha sempre +5.",
+    "q_img": "CHIM-C09-COMM-001.png",
+    "sol_img": "sol_CHIM_C09_Q001_1.png",
+    "notation": true
+   },
+   {
+    "id": "CHIM-C02-COMM-029",
+    "subject": "CHIM",
+    "chapter": "2",
+    "chapter_title": "Il modello atomico: chimica e orbitali",
+    "qtype": "Quiz commentati",
+    "qnum": "29",
+    "page": "25",
+    "stem": "Qual è la struttura elettronica fondamentale dello ione F²⁻?",
+    "options": [
+     [
+      "A",
+      "1s² 2s² 2p⁶ 3s¹"
+     ],
+     [
+      "B",
+      "1s² 2s² 3s¹ 2p⁶"
+     ],
+     [
+      "C",
+      "1s² 2s² 2p⁵ 3s²"
+     ],
+     [
+      "D",
+      "1s¹ 2s² 2p⁶"
+     ],
+     [
+      "E",
+      "1s² 2s² 2p⁶ 2d¹"
+     ]
+    ],
+    "answer": "Risposta corretta: A. 1s² 2s² 2p⁶ 3s¹",
+    "explanation": "Il fluoro nel suo stato fondamentale ha 9 elettroni, disposti così: 1s² 2s² 2p⁵. Nello ione F²⁻ il primo elettrone aggiunto completa il guscio 2p, mentre il secondo occupa l'orbitale 3s, ottenendo così la configurazione 1s² 2s² 2p⁶ 3s¹. La scrittura corretta ha questo ordine in quanto l'orbitale 3s ha più energia del 2p.",
+    "q_img": "CHIM-C02-COMM-029.png",
+    "sol_img": "sol_CHIM_C02_Q029_1.png",
+    "notation": true
+   }
+  ]
+ },
+ "agent8": {
+  "label": "solution crops",
+  "cards": [
+   {
+    "id": "BIO-C06-COMM-047",
+    "subject": "BIO",
+    "chapter": "6",
+    "chapter_title": "La cellula e l'ambiente, la segnalazione cellulare e la trasduzione del segnale",
+    "qtype": "Quiz commentati",
+    "qnum": "47",
+    "page": "533",
+    "stem": "Gli RTK possono attivare la via PI3K-Akt tramite:",
+    "options": [
+     [
+      "A",
+      "apertura di canali Na⁺"
+     ],
+     [
+      "B",
+      "attivazione di Ras"
+     ],
+     [
+      "C",
+      "fosforilazione di PI3K e produzione di PIP₃"
+     ],
+     [
+      "D",
+      "degradazione di p53"
+     ],
+     [
+      "E",
+      "legame con Rb"
+     ]
+    ],
+    "answer": "Risposta corretta: C. fosforilazione di PI3K e produzione di PIP₃",
+    "explanation": "La subunità regolatoria di PI3K si lega a RTK fosforilati, attivando la via che genera PIP, e stimola Akt.",
+    "q_img": "BIO-C06-COMM-047.png",
+    "sol_img": "sol_BIO_C06_Q047_1.png",
+    "notation": true
+   },
+   {
+    "id": "BIO-C07-COMM-067",
+    "subject": "BIO",
+    "chapter": "7",
+    "chapter_title": "Il controllo della proliferazione e della sopravvivenza cellulare",
+    "qtype": "Quiz commentati",
+    "qnum": "67",
+    "page": "565",
+    "stem": "Qual è una caratteristica morfologica dell’'apoptosi?",
+    "options": [
+     [
+      "A",
+      "La formazione di corpi apoptotici fagocitati senza infiammazione"
+     ],
+     [
+      "B",
+      "La lisi immediata della cellula"
+     ],
+     [
+      "C",
+      "L'aumento del volume cellulare"
+     ],
+     [
+      "D",
+      "La perdita casuale di DNA"
+     ],
+     [
+      "E",
+      "La rottura della membrana e rilascio di enzimi lisosomiali"
+     ]
+    ],
+    "answer": "Risposta corretta: A. La formazione di corpi apoptotici fagocitati senza infiammazione",
+    "explanation": "L'apoptosi comporta diminuzione di volume della cellula, inoltre il DNA si frammenta e si formano corpi apoptotici che vengono fagocitati senza reazioni infiammatorie.",
+    "q_img": "BIO-C07-COMM-067.png",
+    "sol_img": "sol_BIO_C07_Q067_1.png",
+    "notation": false
+   },
+   {
+    "id": "BIO-C07-COMM-010",
+    "subject": "BIO",
+    "chapter": "7",
+    "chapter_title": "Il controllo della proliferazione e della sopravvivenza cellulare",
+    "qtype": "Quiz commentati",
+    "qnum": "10",
+    "page": "559",
+    "stem": "Quale recettore di morte è fondamentale nella via estrinseca dell'apoptosi?",
+    "options": [
+     [
+      "A",
+      "EGFR"
+     ],
+     [
+      "B",
+      "InsR"
+     ],
+     [
+      "C",
+      "TGF-BR"
+     ],
+     [
+      "D",
+      "Notch"
+     ],
+     [
+      "E",
+      "Fas (CD95) Ila"
+     ]
+    ],
+    "answer": "Risposta corretta: E. Fas (CD95) Ila",
+    "explanation": "Dopo il legame con il suo ligando FasL, il recettore Fas si associa alla proteina FADD (Fas-Associated protein with Death Domain) e a procaspasi iniziatrici formando il complesso DISC (Death Inducing Signaling Complex).",
+    "q_img": "BIO-C07-COMM-010.png",
+    "sol_img": "sol_BIO_C07_Q010_1.png",
+    "notation": false
+   },
+   {
+    "id": "CHIM-C13-COMM-002",
+    "subject": "CHIM",
+    "chapter": "13",
+    "chapter_title": "Sostanze organiche di interesse biologico",
+    "qtype": "Quiz commentati",
+    "qnum": "2",
+    "page": "228",
+    "stem": "Quale delle seguenti sostanze si scioglie meglio in solventi apolari?",
+    "options": [
+     [
+      "A",
+      "L'acido solforico"
+     ],
+     [
+      "B",
+      "L'acetato di potassio"
+     ],
+     [
+      "C",
+      "Un grasso neutro"
+     ],
+     [
+      "D",
+      "L'idrossido di sodio"
+     ],
+     [
+      "E",
+      "1! solfato di potassio"
+     ]
+    ],
+    "answer": "Risposta corretta: C. Un grasso neutro",
+    "explanation": "“Il simile scioglie il simile”. Significa che un solvente apolare scioglierà facilmente sostanze apolari. Fra quelle indicate la sostanza maggiormente apolare è il grasso neutro (trigliceride).",
+    "q_img": "CHIM-C13-COMM-002.png",
+    "sol_img": "sol_CHIM_C13_Q002_1.png",
+    "notation": false
+   },
+   {
+    "id": "BIO-C03-COMM-049",
+    "subject": "BIO",
+    "chapter": "3",
+    "chapter_title": "Il flusso dell'informazione",
+    "qtype": "Quiz commentati",
+    "qnum": "49",
+    "page": "383",
+    "stem": "Nei procarioti, quale molecola catalizza il legame peptidico durante l’altungamento?",
+    "options": [
+     [
+      "A",
+      "EF-Tu"
+     ],
+     [
+      "B",
+      "L'mRNA"
+     ],
+     [
+      "C",
+      "L⁻amminoacil-tRNA sintetasi"
+     ],
+     [
+      "D",
+      "LrRNA 23S della subunità maggiore (attività peptidil-transferasica)"
+     ],
+     [
+      "E",
+      "Il fattore 1F3"
+     ]
+    ],
+    "answer": "Risposta corretta: D. LrRNA 23S della subunità maggiore (attività peptidil-transferasica)",
+    "explanation": "Il legame peptidico non è catalizzato da una proteina, ma da un ribozima: l'rRNA 23S (nei procarioti) o l'rRNA 28S (negli eucarioti). Questo dimostra la natura catalitica degli rRNA.",
+    "q_img": "BIO-C03-COMM-049.png",
+    "sol_img": "sol_BIO_C03_Q049_1.png",
+    "notation": true
+   }
+  ]
+ }
+}

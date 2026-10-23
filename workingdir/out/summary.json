@@ -1,0 +1,6726 @@
+{
+ "live_path": "/Users/db/Documents/projects/anki/workingdir/colpkg/collection_anki21b.db",
+ "apkg_path": "/Users/db/Documents/projects/anki/workingdir/apkg/collection.anki2",
+ "live_notes": 13459,
+ "apkg_notes": 7078,
+ "live_cards": 14933,
+ "apkg_cards": 7078,
+ "live_guids": 13459,
+ "apkg_guids": 7078,
+ "guid_matched": 0,
+ "live_only": 13459,
+ "apkg_only": 7078,
+ "dup_guid_live": 0,
+ "dup_guid_apkg": 0,
+ "guid_overlap_pct": 0.0,
+ "live_nt_count": 65,
+ "apkg_nt_count": 1,
+ "live_nt_names": [
+  [
+   "Semestre Filtro [04 Neo-Brutalist Risoprint Zine]++",
+   6948
+  ],
+  [
+   "Basic++",
+   1740
+  ],
+  [
+   "Cloze++++++",
+   931
+  ],
+  [
+   "Basique",
+   681
+  ],
+  [
+   "Cloze+",
+   605
+  ],
+  [
+   "Basic+++++++++++++++++",
+   313
+  ],
+  [
+   "Image Occlusion+++",
+   312
+  ],
+  [
+   "Image Occlusion Enhanced+",
+   196
+  ],
+  [
+   "Basic++++++++++++++++++++",
+   159
+  ],
+  [
+   "Image Occlusion Enhanced++++",
+   144
+  ],
+  [
+   "Basic+++",
+   134
+  ],
+  [
+   "Texte à trous",
+   134
+  ],
+  [
+   "Cloze+++++",
+   131
+  ],
+  [
+   "Basic+++++",
+   80
+  ],
+  [
+   "Image Occlusion Enhanced+++",
+   75
+  ],
+  [
+   "Basic (and reversed card)++",
+   68
+  ],
+  [
+   "Image Occlusion++",
+   64
+  ],
+  [
+   "Basic-10b69",
+   59
+  ],
+  [
+   "Basic-dcc56",
+   55
+  ],
+  [
+   "Basic++++++++++++",
+   53
+  ],
+  [
+   "Basic++++++++++++++++",
+   47
+  ],
+  [
+   "Basic+++++++++",
+   39
+  ],
+  [
+   "Basic-9b22e",
+   35
+  ],
+  [
+   "Basic+++++++++++++++++++",
+   35
+  ],
+  [
+   "Basic+++++++++++++",
+   34
+  ],
+  [
+   "Basic (and reversed card)+++",
+   33
+  ],
+  [
+   "Cloze++++",
+   31
+  ],
+  [
+   "Cloze++",
+   30
+  ],
+  [
+   "Basic Quizlet",
+   30
+  ],
+  [
+   "Basic++++++",
+   29
+  ],
+  [
+   "Schéma à Remplir",
+   27
+  ],
+  [
+   "Basic++++++++",
+   26
+  ],
+  [
+   "Basic+++++++++++++++",
+   26
+  ],
+  [
+   "Basic++++++++++++++",
+   25
+  ],
+  [
+   "Basic++++++++++++++++++",
+   24
+  ],
+  [
+   "Basic+++++++",
+   17
+  ],
+  [
+   "Basic+++++++++++",
+   14
+  ],
+  [
+   "Basic (type in the answer)+",
+   14
+  ],
+  [
+   "Basic++++",
+   13
+  ],
+  [
+   "Basic++++++++++",
+   12
+  ],
+  [
+   "Cloze deletion",
+   12
+  ],
+  [
+   "Image Occlusion Enhanced++",
+   9
+  ],
+  [
+   "Basic (type in the answer)++",
+   6
+  ],
+  [
+   "Cloze+++",
+   3
+  ],
+  [
+   "Image Occlusion Enhanced+++++",
+   3
+  ],
+  [
+   "Basic (and reversed card)+",
+   2
+  ],
+  [
+   "Dictionary Entry",
+   1
+  ]
+ ],
+ "apkg_nt_names": [
+  [
+   "Semestre Filtro EdiSES — Studio & Esame",
+   7078
+  ]
+ ],
+ "live_schema_src": "schema18 (notetypes/fields)",
+ "apkg_schema_src": "legacy col.models JSON",
+ "sfld_pairs": 6948,
+ "sfld_ambiguous": 0,
+ "sfld_common_keys": 6948,
+ "itemid_pairs": 6948,
+ "itemid_ambiguous": 0,
+ "itemid_unpaired": 130,
+ "itemid_unpaired_ids": [
+  "CHIM-C01-NCOM-017",
+  "CHIM-C01-NCOM-018",
+  "CHIM-C01-NCOM-023",
+  "CHIM-C02-COMP-009",
+  "CHIM-C03-NCOM-009",
+  "CHIM-C03-NCOM-040",
+  "CHIM-C03-NCOM-044",
+  "CHIM-C03-NCOM-116",
+  "CHIM-C03-NCOM-132",
+  "CHIM-C03-NCOM-134",
+  "CHIM-C03-NCOM-160",
+  "CHIM-C03-NCOM-169",
+  "CHIM-C03-NCOM-177",
+  "CHIM-C04-NCOM-088",
+  "CHIM-C04-NCOM-089",
+  "CHIM-C04-NCOM-091",
+  "CHIM-C05-NCOM-006",
+  "CHIM-C05-NCOM-021",
+  "CHIM-C05-NCOM-032",
+  "CHIM-C05-NCOM-039",
+  "CHIM-C05-COMP-017",
+  "CHIM-C05-COMP-034",
+  "CHIM-C06-COMM-020",
+  "CHIM-C06-NCOM-012",
+  "CHIM-C06-COMP-005",
+  "CHIM-C06-COMP-028",
+  "CHIM-C06-COMP-029",
+  "CHIM-C07-NCOM-003",
+  "CHIM-C09-NCOM-013",
+  "CHIM-C09-NCOM-033",
+  "CHIM-C09-NCOM-037",
+  "CHIM-C09-NCOM-039",
+  "CHIM-C09-NCOM-040",
+  "CHIM-C09-NCOM-058",
+  "CHIM-C09-NCOM-069",
+  "CHIM-C09-NCOM-078",
+  "CHIM-C09-NCOM-080",
+  "CHIM-C09-NCOM-097",
+  "CHIM-C09-NCOM-110",
+  "CHIM-C09-NCOM-120",
+  "CHIM-C09-NCOM-130",
+  "CHIM-C09-COMP-005",
+  "CHIM-C09-COMP-006",
+  "CHIM-C09-COMP-007",
+  "CHIM-C09-COMP-008",
+  "CHIM-C10-COMM-004",
+  "CHIM-C10-NCOM-047",
+  "CHIM-C10-NCOM-051",
+  "CHIM-C10-NCOM-083",
+  "CHIM-C10-NCOM-084",
+  "CHIM-C10-NCOM-093",
+  "CHIM-C10-NCOM-094",
+  "CHIM-C11-NCOM-022",
+  "CHIM-C11-NCOM-023",
+  "CHIM-C11-NCOM-033",
+  "CHIM-C11-NCOM-047",
+  "CHIM-C11-NCOM-122",
+  "CHIM-C12-NCOM-011",
+  "CHIM-C12-NCOM-153",
+  "CHIM-C12-NCOM-273",
+  "CHIM-C12-NCOM-296",
+  "CHIM-C12-NCOM-298",
+  "CHIM-C12-NCOM-303",
+  "CHIM-C12-NCOM-304",
+  "CHIM-C13-NCOM-026",
+  "CHIM-C13-NCOM-048",
+  "CHIM-C13-NCOM-130",
+  "CHIM-C13-NCOM-134",
+  "CHIM-C13-NCOM-135",
+  "CHIM-C13-NCOM-143",
+  "CHIM-C13-NCOM-147",
+  "CHIM-C13-NCOM-174",
+  "CHIM-C13-NCOM-175",
+  "BIO-C01-NCOM-066",
+  "BIO-C01-NCOM-095",
+  "BIO-C01-NCOM-168",
+  "BIO-C01-NCOM-180",
+  "BIO-C01-NCOM-213",
+  "BIO-C01-NCOM-235",
+  "BIO-C02-NCOM-050",
+  "BIO-C02-NCOM-051",
+  "BIO-C02-NCOM-073",
+  "BIO-C02-NCOM-074",
+  "BIO-C02-NCOM-084",
+  "BIO-C02-NCOM-086",
+  "BIO-C03-NCOM-031",
+  "BIO-C03-NCOM-059",
+  "BIO-C03-NCOM-065",
+  "BIO-C03-NCOM-074",
+  "BIO-C03-NCOM-085",
+  "BIO-C03-NCOM-087",
+  "BIO-C03-NCOM-113",
+  "BIO-C04-NCOM-052",
+  "BIO-C04-NCOM-094",
+  "BIO-C04-NCOM-103",
+  "BIO-C04-NCOM-129",
+  "BIO-C04-NCOM-133",
+  "BIO-C04-NCOM-144",
+  "BIO-C04-NCOM-163",
+  "BIO-C04-NCOM-175",
+  "BIO-C04-NCOM-224",
+  "BIO-C05-NCOM-014",
+  "BIO-C05-NCOM-015",
+  "BIO-C05-NCOM-141",
+  "BIO-C05-NCOM-144",
+  "BIO-C05-NCOM-169",
+  "BIO-C05-NCOM-275",
+  "BIO-C06-NCOM-114",
+  "BIO-C06-NCOM-131",
+  "BIO-C07-NCOM-098",
+  "BIO-C07-NCOM-106",
+  "BIO-C07-NCOM-107",
+  "BIO-C07-NCOM-108",
+  "BIO-C07-NCOM-109",
+  "BIO-C07-NCOM-129",
+  "BIO-C07-NCOM-143",
+  "FIS-C01-NCOM-072",
+  "FIS-C02-COMP-033",
+  "FIS-C03-NCOM-140",
+  "FIS-C03-COMP-112",
+  "FIS-C03-COMP-176",
+  "FIS-C03-COMP-183",
+  "FIS-C04-NCOM-014",
+  "FIS-C05-NCOM-005",
+  "FIS-C05-NCOM-077",
+  "FIS-C05-NCOM-108",
+  "FIS-C05-NCOM-109",
+  "FIS-C07-COMP-007",
+  "FIS-C08-NCOM-002",
+  "FIS-C08-NCOM-018"
+ ],
+ "itemid_changed": 6948,
+ "itemid_identical": 0,
+ "itemid_diff_fields": 34856,
+ "itemid_nt_pairs": [
+  [
+   [
+    "Semestre Filtro EdiSES — Studio & Esame",
+    "Semestre Filtro [04 Neo-Brutalist Risoprint Zine]++"
+   ],
+   6948
+  ]
+ ],
+ "itemid_fc_mismatch": 6948,
+ "cat_field": {
+  "other": 30780,
+  "whitespace-html": 2789,
+  "exponents": 1250,
+  "roots": 38,
+  "neq": 4
+ },
+ "cat_note": {
+  "whitespace-html": 1532,
+  "exponents": 492,
+  "other": 4914,
+  "roots": 8,
+  "neq": 2
+ },
+ "field_changed": {
+  "ChapterNum": 5839,
+  "QuizTypeLabel": 6948,
+  "FrontOptionsHTML": 4893,
+  "BackOptionsHTML": 4893,
+  "AnswerBannerHTML": 4935,
+  "ExplanationHTML": 777,
+  "FigureHTML": 755,
+  "FrontStemHTML": 2902,
+  "BackStemHTML": 2914
+ },
+ "field_identical": {
+  "ItemID": 6948,
+  "Subject": 6948,
+  "SubjectCode": 6948,
+  "ChapterTitle": 6948,
+  "QuestionNum": 6948,
+  "BookPage": 6948,
+  "FrontStemHTML": 4046,
+  "BackStemHTML": 4034,
+  "SolutionScanHTML": 6948,
+  "FigureHTML": 6193,
+  "ExplanationHTML": 6171,
+  "FrontOptionsHTML": 2055,
+  "BackOptionsHTML": 2055,
+  "AnswerBannerHTML": 2013,
+  "ChapterNum": 1109
+ },
+ "destructive_n": 816,
+ "destructive": [
+  {
+   "id": "CHIM-C01-COMM-001",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-COMM-003",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-COMM-004",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-COMM-005",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-COMM-006",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-COMM-007",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-COMM-008",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-COMM-009",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-COMM-010",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-001",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-002",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-003",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-004",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-005",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-006",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-007",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-008",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-009",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-010",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-011",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-012",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-013",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-014",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-015",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-016",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-019",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-020",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-021",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-022",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-024",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-025",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-026",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-027",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-028",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-029",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-030",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-031",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-032",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-033",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-034",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-035",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-037",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-038",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-039",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-040",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-041",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-042",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-043",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-044",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-045",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-046",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-047",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-048",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-049",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-050",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-051",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-052",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-053",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-054",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-055",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-056",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-057",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-059",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-060",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-061",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-062",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-063",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-064",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-066",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-067",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-068",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-069",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-071",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-072",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-073",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-074",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-075",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-076",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-077",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-078",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-079",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-080",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-081",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-082",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-083",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-084",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-085",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-086",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-087",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-088",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-089",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-090",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-091",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-092",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-093",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-094",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-095",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-096",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-097",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-098",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-099",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-100",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-101",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-102",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-103",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-104",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-105",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-106",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-108",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-109",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-110",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-111",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-112",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-113",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-114",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-115",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-116",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-117",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-118",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-119",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-120",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C01-NCOM-121",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-001",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-002",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-004",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-006",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-007",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-008",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-009",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-010",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-011",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-012",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 92→27 (71% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-012",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-013",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-014",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-015",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-016",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-017",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-018",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-019",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-020",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-031",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 1014→4759 (79% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-031",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-037",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-COMM-038",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-NCOM-006",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-NCOM-015",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-NCOM-021",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-NCOM-022",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-NCOM-031",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-NCOM-038",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-NCOM-039",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C02-NCOM-040",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-COMM-008",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-COMM-010",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-COMM-012",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-COMM-019",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-COMM-021",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 265→118 (55% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-004",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-007",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-010",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-012",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-013",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-015",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-016",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-020",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-023",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-033",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-041",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-054",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-057",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-069",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-077",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-081",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-111",
+   "field": "FrontOptionsHTML",
+   "flags": [
+    "length 47→103 (54% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-111",
+   "field": "BackOptionsHTML",
+   "flags": [
+    "length 47→105 (55% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-115",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-133",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-141",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-143",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-149",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-166",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-172",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-173",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-174",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-179",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C03-NCOM-181",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C04-COMM-001",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C04-COMM-009",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 296→760 (61% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C04-COMM-014",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C04-COMM-020",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C04-NCOM-002",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C04-NCOM-006",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C04-NCOM-008",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C04-NCOM-029",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C04-NCOM-045",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C04-NCOM-051",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C04-NCOM-052",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C04-NCOM-055",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C04-NCOM-061",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C05-COMM-005",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C05-COMM-008",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C05-COMM-010",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C05-COMM-015",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C05-COMM-018",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C05-NCOM-002",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C05-NCOM-009",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C05-NCOM-018",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C05-NCOM-028",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C06-COMM-006",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 119→259 (54% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C06-COMM-008",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C06-COMM-010",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C06-COMM-015",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C06-COMM-018",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 342→1073 (68% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C06-COMM-018",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C06-NCOM-014",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C06-NCOM-033",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C06-NCOM-039",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C06-NCOM-045",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C06-NCOM-093",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-COMM-007",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 281→580 (52% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-COMM-007",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-COMM-008",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-COMM-010",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-COMM-012",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 296→823 (64% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-COMM-021",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-COMM-025",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 241→484 (50% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-COMM-026",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 232→553 (58% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-COMM-027",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-COMM-028",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 219→1044 (79% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-COMM-028",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-COMM-029",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-COMM-030",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-004",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-005",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-006",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-008",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-009",
+   "field": "AnswerBannerHTML",
+   "flags": [
+    "length 42→90 (53% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-012",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-013",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-014",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-015",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-016",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-017",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-020",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-021",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-023",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-027",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-029",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-040",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-041",
+   "field": "AnswerBannerHTML",
+   "flags": [
+    "length 44→89 (51% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-041",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-045",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C07-NCOM-054",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C08-COMM-001",
+   "field": "FrontStemHTML",
+   "flags": [
+    "length 19→138 (86% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C08-COMM-001",
+   "field": "BackStemHTML",
+   "flags": [
+    "length 19→138 (86% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C08-COMM-001",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C08-COMM-004",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C08-COMM-007",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C08-NCOM-002",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C08-NCOM-003",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C08-NCOM-009",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C09-COMM-002",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 245→599 (59% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C09-COMM-004",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C09-NCOM-007",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C09-NCOM-030",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C09-NCOM-034",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C09-NCOM-048",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C09-NCOM-056",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C09-NCOM-063",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C09-NCOM-067",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C09-NCOM-081",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C09-NCOM-092",
+   "field": "AnswerBannerHTML",
+   "flags": [
+    "length 40→88 (55% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C09-NCOM-107",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C09-NCOM-112",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C09-NCOM-115",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C09-NCOM-117",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C09-NCOM-121",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C09-NCOM-124",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-COMM-002",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-COMM-011",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-COMM-012",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-COMM-015",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-COMM-021",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-NCOM-009",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-NCOM-028",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-NCOM-034",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-NCOM-036",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-NCOM-044",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-NCOM-052",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-NCOM-059",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-NCOM-060",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-NCOM-063",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-NCOM-064",
+   "field": "FigureHTML",
+   "flags": [
+    "apkg has no image (CHIM_C10_non__Q064.png dropped)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-NCOM-066",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-NCOM-071",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-NCOM-077",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-NCOM-081",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-NCOM-086",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-NCOM-088",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C10-NCOM-091",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-COMM-006",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 500→1085 (54% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-COMM-014",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-COMM-017",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-COMM-018",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-COMM-020",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 463→185 (60% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-COMM-021",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-COMM-023",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 327→159 (51% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-COMM-024",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-COMM-026",
+   "field": "FigureHTML",
+   "flags": [
+    "apkg has no image (CHIM_C11_comm_Q026.png dropped)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-COMM-032",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-COMM-033",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-017",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-025",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-028",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-030",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-035",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-038",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-043",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-048",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-050",
+   "field": "FigureHTML",
+   "flags": [
+    "apkg has no image (CHIM_C11_non__Q050_p2.png dropped)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-051",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-056",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-057",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-058",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-059",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-063",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-064",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-065",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-066",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-067",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-074",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-077",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-084",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-088",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-091",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-092",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-094",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-097",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-100",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-107",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-111",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-118",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-120",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-130",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-143",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-144",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-146",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-153",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-161",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C11-NCOM-172",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-COMM-007",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-COMM-014",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-COMM-022",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-COMM-035",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-008",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-016",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-041",
+   "field": "FigureHTML",
+   "flags": [
+    "apkg has no image (CHIM_C12_non__Q041.png dropped)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-042",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-049",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-054",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-059",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-069",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-081",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-090",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-091",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-098",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-102",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-108",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-117",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-119",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-123",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-128",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-134",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-135",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-141",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-142",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-159",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-166",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-173",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-174",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-178",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-183",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-184",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-189",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-193",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-195",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-201",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-202",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-210",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-217",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-221",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-246",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-247",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-249",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-256",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-263",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-268",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-271",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-288",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-NCOM-306",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C12-COMP-053",
+   "field": "ExplanationHTML",
+   "flags": [
+    "field emptied",
+    "length 201→0 (100% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C13-COMM-017",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 161→36 (78% change)"
+   ]
+  },
+  {
+   "id": "CHIM-C13-COMM-022",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C13-COMM-024",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C13-NCOM-041",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C13-NCOM-066",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C13-NCOM-098",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C13-NCOM-100",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C13-NCOM-104",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C13-NCOM-177",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "CHIM-C13-NCOM-178",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-COMM-033",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-COMM-037",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-COMM-038",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-COMM-039",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-COMM-040",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-COMM-041",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-COMM-044",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-001",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-002",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-003",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-005",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-006",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-007",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-038",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-039",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-040",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-041",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-042",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-043",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-046",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-047",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-048",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-049",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-050",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-052",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-053",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-055",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-057",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-058",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-059",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-060",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-062",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-063",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-119",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-120",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-121",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-122",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-123",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-124",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-125",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-127",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-137",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-167",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-245",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C01-NCOM-260",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C02-COMM-005",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C02-NCOM-019",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C02-NCOM-033",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C02-NCOM-060",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C02-NCOM-071",
+   "field": "FrontOptionsHTML",
+   "flags": [
+    "length 23→79 (71% change)"
+   ]
+  },
+  {
+   "id": "BIO-C02-NCOM-071",
+   "field": "BackOptionsHTML",
+   "flags": [
+    "length 23→81 (72% change)"
+   ]
+  },
+  {
+   "id": "BIO-C02-NCOM-075",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C02-NCOM-080",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C02-NCOM-092",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C02-NCOM-094",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C02-NCOM-095",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C02-NCOM-101",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C02-NCOM-119",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C02-NCOM-121",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-COMM-002",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-COMM-019",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-COMM-021",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "BIO-C03-COMM-032",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-COMM-036",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-COMM-037",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-COMM-040",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-COMM-051",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-010",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-033",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-038",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-071",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-080",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-082",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-101",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-107",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-112",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-115",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-118",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-124",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-127",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-134",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-147",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-155",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-156",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-165",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-214",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-237",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C03-NCOM-245",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-002",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-012",
+   "field": "FrontOptionsHTML",
+   "flags": [
+    "length 29→77 (62% change)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-012",
+   "field": "BackOptionsHTML",
+   "flags": [
+    "length 29→79 (63% change)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-015",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-031",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-037",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-039",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-049",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-052",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-053",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-061",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-062",
+   "field": "BackOptionsHTML",
+   "flags": [
+    "length 48→98 (51% change)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-062",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-066",
+   "field": "FrontOptionsHTML",
+   "flags": [
+    "length 61→124 (51% change)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-066",
+   "field": "BackOptionsHTML",
+   "flags": [
+    "length 61→126 (52% change)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-068",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-069",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-078",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-COMM-081",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-007",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-008",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-009",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-012",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-042",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-058",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-065",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-096",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-098",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-108",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-127",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-131",
+   "field": "FrontOptionsHTML",
+   "flags": [
+    "length 22→70 (69% change)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-131",
+   "field": "BackOptionsHTML",
+   "flags": [
+    "length 22→72 (69% change)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-155",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-158",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-166",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-174",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-198",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-204",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-208",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-211",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-213",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-214",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C04-NCOM-217",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-COMM-002",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-COMM-012",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-COMM-019",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-COMM-024",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-COMM-029",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-COMM-056",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-COMM-067",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-COMM-069",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-COMM-075",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-COMM-079",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-COMM-083",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 256→119 (54% change)"
+   ]
+  },
+  {
+   "id": "BIO-C05-COMM-083",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-COMM-117",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-COMM-123",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-COMM-127",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-COMM-128",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-COMM-129",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-COMM-147",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-005",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-026",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-049",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-061",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-069",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-077",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-081",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-083",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-089",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-094",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-117",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-133",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-182",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-185",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-191",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-192",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-255",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-283",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-296",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C05-NCOM-299",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C06-COMM-022",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C06-COMM-037",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C06-NCOM-070",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C06-NCOM-078",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C06-NCOM-088",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C06-NCOM-121",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C06-NCOM-185",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C07-COMM-006",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C07-COMM-010",
+   "field": "FrontOptionsHTML",
+   "flags": [
+    "length 47→103 (54% change)"
+   ]
+  },
+  {
+   "id": "BIO-C07-COMM-010",
+   "field": "BackOptionsHTML",
+   "flags": [
+    "length 47→105 (55% change)"
+   ]
+  },
+  {
+   "id": "BIO-C07-COMM-010",
+   "field": "AnswerBannerHTML",
+   "flags": [
+    "length 36→88 (59% change)"
+   ]
+  },
+  {
+   "id": "BIO-C07-COMM-025",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C07-COMM-038",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C07-COMM-049",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-020",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-030",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-032",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-037",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-048",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-055",
+   "field": "FrontStemHTML",
+   "flags": [
+    "length 217→68 (69% change)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-055",
+   "field": "BackStemHTML",
+   "flags": [
+    "length 217→68 (69% change)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-055",
+   "field": "FrontOptionsHTML",
+   "flags": [
+    "length 369→161 (56% change)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-055",
+   "field": "BackOptionsHTML",
+   "flags": [
+    "length 369→163 (56% change)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-055",
+   "field": "AnswerBannerHTML",
+   "flags": [
+    "length 122→60 (51% change)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-065",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-116",
+   "field": "BackOptionsHTML",
+   "flags": [
+    "length 57→115 (50% change)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-117",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-123",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-126",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-130",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-139",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-140",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-170",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-174",
+   "field": "FrontOptionsHTML",
+   "flags": [
+    "length 32→88 (64% change)"
+   ]
+  },
+  {
+   "id": "BIO-C07-NCOM-174",
+   "field": "BackOptionsHTML",
+   "flags": [
+    "length 32→90 (64% change)"
+   ]
+  },
+  {
+   "id": "FIS-C01-COMM-008",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C01-COMM-013",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C01-COMM-016",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C01-COMM-018",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C01-COMM-023",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C01-COMM-024",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "FIS-C01-NCOM-010",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C01-NCOM-038",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C01-NCOM-054",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C01-NCOM-059",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C01-NCOM-075",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C01-NCOM-079",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C01-NCOM-092",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C02-COMM-001",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 142→285 (50% change)"
+   ]
+  },
+  {
+   "id": "FIS-C02-COMM-009",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C02-COMM-016",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C02-COMM-018",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C02-COMM-020",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 361→972 (63% change)"
+   ]
+  },
+  {
+   "id": "FIS-C02-NCOM-003",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C02-NCOM-007",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C02-NCOM-011",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C02-NCOM-013",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C02-NCOM-018",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C02-NCOM-019",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C02-NCOM-037",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C02-NCOM-043",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C02-NCOM-047",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C02-NCOM-057",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C02-NCOM-069",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C02-NCOM-070",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C02-NCOM-075",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-COMM-004",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-COMM-007",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-COMM-012",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 282→1110 (75% change)"
+   ]
+  },
+  {
+   "id": "FIS-C03-COMM-012",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-COMM-021",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-COMM-028",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-COMM-031",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-COMM-032",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 126→292 (57% change)"
+   ]
+  },
+  {
+   "id": "FIS-C03-COMM-032",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-COMM-034",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-COMM-037",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-COMM-039",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-COMM-042",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-COMM-044",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 260→921 (72% change)"
+   ]
+  },
+  {
+   "id": "FIS-C03-COMM-049",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-COMM-050",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-005",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-008",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-015",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-020",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-038",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-046",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-050",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-051",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-056",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-072",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-073",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-077",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-091",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-097",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-105",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-106",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-107",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-108",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-127",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-129",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-136",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-138",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-158",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-159",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-165",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-180",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-182",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C03-NCOM-185",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C04-COMM-006",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C04-COMM-008",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C04-NCOM-027",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C04-NCOM-032",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C04-NCOM-034",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C04-NCOM-044",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C04-NCOM-048",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "FIS-C04-NCOM-049",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C04-NCOM-061",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C04-NCOM-065",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C04-NCOM-068",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C04-NCOM-069",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C04-NCOM-072",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C04-NCOM-079",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C04-NCOM-083",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C04-NCOM-085",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "FIS-C04-NCOM-087",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-COMM-007",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-COMM-013",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 152→319 (52% change)"
+   ]
+  },
+  {
+   "id": "FIS-C05-COMM-013",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-COMM-015",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 310→902 (66% change)"
+   ]
+  },
+  {
+   "id": "FIS-C05-COMM-016",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-COMM-020",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 189→742 (75% change)"
+   ]
+  },
+  {
+   "id": "FIS-C05-COMM-021",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-COMM-023",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 130→434 (70% change)"
+   ]
+  },
+  {
+   "id": "FIS-C05-COMM-024",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-COMM-030",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-COMM-032",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-COMM-033",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-COMM-034",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 295→749 (61% change)"
+   ]
+  },
+  {
+   "id": "FIS-C05-COMM-037",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-COMM-038",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-COMM-040",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-NCOM-024",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-NCOM-025",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-NCOM-029",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-NCOM-039",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-NCOM-042",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-NCOM-057",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-NCOM-060",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-NCOM-075",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C05-NCOM-090",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-COMM-001",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-COMM-003",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-COMM-005",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-COMM-013",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-COMM-016",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-COMM-028",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-COMM-029",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-COMM-030",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 471→1066 (56% change)"
+   ]
+  },
+  {
+   "id": "FIS-C06-COMM-034",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-COMM-040",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 423→1031 (59% change)"
+   ]
+  },
+  {
+   "id": "FIS-C06-COMM-042",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-COMM-048",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-COMM-050",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-003",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-008",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-012",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-014",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-036",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-047",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-050",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-052",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-063",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-065",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-073",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-079",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-080",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-082",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-084",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-089",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-096",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-097",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-098",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-099",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-107",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-110",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-114",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-123",
+   "field": "FrontOptionsHTML",
+   "flags": [
+    "length 293→72 (75% change)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-123",
+   "field": "BackOptionsHTML",
+   "flags": [
+    "length 293→74 (75% change)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-123",
+   "field": "AnswerBannerHTML",
+   "flags": [
+    "length 75→27 (64% change)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-124",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-127",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-133",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-137",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-138",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-141",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-142",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-144",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-145",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-146",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-149",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-150",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-153",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-154",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-155",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-156",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-157",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-158",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-167",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C06-NCOM-182",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-COMM-003",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-COMM-008",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-COMM-012",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-COMM-014",
+   "field": "ExplanationHTML",
+   "flags": [
+    "length 362→947 (62% change)"
+   ]
+  },
+  {
+   "id": "FIS-C07-COMM-014",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-NCOM-006",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-NCOM-007",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-NCOM-010",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-NCOM-011",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-NCOM-012",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-NCOM-014",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-NCOM-017",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-NCOM-020",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-NCOM-023",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-NCOM-029",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-NCOM-043",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-NCOM-048",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-NCOM-050",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-NCOM-052",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C07-NCOM-053",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+2)"
+   ]
+  },
+  {
+   "id": "FIS-C07-NCOM-054",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C08-COMM-004",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C08-NCOM-004",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  },
+  {
+   "id": "FIS-C08-NCOM-017",
+   "field": "FigureHTML",
+   "flags": [
+    "image refs changed (-0/+1)"
+   ]
+  }
+ ],
+ "tag_pairs": 748,
+ "tag_added_only": 744,
+ "tag_removed_only": 4,
+ "tag_both": 0,
+ "tag_added_vocab": [
+  [
+   "con_figura",
+   744
+  ]
+ ],
+ "tag_removed_vocab": [
+  [
+   "con_figura",
+   4
+  ]
+ ],
+ "apkg_card_stats": {
+  "(0, 0)": 7078
+ },
+ "apkg_reps_nonzero": 0,
+ "apkg_type_nonzero": 0,
+ "apkg_queue_nonzero": 0,
+ "apkg_ivl_nonzero": 0,
+ "apkg_revlog": 0,
+ "live_cards_itemid": 6948,
+ "live_revlog_itemid": 237,
+ "live_semestre_cards": 6948,
+ "live_semestre_revlog": 237,
+ "colpkg_media": 14805,
+ "apkg_media": 1983,
+ "colpkg_media_sizes_ok": [
+  true,
+  0,
+  60
+ ],
+ "extra_live_field_names": [
+  "QuestionScanHTML"
+ ],
+ "extra_apkg_field_names": [],
+ "samples_general": [
+  {
+   "id": "FIS-C02-COMM-016",
+   "field": "ExplanationHTML",
+   "live": "Le dimensioni dell’accelerazione sono: [a] = [L - 7-7 J",
+   "apkg": "Le dimensioni dell’accelerazione sono: [a] = [L + 7-2]",
+   "cats": [
+    "other"
+   ],
+   "detectors": {}
+  },
+  {
+   "id": "BIO-C01-NCOM-053",
+   "field": "BackOptionsHTML",
+   "live": "A nanometro B millilitro C centimetro D micrometro E millimetro",
+   "apkg": "A. nanometro B. millilitro C. centimetro ✓ D. micrometro E. millimetro Capitolo 1 Le basi dell",
+   "cats": [
+    "other"
+   ],
+   "detectors": {
+    "period": [
+     0,
+     5
+    ]
+   }
+  },
+  {
+   "id": "FIS-C03-NCOM-098",
+   "field": "AnswerBannerHTML",
+   "live": "Risposta corretta: A. 180,62 J",
+   "apkg": "Risposta corretta: A — 180,62]",
+   "cats": [
+    "other"
+   ],
+   "detectors": {
+    "period": [
+     1,
+     0
+    ]
+   }
+  },
+  {
+   "id": "CHIM-C02-COMM-008",
+   "field": "BackOptionsHTML",
+   "live": "A appartengono al secondo gruppo della tavola periodica B possiedono lo stesso numero di protoni C appartengono allo stesso periodo della tavola periodica D sono dei non metalli E possiedono lo stesso numero di elettroni…",
+   "apkg": "A. appartengono al secondo gruppo della tavola periodica B. possiedono lo stesso numero di protoni ce |__| C. appartengono allo stesso periodo della tavola periodica D. sono dei non metalli ✓ E. possiedono lo stesso nume…",
+   "cats": [
+    "other"
+   ],
+   "detectors": {
+    "period": [
+     0,
+     5
+    ]
+   }
+  },
+  {
+   "id": "BIO-C01-COMM-044",
+   "field": "BackOptionsHTML",
+   "live": "A la quantità di purine è sempre uguale a quella di pirimidine B la quantità di adenina è sempre uguale a quella della citosina C le coppie A-T e C-G sono sempre presenti in uguale percentuale D ilrapportotraA+TeG+Cèdila…",
+   "apkg": "✓ A. la quantità di purine è sempre uguale a quella di pirimidine B. la quantità di adenina è sempre uguale a quella della citosina C. le coppie A-T e C-G sono sempre presenti in uguale percentuale D. ilrapportotraA+TeG+…",
+   "cats": [
+    "other"
+   ],
+   "detectors": {
+    "period": [
+     0,
+     5
+    ]
+   }
+  },
+  {
+   "id": "BIO-C01-COMP-075",
+   "field": "BackStemHTML",
+   "live": "…ole di acqua consente la risalita nei vasi conduttori delle piante grazie alla forza di adesione tra molecole.",
+   "apkg": "…ole di acqua consente la risalita nei vasi conduttori delle piante grazie alla forza di adesione tra molecole. coesione",
+   "cats": [
+    "other"
+   ],
+   "detectors": {}
+  },
+  {
+   "id": "CHIM-C12-NCOM-144",
+   "field": "FrontOptionsHTML",
+   "live": "A Solo1e2 B Solo 3 C Solo 2 e 3 D Solo 1e3 E Solo 1",
+   "apkg": "A. Solo 162 B. Solo 3 C. Solo 2e3 D. Solo 1e3 E. Solo 1",
+   "cats": [
+    "other"
+   ],
+   "detectors": {
+    "period": [
+     0,
+     5
+    ]
+   }
+  },
+  {
+   "id": "FIS-C06-NCOM-080",
+   "field": "BackStemHTML",
+   "live": "Un fascio di elettroni (carica elettrone q = 1,6 · 10⁻¹⁹ C) è diretto su un bersaglio. Il fascio è equivalente a una corrente di intensità pari a 10⁻⁴ A e ciascun elettrone ha un'energia pari a 1,6 · 10⁻⁹ J. Assumendo ch…",
+   "apkg": "Un fascio di elettroni (carica elettrone q = 1,6: 10-19 C) è diretto su un bersaglio. Il fascio è equivalente a una corrente di intensità pari a 10-4A e ciascun elettrone ha un'energia pari a 1,6 + 10°° J. Assumendo che …",
+   "cats": [
+    "exponents"
+   ],
+   "detectors": {
+    "mult-dot": [
+     2,
+     0
+    ],
+    "sup": [
+     4,
+     0
+    ]
+   }
+  },
+  {
+   "id": "FIS-C06-NCOM-098",
+   "field": "BackStemHTML",
+   "live": "…i sono percorsi dalla stessa corrente elettrica. Il diametro del filo B è doppio di quello del filo A. Detta P_A la potenza dissipata dal filo A per effetto Joule e P_B la potenza dissipata dal filo B:",
+   "apkg": "…i sono percorsi dalla stessa corrente elettrica. Il diametro del filo B è doppio di quello del filo A. Detta P, la potenza dissipata dal filo A per effetto Joule e P, la potenza dissipata dal filo B:",
+   "cats": [
+    "other"
+   ],
+   "detectors": {
+    "comma": [
+     0,
+     2
+    ]
+   }
+  },
+  {
+   "id": "CHIM-C11-COMM-008",
+   "field": "FrontStemHTML",
+   "live": "In una soluzione acquosa la concentrazione molare degli ioni OH⁻ è 5,8 x 10⁻⁹, Qual è il valore del pH della soluzione?",
+   "apkg": "In una soluzione acquosa la concentrazione molare degli ioni OH\" è 5,8 x 10-9, Qual è il valore del pH della soluzione?",
+   "cats": [
+    "exponents"
+   ],
+   "detectors": {
+    "sup": [
+     1,
+     0
+    ]
+   }
+  },
+  {
+   "id": "BIO-C05-NCOM-199",
+   "field": "BackOptionsHTML",
+   "live": "A FADH₂ B Coenzima QH. C NADH D Citocromo c ridotto E FMNH₂",
+   "apkg": "A. FADH2 B. Coenzima QH2 ✓ C. NADH D. Citocromo c ridotto E. FMNH₂",
+   "cats": [
+    "other"
+   ],
+   "detectors": {
+    "period": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "id": "BIO-C01-NCOM-263",
+   "field": "BackOptionsHTML",
+   "live": "A Z⁴ e W sono due specie strettamente imparentate B Q appartiene alla stessa specie di X¹ C Z² e Z³ appartengono alla stessa specie D Y è l'antenato comune a tutte le specie attualmente viventi E X¹ è una specie estinta",
+   "apkg": "A. Z⁴ e W sono due specie strettamente imparentate ✓ B. Qappartiene alla stessa specie di X C. Z¹ e 73 appartengono alla stessa specie D. Yè l’antenato comune a tutte le specie attualmente viventi E. Xl è una specie esti…",
+   "cats": [
+    "exponents"
+   ],
+   "detectors": {
+    "period": [
+     0,
+     5
+    ],
+    "sup": [
+     5,
+     2
+    ]
+   }
+  },
+  {
+   "id": "BIO-C01-COMP-094",
+   "field": "FrontStemHTML",
+   "live": "Il modello di descrive il DNA come una doppia elica con due filamenti antiparalleli uniti da legami idrogeno tra basi complementari.",
+   "apkg": "Ii modello di descrive it DNA come una doppia elica con due filamenti antiparalleli da legami idrogeno tra basi complementari.",
+   "cats": [
+    "other"
+   ],
+   "detectors": {}
+  },
+  {
+   "id": "CHIM-C01-COMM-002",
+   "field": "FrontStemHTML",
+   "live": "Quale/i fra le seguenti affermazioni è/sono vera/e? • A₁ l'idrogeno è l'unico elemento a cui si attribuiscono nomi differenti per alcuni suoi isotopi; • A₂ in chilogrammi, della massa di atomo è compresa fra 10⁻²¹ e 10⁻²…",
+   "apkg": "Quale/i fra le seguenti affermazioni è/sono vera/e? * A, l'idrogeno è l'unico elemento a cui si attribuiscono nomi differenti per alcuni suoi isotopi * A,inchilogrammi, della massa di atomo è compresa fra 10-3! e 10-2? e…",
+   "cats": [
+    "exponents"
+   ],
+   "detectors": {
+    "comma": [
+     1,
+     4
+    ],
+    "period": [
+     1,
+     0
+    ],
+    "sup": [
+     4,
+     0
+    ]
+   }
+  },
+  {
+   "id": "CHIM-C10-NCOM-066",
+   "field": "FrontStemHTML",
+   "live": "La struttura dell'ipoclorito di sodio è:",
+   "apkg": "La struttura dell'ipociorito di sodio è:",
+   "cats": [
+    "other"
+   ],
+   "detectors": {}
+  }
+ ],
+ "samples_by_cat": {
+  "neq": [
+   {
+    "id": "FIS-C06-COMM-029",
+    "field": "FrontStemHTML",
+    "live": "Siano date 2 resistenze elettriche (ohmiche) R_a e R_b, con R_b > R_a ≠ 0. Quando poste in serie la resistenza equivalente valga R_s; quando poste in parallelo la resistenza equivalente valga R_p. Quale tra le seguenti r…",
+    "apkg": "Siano date 2 resistenze elettriche (ohmiche) R, e R,, con R, > R, # 0. Quando poste in serie la resistenza equivalente valga R,; quando poste in parallelo la resistenza equivalente valga Rp. Quale tra le seguenti relazio…",
+    "cats": [
+     "neq"
+    ],
+    "detectors": {
+     "comma": [
+      1,
+      6
+     ],
+     "neq": [
+      1,
+      0
+     ]
+    }
+   },
+   {
+    "id": "FIS-C06-COMM-029",
+    "field": "BackStemHTML",
+    "live": "Siano date 2 resistenze elettriche (ohmiche) R_a e R_b, con R_b > R_a ≠ 0. Quando poste in serie la resistenza equivalente valga R_s; quando poste in parallelo la resistenza equivalente valga R_p. Quale tra le seguenti r…",
+    "apkg": "Siano date 2 resistenze elettriche (ohmiche) R, e R,, con R, > R, # 0. Quando poste in serie la resistenza equivalente valga R,; quando poste in parallelo la resistenza equivalente valga Rp. Quale tra le seguenti relazio…",
+    "cats": [
+     "neq"
+    ],
+    "detectors": {
+     "comma": [
+      1,
+      6
+     ],
+     "neq": [
+      1,
+      0
+     ]
+    }
+   }
+  ],
+  "exponents": [
+   {
+    "id": "FIS-C05-NCOM-089",
+    "field": "AnswerBannerHTML",
+    "live": "Risposta corretta: B. 4 dm²",
+    "apkg": "Risposta corretta: B — 4dm3?",
+    "cats": [
+     "exponents"
+    ],
+    "detectors": {
+     "period": [
+      1,
+      0
+     ],
+     "sup": [
+      1,
+      0
+     ]
+    }
+   },
+   {
+    "id": "FIS-C03-NCOM-074",
+    "field": "FrontStemHTML",
+    "live": "…uale fra le seguenti è la formula dimensionale della costante di gravitazione G che appare nella formula F = G - MM1/R²?",
+    "apkg": "…uale fra le seguenti è la formula dimensionale della costante di gravitazione G che appare nella formula F = G-MM1/R2?",
+    "cats": [
+     "exponents"
+    ],
+    "detectors": {
+     "sup": [
+      1,
+      0
+     ]
+    }
+   },
+   {
+    "id": "FIS-C02-COMP-040",
+    "field": "BackStemHTML",
+    "live": "L'equazione vettoriale r_f = r_i + v_i t + ½ a t² descrive la posizione finale di una particella.",
+    "apkg": "L'equazione vettoriale r,= r; + v; t +} at? descrive la posizione finale di una particella. posizione",
+    "cats": [
+     "exponents"
+    ],
+    "detectors": {
+     "comma": [
+      0,
+      1
+     ],
+     "sup": [
+      1,
+      0
+     ]
+    }
+   },
+   {
+    "id": "FIS-C03-NCOM-082",
+    "field": "FrontOptionsHTML",
+    "live": "A 70kg- 1,5 m- 9,81 m/s² = 1030 chilogrammetri B La forza peso non compie alcun lavoro C 70kg- 1,5 m-9,81 m/s² = 1030 calorie D 70kg- 1,5 m-9,81 m/s² = 1030 joule E 1/2 > 70kg- 15 m- (9,81 m/s²)² = 5052 joule",
+    "apkg": "A. 70 kg- 1₄5 m- 9,81 m/s? = 1030 chilogrammetri B. La forza peso non compie alcun lavoro C. 70kg-1,5m-9,81m/s?= 1030 calorie D. 70 kg - 1,5 m- 9,81 m/s? = 1030 joule E. 1/2» 70 kg: 15 m- (9,81 m/s2)? = 5052 joule",
+    "cats": [
+     "exponents"
+    ],
+    "detectors": {
+     "o-vs-zero": [
+      4,
+      1
+     ],
+     "comma": [
+      7,
+      6
+     ],
+     "period": [
+      0,
+      5
+     ],
+     "sup": [
+      5,
+      0
+     ]
+    }
+   },
+   {
+    "id": "CHIM-C02-NCOM-025",
+    "field": "BackOptionsHTML",
+    "live": "A dello ione F⁻ B dello ione Ca²⁺ C dello ione S²⁻ D dell'atomo di Na E dell'atomo di Mg",
+    "apkg": "✓ A. dello ione F- B. dello ione Ca?* C. dello ione S⁻- D. dell'atoma di Na E. dell'atomo di Mg",
+    "cats": [
+     "exponents"
+    ],
+    "detectors": {
+     "period": [
+      0,
+      5
+     ],
+     "sup": [
+      2,
+      0
+     ]
+    }
+   }
+  ],
+  "roots": [
+   {
+    "id": "CHIM-C10-COMM-012",
+    "field": "BackStemHTML",
+    "live": "I composti inorganici costituiti da due soli elementi (composti binari) vengono in genere denominati utilizzando la radice del secondo elemento della formula, seguita dalla congiunzione \"di\" e dal nome del primo elemento…",
+    "apkg": "“I composti inorganici costituiti da due soli elementi (composti binari) vengono in genere denominati utilizzando la radice dai secondo elemento della formula, seguita dalla congiunzione “di”, e dal nome del primo elemen…",
+    "cats": [
+     "roots"
+    ],
+    "detectors": {
+     "comma": [
+      10,
+      18
+     ],
+     "period": [
+      2,
+      3
+     ]
+    }
+   },
+   {
+    "id": "FIS-C03-COMM-038",
+    "field": "BackOptionsHTML",
+    "live": "A 32 N · 450 · 10⁻² m · cos 120° = -72 J B -32 N · 450 · 10⁻² m · cos 120° = 72 J C -32 N · 450 cm · cos 60° = -7200 J D -32 N · 450 · 10⁻² m · sen 60° = -72√3 J E 32 N · 450 · 10⁻² m · sen 120° = 72√3 J",
+    "apkg": "✓ A. 32N-450- 10-2 m- cos 120° = -72J B. -32N-450-10% m- cos 120°=72J C. -32 N- 450 cm - cos 60° = -7200 J D. -32N-450- 10-2 m- sen 60° =-72V3 J E. 32N-450-10-2 m- sen 120° = 72V3 J",
+    "cats": [
+     "exponents",
+     "roots"
+    ],
+    "detectors": {
+     "period": [
+      0,
+      5
+     ],
+     "mult-dot": [
+      14,
+      0
+     ],
+     "sqrt": [
+      2,
+      0
+     ],
+     "sup": [
+      4,
+      0
+     ]
+    }
+   },
+   {
+    "id": "FIS-C03-COMM-038",
+    "field": "FrontOptionsHTML",
+    "live": "A 32 N · 450 · 10⁻² m · cos 120° = -72 J B -32 N · 450 · 10⁻² m · cos 120° = 72 J C -32 N · 450 cm · cos 60° = -7200 J D -32 N · 450 · 10⁻² m · sen 60° = -72√3 J E 32 N · 450 · 10⁻² m · sen 120° = 72√3 J",
+    "apkg": "A. 32N-450- 10-2 m- cos 120° = -72J B. -32N-450-10% m- cos 120°=72J C. -32 N- 450 cm - cos 60° = -7200 J D. -32N-450- 10-2 m- sen 60° =-72V3 J E. 32N-450-10-2 m- sen 120° = 72V3 J",
+    "cats": [
+     "exponents",
+     "roots"
+    ],
+    "detectors": {
+     "period": [
+      0,
+      5
+     ],
+     "mult-dot": [
+      14,
+      0
+     ],
+     "sqrt": [
+      2,
+      0
+     ],
+     "sup": [
+      4,
+      0
+     ]
+    }
+   },
+   {
+    "id": "CHIM-C10-COMM-012",
+    "field": "FrontStemHTML",
+    "live": "I composti inorganici costituiti da due soli elementi (composti binari) vengono in genere denominati utilizzando la radice del secondo elemento della formula, seguita dalla congiunzione \"di\" e dal nome del primo elemento…",
+    "apkg": "“I composti inorganici costituiti da due soli elementi (composti binari) vengono in genere denominati utilizzando la radice dai secondo elemento della formula, seguita dalla congiunzione “di”, e dal nome del primo elemen…",
+    "cats": [
+     "roots"
+    ],
+    "detectors": {
+     "comma": [
+      10,
+      18
+     ],
+     "period": [
+      2,
+      3
+     ]
+    }
+   },
+   {
+    "id": "FIS-C01-COMM-018",
+    "field": "ExplanationHTML",
+    "live": "…la forza risultante si calcola come diagonale del quadrato avente per lati i due vettori. Esso vale pertanto: √((1 N)² + (1 N)²) = √2 N ≈ 1,41 N.",
+    "apkg": "…la forza risultante si calcola come diagonale del quadrato avente per lati i due vettori. Esso vale pertanto: (1 N)? +(1N)? = V2 N. van IN",
+    "cats": [
+     "exponents",
+     "roots"
+    ],
+    "detectors": {
+     "comma": [
+      1,
+      0
+     ],
+     "sqrt": [
+      2,
+      0
+     ],
+     "sup": [
+      2,
+      0
+     ]
+    }
+   }
+  ],
+  "whitespace-html": [],
+  "other": [
+   {
+    "id": "CHIM-C12-NCOM-143",
+    "field": "BackStemHTML",
+    "live": "Il numero di atomi di C presenti in un alchene contenente n atomi di H è:",
+    "apkg": "Ii numero di atomi di C presenti in un alchene contenente n atomi di H è:",
+    "cats": [
+     "other"
+    ],
+    "detectors": {}
+   },
+   {
+    "id": "CHIM-C10-NCOM-024",
+    "field": "BackStemHTML",
+    "live": "Per reazione tra H₂O e anidride si ottiene:",
+    "apkg": "Per reazione tra H₂0 e anidride si ottiene:",
+    "cats": [
+     "other"
+    ],
+    "detectors": {}
+   },
+   {
+    "id": "CHIM-C08-COMM-001",
+    "field": "AnswerBannerHTML",
+    "live": "Risposta corretta: C. un composto che accelera una reazione senza consumarsi",
+    "apkg": "Risposta corretta: C — jisce una reazione consumandosi E,",
+    "cats": [
+     "other"
+    ],
+    "detectors": {
+     "comma": [
+      0,
+      1
+     ],
+     "period": [
+      1,
+      0
+     ]
+    }
+   },
+   {
+    "id": "CHIM-C09-NCOM-024",
+    "field": "FrontStemHTML",
+    "live": "Qual è il numero di ossidazione del cloro nell'anione ClO₄⁻?",
+    "apkg": "Qual è il numero di ossidazione del cloro nell'anione CIO, ?",
+    "cats": [
+     "other"
+    ],
+    "detectors": {
+     "comma": [
+      0,
+      1
+     ]
+    }
+   },
+   {
+    "id": "CHIM-C07-COMM-007",
+    "field": "BackOptionsHTML",
+    "live": "A 40% O₂, 20% CO₂, 40% H₂O B 33% CO₂, 66% H₂O C 40% CH₄, 20% CO₂, 40% H₂O D 25% CH₄, 25% O₂, 25% CO₂, 25% H₂O E 25% CH₄, 50% O₂, 25% CO₂",
+    "apkg": "✓ A. 40% 02, 20% CO, 40% H₂0 B. 33% CO₂₄ 66% H₂0 C. 40% CH,, 20% CO,, 40% H₂0 D. 25% CH, 25% 0,, 25% CO,, 25% H₂O E. 25% CH,, 50% 0, 25% CO₂",
+    "cats": [
+     "other"
+    ],
+    "detectors": {
+     "comma": [
+      10,
+      14
+     ],
+     "period": [
+      0,
+      5
+     ]
+    }
+   }
+  ]
+ }
+}
