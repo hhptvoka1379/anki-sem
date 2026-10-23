@@ -1,6 +1,6 @@
-# Flagged rows (659)
+# Flagged rows (726)
 
-## ambiguous (63)
+## ambiguous (69)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -67,8 +67,14 @@
 | BIO-C07-COMP-011 | BIO | 7 | 11 | 590 | ambiguous: cloze stem omits any reference to Cdk1 or mitosis, so dual-specificity kinases MEK (MAPKK) and Myt1 fit equally or better |
 | BIO-C07-NCOM-035 | BIO | 7 | 35 | 570 | ambiguous: option_d ('i punti di attacco del fuso mitotico') conflates centrioles with centromeres/kinetochores or centrosomal MTOCs while option_e notes their microtubule nature |
 | BIO-C07-NCOM-064 | BIO | 7 | 64 | 574 | ambiguous: mitosis is equational and preserves parental ploidy in both diploid cells (option_e: 2n -> two 2n cells) and haploid eukaryotes such as yeasts, fungi, and plant gametophytes (option_c: n -> two n cells), with no organism specified in the stem |
+| BIO-C07-NCOM-083 | BIO | 7 | 83 | 576 | ambiguous: stem omits the species ('umano'), while 46 chromosomes holds specifically for the human zygote (whereas other species have e.g. 12 pairs = 24 chromosomes as in option_c) |
+| BIO-C07-NCOM-135 | BIO | 7 | 135 | 581 | ambiguous: both option_a ('nei tubuli seminiferi') and option_d ('nelle gonadi', i.e. the testes containing the seminiferous tubules) are biologically true without a specificity qualifier in the stem |
+| BIO-C07-NCOM-136 | BIO | 7 | 136 | 581 | ambiguous: in standard human biology primary sex characteristics present at birth encompass both the gonads (option_e) and the internal/external genitalia (option_b), versus secondary traits appearing at puberty |
+| BIO-C07-NCOM-154 | BIO | 7 | 154 | 583 | ambiguous: both Cdk1 (option_d) and Cdk2 (option_a) are inhibited by Wee1 phosphorylation on Tyr15 |
+| BIO-C07-NCOM-164 | BIO | 7 | 164 | 584 | ambiguous: the nuclear envelope (option_e), the nucleolus (option_b), and the fragmented Golgi apparatus (option_c) all reorganize during telophase |
+| FIS-C02-NCOM-015 | FIS | 2 | 15 | 689 | ambiguous: without v₀ = 0, displacement s = v₀t + ½at² is not purely proportional to t² (option_b), while option_d ('varia al variare del tempo') is also true |
 
-## chem (40)
+## chem (45)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -112,6 +118,11 @@
 | BIO-C07-COMP-011 | BIO | 7 | 11 | 590 | chem: in vertebrates Myt1 phosphorylates both Thr14 and Tyr15 of Cdk1, whereas nuclear Wee1 selectively phosphorylates Tyr15 |
 | BIO-C07-COMP-028 | BIO | 7 | 28 | 591 | chem: minus-end-directed kinesin-14 (HSET/Ncd) crosslinks antiparallel microtubules to pull spindle poles together and focus pole minus-ends, antagonizing kinesin-5 rather than pushing poles apart |
 | BIO-C07-NCOM-035 | BIO | 7 | 35 | 570 | chem: centrioles are cylindrical 9x3 microtubule-triplet structures inside animal centrosomes, whereas spindle fibers attach to chromosomal centromeres/kinetochores |
+| BIO-C07-NCOM-076 | BIO | 7 | 76 | 575 | chem: option_a says "fase S dell'intercinesi", whereas interkinesis between meiosis I and II lacks DNA replication and S phase belongs to interphase |
+| BIO-C07-NCOM-151 | BIO | 7 | 151 | 583 | chem: cohesins hold sister chromatids together (primarily at centromeres until mitotic anaphase after prophase removal of arm cohesins), not chromosome ends/telomeres ('le estremità dei cromosomi') |
+| BIO-C07-NCOM-155 | BIO | 7 | 155 | 583 | chem: many protozoa also exhibit closed mitosis alongside fungi and unicellular algae |
+| BIO-C07-NCOM-156 | BIO | 7 | 156 | 583 | chem: Cdc20 is the coactivator of APC/C, whereas Mad2 and BubR1/Bub3 are the mitotic checkpoint proteins that sequester Cdc20 to inhibit APC/C |
+| FIS-C02-COMP-016 | FIS | 2 | 16 | 699 | chem: instantaneous scalar speed /v/ is non-negative (>= 0), not strictly positive, as it equals zero whenever a particle is at rest or at a turning point |
 
 ## key (26)
 
@@ -144,7 +155,7 @@
 | BIO-C06-NCOM-067 | BIO | 6 | 67 | 540 | key: suspect |
 | BIO-C07-NCOM-035 | BIO | 7 | 35 | 570 | key: suspect |
 
-## missing (20)
+## missing (23)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -168,8 +179,11 @@
 | BIO-C07-NCOM-040 | BIO | 7 | 40 | 571 | missing: question refers to a figure ("Dall'osservazione della figura") not included in the card |
 | BIO-C07-NCOM-044 | BIO | 7 | 44 | 571 | missing: question refers to a figure ('La figura rappresenta... Dalla sua osservazione') not included in the card |
 | BIO-C07-NCOM-055 | BIO | 7 | 55 | 573 | missing: question and options refer to a figure ('La figura mostra...', 'vedi figura') not included in the card |
+| BIO-C07-NCOM-114 | BIO | 7 | 114 | 579 | missing: question refers to a diagram ('Lo schema rappresenta...') missing from the card |
+| BIO-C07-NCOM-115 | BIO | 7 | 115 | 579 | missing: question refers to a figure ('Lo schema della figura rappresenta...') missing from the card |
+| FIS-C01-NCOM-090 | FIS | 1 | 90 | 681 | missing: question depends on force orientations shown in a missing figure ('nel verso indicato in figura') |
 
-## ocr (553)
+## ocr (613)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -726,4 +740,64 @@
 | BIO-C07-NCOM-044 | BIO | 7 | 44 | 571 | ocr: ordinal '1ª' corrupted to '1?' in question |
 | BIO-C07-NCOM-046 | BIO | 7 | 46 | 572 | ocr: Roman numeral II corrupted to 'Il' in option_a ('profase Il') and option_c ('metafase Il') |
 | BIO-C07-NCOM-057 | BIO | 7 | 57 | 573 | ocr: option_e corrupted to 'ilinfociti a' (missing space and lymphocyte subtype/stray character 'a') |
+| BIO-C07-NCOM-076 | BIO | 7 | 76 | 575 | ocr: subscript corrupted to comma in option_b ('fase G,') |
+| BIO-C07-COMP-087 | BIO | 7 | 87 | 595 | ocr: Roman numeral I corrupted to lowercase 'i' ('meiosi i') in question and back_stem |
+| BIO-C07-COMP-094 | BIO | 7 | 94 | 595 | ocr: dropped initial 'I', English signal 'eat me' fused into 'eatme' in answer_text, and back_stem corrupted to 'segnali. eatme ”' |
+| BIO-C07-NCOM-095 | BIO | 7 | 95 | 577 | ocr: phase subscript dropped in option_b ('fase G') |
+| BIO-C07-COMP-097 | BIO | 7 | 97 | 595 | ocr: word 'caspasi' duplicated as 'delle caspasi caspasi esecutrici' in back_stem |
+| BIO-C07-COMP-101 | BIO | 7 | 101 | 596 | ocr: cloze target 'intrinseca' displaced from 'della via [intrinseca]' to 'La MOMP intrinseca ... della via.' in question and back_stem |
+| BIO-C07-NCOM-114 | BIO | 7 | 114 | 579 | ocr: diagram labels garbled in question ('VA N ... x / ... T_T na') |
+| BIO-C07-NCOM-115 | BIO | 7 | 115 | 579 | ocr: figure text garbled as 'Processo A / LD [OZ' in question |
+| BIO-C07-NCOM-116 | BIO | 7 | 116 | 579 | ocr: stray character 'a' bled into option_c ('un cavallo a') |
+| BIO-C07-NCOM-125 | BIO | 7 | 125 | 580 | ocr: 'pubertà' truncated to 'pube' ('a partire dalla pube') in option_d |
+| BIO-C07-NCOM-137 | BIO | 7 | 137 | 581 | ocr: 'C,' corrupted to subscripted symbol 'C₄' in question |
+| BIO-C07-NCOM-144 | BIO | 7 | 144 | 582 | ocr: Roman numeral II corrupted to 'Il' ('meiosi Il') in option_d |
+| BIO-C07-NCOM-145 | BIO | 7 | 145 | 582 | ocr: kinase symbols 'Plk1' and 'Wee1' corrupted to 'PIk1' (option_d) and 'Weel' (option_e) |
+| BIO-C07-NCOM-146 | BIO | 7 | 146 | 582 | ocr: digit '0' in cell-cycle phase 'G0'/'G₀' corrupted to capital letter 'O' ('fase GO') in option_c/answer_text |
+| BIO-C07-NCOM-153 | BIO | 7 | 153 | 583 | ocr: stray bleed 'Ila' appended to option_c/answer_text ('Checkpoint metafase/anafase Ila') |
+| BIO-C07-NCOM-154 | BIO | 7 | 154 | 583 | ocr: kinase symbols 'Plk1' and 'Wee1' corrupted to 'PIk1' (option_c) and 'Weel' (option_e) |
+| BIO-C07-NCOM-155 | BIO | 7 | 155 | 583 | ocr: option_d garbled as 'Protozoi metazoi' |
+| BIO-C07-NCOM-156 | BIO | 7 | 156 | 583 | ocr: kinase symbol 'Wee1' corrupted to 'Weel' in option_c |
+| BIO-C07-NCOM-159 | BIO | 7 | 159 | 584 | ocr: kinase symbol 'Plk1' corrupted to 'PIkl' in option_e |
+| BIO-C07-NCOM-174 | BIO | 7 | 174 | 585 | ocr: stray character 'a' bled into option_e ('p21 a') |
+| BIO-C07-NCOM-175 | BIO | 7 | 175 | 585 | ocr: cell-cycle phase 'S' corrupted to '$' ('fase $') in option_e |
+| BIO-C07-NCOM-178 | BIO | 7 | 178 | 585 | ocr: digit '0' in cell-cycle phase 'G0'/'G₀' corrupted to capital letter 'O' ('GO') in option_a |
+| BIO-C07-NCOM-182 | BIO | 7 | 182 | 586 | ocr: digit '0' in cell-cycle phase 'G0'/'G₀' corrupted to capital letter 'O' ('GO') in option_e |
+| BIO-C07-NCOM-185 | BIO | 7 | 185 | 586 | ocr: digit '1' in gene/protein symbol 'p16' corrupted to lowercase 'l' ('pl6') in option_d |
+| BIO-C07-NCOM-186 | BIO | 7 | 186 | 586 | ocr: question mark corrupted to superscript minus on phase symbol ('G1-S⁻') and 'G0' corrupted to 'GO' in option_e |
+| BIO-C07-NCOM-188 | BIO | 7 | 188 | 586 | ocr: digit '1' in gene symbol 'Blimp1' corrupted to lowercase 'l' ('blimpl') in option_d/answer_text |
+| BIO-C07-NCOM-189 | BIO | 7 | 189 | 586 | ocr: Roman numerals corrupted in option_b ('Anafase Il' for II) and option_c ('Telofase /' for I) |
+| BIO-C07-NCOM-194 | BIO | 7 | 194 | 587 | ocr: digit '0' in cell-cycle phase 'G0'/'G₀' corrupted to capital letter 'O' ('GO') in option_a |
+| BIO-C07-NCOM-200 | BIO | 7 | 200 | 587 | ocr: digit '0' in cell-cycle phase 'G0'/'G₀' corrupted to capital letter 'O' ('GO') in option_e |
+| BIO-C07-NCOM-203 | BIO | 7 | 203 | 588 | ocr: Greek letter delta in 'La DNA polimerasi δ' corrupted to digit '6' ('Il DNA polimerasi 6') in option_c |
+| FIS-C01-NCOM-001 | FIS | 1 | 1 | 673 | ocr: multiplication dot in unit product corrupted to minus sign ('newton -m') in answer_text, mismatching option_d ('newton × m') |
+| FIS-C01-NCOM-002 | FIS | 1 | 2 | 673 | ocr: SI unit name 'kelvin' corrupted to 'Kelvinz' in option_d/answer_text |
+| FIS-C01-NCOM-005 | FIS | 1 | 5 | 673 | ocr: stray symbols '≠ 0 +' bled into formula in option_e ('F=L/E ≠ 0 +') |
+| FIS-C01-COMP-015 | FIS | 1 | 15 | 683 | ocr: radial coordinate symbol and conjunction 'r e' fused into 're' in back_stem |
+| FIS-C01-COMP-019 | FIS | 1 | 19 | 683 | ocr: scientific-notation exponent flattened without superscript/caret ('1015' for '10¹⁵') in question and back_stem |
+| FIS-C01-NCOM-019 | FIS | 1 | 19 | 674 | ocr: unit symbol and conjunction 'g e' fused into 'ge' in option_a and option_d |
+| FIS-C01-COMP-020 | FIS | 1 | 20 | 683 | ocr: scientific-notation exponent flattened without superscript/caret ('108' for '10⁸') in question and back_stem |
+| FIS-C01-COMP-026 | FIS | 1 | 26 | 684 | ocr: scientific-notation exponent flattened without superscript/caret ('101' for '10¹') in question and back_stem |
+| FIS-C01-NCOM-028 | FIS | 1 | 28 | 675 | ocr: multiplication dots in unit products corrupted to hyphens in option_a ('35kg-m') and option_d ('35 kg-cm') |
+| FIS-C01-COMP-029 | FIS | 1 | 29 | 684 | ocr: scientific-notation exponent flattened without superscript/caret ('1011' for '10¹¹') in question and back_stem |
+| FIS-C01-NCOM-029 | FIS | 1 | 29 | 675 | ocr: multiplication dot in unit product corrupted to minus sign in option_c ('volt - ampere') |
+| FIS-C01-NCOM-033 | FIS | 1 | 33 | 676 | ocr: unit product 'C · s' fused into 'Cs' in option_a |
+| FIS-C01-NCOM-036 | FIS | 1 | 36 | 676 | ocr: unit name "L'erg" corrupted to 'Verg' in question |
+| FIS-C01-NCOM-037 | FIS | 1 | 37 | 676 | ocr: multiplication dots in unit products corrupted to '-' ('newton - metro', option_b) and ':' ('newton: secondo', option_c) |
+| FIS-C01-NCOM-038 | FIS | 1 | 38 | 676 | ocr: stray text 'SAR ss' bled into option_e ('Temperatura assoluta SAR ss') |
+| FIS-C01-NCOM-040 | FIS | 1 | 40 | 676 | ocr: multiplication dot in energy unit 'watt · sec' corrupted to minus sign ('watt - sec') in option_e |
+| FIS-C01-NCOM-053 | FIS | 1 | 53 | 677 | ocr: exponent corrupted to '10!°' in option_e |
+| FIS-C01-NCOM-059 | FIS | 1 | 59 | 678 | ocr: stray symbols '= ee' bled into option_e ('1grammo = ee') |
+| FIS-C01-NCOM-064 | FIS | 1 | 64 | 678 | ocr: unit 'm' dropped from option_c ('1.852' for '1.852 m') |
+| FIS-C01-NCOM-070 | FIS | 1 | 70 | 679 | ocr: corrupted exponents and stray bleed in option_b ('1010'), option_c ('10°'), and option_e ('100 1+') |
+| FIS-C01-NCOM-079 | FIS | 1 | 79 | 680 | ocr: stray text 'i es' bled into option_e |
+| FIS-C01-NCOM-080 | FIS | 1 | 80 | 680 | ocr: uncertainty sign '±' corrupted to '+' ('20 + 0,5 mg') in question |
+| FIS-C01-NCOM-083 | FIS | 1 | 83 | 680 | ocr: variable symbol 'l' corrupted to '/' in question ('larghezza /') and to digit '1' in option_a/answer_text |
+| FIS-C01-NCOM-084 | FIS | 1 | 84 | 680 | ocr: stray text '177. °' bled into option_e |
+| FIS-C01-NCOM-090 | FIS | 1 | 90 | 681 | ocr: radical expression garbled as 'p3/2/2' in option_a |
+| FIS-C01-NCOM-093 | FIS | 1 | 93 | 682 | ocr: Greek letter 'α' corrupted to 'a' ('l’angolo a') in question |
+| FIS-C02-NCOM-004 | FIS | 2 | 4 | 688 | ocr: unit exponents and multiplication dots corrupted in option_c ('m-s~' for 'm·s⁻²') and option_d/answer_text ('m-s1' for 'm·s⁻¹') |
+| FIS-C02-NCOM-011 | FIS | 2 | 11 | 689 | ocr: exponents corrupted to '*' in option_b ('lunghezza/(tempo)*') and '?' in option_e ('(lunghezza)?/tempo') |
+| FIS-C02-NCOM-014 | FIS | 2 | 14 | 689 | ocr: "l'atleta" corrupted to 'Fatleta' in question |
+| FIS-C02-NCOM-019 | FIS | 2 | 19 | 690 | ocr: stray '=' symbol bled into option_c ('11,0 m/s =') |
 
