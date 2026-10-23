@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Git pre-push hook: review every commit that is about to reach the remote.
+# Install once: ln -sf "$(git rev-parse --show-toplevel)/opus_attempt/scripts/hooks/pre-push" .git/hooks/pre-push
+set -uo pipefail
+
+repo_root="$(git rev-parse --show-toplevel)"
+zero="0000000000000000000000000000000000000000"
+status=0
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+  [ "$local_sha" = "$zero" ] && continue          # branch deletion, nothing to review
+  if [ "$remote_sha" = "$zero" ]; then
+    range="$local_sha --not --remotes"
+  else
+    range="$remote_sha..$local_sha"
+  fi
+  commits="$(git rev-list $range)"
+  [ -z "$commits" ] && continue
+  echo "Reviewing $(echo "$commits" | wc -l | tr -d ' ') commit(s) from $local_ref ..."
+  # shellcheck disable=SC2086
+  "$repo_root/opus_attempt/scripts/review_commit.sh" $commits || status=1
+done
+
+if [ $status -ne 0 ]; then
+  echo "Push blocked: a commit got FAIL or could not be reviewed. Fix it, or push with --no-verify after you have read the review."
+fi
+exit $status
