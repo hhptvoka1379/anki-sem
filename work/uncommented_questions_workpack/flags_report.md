@@ -1,6 +1,6 @@
-# Flagged rows (214)
+# Flagged rows (278)
 
-## ambiguous (9)
+## ambiguous (14)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -13,8 +13,13 @@
 | CHIM-C04-NCOM-083 | CHIM | 4 | 83 | 72 | ambiguous: central S (tetrahedral AX₄) and -OH oxygens in H₂SO₄ (option_a) are also sp³-hybridized alongside C in CH₄ (key B); stem omits 'del carbonio' |
 | CHIM-C05-NCOM-002 | CHIM | 5 | 2 | 82 | ambiguous: CO₂ is linear with zero net dipole moment (μ = 0), so under standard IMF rules both CO₂, CO₂ (option_a) and I₂, I₂ (key D) lack permanent molecular dipoles (possible OCR/typo for 'CO, CO' in option_a) |
 | CHIM-C05-NCOM-016 | CHIM | 5 | 16 | 83 | ambiguous: both option_c ('maggiori di quelle presenti nello stato gassoso') and key option_e ('minori di quelle presenti nello stato solido') are physically true (solid > liquid > gas) |
+| CHIM-C11-NCOM-016 | CHIM | 11 | 16 | 171 | ambiguous: both 'protoni' (option_a) and 'ioni positivi H⁺' (option_d) denote H⁺ donated to water |
+| CHIM-C11-NCOM-097 | CHIM | 11 | 97 | 179 | ambiguous: both option_b ('[OH⁻] > [H₃O⁺]') and option_e ('[H⁺] < [OH⁻]') express the exact same true inequality for pH > 7 at 25 °C |
+| CHIM-C11-NCOM-099 | CHIM | 11 | 99 | 179 | ambiguous: inequality [OH⁻] < [H⁺] holds at 25 °C for every pH < 7, making both option_b (pH = 5) and option_d (pH = 2) true |
+| CHIM-C11-NCOM-148 | CHIM | 11 | 148 | 184 | ambiguous: KBr (119 g/mol) at 1% w/v has osmolarity ~0,168 Osm/L (< 0,30 Osm/L of plasma), making 'ipotonica' physiologically true alongside acid-base 'neutra' |
+| CHIM-C11-NCOM-170 | CHIM | 11 | 170 | 186 | ambiguous: adding NH₄Cl to aqueous NH₃ both lowers pH by the common-ion effect (option_d) and forms an NH₃/NH₄⁺ buffer (option_e) |
 
-## chem (9)
+## chem (10)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -27,8 +32,9 @@
 | CHIM-C09-NCOM-128 | CHIM | 9 | 128 | 143 | chem: 'ZnCl₄' is chemically invalid (zinc forms ZnCl₂, +2) and leaves Cl unbalanced with 2HCl |
 | CHIM-C10-COMP-002 | CHIM | 10 | 2 | 162 | chem: 'H-X⁻' carries a negative charge and single H, invalid for neutral hydracids and diprotic H₂S |
 | CHIM-C10-COMP-009 | CHIM | 10 | 9 | 162 | chem: acidic oxides do not all have formula X₂O₃ (only oxidation state +3 does) |
+| CHIM-C12-NCOM-010 | CHIM | 12 | 10 | 195 | chem: answer_text describes only positional isomerism on the same skeleton rather than isomerism in general |
 
-## key (7)
+## key (9)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -39,6 +45,8 @@
 | CHIM-C10-NCOM-017 | CHIM | 10 | 17 | 153 | key: suspect — nitrous acid is HNO₂, whereas key B reads 'HNO₄' |
 | CHIM-C10-NCOM-018 | CHIM | 10 | 18 | 153 | key: suspect — carbonic anhydride is CO₂ (option_a), whereas stored key is E ('CÒ,') |
 | CHIM-C10-NCOM-096 | CHIM | 10 | 96 | 160 | key: suspect — ammonium sulfite is (NH₄)₂SO₃, whereas key E reads '(NH₄)₃50₃' |
+| CHIM-C11-NCOM-051 | CHIM | 11 | 51 | 175 | key: suspect — for [OH⁻] = 10⁻⁵ M at 25 °C, [H⁺] = 10⁻¹⁴ / 10⁻⁵ = 10⁻⁹ M, not key E ('107 moli/litro') |
+| CHIM-C11-NCOM-127 | CHIM | 11 | 127 | 182 | key: suspect — at 25 °C [H⁺] = 10⁻⁵ M and [OH⁻] = 10⁻⁹ M give [H⁺][OH⁻] = 10⁻¹⁴ = K_w (a valid pH 5,0 solution, likely OCR of 10⁻⁸ M -> 10⁻⁹ M), contradicting key D ('non esiste') |
 
 ## missing (3)
 
@@ -48,7 +56,7 @@
 | CHIM-C05-NCOM-029 | CHIM | 5 | 29 | 85 | missing: stem references 'nei tre recipienti rappresentati in figura' (containers A, B, C), but the figure is absent |
 | CHIM-C08-NCOM-001 | CHIM | 8 | 1 | 125 | missing: question references a concentration-vs-time graph ('il grafico riporta...') not included in the card |
 
-## ocr (193)
+## ocr (256)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -245,4 +253,67 @@
 | CHIM-C11-NCOM-006 | CHIM | 11 | 6 | 170 | ocr: '>' inequality operator corrupted to '+' across options including answer_text |
 | CHIM-C11-NCOM-007 | CHIM | 11 | 7 | 170 | ocr: proton formula 'H⁺' corrupted to 'H°' in answer_text ('cede ioni H°') |
 | CHIM-C11-NCOM-009 | CHIM | 11 | 9 | 170 | ocr: formula subscript lost in stem ('HNO,') and 'monoprotico' corrupted to 'monopratico' in answer_text |
+| CHIM-C11-COMP-010 | CHIM | 11 | 10 | 188 | ocr: 'H₃O⁺ o OH⁻' corrupted to 'H30° 0 OH”' in stem |
+| CHIM-C11-COMP-011 | CHIM | 11 | 11 | 188 | ocr: hydronium ion 'H₃O⁺' corrupted to 'Hy0°' in stem |
+| CHIM-C11-COMP-013 | CHIM | 11 | 13 | 188 | ocr: hydroxide ion 'OH⁻' corrupted to 'OH”' in stem |
+| CHIM-C11-COMP-014 | CHIM | 11 | 14 | 188 | ocr: hydroxide ion 'OH⁻' corrupted to 'OH”' in stem |
+| CHIM-C11-NCOM-014 | CHIM | 11 | 14 | 171 | ocr: formula subscript lost in option_b ('HNO,') |
+| CHIM-C11-NCOM-015 | CHIM | 11 | 15 | 171 | ocr: item number '1.' corrupted to 'L' in stem and answer_text corrupted to 'Solole2' |
+| CHIM-C11-NCOM-016 | CHIM | 11 | 16 | 171 | ocr: hydroxide ion corrupted to 'OH"' in option_b |
+| CHIM-C11-COMP-021 | CHIM | 11 | 21 | 188 | ocr: subscripts 'a', 'b', 'w' corrupted to commas in stem ('Tra K, e K, ... (K,,)') |
+| CHIM-C11-NCOM-021 | CHIM | 11 | 21 | 171 | ocr: carbonic acid formula 'H₂CO₃' corrupted to 'HCO,' in stem |
+| CHIM-C11-COMP-022 | CHIM | 11 | 22 | 189 | ocr: 'H₃O⁺ e OH⁻' severely garbled to '{{c1::HO}} edu.' in stem and answer_text |
+| CHIM-C11-NCOM-028 | CHIM | 11 | 28 | 172 | ocr: 'H⁺' corrupted to "H'" in option_a and negative charge lost on 'OH⁻' ('OH') in answer_text |
+| CHIM-C11-NCOM-034 | CHIM | 11 | 34 | 173 | ocr: ionic formulas and charges corrupted across options ('S02', 'HPO', 'HSO;', 'NH;') including answer_text |
+| CHIM-C11-NCOM-037 | CHIM | 11 | 37 | 173 | ocr: oxide formulas corrupted across options ('(1,0,', 'Na,O', 'Al,O,') including answer_text |
+| CHIM-C11-NCOM-040 | CHIM | 11 | 40 | 174 | ocr: digit '0' substituted for oxygen 'O' in formula 'Na0H' in stem |
+| CHIM-C11-NCOM-042 | CHIM | 11 | 42 | 174 | ocr: formula subscripts corrupted to commas in option_a ('NH,CI') and answer_text ('CH,COONa') |
+| CHIM-C11-NCOM-048 | CHIM | 11 | 48 | 174 | ocr: option_c corrupted to '?' |
+| CHIM-C11-NCOM-049 | CHIM | 11 | 49 | 174 | ocr: hydroxide ion 'OH⁻' corrupted to 'OH”' in stem |
+| CHIM-C11-NCOM-051 | CHIM | 11 | 51 | 175 | ocr: exponents corrupted in option_b ('10° moli/litro') and answer_text ('107 moli/litro'), plus unit typo in option_d |
+| CHIM-C11-NCOM-054 | CHIM | 11 | 54 | 175 | ocr: aqueous state symbol and atomic-mass symbols corrupted in stem ('H₂SO₄/_,)', '0=16', '5=32') |
+| CHIM-C11-NCOM-055 | CHIM | 11 | 55 | 175 | ocr: hydronium ion 'H₃O⁺' corrupted to 'H₂O*' in stem |
+| CHIM-C11-NCOM-057 | CHIM | 11 | 57 | 175 | ocr: ionic formulas/charges corrupted across options ('f°' in option_a, 'H⁻' in option_c, 'OH' in option_e) |
+| CHIM-C11-NCOM-058 | CHIM | 11 | 58 | 175 | ocr: hydronium ion 'H₃O⁺' corrupted to 'H₂O*' and unit 'mol dm⁻³' corrupted to 'mol dm”*' in stem |
+| CHIM-C11-NCOM-060 | CHIM | 11 | 60 | 176 | ocr: hydroxide ion 'OH⁻' corrupted to 'OH”' in option_b |
+| CHIM-C11-NCOM-063 | CHIM | 11 | 63 | 176 | ocr: '[H⁺] > 10⁻⁷ M' corrupted to '[H°)> 107 M' in answer_text and '[H"]' in option_c |
+| CHIM-C11-NCOM-064 | CHIM | 11 | 64 | 176 | ocr: negative charge missing on hydroxide ion '[OH]' in stem |
+| CHIM-C11-NCOM-065 | CHIM | 11 | 65 | 176 | ocr: molarity exponents unreadable in option_c ('NaOH 10-? M') and option_d ('LiOH 10°* M') |
+| CHIM-C11-NCOM-070 | CHIM | 11 | 70 | 177 | ocr: unit corrupted in stem ('2 mol dm~') and 'del pH' corrupted to 'dei pi' in answer_text |
+| CHIM-C11-NCOM-075 | CHIM | 11 | 75 | 177 | ocr: trailing digit dropped in option_d ('0,00000' instead of '0,000001'), turning the lower bound into 0 so interval [0, 10⁻⁷] also contains 10⁻⁷·⁴ |
+| CHIM-C11-NCOM-082 | CHIM | 11 | 82 | 178 | ocr: mass '4 g' corrupted to superscript 'Sciogliere⁴ g' in answer_text and text garbled in option_e |
+| CHIM-C11-NCOM-087 | CHIM | 11 | 87 | 178 | ocr: options C ('ò') and D ('10°’') corrupted |
+| CHIM-C11-NCOM-090 | CHIM | 11 | 90 | 178 | ocr: base subscript '10' of logarithm corrupted to commas across all options including answer_text ('pH = -log,,, 0.004') |
+| CHIM-C11-NCOM-099 | CHIM | 11 | 99 | 179 | ocr: '[OH⁻]' and '[H⁺]' corrupted to '[OH]' and '(H⁴])' in stem |
+| CHIM-C11-NCOM-100 | CHIM | 11 | 100 | 179 | ocr: molarity units 'mol dm⁻³' corrupted across all four numbered items in stem ('mot dm', 'mot dm³', 'moi dm-*', 'mol dm"?') |
+| CHIM-C11-NCOM-106 | CHIM | 11 | 106 | 180 | ocr: article 'la' corrupted to digit '3' in answer_text ('3 concentrazione di ioni H⁺') |
+| CHIM-C11-NCOM-110 | CHIM | 11 | 110 | 180 | ocr: ionic formulas corrupted across options ('[OH]', '[OH"]', '[11,0%]') including answer_text ('[H30*] > [OH]') |
+| CHIM-C11-NCOM-113 | CHIM | 11 | 113 | 181 | ocr: option_e corrupted to '\eutra' |
+| CHIM-C11-NCOM-117 | CHIM | 11 | 117 | 181 | ocr: hydroxide ion 'OH⁻' corrupted to 'OH”' in stem |
+| CHIM-C11-NCOM-121 | CHIM | 11 | 121 | 181 | ocr: mole quantity corrupted to unreadable '10°* moli' in stem |
+| CHIM-C11-NCOM-127 | CHIM | 11 | 127 | 182 | ocr: 'H⁺' corrupted to 'H⁴' and 'OH⁻' corrupted to '0H-' in stem |
+| CHIM-C11-NCOM-129 | CHIM | 11 | 129 | 182 | ocr: 'pH = 3' corrupted to 'pH³' in stem |
+| CHIM-C11-NCOM-142 | CHIM | 11 | 142 | 183 | ocr: number corrupted to ']' in option_c ('è sempre superiore a ]') and verb 'è' corrupted to '‘' in answer_text |
+| CHIM-C11-NCOM-144 | CHIM | 11 | 144 | 184 | ocr: 'H₃O⁺' corrupted to 'H j0°' and 'OH⁻' corrupted to 'OH”' in answer_text (plus 'OH"' in option_a) |
+| CHIM-C11-NCOM-148 | CHIM | 11 | 148 | 184 | ocr: option_e corrupted to '\asica' |
+| CHIM-C11-NCOM-156 | CHIM | 11 | 156 | 185 | ocr: molarity '2 molare' corrupted to superscript 'acquosa² molare' in stem |
+| CHIM-C11-NCOM-158 | CHIM | 11 | 158 | 185 | ocr: verb 'è' corrupted to digit '2' in option_e ('se il sale 2 un elettrolita anfotero') |
+| CHIM-C11-NCOM-162 | CHIM | 11 | 162 | 185 | ocr: sodium cation 'Na⁺' corrupted to 'Na‘' in option_a and 'Na°*' in answer_text |
+| CHIM-C11-NCOM-170 | CHIM | 11 | 170 | 186 | ocr: ammonium chloride 'NH₄Cl' corrupted to 'NH₁ CI' in stem |
+| CHIM-C11-NCOM-172 | CHIM | 11 | 172 | 186 | ocr: 'Solo 1 e 2' corrupted to 'Solo le 2' in option_b and 'Solo' corrupted to 'Salo' in option_e |
+| CHIM-C12-NCOM-005 | CHIM | 12 | 5 | 195 | ocr: conjunction 'o' corrupted to digit '0' in answer_text ('presentano la stessa formula grezza 0 molecolare') |
+| CHIM-C12-NCOM-010 | CHIM | 12 | 10 | 195 | ocr: 'i gruppi o sostituenti' corrupted to 'i gruppi! sostituenti' in answer_text |
+| CHIM-C12-NCOM-015 | CHIM | 12 | 15 | 196 | ocr: orbital hybridization superscript corrupted to '?' in option_c ('presenta ibridazione sp?') |
+| CHIM-C12-NCOM-021 | CHIM | 12 | 21 | 197 | ocr: subscripts '2' corrupted to commas in stem formula ('CH,=CHCH=CH,') and '1-butene' corrupted to 'l-butene' in option_b |
+| CHIM-C12-COMP-029 | CHIM | 12 | 29 | 225 | ocr: combustion products 'CO₂ e H₂O' corrupted to 'CO: e H20' in stem |
+| CHIM-C12-COMP-032 | CHIM | 12 | 32 | 225 | ocr: butane formula 'C₄H₁₀' corrupted to 'C+H10' in stem |
+| CHIM-C12-COMP-036 | CHIM | 12 | 36 | 225 | ocr: triple bond 'C≡C' corrupted to double bond 'C=C' after 'tripli legami' in stem |
+| CHIM-C12-NCOM-038 | CHIM | 12 | 38 | 198 | ocr: 'gli alcoli' corrupted to 'gli ai cali' in answer_text and 'gli alcani' corrupted to 'gli ai cani' in option_b |
+| CHIM-C12-NCOM-041 | CHIM | 12 | 41 | 198 | ocr: condensed formulas corrupted in option_a ('CH, CH₃-CH₃') and option_c ('CH, CHO') |
+| CHIM-C12-NCOM-048 | CHIM | 12 | 48 | 199 | ocr: 'H₂O?' corrupted to 'H₂07' in stem |
+| CHIM-C12-COMP-049 | CHIM | 12 | 49 | 226 | ocr: amino group '–NH₂' of aniline corrupted to '—NH₃' in stem |
+| CHIM-C12-COMP-055 | CHIM | 12 | 55 | 226 | ocr: sulfonic acid group '–SO₃H' subscript corrupted to comma '(-SO,H)' in stem |
+| CHIM-C12-NCOM-059 | CHIM | 12 | 59 | 200 | ocr: sigma bond symbol 'σ' corrupted to 'a' in answer_text and 'Multiplo i' in option_e |
+| CHIM-C12-COMP-067 | CHIM | 12 | 67 | 226 | ocr: period after neutral formyl group '-CHO.' corrupted to superscript minus '-CHO⁻' in stem |
+| CHIM-C12-NCOM-068 | CHIM | 12 | 68 | 201 | ocr: 'π' electrons corrupted to 'n' in answer_text ('elettroni n delocalizzati') and 'sp²'/'sp³' corrupted to 'sp⁵' in option_c |
 
