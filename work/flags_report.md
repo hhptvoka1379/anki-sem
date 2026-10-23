@@ -1,6 +1,6 @@
-# Flagged rows (241)
+# Flagged rows (254)
 
-## ambiguous (16)
+## ambiguous (17)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -20,8 +20,15 @@
 | BIO-C03-NCOM-234 | BIO | 3 | 234 | 408 | ambiguous: tutti e cinque i processi elencati (trascrizione, replicazione del DNA, sintesi anabolica di zuccheri, importazione di proteine mitocondriali tramite mtHsp70 e degradazione proteasomica) richiedono fisiologicamente l'idrolisi di ATP |
 | BIO-C04-NCOM-017 | BIO | 4 | 17 | 434 | ambiguous: le opzioni A ('allele') e B ('allelomorfo', termine originario di Bateson di cui 'allele' è l'abbreviazione) sono sinonimi esatti in genetica |
 | BIO-C04-NCOM-121 | BIO | 4 | 121 | 447 | ambiguous: sia A ('dallo spermatozoo', gamete eterogametico che apporta X oppure Y) sia D ('dai cromosomi', coppia sessuale XX/XY con il gene SRY) sono risposte biologicamente corrette alla domanda 'Il sesso dell'uomo è determinato:' |
+| BIO-C04-NCOM-183 | BIO | 4 | 183 | 456 | ambiguous: gli anticorpi plasmatici anti-A sono presenti sia nel gruppo B sia nel gruppo 0 (che nella popolazione è ~4 volte più frequente del gruppo B, rendendo B 'sarà probabilmente 0' più probabile di D 'sarà probabilmente B' se non è precisata l'assenza di anti-B) |
 
-## key (14)
+## chem (1)
+
+| id | subj | ch | q | page | flag |
+|---|---|---|---|---|---|
+| BIO-C05-COMP-102 | BIO | 5 | 102 | 521 | chem: formula chimica del substrato nell'enunciato corrotta dall'OCR in 'H.0' al posto di 'H₂O₂' ('converte l'H.0 in acqua e ossigeno') |
+
+## key (16)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -39,8 +46,10 @@
 | BIO-C03-COMP-123 | BIO | 3 | 123 | 417 | key: suspect - i fattori di elongazione (EF-Tu/eEF1A, EF-G/eEF2) mediano l'ingresso dell'amminoacil-tRNA nel sito A e la traslocazione, ma non catalizzano il legame peptidico, che è catalizzato dall'rRNA peptidil-transferasico della subunità maggiore |
 | BIO-C04-NCOM-057 | BIO | 4 | 57 | 440 | key: suspect - la donna con genitore albino è portatrice obbligata Aa, ma il marito normale con genitori e nonni tutti normali ha solo la rara frequenza di portatore della popolazione generale (~1/70), sicché la probabilità di un figlio albino è ~1/280 ('A: Praticamente nulla') e non 'D: 25%' |
 | BIO-C04-NCOM-076 | BIO | 4 | 76 | 442 | key: suspect - avendo già 2 figlie su una famiglia pianificata di 6 figli totali (quesito classico di Griffiths), restano 4 nascite indipendenti e la probabilità di avere tutte figlie è (1/2)⁴ = 1/16 (D), non (1/2)⁶ = 1/64 (E); inoltre il testo non chiarisce se i 6 figli siano totali o aggiuntivi |
+| BIO-C04-NCOM-204 | BIO | 4 | 204 | 459 | key: suspect - eliminando il 7° nucleotide (G) da CUG-AUC-GUA-AUG-CGC si ottiene CUG-AUC-UAA-UGC-GC, in cui il 3° codone diventa il codone di stop UAA che arresta subito la traduzione dopo Leu-Ile: la risposta corretta è C ('L'interruzione della catena amminoacidica'), non E |
+| BIO-C05-COMP-048 | BIO | 5 | 48 | 517 | key: suspect - errore biochimico nel testo: le importine legano e trasportano il carico NLS nel nucleo in assenza di Ran-GTP (il legame nucleare di Ran-GTP provoca invece il distacco del carico dall'importina), mentre sono le esportine a formare complessi cooperativi con carico e Ran-GTP |
 
-## missing (13)
+## missing (16)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -57,8 +66,11 @@
 | BIO-C04-NCOM-130 | BIO | 4 | 130 | 448 | missing: manca completamente l'albero genealogico a cui rimandano l'enunciato e tutte le sigle individuali delle opzioni (F₁-₃, F₂-₁, P-₁, F₂-₂, F₁-₂) |
 | BIO-C04-NCOM-132 | BIO | 4 | 132 | 449 | missing: manca completamente l'albero genealogico in figura necessario per determinare il genotipo della femmina di F₃ |
 | BIO-C04-NCOM-152 | BIO | 4 | 152 | 451 | missing: manca completamente l'albero genealogico in figura necessario per stabilire i genotipi degli individui in F₁, F₂ e F₃ |
+| BIO-C04-NCOM-156 | BIO | 4 | 156 | 452 | missing: manca completamente l'albero genealogico in figura necessario per verificare i genotipi degli individui in F₁, F₂ e F₃ |
+| BIO-C04-NCOM-162 | BIO | 4 | 162 | 453 | missing: manca completamente l'albero genealogico a cui rimandano l'enunciato e tutte le opzioni (F₁, femmina 3 e 5 della F₂, F₃) |
+| BIO-C05-NCOM-030 | BIO | 5 | 30 | 487 | missing: manca completamente la figura delle due cellule vegetali 1 e 2 a cui rimandano l'enunciato e le opzioni, con residui OCR illeggibili ('Ge) I 2') |
 
-## ocr (198)
+## ocr (204)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -260,4 +272,10 @@
 | BIO-C04-NCOM-030 | BIO | 4 | 30 | 436 | ocr: pedici e virgole corrotti nell'enunciato e nelle opzioni ('in F,?', '25% AA₄ 50% Aa, 25% aa', '50% Aa₄ 50% aa') |
 | BIO-C04-NCOM-135 | BIO | 4 | 135 | 449 | ocr: opzione E gravemente contaminata dall'intestazione di pagina ('impossibile da prevedere missione e controllo dei caratten selvatici e mutati 449') |
 | BIO-C04-NCOM-150 | BIO | 4 | 150 | 451 | ocr: intestazione di pagina inserita nel mezzo della parola 'spina bifida' ('la spina bifinissione e controllo det caratteri selvatici e mutati 451 da') |
+| BIO-C04-NCOM-173 | BIO | 4 | 173 | 455 | ocr: simboli degli alleli codominanti nell'enunciato corrotti in '14, 1?' al posto di 'I^A, I^B' |
+| BIO-C04-NCOM-177 | BIO | 4 | 177 | 455 | ocr: genotipi nelle opzioni D ed E gravemente corrotti dall'OCR ('/° /°' e 'JA JA' al posto di 'I^0 I^0' e 'I^A I^A') |
+| BIO-C04-NCOM-202 | BIO | 4 | 202 | 458 | ocr: opzione E contaminata dall'intestazione di pagina ('la produzione di una proteina più lunga del normale Capitolo⁴ /meccanismi cellulari di tra sn') |
+| BIO-C05-NCOM-077 | BIO | 5 | 77 | 492 | ocr: unità di misura nell'enunciato corrotta di un milione di volte ('0,25 pm e 0,75 pm' picometri anziché '0,25 μm e 0,75 μm' micrometri) |
+| BIO-C05-COMP-088 | BIO | 5 | 88 | 520 | ocr: unità di misura nell'enunciato corrotta di sei ordini di grandezza ('0,5 pm' picometri al posto di '0,5 μm' micrometri) |
+| BIO-C05-COMP-091 | BIO | 5 | 91 | 520 | ocr: bersaglio del cloze corrotto nella lettera greca in 'B-ossidazione' al posto di 'β-ossidazione' |
 
