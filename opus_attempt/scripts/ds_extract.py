@@ -122,7 +122,8 @@ def dehyphenate(records):
             yield r["options"], k
         if r.get("printed_reasoning"):
             yield r, "printed_reasoning"
-    split = re.compile(r"(\w+)-\s*(\w+)")
+    # Letters only on both sides: 'Rn-219' or 'C-14' are names, not line breaks.
+    split = re.compile(r"([^\W\d_]+)-\s*([^\W\d_]+)")
     cands = set()
     for r in records:
         for obj, k in fields(r):

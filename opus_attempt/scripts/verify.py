@@ -48,12 +48,15 @@ def main():
     ap.add_argument("--ud", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--adjudications")
-    ap.add_argument("--explanations")
+    ap.add_argument("--explanations", nargs="*", default=[], help="later files override earlier ones")
     ap.add_argument("--pending", default=None)
     a = ap.parse_args()
 
     recs = [json.loads(l) for l in open(a.extracted) if l.strip()]
-    der, adj, expl = load(a.derived), load(a.adjudications), load(a.explanations)
+    der, adj = load(a.derived), load(a.adjudications)
+    expl = {}
+    for path in a.explanations:
+        expl.update(load(path))
     dups = dup_groups(recs)
     out, pending = [], []
     for r in recs:

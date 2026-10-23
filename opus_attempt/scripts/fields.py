@@ -8,7 +8,9 @@ TYPE_LABELS = {"COMM": "Quiz commentati", "NCOM": "Quiz non commentati", "COMP":
 
 
 def esc(text):
-    return escape(text or "", quote=True)
+    # Text nodes only need &, < and > escaped; escaping apostrophes leaves &#x27; in every
+    # Italian elision, which gate 3 rightly treats as damage.
+    return escape(text or "", quote=False)
 
 
 def _stem(stem, mode, answer=""):

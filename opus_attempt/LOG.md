@@ -34,6 +34,14 @@ Update after every chapter, every gate, and before any context clear. See `RULES
 - Fixed model habits deterministically in the parser: page-break merge, numbered question filed as continuation, handwritten answer in COMP blanks, option text appended to stem, line-end hyphens (dictionary-checked).
 - Open WARN needing a scan check: NCOM-058, 060, 070, 081, 098, 101, 118 (numbers not in OCR), 069/070 identical options, NCOM-022/036 figures.
 
+## Pilot CHIM ch.1 built (2026-10-23)
+- `build/Semestre_Filtro_v1.0.apkg`: 178 notes (COMM 10, NCOM 121, COMP 47), 192 media (188 crops + 4 fonts). Statuses: 176 verified, 2 unverified (NCOM-091, -092, ambiguous; 1.1% < 5%). Gates 1,2,3,4,6,7,8 PASS; 5 and 9 MANUAL by design (see build/verification_report.md).
+- Pipeline: `scripts/run_chapter.sh <key> <pagemap> <ud>` (extraction live, derivation + explanations via Batch API, all resumable) then `scripts/merge_build.sh <version> <pagemap>`. Hand fixes: work/deepseek/<key>/{corrections,adjudications}.jsonl, explain/explanations_manual.jsonl.
+- Adjudicated by orchestrator from crops: COMM-002, NCOM-022 (beaker drawing is handwriting), NCOM-036 (table), NCOM-070 (options re-read at 400–500 dpi), NCOM-081 (¹³³Ba not ¹³⁷), NCOM-091/092 ambiguous, COMP-012/015 book word kept.
+- Gate 5: blind derivation agreed on every computed answer; the 11 numeric/duplicate QA warnings were checked on the scans (2 corrected, rest as printed).
+- DeepSeek spend: extraction $0.0215 live; batch steps report no cost in results (check key usage).
+- Mom judge: the chapter run was not judged (no permission prompt fired); a direct mom review call was refused at the permission prompt.
+
 ## Next
 (All agents stopped 2026-10-23 at user request: usage too high. pagemap (Opus), croptool, qa-pipeline were killed mid-task; only CHIM ch.1 map exists, `work/croptool/crop.py` is unfinished/untested, qa-pipeline findings lost. OCR script still running, no tokens. Commit 6febc7c not pushed yet: each push runs an Opus review per commit via the pre-push hook, so batch pushes.)
 1. Workers are Haiku medium (DECISIONS). Done: NCOM 6–50 (`work/x-chim01-ncom-a/`, QA clean, 10/10 gold controls). Chunk cost: 92.6k tok, 164 s, 45 records. Open: NCOM-022 needs a figure crop; NCOM-050 worker note (option A 'carbonio e azoto') goes to derivation.

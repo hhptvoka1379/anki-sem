@@ -1,0 +1,3 @@
+{"id": "CHIM-C01-NCOM-070", "set": {"options": {"A": "⁵⁷₂Co; ⁵₂Co; ⁶⁰₁₇Co", "B": "⁵⁷₂₇Co; ⁵⁸₂₇Co; ⁶⁰₂₇Co", "C": "³³₇₂Co; ³³₁₂₇Co; ³³₁₃₁Co", "D": "⁵⁷₃₀Co; ⁵⁷₃₁Co; ⁵⁷₃₃Co", "E": "³⁰₃Co; ³⁰₃₀Co; ³⁰₃₁Co"}}, "why": "options re-read from 400-500 dpi scan; DeepSeek merged subscripts into superscripts (all five identical)"}
+{"id": "CHIM-C01-NCOM-022", "set": {"figure": null}, "why": "the beaker drawing is student handwriting, not printed; question is text-only"}
+{"id": "CHIM-C01-NCOM-081", "set": {"stem": "Per ¹³³₅₆Ba determinare il numero di protoni, di neutroni e di elettroni:"}, "why": "mass number re-read at 600 dpi: 133, not 137 (answer E unchanged: 77 neutrons)"}

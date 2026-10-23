@@ -47,7 +47,12 @@ def split_x(page):
     text block. Margins differ between odd and even pages, so it is measured per page."""
     if page not in _split:
         ws = [w for w in words(page) if w["top"] > HEADER_MAX_Y and w["conf"] >= 70]
-        if len(ws) < 20:
+        nums = sorted(w["left"] for w in words(page)
+                      if w["top"] > NUMBER_MIN_Y and re.match(r"^\d{1,3}[\).]$", w["text"]))
+        if len(nums) >= 3 and nums[-1] - nums[0] < 150:
+            # Every number starts at one x: a full-width page (fill-in list, RISPOSTE). No gutter.
+            _split[page] = PAGE_W
+        elif len(ws) < 20:
             _split[page] = MID
         else:
             lo, hi = pct([w["left"] for w in ws], 0.02), pct([w["left"] + w["width"] for w in ws], 0.98)
@@ -90,14 +95,19 @@ def body(page, col):
             "y0": min(w["top"] for w in ws), "y1": max(w["top"] + w["height"] for w in ws)}
 
 
+NUM_RE = re.compile(r"^(\d{1,3})[\).]")
+
+
 def starts(page, col):
-    """(number, top) of every question/solution number at the column's left edge: '12)' or '12.'."""
+    """(number, top) of every number in the current section's format at the column's left edge.
+    The format is set per section (NUM_RE) so statement numerals '1.' inside an NCOM question,
+    or '14.' wrapped to a line start, are not taken for question starts."""
     b = body(page, col)
     if not b:
         return []
     out = []
     for w in words(page):
-        m = re.match(r"^(\d{1,3})[\).]", w["text"])
+        m = NUM_RE.match(w["text"])
         if m and column_of(w, page) == col and w["top"] > NUMBER_MIN_Y and abs(w["left"] - b["x0"]) < 90:
             out.append((int(m.group(1)), w["top"]))
     return sorted(out, key=lambda t: t[1])
@@ -134,8 +144,10 @@ def next_slot(page, col, last_page):
     return (page + 1, 0) if page + 1 <= last_page else None
 
 
-def crop_one(doc, num, pages, out_path, limits_for):
+def crop_one(doc, num, pages, out_path, limits_for, num_re):
     """Find number `num` on `pages`, cut to the next number, follow a spill into the next column/page."""
+    global NUM_RE
+    NUM_RE = num_re
     for page in pages:
         for col in (0, 1):
             hit = [t for n, t in starts(page, col) if n == num]
@@ -168,6 +180,10 @@ def crop_one(doc, num, pages, out_path, limits_for):
     return None
 
 
+PAREN_NUM = re.compile(r"^(\d{1,3})\)")   # 'Quiz commentati/non commentati' and RISPOSTE entries: '12)'
+COMP_NUM = re.compile(r"^(\d{1,3})\.")    # 'Quiz a completamento': '12.'
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--extracted", required=True)
@@ -188,7 +204,7 @@ def main():
         qt, n, base = r["quiz_type"], r["question_num"], r["id"].lower()
         # Search the record's own page first; the page map range is the fallback.
         pages = [r["pdf_page"]] + [p for p in sec_pages[qt] if p > r["pdf_page"]]
-        res = crop_one(doc, n, pages, out / (base + "_q.png"), lambda p: [])
+        res = crop_one(doc, n, pages, out / (base + "_q.png"), lambda p: [], COMP_NUM if qt == "COMP" else PAREN_NUM)
         if res:
             r["question_crop"] = base + "_q.png"
             if res["page"] != r["pdf_page"]:
@@ -202,8 +218,12 @@ def main():
             # gives the student the figure without opening the scan.
             r["figure"] = r["question_crop"]
         if qt == "COMM":
+            # Commentati solutions are full-width paragraphs, even on a page that ends in a
+            # multi-column key table, so the answer pages are never split into columns.
+            for p in sol_pages[qt]:
+                _split[p] = PAGE_W
             # Answer pages hold several sections; a 'Risposte ...' heading ends a solution.
-            sres = crop_one(doc, n, sol_pages[qt], out / (base + "_s.png"), headings)
+            sres = crop_one(doc, n, sol_pages[qt], out / (base + "_s.png"), headings, PAREN_NUM)
             r["solution_crop"] = base + "_s.png" if sres else None
             report.append((r["id"], "s-ok" if sres else "s-needs_manual", str(sres or "")))
     with open(a.extracted, "w", encoding="utf-8") as f:
