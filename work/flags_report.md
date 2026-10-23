@@ -1,6 +1,6 @@
-# Flagged rows (364)
+# Flagged rows (382)
 
-## ambiguous (28)
+## ambiguous (29)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -32,6 +32,7 @@
 | FIS-C02-NCOM-044 | FIS | 2 | 44 | 694 | ambiguous: per α = 90° (angolo diverso da 0° e lancio verso l'alto) la traiettoria è rettilinea (E) e non parabolica (C); inoltre 'a diversa da 0' presenta probabile corruzione OCR |
 | FIS-C02-NCOM-054 | FIS | 2 | 54 | 695 | ambiguous: sia A ('2π rad/h') sia C ('costante') sono affermazioni fisicamente vere per la lancetta dei minuti |
 | FIS-C03-COMP-028 | FIS | 3 | 28 | 736 | ambiguous: formulazione incoerente ('non influenzano il moto del sistema esterno'); le forze interne hanno risultante nulla e non alterano il moto del centro di massa del sistema stesso |
+| FIS-C05-NCOM-067 | FIS | 5 | 67 | 775 | ambiguous: sia l'opzione B ('non aumenta né diminuisce') sia l'opzione E ('resta costante nel tempo') esprimono esattamente la stessa legge vera di conservazione dell'energia di un sistema isolato |
 
 ## chem (1)
 
@@ -39,7 +40,7 @@
 |---|---|---|---|---|---|
 | BIO-C05-COMP-102 | BIO | 5 | 102 | 521 | chem: formula chimica del substrato nell'enunciato corrotta dall'OCR in 'H.0' al posto di 'H₂O₂' ('converte l'H.0 in acqua e ossigeno') |
 
-## key (21)
+## key (22)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -64,6 +65,7 @@
 | BIO-C07-NCOM-156 | BIO | 7 | 156 | 583 | key: suspect - Cdc20 è il co-attivatore di APC/C, non il suo inibitore; nel complesso del checkpoint mitotico (MCC) l'inibizione è mediata da Mad2 e BubR1 che sequestrano Cdc20 |
 | FIS-C02-NCOM-076 | FIS | 2 | 76 | 698 | key: suspect - il tempo minimo di attraversamento si ottiene puntando la barca perpendicolarmente alle sponde (t_min = L / v_barca) e resta invariato (E) al variare della corrente, mentre C vale solo imponendo deriva nulla a valle |
 | FIS-C03-NCOM-011 | FIS | 3 | 11 | 711 | key: suspect - per due forze uguali F ad angolo α = 30° il risultante ha modulo 2F cos 15° = F√(2 + √3) ≈ 1,93 F (mentre F√3 vale per α = 60°); inoltre radici corrotte da OCR in '2FV3', 'FY2', 'FS3' |
+| FIS-C04-NCOM-081 | FIS | 4 | 81 | 757 | key: suspect - un fluido non scorre 'sempre' da pressione statica maggiore a minore (es. nel tratto divergente di un tubo di Venturi orizzontale scorre contro gradiente di pressione, e in un fluido statico o discendente p cresce con la profondità); A vale solo per condotto viscoso orizzontale a sezione costante |
 
 ## missing (24)
 
@@ -94,7 +96,7 @@
 | FIS-C01-NCOM-090 | FIS | 1 | 90 | 681 | missing: manca la figura necessaria per conoscere il verso delle tre forze lungo i lati del triangolo equilatero (oltre a formula corrotta 'p3/2/2' nell'opzione A) |
 | FIS-C03-NCOM-036 | FIS | 3 | 36 | 714 | missing: manca la figura necessaria per sapere quale tra le due masse m₁ ed m₂ si trova sul piano inclinato di angolo α |
 
-## ocr (290)
+## ocr (306)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -388,4 +390,20 @@
 | FIS-C04-NCOM-001 | FIS | 4 | 1 | 747 | ocr: valori e unità corrotti nell'opzione corretta C ('2g/cm3³2' invece di '2 g/cm³; 2') |
 | FIS-C04-COMP-017 | FIS | 4 | 17 | 759 | ocr: pedice corrotto nella formula dell'enunciato ('A₁ v, = A₂ v₂' invece di 'A₁ v₁ = A₂ v₂') |
 | FIS-C04-COMP-023 | FIS | 4 | 23 | 760 | ocr: simboli corrotti nella legge di Stevino ('P = Py + pg h' invece di 'P = P₀ + ρg h') |
+| FIS-C04-NCOM-034 | FIS | 4 | 34 | 750 | ocr: esponenti e unità corrotti nell'enunciato ('10° cm₋' invece di '10³ cm²' e 'g = 10 m/s’') e nell'opzione B ('e³ N') |
+| FIS-C04-NCOM-039 | FIS | 4 | 39 | 751 | ocr: l'unità dell'area della sezione è corrotta in unità di volume 'cm³' nell'opzione corretta A ('sezione 1 cm³') e nelle opzioni B, D, E |
+| FIS-C04-NCOM-060 | FIS | 4 | 60 | 754 | ocr: pedici corrotti in virgole nell'opzione corretta C ('D,<D,') e nelle opzioni A, B, D |
+| FIS-C04-NCOM-086 | FIS | 4 | 86 | 758 | ocr: esponente '²' dell'area corrotto in doppio punto interrogativo nell'enunciato ('di 4 cm??' invece di 'di 4 cm²?') |
+| FIS-C05-COMP-008 | FIS | 5 | 8 | 784 | ocr: simboli greci e di variazione corrotti nell'equazione ('AV = B Vi AT' invece di 'ΔV = β V_i ΔT') |
+| FIS-C05-NCOM-023 | FIS | 5 | 23 | 769 | ocr: il simbolo 'Q' è stato corrotto nella cifra '0' nell'opzione corretta A ('0/4' invece di 'Q/4') e nelle opzioni B ed E |
+| FIS-C05-NCOM-024 | FIS | 5 | 24 | 769 | ocr: testo estraneo corrotto 'iss =' nell'opzione corretta B ('Energia - calore iss =') |
+| FIS-C05-COMP-037 | FIS | 5 | 37 | 785 | ocr: simbolo 'Δm' corrotto in 'Am' nell'enunciato ('Durante una fusione Am è sempre positiva') e grandezza 'Δm' priva di definizione contestuale |
+| FIS-C05-COMP-043 | FIS | 5 | 43 | 786 | ocr: simbolo 'ΔE_int' corrotto in 'AE,,,' nell'equazione ('AE,,, = Q + W') |
+| FIS-C05-COMP-044 | FIS | 5 | 44 | 786 | ocr: simbolo 'ΔV' corrotto in '4 V' ('-Px 4 V' invece di '−P × ΔV', oltre a segno riferito al lavoro fatto sul gas anziché dal gas) |
+| FIS-C05-COMP-056 | FIS | 5 | 56 | 786 | ocr: pedice corrotto nella formula del rendimento ('Q;' invece di 'Q_f') |
+| FIS-C05-NCOM-062 | FIS | 5 | 62 | 774 | ocr: pedici corrotti nell'enunciato ('velocità V, ed uno di massa M/4 e velocità V,= 2 V,') |
+| FIS-C05-COMP-069 | FIS | 5 | 69 | 787 | ocr: formula di Boltzmann corrotta in back_stem ('S = ky In W' invece di 'S = k_B ln W') |
+| FIS-C05-COMP-071 | FIS | 5 | 71 | 787 | ocr: pedice corrotto nell'enunciato ('differenza tra Q, e Qf' invece di 'differenza tra Qc e Qf') |
+| FIS-C05-NCOM-089 | FIS | 5 | 89 | 778 | ocr: esponente dell'unità di misura del volume corrotto nell'opzione corretta B ('4 dm²' invece di '4 dm³') e nell'opzione E ('4 m²' invece di '4 m³') |
+| FIS-C05-NCOM-114 | FIS | 5 | 114 | 781 | ocr: simbolo 'Δ' corrotto in 'A' in tutte le opzioni ('AU, AT, AG, AS, AH' invece di 'ΔU, ΔT, ΔG, ΔS, ΔH') |
 
