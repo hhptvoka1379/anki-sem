@@ -1,6 +1,6 @@
-# Flagged rows (161)
+# Flagged rows (167)
 
-## ambiguous (36)
+## ambiguous (38)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -40,6 +40,8 @@
 | BIO-C01-NCOM-021 | BIO | 1 | 21 | 319 | ambiguous: as printed, the statement that carbohydrates are composed of C3 H2O and the keyed statement that cells reduce them to CO2, H2O and energy are both false, so the false statement is not unique |
 | BIO-C01-NCOM-094 | BIO | 1 | 94 | 327 | ambiguous: mitochondria and chloroplasts contain DNA, RNA and tRNA, so several listed statements are simultaneously true and support endosymbiosis rather than the keyed statement alone |
 | BIO-C01-NCOM-135 | BIO | 1 | 135 | 331 | ambiguous: AMP contains a phosphoester bond, which is also an ester bond, so both the phosphoester and generic ester options are chemically applicable |
+| BIO-C03-NCOM-003 | BIO | 3 | 3 | 384 | ambiguous: genes are indeed hereditary units as keyed, but genes are also literally present in mitochondria through the mitochondrial genome, so the keyed description is not the only true option |
+| BIO-C03-NCOM-019 | BIO | 3 | 19 | 385 | ambiguous: RNA polymerase is both an enzyme and a protein, and both classifications are offered as alternatives |
 
 ## chem (14)
 
@@ -60,7 +62,7 @@
 | CHIM-C12-NCOM-245 | CHIM | 12 | 245 | 216 | chem: the displayed CH3-CH3-CO-NH-CH3 structure gives the second carbon five bonds; an amide of this skeleton requires a CH2 group before the carbonyl |
 | CHIM-C12-NCOM-253 | CHIM | 12 | 253 | 217 | chem: aniline is C6H5-NH2, whereas the keyed formula is printed with CH and NH3 fragments that do not represent a neutral phenylamine |
 
-## key (12)
+## key (15)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -76,8 +78,11 @@
 | CHIM-C13-NCOM-156 | CHIM | 13 | 156 | 246 | key: suspect: adenine is 6-aminopurine, a purine nitrogenous base with a primary exocyclic amino group, not a secondary aromatic amine; no chemically correct class is offered |
 | BIO-C01-NCOM-012 | BIO | 1 | 12 | 318 | key: suspect: water is the principal chemical constituent by mass of most cells and is not listed, so the none option is defensible while proteins are only the main dry organic fraction |
 | BIO-C01-NCOM-216 | BIO | 1 | 216 | 340 | key: suspect - forming three nucleotides from bases, sugars and phosphates requires six condensations and linking them into a chain requires two additional phosphodiester condensations, for eight rather than the keyed six |
+| BIO-C02-NCOM-072 | BIO | 2 | 72 | 367 | key: suspect - sister-chromatid cohesion is specifically associated with the pairing domain and cohesins, which is offered separately from the generic keyed centromere |
+| BIO-C03-NCOM-007 | BIO | 3 | 7 | 384 | key: suspect - the general seat of genes is chromosomes, which is not listed, but mitochondria also contain genes, so keying none of the listed answers is not strictly correct |
+| BIO-C03-COMP-011 | BIO | 3 | 11 | 410 | key: suspect - in prokaryotes the principal high-speed replicative enzyme is DNA polymerase III, not DNA polymerase I, whose main role is primer removal and gap filling |
 
-## missing (7)
+## missing (8)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -88,6 +93,7 @@
 | CHIM-C12-NCOM-161 | CHIM | 12 | 161 | 209 | missing: the molecular structures labelled A, B and C are said to be shown in a figure, but no figure is present on the card |
 | BIO-C01-NCOM-056 | BIO | 1 | 56 | 323 | missing: the stem asks for structure A in a figure of an optical microscope, but no figure is present on the card |
 | BIO-C01-NCOM-091 | BIO | 1 | 91 | 326 | missing: the question requires identification from an accompanying figure, but no figure is present on the card |
+| BIO-C01-NCOM-263 | BIO | 1 | 263 | 346 | missing: the question requires an evolutionary-tree graph, but no graph is present in the card |
 
 ## ocr (92)
 
