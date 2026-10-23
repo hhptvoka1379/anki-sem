@@ -1,6 +1,6 @@
-# Flagged rows (155)
+# Flagged rows (161)
 
-## ambiguous (34)
+## ambiguous (36)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -38,6 +38,8 @@
 | CHIM-C13-NCOM-126 | CHIM | 13 | 126 | 243 | ambiguous: tertiary structure is both the overall three-dimensional configuration and a determinant of stability/interactions, while the keyed wording and the conformations option overlap and cannot be uniquely separated |
 | BIO-C01-NCOM-015 | BIO | 1 | 15 | 318 | ambiguous: by wet mass organisms are mostly water, an inorganic compound, whereas organic compounds dominate mainly dry matter, so the principamente wording can justify two different answers |
 | BIO-C01-NCOM-021 | BIO | 1 | 21 | 319 | ambiguous: as printed, the statement that carbohydrates are composed of C3 H2O and the keyed statement that cells reduce them to CO2, H2O and energy are both false, so the false statement is not unique |
+| BIO-C01-NCOM-094 | BIO | 1 | 94 | 327 | ambiguous: mitochondria and chloroplasts contain DNA, RNA and tRNA, so several listed statements are simultaneously true and support endosymbiosis rather than the keyed statement alone |
+| BIO-C01-NCOM-135 | BIO | 1 | 135 | 331 | ambiguous: AMP contains a phosphoester bond, which is also an ester bond, so both the phosphoester and generic ester options are chemically applicable |
 
 ## chem (14)
 
@@ -58,7 +60,7 @@
 | CHIM-C12-NCOM-245 | CHIM | 12 | 245 | 216 | chem: the displayed CH3-CH3-CO-NH-CH3 structure gives the second carbon five bonds; an amide of this skeleton requires a CH2 group before the carbonyl |
 | CHIM-C12-NCOM-253 | CHIM | 12 | 253 | 217 | chem: aniline is C6H5-NH2, whereas the keyed formula is printed with CH and NH3 fragments that do not represent a neutral phenylamine |
 
-## key (11)
+## key (12)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -73,8 +75,9 @@
 | CHIM-C13-NCOM-028 | CHIM | 13 | 28 | 234 | key: suspect: only hexose monosaccharides have formula C6H12O6, while monosaccharides may contain from three to seven carbon atoms, so the keyed universal definition is false and the no-appropriate-definition option is defensible |
 | CHIM-C13-NCOM-156 | CHIM | 13 | 156 | 246 | key: suspect: adenine is 6-aminopurine, a purine nitrogenous base with a primary exocyclic amino group, not a secondary aromatic amine; no chemically correct class is offered |
 | BIO-C01-NCOM-012 | BIO | 1 | 12 | 318 | key: suspect: water is the principal chemical constituent by mass of most cells and is not listed, so the none option is defensible while proteins are only the main dry organic fraction |
+| BIO-C01-NCOM-216 | BIO | 1 | 216 | 340 | key: suspect - forming three nucleotides from bases, sugars and phosphates requires six condensations and linking them into a chain requires two additional phosphodiester condensations, for eight rather than the keyed six |
 
-## missing (5)
+## missing (7)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -83,8 +86,10 @@
 | CHIM-C05-NCOM-029 | CHIM | 5 | 29 | 85 | missing: the stem refers to three containers shown in a figure, but no figure or description of their contents/states is present on the card |
 | CHIM-C08-NCOM-001 | CHIM | 8 | 1 | 125 | missing: the stem refers to a concentration-versus-time graph, but no graph or plotted values are present on the card |
 | CHIM-C12-NCOM-161 | CHIM | 12 | 161 | 209 | missing: the molecular structures labelled A, B and C are said to be shown in a figure, but no figure is present on the card |
+| BIO-C01-NCOM-056 | BIO | 1 | 56 | 323 | missing: the stem asks for structure A in a figure of an optical microscope, but no figure is present on the card |
+| BIO-C01-NCOM-091 | BIO | 1 | 91 | 326 | missing: the question requires identification from an accompanying figure, but no figure is present on the card |
 
-## ocr (91)
+## ocr (92)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -179,4 +184,5 @@
 | CHIM-C13-NCOM-035 | CHIM | 13 | 35 | 235 | ocr: the keyed option reads sei atomi di e, with the letter e replacing the carbon symbol needed to explain why hexoses have that name |
 | CHIM-C13-NCOM-104 | CHIM | 13 | 104 | 241 | ocr: the combination options and especially the keyed Beb are garbled, so it cannot be read reliably whether the intended set includes disulfide bonds besides peptide bonds |
 | BIO-C01-NCOM-003 | BIO | 1 | 3 | 317 | ocr: the keyed trace element is printed as lo dio rather than iodio, so the option does not legibly name an element |
+| BIO-C01-NCOM-244 | BIO | 1 | 244 | 343 | ocr: the keyed combination reads 'Solo le2' and several combination options are garbled, so the intended set of conditions cannot be read reliably |
 
