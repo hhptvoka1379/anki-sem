@@ -1,6 +1,6 @@
-# Flagged rows (420)
+# Flagged rows (484)
 
-## ambiguous (36)
+## ambiguous (41)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -40,8 +40,13 @@
 | BIO-C03-NCOM-019 | BIO | 3 | 19 | 385 | ambiguous: RNA polymerase is a protein enzyme, making both 'un enzima' (option_d) and 'una proteina' (option_e) biologically correct |
 | BIO-C03-NCOM-038 | BIO | 3 | 38 | 387 | ambiguous: while 'Acido ribonucleico' (option_c) is the exact name/acronym expansion, RNA is also an 'Acido nucleico' (option_b) |
 | BIO-C03-NCOM-044 | BIO | 3 | 44 | 388 | ambiguous: while 'Ribosomi' (option_d) are the ribonucleoprotein complexes catalyzing peptide synthesis, 'Mitocondri' (option_c) are membrane-bound organelles that also synthesize polypeptide chains via mitoribosomes (as tested in BIO-C03-NCOM-001) |
+| BIO-C03-NCOM-106 | BIO | 3 | 106 | 395 | ambiguous: 'gli unici elementi' could refer to tRNA adaptors (option_a), aminoacyl-tRNA synthetases matching amino acids to tRNAs (option_c), or ribosomes/combined translational machinery implied by option_e |
+| BIO-C03-NCOM-154 | BIO | 3 | 154 | 401 | ambiguous: prokaryotic transcription produces both polycistronic mRNAs from operons (option_e) and monocistronic mRNAs from standalone bacterial genes such as lacI (option_a) |
+| BIO-C03-NCOM-216 | BIO | 3 | 216 | 407 | ambiguous: option_a and option_e are identical ('Degenerazione'), leaving two indistinguishable correct choices |
+| BIO-C03-NCOM-234 | BIO | 3 | 234 | 408 | ambiguous: besides proteasomal degradation (option_e), mitochondrial protein import (option_d, mtHsp70), DNA replication (option_b), transcription initiation (option_a), and sugar synthesis (option_c) also require ATP |
+| BIO-C04-NCOM-017 | BIO | 4 | 17 | 434 | ambiguous: 'allelomorfo' (option_b) is the classical exact synonym of 'allele' (option_a), making both options scientifically correct |
 
-## chem (17)
+## chem (20)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -62,8 +67,11 @@
 | BIO-C02-NCOM-033 | BIO | 2 | 33 | 362 | chem: 'le cellule germinali' includes diploid germ-line cells (primordial germ cells, spermatogonia, oogonia, primary gametocytes) in addition to haploid post-meiotic gametes |
 | BIO-C02-NCOM-119 | BIO | 2 | 119 | 371 | chem: CAG trinucleotide repeats (3 bp unit) in exon 1 of HTT are a microsatellite (STR, 1-6 bp unit), not a minisatellite as stated in question |
 | BIO-C03-COMP-050 | BIO | 3 | 50 | 412 | chem: garbled qualifier 'inattivo' attached to 'allolattosio' ('L\'allolattosio inattivo ... agisce come induttore'), whereas allolactose is the active inducer that makes the repressor inactive |
+| BIO-C03-NCOM-076 | BIO | 3 | 76 | 391 | chem: option_d conflates 'codice genetico' with 'genoma / sequenza del DNA' |
+| BIO-C03-COMP-115 | BIO | 3 | 115 | 416 | chem: eukaryotic 5S rRNA is transcribed separately in the nucleoplasm by RNA polymerase III, whereas only 28S, 18S, and 5.8S derive from the 45S nucleolar precursor |
+| BIO-C03-COMP-123 | BIO | 3 | 123 | 417 | chem: elongation factors (EF-Tu/eEF1A, EF-G/eEF2) deliver aminoacyl-tRNA to the A site and mediate translocation, whereas peptide-bond formation is catalyzed by the 23S/28S rRNA peptidyl-transferase ribozyme, not by elongation factors |
 
-## key (17)
+## key (18)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -84,8 +92,9 @@
 | BIO-C01-NCOM-216 | BIO | 1 | 216 | 340 | key: suspect — assembling 3 mononucleotides from free bases, deoxyribose, and phosphate requires 3 × 2 = 6 condensations, plus 2 phosphodiester condensations to join them into a 3-nucleotide chain = 8 total (option_a), contradicting keyed 6 (option_d) |
 | BIO-C02-NCOM-072 | BIO | 2 | 72 | 367 | key: suspect (options A-C name the three ultrastructural centromere domains—centrale, di appaiamento, del cinetocore—among which 'il dominio di appaiamento' in option_b is specifically defined as responsible for sister-chromatid cohesion) |
 | BIO-C03-COMP-011 | BIO | 3 | 11 | 410 | key: suspect (in prokaryotes the main replicative enzyme working at ~1000 nt/s is DNA polymerase III, not DNA polymerase I) |
+| BIO-C03-NCOM-076 | BIO | 3 | 76 | 391 | key: suspect (the genetic code is the universal correspondence rule mapping codons to amino acids/stop signals, not an organism's DNA base sequence as stated in option_d, making option_e scientifically correct) |
 
-## missing (8)
+## missing (9)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -97,8 +106,9 @@
 | BIO-C01-NCOM-056 | BIO | 1 | 56 | 323 | missing: question refers to structure 'A' on an optical microscope figure not included in the card |
 | BIO-C01-NCOM-091 | BIO | 1 | 91 | 326 | missing: question requires inspecting a cell figure not included in the card |
 | BIO-C01-NCOM-263 | BIO | 1 | 263 | 346 | missing: question requires inspecting an evolutionary tree diagram not included in the card |
+| BIO-C03-NCOM-064 | BIO | 3 | 64 | 390 | missing: referenced Lac operon diagram ('In figura è rappresentato uno schema...') is absent |
 
-## ocr (364)
+## ocr (422)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -466,4 +476,62 @@
 | BIO-C03-COMP-046 | BIO | 3 | 46 | 412 | ocr: Greek letter 'β' corrupted to 'B' in answer_text 'B-galattosidasi' |
 | BIO-C03-COMP-055 | BIO | 3 | 55 | 413 | ocr: 'traduzionale' corrupted to 'tradizionale' in question and back_stem |
 | BIO-C03-NCOM-058 | BIO | 3 | 58 | 389 | ocr: statement index '1' corrupted to 'l' in option_c ('Solole2' for 'Solo 1 e 2') |
+| BIO-C03-NCOM-064 | BIO | 3 | 64 | 390 | ocr: garbled figure labels 'a Pi EI io' bled into question (and 'nonè' in option_c) |
+| BIO-C03-COMP-067 | BIO | 3 | 67 | 413 | ocr: initiation factor symbol 'eIF2' corrupted to 'elF2' (capital 'I' turned into lowercase 'l') in question and back_stem |
+| BIO-C03-NCOM-071 | BIO | 3 | 71 | 391 | ocr: option_a corrupted to garbled 'al ide' |
+| BIO-C03-COMP-073 | BIO | 3 | 73 | 414 | ocr: Roman numerals 'II' and 'III' corrupted to 'Il' and 'Ill' in question and back_stem |
+| BIO-C03-COMP-074 | BIO | 3 | 74 | 414 | ocr: comma corrupted to subscript '₄' in '28S₄' and Svedberg unit '5,8S' corrupted to '5,85' (plus initial 'l ') in question and back_stem |
+| BIO-C03-COMP-075 | BIO | 3 | 75 | 414 | ocr: RNA class symbol 'lncRNA' corrupted to 'IncRNA' (lowercase 'l' turned into uppercase 'I') in question and back_stem |
+| BIO-C03-COMP-077 | BIO | 3 | 77 | 414 | ocr: Roman numeral 'II' corrupted to 'Il' in 'RNA pol Il' in question and back_stem |
+| BIO-C03-COMP-084 | BIO | 3 | 84 | 414 | ocr: Roman numeral 'II' corrupted to 'Il' ('RNA polimerasi Il') and prime "3'" corrupted to double quote '3"' in question and back_stem |
+| BIO-C03-COMP-085 | BIO | 3 | 85 | 415 | ocr: Roman numeral 'II' corrupted to 'Il' in 'RNA pol Il' in question and back_stem |
+| BIO-C03-COMP-086 | BIO | 3 | 86 | 415 | ocr: Roman numeral 'II' corrupted to 'Il' in 'RNA pol Il' in question and back_stem |
+| BIO-C03-COMP-099 | BIO | 3 | 99 | 415 | ocr: comma after 'apolipoproteina B,' corrupted to subscript '₄' ('apolipoproteina B₄') in question and back_stem |
+| BIO-C03-COMP-106 | BIO | 3 | 106 | 416 | ocr: 'RNAi' corrupted to 'RNAI' in answer_text and comma corrupted to subscript '₄' in 'piccoli RNA₄' in question and back_stem |
+| BIO-C03-NCOM-109 | BIO | 3 | 109 | 396 | ocr: 'rRNA' or 'mRNA' corrupted to '/RNA' in option_b ("sull’/RNA") |
+| BIO-C03-NCOM-112 | BIO | 3 | 112 | 396 | ocr: commas after codons corrupted to subscript '₄' in option_a ('AGU₄') and option_e ('UAG₄') |
+| BIO-C03-COMP-115 | BIO | 3 | 115 | 416 | ocr: Svedberg unit '5,8S' corrupted to '5,85' in question and back_stem |
+| BIO-C03-NCOM-128 | BIO | 3 | 128 | 398 | ocr: commas after numbers corrupted to subscript '₃' in option_b ('20₃') and option_c ('12₃') |
+| BIO-C03-NCOM-129 | BIO | 3 | 129 | 398 | ocr: strand polarities '5' → 3'' and '3' → 5'' severely corrupted to '5° 3', '3° 9S’', and 'Solo S’ > S’' across options |
+| BIO-C03-NCOM-131 | BIO | 3 | 131 | 399 | ocr: Roman numeral 'II' corrupted to 'Il' in answer_text/option_b ('Topoisomerasi Il') |
+| BIO-C03-NCOM-133 | BIO | 3 | 133 | 399 | ocr: Roman numeral 'II' corrupted to 'Il' in option_c ('Topoisomerasi Il') |
+| BIO-C03-NCOM-134 | BIO | 3 | 134 | 399 | ocr: Roman numeral 'II' corrupted to 'Il' in option_b ('DNA polimerasi Il') |
+| BIO-C03-NCOM-135 | BIO | 3 | 135 | 399 | ocr: prime "3'" corrupted to degree sign '3°' in '3°-5’' in question |
+| BIO-C03-NCOM-138 | BIO | 3 | 138 | 399 | ocr: Greek polymerase symbols δ, α, β, γ corrupted to '6', 'a', 'B', and 'y' across options including answer_text ('DNA polimerasi y') |
+| BIO-C03-NCOM-141 | BIO | 3 | 141 | 400 | ocr: Greek polymerase symbols α, γ, δ, β corrupted to 'a', 'y', '6', and 'B' across options including answer_text ('DNA polimerasi 6') |
+| BIO-C03-NCOM-144 | BIO | 3 | 144 | 400 | ocr: Greek letter 'ε' corrupted to accented verb 'è' in option_d ('DNA polimerasi è') |
+| BIO-C03-NCOM-150 | BIO | 3 | 150 | 400 | ocr: 'Introni' split into two words 'In troni' in answer_text/option_c |
+| BIO-C03-NCOM-155 | BIO | 3 | 155 | 401 | ocr: 'intronica' corrupted to 'in ironica' in option_e |
+| BIO-C03-NCOM-156 | BIO | 3 | 156 | 401 | ocr: Greek 'ρ' corrupted to 'p' in option_a ('Fattore p') and 'σ⁷⁰' corrupted to '070' in option_e |
+| BIO-C03-NCOM-158 | BIO | 3 | 158 | 401 | ocr: question mark '?' corrupted to superscript '²' in question ('TATA-less²') |
+| BIO-C03-NCOM-162 | BIO | 3 | 162 | 401 | ocr: 'cAMP' corrupted to 'CAMP' in option_d |
+| BIO-C03-NCOM-163 | BIO | 3 | 163 | 402 | ocr: Greek 'ρ' corrupted to 'p' in option_c ('terminazione p-dipendente') |
+| BIO-C03-NCOM-164 | BIO | 3 | 164 | 402 | ocr: 'traduzionale' corrupted to 'tradizionale' in question |
+| BIO-C03-NCOM-169 | BIO | 3 | 169 | 402 | ocr: "l'rRNA 18S," corrupted to 'FRNA 1858,' in question and 'III' corrupted to 'II]' in option_c |
+| BIO-C03-NCOM-170 | BIO | 3 | 170 | 402 | ocr: 'tRNA' corrupted to '(RNA' in question |
+| BIO-C03-NCOM-171 | BIO | 3 | 171 | 402 | ocr: 'TFIIA' corrupted to 'TFILA' in question |
+| BIO-C03-NCOM-172 | BIO | 3 | 172 | 402 | ocr: 'TFIIH' corrupted to 'TF1IH' in question |
+| BIO-C03-NCOM-177 | BIO | 3 | 177 | 403 | ocr: 'Rat1' corrupted to 'Ratl' (digit '1' turned into 'l') in option_b |
+| BIO-C03-NCOM-178 | BIO | 3 | 178 | 403 | ocr: Roman numeral 'II' corrupted to 'Il' in answer_text/option_d ('RNA pol Il') |
+| BIO-C03-NCOM-180 | BIO | 3 | 180 | 403 | ocr: Roman numeral 'II' corrupted to 'Il' in question ('RNA polimerasi Il') |
+| BIO-C03-NCOM-183 | BIO | 3 | 183 | 403 | ocr: 'Rat1' corrupted to 'Ratl' (digit '1' turned into 'l') in option_d |
+| BIO-C03-NCOM-188 | BIO | 3 | 188 | 404 | ocr: 'U1' corrupted to 'Ul' (digit '1' turned into 'l') in option_b |
+| BIO-C03-NCOM-189 | BIO | 3 | 189 | 404 | ocr: 'U5' corrupted to 'US' (digit '5' turned into 'S') in answer_text/option_c |
+| BIO-C03-NCOM-193 | BIO | 3 | 193 | 404 | ocr: 'Introni' split into 'In troni' across all options, 'I e II' corrupted to 'le Il' in answer_text/option_b, and 'β-globina' corrupted to 'fi-globina' in option_e |
+| BIO-C03-NCOM-194 | BIO | 3 | 194 | 405 | ocr: 'Introni' split into two words 'In troni' across all options including answer_text/option_b |
+| BIO-C03-NCOM-197 | BIO | 3 | 197 | 405 | ocr: 'Rat1' corrupted to 'Ratl' (digit '1' turned into 'l') in option_b |
+| BIO-C03-NCOM-198 | BIO | 3 | 198 | 405 | ocr: Roman numeral 'II' corrupted to 'Il' in option_a ('RNA polimerasi Il') |
+| BIO-C03-NCOM-213 | BIO | 3 | 213 | 406 | ocr: Svedberg units '18S', '5,8S', and '23S' corrupted to '185', '5,85' (in question), and '23$' (in option_c) |
+| BIO-C03-NCOM-215 | BIO | 3 | 215 | 406 | ocr: apostrophe corrupted to superscript minus '⁻' in option_a ('L⁻amminoacil-tRNA') and 'peptidil' corrupted to 'peptidi]' in option_b |
+| BIO-C03-NCOM-222 | BIO | 3 | 222 | 407 | ocr: apostrophe corrupted to superscript '⁴' in option_b ('L⁴rRNA 28S') and '5,8S' corrupted to '5,85' in option_d |
+| BIO-C03-NCOM-223 | BIO | 3 | 223 | 407 | ocr: initiation factor symbols 'IF2' and 'eIF4E' corrupted to '1F2' (option_c) and 'elF4E' (option_e) |
+| BIO-C03-NCOM-224 | BIO | 3 | 224 | 407 | ocr: initiation factor symbol 'IF3' corrupted to '1F3' in option_c |
+| BIO-C03-NCOM-225 | BIO | 3 | 225 | 407 | ocr: Svedberg unit '16S' corrupted to number '165' in option_a ('rRNA 165') |
+| BIO-C03-NCOM-227 | BIO | 3 | 227 | 408 | ocr: Roman numeral 'II' corrupted to 'Il' in option_a ('Polimerasi Il') |
+| BIO-C03-NCOM-231 | BIO | 3 | 231 | 408 | ocr: Greek letters 'α' and 'β' corrupted to 'a' and 'B' in option_c ('Subunità a') and option_d ('Subunità B') |
+| BIO-C03-NCOM-232 | BIO | 3 | 232 | 408 | ocr: tumor suppressor 'p53'/'P53' corrupted to 'PS3' (digit '5' turned into 'S') in option_e |
+| BIO-C03-NCOM-234 | BIO | 3 | 234 | 408 | ocr: question mark '?' corrupted to superscript minus '⁻' at end of question |
+| BIO-C03-NCOM-239 | BIO | 3 | 239 | 409 | ocr: Greek 'β' corrupted to digit '8' in answer_text/option_a ('Foglietti 8') and 'α' corrupted to 'a' in option_b ('a-eliche') |
+| BIO-C03-NCOM-240 | BIO | 3 | 240 | 409 | ocr: Roman numeral 'II' corrupted to 'Il' in option_b ('RNA polimerasi Il') |
+| BIO-C04-NCOM-026 | BIO | 4 | 26 | 435 | ocr: spaces around conjunction 'e' dropped in all parental genotype options ('RRerr', 'RreRr', 'RReRR', 'rrerr', 'RreRR'), merging 'e' into the allele symbols |
 
