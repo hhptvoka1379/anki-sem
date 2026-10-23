@@ -1,4 +1,4 @@
-# Flagged rows (339)
+# Flagged rows (364)
 
 ## ambiguous (28)
 
@@ -94,7 +94,7 @@
 | FIS-C01-NCOM-090 | FIS | 1 | 90 | 681 | missing: manca la figura necessaria per conoscere il verso delle tre forze lungo i lati del triangolo equilatero (oltre a formula corrotta 'p3/2/2' nell'opzione A) |
 | FIS-C03-NCOM-036 | FIS | 3 | 36 | 714 | missing: manca la figura necessaria per sapere quale tra le due masse m₁ ed m₂ si trova sul piano inclinato di angolo α |
 
-## ocr (265)
+## ocr (290)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -363,4 +363,29 @@
 | FIS-C03-COMP-058 | FIS | 3 | 58 | 738 | ocr: simbolo di spostamento 'Δr' corrotto in 'Ar' nella formula ('W = F Ar cos θ') |
 | FIS-C03-COMP-073 | FIS | 3 | 73 | 738 | ocr: simboli corrotti nella formula dell'enunciato ('W = F Ar cos 8' invece di 'W = F Δr cos θ') |
 | FIS-C03-NCOM-073 | FIS | 3 | 73 | 719 | ocr: simboli corrotti nell'enunciato ('v,' e 'distanza A' invece di 'v₀' e 'distanza R') |
+| FIS-C03-NCOM-077 | FIS | 3 | 77 | 719 | ocr: testo estraneo corrotto 'uss =' all'interno dell'enunciato ('di un pendolo semplice uss = che compie') |
+| FIS-C03-COMP-079 | FIS | 3 | 79 | 738 | ocr: il simbolo 'Δ' di variazione è corrotto nella cifra '4' ('4 K' invece di 'ΔK') |
+| FIS-C03-NCOM-082 | FIS | 3 | 82 | 720 | ocr: segni di moltiplicazione corrotti in segni di sottrazione nell'opzione corretta D ('70kg- 1,5 m-9,81 m/s² = 1030 joule') e nelle altre opzioni |
+| FIS-C03-NCOM-087 | FIS | 3 | 87 | 721 | ocr: testo corrotto '1+' nell'opzione corretta B ('non solo nei casi C, D, E 1+') e spazi mancanti nelle altre opzioni |
+| FIS-C03-COMP-090 | FIS | 3 | 90 | 739 | ocr: simbolo corrotto 'AE,' nell'enunciato invece di 'ΔE_m' (variazione di energia meccanica) |
+| FIS-C03-NCOM-098 | FIS | 3 | 98 | 722 | ocr: punto interrogativo finale corrotto in esponente '²' nell'unità della velocità ('8,5 m/s²' invece di '8,5 m/s?') |
+| FIS-C03-NCOM-104 | FIS | 3 | 104 | 723 | ocr: punto interrogativo finale corrotto in esponente '²' ('100 km/h²' invece di '100 km/h?') e testo ambiguo ('A quale altezza deve essere lanciato' invece di 'Da quale altezza deve cadere') |
+| FIS-C03-COMP-105 | FIS | 3 | 105 | 740 | ocr: simboli di variazione corrotti nell'equazione ('AK + AU' invece di 'ΔK + ΔU') |
+| FIS-C03-NCOM-105 | FIS | 3 | 105 | 723 | ocr: unità 'l' (litri) corrotta nella cifra '1' in tutte le opzioni ('0,051', '31', '1,051', '0,31', '0,51'), oltre a '3,4 x 107 J' e '72 km/h²' |
+| FIS-C03-COMP-156 | FIS | 3 | 156 | 742 | ocr: coefficiente '½' corrotto nel simbolo '%' nel testo del retro ('= %M R²') |
+| FIS-C03-NCOM-159 | FIS | 3 | 159 | 730 | ocr: simbolo 'Δt' corrotto in 'At' nell'enunciato e nell'opzione corretta D ('F=mv/At'), oltre a 'v?' nell'opzione A |
+| FIS-C03-NCOM-164 | FIS | 3 | 164 | 731 | ocr: masse, raggi ed esponenti gravemente corrotti nell'enunciato ('6 1024', '6+ 10°', '2 - 103°', '7 + 10°', '1,5 - 101!') |
+| FIS-C03-NCOM-176 | FIS | 3 | 176 | 732 | ocr: nell'opzione corretta C '50 N' è stato corrotto in 'SON'; inoltre l'enunciato non specifica che la fune fissata al soffitto sia verticale |
+| FIS-C03-NCOM-177 | FIS | 3 | 177 | 733 | ocr: pedici corrotti nell'enunciato ('M²', 'lunghezza L,', 'rapporto L,/L,'), rendendo impossibile distinguere se sia richiesto L₁/L₂ (0,949) o L₂/L₁ (1,053) |
+| FIS-C03-COMP-181 | FIS | 3 | 181 | 743 | ocr: coefficiente '½' corrotto in '%' nel testo del retro ('K = %m v²') |
+| FIS-C03-COMP-182 | FIS | 3 | 182 | 743 | ocr: coefficiente '½' corrotto in '14' nel testo del retro ('U = 14 k x²') |
+| FIS-C03-COMP-184 | FIS | 3 | 184 | 743 | ocr: simbolo 'v_max' corrotto in 'vp,' nel testo del retro ('vp, =A * ω') |
+| FIS-C03-NCOM-184 | FIS | 3 | 184 | 734 | ocr: testo di figura corrotto incorporato in coda all'enunciato ('q 4 H p—— 3 i/3 + Pp') |
+| FIS-C03-COMP-185 | FIS | 3 | 185 | 743 | ocr: simbolo 'a_max' corrotto in 'a,' nel testo del retro ('a, = A x ω²') |
+| FIS-C03-NCOM-185 | FIS | 3 | 185 | 734 | ocr: nell'opzione corretta C il denominatore 'X_r' è stato corrotto in 'Xp' ('G=Xp/ Xp' = 1), oltre a pedici corrotti nelle altre opzioni |
+| FIS-C03-COMP-191 | FIS | 3 | 191 | 744 | ocr: angolo 'θ' corrotto nella cifra '8' nel testo del retro ('mg x sen 8') |
+| FIS-C03-COMP-193 | FIS | 3 | 193 | 744 | ocr: simbolo 'φ' omesso nel testo del retro ('Il parametro è detto costante di fase') |
+| FIS-C04-NCOM-001 | FIS | 4 | 1 | 747 | ocr: valori e unità corrotti nell'opzione corretta C ('2g/cm3³2' invece di '2 g/cm³; 2') |
+| FIS-C04-COMP-017 | FIS | 4 | 17 | 759 | ocr: pedice corrotto nella formula dell'enunciato ('A₁ v, = A₂ v₂' invece di 'A₁ v₁ = A₂ v₂') |
+| FIS-C04-COMP-023 | FIS | 4 | 23 | 760 | ocr: simboli corrotti nella legge di Stevino ('P = Py + pg h' invece di 'P = P₀ + ρg h') |
 
