@@ -12,11 +12,14 @@ Update after every chapter, every gate, and before any context clear. See `RULES
 
 ## In flight (background, started 2026-10-23)
 - Opus `pagemap` → `work/pagemap/chim_ch1.json` first, then `work/pagemap/page_map.json`.
-- Opus MUR research → `sources/mur/`, `exam_structure.md`.
+- Opus MUR research DONE (125k tok, 314 s), commit 98518a5: 20 sources, 7 UD per subject (2026 syllabi), 21 `ud::` slugs; 2026/27 format: 31 questions per subject (21 MCQ×5 options + 10 completamento), +1/0/−0.1, 50 min, pass 18/30.
+- Sonnet-high QA: `qa-pipeline` → `work/qa-pipeline/findings.md` (templates + build.py); `qa-mur` → `work/qa-mur/findings.md` (exam_structure claims vs sources).
 - Sonnet `template` DONE (65k tok, 101 s); Sonnet `buildscript` DONE (57k tok, 92 s). Orchestrator reviewed templates vs reference (structure + tap-to-pick + theme scripts kept; Google Fonts links removed; typed_answer.js embedded; NoteHTML box), aligned `fields.py` HTML to `work/template/sample_fields.json`, fixed font path, promoted to `templates/` and `scripts/build.py`+`scripts/fields.py`. Synthetic 3-note build with real templates: OK (3 notes, 7 media). Not yet checked: Anki import, renders, `{{type:}}` inside a `{{#TypedAnswer}}` section.
-- Sonnet `gates` → `work/gates/run_gates.py`, `render.js`.
+- Sonnet `gates` DONE (116k tok, 450 s); promoted to `scripts/gates/` (run_gates.py, render.js, typed_check.js; `npm install` done there). Orchestrator ran it on a 3-note package built with the real templates: gates 1,2,3,4,7,8 PASS; 6 FAIL as expected (test unverified card not in UNVERIFIED.md); 5 and 9 MANUAL by design. Gate 8 typed-answer matrix on the real back template: correct/variant show 'Risposta accettata', wrong does not, so `{{type:}}` inside `{{#TypedAnswer}}` works in the anki library render. `--chapters` takes space-separated keys (`--chapters CHIM-C01`). Gate 1 does not understand the page_map schema yet: align when build/page_map.json lands.
 - Script `scripts/ocr_all.sh` → `work/ocr/pNNN.{txt,tsv}` (re-runnable, skips done pages).
-- Chunk cost log: none yet.
+- CHIM ch.1 map (from pagemap agent's chim_ch1.json, copied to build/chim_ch1_pagemap.json): COMM Q1–10 PDF 12–13, NCOM Q1–121 PDF 14–26, COMP Q1–47 PDF 27–29 = 178 cards; keys in CHIM RISPOSTE PDF 256–258 (offset 9 in chapter, 4 on solution pages).
+- Method test (Sonnet medium, same 40 items COMM 1–10, NCOM 1–15, COMP 1–15): `xtest-ocr` (OCR-first, image when unsure) vs `xtest-img` (image-first, OCR cross-check); `croptool` → work/croptool/crop.py (question/solution/figure crops from Tesseract boxes). Next: a Sonnet comparison agent diffs the two extractions field by field against the images; pick method; then the 178-card chapter in ≤50-card chunks: COMM 1–10, NCOM 1–50, 51–100, 101–121, COMP 1–47.
+- Chunk cost log: buildscript 57k/92 s, template 65k/101 s, MUR 125k/314 s (setup jobs, not card chunks).
 
 ## Working
 - On the back side, Anki puts the comparison in `<code id=typeans>`. An exact match is one line. A wrong answer is the typed text, then `<br><span id=typearrow>`, then the expected text. `typed_answer.js` reads the first line, skipping `.typeMissed`.

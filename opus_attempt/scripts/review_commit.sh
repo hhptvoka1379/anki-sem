@@ -15,10 +15,21 @@ for sha in "$@"; do
   out="$out_dir/$full.md"
 
   # Skip binaries and large generated outputs; they are not reviewable as text.
-  diff_text="$(git -C "$repo_root" show --format='Commit: %H%nAuthor: %an%nSubject: %s%n%n%b' --no-color "$full" \
-    -- . ':!*.png' ':!*.jpg' ':!*.pdf' ':!*.apkg' ':!*.mp3' | head -c 200000)"
+  diff_text="$(git -C "$repo_root" show --first-parent -m --format='Commit: %H%nAuthor: %an%nSubject: %s%n%n%b' --no-color "$full" \
+    -- . ':!*.png' ':!*.jpg' ':!*.pdf' ':!*.apkg' ':!*.mp3')"
 
-  rules="$(cat "$repo_root/opus_attempt/RULES_WORKER.md" 2>/dev/null)"
+  # A diff the reviewer cannot see in full cannot get a PASS.
+  if [ "${#diff_text}" -gt 200000 ]; then
+    echo "== $short FAIL: diff too large to review in full (${#diff_text} chars), split the commit"
+    status=1
+    continue
+  fi
+
+  # Without the rules the review would judge against nothing, so stop instead.
+  if ! rules="$(cat "$repo_root/opus_attempt/RULES_WORKER.md")"; then
+    echo "cannot read opus_attempt/RULES_WORKER.md, review not run"
+    exit 1
+  fi
 
   prompt="You are reviewing one git commit in an Anki flashcard rebuild.
 The commit diff is on stdin. The worker rules are below. Commits come from a worker subagent or from the orchestrator. The orchestrator's trailer is Co-Authored-By: Claude Opus; workers use their own model's trailer. The orchestrator may write root .md files and the decision log. Workers may not.
