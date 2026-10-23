@@ -1,6 +1,6 @@
-# Flagged rows (112)
+# Flagged rows (128)
 
-## ambiguous (24)
+## ambiguous (29)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -28,8 +28,13 @@
 | CHIM-C11-NCOM-019 | CHIM | 11 | 19 | 171 | ambiguous: the keyed none-of-the-above rejects the bitter-taste property, although bitterness is a commonly stated general property of bases and the stem does not explicitly request a definition |
 | CHIM-C11-NCOM-097 | CHIM | 11 | 97 | 179 | ambiguous: [OH-] greater than [H3O+] and [H+] less than [OH-] are equivalent inequalities, so two displayed options correctly describe a solution with pH above 7 |
 | CHIM-C11-NCOM-099 | CHIM | 11 | 99 | 179 | ambiguous: both pH 5 and pH 2 give a hydroxide concentration lower than the hydrogen-ion concentration, so the keyed pH value is not unique |
+| CHIM-C11-NCOM-159 | CHIM | 11 | 159 | 185 | ambiguous: saying the potassium chloride solution is neutral and saying it has the same acidity as pure water are both correct relative descriptions |
+| CHIM-C11-NCOM-170 | CHIM | 11 | 170 | 186 | ambiguous: adding ammonium chloride both creates a conjugate ammonia-ammonium buffer and lowers the pH by the common-ion effect, so two displayed options are correct |
+| CHIM-C11-NCOM-172 | CHIM | 11 | 172 | 186 | ambiguous: the choices Solo le 2 and Solo 2 select the same single true statement, making the keyed option non-unique |
+| CHIM-C12-NCOM-078 | CHIM | 12 | 78 | 202 | ambiguous: the keyed No, mai and the statement that quaternary hydrogen atoms do not exist convey the same impossibility, because a quaternary carbon has no attached hydrogen |
+| CHIM-C12-NCOM-085 | CHIM | 12 | 85 | 202 | ambiguous: all four hydrogens in methane can be described both as methyl hydrogens and as chemically equivalent hydrogens, so two options are true |
 
-## chem (4)
+## chem (8)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -37,8 +42,12 @@
 | CHIM-C09-NCOM-128 | CHIM | 9 | 128 | 143 | chem: the product is written as ZnCl4 instead of a chemically valid zinc chloride formula, so the reaction is damaged and should not be silently corrected |
 | CHIM-C10-COMP-002 | CHIM | 10 | 2 | 162 | chem: the stated general formula H-X with a negative superscript is not a valid neutral hydracid formula and does not cover sulfur hydracid H2S, so the sentence is chemically malformed |
 | CHIM-C10-COMP-009 | CHIM | 10 | 9 | 162 | chem: acid oxides do not have the stated general formula X2O3, as shown by common examples such as CO2 and SO3, so the cloze statement is chemically false |
+| CHIM-C12-COMP-036 | CHIM | 12 | 36 | 225 | chem: the sentence calls the bonds triple but prints them with the double-bond symbol C=C, so the defining bond notation contradicts the stated hydrocarbon class |
+| CHIM-C12-COMP-049 | CHIM | 12 | 49 | 226 | chem: aniline bears a neutral amino group -NH2 attached to the ring, whereas the card states -NH3 without the positive charge of an anilinium group |
+| CHIM-C12-COMP-067 | CHIM | 12 | 67 | 226 | chem: the aldehyde functional group is neutral -CHO, while the card prints it with a negative superscript charge |
+| CHIM-C12-NCOM-081 | CHIM | 12 | 81 | 202 | chem: the displayed CH3-CH3-CH3 chain gives the central carbon five bonds; neutral propane should have a central CH2, so the carbon classification cannot be based on the formula as written |
 
-## key (6)
+## key (8)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -48,6 +57,8 @@
 | CHIM-C10-NCOM-017 | CHIM | 10 | 17 | 153 | key: suspect stored key gives HNO4, but nitrous acid is HNO2; that formula is absent or possibly garbled in another option |
 | CHIM-C10-NCOM-096 | CHIM | 10 | 96 | 160 | key: suspect stored key appears as (NH4)3SO3 with digits substituted for letters, whereas neutral ammonium sulfite requires two ammonium ions for one sulfite ion |
 | CHIM-C11-NCOM-051 | CHIM | 11 | 51 | 175 | key: suspect computed hydrogen-ion concentration is 10^-9 mol/L, but the keyed option is printed as 107 and another exponent is also illegible |
+| CHIM-C11-NCOM-127 | CHIM | 11 | 127 | 182 | key: suspect at 25 C concentrations 10^-5 M H+ and 10^-9 M OH- have product 10^-14, so the aqueous solution exists and has pH 5 rather than being impossible |
+| CHIM-C12-NCOM-071 | CHIM | 12 | 71 | 201 | key: suspect successive members of a homologous series differ by a CH2 unit, not by a -CH3 group as printed in the keyed option |
 
 ## missing (4)
 
@@ -58,7 +69,7 @@
 | CHIM-C05-NCOM-029 | CHIM | 5 | 29 | 85 | missing: the stem refers to three containers shown in a figure, but no figure or description of their contents/states is present on the card |
 | CHIM-C08-NCOM-001 | CHIM | 8 | 1 | 125 | missing: the stem refers to a concentration-versus-time graph, but no graph or plotted values are present on the card |
 
-## ocr (74)
+## ocr (79)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -136,4 +147,9 @@
 | CHIM-C11-NCOM-063 | CHIM | 11 | 63 | 176 | ocr: the keyed inequality for hydrogen-ion concentration has a malformed symbol and missing negative exponent, so the condition for acidity is not legible as written |
 | CHIM-C11-NCOM-065 | CHIM | 11 | 65 | 176 | ocr: the exponents in two competing hydroxide concentrations are replaced by unreadable symbols, so the most basic solution cannot be compared reliably |
 | CHIM-C11-NCOM-075 | CHIM | 11 | 75 | 177 | ocr: one numerical interval bound is truncated to zeros, making another displayed range overlap the calculated hydrogen-ion concentration at pH 7.4 |
+| CHIM-C11-NCOM-121 | CHIM | 11 | 121 | 181 | ocr: the exponent in the stated amount of hydrochloric acid is rendered by unreadable symbols, so the concentration and pH cannot be computed from the stem |
+| CHIM-C12-NCOM-038 | CHIM | 12 | 38 | 198 | ocr: the keyed product class is printed as gli ai cali, a fragmented rendering that does not legibly name the alcohol products of alkene hydration |
+| CHIM-C12-NCOM-059 | CHIM | 12 | 59 | 200 | ocr: the keyed bond-type option is reduced to the single letter a and another option is also fragmented, so the single-bond wording cannot be read |
+| CHIM-C12-NCOM-108 | CHIM | 12 | 108 | 204 | ocr: the sigma and pi bond symbols in the options are rendered as unrelated letters and digits, including the keyed Tutti a, so the bond type cannot be read |
+| CHIM-C12-NCOM-121 | CHIM | 12 | 121 | 205 | ocr: the sigma and pi option labels are rendered as o and n, and another option is punctuation, so the intended bond-type symbols are not legible |
 
