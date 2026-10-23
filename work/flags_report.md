@@ -1,6 +1,6 @@
-# Flagged rows (254)
+# Flagged rows (264)
 
-## ambiguous (17)
+## ambiguous (20)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -21,6 +21,9 @@
 | BIO-C04-NCOM-017 | BIO | 4 | 17 | 434 | ambiguous: le opzioni A ('allele') e B ('allelomorfo', termine originario di Bateson di cui 'allele' è l'abbreviazione) sono sinonimi esatti in genetica |
 | BIO-C04-NCOM-121 | BIO | 4 | 121 | 447 | ambiguous: sia A ('dallo spermatozoo', gamete eterogametico che apporta X oppure Y) sia D ('dai cromosomi', coppia sessuale XX/XY con il gene SRY) sono risposte biologicamente corrette alla domanda 'Il sesso dell'uomo è determinato:' |
 | BIO-C04-NCOM-183 | BIO | 4 | 183 | 456 | ambiguous: gli anticorpi plasmatici anti-A sono presenti sia nel gruppo B sia nel gruppo 0 (che nella popolazione è ~4 volte più frequente del gruppo B, rendendo B 'sarà probabilmente 0' più probabile di D 'sarà probabilmente B' se non è precisata l'assenza di anti-B) |
+| BIO-C05-NCOM-136 | BIO | 5 | 136 | 498 | ambiguous: nel muscolo ipossico avviene fermentazione lattica (non vera respirazione anaerobica procariotica, usata impropriamente nella chiave D) e sotto sforzo avviene realmente anche la glicogenolisi (opzione A) |
+| BIO-C05-NCOM-204 | BIO | 5 | 204 | 505 | ambiguous: sia B (Mitofusine Mfn1 e Mfn2 sulla membrana esterna) sia E (Opa1 sulla membrana interna) sono GTPasi essenziali della fusione mitocondriale |
+| BIO-C05-NCOM-215 | BIO | 5 | 215 | 506 | ambiguous: sia D (Perossisoma) sia E (Lisosoma) sono organuli a singola membrana privi sia di DNA proprio sia di ribosomi |
 
 ## chem (1)
 
@@ -70,7 +73,7 @@
 | BIO-C04-NCOM-162 | BIO | 4 | 162 | 453 | missing: manca completamente l'albero genealogico a cui rimandano l'enunciato e tutte le opzioni (F₁, femmina 3 e 5 della F₂, F₃) |
 | BIO-C05-NCOM-030 | BIO | 5 | 30 | 487 | missing: manca completamente la figura delle due cellule vegetali 1 e 2 a cui rimandano l'enunciato e le opzioni, con residui OCR illeggibili ('Ge) I 2') |
 
-## ocr (204)
+## ocr (211)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -278,4 +281,11 @@
 | BIO-C05-NCOM-077 | BIO | 5 | 77 | 492 | ocr: unità di misura nell'enunciato corrotta di un milione di volte ('0,25 pm e 0,75 pm' picometri anziché '0,25 μm e 0,75 μm' micrometri) |
 | BIO-C05-COMP-088 | BIO | 5 | 88 | 520 | ocr: unità di misura nell'enunciato corrotta di sei ordini di grandezza ('0,5 pm' picometri al posto di '0,5 μm' micrometri) |
 | BIO-C05-COMP-091 | BIO | 5 | 91 | 520 | ocr: bersaglio del cloze corrotto nella lettera greca in 'B-ossidazione' al posto di 'β-ossidazione' |
+| BIO-C05-COMP-123 | BIO | 5 | 123 | 522 | ocr: bersaglio del cloze corrotto in 'Il' (i maiuscola + elle minuscola, articolo italiano) al posto del numero romano 'II' ('COP II') |
+| BIO-C05-NCOM-189 | BIO | 5 | 189 | 503 | ocr: opzione corretta C riporta 'Importina a' invece di 'Importina α' per corruzione della lettera greca alfa |
+| BIO-C05-NCOM-200 | BIO | 5 | 200 | 504 | ocr: opzioni corrotte 'FoeFi' (per 'F₀ e F₁'), 'aeB' (per 'α e β') e 'FADH₋' |
+| BIO-C05-NCOM-202 | BIO | 5 | 202 | 505 | ocr: opzione corretta B riporta 'Complesso I!' anziché 'Complesso II' (il Complesso I è invece la NADH deidrogenasi) |
+| BIO-C05-COMP-212 | BIO | 5 | 212 | 527 | ocr: bersaglio del cloze privo dell'accento grafico obbligatorio italiano ('polarita' anziché 'polarità') |
+| BIO-C05-NCOM-217 | BIO | 5 | 217 | 506 | ocr: opzione corretta C riporta la sigla proteica inesistente 'PexS5' al posto di 'Pex5' |
+| BIO-C05-NCOM-234 | BIO | 5 | 234 | 508 | ocr: testo della domanda riporta la sigla mutazionale corrotta 'AFS08' invece di 'ΔF508' |
 
