@@ -1,6 +1,6 @@
-# Flagged rows (264)
+# Flagged rows (280)
 
-## ambiguous (20)
+## ambiguous (21)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -24,6 +24,7 @@
 | BIO-C05-NCOM-136 | BIO | 5 | 136 | 498 | ambiguous: nel muscolo ipossico avviene fermentazione lattica (non vera respirazione anaerobica procariotica, usata impropriamente nella chiave D) e sotto sforzo avviene realmente anche la glicogenolisi (opzione A) |
 | BIO-C05-NCOM-204 | BIO | 5 | 204 | 505 | ambiguous: sia B (Mitofusine Mfn1 e Mfn2 sulla membrana esterna) sia E (Opa1 sulla membrana interna) sono GTPasi essenziali della fusione mitocondriale |
 | BIO-C05-NCOM-215 | BIO | 5 | 215 | 506 | ambiguous: sia D (Perossisoma) sia E (Lisosoma) sono organuli a singola membrana privi sia di DNA proprio sia di ribosomi |
+| BIO-C06-NCOM-051 | BIO | 6 | 51 | 539 | ambiguous: formulazione impropria; le tight junctions non contengono proteine carrier ma bloccano la via paracellulare obbligando gli scambi transepiteliali ad avvenire per via transcellulare tramite trasportatori di membrana (mentre le claudine formano pori ionici paracellulari selettivi) |
 
 ## chem (1)
 
@@ -31,7 +32,7 @@
 |---|---|---|---|---|---|
 | BIO-C05-COMP-102 | BIO | 5 | 102 | 521 | chem: formula chimica del substrato nell'enunciato corrotta dall'OCR in 'H.0' al posto di 'H₂O₂' ('converte l'H.0 in acqua e ossigeno') |
 
-## key (16)
+## key (17)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -51,6 +52,7 @@
 | BIO-C04-NCOM-076 | BIO | 4 | 76 | 442 | key: suspect - avendo già 2 figlie su una famiglia pianificata di 6 figli totali (quesito classico di Griffiths), restano 4 nascite indipendenti e la probabilità di avere tutte figlie è (1/2)⁴ = 1/16 (D), non (1/2)⁶ = 1/64 (E); inoltre il testo non chiarisce se i 6 figli siano totali o aggiuntivi |
 | BIO-C04-NCOM-204 | BIO | 4 | 204 | 459 | key: suspect - eliminando il 7° nucleotide (G) da CUG-AUC-GUA-AUG-CGC si ottiene CUG-AUC-UAA-UGC-GC, in cui il 3° codone diventa il codone di stop UAA che arresta subito la traduzione dopo Leu-Ile: la risposta corretta è C ('L'interruzione della catena amminoacidica'), non E |
 | BIO-C05-COMP-048 | BIO | 5 | 48 | 517 | key: suspect - errore biochimico nel testo: le importine legano e trasportano il carico NLS nel nucleo in assenza di Ran-GTP (il legame nucleare di Ran-GTP provoca invece il distacco del carico dall'importina), mentre sono le esportine a formare complessi cooperativi con carico e Ran-GTP |
+| BIO-C06-COMP-054 | BIO | 6 | 54 | 555 | key: suspect - errore biochimico nel testo: gli ormoni steroidei come testosterone ed estradiolo derivano dal colesterolo, non dal cortisolo |
 
 ## missing (16)
 
@@ -73,7 +75,7 @@
 | BIO-C04-NCOM-162 | BIO | 4 | 162 | 453 | missing: manca completamente l'albero genealogico a cui rimandano l'enunciato e tutte le opzioni (F₁, femmina 3 e 5 della F₂, F₃) |
 | BIO-C05-NCOM-030 | BIO | 5 | 30 | 487 | missing: manca completamente la figura delle due cellule vegetali 1 e 2 a cui rimandano l'enunciato e le opzioni, con residui OCR illeggibili ('Ge) I 2') |
 
-## ocr (211)
+## ocr (225)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -288,4 +290,18 @@
 | BIO-C05-COMP-212 | BIO | 5 | 212 | 527 | ocr: bersaglio del cloze privo dell'accento grafico obbligatorio italiano ('polarita' anziché 'polarità') |
 | BIO-C05-NCOM-217 | BIO | 5 | 217 | 506 | ocr: opzione corretta C riporta la sigla proteica inesistente 'PexS5' al posto di 'Pex5' |
 | BIO-C05-NCOM-234 | BIO | 5 | 234 | 508 | ocr: testo della domanda riporta la sigla mutazionale corrotta 'AFS08' invece di 'ΔF508' |
+| BIO-C05-NCOM-253 | BIO | 5 | 253 | 509 | ocr: domanda riporta 'vescicola COPI' anziché 'vescicola COPII' per troncamento di 'I'; Sec24 è la subunità di selezione del carico esclusiva del complesso COPII (Sec23/Sec24) |
+| BIO-C05-NCOM-270 | BIO | 5 | 270 | 511 | ocr: opzione corretta C riporta '02' (cifra zero) al posto della formula chimica 'O₂' |
+| BIO-C05-NCOM-273 | BIO | 5 | 273 | 511 | ocr: numeri romani delle opzioni corrotti in 'Complesso i', 'Complesso Il!' e 'Complesso Il' (opzione corretta C) |
+| BIO-C05-NCOM-297 | BIO | 5 | 297 | 513 | ocr: lettere greche delle isoforme di tubulina corrotte nelle opzioni ('a-tubulina', 'B-tubulina' e risposta corretta D 'y-tubulina' per 'γ-tubulina') |
+| BIO-C06-COMP-005 | BIO | 6 | 5 | 552 | ocr: pedice spurio 'GAG₄' (per 'GAG,') e '1' iniziale al posto di 'I' |
+| BIO-C06-COMP-011 | BIO | 6 | 11 | 552 | ocr: sigla dell'integrina α₆β₄ corrotta in 'integrina a,8,' nel testo della frase |
+| BIO-C06-COMP-060 | BIO | 6 | 60 | 555 | ocr: preposizione 'di' duplicata nel testo e nel bersaglio del cloze ('recettori di {{c1::di superficie}}') |
+| BIO-C06-COMP-064 | BIO | 6 | 64 | 555 | ocr: lettere greche delle subunità della proteina G corrotte in 'a, B e y' anziché 'α, β e γ' |
+| BIO-C06-COMP-065 | BIO | 6 | 65 | 556 | ocr: bersaglio del cloze corrotto in 'a' (lettera latina) al posto della lettera greca 'α' ('subunità α') |
+| BIO-C06-COMP-066 | BIO | 6 | 66 | 556 | ocr: bersaglio del cloze corrotto in 'By' al posto delle lettere greche 'βγ' ('subunità βγ') |
+| BIO-C06-COMP-067 | BIO | 6 | 67 | 556 | ocr: lettera greca alfa corrotta in 'a' in 'subunità a della proteina G' |
+| BIO-C06-NCOM-067 | BIO | 6 | 67 | 540 | ocr: opzione corretta E riporta '15nm' per perdita OCR della virgola decimale di '1,5 nm' (diametro reale del poro dei connessoni; 15 nm sarebbe paragonabile a un intero ribosoma) |
+| BIO-C06-COMP-073 | BIO | 6 | 73 | 556 | ocr: sigle dei secondi messaggeri corrotte in 'DAG₃ IP,,' al posto di 'DAG, IP₃,' |
+| BIO-C06-COMP-074 | BIO | 6 | 74 | 556 | ocr: formula dello ione calcio corrotta in 'Ca?*' al posto di 'Ca²⁺' |
 
