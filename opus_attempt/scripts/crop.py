@@ -21,6 +21,7 @@ OCR_DPI = 300
 PAGE_W = 2481
 MID = PAGE_W // 2
 HEADER_MAX_Y = 450   # running header ("6 | Chimica ... | Quiz ...") sits above this
+NUMBER_MIN_Y = 400   # but a first question number can sit at y≈437, just inside that band
 OUT_DPI = 170        # ~830 px per column: readable on a phone, small files
 
 _words = {}
@@ -84,7 +85,8 @@ def body(page, col):
     ws = [w for w in words(page) if column_of(w, page) == col and w["top"] > HEADER_MAX_Y and w["conf"] >= 70]
     if len(ws) < 5:
         return None
-    return {"x0": pct([w["left"] for w in ws], 0.02), "x1": pct([w["left"] + w["width"] for w in ws], 0.98),
+    # Right edge = the longest confident line; a percentile clipped full-width lines.
+    return {"x0": pct([w["left"] for w in ws], 0.02), "x1": max(w["left"] + w["width"] for w in ws),
             "y0": min(w["top"] for w in ws), "y1": max(w["top"] + w["height"] for w in ws)}
 
 
@@ -96,7 +98,7 @@ def starts(page, col):
     out = []
     for w in words(page):
         m = re.match(r"^(\d{1,3})[\).]", w["text"])
-        if m and column_of(w, page) == col and w["top"] > HEADER_MAX_Y and abs(w["left"] - b["x0"]) < 90:
+        if m and column_of(w, page) == col and w["top"] > NUMBER_MIN_Y and abs(w["left"] - b["x0"]) < 90:
             out.append((int(m.group(1)), w["top"]))
     return sorted(out, key=lambda t: t[1])
 

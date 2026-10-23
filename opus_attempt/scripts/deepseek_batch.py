@@ -47,9 +47,13 @@ def build_messages(job):
 
 
 def build_body(job, model, provider):
-    return {"model": model, "provider": provider_block(provider), "messages": build_messages(job),
+    body = {"model": model, "provider": provider_block(provider), "messages": build_messages(job),
             "max_tokens": job.get("max_tokens", 8000), "temperature": 0,
             "usage": {"include": True}}
+    if job.get("reasoning") is False:
+        # Transcription needs no chain of thought; hidden reasoning was ~75% of output tokens.
+        body["reasoning"] = {"enabled": False}
+    return body
 
 
 def call(job, model, provider, key, retries=3):
@@ -75,7 +79,7 @@ def call(job, model, provider, key, retries=3):
     return {"id": job["id"], "status": "error", "error": last}
 
 
-def http_json(method, url, key, payload=None):
+def http_json(method, url, key, payload=None, allow_404=False):
     data = json.dumps(payload, ensure_ascii=False).encode() if payload is not None else None
     req = urllib.request.Request(url, data=data, method=method, headers={
         "Authorization": "Bearer " + key, "Content-Type": "application/json"})
@@ -83,6 +87,8 @@ def http_json(method, url, key, payload=None):
         with urllib.request.urlopen(req, timeout=600) as r:
             return json.load(r)
     except urllib.error.HTTPError as e:
+        if allow_404 and e.code == 404:
+            return None
         sys.exit("%s %s -> HTTP %s: %s" % (method, url, e.code, e.read().decode()[:500]))
 
 
@@ -115,8 +121,14 @@ def run_batch(jobs, a, key):
         batch_id = d["id"]
         json.dump({"id": batch_id, "submitted": time.strftime("%Y-%m-%dT%H:%M:%S"), "n": len(jobs)}, open(state, "w"))
         print("submitted batch %s (%d requests)" % (batch_id, len(jobs)), flush=True)
+    misses = 0
     while True:
-        d = http_json("GET", "%s/%s" % (BATCH_URL, batch_id), key)
+        # A new batch can 404 for a short while before it becomes visible.
+        d = http_json("GET", "%s/%s" % (BATCH_URL, batch_id), key, allow_404=misses < 10)
+        if d is None:
+            misses += 1
+            time.sleep(a.poll)
+            continue
         print("status=%s counts=%s" % (d.get("status"), d.get("request_counts")), flush=True)
         if d.get("status") in TERMINAL:
             break
@@ -139,6 +151,23 @@ def run_batch(jobs, a, key):
     return errors
 
 
+def preflight(todo, a, key):
+    """Refuse to start if the worst case (every job hits max_tokens) could exceed the run budget
+    or what is left on the key. Images are counted at a deliberately high 3000 tokens each."""
+    worst_in = sum(len(j["prompt"]) // 3 + 3000 * len(j.get("images", [])) for j in todo)
+    worst_out = sum(j.get("max_tokens", 8000) for j in todo)
+    worst = worst_in * a.price_in / 1e6 + worst_out * a.price_out / 1e6
+    d = http_json("GET", "https://openrouter.ai/api/v1/key", key)["data"]
+    remaining = d.get("limit_remaining")
+    print("preflight: worst-case cost $%.3f (in %d tok, out %d tok); run budget $%.2f; key remaining %s" % (
+        worst, worst_in, worst_out, a.budget, remaining), flush=True)
+    if remaining is not None and worst > remaining:
+        sys.exit("refusing: worst case exceeds what is left on the key")
+    if worst > a.budget and a.mode == "batch":
+        # A submitted batch cannot be stopped part-way by this script, so it must fit the budget whole.
+        sys.exit("refusing: batch worst case exceeds --budget")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("jobs")
@@ -148,6 +177,10 @@ def main():
     ap.add_argument("--mode", choices=["batch", "live"], default="batch")
     ap.add_argument("--provider", default="deepinfra/fp8")
     ap.add_argument("--poll", type=int, default=30, help="seconds between batch status checks")
+    ap.add_argument("--budget", type=float, default=0.50,
+                    help="USD cap for this run; no new request starts once spend (OpenRouter usage.cost) reaches it")
+    ap.add_argument("--price-in", type=float, default=0.14, help="USD per M input tokens, for the preflight estimate")
+    ap.add_argument("--price-out", type=float, default=0.42, help="USD per M output tokens, for the preflight estimate")
     a = ap.parse_args()
 
     key = api_key()
@@ -160,6 +193,7 @@ def main():
         len(jobs), len(done), len(todo), a.model, a.provider, a.mode), flush=True)
     if not todo and not Path(a.results + ".batch.json").exists():
         return
+    preflight(todo, a, key)
     if a.mode == "batch":
         sys.exit(1 if run_batch(todo, a, key) else 0)
 
@@ -167,6 +201,11 @@ def main():
     totals = {"cost": 0.0, "prompt": 0, "completion": 0, "errors": 0}
     with open(a.results, "a", encoding="utf-8") as out:
         def run(job):
+            with lock:
+                if totals["cost"] >= a.budget:
+                    # Not written to results, so a later run picks the job up again.
+                    totals["skipped"] = totals.get("skipped", 0) + 1
+                    return
             res = call(job, a.model, a.provider, key)
             with lock:
                 out.write(json.dumps(res, ensure_ascii=False) + "\n")
@@ -179,9 +218,9 @@ def main():
                 print("%s %s" % (res["id"], res["status"] if res["status"] == "ok" else res["error"][:200]), flush=True)
         with ThreadPoolExecutor(a.workers) as ex:
             list(ex.map(run, todo))
-    print("done: errors=%d prompt_tokens=%d completion_tokens=%d cost_usd=%.4f" % (
-        totals["errors"], totals["prompt"], totals["completion"], totals["cost"]))
-    sys.exit(1 if totals["errors"] else 0)
+    print("done: errors=%d skipped_for_budget=%d prompt_tokens=%d completion_tokens=%d cost_usd=%.4f" % (
+        totals["errors"], totals.get("skipped", 0), totals["prompt"], totals["completion"], totals["cost"]))
+    sys.exit(1 if totals["errors"] or totals.get("skipped") else 0)
 
 
 if __name__ == "__main__":
