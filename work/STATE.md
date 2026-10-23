@@ -22,5 +22,5 @@
   - `python3 export_reasons.py`: `work/reasons_done.jsonl` (**5,464** records; length `min = 87`, `mean = 213`, `max = 448`) & `work/flags_report.md` (**438** flagged items)
 - **Checkpoints Pushed (`22` checkpoints):**
   - Previous checkpoint commit: `4119144` (`checkpoint: 5253 done / 417 flagged / 232 pending`)
-  - Final checkpoint commit: committed with `"checkpoint: 5464 done / 438 flagged / 0 pending"` and pushed to `origin arena/0c53ca03-anki-sem`.
+  - Final checkpoint commit: `c2feaf3` (`checkpoint: 5464 done / 438 flagged / 0 pending`, pushed to `origin arena/0c53ca03-anki-sem`).
 - **Open Questions for User:** None blocking completion; see human-review summary of the `25` `key: suspect`, `30` `ambiguous`, `34` `missing` (unattached figures/tables/pedigrees), `1` `chem`, and `348` `ocr` cards in `work/flags_report.md`.
