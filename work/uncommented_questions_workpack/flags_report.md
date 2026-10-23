@@ -1,6 +1,6 @@
-# Flagged rows (484)
+# Flagged rows (546)
 
-## ambiguous (41)
+## ambiguous (48)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -45,8 +45,15 @@
 | BIO-C03-NCOM-216 | BIO | 3 | 216 | 407 | ambiguous: option_a and option_e are identical ('Degenerazione'), leaving two indistinguishable correct choices |
 | BIO-C03-NCOM-234 | BIO | 3 | 234 | 408 | ambiguous: besides proteasomal degradation (option_e), mitochondrial protein import (option_d, mtHsp70), DNA replication (option_b), transcription initiation (option_a), and sugar synthesis (option_c) also require ATP |
 | BIO-C04-NCOM-017 | BIO | 4 | 17 | 434 | ambiguous: 'allelomorfo' (option_b) is the classical exact synonym of 'allele' (option_a), making both options scientifically correct |
+| BIO-C04-NCOM-121 | BIO | 4 | 121 | 447 | ambiguous: human genetic sex is determined both chromosomally via XX/XY sex chromosomes (option_d) and specifically at fertilization by whether the spermatozoon carries X or Y (option_a) |
+| BIO-C04-NCOM-161 | BIO | 4 | 161 | 453 | ambiguous: joint probability of conceiving an affected male child from Aa × Aa is (1/2)×(1/4) = 12.5% (absent from options), whereas 25% (option_a) holds only if conditioned on the child already being male |
+| BIO-C05-NCOM-003 | BIO | 5 | 3 | 484 | ambiguous: besides option_d (polar heads are anionic or zwitterionic rather than net positively charged), option_e is also false for sphingomyelins, which are double-tailed membrane phospholipids built on sphingosine without glycerol |
+| BIO-C05-NCOM-012 | BIO | 5 | 12 | 485 | ambiguous: statement (1) ('richiede ATP') applies directly to ATP-driven primary pumps (option_e) but not directly to secondary active cotransporters or redox/light-driven pumps, making option_a ('solo la (2)') also defensible |
+| BIO-C05-NCOM-031 | BIO | 5 | 31 | 487 | ambiguous: pinocytosis (option_c) is the specific subtype for fluid uptake, but it is itself a form of endocytosis (option_b), making both terms scientifically applicable |
+| BIO-C05-NCOM-032 | BIO | 5 | 32 | 488 | ambiguous: simple diffusion of O2 and CO2 across the erythrocyte membrane (option_b) is itself a form of passive transport (option_e), making both options scientifically correct |
+| BIO-C05-NCOM-035 | BIO | 5 | 35 | 488 | ambiguous: simple diffusion of O2 and CO2 across the plasma membrane (option_a) is itself a form of passive transport across the plasma membrane (option_e), making both options scientifically correct |
 
-## chem (20)
+## chem (25)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -70,8 +77,13 @@
 | BIO-C03-NCOM-076 | BIO | 3 | 76 | 391 | chem: option_d conflates 'codice genetico' with 'genoma / sequenza del DNA' |
 | BIO-C03-COMP-115 | BIO | 3 | 115 | 416 | chem: eukaryotic 5S rRNA is transcribed separately in the nucleoplasm by RNA polymerase III, whereas only 28S, 18S, and 5.8S derive from the 45S nucleolar precursor |
 | BIO-C03-COMP-123 | BIO | 3 | 123 | 417 | chem: elongation factors (EF-Tu/eEF1A, EF-G/eEF2) deliver aminoacyl-tRNA to the A site and mediate translocation, whereas peptide-bond formation is catalyzed by the 23S/28S rRNA peptidyl-transferase ribozyme, not by elongation factors |
+| BIO-C04-NCOM-050 | BIO | 4 | 50 | 439 | chem: option_c states equal 50:50 inheritance of either allele of a gene pair (Mendel's law of segregation, which holds even for linked genes) rather than independent assortment between distinct unlinked loci |
+| BIO-C04-NCOM-105 | BIO | 4 | 105 | 445 | chem: option_e ('in tutte le cellule') is overbroad because anucleate cells such as mature mammalian erythrocytes lack chromosomes altogether, and many organisms (prokaryotes, most plants) lack sex chromosomes |
+| BIO-C04-NCOM-160 | BIO | 4 | 160 | 453 | chem: achondroplasia is caused by an autosomal dominant gain-of-function mutation in the FGFR3 receptor gene rather than lack of 'condrina' (an obsolete histological term for cartilage matrix, not a single gene-encoded protein) |
+| BIO-C04-NCOM-185 | BIO | 4 | 185 | 456 | chem: question calls all three alleles (A, B, 0) codominant, which would yield 6 phenotypes; 4 phenotypes occur because only I^A and I^B are codominant while i (0) is recessive to both |
+| BIO-C05-NCOM-020 | BIO | 5 | 20 | 486 | chem: desmin (option_a) is a muscle-specific intermediate filament subunit rather than the desmosomal plaque linker protein (desmoplakin) that anchors intermediate filaments in desmosomes |
 
-## key (18)
+## key (22)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -93,8 +105,12 @@
 | BIO-C02-NCOM-072 | BIO | 2 | 72 | 367 | key: suspect (options A-C name the three ultrastructural centromere domains—centrale, di appaiamento, del cinetocore—among which 'il dominio di appaiamento' in option_b is specifically defined as responsible for sister-chromatid cohesion) |
 | BIO-C03-COMP-011 | BIO | 3 | 11 | 410 | key: suspect (in prokaryotes the main replicative enzyme working at ~1000 nt/s is DNA polymerase III, not DNA polymerase I) |
 | BIO-C03-NCOM-076 | BIO | 3 | 76 | 391 | key: suspect (the genetic code is the universal correspondence rule mapping codons to amino acids/stop signals, not an organism's DNA base sequence as stated in option_d, making option_e scientifically correct) |
+| BIO-C04-NCOM-057 | BIO | 4 | 57 | 440 | key: suspect — woman is obligate carrier Aa, but a phenotypically normal man with normal parents and grandparents has only general-population carrier probability (~1-2%), making P(albino child) near zero (option_a) rather than 25% (option_d) |
+| BIO-C04-NCOM-076 | BIO | 4 | 76 | 442 | key: suspect — given the couple already has 2 daughters (P=1), having an all-female 6-child family requires only the 4 remaining births to be female, giving (1/2)^4 = 1/16 (option_d) rather than (1/2)^6 = 1/64 (option_e), unless 'sei figli' meant 6 additional children |
+| BIO-C04-NCOM-183 | BIO | 4 | 183 | 456 | key: suspect — anti-A antibodies are naturally present in both group 0 and group B plasma, and group 0 (~40%) is ~4x more frequent than group B (~10%), making option_b ('probabilmente 0') or option_a ('non si può determinare' without testing anti-B) better supported than option_d |
+| BIO-C04-NCOM-204 | BIO | 4 | 204 | 459 | key: suspect — deleting nucleotide 7 (G) turns CUG-AUC-GUA-AUG-CGC into CUG-AUC-UAA-UGC-GC, where the 3rd codon UAA is an ochre stop codon causing immediate chain termination after Ile (option_c) rather than an altered downstream amino acid sequence (option_e) |
 
-## missing (9)
+## missing (16)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -107,8 +123,15 @@
 | BIO-C01-NCOM-091 | BIO | 1 | 91 | 326 | missing: question requires inspecting a cell figure not included in the card |
 | BIO-C01-NCOM-263 | BIO | 1 | 263 | 346 | missing: question requires inspecting an evolutionary tree diagram not included in the card |
 | BIO-C03-NCOM-064 | BIO | 3 | 64 | 390 | missing: referenced Lac operon diagram ('In figura è rappresentato uno schema...') is absent |
+| BIO-C04-NCOM-035 | BIO | 4 | 35 | 436 | missing: table referenced in question ('seguente tabella', rows 1-5) is absent from card |
+| BIO-C04-NCOM-130 | BIO | 4 | 130 | 448 | missing: pedigree figure ('albero genealogico riportato') referenced in question and options is absent from card |
+| BIO-C04-NCOM-132 | BIO | 4 | 132 | 449 | missing: pedigree figure ('albero genealogico in figura') referenced in question is absent from card |
+| BIO-C04-NCOM-152 | BIO | 4 | 152 | 451 | missing: pedigree figure ('albero genealogico in figura') referenced in question and options is absent from card |
+| BIO-C04-NCOM-156 | BIO | 4 | 156 | 452 | missing: pedigree figure ('albero genealogico in figura') referenced in question and options is absent from card |
+| BIO-C04-NCOM-162 | BIO | 4 | 162 | 453 | missing: pedigree figure ('seguente albero genealogico') referenced in question and options is absent from card |
+| BIO-C05-NCOM-030 | BIO | 5 | 30 | 487 | missing: schematic figure of plant cells 1 and 2 referenced in question is absent from card |
 
-## ocr (422)
+## ocr (463)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -534,4 +557,45 @@
 | BIO-C03-NCOM-239 | BIO | 3 | 239 | 409 | ocr: Greek 'β' corrupted to digit '8' in answer_text/option_a ('Foglietti 8') and 'α' corrupted to 'a' in option_b ('a-eliche') |
 | BIO-C03-NCOM-240 | BIO | 3 | 240 | 409 | ocr: Roman numeral 'II' corrupted to 'Il' in option_b ('RNA polimerasi Il') |
 | BIO-C04-NCOM-026 | BIO | 4 | 26 | 435 | ocr: spaces around conjunction 'e' dropped in all parental genotype options ('RRerr', 'RreRr', 'RReRR', 'rrerr', 'RreRR'), merging 'e' into the allele symbols |
+| BIO-C04-NCOM-030 | BIO | 4 | 30 | 436 | ocr: generation subscript corrupted to comma in question ('F,') and commas corrupted to subscript '₄' in options B/D/E including answer_text ('25% AA₄ 50% Aa, 25% aa') |
+| BIO-C04-NCOM-033 | BIO | 4 | 33 | 436 | ocr: genotype 'rryy' corrupted to 'my' in option_e |
+| BIO-C04-NCOM-039 | BIO | 4 | 39 | 437 | ocr: Roman numeral 'I' corrupted to lowercase 'i' in option_a ('anafase i') and option_e ('profase i') |
+| BIO-C04-NCOM-040 | BIO | 4 | 40 | 437 | ocr: generation subscripts '₁' and '₂' in 'F₁' and 'F₂' both corrupted to commas ('F,') in question |
+| BIO-C04-NCOM-055 | BIO | 4 | 55 | 439 | ocr: spaces around conjunction 'e' dropped in all parental genotype options ('aaeaa', 'AaeAa', 'Aaeaa', 'AAeAa', 'AAeaa'), merging 'e' into the allele symbols |
+| BIO-C04-COMP-061 | BIO | 4 | 61 | 465 | ocr: comma after '46' corrupted to subscript '₄' ('46₄') in question |
+| BIO-C04-NCOM-075 | BIO | 4 | 75 | 442 | ocr: rabbit chinchilla allele symbol 'cᶜʰ'/'Cᶜʰ' corrupted to degree sign 'C°' in question |
+| BIO-C04-NCOM-082 | BIO | 4 | 82 | 443 | ocr: genotype 'gg' corrupted to digits '99' in option_e |
+| BIO-C04-NCOM-083 | BIO | 4 | 83 | 443 | ocr: 'allele' split into three words 'al le le' in option_c |
+| BIO-C04-NCOM-085 | BIO | 4 | 85 | 443 | ocr: cross symbol 'x' fused directly onto genotype 'Aa' as 'Aax' in options C, D, and E |
+| BIO-C04-NCOM-088 | BIO | 4 | 88 | 444 | ocr: 'il' corrupted to 'i)' in question and Roman numeral 'II' corrupted to 'Il' in option_c |
+| BIO-C04-NCOM-090 | BIO | 4 | 90 | 444 | ocr: Roman numerals 'II' and 'I' corrupted to 'Il' (option_a) and lowercase 'i' (answer_text/option_d, 'profase i') |
+| BIO-C04-NCOM-091 | BIO | 4 | 91 | 444 | ocr: comma after '8' corrupted to subscript '₄' ('cromosoma 8₄') in question |
+| BIO-C04-NCOM-098 | BIO | 4 | 98 | 445 | ocr: comma after gene symbol 'A' corrupted to subscript '₄' ('A₄') in question |
+| BIO-C04-NCOM-118 | BIO | 4 | 118 | 447 | ocr: feminine ordinal superscript 'ª' corrupted to superscript minus '⁻' in options A, B, and C ('8⁻', '3⁻', '5⁻ settimana') |
+| BIO-C04-NCOM-123 | BIO | 4 | 123 | 447 | ocr: 'daltoniche' split into three words 'dal toni che' in option_c |
+| BIO-C04-NCOM-124 | BIO | 4 | 124 | 447 | ocr: statement index 'Solo 1 e 2' corrupted to 'Solole2' in answer_text/option_b |
+| BIO-C04-NCOM-125 | BIO | 4 | 125 | 448 | ocr: 'allele' broken with stray period into 'al. lele' in question |
+| BIO-C04-NCOM-135 | BIO | 4 | 135 | 449 | ocr: page 449 running footer ('missione e controllo dei caratten selvatici e mutati 449') bled into option_e |
+| BIO-C04-NCOM-146 | BIO | 4 | 146 | 450 | ocr: statement indices 'Solo 1 e 2' and 'Solo 1 e 3' corrupted to 'Solole2' (option_a) and 'Solole3' (option_b) |
+| BIO-C04-NCOM-150 | BIO | 4 | 150 | 451 | ocr: page 451 running footer ('nissione e controllo det caratteri selvatici e mutati 451') bled inside 'spina bifida' in question |
+| BIO-C04-NCOM-154 | BIO | 4 | 154 | 452 | ocr: statement indices 'Solo 1 e 2' and 'Solo 1 e 3' corrupted to 'Solole2' (option_c) and 'Solole3' (option_e) |
+| BIO-C04-NCOM-158 | BIO | 4 | 158 | 452 | ocr: 'Il' corrupted to 'I]' ('I] riferimento') in question |
+| BIO-C04-NCOM-165 | BIO | 4 | 165 | 454 | ocr: spaces dropped around conjunctions in blood-group options ('Ae B' in option_b and 'A,Bo AB' in answer_text/option_c) |
+| BIO-C04-NCOM-173 | BIO | 4 | 173 | 455 | ocr: ABO allele symbols 'Iᴬ, Iᴮ' corrupted to '14, 1?' in question |
+| BIO-C04-NCOM-174 | BIO | 4 | 174 | 455 | ocr: statement index 'Solo 1 e 2' corrupted to 'Solole2' in option_a |
+| BIO-C04-NCOM-176 | BIO | 4 | 176 | 455 | ocr: comma after blood group '0' corrupted to subscript '₄' ('gruppo 0₄') in option_b |
+| BIO-C04-NCOM-177 | BIO | 4 | 177 | 455 | ocr: ABO genotype symbols corrupted to '/° /°' in option_d and 'JA JA' in option_e |
+| BIO-C04-NCOM-178 | BIO | 4 | 178 | 455 | ocr: comma after 'X' corrupted to subscript '₄' ('cromosoma X₄') in option_b |
+| BIO-C04-NCOM-179 | BIO | 4 | 179 | 456 | ocr: comma after 'AB' corrupted to subscript '₃' ('AB₃') in option_c |
+| BIO-C04-NCOM-181 | BIO | 4 | 181 | 456 | ocr: comma after blood group 'A' corrupted to subscript '₄' ('A₄') in answer_text/option_a |
+| BIO-C04-NCOM-184 | BIO | 4 | 184 | 456 | ocr: spaces dropped around 'o' and '0' turned into 'O' in blood-group options ('ABoO' in option_d and 'AoB' in answer_text/option_e) |
+| BIO-C04-NCOM-187 | BIO | 4 | 187 | 457 | ocr: space dropped before 'o' in blood-group option_c ('Ao B') |
+| BIO-C04-NCOM-192 | BIO | 4 | 192 | 457 | ocr: 'daltoniche' split into three words 'dal toni che' in options A, C (answer_text), and D |
+| BIO-C04-NCOM-198 | BIO | 4 | 198 | 458 | ocr: comma after 'No' corrupted to subscript '₃' ('No₃ mai') in option_a |
+| BIO-C04-NCOM-202 | BIO | 4 | 202 | 458 | ocr: chapter running header/footer ('Capitolo⁴ /meccanismi cellulari di tra sn') bled into option_e |
+| BIO-C04-NCOM-211 | BIO | 4 | 211 | 460 | ocr: karyotypes 'X0' and 'Y0' rendered with capital letter 'O' ('XO', 'YO') in options B and D |
+| BIO-C05-NCOM-020 | BIO | 5 | 20 | 486 | ocr: Greek 'β' corrupted to 'B' in option_e ('Actina B') |
+| BIO-C05-NCOM-026 | BIO | 5 | 26 | 487 | ocr: 'il' corrupted to 'i)' ('per i) trasporto?') in question |
+| BIO-C05-NCOM-030 | BIO | 5 | 30 | 487 | ocr: figure labels bled as garbled text 'Ge) I 2' at end of question |
+| BIO-C05-NCOM-034 | BIO | 5 | 34 | 488 | ocr: 'è ' corrupted to '@' ('@una forma di trasporto attivo') in option_a |
 
