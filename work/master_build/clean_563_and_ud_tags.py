@@ -205,12 +205,16 @@ ITEM_SPECIFIC_OVERRIDES: dict[str, dict] = {
 }
 
 
+from symbol_and_ocr_fixes import apply_symbol_ocr_subs
+
+
 def clean_ocr_fragment(text: str) -> str:
     if not text:
         return text
     out = text
     for pat, repl in _SAFE_SUBS:
         out = pat.sub(repl, out)
+    out = apply_symbol_ocr_subs(out)
     return out
 
 
@@ -270,6 +274,15 @@ def derive_cloze_synonyms(cloze_targets: list[str], extra_synonyms: list[str] | 
         ascii_sub = s.translate(_SUB_SUP_MAP)
         if ascii_sub != s:
             _add(ascii_sub)
+        # Inequality variants (<7 / >7)
+        if s.startswith("<"):
+            num = s[1:].strip()
+            _add(f"< {num}")
+            _add(f"minore di {num}")
+        elif s.startswith(">"):
+            num = s[1:].strip()
+            _add(f"> {num}")
+            _add(f"maggiore di {num}")
         # Greek <-> Italian name variants
         for sym, name in _GREEK_PAIRS:
             if sym in s:

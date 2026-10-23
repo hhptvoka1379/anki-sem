@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build work/master_build/Semestre_Filtro_Master_7078.apkg using the official Anki Rust/Python engine."""
+"""Master Anki v3 .apkg builder for Semestre Filtro (7,078 notes / 7,082 cards / 8,234 standalone media files)."""
 from __future__ import annotations
 
 import html
@@ -9,13 +9,16 @@ import shutil
 import sqlite3
 import sys
 import time
+import zipfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+import zstandard
 from anki.collection import Collection, ExportAnkiPackageOptions
+
+from patches_130_restored import build_clean_130
 from clean_563_and_ud_tags import (
-    ALL_21_UD_TAGS,
     ITEM_SPECIFIC_OVERRIDES,
     classify_ud_tag,
     clean_ocr_fragment,
@@ -24,8 +27,8 @@ from clean_563_and_ud_tags import (
 from explanations_bio_118 import BIO_118
 from explanations_chim_189 import CHIM_189
 from explanations_fis_127 import FIS_127
-from extract_delta_media import extract_all_delta_media
-from patches_130_restored import build_clean_130
+from extract_delta_media import clean_live_figure_html, extract_all_delta_media
+from symbol_and_ocr_fixes import EXPLICIT_CARD_PATCHES, load_v5_rows, v5_field_ok
 
 MCQ_MID = 1813027267
 CLOZE_MID = 1481924269089
@@ -156,6 +159,29 @@ def upgrade_css(css: str) -> str:
     return OFFLINE_FONT_CSS + cleaned + EXTRA_SHARED_CSS
 
 
+def html_to_plain(s: str) -> str:
+    if not s:
+        return ""
+    out = re.sub(r"<br\s*/?>", "\n", s, flags=re.I)
+    return html.unescape(out)
+
+
+def plain_to_html(s: str) -> str:
+    return html.escape(s, quote=False).replace("\n", "<br>")
+
+
+def clean_cloze_html(s: str) -> str:
+    """Unescape entities, clean OCR/symbol defects, and single-escape HTML while preserving <sup>...</sup> tags."""
+    if not s:
+        return ""
+    tmp = s.replace("<sup>", "\x01SUP\x02").replace("</sup>", "\x01/SUP\x02")
+    tmp = re.sub(r"<br\s*/?>", "\n", tmp, flags=re.I)
+    tmp = html.unescape(tmp)
+    tmp = clean_ocr_fragment(tmp)
+    tmp = html.escape(tmp, quote=False).replace("\n", "<br>")
+    return tmp.replace("\x01SUP\x02", "<sup>").replace("\x01/SUP\x02", "</sup>")
+
+
 def parse_options_html(opts_html: str) -> dict[str, str]:
     pairs = re.findall(
         r'<span class="opt-letter">([A-E])</span><span class="opt-body">(.*?)</span>',
@@ -165,49 +191,59 @@ def parse_options_html(opts_html: str) -> dict[str, str]:
     return {k: v for k, v in pairs}
 
 
-def render_options_html(opts: dict[str, str], correct_letter: str | None) -> str:
+def render_options_html(opts_html: dict[str, str], correct_letter: str | None) -> str:
     parts = ['<div class="options">']
     for k in ["A", "B", "C", "D", "E"]:
-        if k not in opts:
+        if k not in opts_html:
             continue
         cls = "opt correct" if (correct_letter and k == correct_letter) else "opt"
         parts.append(
-            f'<div class="{cls}"><span class="opt-letter">{k}</span><span class="opt-body">{opts[k]}</span></div>'
+            f'<div class="{cls}"><span class="opt-letter">{k}</span><span class="opt-body">{opts_html[k]}</span></div>'
         )
     parts.append("</div>")
     return "".join(parts)
 
 
-def extract_cloze_targets(cloze_stem: str) -> list[str]:
-    return [m.split("::")[0] for m in re.findall(r"\{\{c\d+::(.*?)\}\}", cloze_stem)]
+def extract_cloze_targets(cloze_stem_html: str) -> list[str]:
+    return [html.unescape(m.split("::")[0]) for m in re.findall(r"\{\{c\d+::(.*?)\}\}", cloze_stem_html)]
 
 
-def cloze_to_back_stem(cloze_stem: str) -> str:
+def cloze_to_back_stem(cloze_stem_html: str) -> str:
     def _repl(m: re.Match) -> str:
         inner = m.group(1).split("::")[0]
         return f'<span class="blank-filled">{inner}</span>'
 
-    return re.sub(r"\{\{c\d+::(.*?)\}\}", _repl, cloze_stem)
+    return re.sub(r"\{\{c\d+::(.*?)\}\}", _repl, cloze_stem_html)
 
 
-def format_explanation_html(expl: str, errata_note: str | None = None) -> str:
-    main = html.escape(expl.strip()).replace("\n", "<br>")
+def format_explanation_html(expl_plain: str, errata_note: str | None = None) -> str:
+    main = plain_to_html(expl_plain.strip())
     if errata_note:
-        note = html.escape(errata_note.strip()).replace("\n", "<br>")
+        note = plain_to_html(errata_note.strip())
         return f'{main}<div class="note-box">{note}</div>'
     return main
+
+
+def ensure_live_sqlite(live_sqlite: Path) -> None:
+    src_apkg = Path("/tmp/arena-coding-uploads/currnet_no_images.apkg.md")
+    with zipfile.ZipFile(src_apkg) as zf:
+        with zf.open("collection.anki21b") as s:
+            raw = zstandard.ZstdDecompressor().stream_reader(s).read()
+    live_sqlite.parent.mkdir(parents=True, exist_ok=True)
+    live_sqlite.write_bytes(raw)
 
 
 def main() -> None:
     root = Path("/home/user/anki-sem")
     cache_dir = root / "work/.cache"
-    delta_dir = cache_dir / "delta_media"
-    manifest = extract_all_delta_media(delta_dir)
+    full_media_dir = cache_dir / "full_media"
+    manifest = extract_all_delta_media(full_media_dir, include_full_live_media=True)
     restored_fig_html: dict[str, str] = manifest["restored_fig_html"]
     restored_sol_html: dict[str, str] = manifest["restored_sol_html"]
 
     clean_130 = build_clean_130(root / "work/opus_handoff/special_sets/missing_130_restored.jsonl")
     guid_map = json.loads((root / "work/opus_handoff/target_schema/guid_map_7078.json").read_text())
+    v5_rows = load_v5_rows()
 
     bespoke: dict[str, dict] = {}
     bespoke.update(CHIM_189)
@@ -222,12 +258,14 @@ def main() -> None:
             chunk_records[r["id"]] = r
     assert len(chunk_records) == 7078, f"Expected 7078 chunk records, got {len(chunk_records)}"
 
-    # Prepare clean working copy of live collection
+    # Prepare clean working copy of live collection (read-only from currnet_no_images.apkg.md)
+    live_sqlite = cache_dir / "live_collection.sqlite"
+    ensure_live_sqlite(live_sqlite)
     work_db = cache_dir / "master_build_col.anki2"
     work_media = cache_dir / "master_build_col.media"
     work_db.unlink(missing_ok=True)
     shutil.rmtree(work_media, ignore_errors=True)
-    shutil.copyfile(cache_dir / "live_collection.sqlite", work_db)
+    shutil.copyfile(live_sqlite, work_db)
 
     col = Collection(str(work_db))
 
@@ -256,8 +294,13 @@ def main() -> None:
     m_cloze["tmpls"][0]["afmt"] = cloze_back
     col.models.save(m_cloze)
 
-    # 2. Update all 6,948 live notes in place
+    # 2. Update all 6,948 live notes in place (preserving 100% of live GUIDs)
     updated_live = 0
+    v5_stem_upgrades = 0
+    v5_opt_upgrades = 0
+    v5_expl_upgrades = 0
+    fig_cleaned_count = 0
+
     for nid in col.find_notes(""):
         note = col.get_note(nid)
         iid = note.fields[0]
@@ -267,81 +310,146 @@ def main() -> None:
         c0 = sw.get("0c53ca03") or {}
         patch = bespoke.get(iid)
         ovr = ITEM_SPECIFIC_OVERRIDES.get(iid, {})
-
+        xpatch = EXPLICIT_CARD_PATCHES.get(iid, {})
+        v5r = v5_rows.get(iid)
         is_cloze = note.mid == CLOZE_MID
 
         if not is_cloze:
-            stem = clean_ocr_fragment(note.fields[8])
-            if patch and "question" in patch:
-                stem = html.escape(patch["question"])
-            if "stem" in ovr:
-                stem = html.escape(ovr["stem"])
-            note.fields[8] = stem
-            note.fields[9] = stem
+            stem_plain = html_to_plain(note.fields[8])
+            if (
+                v5r
+                and not (patch and "question" in patch)
+                and "stem" not in ovr
+                and "question" not in xpatch
+            ):
+                v5_q = (v5r.get("question") or "").strip()
+                if v5_field_ok(stem_plain, v5_q):
+                    stem_plain = v5_q
+                    v5_stem_upgrades += 1
 
-            opts = parse_options_html(note.fields[10])
-            opts = {k: clean_ocr_fragment(v) for k, v in opts.items()}
-            if patch and "options" in patch:
-                for k, v in patch["options"].items():
-                    opts[k] = html.escape(v)
-            for k in "ABCDE":
+            stem_plain = clean_ocr_fragment(stem_plain)
+            for old_s, new_s in xpatch.get("question_replacements") or []:
+                stem_plain = stem_plain.replace(old_s, new_s)
+            if "question" in xpatch:
+                stem_plain = clean_ocr_fragment(xpatch["question"])
+            if "stem" in ovr:
+                stem_plain = clean_ocr_fragment(ovr["stem"])
+            if patch and "question" in patch:
+                stem_plain = clean_ocr_fragment(patch["question"])
+
+            stem_html = plain_to_html(stem_plain)
+            note.fields[8] = stem_html
+            note.fields[9] = stem_html
+
+            raw_opts = parse_options_html(note.fields[10])
+            v5_opts = (v5r.get("options") or {}) if v5r else {}
+            x_opts = xpatch.get("options") or {}
+            opts_html: dict[str, str] = {}
+            for k, v_html in raw_opts.items():
+                opt_plain = html_to_plain(v_html)
+                if (
+                    k in v5_opts
+                    and not (patch and "options" in patch and k in patch["options"])
+                    and f"opt_{k.lower()}" not in ovr
+                    and k not in x_opts
+                ):
+                    v5_o = (v5_opts.get(k) or "").strip()
+                    if v5_field_ok(opt_plain, v5_o):
+                        opt_plain = v5_o
+                        v5_opt_upgrades += 1
+
+                opt_plain = clean_ocr_fragment(opt_plain)
+                if k in x_opts:
+                    opt_plain = clean_ocr_fragment(x_opts[k])
                 if f"opt_{k.lower()}" in ovr:
-                    opts[k] = html.escape(ovr[f"opt_{k.lower()}"])
+                    opt_plain = clean_ocr_fragment(ovr[f"opt_{k.lower()}"])
+                if patch and "options" in patch and k in patch["options"]:
+                    opt_plain = clean_ocr_fragment(patch["options"][k])
+                opts_html[k] = plain_to_html(opt_plain)
 
             m_ans = re.search(r"Risposta corretta:\s*([A-E])\b", note.fields[12])
             ans_letter = m_ans.group(1) if m_ans else rec["remediated_card"]["answer"]
             if patch and "answer" in patch:
                 ans_letter = patch["answer"]
 
-            note.fields[10] = render_options_html(opts, None)
-            note.fields[11] = render_options_html(opts, ans_letter)
-            ans_body = opts.get(ans_letter, "")
+            note.fields[10] = render_options_html(opts_html, None)
+            note.fields[11] = render_options_html(opts_html, ans_letter)
+            ans_body = opts_html.get(ans_letter, "")
             if "answer_banner" in ovr:
                 note.fields[12] = ovr["answer_banner"]
             else:
                 note.fields[12] = f"Risposta corretta: {ans_letter}. {ans_body}"
         else:
-            cloze_stem = clean_ocr_fragment(note.fields[8])
-            if patch and "cloze_stem" in patch:
-                cloze_stem = patch["cloze_stem"]
+            if "cloze_stem" in xpatch:
+                cloze_stem = clean_cloze_html(xpatch["cloze_stem"])
+            elif patch and "cloze_stem" in patch:
+                cloze_stem = clean_cloze_html(patch["cloze_stem"])
+            else:
+                cloze_stem = clean_cloze_html(note.fields[8])
+
             note.fields[8] = cloze_stem
             note.fields[9] = cloze_to_back_stem(cloze_stem)
 
             targets = extract_cloze_targets(cloze_stem)
-            extra_syns = patch.get("accepted_synonyms") if patch else None
-            syns = derive_cloze_synonyms(targets, extra_syns, cc.get("flags"))
+            extra_syns = list((patch.get("accepted_synonyms") if patch else None) or []) + list(
+                xpatch.get("accepted_synonyms") or []
+            )
+            syns = derive_cloze_synonyms(targets, extra_syns or None, cc.get("flags"))
             disp_ans = "/".join(targets)
             if patch and "answer_text" in patch and len(targets) == 1:
                 disp_ans = patch["answer_text"]
             acc_attr = html.escape("|".join(syns), quote=True)
             note.fields[12] = (
-                f'Risposta corretta: {html.escape(disp_ans)}'
+                f"Risposta corretta: {html.escape(disp_ans, quote=False)}"
                 f'<span class="sf-acc-data" data-acc="{acc_attr}" hidden></span>'
             )
 
-        # ExplanationHTML (100% populated)
+        # ExplanationHTML (100% populated + .note-box errata_note caveats)
+        errata_note = (patch.get("errata_note") if patch else None) or xpatch.get("errata_note")
         if patch and "explanation" in patch:
-            note.fields[13] = format_explanation_html(patch["explanation"], patch.get("errata_note"))
+            expl_plain = clean_ocr_fragment(patch["explanation"])
+        elif "explanation" in xpatch:
+            expl_plain = clean_ocr_fragment(xpatch["explanation"])
         elif note.fields[13].strip():
-            # Keep existing COMM explanation (clean minor OCR tokens)
-            note.fields[13] = clean_ocr_fragment(note.fields[13].strip())
+            curr_expl = html_to_plain(note.fields[13].strip())
+            if v5r:
+                v5_expl = (v5r.get("explanation") or "").strip()
+                if v5_expl and v5_field_ok(curr_expl, v5_expl):
+                    curr_expl = v5_expl
+                    v5_expl_upgrades += 1
+            expl_plain = clean_ocr_fragment(curr_expl)
         elif cc.get("status") == "done" and (cc.get("reason") or "").strip():
-            note.fields[13] = format_explanation_html(cc["reason"])
+            expl_plain = clean_ocr_fragment(cc["reason"])
         elif c0.get("status") == "done" and (c0.get("reason") or "").strip():
-            note.fields[13] = format_explanation_html(c0["reason"])
+            expl_plain = clean_ocr_fragment(c0["reason"])
         else:
             raise RuntimeError(f"Live item {iid} has no explanation!")
 
-        # Tags: preserve live tags, strip any stale ud::/dup::, add authoritative MUR 2026 ud:: and dup::
-        full_text = f"{note.fields[8]} {note.fields[10]} {note.fields[12]}"
+        for old_e, new_e in xpatch.get("explanation_replacements") or []:
+            expl_plain = expl_plain.replace(old_e, new_e)
+        note.fields[13] = format_explanation_html(expl_plain, errata_note)
+
+        # FigureHTML cleanup (strip 34 bogus text-duplicate crops + apply 12 tight clean_fig_* crops)
+        old_fig = note.fields[14]
+        new_fig = clean_live_figure_html(old_fig)
+        if new_fig != old_fig:
+            fig_cleaned_count += 1
+        note.fields[14] = new_fig
+
+        # Tags: preserve live tags, sync con_figura with cleaned FigureHTML, attach MUR 2026 ud:: and dup::
+        full_text = html.unescape(f"{note.fields[8]} {note.fields[10]} {note.fields[12]}")
         ud_tag = classify_ud_tag(rec, full_text)
-        kept_tags = [t for t in note.tags if not t.startswith("ud::") and not t.startswith("dup::")]
+        kept_tags = [
+            t
+            for t in note.tags
+            if not t.startswith("ud::") and not t.startswith("dup::") and t != "con_figura"
+        ]
         kept_tags.append(ud_tag)
         for dt in rec.get("dup_tags") or []:
             tag_val = dt if dt.startswith("dup::") else f"dup::{dt}"
             if tag_val not in kept_tags:
                 kept_tags.append(tag_val)
-        if note.fields[14].strip() and "con_figura" not in kept_tags:
+        if note.fields[14].strip():
             kept_tags.append("con_figura")
         note.tags = kept_tags
 
@@ -369,6 +477,7 @@ def main() -> None:
         mid = int(ginfo["mid"])
         did = int(ginfo["did"])
         is_cloze = mid == CLOZE_MID
+        xpatch = EXPLICIT_CARD_PATCHES.get(iid, {})
 
         model = col.models.get(mid)
         note = col.new_note(model)
@@ -382,7 +491,11 @@ def main() -> None:
         if qt_raw in ("COMM", "NCOM", "COMP"):
             qlabel, qtag = qtype_labels[qt_raw]
         else:
-            rev = {"commentati": ("Quiz commentati", "commentati"), "non_commentati": ("Quiz non commentati", "non_commentati"), "completamento": ("Quiz a completamento", "completamento")}
+            rev = {
+                "commentati": ("Quiz commentati", "commentati"),
+                "non_commentati": ("Quiz non commentati", "non_commentati"),
+                "completamento": ("Quiz a completamento", "completamento"),
+            }
             qlabel, qtag = rev[qt_raw]
 
         qnum = str(int(rec["qnum"]))
@@ -398,8 +511,12 @@ def main() -> None:
         note.fields[7] = bpage
 
         if not is_cloze:
-            q_esc = html.escape(clean_ocr_fragment(item["question"]))
-            opts_esc = {k: html.escape(clean_ocr_fragment(v)) for k, v in item["options"].items()}
+            q_plain = clean_ocr_fragment(xpatch.get("question", item["question"]))
+            q_esc = plain_to_html(q_plain)
+            opts_esc = {}
+            x_opts = xpatch.get("options") or {}
+            for k, v in item["options"].items():
+                opts_esc[k] = plain_to_html(clean_ocr_fragment(x_opts.get(k, v)))
             ans_l = item["answer"]
             note.fields[8] = q_esc
             note.fields[9] = q_esc
@@ -407,31 +524,35 @@ def main() -> None:
             note.fields[11] = render_options_html(opts_esc, ans_l)
             note.fields[12] = f"Risposta corretta: {ans_l}. {opts_esc[ans_l]}"
         else:
-            cstem = clean_ocr_fragment(item["question"])
+            cstem_raw = xpatch.get("cloze_stem", item["question"])
             raw_ans = (item.get("answer_text") or item.get("answer") or "").strip()
             cloze_ans = "ω" if raw_ans == "ω (omega)" else raw_ans
-            if "{{c1::" not in cstem:
-                cstem = re.sub(r"_{2,}", f"{{{{c1::{cloze_ans}}}}}", cstem, count=1)
-                cstem = cstem.replace(" .", ".")
-                if not cstem.endswith((".", "?", "!")):
-                    cstem += "."
+            if "{{c1::" not in cstem_raw:
+                cstem_raw = re.sub(r"_{2,}", f"{{{{c1::{cloze_ans}}}}}", cstem_raw, count=1)
+                cstem_raw = cstem_raw.replace(" .", ".")
+                if not cstem_raw.endswith((".", "?", "!")):
+                    cstem_raw += "."
+            cstem = clean_cloze_html(cstem_raw)
             note.fields[8] = cstem
             note.fields[9] = cloze_to_back_stem(cstem)
             targets = extract_cloze_targets(cstem)
-            syns = derive_cloze_synonyms(targets + ([raw_ans] if raw_ans else []), item.get("accepted_synonyms"))
+            extra_syns = list(item.get("accepted_synonyms") or []) + list(xpatch.get("accepted_synonyms") or [])
+            syns = derive_cloze_synonyms(targets + ([raw_ans] if raw_ans else []), extra_syns or None)
             disp_ans = raw_ans or "/".join(targets)
             acc_attr = html.escape("|".join(syns), quote=True)
             note.fields[12] = (
-                f'Risposta corretta: {html.escape(disp_ans)}'
+                f"Risposta corretta: {html.escape(disp_ans, quote=False)}"
                 f'<span class="sf-acc-data" data-acc="{acc_attr}" hidden></span>'
             )
 
-        note.fields[13] = format_explanation_html(item["explanation"], item.get("errata_note"))
+        expl_plain = clean_ocr_fragment(xpatch.get("explanation", item["explanation"]))
+        err_note = xpatch.get("errata_note") or item.get("errata_note")
+        note.fields[13] = format_explanation_html(expl_plain, err_note)
         note.fields[14] = restored_fig_html.get(iid, "")
         note.fields[15] = f'<img src="restored_{iid}.png">'
         note.fields[16] = restored_sol_html.get(iid, "")
 
-        full_text = f"{note.fields[8]} {note.fields[10]} {note.fields[12]}"
+        full_text = html.unescape(f"{note.fields[8]} {note.fields[10]} {note.fields[12]}")
         ud_tag = classify_ud_tag(rec, full_text)
         tags = [
             f"capitolo::{scode}_cap_{int(rec['chapter_num']):02d}",
@@ -455,10 +576,14 @@ def main() -> None:
     assert col.note_count() == 7078, f"Expected 7078 total notes, got {col.note_count()}"
     assert col.card_count() == 7082, f"Expected 7082 total cards, got {col.card_count()}"
 
-    # 4. Copy all 141 collision-free delta media files into col.media.dir()
+    # 4. Copy all 8,234 standalone media files (8,230 PNGs + 4 offline fonts) into col.media.dir()
     media_dir = Path(col.media.dir())
-    for mf in delta_dir.iterdir():
-        shutil.copy2(mf, media_dir / mf.name)
+    copied_media = 0
+    for mf in sorted(full_media_dir.iterdir()):
+        if mf.is_file():
+            shutil.copy2(mf, media_dir / mf.name)
+            copied_media += 1
+    assert copied_media == 8234, f"Expected 8234 staged media files, got {copied_media}"
 
     col.close()
 
@@ -472,7 +597,7 @@ def main() -> None:
     con.commit()
     con.close()
 
-    # Re-open via official Anki engine and export Anki v3 .apkg
+    # Re-open via official Anki engine and export standalone Anki v3 .apkg with all media
     out_apkg = root / "work/master_build/Semestre_Filtro_Master_7078.apkg"
     out_apkg.unlink(missing_ok=True)
     col = Collection(str(work_db))
@@ -487,6 +612,10 @@ def main() -> None:
         limit=None,
     )
     col.close()
+    print(
+        f"Stats: v5_stem={v5_stem_upgrades}, v5_opt={v5_opt_upgrades}, v5_expl={v5_expl_upgrades}, "
+        f"fig_cleaned={fig_cleaned_count}, media={copied_media}"
+    )
     print(f"Exported {out_apkg} ({out_apkg.stat().st_size / (1024*1024):.2f} MB), cards={exported_cards}")
 
 

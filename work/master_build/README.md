@@ -1,12 +1,12 @@
-# Semestre Filtro — Master 7,078-Item Anki Deck (`Semestre_Filtro_Master_7078.apkg`)
+# Semestre Filtro — Standalone Master 7,078-Item Anki Deck (`Semestre_Filtro_Master_7078.apkg`)
 
-**Deliverable**: `work/master_build/Semestre_Filtro_Master_7078.apkg` (`2.81 MB`, Anki v3 `collection.anki21b` schema `18` + `141` collision-free delta media files)
+**Deliverable**: `work/master_build/Semestre_Filtro_Master_7078.apkg` (**`34.31 MB` standalone**, Anki v3 `collection.anki21b` schema `18` + **`8,234` media files**: `8,230` verified PNGs + `4` offline `.ttf` fonts)
 
-Built and end-to-end verified against `/tmp/arena-coding-uploads/currnet_no_images.apkg.md` using the **official Anki Rust/Python engine (`anki.collection.Collection.import_anki_package`)** under Anki's default double-click import settings (`update_notes=IF_NEWER`, `update_notetypes=IF_NEWER`, `merge_notetypes=False`, `with_scheduling=False`).
+Built and end-to-end verified both as a **100% standalone fresh-profile import** AND as an **in-place live merge** into `/tmp/arena-coding-uploads/currnet_no_images.apkg.md` using the **official Anki Rust/Python engine (`anki.collection.Collection.import_anki_package`)** under Anki's default double-click import settings (`update_notes=IF_NEWER`, `update_notetypes=IF_NEWER`, `merge_notetypes=False`, `with_scheduling=False`).
 
 ---
 
-## 1. Real-Anki Merge Verification Summary
+## 1. Real-Anki Standalone & Merge Verification Summary
 
 | Check | Result |
 |---|---|
@@ -14,32 +14,40 @@ Built and end-to-end verified against `/tmp/arena-coding-uploads/currnet_no_imag
 | `ImportLog.updated` (in-place live GUID updates, user scheduling preserved) | **`6,948 / 6,948`** |
 | `ImportLog.new` (restored book duplicates under distinct `ItemID`s & GUIDs) | **`130 / 130`** |
 | `ImportLog.duplicate` / `conflicting` / `missing_notetype` / `missing_deck` | **`0 / 0 / 0 / 0`** |
-| Post-merge user collection | **`7,078` notes / `7,082` cards** (`5,008` MCQ + `2,074` Cloze across `2,070` Cloze notes) |
+| Post-merge / Standalone collection | **`7,078` notes / `7,082` cards** (`5,008` MCQ + `2,074` Cloze across `2,070` Cloze notes) |
 | Cards with non-empty Italian `ExplanationHTML` | **`7,078 / 7,078` (`100.00%`)** |
 | Cards with official MUR 2026 `ud::<slug>` tag | **`7,078 / 7,078` (`21 / 21` Unità Didattiche populated)** |
-| Delta media files bundled (collision-free with existing `collection.media`) | **`141` files** (`130` `restored_<id>.png` + `5` `restored_fig_<id>_1.png` + `2` `restored_sol_<id>_1.png` + `4` offline `_*.ttf` fonts) |
+| Bundled standalone media files (`8,230` PNGs + `4` `.ttf` fonts) | **`8,234 / 8,234` (`0` missing `<img src>`, `0` corrupt/zero-dim PNGs, `0` SHA-1 collisions)** |
+| Genuine `FigureHTML` (`f14`) notes ↔ `con_figura` tag parity | **`84 / 84` (`0` mismatches; `34` bogus text-only crops stripped, `12` tight `clean_fig_*` crops applied)** |
+| Double-escaped HTML entities (`&amp;lt;`, `&amp;gt;`, `&amp;amp;`, etc.) | **`0` across all `7,078 × 17` fields** |
+| Residual symbol / formula / Greek / unit / OCR corruptions (`DETECT_CORRUPTIONS`) | **`0` across all `7,078` notes (`COMM`, `NCOM`, `COMP`, and `130` restored)** |
 
-### One-Click Import Instructions
-1. Open Anki Desktop (23.10+ / 24.x / 25.x), AnkiMobile, or AnkiDroid where your current `Semestre Filtro` collection is loaded.
+### Standalone Media Breakdown (`8,234` files)
+- **`8,081` live question/solution/figure PNGs** byte-for-byte (`SHA-1`) identical to `origin/import/full-anki-folder:audit/media/` (ensuring zero hash-renaming collisions for users who already have live media in `collection.media`).
+- **`12` tightly re-cropped front diagrams** from `origin/arena/dbe933e6-anki-sem` prefixed `clean_fig_<name>.png` (`clean_fig_BIO_C04_comm_Q063.png`, `clean_fig_BIO_C04_non__Q035_p2.png`, `clean_fig_BIO_C07_non__Q044.png`, `clean_fig_BIO_C07_non__Q055.png`, `clean_fig_CHIM_C02_comm_Q025_p2.png`, `clean_fig_CHIM_C12_non__Q161.png`, `clean_fig_FIS_C01_comm_Q025.png`, `clean_fig_FIS_C01_non__Q090.png`, `clean_fig_FIS_C04_comm_Q007.png`, `clean_fig_FIS_C06_comm_Q034_p1.png`, `clean_fig_FIS_C06_comm_Q042_p1.png`, `clean_fig_FIS_C06_non__Q186.png`).
+- **`34` bogus duplicate text-only `FigureHTML` tags removed** from live `f14` (`27` single-image notes blanked + `con_figura` tag removed; `7` multi-page notes retaining their genuine `_p2.png` diagram).
+- **`137` collision-free `restored_*` PNGs** for the `130` restored items (`130` `restored_<id>.png` + `5` `restored_fig_<id>_1.png` + `2` `restored_sol_<id>_1.png`).
+- **`4` offline Risoprint Zine `.ttf` fonts** (`_SpaceGrotesk-Variable.ttf`, `_SpaceMono-Regular.ttf`, `_SpaceMono-Bold.ttf`, `_Syne-Variable.ttf`).
+
+### One-Click Import Instructions (Existing Users & Brand-New Profiles)
+1. Open Anki Desktop (23.10+ / 24.x / 25.x), AnkiMobile, or AnkiDroid (either on your existing `Semestre Filtro` profile or on a brand-new profile/device).
 2. Import **`Semestre_Filtro_Master_7078.apkg`** with Anki's default settings (*Update existing notes: If newer*, *Update note types: If newer*, *Import learning progress: Off*).
-3. All `6,948` existing notes and both notetypes (`1813027267` MCQ and `1481924269089` Cloze) update in place **without touching your review intervals, ease factors, or existing ~8,127 scan/figure PNGs**, while adding all `130` restored items + their `137` collision-free `restored_*.png` images + `4` offline Risoprint Zine fonts (`_SpaceGrotesk-Variable.ttf`, `_SpaceMono-Regular.ttf`, `_SpaceMono-Bold.ttf`, `_Syne-Variable.ttf`).
+3. On an existing profile, all `6,948` existing notes and both notetypes (`1813027267` MCQ and `1481924269089` Cloze) update in place **without touching your review intervals or ease factors**, while adding all `130` restored items and ensuring all `8,234` media files are present offline. On a fresh profile, all `7,078` notes (`7,082` cards) and all `8,234` media files install immediately in one step.
 
 ---
 
-## 2. Exact Reconciliation of Explanation Counts (`7,078 / 7,078`)
+## 2. Exact Reconciliation of Explanation Counts & Symbol/OCR Remediation (`7,078 / 7,078`)
 
 | Subset | Count | Source in Master Deck |
 |---|---:|---|
-| Live `COMM` (`Quiz commentati`) already explained in `currnet_no_images` | `1,040` | Preserved + OCR cleaned (including all `7` Page-291 items `CHIM-C11-COMM-017..023`) |
+| Live `COMM` (`Quiz commentati`) already explained in `currnet_no_images` | `1,040` | Preserved + per-field `v5` upgrades (`272` `COMM` explanations) + scan-verified equation/subscript fixes (including all `7` Page-291 items `CHIM-C11-COMM-017..023`) |
 | Live `COMM` with corrupted Bernoulli explanation (`FIS-C04-COMM-007`) | `1` | Replaced with clean continuity + Bernoulli derivation (`explanations_fis_127.py`) |
 | Live `NCOM + COMP` already pre-populated in `currnet_no_images` | `5` | Verified / upgraded |
 | Live `NCOM + COMP` explained by `cc130265` (`status = done`, strict pass) | `4,905` | `4,776` (`cc130265` ∩ `0c53ca03`) + `129` (`cc130265` done, `0c53ca03` flagged) |
-| Live `NCOM + COMP` flagged by `cc130265` for OCR/ambiguity, explained by `0c53ca03` | `563` | OCR/formula glitches cleaned (`clean_563_and_ud_tags.py`) + `0c53ca03` explanations |
-| Live `NCOM + COMP` flagged empty by **both** runs (`189 CHIM + 118 BIO + 127 FIS`) | `434` | **100% bespoke scan-verified explanations + `.note-box` caveats** (`explanations_{chim_189,bio_118,fis_127}.py`) |
+| Live `NCOM + COMP` flagged by `cc130265` for OCR/ambiguity, explained by `0c53ca03` | `563` | Full symbol/formula/Greek/subscript/superscript/unit remediation (`symbol_and_ocr_fixes.py` + `clean_563_and_ud_tags.py` + `339` `v5` stems + `497` `v5` options + `.note-box` caveats) + `0c53ca03` explanations |
+| Live `NCOM + COMP` flagged empty by **both** runs (`189 CHIM + 118 BIO + 127 FIS`) | `434` | **100% bespoke scan-verified stems/options/explanations + `.note-box` caveats** (`explanations_{chim_189,bio_118,fis_127}.py`) |
 | Restored `130` previously deduplicated items (`113 NCOM + 15 COMP + 2 COMM`) | `130` | **100% OCR-cleaned & option-letter-remapped explanations** (`patches_130_restored.py`) |
 | **Total** | **`7,078`** | **`7,078 / 7,078` (`100.00%`)** |
-
-*(Note: `1,040 + 1 = 1,041` `COMM`; `4,905 + 563 + 434 = 5,902` `NCOM+COMP` in `uncommented_questions_workpack`, where `5` overlapped pre-filled live notes so `1,041 + 5 + 5,902 = 6,948` live notes; `+ 130` restored = `7,078` total notes.)*
 
 ---
 
@@ -58,7 +66,7 @@ Built and end-to-end verified against `/tmp/arena-coding-uploads/currnet_no_imag
 
 ---
 
-## 4. Reproducible Build Pipeline (`work/master_build/`)
+## 4. Reproducible Build & Verification Pipeline (`work/master_build/`)
 
 ```bash
 work/.venv/bin/python3 work/master_build/build_master_apkg.py
