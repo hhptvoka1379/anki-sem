@@ -1,6 +1,6 @@
-# Flagged rows (382)
+# Flagged rows (417)
 
-## ambiguous (29)
+## ambiguous (30)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -33,6 +33,7 @@
 | FIS-C02-NCOM-054 | FIS | 2 | 54 | 695 | ambiguous: sia A ('2π rad/h') sia C ('costante') sono affermazioni fisicamente vere per la lancetta dei minuti |
 | FIS-C03-COMP-028 | FIS | 3 | 28 | 736 | ambiguous: formulazione incoerente ('non influenzano il moto del sistema esterno'); le forze interne hanno risultante nulla e non alterano il moto del centro di massa del sistema stesso |
 | FIS-C05-NCOM-067 | FIS | 5 | 67 | 775 | ambiguous: sia l'opzione B ('non aumenta né diminuisce') sia l'opzione E ('resta costante nel tempo') esprimono esattamente la stessa legge vera di conservazione dell'energia di un sistema isolato |
+| FIS-C06-NCOM-011 | FIS | 6 | 11 | 797 | ambiguous: su Q₃ la forza risultante si annulla esclusivamente nel punto medio equidistante da Q₁ e Q₂ (r₁₃ = r₂₃), non in una generica posizione intermedia come scritto in E, rendendo difendibile anche D ('nessuna delle altre risposte è corretta') |
 
 ## chem (1)
 
@@ -40,7 +41,7 @@
 |---|---|---|---|---|---|
 | BIO-C05-COMP-102 | BIO | 5 | 102 | 521 | chem: formula chimica del substrato nell'enunciato corrotta dall'OCR in 'H.0' al posto di 'H₂O₂' ('converte l'H.0 in acqua e ossigeno') |
 
-## key (22)
+## key (24)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -66,8 +67,10 @@
 | FIS-C02-NCOM-076 | FIS | 2 | 76 | 698 | key: suspect - il tempo minimo di attraversamento si ottiene puntando la barca perpendicolarmente alle sponde (t_min = L / v_barca) e resta invariato (E) al variare della corrente, mentre C vale solo imponendo deriva nulla a valle |
 | FIS-C03-NCOM-011 | FIS | 3 | 11 | 711 | key: suspect - per due forze uguali F ad angolo α = 30° il risultante ha modulo 2F cos 15° = F√(2 + √3) ≈ 1,93 F (mentre F√3 vale per α = 60°); inoltre radici corrotte da OCR in '2FV3', 'FY2', 'FS3' |
 | FIS-C04-NCOM-081 | FIS | 4 | 81 | 757 | key: suspect - un fluido non scorre 'sempre' da pressione statica maggiore a minore (es. nel tratto divergente di un tubo di Venturi orizzontale scorre contro gradiente di pressione, e in un fluido statico o discendente p cresce con la profondità); A vale solo per condotto viscoso orizzontale a sezione costante |
+| FIS-C06-NCOM-013 | FIS | 6 | 13 | 797 | key: suspect - per la legge di Faraday-Maxwell (rot E = −∂B/∂t) in presenza di induzione elettromagnetica esistono linee del campo elettrico chiuse (opzione B corretta nei test ufficiali), mentre la chiave indicata A vale solo in regime elettrostatico |
+| FIS-C06-NCOM-133 | FIS | 6 | 133 | 813 | key: suspect - collegare il polo positivo di una cellula contro il polo positivo dell'adiacente (opzione C) pone i generatori in opposizione/antiserie annullando la tensione netta (ΔV = 0), non in parallelo (che negli organi elettrici delle torpedini marine è ottenuto affiancando colonne parallele collegate agli stessi conduttori comuni dorsale/ventrale, rendendo corretta D) |
 
-## missing (24)
+## missing (28)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -95,8 +98,12 @@
 | BIO-C07-NCOM-115 | BIO | 7 | 115 | 579 | missing: manca completamente lo schema grafico citato nell'enunciato ('Lo schema della figura rappresenta... Processo A / LD [OZ') |
 | FIS-C01-NCOM-090 | FIS | 1 | 90 | 681 | missing: manca la figura necessaria per conoscere il verso delle tre forze lungo i lati del triangolo equilatero (oltre a formula corrotta 'p3/2/2' nell'opzione A) |
 | FIS-C03-NCOM-036 | FIS | 3 | 36 | 714 | missing: manca la figura necessaria per sapere quale tra le due masse m₁ ed m₂ si trova sul piano inclinato di angolo α |
+| FIS-C06-NCOM-039 | FIS | 6 | 39 | 800 | missing: figura mancante nell'enunciato ('seguendo uno dei percorsi indicati in figura') con artefatto OCR '77 / M' |
+| FIS-C06-COMP-105 | FIS | 6 | 105 | 827 | missing: enunciato privo di soggetto contestuale ('Il momento massimo è dato da τ = I A B' senza specificare il momento torcente magnetico su una singola spira piana immersa in un campo magnetico B) |
+| FIS-C06-COMP-106 | FIS | 6 | 106 | 827 | missing: enunciato estrapolato fuori contesto ('L'area della spira è il prodotto della base per I’ altezza', valido solo per una particolare spira rettangolare e con 'I’' corrotto) |
+| FIS-C06-NCOM-123 | FIS | 6 | 123 | 811 | missing: figura dei cinque grafici assente ('vedi figura') |
 
-## ocr (306)
+## ocr (334)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -406,4 +413,32 @@
 | FIS-C05-COMP-071 | FIS | 5 | 71 | 787 | ocr: pedice corrotto nell'enunciato ('differenza tra Q, e Qf' invece di 'differenza tra Qc e Qf') |
 | FIS-C05-NCOM-089 | FIS | 5 | 89 | 778 | ocr: esponente dell'unità di misura del volume corrotto nell'opzione corretta B ('4 dm²' invece di '4 dm³') e nell'opzione E ('4 m²' invece di '4 m³') |
 | FIS-C05-NCOM-114 | FIS | 5 | 114 | 781 | ocr: simbolo 'Δ' corrotto in 'A' in tutte le opzioni ('AU, AT, AG, AS, AH' invece di 'ΔU, ΔT, ΔG, ΔS, ΔH') |
+| FIS-C06-NCOM-005 | FIS | 6 | 5 | 796 | ocr: esponenti corrotti nelle opzioni ('r-2' invece di 'r⁻²', 'r°', 'rt') |
+| FIS-C06-NCOM-014 | FIS | 6 | 14 | 797 | ocr: testo estraneo corrotto 'os PZ' alla fine dell'enunciato ('descrive una traiettoria: os PZ') |
+| FIS-C06-COMP-025 | FIS | 6 | 25 | 824 | ocr: denominatore corrotto in back_stem ('1 / (41 ε₀ (epsilon) )' invece di '1 / (4π ε₀)') |
+| FIS-C06-NCOM-028 | FIS | 6 | 28 | 799 | ocr: segno di moltiplicazione '·' corrotto in segno meno '-' in tutte le opzioni ('1 joule = 1 volt - 1 coulomb' invece di '1 joule = 1 volt · 1 coulomb') |
+| FIS-C06-NCOM-032 | FIS | 6 | 32 | 800 | ocr: cifra '1' corrotta nella lettera 'i' nell'opzione corretta A ('ijoule' invece di '1 joule') |
+| FIS-C06-NCOM-033 | FIS | 6 | 33 | 800 | ocr: simbolo 'V' corrotto nel carattere '¥' nell'opzione corretta A ('q¥' invece di 'qV') e nell'opzione D ('q/V¥') |
+| FIS-C06-COMP-034 | FIS | 6 | 34 | 824 | ocr: segno meno mancante per il lavoro del campo elettrico (L_campo = −q ΔV) e testo corrotto 'daqx ΔV' in back_stem |
+| FIS-C06-NCOM-036 | FIS | 6 | 36 | 800 | ocr: unità 'J' corrotta in parentesi chiusa ')' nell'opzione corretta E ('+32)' invece di '+32 J') |
+| FIS-C06-COMP-041 | FIS | 6 | 41 | 824 | ocr: pedici e spaziatura corrotti nell'enunciato ('q, e q, distantirè U= kq, q, / r' invece di 'q₁ e q₂ distanti r è U = k q₁ q₂ / r') |
+| FIS-C06-NCOM-041 | FIS | 6 | 41 | 801 | ocr: esponente e unità della costante di Coulomb corrotti nell'enunciato ('k = 9 x 10° N m2/C?' invece di 'k = 9 × 10⁹ N m²/C²') |
+| FIS-C06-COMP-050 | FIS | 6 | 50 | 825 | ocr: coefficiente '½' corrotto nella cifra '4' nella formula dell'energia del condensatore ('U = 4 C V²' invece di 'U = ½ C V²') |
+| FIS-C06-NCOM-060 | FIS | 6 | 60 | 803 | ocr: virgola corrotta in pedice '4' nel dato numerico ('Er = 10₄' invece di 'ε_r = 10,') |
+| FIS-C06-NCOM-063 | FIS | 6 | 63 | 803 | ocr: intestazione di pagina 'os PZ' inserita all'interno della parola 'facce' nell'enunciato ('facos PZ ce') |
+| FIS-C06-COMP-065 | FIS | 6 | 65 | 826 | ocr: pedice corrotto in back_stem ('nqv,, dove q è la carica, n la densità numerica e v, la velocità di deriva' invece di 'n q v_d') |
+| FIS-C06-COMP-071 | FIS | 6 | 71 | 826 | ocr: lettera greca 'ρ' corrotta in 'p' in back_stem ('R= pl / A' invece di 'R = ρ l / A') |
+| FIS-C06-NCOM-073 | FIS | 6 | 73 | 805 | ocr: virgola corrotta in pedice '4' nel dato numerico ('6 C₄ 4 C e 12 C' invece di '6 C, 4 C e 12 C') |
+| FIS-C06-COMP-076 | FIS | 6 | 76 | 826 | ocr: simbolo 'I' dell'intensità di corrente corrotto nella cifra '1' ('P=1x V' invece di 'P = I × V') |
+| FIS-C06-NCOM-076 | FIS | 6 | 76 | 805 | ocr: segno di moltiplicazione '·' corrotto in segno meno '-' nell'opzione corretta E ('ampere - s' invece di 'ampere · s') e nelle altre opzioni |
+| FIS-C06-NCOM-077 | FIS | 6 | 77 | 805 | ocr: esponente appiattito nel dato numerico ('1.08 x 105 coulomb' invece di '1,08 × 10⁵ coulomb') |
+| FIS-C06-NCOM-079 | FIS | 6 | 79 | 805 | ocr: esponenti corrotti nell'opzione corretta A ('Tra 1018 e 10!° elettroni/secondo' invece di 'Tra 10¹⁸ e 10¹⁹ elettroni/secondo') |
+| FIS-C06-NCOM-082 | FIS | 6 | 82 | 806 | ocr: simbolo 'I' dell'intensità di corrente corrotto nella cifra '1' nell'opzione corretta A ('1=Q/t' invece di 'I = Q/t') |
+| FIS-C06-COMP-084 | FIS | 6 | 84 | 826 | ocr: simbolo 'Δ' corrotto nella lettera 'A' ('A V' invece di 'ΔV') |
+| FIS-C06-NCOM-084 | FIS | 6 | 84 | 806 | ocr: testo estraneo corrotto 'EA i' nell'enunciato ('sono: EA i P(ferro da stiro)') |
+| FIS-C06-COMP-090 | FIS | 6 | 90 | 827 | ocr: segni di moltiplicazione e parentesi corrotti in '1 N-s/C- metro' invece di '1 (N · s) / (C · metro)' |
+| FIS-C06-COMP-109 | FIS | 6 | 109 | 828 | ocr: simboli vettoriali 'τ' e 'μ' corrotti in 't' e 'p' ('t = px B' invece di 'τ = μ × B') |
+| FIS-C06-COMP-112 | FIS | 6 | 112 | 828 | ocr: formula del campo del solenoide corrotta ('B = Ho N I' invece di 'B = μ₀ n I', con 'μ₀' trasformato in 'Ho' e densità lineare 'n = N/L' sostituita da 'N') |
+| FIS-C06-NCOM-118 | FIS | 6 | 118 | 810 | ocr: nome dell'unità corrotto nell'opzione corretta C ('1 chm =1 volt / 1 ampere' invece di '1 ohm = 1 volt / 1 ampere') e nell'opzione A ('1o0hm') |
+| FIS-C06-NCOM-126 | FIS | 6 | 126 | 812 | ocr: pedice corrotto nell'enunciato ('una nuova tensione V, pari a' invece di 'V₂ pari a') |
 
