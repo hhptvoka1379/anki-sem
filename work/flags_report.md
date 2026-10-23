@@ -1,6 +1,6 @@
-# Flagged rows (86)
+# Flagged rows (112)
 
-## ambiguous (20)
+## ambiguous (24)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -24,21 +24,30 @@
 | CHIM-C08-NCOM-013 | CHIM | 8 | 13 | 126 | ambiguous: concentration-based equilibrium constants in school treatments may carry units depending on stoichiometric coefficients, whereas the thermodynamic equilibrium constant based on activities is dimensionless, and the question does not specify which convention is meant |
 | CHIM-C08-NCOM-019 | CHIM | 8 | 19 | 127 | ambiguous: whether an equilibrium constant is always dimensionless depends on whether a school concentration-based Kc or the thermodynamic activity-based constant is meant, so the intended false statement is convention-dependent |
 | CHIM-C09-NCOM-079 | CHIM | 9 | 79 | 138 | ambiguous: besides the broad statement that one or more elements change oxidation state, it is also true in every redox reaction that an element increases its oxidation number, so two listed characterisations are true |
+| CHIM-C11-NCOM-016 | CHIM | 11 | 16 | 171 | ambiguous: donating protons to water and donating positively charged hydrogen ions are equivalent descriptions, so two displayed options state the same acidic behaviour |
+| CHIM-C11-NCOM-019 | CHIM | 11 | 19 | 171 | ambiguous: the keyed none-of-the-above rejects the bitter-taste property, although bitterness is a commonly stated general property of bases and the stem does not explicitly request a definition |
+| CHIM-C11-NCOM-097 | CHIM | 11 | 97 | 179 | ambiguous: [OH-] greater than [H3O+] and [H+] less than [OH-] are equivalent inequalities, so two displayed options correctly describe a solution with pH above 7 |
+| CHIM-C11-NCOM-099 | CHIM | 11 | 99 | 179 | ambiguous: both pH 5 and pH 2 give a hydroxide concentration lower than the hydrogen-ion concentration, so the keyed pH value is not unique |
 
-## chem (2)
+## chem (4)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
 | CHIM-C03-NCOM-042 | CHIM | 3 | 42 | 44 | chem: sulfuric acid is printed as H₄SO₄, but the keyed 98 g corresponds to H₂SO₄, so the formula in the stem is chemically wrong |
 | CHIM-C09-NCOM-128 | CHIM | 9 | 128 | 143 | chem: the product is written as ZnCl4 instead of a chemically valid zinc chloride formula, so the reaction is damaged and should not be silently corrected |
+| CHIM-C10-COMP-002 | CHIM | 10 | 2 | 162 | chem: the stated general formula H-X with a negative superscript is not a valid neutral hydracid formula and does not cover sulfur hydracid H2S, so the sentence is chemically malformed |
+| CHIM-C10-COMP-009 | CHIM | 10 | 9 | 162 | chem: acid oxides do not have the stated general formula X2O3, as shown by common examples such as CO2 and SO3, so the cloze statement is chemically false |
 
-## key (3)
+## key (6)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
 | CHIM-C01-NCOM-091 | CHIM | 1 | 91 | 14 | key: suspect - tritium (1 proton, 2 neutrons) losing a neutron becomes deuterium, which is still hydrogen, so idrogeno is defensible while the key says no option is correct |
 | CHIM-C02-NCOM-021 | CHIM | 2 | 21 | 29 | key: suspect - the number of orbitals for a given n is indeed n squared, so as written all five statements are correct and none is NOT correct |
 | CHIM-C03-NCOM-133 | CHIM | 3 | 133 | 53 | key: suspect - the jump after the second ionization energy shows two valence electrons (statement 1), and the third listed value by definition corresponds to X2+ to X3+ plus electron (statement 2), so statements 1 and 2 are both correct while the key says only 1 |
+| CHIM-C10-NCOM-017 | CHIM | 10 | 17 | 153 | key: suspect stored key gives HNO4, but nitrous acid is HNO2; that formula is absent or possibly garbled in another option |
+| CHIM-C10-NCOM-096 | CHIM | 10 | 96 | 160 | key: suspect stored key appears as (NH4)3SO3 with digits substituted for letters, whereas neutral ammonium sulfite requires two ammonium ions for one sulfite ion |
+| CHIM-C11-NCOM-051 | CHIM | 11 | 51 | 175 | key: suspect computed hydrogen-ion concentration is 10^-9 mol/L, but the keyed option is printed as 107 and another exponent is also illegible |
 
 ## missing (4)
 
@@ -49,7 +58,7 @@
 | CHIM-C05-NCOM-029 | CHIM | 5 | 29 | 85 | missing: the stem refers to three containers shown in a figure, but no figure or description of their contents/states is present on the card |
 | CHIM-C08-NCOM-001 | CHIM | 8 | 1 | 125 | missing: the stem refers to a concentration-versus-time graph, but no graph or plotted values are present on the card |
 
-## ocr (57)
+## ocr (74)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -110,4 +119,21 @@
 | CHIM-C09-NCOM-087 | CHIM | 9 | 87 | 139 | ocr: molecular oxygen in the reaction is printed as zero with subscript 4, making the equation as printed erroneous and conflicting with the keyed redox classification |
 | CHIM-C09-NCOM-117 | CHIM | 9 | 117 | 142 | ocr: the iron-ion charges are garbled and the equation as printed does not balance nitrogen, hydrogen or charge, so the redox changes cannot be assessed from a reliable equation |
 | CHIM-C09-NCOM-126 | CHIM | 9 | 126 | 143 | ocr: the lead reactant and the chloride product are printed with ambiguous subscripts and punctuation (Pb2 and PbCL followed by commas), so the species transformed cannot be identified reliably |
+| CHIM-C10-NCOM-008 | CHIM | 10 | 8 | 152 | ocr: the chlorine oxide formula in the stem is reduced to punctuation and a zero, so the subscripts needed to assign the traditional anhydride name are not legible |
+| CHIM-C10-COMP-016 | CHIM | 10 | 16 | 162 | ocr: the generic oxyacid formula is printed with commas instead of the variable subscript letters, so the formula pattern stated on the card cannot be read as written |
+| CHIM-C10-NCOM-016 | CHIM | 10 | 16 | 153 | ocr: subscripts and element letters in nearly all formula-name associations are garbled, including the keyed ammonium bromide formula, so a single erroneous association cannot be identified reliably |
+| CHIM-C10-NCOM-018 | CHIM | 10 | 18 | 153 | ocr: the keyed option is a garbled rendering of carbon dioxide while the same formula is already legibly offered in another option, making the single keyed choice ambiguous |
+| CHIM-C10-COMP-024 | CHIM | 10 | 24 | 163 | ocr: the generic basic-oxide formula is printed with a zero and commas instead of readable element and variable subscript symbols, so the stated formula pattern is illegible |
+| CHIM-C10-NCOM-037 | CHIM | 10 | 37 | 155 | ocr: the aluminium oxide formula in the stem is printed as ALO followed by punctuation, losing the subscripts required to form the systematic name |
+| CHIM-C10-NCOM-053 | CHIM | 10 | 53 | 156 | ocr: the keyed nitrite option is printed as NO with a superscript 2 and no negative sign, so neither the subscript nor the ionic charge of nitrite is legible as written |
+| CHIM-C10-NCOM-080 | CHIM | 10 | 80 | 159 | ocr: the stored answer text for the perchlorate item is reduced to C with punctuation and does not reproduce any displayed option, so the keyed answer text is illegible |
+| CHIM-C10-NCOM-099 | CHIM | 10 | 99 | 160 | ocr: every chlorate-ion option is rendered with punctuation or quotation marks instead of readable subscripts and charges, so the correct formula cannot be distinguished |
+| CHIM-C11-NCOM-015 | CHIM | 11 | 15 | 171 | ocr: the numbering of the listed acids and the keyed combined option are fused and garbled, so the stated selection is not legible as written |
+| CHIM-C11-COMP-021 | CHIM | 11 | 21 | 188 | ocr: all subscripts distinguishing the acid, base and water ionisation constants are replaced by commas, so the relation between the named constants is not legible |
+| CHIM-C11-COMP-022 | CHIM | 11 | 22 | 189 | ocr: the cloze term and the following ionic species are reduced to HO and an unreadable fragment, so the products of water autoprotolysis are not legible |
+| CHIM-C11-NCOM-034 | CHIM | 11 | 34 | 173 | ocr: the candidate ions are printed with missing letters, subscripts and charges, including the keyed species, so Brønsted-Lowry behaviour cannot be judged from the options as written |
+| CHIM-C11-NCOM-037 | CHIM | 11 | 37 | 173 | ocr: the keyed compound is reduced to digits and punctuation, so the substance claimed to form an oxygenated acid with water cannot be identified |
+| CHIM-C11-NCOM-063 | CHIM | 11 | 63 | 176 | ocr: the keyed inequality for hydrogen-ion concentration has a malformed symbol and missing negative exponent, so the condition for acidity is not legible as written |
+| CHIM-C11-NCOM-065 | CHIM | 11 | 65 | 176 | ocr: the exponents in two competing hydroxide concentrations are replaced by unreadable symbols, so the most basic solution cannot be compared reliably |
+| CHIM-C11-NCOM-075 | CHIM | 11 | 75 | 177 | ocr: one numerical interval bound is truncated to zeros, making another displayed range overlap the calculated hydrogen-ion concentration at pH 7.4 |
 
