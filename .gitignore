@@ -1,0 +1,4 @@
+work/.venv/
+.op/
+work/final/.*.db
+work/final/review/
