@@ -68,13 +68,13 @@ Book page 291 omitted the printed `Risposta corretta` lines for `CHIM-C11-COMM-0
 
 | ItemID | Unanimous Key | Correct Option Text | Verified Across All 6 Independent Sources |
 |---|:---:|---|---|
-| `CHIM-C11-COMM-017` | **`C`** | `basica` (idrolisi basica di $\text{K}_2\text{CO}_3$) | `currnet_no_images`, `dbe933e6:stage2_answers.py`, `6d93039e`, `9d2e065b`, `0c0900a2`, `full-anki:take3+model2` |
-| `CHIM-C11-COMM-018` | **`D`** | `acida` ($\text{NH}_4\text{Cl}$ da $\text{NH}_3$ debole + $\text{HCl}$ forte) | Unanimous 6/6 |
-| `CHIM-C11-COMM-019` | **`C`** | `Cloruro di ammonio` ($\text{pH} < 7$ in acqua) | Unanimous 6/6 |
-| `CHIM-C11-COMM-020` | **`A`** | `basica` ($\text{CH}_3\text{COONa}$, idrolisi acetato) | Unanimous 6/6 |
-| `CHIM-C11-COMM-021` | **`E`** | `HCl e KCl` (acido forte + suo sale = **non** tampone; OCR `HC)`/`HCi`/`HC!`/`CH₃C00H` already cleaned in live deck) | Unanimous 6/6 |
-| `CHIM-C11-COMM-022` | **`A`** | `basica` ($0{,}1\text{ M }\text{NH}_3 + 0{,}1\text{ M }\text{NH}_4\text{Cl}$, tampone ammoniacale $\text{pH}\approx 9{,}25$) | Unanimous 6/6 |
-| `CHIM-C11-COMM-023` | **`B`** | `Il suo pH rimane pressoché invariato...` (definizione soluzione tampone) | Unanimous 6/6 |
+| `CHIM-C11-COMM-017` | **`C`** | `il pH finale è diverso da quello iniziale` (reazione di neutralizzazione) | `currnet_no_images`, `dbe933e6:stage2_answers.py`, `6d93039e`, `9d2e065b`, `0c0900a2`, `full-anki:take3+model2` |
+| `CHIM-C11-COMM-018` | **`D`** | `si verifica una reazione con produzione di KOH in soluzione acquosa e H₂` ($2\,\text{K} + 2\,\text{H}_2\text{O} \to 2\,\text{KOH} + \text{H}_2$) | Unanimous 6/6 |
+| `CHIM-C11-COMM-019` | **`C`** | `per tutte le soluzioni acquose` ($\text{pH} + \text{pOH} = 14$ a $25\,^\circ\text{C}$) | Unanimous 6/6 |
+| `CHIM-C11-COMM-020` | **`A`** | `NH₄⁺` (può comportarsi solo come acido di Brønsted-Lowry) | Unanimous 6/6 |
+| `CHIM-C11-COMM-021` | **`E`** | `l'equilibrio di ionizzazione di CH₃COOH si sposta verso sinistra e il pH della soluzione è dovuto solo all'HCl` | Unanimous 6/6 |
+| `CHIM-C11-COMM-022` | **`A`** | `3,11` (pH più basso = massima $[\text{H}_3\text{O}^+]$) | Unanimous 6/6 |
+| `CHIM-C11-COMM-023` | **`B`** | `debolmente basica` ($\text{NaHCO}_3$ in acqua, $K_b > K_{a2}$) | Unanimous 6/6 |
 
 Full records + explanations are in `special_sets/page_291_chim_c11_comm_17_23.jsonl`.
 
