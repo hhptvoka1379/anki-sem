@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Scan-backed review queue for the cards that still lack a verified answer/explanation.
 
-  python3 work/final/review.py next [N]   # show the next N queued cards + stack their scan crops
+  python3 work/final/review.py next [N] [TYPE]   # show the next N queued cards + stack their scan crops
   python3 work/final/review.py apply      # read a JSON list of fixes on stdin, validate, append
   python3 work/final/review.py status     # queue progress
 
@@ -137,7 +137,8 @@ def main():
               f"human {sum(1 for f in done.values() if f['verdict'] == 'human')}")
     elif cmd == "next":
         n = int(sys.argv[2]) if len(sys.argv) > 2 else 6
-        todo = [r for r in q if r["id"] not in done][:n]
+        typ = sys.argv[3] if len(sys.argv) > 3 else None      # optional: COMM | NCOM | COMP
+        todo = [r for r in q if r["id"] not in done and (typ is None or r["quiz_type"] == typ)][:n]
         REVIEW.mkdir(exist_ok=True)
         for r in todo:
             show(r)

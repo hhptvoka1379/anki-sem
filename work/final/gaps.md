@@ -6,15 +6,15 @@ Total items: **6948** ({'COMM': 1041, 'NCOM': 3852, 'COMP': 2055})
 |---|---:|---:|---:|---:|
 | COMM | 1041 | 1041 | 1041 | 0 |
 | NCOM | 3852 | 3852 | 3536 | 316 |
-| COMP | 2055 | 2055 | 1949 | 106 |
+| COMP | 2055 | 2055 | 1960 | 95 |
 
-Missing explanations: **422**; of these, **175** have an unverified candidate from another branch.
+Missing explanations: **411**; of these, **172** have an unverified candidate from another branch.
 
-Missing, by flag prefix: `ocr` 336, `missing` 34, `ambiguous` 26, `key` 24, `none` 1, `chem` 1
+Missing, by flag prefix: `ocr` 326, `missing` 34, `ambiguous` 26, `key` 24, `chem` 1
 
-Missing, by type × prefix: NCOM: ocr 240, missing 32, ambiguous 25, key 19; COMP: ocr 96, key 5, missing 2, none 1, chem 1, ambiguous 1
+Missing, by type × prefix: NCOM: ocr 240, missing 32, ambiguous 25, key 19; COMP: ocr 86, key 5, missing 2, chem 1, ambiguous 1
 
-Cloze notes with accepted alternative answers: 0 / 2055
+Cloze notes with accepted alternative answers: 11 / 2055
 
 Keys derived without a printed key (p.291): 7 → CHIM-C11-COMM-017, CHIM-C11-COMM-018, CHIM-C11-COMM-019, CHIM-C11-COMM-020, CHIM-C11-COMM-021, CHIM-C11-COMM-022, CHIM-C11-COMM-023
 
