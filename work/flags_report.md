@@ -1,6 +1,6 @@
-# Flagged rows (193)
+# Flagged rows (194)
 
-## ambiguous (49)
+## ambiguous (50)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -53,6 +53,7 @@
 | BIO-C04-NCOM-204 | BIO | 4 | 204 | 459 | ambiguous: deleting nucleotide 7 yields CUG-AUC-UAA, so an immediate stop/interruption follows Ile; interruption and a changed downstream sequence both describe outcomes of the frameshift |
 | BIO-C05-NCOM-032 | BIO | 5 | 32 | 488 | ambiguous: oxygen and carbon dioxide cross by simple diffusion, which is itself passive transport, so both listed terms are correct at different levels of specificity |
 | BIO-C05-NCOM-035 | BIO | 5 | 35 | 488 | ambiguous: uptake and release occur by simple diffusion, which is itself passive transport, so both listed mechanisms are correct descriptions |
+| BIO-C05-NCOM-092 | BIO | 5 | 92 | 494 | ambiguous: the main nuclear location is omitted, but chloroplasts and mitochondria in the cytoplasm also contain genetic information, so 'none correct' is not unambiguously true |
 
 ## chem (14)
 
