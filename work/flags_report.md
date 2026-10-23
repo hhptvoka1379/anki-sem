@@ -1,6 +1,6 @@
-# Flagged rows (280)
+# Flagged rows (301)
 
-## ambiguous (21)
+## ambiguous (24)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -25,6 +25,9 @@
 | BIO-C05-NCOM-204 | BIO | 5 | 204 | 505 | ambiguous: sia B (Mitofusine Mfn1 e Mfn2 sulla membrana esterna) sia E (Opa1 sulla membrana interna) sono GTPasi essenziali della fusione mitocondriale |
 | BIO-C05-NCOM-215 | BIO | 5 | 215 | 506 | ambiguous: sia D (Perossisoma) sia E (Lisosoma) sono organuli a singola membrana privi sia di DNA proprio sia di ribosomi |
 | BIO-C06-NCOM-051 | BIO | 6 | 51 | 539 | ambiguous: formulazione impropria; le tight junctions non contengono proteine carrier ma bloccano la via paracellulare obbligando gli scambi transepiteliali ad avvenire per via transcellulare tramite trasportatori di membrana (mentre le claudine formano pori ionici paracellulari selettivi) |
+| BIO-C06-NCOM-133 | BIO | 6 | 133 | 546 | ambiguous: oltre alla cascata canonica delle MAP chinasi (C), Ras-GTP lega e attiva direttamente anche la subunità catalitica p110 della via PI3K-AKT (A); inoltre opzione B riporta 'NF-xB' |
+| BIO-C07-NCOM-035 | BIO | 7 | 35 | 570 | ambiguous: chiave D ('i punti di attacco del fuso mitotico') imprecisa e confondibile con i cinetocori/centromeri; i microtubuli del fuso nucleano dal materiale pericentriolare del centrosoma, mentre i centrioli sono cilindri 9×3 di triplette di microtubuli |
+| BIO-C07-NCOM-064 | BIO | 7 | 64 | 574 | ambiguous: la mitosi è una divisione equazionale che conserva la ploidia iniziale sia a partire da cellule aploidi (opzione C, es. lieviti, funghi, gametofiti vegetali) sia da cellule diploidi (opzione E): C ed E sono entrambe scientificamente vere |
 
 ## chem (1)
 
@@ -32,7 +35,7 @@
 |---|---|---|---|---|---|
 | BIO-C05-COMP-102 | BIO | 5 | 102 | 521 | chem: formula chimica del substrato nell'enunciato corrotta dall'OCR in 'H.0' al posto di 'H₂O₂' ('converte l'H.0 in acqua e ossigeno') |
 
-## key (17)
+## key (18)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -53,8 +56,9 @@
 | BIO-C04-NCOM-204 | BIO | 4 | 204 | 459 | key: suspect - eliminando il 7° nucleotide (G) da CUG-AUC-GUA-AUG-CGC si ottiene CUG-AUC-UAA-UGC-GC, in cui il 3° codone diventa il codone di stop UAA che arresta subito la traduzione dopo Leu-Ile: la risposta corretta è C ('L'interruzione della catena amminoacidica'), non E |
 | BIO-C05-COMP-048 | BIO | 5 | 48 | 517 | key: suspect - errore biochimico nel testo: le importine legano e trasportano il carico NLS nel nucleo in assenza di Ran-GTP (il legame nucleare di Ran-GTP provoca invece il distacco del carico dall'importina), mentre sono le esportine a formare complessi cooperativi con carico e Ran-GTP |
 | BIO-C06-COMP-054 | BIO | 6 | 54 | 555 | key: suspect - errore biochimico nel testo: gli ormoni steroidei come testosterone ed estradiolo derivano dal colesterolo, non dal cortisolo |
+| BIO-C07-COMP-028 | BIO | 7 | 28 | 591 | key: suspect - errore biofisico nel testo: la chinesina-14 (motore diretto verso l'estremità minus) sui microtubuli antiparalleli tira e avvicina i poli del fuso tra loro (antagonizzando la chinesina-5), non li spinge lontani l'uno dall'altro |
 
-## missing (16)
+## missing (20)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -74,8 +78,12 @@
 | BIO-C04-NCOM-156 | BIO | 4 | 156 | 452 | missing: manca completamente l'albero genealogico in figura necessario per verificare i genotipi degli individui in F₁, F₂ e F₃ |
 | BIO-C04-NCOM-162 | BIO | 4 | 162 | 453 | missing: manca completamente l'albero genealogico a cui rimandano l'enunciato e tutte le opzioni (F₁, femmina 3 e 5 della F₂, F₃) |
 | BIO-C05-NCOM-030 | BIO | 5 | 30 | 487 | missing: manca completamente la figura delle due cellule vegetali 1 e 2 a cui rimandano l'enunciato e le opzioni, con residui OCR illeggibili ('Ge) I 2') |
+| BIO-C07-NCOM-014 | BIO | 7 | 14 | 568 | missing: manca il grafico temporale della quantità di DNA citato nell'enunciato ('come riporta il grafico'), indispensabile per valutare gli istanti 4 h, 6 h e 14 h |
+| BIO-C07-NCOM-040 | BIO | 7 | 40 | 571 | missing: manca completamente la figura citata nell'enunciato ('Dall'osservazione della figura, si può dedurre che essa rappresenta:') |
+| BIO-C07-NCOM-044 | BIO | 7 | 44 | 571 | missing: manca completamente la figura citata nell'enunciato ('La figura rappresenta una cellula... Dalla sua osservazione si può dedurre che...') |
+| BIO-C07-NCOM-055 | BIO | 7 | 55 | 573 | missing: l'enunciato e tutte le opzioni rinviano a una figura assente ('La figura mostra...', 'vedi figura') |
 
-## ocr (225)
+## ocr (238)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -304,4 +312,17 @@
 | BIO-C06-NCOM-067 | BIO | 6 | 67 | 540 | ocr: opzione corretta E riporta '15nm' per perdita OCR della virgola decimale di '1,5 nm' (diametro reale del poro dei connessoni; 15 nm sarebbe paragonabile a un intero ribosoma) |
 | BIO-C06-COMP-073 | BIO | 6 | 73 | 556 | ocr: sigle dei secondi messaggeri corrotte in 'DAG₃ IP,,' al posto di 'DAG, IP₃,' |
 | BIO-C06-COMP-074 | BIO | 6 | 74 | 556 | ocr: formula dello ione calcio corrotta in 'Ca?*' al posto di 'Ca²⁺' |
+| BIO-C06-NCOM-124 | BIO | 6 | 124 | 546 | ocr: lettere greche gravemente corrotte nelle opzioni ('subunità a, B, y', 'due a e una $è', 'duefeunay') |
+| BIO-C06-NCOM-125 | BIO | 6 | 125 | 546 | ocr: lettere greche delle subunità corrotte nelle opzioni ('Subunità B', risposta corretta B 'Subunità a', 'Subunità y', 'Il dimero By') |
+| BIO-C06-NCOM-126 | BIO | 6 | 126 | 546 | ocr: tutte le opzioni riportano 'subunità a' al posto di 'subunità α' |
+| BIO-C06-NCOM-127 | BIO | 6 | 127 | 546 | ocr: testo della domanda riporta 'subunità By' anziché 'subunità βγ' |
+| BIO-C06-NCOM-146 | BIO | 6 | 146 | 547 | ocr: formula dello ione calcio corrotta in 'Ca?*' nel testo della domanda |
+| BIO-C06-NCOM-148 | BIO | 6 | 148 | 548 | ocr: formule dei secondi messaggeri corrotte nelle opzioni C ('IP,' per 'IP₃') ed E ('Ca?*' per 'Ca²⁺') |
+| BIO-C06-NCOM-185 | BIO | 6 | 185 | 551 | ocr: opzione corretta D corrotta in 'PIP, a PIP,' (substrato e prodotto resi identici per perdita dei pedici in 'PIP₂ a PIP₃'), oltre a 'P13K' e 'DAGa IP₃' |
+| BIO-C06-NCOM-189 | BIO | 6 | 189 | 551 | ocr: opzione corretta C corrotta in 'PIP, in PIP,' (substrato e prodotto resi identici per perdita dei pedici in 'PIP₃ in PIP₂') |
+| BIO-C07-NCOM-009 | BIO | 7 | 9 | 567 | ocr: sigle delle fasi corrotte in tutte le opzioni (risposta corretta D 'G,,5,G,,M' al posto di 'G₁, S, G₂, M') |
+| BIO-C07-NCOM-022 | BIO | 7 | 22 | 569 | ocr: opzione corretta D corrotta in 'presenta l'anafase J e l’anafase Il' al posto di 'anafase I e anafase II' |
+| BIO-C07-NCOM-024 | BIO | 7 | 24 | 569 | ocr: opzione corretta B corrotta in 'fasi G,-S-G,' (pedici numerici persi e resi identici per 'G₁-S-G₂') |
+| BIO-C07-NCOM-043 | BIO | 7 | 43 | 571 | ocr: nell'opzione D 'meiosi II' è stato corrotto in 'meiosi I]', rendendo vera anche l'affermazione D ('La riduzione del numero dei cromosomi avviene durante la meiosi I') oltre a C |
+| BIO-C07-COMP-094 | BIO | 7 | 94 | 595 | ocr: bersaglio del cloze fuso senza spazio in 'eatme' anziché 'eat me' (o 'eat-me') |
 
