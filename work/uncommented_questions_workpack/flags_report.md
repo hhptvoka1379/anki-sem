@@ -1,6 +1,6 @@
-# Flagged rows (871)
+# Flagged rows (943)
 
-## ambiguous (86)
+## ambiguous (93)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -90,8 +90,15 @@
 | FIS-C05-COMP-008 | FIS | 5 | 8 | 784 | ambiguous: unprompted multi-word parenthetical cloze target 'cubica (o volumica)' |
 | FIS-C05-COMP-012 | FIS | 5 | 12 | 784 | ambiguous: cloze prompt 'si indica con ...' does not disambiguate between standard symbols 'k', 'k_B', and unsubscripted 'kB' |
 | FIS-C05-COMP-037 | FIS | 5 | 37 | 785 | ambiguous: 'Δm' is undefined out of context (mass of liquid increases, mass of solid decreases, total mass Δm = 0) |
+| FIS-C05-COMP-054 | FIS | 5 | 54 | 786 | ambiguous: cloze prompt 'proviene da un ... caldo' admits 'serbatoio' (standard Italian term for heat reservoir) equally with 'termostato' |
+| FIS-C05-COMP-059 | FIS | 5 | 59 | 786 | ambiguous: cloze prompt 'si indica con ...' without formula context does not disambiguate between 'Tc', 'T_c' (used in COMP-061), 'T_C', or 'T₂' |
+| FIS-C05-COMP-060 | FIS | 5 | 60 | 786 | ambiguous: cloze prompt 'si indica con ...' without formula context does not disambiguate between 'Tf', 'T_f' (used in COMP-061), 'T_F', or 'T₁' |
+| FIS-C05-NCOM-067 | FIS | 5 | 67 | 775 | ambiguous: both option_b ('non aumenta né diminuisce') and option_e ('resta costante nel tempo') are physically equivalent and equally correct statements of energy conservation in an isolated system |
+| FIS-C06-COMP-001 | FIS | 6 | 1 | 823 | ambiguous: cloze prompt 'attrae oggetti neutri è chiamato ...' does not specify conductors vs insulators, admitting 'polarizzazione' (for neutral dielectrics like paper bits) as well as 'induzione' (or 'induzione elettrostatica') |
+| FIS-C06-NCOM-001 | FIS | 6 | 1 | 796 | ambiguous: omits 'relativa' vs 'assoluta' — relative permittivity ε_r is dimensionless (ruling out option_d), whereas absolute permittivity ε = ε₀·ε_r of a medium in SI (F/m) is dimensional, making option_d also true alongside option_b |
+| FIS-C06-NCOM-011 | FIS | 6 | 11 | 797 | ambiguous: option_e states a merely intermediate position ('in posizione intermedia') as sufficient for zero force, whereas for Q₁ = Q₂ ≠ 0 the net force on Q₃ vanishes ONLY at the exact midpoint (making option_d 'nessuna delle altre risposte è corretta' arguably true) |
 
-## chem (56)
+## chem (59)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -151,8 +158,11 @@
 | FIS-C04-COMP-016 | FIS | 4 | 16 | 759 | chem: in laminar flow adjacent fluid layers slide past each other with different velocities (dv/dy ≠ 0, e.g. Poiseuille parabolic profile); what is absent is transverse mixing/eddies between layers, not relative motion |
 | FIS-C04-NCOM-081 | FIS | 4 | 81 | 757 | chem: false universal claim ('sempre'): in a widening horizontal Venturi diffuser (decelerating flow) or in a constant-section vertical downward pipe, a fluid flows steadily from lower static pressure to higher static pressure |
 | FIS-C05-NCOM-018 | FIS | 5 | 18 | 769 | chem: question asks for heat capacity 'in chilocalorie' whereas heat capacity has units of kcal/°C (energy per unit temperature) |
+| FIS-C05-COMP-044 | FIS | 5 | 44 | 786 | chem: work done BY an expanding gas ('compiuto da un gas che si espande') is +P·ΔV > 0, whereas −P·ΔV is the work done ON the gas |
+| FIS-C06-COMP-034 | FIS | 6 | 34 | 824 | chem: with standard ΔV = V_f − V_i (as in COMP-036), work done by the electric field is W = −q ΔV = q(V_i − V_f), missing the minus sign |
+| FIS-C06-COMP-050 | FIS | 6 | 50 | 825 | chem: as written, U = 4CV² is false (electrostatic energy stored in a capacitor is U = ½CV²) |
 
-## key (30)
+## key (31)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -186,8 +196,9 @@
 | FIS-C02-NCOM-076 | FIS | 2 | 76 | 698 | key: suspect |
 | FIS-C03-NCOM-011 | FIS | 3 | 11 | 711 | key: suspect |
 | FIS-C03-NCOM-048 | FIS | 3 | 48 | 716 | key: suspect |
+| FIS-C06-NCOM-013 | FIS | 6 | 13 | 797 | key: suspect — question asks about 'campo elettrico' in general (not electrostatic) and explicitly includes option_b ('Può esistere in presenza di fenomeni di induzione elettromagnetica'), which is physically true by Faraday-Maxwell's law ∮E·dl = −dΦ(B)/dt, whereas keyed option_a holds only in electrostatics |
 
-## missing (26)
+## missing (27)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -217,8 +228,9 @@
 | FIS-C03-NCOM-036 | FIS | 3 | 36 | 714 | missing: references 'Il sistema mostrato in figura' needed to identify which of masses m₁ and m₂ lies on the inclined plane versus hangs vertically |
 | FIS-C03-NCOM-090 | FIS | 3 | 90 | 721 | missing: references 'così come illustrato in figura' (needed to see the vector sense orientation between force and displacement) |
 | FIS-C03-NCOM-184 | FIS | 3 | 184 | 734 | missing: references 'L'asta in figura' without an attached diagram (needed for senses of p and q and rod masslessness) |
+| FIS-C06-NCOM-039 | FIS | 6 | 39 | 800 | missing: references 'uno dei percorsi indicati in figura' with no figure provided |
 
-## ocr (739)
+## ocr (803)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -961,4 +973,68 @@
 | FIS-C05-NCOM-023 | FIS | 5 | 23 | 769 | ocr: symbol 'Q' corrupted to digit '0' in option_a/answer_text ('0/4' instead of 'Q/4'), option_b ('30/4' instead of '3Q/4'), and option_e ('20/3' instead of '2Q/3') |
 | FIS-C05-NCOM-024 | FIS | 5 | 24 | 769 | ocr: stray scan garbage 'iss =' appended to option_b/answer_text |
 | FIS-C05-COMP-037 | FIS | 5 | 37 | 785 | ocr: Greek symbol 'Δ' corrupted to 'A' ('Am' instead of 'Δm') in question and back_stem |
+| FIS-C05-COMP-043 | FIS | 5 | 43 | 786 | ocr: 'ΔE_int' corrupted to 'AE,,,' ('Δ' -> 'A' and subscript 'int' turned into three commas) in question and back_stem |
+| FIS-C05-COMP-044 | FIS | 5 | 44 | 786 | ocr: Greek symbol 'Δ' in 'ΔV' corrupted to digit '4' ('-Px 4 V') in question and back_stem |
+| FIS-C05-NCOM-054 | FIS | 5 | 54 | 773 | ocr: compound unit multiplication dot corrupted to guillemet ('0,21 kcal/kg « °C') in question |
+| FIS-C05-COMP-056 | FIS | 5 | 56 | 786 | ocr: subscript 'f' in 'Q_f' corrupted to semicolon ('Q; / Qc') in question and back_stem |
+| FIS-C05-NCOM-061 | FIS | 5 | 61 | 774 | ocr: Greek symbol 'λ' corrupted to 'A' and compound unit multiplication dots corrupted to colon and hyphen ('0,20 cal/(m:s- °C)') in question |
+| FIS-C05-NCOM-062 | FIS | 5 | 62 | 774 | ocr: subscripts '1' and '2' in 'V₁' and 'V₂ = 2 V₁' obliterated into commas ('V,= 2 V,,') in question |
+| FIS-C05-COMP-069 | FIS | 5 | 69 | 787 | ocr: 'k_B ln W' corrupted to 'ky In W' in back_stem |
+| FIS-C05-NCOM-069 | FIS | 5 | 69 | 775 | ocr: multiplication dots corrupted to minus signs ('V-T = costante' in option_c and 'V=R-T' in option_e) |
+| FIS-C05-COMP-071 | FIS | 5 | 71 | 787 | ocr: subscript 'c' in 'Q_c' corrupted to comma ('tra Q, e Qf') in question and back_stem |
+| FIS-C05-NCOM-075 | FIS | 5 | 75 | 776 | ocr: stray scan garbage 'PAR cs' appended to option_e |
+| FIS-C05-NCOM-082 | FIS | 5 | 82 | 777 | ocr: option_c truncated/corrupted to undefined 'P_f = P' (option_a already has 'P_f = P₀') |
+| FIS-C05-NCOM-086 | FIS | 5 | 86 | 777 | ocr: chemical formula 'O₂' corrupted to digit '0₂' in question and unit 'mm Hg' truncated to '66mm' in option_e |
+| FIS-C05-NCOM-089 | FIS | 5 | 89 | 778 | ocr: volume unit 'dm³' corrupted to area unit 'dm²' in option_b/answer_text ('4 dm²') and 'm³' corrupted to 'm²' in option_e ('4 m²') |
+| FIS-C05-NCOM-099 | FIS | 5 | 99 | 779 | ocr: volume unit 'cm³' corrupted to length unit 'cm' ('245 cm') in option_b |
+| FIS-C05-NCOM-103 | FIS | 5 | 103 | 779 | ocr: 'Sì, sempre' corrupted to subscript token 'Si₄ sempre' in option_b (and 'e il lavoro' corrupted to 'eillavore' in option_c) |
+| FIS-C05-NCOM-106 | FIS | 5 | 106 | 780 | ocr: '200 K,' corrupted to subscript token '200 K₄' in question |
+| FIS-C05-NCOM-114 | FIS | 5 | 114 | 781 | ocr: Greek symbol 'Δ' corrupted to Latin 'A' across all options ('AU', 'AT', 'AG', 'AS' in option_d/answer_text, 'AH') |
+| FIS-C05-NCOM-126 | FIS | 5 | 126 | 783 | ocr: unit 'J' in '50 J' corrupted to slash ('50/') in option_c |
+| FIS-C06-NCOM-005 | FIS | 6 | 5 | 796 | ocr: exponents corrupted across options ('r-2' instead of 'r⁻²' in option_b/answer_text, 'r°' in option_a, 'rt' in option_c) |
+| FIS-C06-NCOM-014 | FIS | 6 | 14 | 797 | ocr: stray scan garbage 'os PZ' appended to question |
+| FIS-C06-COMP-016 | FIS | 6 | 16 | 823 | ocr: "verso l'esterno" corrupted to "verso lr esterno" in back_stem |
+| FIS-C06-NCOM-016 | FIS | 6 | 16 | 798 | ocr: compound unit multiplication dot corrupted to hyphen ('volt- m') in option_e |
+| FIS-C06-NCOM-019 | FIS | 6 | 19 | 798 | ocr: '0 mC' corrupted to 'OmC' in option_a and stray period in '10.mC' in option_e |
+| FIS-C06-NCOM-021 | FIS | 6 | 21 | 798 | ocr: compound unit multiplication dots corrupted to hyphens ('N-m' in option_a and 'N-sec' in option_b) |
+| FIS-C06-NCOM-022 | FIS | 6 | 22 | 798 | ocr: exponents '2' in 'q²E' and 'qE²' corrupted to apostrophe ('F=q’E' in option_c) and question mark ('F=qE?' in option_d) |
+| FIS-C06-COMP-025 | FIS | 6 | 25 | 824 | ocr: '4π' corrupted to '41' ('1 / (41 ε₀ (epsilon) )') in back_stem |
+| FIS-C06-NCOM-026 | FIS | 6 | 26 | 799 | ocr: multiplication dots corrupted to comparator '>' ('1joule > 1 coloumb' in option_d) and hyphens ('coloumb - 1 farad' in options A and C, with dropped '1' in option_a) |
+| FIS-C06-NCOM-028 | FIS | 6 | 28 | 799 | ocr: multiplication dots corrupted to minus signs across all five options, including option_d/answer_text ('1 joule = 1 volt - 1 coulomb') |
+| FIS-C06-NCOM-031 | FIS | 6 | 31 | 799 | ocr: unit 'J' corrupted to ')' ('+10)') in option_b and stray bracket in '-4]J' in option_a |
+| FIS-C06-NCOM-032 | FIS | 6 | 32 | 800 | ocr: '1 joule' corrupted to 'ijoule' in option_a (answer_text) |
+| FIS-C06-NCOM-033 | FIS | 6 | 33 | 800 | ocr: symbol 'V' corrupted to yen sign '¥' in option_a/answer_text ('q¥') and option_d ('q/V¥') |
+| FIS-C06-COMP-034 | FIS | 6 | 34 | 824 | ocr: 'da q × ΔV' corrupted to 'daqx ΔV' in back_stem |
+| FIS-C06-NCOM-034 | FIS | 6 | 34 | 800 | ocr: compound unit multiplication dot corrupted to hyphen ('volt-m') in option_c |
+| FIS-C06-NCOM-035 | FIS | 6 | 35 | 800 | ocr: option_a corrupted to 'parial' ('pari a 1' fused with digit '1' misread as 'l') |
+| FIS-C06-NCOM-036 | FIS | 6 | 36 | 800 | ocr: unit 'J' corrupted to ')' in option_e/answer_text ('+32)') and stray '=' in option_a |
+| FIS-C06-NCOM-037 | FIS | 6 | 37 | 800 | ocr: '50 kW' corrupted to 'SOkW' in option_b and '100 J' corrupted to '100)' in option_d |
+| FIS-C06-NCOM-039 | FIS | 6 | 39 | 800 | ocr: stray diagram text '77 / M' at end of question and 'M è' fused to 'Mé' in option_a |
+| FIS-C06-COMP-041 | FIS | 6 | 41 | 824 | ocr: subscripts '1' and '2' in 'q₁' and 'q₂' corrupted to commas ('q, e q,' and 'kq, q,') and 'distanti r è' fused into 'distantirè' |
+| FIS-C06-NCOM-041 | FIS | 6 | 41 | 801 | ocr: exponent '9' in '9 × 10⁹' corrupted to degree sign ('9 x 10°') and 'C²' corrupted to 'C?' in question |
+| FIS-C06-COMP-043 | FIS | 6 | 43 | 825 | ocr: trailing period corrupted to em-dash after formula symbol ('Q diviso per V —') in back_stem |
+| FIS-C06-NCOM-043 | FIS | 6 | 43 | 801 | ocr: stray scan artifact '1+' at end of question and fused words ('seilcampoè', 'sei') in options A and B |
+| FIS-C06-NCOM-044 | FIS | 6 | 44 | 801 | ocr: surface symbol 'S' corrupted to '$' ('normale ad $') in option_e |
+| FIS-C06-NCOM-045 | FIS | 6 | 45 | 801 | ocr: exponent corrupted in 'varia come e”' in option_a and variable 'r' fused into 'dar' in option_b (answer_text) |
+| FIS-C06-COMP-050 | FIS | 6 | 50 | 825 | ocr: fraction '½' in 'U = ½ C V²' corrupted to '4' ('U = 4 C V²') in question and back_stem |
+| FIS-C06-NCOM-050 | FIS | 6 | 50 | 802 | ocr: stray scan garbage '_ =' in option_c ('conduttore _ =') |
+| FIS-C06-NCOM-057 | FIS | 6 | 57 | 803 | ocr: option_a truncated/corrupted to 'al' ('a 1' fused with digit '1' misread as 'l'), plus fused 'azero'/'ainfinito' |
+| FIS-C06-NCOM-060 | FIS | 6 | 60 | 803 | ocr: 'ε_r = 10,' corrupted to 'Er = 10₄' (comma misread as subscript '4' on '10') in question |
+| FIS-C06-NCOM-061 | FIS | 6 | 61 | 803 | ocr: symbol 'ε_r = 2' corrupted to 'e, = 2' in question |
+| FIS-C06-NCOM-063 | FIS | 6 | 63 | 803 | ocr: word 'facce' corrupted by injected scan garbage 'os PZ' ('facos PZ ce') in question |
+| FIS-C06-COMP-065 | FIS | 6 | 65 | 826 | ocr: subscript 'd' in 'nqv_d' and 'v_d' corrupted to commas ('nqv,,' and 'v,') in back_stem |
+| FIS-C06-NCOM-065 | FIS | 6 | 65 | 804 | ocr: missing unit 'm' in option_b ('15 μ') |
+| FIS-C06-COMP-071 | FIS | 6 | 71 | 826 | ocr: Greek symbol 'ρ' in 'ρl / A' corrupted to 'p' ('R= pl / A') in back_stem |
+| FIS-C06-NCOM-073 | FIS | 6 | 73 | 805 | ocr: comma in '6 C, 4 C e 12 C' corrupted to subscript '4' ('6 C₄') in question |
+| FIS-C06-NCOM-075 | FIS | 6 | 75 | 805 | ocr: multiplication dots corrupted to minus signs in option_c ('1 coulomb - 1 secondo') and option_e ('1 coulomb - 1 farad') |
+| FIS-C06-COMP-076 | FIS | 6 | 76 | 826 | ocr: current symbol 'I' in 'P = I × V' corrupted to digit '1' ('P=1x V') in question and back_stem |
+| FIS-C06-NCOM-076 | FIS | 6 | 76 | 805 | ocr: multiplication dots corrupted to hyphens in option_e/answer_text ('ampere - s') and option_b ('coulomb - ampere') |
+| FIS-C06-NCOM-077 | FIS | 6 | 77 | 805 | ocr: scientific notation exponent '1,08 × 10⁵' flattened to '1.08 x 105' in question |
+| FIS-C06-NCOM-079 | FIS | 6 | 79 | 805 | ocr: exponents '10¹⁸' and '10¹⁹' corrupted to '1018' and '10!°' in option_a/answer_text, '10°' in option_c, and stray 'os =' in option_e |
+| FIS-C06-NCOM-082 | FIS | 6 | 82 | 806 | ocr: symbol 'I' corrupted to '1' in option_a/answer_text ('1=Q/t') and '/' in options B and D, plus 'A/t' corrupted to 'Aft' in option_c |
+| FIS-C06-COMP-084 | FIS | 6 | 84 | 826 | ocr: Greek symbol 'Δ' in 'ΔV' corrupted to Latin 'A' ('A V') in question and back_stem |
+| FIS-C06-NCOM-084 | FIS | 6 | 84 | 806 | ocr: injected scan garbage 'EA i' in question |
+| FIS-C06-NCOM-087 | FIS | 6 | 87 | 806 | ocr: corrupted exponent in option_c ('V²⁰') |
+| FIS-C06-COMP-090 | FIS | 6 | 90 | 827 | ocr: compound unit multiplication dots corrupted to hyphens ('1 N-s/C- metro') in question and back_stem |
+| FIS-C06-NCOM-102 | FIS | 6 | 102 | 808 | ocr: comma in 'resistenza R,' corrupted to subscript '4' ('resistenza R₄') in option_e |
 
