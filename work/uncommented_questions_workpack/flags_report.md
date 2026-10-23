@@ -1,6 +1,6 @@
-# Flagged rows (614)
+# Flagged rows (659)
 
-## ambiguous (55)
+## ambiguous (63)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -59,8 +59,16 @@
 | BIO-C05-NCOM-204 | BIO | 5 | 204 | 505 | ambiguous: both Mitofusins Mfn1/Mfn2 (option_b, outer mitochondrial membrane fusion) and Opa1 (option_e, inner mitochondrial membrane fusion) are dynamin-related GTPases that regulate mitochondrial fusion |
 | BIO-C05-NCOM-209 | BIO | 5 | 209 | 505 | ambiguous: option_a is clearly true, but option_e ('È derivato interamente dal genoma batterico ancestrale') is also evolutionarily true for animal mtDNA (which descends wholly from the ancestral alpha-proteobacterial genome, though retaining only a small fraction of its genes) |
 | BIO-C05-NCOM-215 | BIO | 5 | 215 | 506 | ambiguous: both peroxisomes (option_d) and lysosomes (option_e) lack their own DNA and ribosomes, making both options scientifically correct |
+| BIO-C06-COMP-090 | BIO | 6 | 90 | 557 | ambiguous: cloze stem fits 'proto-oncogene' and 'oncosoppressore' as well as 'oncogene' |
+| BIO-C06-COMP-093 | BIO | 6 | 93 | 557 | ambiguous: cloze stem provides no clue distinguishing EGF from other growth factors (FGF, PDGF, NGF, IGF-1) whose RTKs equally activate Ras and the MAPK cascade |
+| BIO-C06-NCOM-133 | BIO | 6 | 133 | 546 | ambiguous: active Ras-GTP directly binds and activates both Raf in the MAP kinase pathway (option_c) and the p110 catalytic subunit of PI3K in the PI3K-AKT pathway (option_a) |
+| BIO-C06-NCOM-184 | BIO | 6 | 184 | 551 | ambiguous: 'arresto apoptotico' (option_d, inhibition/blockade of apoptosis) is also a downstream oncogenic consequence of constitutive EGFR -> PI3K-Akt signaling alongside 'crescita tumorale' (option_c) |
+| BIO-C06-NCOM-191 | BIO | 6 | 191 | 551 | ambiguous: hyperactivation of PI3K-AKT directly causes inhibition/blockade of apoptosis ('arresto apoptotico', option_c) as well as 'crescita incontrollata' (option_a) |
+| BIO-C07-COMP-011 | BIO | 7 | 11 | 590 | ambiguous: cloze stem omits any reference to Cdk1 or mitosis, so dual-specificity kinases MEK (MAPKK) and Myt1 fit equally or better |
+| BIO-C07-NCOM-035 | BIO | 7 | 35 | 570 | ambiguous: option_d ('i punti di attacco del fuso mitotico') conflates centrioles with centromeres/kinetochores or centrosomal MTOCs while option_e notes their microtubule nature |
+| BIO-C07-NCOM-064 | BIO | 7 | 64 | 574 | ambiguous: mitosis is equational and preserves parental ploidy in both diploid cells (option_e: 2n -> two 2n cells) and haploid eukaryotes such as yeasts, fungi, and plant gametophytes (option_c: n -> two n cells), with no organism specified in the stem |
 
-## chem (36)
+## chem (40)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -100,8 +108,12 @@
 | BIO-C06-NCOM-051 | BIO | 6 | 51 | 539 | chem: tight junctions are paracellular claudin/occludin seals rather than membrane carrier proteins, and transepithelial exchange also involves lipid diffusion, claudin ion pores, and transcytosis |
 | BIO-C06-COMP-054 | BIO | 6 | 54 | 555 | chem: steroid hormones such as testosterone and estradiol derive from cholesterol (colesterolo via pregnenolone), not from cortisol (cortisolo) |
 | BIO-C06-NCOM-067 | BIO | 6 | 67 | 540 | chem: gap-junction channel pore diameter is ~1.5 nm (excluding macromolecules >1 kDa), not 15 nm |
+| BIO-C06-COMP-090 | BIO | 6 | 90 | 557 | chem: the normal cellular gene whose activating mutation causes uncontrolled proliferation is a proto-oncogene, whereas an oncogene is already the mutated gain-of-function allele |
+| BIO-C07-COMP-011 | BIO | 7 | 11 | 590 | chem: in vertebrates Myt1 phosphorylates both Thr14 and Tyr15 of Cdk1, whereas nuclear Wee1 selectively phosphorylates Tyr15 |
+| BIO-C07-COMP-028 | BIO | 7 | 28 | 591 | chem: minus-end-directed kinesin-14 (HSET/Ncd) crosslinks antiparallel microtubules to pull spindle poles together and focus pole minus-ends, antagonizing kinesin-5 rather than pushing poles apart |
+| BIO-C07-NCOM-035 | BIO | 7 | 35 | 570 | chem: centrioles are cylindrical 9x3 microtubule-triplet structures inside animal centrosomes, whereas spindle fibers attach to chromosomal centromeres/kinetochores |
 
-## key (25)
+## key (26)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -130,8 +142,9 @@
 | BIO-C05-NCOM-136 | BIO | 5 | 136 | 498 | key: suspect |
 | BIO-C05-NCOM-253 | BIO | 5 | 253 | 509 | key: suspect |
 | BIO-C06-NCOM-067 | BIO | 6 | 67 | 540 | key: suspect |
+| BIO-C07-NCOM-035 | BIO | 7 | 35 | 570 | key: suspect |
 
-## missing (16)
+## missing (20)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -151,8 +164,12 @@
 | BIO-C04-NCOM-156 | BIO | 4 | 156 | 452 | missing: pedigree figure ('albero genealogico in figura') referenced in question and options is absent from card |
 | BIO-C04-NCOM-162 | BIO | 4 | 162 | 453 | missing: pedigree figure ('seguente albero genealogico') referenced in question and options is absent from card |
 | BIO-C05-NCOM-030 | BIO | 5 | 30 | 487 | missing: schematic figure of plant cells 1 and 2 referenced in question is absent from card |
+| BIO-C07-NCOM-014 | BIO | 7 | 14 | 568 | missing: question refers to a DNA-vs-time graph ('come riporta il grafico') not included in the card |
+| BIO-C07-NCOM-040 | BIO | 7 | 40 | 571 | missing: question refers to a figure ("Dall'osservazione della figura") not included in the card |
+| BIO-C07-NCOM-044 | BIO | 7 | 44 | 571 | missing: question refers to a figure ('La figura rappresenta... Dalla sua osservazione') not included in the card |
+| BIO-C07-NCOM-055 | BIO | 7 | 55 | 573 | missing: question and options refer to a figure ('La figura mostra...', 'vedi figura') not included in the card |
 
-## ocr (519)
+## ocr (553)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -675,4 +692,38 @@
 | BIO-C06-COMP-066 | BIO | 6 | 66 | 556 | ocr: Greek subunit symbols 'βγ' corrupted to 'By' in question, back_stem, and answer_text |
 | BIO-C06-COMP-067 | BIO | 6 | 67 | 556 | ocr: Greek subunit symbol 'α' corrupted to 'a' ('subunità a') in question and back_stem |
 | BIO-C06-NCOM-067 | BIO | 6 | 67 | 540 | ocr: decimal separator dropped in '1,5 nm' -> '15nm' in option_e and answer_text |
+| BIO-C06-COMP-073 | BIO | 6 | 73 | 556 | ocr: 'DAG, IP₃,' corrupted to 'DAG₃ IP,,' in question and back_stem |
+| BIO-C06-COMP-074 | BIO | 6 | 74 | 556 | ocr: calcium ion symbol 'Ca²⁺' corrupted to 'Ca?*' in question and back_stem |
+| BIO-C06-COMP-084 | BIO | 6 | 84 | 557 | ocr: article and molecular acronym 'I RTK' fused into 'IRTK' in question and back_stem |
+| BIO-C06-NCOM-111 | BIO | 6 | 111 | 545 | ocr: 'laminine' garbled into 'la minime' in option_e |
+| BIO-C06-NCOM-122 | BIO | 6 | 122 | 546 | ocr: integrin symbol 'α₅β₁' corrupted to 'a5ft1' in option_c |
+| BIO-C06-NCOM-124 | BIO | 6 | 124 | 546 | ocr: Greek subunit symbols α, β, and γ severely garbled across options and answer_text ('subunità a, B, y', 'due a e una $è', 'duefeunay') |
+| BIO-C06-NCOM-125 | BIO | 6 | 125 | 546 | ocr: Greek subunit symbols α, β, and γ corrupted to 'a', 'B', 'y', and 'By' across options and answer_text |
+| BIO-C06-NCOM-126 | BIO | 6 | 126 | 546 | ocr: Greek subunit symbol 'α' corrupted to 'a' ('subunità a') across options and answer_text |
+| BIO-C06-NCOM-127 | BIO | 6 | 127 | 546 | ocr: Greek subunit symbols 'βγ' corrupted to 'By' in question |
+| BIO-C06-NCOM-133 | BIO | 6 | 133 | 546 | ocr: Greek letter 'κ' in 'NF-κB' corrupted to 'x' ('NF-xB') in option_b |
+| BIO-C06-NCOM-139 | BIO | 6 | 139 | 547 | ocr: calcium ion charge 'Ca²⁺' corrupted to 'Ca²⁴' in option_c |
+| BIO-C06-NCOM-146 | BIO | 6 | 146 | 547 | ocr: calcium ion symbol 'Ca²⁺' corrupted to 'Ca?*' in question |
+| BIO-C06-NCOM-148 | BIO | 6 | 148 | 548 | ocr: formulas 'IP₃' and 'Ca²⁺' corrupted to 'IP,' in option_c and 'Ca?*' in option_e |
+| BIO-C06-NCOM-169 | BIO | 6 | 169 | 549 | ocr: molecular acronym 'cAMP' corrupted to 'CAMP' in option_b |
+| BIO-C06-NCOM-178 | BIO | 6 | 178 | 550 | ocr: Greek symbols 'αβ' in 'integrina αβ' corrupted to 'af' ('integrina af') in option_e |
+| BIO-C06-NCOM-179 | BIO | 6 | 179 | 550 | ocr: 'la' corrupted to '!a' ('!a via Jak-Stat') in option_a |
+| BIO-C06-NCOM-185 | BIO | 6 | 185 | 551 | ocr: acronym 'PI3K' corrupted to 'P13K' in question and subscripts in 'PIP₂ a PIP₃' corrupted to 'PIP, a PIP,' in option_d and answer_text |
+| BIO-C06-NCOM-189 | BIO | 6 | 189 | 551 | ocr: subscripts in 'PIP₃ in PIP₂' corrupted to 'PIP, in PIP,' in option_c and answer_text |
+| BIO-C07-COMP-001 | BIO | 7 | 1 | 590 | ocr: initial article 'Il' corrupted to digit '6' ('6 ciclo cellulare') in question and back_stem |
+| BIO-C07-NCOM-003 | BIO | 7 | 3 | 567 | ocr: subscript in 'G₁' corrupted to comma ('la fase G,') in option_c |
+| BIO-C07-NCOM-009 | BIO | 7 | 9 | 567 | ocr: subscripts and phase symbol 'S' severely corrupted across question, options, and answer_text ('G₁, S, G₂, M' -> 'G,,5,G,,M') |
+| BIO-C07-NCOM-015 | BIO | 7 | 15 | 568 | ocr: subscript in 'fase G₁/G₂' corrupted to comma ('fase G,') in option_d |
+| BIO-C07-NCOM-016 | BIO | 7 | 16 | 568 | ocr: Roman numeral II corrupted to 'Il' ('metafase Il') in option_e |
+| BIO-C07-COMP-020 | BIO | 7 | 20 | 591 | ocr: kinase acronym 'Plk' (Polo-like kinase) corrupted to 'PIk' in question and back_stem |
+| BIO-C07-NCOM-022 | BIO | 7 | 22 | 569 | ocr: Roman numerals I and II corrupted to 'anafase J' and 'anafase Il' in option_d and answer_text |
+| BIO-C07-NCOM-023 | BIO | 7 | 23 | 569 | ocr: stray text bleed 'Ila' appended to option_b |
+| BIO-C07-NCOM-024 | BIO | 7 | 24 | 569 | ocr: subscripts in 'G₁-S-G₂' and 'S-G₂-M' corrupted to commas ('G,-S-G,', 'S-G,-M') in option_b, option_e, and answer_text |
+| BIO-C07-NCOM-025 | BIO | 7 | 25 | 569 | ocr: Roman numeral II corrupted to 'Il' ('metafase Il') in question and subscript in 'fase G₁/G₂' corrupted to comma ('fase G,') in option_c |
+| BIO-C07-NCOM-032 | BIO | 7 | 32 | 570 | ocr: statement index 'Solo 1 e 2' corrupted to 'Solole2' in option_d |
+| BIO-C07-COMP-042 | BIO | 7 | 42 | 592 | ocr: article and molecular acronym "L'APC/C" fused into 'LAPC/C' in question and back_stem |
+| BIO-C07-NCOM-043 | BIO | 7 | 43 | 571 | ocr: Roman numeral II corrupted to 'I]' ('meiosi I]') in option_d and 'Il' ('anafase Il') in option_e |
+| BIO-C07-NCOM-044 | BIO | 7 | 44 | 571 | ocr: ordinal '1ª' corrupted to '1?' in question |
+| BIO-C07-NCOM-046 | BIO | 7 | 46 | 572 | ocr: Roman numeral II corrupted to 'Il' in option_a ('profase Il') and option_c ('metafase Il') |
+| BIO-C07-NCOM-057 | BIO | 7 | 57 | 573 | ocr: option_e corrupted to 'ilinfociti a' (missing space and lymphocyte subtype/stray character 'a') |
 
