@@ -1,0 +1,67 @@
+{
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash(pdftoppm *)",
+      "Bash(pdftotext *)",
+      "Bash(pdfimages *)",
+      "Bash(pdfinfo *)",
+      "Bash(tesseract *)",
+      "Bash(python3 -m venv .venv)",
+      "Bash(.venv/bin/python *)",
+      "Bash(.venv/bin/pip *)",
+      "Bash(node *)",
+      "Bash(npm install *)",
+      "Bash(npm init *)",
+      "Bash(sqlite3 *)",
+      "Bash(unzip *)",
+      "Bash(ls *)",
+      "Bash(mkdir *)",
+      "Bash(wc *)",
+      "Bash(file *)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git branch --show-current)",
+      "Bash(git checkout -b opus-rebuild/semestre-filtro*)",
+      "Bash(git switch opus-rebuild/semestre-filtro)",
+      "Bash(git pull --rebase origin opus-rebuild/semestre-filtro)",
+      "Bash(git push -u origin opus-rebuild/semestre-filtro)",
+      "Bash(git push origin opus-rebuild/semestre-filtro)",
+      "Bash(gh auth status)",
+      "WebSearch",
+      "WebFetch"
+    ],
+    "deny": [
+      "Bash(open *Anki*)",
+      "Bash(*Anki.app*)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Bash(git merge *)",
+      "Bash(git rebase -i*)",
+      "Bash(git reset --hard*)",
+      "Bash(gh pr merge*)",
+      "Bash(gh repo delete*)",
+      "Read(~/Library/Application Support/Anki2/**)",
+      "Edit(~/Library/Application Support/Anki2/**)",
+      "Edit(book.pdf)"
+    ]
+  },
+  "hooks": {
+    "PermissionRequest": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/mom.sh",
+            "timeout": 90,
+            "statusMessage": "Asking mom (Opus judge)…"
+          }
+        ]
+      }
+    ]
+  }
+}
