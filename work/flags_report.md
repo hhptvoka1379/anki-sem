@@ -1,6 +1,6 @@
-# Flagged rows (213)
+# Flagged rows (228)
 
-## ambiguous (12)
+## ambiguous (13)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -16,8 +16,9 @@
 | CHIM-C12-NCOM-078 | CHIM | 12 | 78 | 202 | ambiguous: sia D ('No, mai') sia E ('Gli atomi di idrogeno quaternari non esistono', poiché un carbonio quaternario lega 4 atomi di C e 0 di H) sono entrambe vere; inoltre A contiene 'Si₄' |
 | CHIM-C12-NCOM-085 | CHIM | 12 | 85 | 202 | ambiguous: nel metano CH₄ (simmetria tetraedrica Td) i quattro atomi di idrogeno sono sia 'metilici' (A) sia perfettamente 'equivalenti' (E) |
 | BIO-C02-NCOM-107 | BIO | 2 | 107 | 370 | ambiguous: oltre alla metilazione istonica (E: es. H3K4me3 attivante contro H3K9me3/H3K27me3 repressiva), anche l'ubiquitinazione istonica (D: H2BK120ub1 attivante contro H2AK119ub1 repressiva in PRC1) attiva o reprime la trascrizione a seconda del residuo |
+| BIO-C03-NCOM-216 | BIO | 3 | 216 | 407 | ambiguous: le opzioni A ('Degenerazione') ed E ('Degenerazione') sono identiche carattere per carattere |
 
-## key (10)
+## key (12)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -31,8 +32,10 @@
 | BIO-C01-NCOM-015 | BIO | 1 | 15 | 318 | key: suspect - la massa totale degli esseri viventi è costituita per il 65–80% da acqua (composto inorganico, opzione A), mentre i composti organici (chiave E) prevalgono solo considerando il peso secco non specificato nell'enunciato |
 | BIO-C01-NCOM-174 | BIO | 1 | 174 | 335 | key: suspect - l'eterotrofia riguarda la fonte di carbonio e non quella di azoto: funghi e batteri eterotrofi assimilano e/o respirano regolarmente i nitrati (NO₃⁻), rendendo difendibile E ('Nessuna delle risposte è corretta') rispetto alla chiave D valida solo per gli animali |
 | BIO-C01-NCOM-216 | BIO | 1 | 216 | 340 | key: suspect - unire 9 unità monomeriche distinte (3 basi + 3 deossiribosi + 3 fosfati) in un'unica catena trinucleotidica richiede 3 condensazioni N-glicosidiche + 3 condensazioni 5'-fosfoesteree + 2 condensazioni 3'-fosfodiesteriche = 8 reazioni di condensazione (opzione A), mentre la chiave D = 6 omette i 2 legami fosfodiesterici tra nucleotidi |
+| BIO-C03-NCOM-076 | BIO | 3 | 76 | 391 | key: suspect - il codice genetico non è la sequenza di basi del DNA di un organismo (definizione di genoma/informazione genetica in D), bensì il sistema universale di regole di corrispondenza tra le 64 triplette e i 20 amminoacidi; con E ('nessuna delle altre risposte è corretta') presente, la chiave D è concettualmente errata |
+| BIO-C03-COMP-123 | BIO | 3 | 123 | 417 | key: suspect - i fattori di elongazione (EF-Tu/eEF1A, EF-G/eEF2) mediano l'ingresso dell'amminoacil-tRNA nel sito A e la traslocazione, ma non catalizzano il legame peptidico, che è catalizzato dall'rRNA peptidil-transferasico della subunità maggiore |
 
-## missing (8)
+## missing (9)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -44,8 +47,9 @@
 | BIO-C01-NCOM-056 | BIO | 1 | 56 | 323 | missing: l'enunciato chiede di identificare la struttura 'A' in una figura del microscopio ottico non allegata alla scheda |
 | BIO-C01-NCOM-091 | BIO | 1 | 91 | 326 | missing: l'enunciato chiede di identificare il tipo cellulare rappresentato in una figura non allegata alla scheda |
 | BIO-C01-NCOM-263 | BIO | 1 | 263 | 346 | missing: l'enunciato rimanda allo studio di un grafico dell'albero evolutivo non allegato alla scheda |
+| BIO-C03-NCOM-064 | BIO | 3 | 64 | 390 | missing: l'enunciato rimanda esplicitamente a una figura assente ('In figura è rappresentato uno schema...') con residui OCR illeggibili delle etichette ('a Pi EI io') |
 
-## ocr (183)
+## ocr (194)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -232,4 +236,15 @@
 | BIO-C03-COMP-042 | BIO | 3 | 42 | 412 | ocr: lettera greca 'σ' (fattore sigma) corrotta nell'enunciato in 'fattore o' ('necessita di un fattore o per il riconoscimento del promotore') |
 | BIO-C03-COMP-045 | BIO | 3 | 45 | 412 | ocr: nome dell'enzima codificato da lacZ corrotto nell'enunciato in 'f-galattosidasi' al posto di 'β-galattosidasi' |
 | BIO-C03-COMP-046 | BIO | 3 | 46 | 412 | ocr: bersaglio del cloze corrotto nella lettera greca in 'B-galattosidasi' al posto di 'β-galattosidasi' |
+| BIO-C03-COMP-050 | BIO | 3 | 50 | 412 | ocr: intrusione da colonna/riga adiacente della parola 'inattivo' ('L'allolattosio inattivo'), che rende contraddittorio l'enunciato (l'allolattosio è l'induttore attivo che rende inattivo il repressore) |
+| BIO-C03-COMP-074 | BIO | 3 | 74 | 414 | ocr: coefficienti di sedimentazione degli rRNA corrotti nell'enunciato ('28S₄ 18S e 5,85' al posto di '28S, 18S e 5,8S') |
+| BIO-C03-COMP-099 | BIO | 3 | 99 | 415 | ocr: virgola dopo 'apolipoproteina B,' corrotta nell'enunciato in pedice inesistente 'apolipoproteina B₄' |
+| BIO-C03-COMP-106 | BIO | 3 | 106 | 416 | ocr: bersaglio e testo corrotti dall'OCR ('RNAI' al posto di 'RNAi' e pedice inesistente 'piccoli RNA₄' al posto di 'piccoli RNA,') |
+| BIO-C03-COMP-115 | BIO | 3 | 115 | 416 | ocr: coefficiente '5,8S' corrotto in '5,85', oltre a imprecisione biologica (solo 28S, 18S e 5,8S derivano dal precursore 45S nucleolare, mentre il 5S è trascritto separatamente fuori dal nucleolo dalla RNA pol III) |
+| BIO-C03-NCOM-129 | BIO | 3 | 129 | 398 | ocr: notazione delle estremità 5' e 3' gravemente corrotta nelle opzioni e nella risposta corretta ('5° 3', '3° 9S’', 'Solo S’ > S’' al posto di '5' → 3'', '3' → 5'', 'Solo 5' → 5'') |
+| BIO-C03-NCOM-138 | BIO | 3 | 138 | 399 | ocr: lettere greche delle DNA polimerasi eucariotiche corrotte nelle opzioni e nella risposta corretta ('6', 'a', 'B', 'y' al posto di 'δ', 'α', 'β', 'γ') |
+| BIO-C03-NCOM-141 | BIO | 3 | 141 | 400 | ocr: lettere greche delle DNA polimerasi eucariotiche corrotte nelle opzioni e nella risposta corretta ('DNA polimerasi 6' al posto di 'DNA polimerasi δ', oltre ad 'a', 'y', 'B') |
+| BIO-C03-NCOM-169 | BIO | 3 | 169 | 402 | ocr: grave corruzione del nome e del coefficiente dell'rRNA nell'enunciato ('FRNA 1858' al posto di 'rRNA 18S', oltre a 'RNA polimerasi II]' in C) |
+| BIO-C03-NCOM-170 | BIO | 3 | 170 | 402 | ocr: nome della classe di RNA corrotto nell'enunciato in '(RNA' al posto di 'tRNA' ('sintesi di (RNA e rRNA 5S') |
+| BIO-C03-NCOM-189 | BIO | 3 | 189 | 404 | ocr: nome dello snRNA nella risposta corretta C corrotto in 'US' al posto di 'U5' |
 
