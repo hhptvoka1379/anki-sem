@@ -1,6 +1,6 @@
-# Flagged rows (278)
+# Flagged rows (339)
 
-## ambiguous (14)
+## ambiguous (20)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -18,8 +18,14 @@
 | CHIM-C11-NCOM-099 | CHIM | 11 | 99 | 179 | ambiguous: inequality [OH⁻] < [H⁺] holds at 25 °C for every pH < 7, making both option_b (pH = 5) and option_d (pH = 2) true |
 | CHIM-C11-NCOM-148 | CHIM | 11 | 148 | 184 | ambiguous: KBr (119 g/mol) at 1% w/v has osmolarity ~0,168 Osm/L (< 0,30 Osm/L of plasma), making 'ipotonica' physiologically true alongside acid-base 'neutra' |
 | CHIM-C11-NCOM-170 | CHIM | 11 | 170 | 186 | ambiguous: adding NH₄Cl to aqueous NH₃ both lowers pH by the common-ion effect (option_d) and forms an NH₃/NH₄⁺ buffer (option_e) |
+| CHIM-C12-NCOM-078 | CHIM | 12 | 78 | 202 | ambiguous: since a quaternary carbon already bonds four carbons and zero hydrogens, both option_d ('No, mai') and option_e ('Gli atomi di idrogeno quaternari non esistono') are chemically true |
+| CHIM-C12-NCOM-085 | CHIM | 12 | 85 | 202 | ambiguous: in tetrahedral methane CH₄ (T_d symmetry) the four hydrogen atoms are simultaneously 'metilici' (option_a) and chemically 'equivalenti' (option_e) |
+| CHIM-C12-NCOM-148 | CHIM | 12 | 148 | 208 | ambiguous: both option_a ('Non possono essere degli idrocarburi') and option_b ('Contengono solo idrocarburi') are false statements about aromatic compounds |
+| CHIM-C13-NCOM-029 | CHIM | 13 | 29 | 234 | ambiguous: sucrose is a disaccharide (option_a), which in IUPAC/biochemistry nomenclature is also an oligosaccharide of 2–10 units (option_c, OCR 'otigosaccaride') |
+| CHIM-C13-NCOM-031 | CHIM | 13 | 31 | 234 | ambiguous: fructose is chemically a sugar ('uno zucchero', option_d) and functionally/commercially also a sweetener ('un dolcificante', option_c) |
+| CHIM-C13-NCOM-032 | CHIM | 13 | 32 | 234 | ambiguous: fructose is a polyhydroxyketone possessing both a ketonic group (option_c) and multiple alcoholic -OH groups (option_e, OCR/gender 'alcolica') |
 
-## chem (10)
+## chem (11)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -33,8 +39,9 @@
 | CHIM-C10-COMP-002 | CHIM | 10 | 2 | 162 | chem: 'H-X⁻' carries a negative charge and single H, invalid for neutral hydracids and diprotic H₂S |
 | CHIM-C10-COMP-009 | CHIM | 10 | 9 | 162 | chem: acidic oxides do not all have formula X₂O₃ (only oxidation state +3 does) |
 | CHIM-C12-NCOM-010 | CHIM | 12 | 10 | 195 | chem: answer_text describes only positional isomerism on the same skeleton rather than isomerism in general |
+| CHIM-C12-NCOM-209 | CHIM | 12 | 209 | 213 | chem: oxidation of an alcohol depends on substitution class / alpha-hydrogens on the C-OH carbon, not total H atoms in the molecule as stated in answer_text ('Dipende da quanti atomi di idrogeno l'alcool contiene') |
 
-## key (9)
+## key (11)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -47,16 +54,20 @@
 | CHIM-C10-NCOM-096 | CHIM | 10 | 96 | 160 | key: suspect — ammonium sulfite is (NH₄)₂SO₃, whereas key E reads '(NH₄)₃50₃' |
 | CHIM-C11-NCOM-051 | CHIM | 11 | 51 | 175 | key: suspect — for [OH⁻] = 10⁻⁵ M at 25 °C, [H⁺] = 10⁻¹⁴ / 10⁻⁵ = 10⁻⁹ M, not key E ('107 moli/litro') |
 | CHIM-C11-NCOM-127 | CHIM | 11 | 127 | 182 | key: suspect — at 25 °C [H⁺] = 10⁻⁵ M and [OH⁻] = 10⁻⁹ M give [H⁺][OH⁻] = 10⁻¹⁴ = K_w (a valid pH 5,0 solution, likely OCR of 10⁻⁸ M -> 10⁻⁹ M), contradicting key D ('non esiste') |
+| CHIM-C12-NCOM-071 | CHIM | 12 | 71 | 201 | key: suspect — consecutive alkanes in the homologous series differ by a -CH₂- unit (14 u), not -CH₃, making option_a ('Nessuna delle altre risposte è corretta') true as written |
+| CHIM-C13-NCOM-028 | CHIM | 13 | 28 | 234 | key: suspect — monosaccharides follow (CH₂O)ₙ with n = 3–7 (e.g. trioses C₃H₆O₃, pentoses C₅H₁₀O₅), not exclusively C₆H₁₂O₆ (hexoses only), making option_c ('nessuna definizione è appropriata') superior to option_e |
 
-## missing (3)
+## missing (5)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
 | CHIM-C03-NCOM-136 | CHIM | 3 | 136 | 53 | missing: ionization energy numerical values missing from stem table due to OCR; also option_b 'Gruppo²' garbled |
 | CHIM-C05-NCOM-029 | CHIM | 5 | 29 | 85 | missing: stem references 'nei tre recipienti rappresentati in figura' (containers A, B, C), but the figure is absent |
 | CHIM-C08-NCOM-001 | CHIM | 8 | 1 | 125 | missing: question references a concentration-vs-time graph ('il grafico riporta...') not included in the card |
+| CHIM-C12-NCOM-161 | CHIM | 12 | 161 | 209 | missing: molecular structure figure referenced in stem ('riportate in figura') is absent |
+| CHIM-C12-NCOM-271 | CHIM | 12 | 271 | 219 | missing: figure referenced in stem ('vedi figura') is absent |
 
-## ocr (256)
+## ocr (308)
 
 | id | subj | ch | q | page | flag |
 |---|---|---|---|---|---|
@@ -316,4 +327,56 @@
 | CHIM-C12-NCOM-059 | CHIM | 12 | 59 | 200 | ocr: sigma bond symbol 'σ' corrupted to 'a' in answer_text and 'Multiplo i' in option_e |
 | CHIM-C12-COMP-067 | CHIM | 12 | 67 | 226 | ocr: period after neutral formyl group '-CHO.' corrupted to superscript minus '-CHO⁻' in stem |
 | CHIM-C12-NCOM-068 | CHIM | 12 | 68 | 201 | ocr: 'π' electrons corrupted to 'n' in answer_text ('elettroni n delocalizzati') and 'sp²'/'sp³' corrupted to 'sp⁵' in option_c |
+| CHIM-C12-NCOM-071 | CHIM | 12 | 71 | 201 | ocr: methylene homologation unit '-CH₂-' corrupted to '-CH₃' in answer_text |
+| CHIM-C12-COMP-078 | CHIM | 12 | 78 | 227 | ocr: general ester formula 'R-COOR'.' corrupted to 'R-COOR!' in stem |
+| CHIM-C12-NCOM-078 | CHIM | 12 | 78 | 202 | ocr: comma corrupted to subscript '4' in option_a ('Si₄ talvolta') |
+| CHIM-C12-COMP-080 | CHIM | 12 | 80 | 227 | ocr: acyl chloride functional group '-COCl' corrupted to '-COCI' (capital I) in stem |
+| CHIM-C12-NCOM-081 | CHIM | 12 | 81 | 202 | ocr: propane formula 'CH₃-CH₂-CH₃' corrupted to pentavalent 'CH₃-CH₃-CH₃' in stem |
+| CHIM-C12-NCOM-108 | CHIM | 12 | 108 | 204 | ocr: bond symbols 'σ' and 'π' corrupted across options ('cea volte n', 'Tutti 7', 'mr') including answer_text ('Tutti a') |
+| CHIM-C12-NCOM-121 | CHIM | 12 | 121 | 205 | ocr: bond symbols 'σ' and 'π' corrupted across options ('‘en', 'n') including answer_text ('o') |
+| CHIM-C12-NCOM-129 | CHIM | 12 | 129 | 206 | ocr: cyclohexane formula '(C₆H₁₂)' corrupted to '(CH 2)' in stem |
+| CHIM-C12-NCOM-134 | CHIM | 12 | 134 | 207 | ocr: bond symbols 'σ' and 'π' corrupted across options ('n', 'a') including answer_text ('un legame oe un legame n') |
+| CHIM-C12-NCOM-135 | CHIM | 12 | 135 | 207 | ocr: bond symbols 'σ' and 'π' corrupted across options ('tre legami', 'o') including answer_text ('un legame o e due legami n') |
+| CHIM-C12-NCOM-141 | CHIM | 12 | 141 | 207 | ocr: triple-bond symbol '≡' of propyne (CH₃–C≡CH) corrupted to '=' across options including answer_text ('CH₃-C=CH') |
+| CHIM-C12-NCOM-147 | CHIM | 12 | 147 | 208 | ocr: carbon-oxygen bond 'C-O' corrupted to 'C-0' (digit zero) in option_b |
+| CHIM-C12-NCOM-158 | CHIM | 12 | 158 | 209 | ocr: hybridization superscript corrupted to '?' in option_c ('. ibridazione sp?') |
+| CHIM-C12-NCOM-159 | CHIM | 12 | 159 | 209 | ocr: subscript '2' of 'CO₂' corrupted to superscript 'CO²' in answer_text |
+| CHIM-C12-NCOM-163 | CHIM | 12 | 163 | 209 | ocr: chemical formula corrupted in option_b ('CH₃CO₁₃OH') |
+| CHIM-C12-NCOM-164 | CHIM | 12 | 164 | 209 | ocr: primary amine formula 'R-NH₂' corrupted to 'R-NH₃' in stem |
+| CHIM-C12-NCOM-166 | CHIM | 12 | 166 | 209 | ocr: chlorine symbol 'Cl' corrupted twice to capital 'CI' in stem formula ('CCI₂ HCF₂CCIFH') |
+| CHIM-C12-NCOM-172 | CHIM | 12 | 172 | 210 | ocr: answer_text garbled into self-contradictory 'contengono doppi legami semplici' |
+| CHIM-C12-NCOM-175 | CHIM | 12 | 175 | 210 | ocr: article 'Il' corrupted to chemical symbol 'H' in answer_text ('H gruppo carbonilico') |
+| CHIM-C12-NCOM-177 | CHIM | 12 | 177 | 210 | ocr: chemical subscripts corrupted to superscript '³' and commas across options ('CH³OH', 'CH,CHO', 'CH,OCH,', 'H,COCH,') |
+| CHIM-C12-NCOM-178 | CHIM | 12 | 178 | 210 | ocr: benzaldehyde formula 'C₆H₅CH=O' corrupted in answer_text ('CH CH=0') and option_b ('C⁶H¹ CH=0') |
+| CHIM-C12-NCOM-189 | CHIM | 12 | 189 | 211 | ocr: chemical subscripts corrupted in option_a ('HO-CH₄-CH₈-COOH') |
+| CHIM-C12-NCOM-191 | CHIM | 12 | 191 | 212 | ocr: pentavalent carbon subscript corruption in option_c ('(CH₃)₂-CH₂-CH₃' for '(CH₃)₂CH-CH₃') |
+| CHIM-C12-NCOM-193 | CHIM | 12 | 193 | 212 | ocr: hybridization superscript corrupted to '?' in option_d ('ibridati sp?') in a false-statement question |
+| CHIM-C12-NCOM-196 | CHIM | 12 | 196 | 212 | ocr: chemical formulas corrupted in option_a ('CH₃-CH₃-0H') and option_b ('H⁻C=0') |
+| CHIM-C12-NCOM-198 | CHIM | 12 | 198 | 212 | ocr: oxygen symbol 'O' corrupted to digit '0' in option_c ('R-0') |
+| CHIM-C12-NCOM-202 | CHIM | 12 | 202 | 213 | ocr: chemical subscripts/atoms dropped in option_e ('CH₃-C-NH-CH') |
+| CHIM-C12-NCOM-207 | CHIM | 12 | 207 | 213 | ocr: stem corrupted from 'Il composto CH₂O' to '4 composto CH,0' |
+| CHIM-C12-NCOM-217 | CHIM | 12 | 217 | 214 | ocr: methylene '-CH₂-' corrupted to pentavalent '-CH₃-' in stem ('CH₃-CH₃-NH-CH₃') and typo in answer_text ('metil-ctil ammina') |
+| CHIM-C12-NCOM-218 | CHIM | 12 | 218 | 214 | ocr: chemical subscripts dropped in option_a ('CH-CO-C') |
+| CHIM-C12-NCOM-223 | CHIM | 12 | 223 | 214 | ocr: methylene groups '-CH₂-CH₂-' corrupted to pentavalent '-CH₃-CH₃-' in stem ('CH₃-CHOH-CH₃-CH₃-CH₃') |
+| CHIM-C12-NCOM-224 | CHIM | 12 | 224 | 215 | ocr: chemical subscripts dropped in option_b ('CH-CH₂-NH') |
+| CHIM-C12-NCOM-228 | CHIM | 12 | 228 | 215 | ocr: amino group '-NH₂' corrupted to '-NH' in option_c and '-NH₃' in option_d |
+| CHIM-C12-NCOM-230 | CHIM | 12 | 230 | 215 | ocr: primary amide formula 'R-CO-NH₂' corrupted to 'R-CO-NH₃' in answer_text |
+| CHIM-C12-NCOM-238 | CHIM | 12 | 238 | 216 | ocr: stem formula 'ClCH₂CH₂OH' corrupted to 'CICR,CH,0H' and answer_text corrupted to '2-cloroetanoto' |
+| CHIM-C12-NCOM-239 | CHIM | 12 | 239 | 216 | ocr: chemical formulas corrupted in option_a ('HC-CO-CH') and option_b ('H,€-CO-CH₃') |
+| CHIM-C12-NCOM-241 | CHIM | 12 | 241 | 216 | ocr: aryl formula corrupted to 'Ark' in option_c and 'ARHHO' in option_a |
+| CHIM-C12-NCOM-243 | CHIM | 12 | 243 | 216 | ocr: article 'Il' corrupted to titanium symbol 'Ti' in option_a ('Ti gruppo -OH è molto polare') |
+| CHIM-C12-NCOM-244 | CHIM | 12 | 244 | 216 | ocr: chemical formula corrupted in option_b ('CH-NOOH') |
+| CHIM-C12-NCOM-245 | CHIM | 12 | 245 | 216 | ocr: methylene '-CH₂-' corrupted to pentavalent '-CH₃-' in stem ('CH₃-CH₃-CO-NH-CH₃') |
+| CHIM-C12-NCOM-249 | CHIM | 12 | 249 | 217 | ocr: pentavalent carbon subscript corruption in option_d ('(CH₃)₂CH₂-CH₃' for '(CH₃)₂CH-CH₃') |
+| CHIM-C12-NCOM-252 | CHIM | 12 | 252 | 217 | ocr: oxygen symbols 'O' corrupted to digit '0' in stem formula '(CH₃C0)₂0' |
+| CHIM-C12-NCOM-253 | CHIM | 12 | 253 | 217 | ocr: aniline formula 'C₆H₅NH₂' corrupted to 'CH.NH₃' in answer_text and 'CHNH' in option_a |
+| CHIM-C12-NCOM-254 | CHIM | 12 | 254 | 217 | ocr: acetone formula 'CH₃-CO-CH₃' corrupted to 'CH₃-C0-CH,' in stem |
+| CHIM-C12-NCOM-262 | CHIM | 12 | 262 | 218 | ocr: oxygen symbol 'O' corrupted to digit '0' in stem formula 'CH₃-0-CH₃' |
+| CHIM-C12-NCOM-276 | CHIM | 12 | 276 | 220 | ocr: diethyl ether formula 'CH₃-CH₂-O-CH₂-CH₃' severely corrupted to 'CH⁻-CH₄-0-CH⁻-CH₃' in stem |
+| CHIM-C12-NCOM-277 | CHIM | 12 | 277 | 220 | ocr: option_b garbled ('& if secondo della catena carbaniosa') and hybridization superscript corrupted in option_c ('sp?') |
+| CHIM-C12-NCOM-285 | CHIM | 12 | 285 | 220 | ocr: oxygen symbols 'O' corrupted to digit '0' in stem formula "R-C0-0-R'" |
+| CHIM-C12-NCOM-307 | CHIM | 12 | 307 | 222 | ocr: leading radical 'R' dropped in option_b ("-COOR'") and option_e ('-COOH') |
+| CHIM-C12-NCOM-308 | CHIM | 12 | 308 | 223 | ocr: oxygen symbols 'OO' corrupted to digits '00' in stem formula 'CH₃C00CH₂CH₃' |
+| CHIM-C13-COMP-019 | CHIM | 13 | 19 | 249 | ocr: answer_text corrupted to 'oli saturi' instead of 'saturi' |
+| CHIM-C13-NCOM-035 | CHIM | 13 | 35 | 235 | ocr: carbon symbol 'C' corrupted to 'e' in answer_text ('hanno sei atomi di e nella molecola') |
 
