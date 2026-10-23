@@ -1,0 +1,245 @@
+URL: https://www.mur.gov.it/sites/default/files/2025-06/Decreto%20Ministeriale%20n.%20418%20Syllabus_fisica%20errata%20corrige%2024.06.2025.pdf | retrieved: 2026-10-23
+NOTE: text extracted with pdftotext -layout from the MUR PDF. Some MUR PDFs embed fonts with broken ligature maps, so 'ti'/'tt'/'tti'/'dd' may appear as '/', '?', '7', 'D', 'B', 'H', '1', '6', 'S'. The text is otherwise unaltered.
+
+                                   INSEGNAMENTO DI FISICA
+
+Lingua di Insegnamento: Italiano
+
+Prerequisi3: sono richieste conoscenze di matema1ca, ﬁsica, chimica e biologia che rispondono alla
+preparazione promossa dalle is1tuzioni scolas1che che organizzano a8vità educa1ve e dida8che coeren1
+con le Indicazioni nazionali per i licei e con le Linee guida per gli is1tu1 tecnici e per gli is1tu1 professionali
+
+
+
+Obie6vi Generali del Corso Integrato
+
+ L'insegnamento di Fisica ha l'obie8vo di fornire le conoscenze essenziali di ﬁsica, u1li per comprendere i
+ fenomeni naturali e i processi biologici, con par1colare a?enzione alle applicazioni in area biomedica.
+
+
+Obie6vi speciﬁci del Corso Integrato
+
+ Conoscenza e comprensione
+ Al termine del corso lo studente sarà in grado di:
+
+     1. acquisire il linguaggio e la metodologia delle scienze ﬁsiche
+     2. Conoscere e descrivere le leggi fondamentali della ﬁsica
+     3. descrivere, comprendere e interpretare in modo quan1ta1vo i principali aspe8 ﬁsici della realtà
+        che ci circonda, con par1colare riferimento ai problemi di interesse per le scienze della vita
+
+ Capacità di applicare conoscenza e comprensione
+ Al termine del corso lo studente sarà in grado di:
+
+     1. applicare le leggi della ﬁsica classica in modo appropriato per descrivere e interpretare i fenomeni
+        elementari che riguardano il movimento, l'energia e le proprietà termiche, ele?riche e magne1che
+        della materia, usando corre?amente le unità di misura delle più comuni grandezze ﬁsiche e
+        conoscendo i fa?ori di conversione tra unità di misura omogenee.
+     2. applicare tali leggi per risolvere problemi ed esercizi numerici
+     3. comunicare in modo chiaro il procedimento usato per arrivare alla loro soluzione
+     4. dimostrare di aver compreso il metodo scien1ﬁco con cui misurare e interpretare in modo cri1co
+        i fenomeni ﬁsici.
+
+
+ Autonomia di giudizio
+ Al termine del corso lo studente sarà in grado di:
+
+     1. valutare cri1camente le informazioni
+     2. formare opinioni informate
+     3. correlare le conoscenze acquisite con i contenu1 del percorso forma1vo futuro
+
+ Abilità comunica6ve:
+ Al termine del corso lo studente sarà in grado di:
+
+     1. esprimere in modo chiaro ed eﬃcace le proprie informazioni e conoscenze
+
+ Capacità di apprendimento
+ Al termine del corso lo studente sarà in grado di:
+
+     1. apprendere in modo autonomo e con1nuo
+     2. aggiornare le proprie competenze e conoscenze
+     3. u1lizzare la metodologia appresa nel corso per apprendere in modo autonomo e con1nuo
+        argomen1 di interesse per il percorso forma1vo
+
+
+
+Obie6vi speciﬁci di apprendimento
+
+Obie6vi forma3vi speciﬁci descri6 per unità dida6che:
+
+ Unità dida6ca 1. Introduzione ai metodi della ﬁsica (impegno dida6co valutato in CFU= 0.25)
+ Interpretare elemen1 di base di matema1ca e ﬁsica (graﬁci e formule). Risolvere operazioni tra ve?ori;
+ eseguire conversioni tra unità di misura:
+     - Notazione scien1ﬁca;
+     - Grandezze ﬁsiche, dimensione ed unità di misura, Sistema Internazionale delle unità di misura.
+         Conversioni tra unità di misura e s1ma ordine di grandezza. Grandezze estensive ed intensive.
+         Grandezze scalari e ve?oriali.
+     - Equazioni con variabili che rappresentano grandezze ﬁsiche;
+     - Funzioni trigonometriche elementari; graﬁci; conce?o di derivata ed integrale.
+     - Ve?ori: deﬁnizione, componen1, operazioni (esempi: somma, diﬀerenza, prodo?o scalare e
+         prodo?o ve?oriale).
+
+
+ Unità dida6ca 2. Meccanica (impegno dida6co valutato in CFU= 1.5)
+ Descrivere e interpretare elemen1 di meccanica. Risolvere problemi ed esercizi numerici rela1vi alla
+ meccanica:
+     - cinema1ca del punto materiale: deﬁnizione di posizione e spostamento nel tempo. Conce?o di
+         traie?oria e legge oraria. Dis1nzione tra velocità media e velocità istantanea, tra accelerazione
+         media e accelerazione istantanea. Studio dei mo1 re8linei e curvilinei, con esempi signiﬁca1vi:
+         moto re8lineo uniforme, moto uniformemente accelerato, caduta libera, moto parabolico.
+         Descrizione qualita1va del moto circolare uniforme e del conce?o di accelerazione centripeta.
+         Introduzione al moto armonico, u1le per comprendere fenomeni periodici semplici.
+     - Dinamica del punto materiale: analisi delle interazioni tra corpi e formulazione dei tre principi della
+         dinamica. Signiﬁcato ﬁsico del principio di inerzia e condizioni per l’equilibrio sta1co (prima legge).
+         Legame tra forza risultante e accelerazione (seconda legge). Azione e reazione tra corpi in
+         interazione (terza legge). Applicazione ai conce8 di equilibrio traslazionale. Deﬁnizione di forza e
+         principali esempi: forza peso, forza gravitazionale, forze di conta?o e forza di a?rito (sta1co e
+         dinamico), tensione, forze elas1che e legge di Hooke per molle ideali.
+     - Lavoro ed energia: conce?o di lavoro meccanico come eﬀe?o di una forza applicata su un corpo.
+         Deﬁnizione di potenza e relazione con il lavoro svolto in un intervallo di tempo. Teorema
+         dell’energia cine1ca. Lavoro e confronto tra forze conserva1ve e forze non conserva1ve.
+         Deﬁnizione di energia potenziale. Esempi: energia potenziale gravitazionale ed energia potenziale
+         elas1ca. Energia meccanica come somma di energia cine1ca ed energia potenziale. Teorema di
+         conservazione dell’energia meccanica nei sistemi ideali.
+     - Quan1tà di moto: introduzione al conce?o di quan1tà di moto e di impulso. Legame tra impulso
+         e variazione della quan1tà di moto. Principio di conservazione della quan1tà di moto nei sistemi
+         isola1. Applicazioni agli ur1 in una dimensione, con dis1nzione tra ur1 elas1ci e anelas1ci.
+     - Sistemi di corpi: deﬁnizione di centro di massa e descrizione del suo moto. Cara?eris1che del
+         corpo rigido. Momento torcente e condizioni per l'equilibrio rotazionale. Momento d'inerzia
+         come misura della resistenza alla rotazione. Momento angolare e sua conservazione in assenza
+         di momen1 esterni. Esempi applica1vi: leve. Corpi deformabili: introduzione ai conce8 di
+        elas1cità, sforzo e deformazione (stress/strain), legge di Hooke generalizzata, modulo di Young e
+        carico di ro?ura dei materiali.
+
+
+Unità dida6ca 3. Meccanica dei ﬂuidi (impegno dida6co valutato in CFU= 1)
+Descrivere e interpretare elemen1 di meccanica dei ﬂuidi. Correlare i principi della ﬂuidodinamica con i
+ﬂussi, resistenze e pressioni ﬁsiologiche nei sistemi biologici. Risolvere problemi ed esercizi numerici
+rela1vi alla meccanica dei ﬂuidi:
+    - Sta1 di aggregazione della materia: cara?eris1che fondamentali dei ﬂuidi rispe?o ai solidi.
+         Deﬁnizione di pressione e densità, e loro ruolo nel comportamento sta1co e dinamico dei ﬂuidi.
+    - Leggi dell'idrosta1ca: legge di Stevino per la pressione nei liquidi in funzione della profondità;
+         principio di Pascal per la trasmissione della pressione nei ﬂuidi incomprimibili; principio di
+         Archimede per la spinta che un ﬂuido esercita su un corpo immerso. Analisi delle condizioni di
+         galleggiamento. Strumen1 e metodi per la misura della pressione (esperimento di Torricelli,
+         manometro).
+    - Fluidi in movimento (idrodinamica): conce8 di ﬂusso e portata, dis1nzione tra moto stazionario e
+         turbolento, con a?enzione par1colare al moto laminare. Equazione di con1nuità e conservazione
+         della massa nei ﬂuidi ideali. Teorema di Bernoulli e sua interpretazione in termini di conservazione
+         dell'energia meccanica. Teorema di Torricelli. Applicazioni a situazioni ﬁsiologiche (stenosi e
+         aneurisma).
+    - Fluidi reali e viscosità: analisi del moto laminare, proﬁlo parabolico della velocità, conce?o di
+         gradiente di velocità. Legge di Poiseuille e resistenze idrauliche in serie e in parallelo.
+    - Fenomeni di superﬁcie: tensione superﬁciale e suoi eﬀe8 su piccole quan1tà di liquido. Fenomeni
+         di capillarità e comportamento delle interfacce ﬂuide, sia piane che curve. Pressione di curvatura
+         e sua descrizione qualita1va mediante la legge di Laplace, con riferimento ai fenomeni osservabili
+         in contes1 biologici (ad esempio nei polmoni o nei capillari sanguigni).
+
+
+
+Unità dida6ca 4. Onde Meccaniche (impegno dida6co valutato in CFU= 0.5)
+Descrivere ed interpretare elemen1 di onde meccaniche. Correlare i fenomeni ondulatori in ambito
+acus1co. Risolvere problemi ed esercizi numerici rela1vi alle onde meccaniche:
+    - Onde meccaniche: introduzione alla natura delle onde meccaniche come fenomeni di
+        propagazione di energia e perturbazione a?raverso un mezzo materiale. Conce?o di oscillatore
+        armonico come modello base di generazione di onde. Deﬁnizione di frequenza, periodo,
+        pulsazione e lunghezza d’onda. Velocità di propagazione delle onde e relazione tra i parametri
+        ondulatori. Equazione di propagazione per onde armoniche semplici. Descrizione del ve?ore
+        d’onda. Esempi di onde monodimensionali: onde trasversali su una corda e onde longitudinali,
+        come quelle sonore nei ﬂuidi.
+    - Principi di sovrapposizione e interferenza: sovrapposizione lineare di onde armoniche e
+        formazione di interferenze costru8ve e distru8ve. Onde stazionarie: condizioni di formazione e
+        signiﬁcato ﬁsico.
+    - Energia trasportata dalle onde: conce?o di energia associata a un’onda meccanica. Potenza
+        trasportata da un’onda in un mezzo elas1co. Intensità dell’onda come quan1tà ﬁsica misurabile,
+        legata all’energia trasportata per unità di area e di tempo.
+    - Onde acus1che: propagazione del suono nei diversi mezzi materiali, con par1colare a?enzione alla
+        velocità del suono in aria e in altri materiali. Relazione tra intensità acus1ca e percezione sonora.
+        Deﬁnizione di livello di intensità sonora in decibel. Conce?o di soglia udi1va e limi1 di udibilità
+        dell’orecchio umano.
+    - Eﬀe?o Doppler: descrizione qualita1va e interpretazione del cambiamento apparente della
+        frequenza percepita in funzione del moto rela1vo tra sorgente e osservatore.
+
+
+Unità dida6ca 5. Termodinamica (impegno dida6co valutato in CFU= 1)
+Descrivere ed interpretare elemen1 di termodinamica. Risolvere problemi ed esercizi numerici rela1vi
+alla termodinamica:
+     - Conce8 fondamentali: deﬁnizione di sistema e ambiente. Variabili termodinamiche (pressione,
+         volume, temperatura) e stato termodinamico. Funzioni di stato. Temperatura e sue scale di
+         misura. Cara?eris1che dei gas ideali, legge dei gas perfe8, costante universale dei gas. Gas reali:
+         conce?o di temperatura cri1ca e deviazioni dal comportamento ideale. Energia interna e
+         interpretazione microscopica basata sulla teoria cine1ca dei gas.
+     - Calore e capacità termica: scambi di energia so?o forma di calore. Deﬁnizione di capacità termica
+         e calore speciﬁco, con riferimento ai gas ideali. Fenomeni di cambiamento di stato ﬁsico (fusione,
+         evaporazione, condensazione), calore latente. Calorimetria e metodi sperimentali per la misura
+         del calore scambiato.
+     - Meccanismi di trasmissione del calore: conduzione termica, convezione e irraggiamento. Flusso di
+         calore. Emissione termica, legge di Wien e potenza irraggiata. Esempi di trasmissione del calore.
+     - Primo principio della termodinamica: deﬁnizione e signiﬁcato ﬁsico. Energia interna, calore e
+         lavoro. Applicazione del primo principio alle trasformazioni termodinamiche. Trasformazioni
+         reversibili e irreversibili. Trasformazioni canoniche nei gas ideali: isoterma, isocora, isobara,
+         adiaba1ca, con confronto qualita1vo dei comportamen1.
+     - Secondo principio della termodinamica: enuncia1 fondamentali e conce?o di irreversibilità. Cicli
+         termodinamici: deﬁnizione e funzionamento. Macchine termiche, rendimento, ciclo di Carnot.
+         Entropia come funzione di stato, implicazioni macroscopiche e interpretazione sta1s1ca. Legame
+         tra variazione dell’entropia e direzione naturale dei processi termodinamici.
+
+
+Unità dida6ca 6. EleSricità e magne3smo (impegno dida6co valutato in CFU= 1.25)
+Descrivere e interpretare elemen1 di ele?ricità e magne1smo. Comprendere i fenomeni ele?rici e
+magne1ci. Risolvere problemi ed esercizi numerici rela1vi agli elemen1 di ele?ricità e magne1smo:
+    - Carica ele?rica e interazioni: proprietà fondamentali della carica ele?rica, unità di misura,
+        conservazione della carica. Interazione tra cariche pun1formi e legge di Coulomb. Deﬁnizione di
+        campo ele?rico e rappresentazione tramite linee di forza. Campo generato da una carica
+        pun1forme o da una distribuzione di più cariche pun1formi. Moto di una carica in un campo
+        ele?rico uniforme.
+    - Legge di Gauss: ﬂusso del campo ele?rico a?raverso una superﬁcie chiusa. Applicazioni a
+        distribuzioni simmetriche di carica: sfera condu?rice, piano uniformemente carico, ﬁlo carico in
+        equilibrio ele?rosta1co.
+    - Energia e potenziale ele?rico: energia potenziale associata a una distribuzione di cariche.
+        Deﬁnizione di potenziale ele?rico e diﬀerenza di potenziale. Conservazione dell’energia per una
+        carica in movimento in un campo ele?rico. Dipolo ele?rico e momento di dipolo.
+    - Condu?ori e diele?rici (isolan1): fenomeni di induzione ele?rosta1ca e fenomeni di
+        polarizzazione.
+    - Corrente ele?rica: corrente con1nua, intensità di corrente, generatore ele?rico e diﬀerenza di
+        potenziale applicata. Conduzione nei condu?ori ohmici. Leggi di Ohm, resistenza e resis1vità dei
+        materiali. Potenza ele?rica dissipata per eﬀe?o Joule. Combinazione di resistenze in serie e in
+        parallelo.
+    - Capacità e condensatori: conce?o di capacità ele?rica. Capacità del condensatore piano, eﬀe?o
+        della presenza di un diele?rico. Energia immagazzinata in un condensatore carico. Collegamen1
+        di condensatori in serie e in parallelo. Carica e scarica di un condensatore nel tempo.
+    - Campo magne1co: origine del campo magne1co dalle corren1 ele?riche (Esperimento di
+        Oerstedt). Forza di Lorentz su una carica in moto e su un ﬁlo percorso da corrente. Moto circolare
+        di una carica ele?rica in un campo magne1co uniforme. Momento torcente su una spira percorsa
+        da corrente immersa in un campo magne1co uniforme. Momento di dipolo magne1co.
+    - Legge di Biot-Savart: contributo inﬁnitesimo al campo magne1co generato da una corrente.
+        Esempi: ﬁlo re8lineo, spira circolare, solenoide ideale. Distribuzione del campo e orientamento.
+    -   Induzione ele?romagne1ca: variazione del ﬂusso magne1co e generazione di forza ele?romotrice.
+        Legge di Faraday-Neumann-Lenz. Corren1 indo?e e loro verso.
+    -   Applicazioni: potenziali di membrana cellulare, depolarizzazione e ri-polarizzazione delle
+        membrane cellulari.
+
+
+Unità dida6ca 7. Radiazioni eleSromagne3che (impegno dida6co valutato in CFU= 0.5)
+Descrivere e interpretare elemen1 di radiazioni ele?romagne1che. Comprendere gli eﬀe8 delle
+radiazioni. Risolvere problemi ed esercizi numerici rela1vi agli elemen1 di radiazioni ele?romagne1che:
+    - Radiazione ele?romagne1ca: natura ondulatoria delle onde ele?romagne1che come
+        combinazione di campi ele?rici e magne1ci oscillan1 perpendicolari tra loro; cara?eris1che
+        fondamentali come lunghezza d’onda, frequenza, velocità di propagazione nel vuoto e nei mezzi
+        materiali, ampiezza e intensità dell’onda. Relazione tra intensità dell’onda e quan1tà di energia
+        trasportata. Unità di misura principali.
+    - Spe?ro della radiazione ele?romagne1ca: suddivisione dello spe?ro in regioni (onde radio,
+        microonde, infrarosso, luce visibile, ultraviole?o, raggi X, raggi gamma), ordine crescente di
+        frequenza e decrescente di lunghezza d’onda.
+    - Quan1zzazione dell’energia: conce?o di fotone come quanto di energia associato alla radiazione;
+        relazione tra energia del fotone e frequenza. Interpretazione dell’eﬀe?o fotoele?rico e
+        implicazioni sulla natura quan1s1ca della radiazione. Assorbimento sele8vo dei fotoni da parte di
+        molecole biologiche.
+    - Radioa8vità e decadimen1 radioa8vi: deﬁnizione di nucleo instabile, conce?o di isotopi
+        radioa8vi. Tipi principali di decadimento (alfa, beta, gamma) e trasformazioni nucleari associate.
+    - Radiazioni ionizzan1 e non ionizzan1: dis1nzione basata sull’energia trasportata dalla radiazione
+        rispe?o all’energia di ionizzazione degli atomi. Esempi di radiazioni non ionizzan1 (onde radio,
+        microonde, infrarosso) e ionizzan1 (raggi X, raggi gamma).
+    - O8ca: leggi della riﬂessione e della rifrazione della luce, conce?o di indice di rifrazione, fenomeno
+        della dispersione. Proprietà delle len1 so8li: len1 convergen1 e divergen1, formazione delle
+        immagini reali e virtuali. Esempi: il microscopio.
+

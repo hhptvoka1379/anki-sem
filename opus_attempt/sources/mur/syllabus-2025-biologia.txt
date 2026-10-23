@@ -1,0 +1,261 @@
+URL: https://www.mur.gov.it/sites/default/files/2025-06/Decreto%20MInisteriale%20n.%20418%20Syllabus_BIOLOGIA.pdf | retrieved: 2026-10-23
+NOTE: text extracted with pdftotext -layout from the MUR PDF. Some MUR PDFs embed fonts with broken ligature maps, so 'ti'/'tt'/'tti'/'dd' may appear as '/', '?', '7', 'D', 'B', 'H', '1', '6', 'S'. The text is otherwise unaltered.
+
+                                INSEGNAMENTO DI BIOLOGIA
+
+Lingua di Insegnamento: Italiano
+
+Prerequisi : sono richieste conoscenze di matema ca, ﬁsica, chimica e biologia che rispondono alla
+preparazione promossa dalle is tuzioni scolas che che organizzano a vità educa ve e dida che coeren
+con le Indicazioni nazionali per i licei e con le Linee guida per gli is tu tecnici e per gli is tu professionali.
+
+Obiettivi Generali del Corso Integrato
+
+ L’insegnamento di Biologia ha l’obie vo di fornire agli studen una preparazione solida e integrata sui
+ fondamen della biologia, quale base indispensabile per la comprensione dei processi ﬁsiologici e
+ patologici, aﬀronta nei successivi insegnamen dell’area biomedica.
+
+
+
+Obiettivi speciﬁci del Corso Integrato
+
+
+ Conoscenza e comprensione
+ Al termine del corso lo studente sarà in grado di:
+       Descrivere la stru%ura e la funzione delle principali macromolecole biologiche e comprendere le
+         basi molecolari della materia vivente
+       Comprendere l’organizzazione e la compar mentalizzazione cellulare, il traﬃco intracellulare e le
+         interazioni tra cellule e ambiente esterno
+       Illustrare i meccanismi molecolari e cellulari che regolano l'espressione e la trasmissione
+         dell’informazione gene ca ed epigene ca iden ﬁcando le loro implicazioni nelle patologie
+         ereditarie. Illustrare i fondamen della comunicazione cellulare e della trasduzione del segnale,
+         con par colare a%enzione al controllo della proliferazione, e della morte cellulare, nonché i
+         processi che regolano la mitosi e la meiosi nelle cellule germinali
+
+
+ Capacità di applicare conoscenza e comprensione
+ Al termine del corso lo studente sarà in grado di:
+
+        Applicare le conoscenze acquisite per comprendere i processi cellulari normali e patologici rilevan
+         in ambito medico
+        Interpretare da sperimentali rela vi alla stru%ura e funzione della cellula e dei suoi vari
+         componen , alla regolazione genica e ai meccanismi di segnalazione intracellulare e intercellulare
+        U lizzare queste conoscenze e gli approcci metodologici acquisi per i futuri studi in ambito
+         biomedico
+
+ Autonomia di giudizio
+ Al termine del corso lo studente sarà in grado di:
+      1. valutare criticamente le informazioni
+      2. formare opinioni informate
+      3. prendere decisioni autonome
+
+ Abilità comunicative:
+ Al termine del corso lo studente sarà in grado di:
+     1. esprimere in modo chiaro e e icace le proprie informazioni e conoscenze
+ Capacità di apprendimento
+ Al termine del corso lo studente sarà in grado di:
+
+     1. apprendere in modo autonomo e continuo
+     2. aggiornare le proprie competenze e conoscenze
+
+
+
+
+Obiettivi speciﬁci di apprendimento
+
+
+Obiettivi formativi speciﬁci descritti per unità didattiche:
+
+ Unità didattica 1. Le basi dell’organizzazione biologica e molecolare della vita (impegno
+ didattico valutato in CFU= 0,75)
+ Descrivere e interpretare:
+    - L’albero della vita. Gli organismi e la teoria cellulare. Le proprietà fondamentali della materia
+         vivente. La teoria dell’evoluzione di Darwin e il principio One Health.
+    - I virus: Caratteristiche generali. L’acido nucleico, il capside e l’involucro membranoso. Le 6 classi
+         di virus animali. Il ciclo litico e lisogenico di un virus batterico. Il ciclo di un virus animale. Il ciclo di
+         un retrovirus. Modalità di entrata e di uscita di un virus da una cellula animale. Virus oncogeni a
+         DNA e a RNA.
+    - Cenni sulla cellula procariotica: la membrana plasmatica, la parete, la membrana esterna, la
+         capsula, le fimbrie e i pili, i flagelli. I batteri Gram positivi e Gram negativi (la colorazione di Gram).
+         Gli eubatteri e gli archeobatteri. Cenni sui meccanismi di trasferimento genico orizzontali.
+    - La cellula eucariotica. Il sistema delle endomembrane. La generazione del nucleo, l’endosimbiosi
+         per la generazione dei mitocondri. Dagli organismi unicellulari a quelli pluricellulari complessi.
+    - Le basi chimiche della vita: gli atomi e le molecole di interesse biologico. Le molecole polari e non
+         polari. Le proprietà dell’acqua. I legami chimici covalen e non covalen . I gruppi funzionali.
+    - Stru%ura e funzione delle macromolecole biologiche: Gli zuccheri e i carboidra . I lipidi. I nucleo di
+         e gli acidi nucleici. Il modello di Watson e Crick e la doppia elica del DNA. Gli RNA: stru%ura e
+         funzioni. RNA codiﬁcan e non codiﬁcan . Gli amminoacidi, il legame pep dico e le proteine. Cenni
+         sulla stru%ura delle proteine. Domini proteici e si a vi. Le principali modiﬁcazioni post-
+         traduzionali delle proteine, ad esempio la fosforilazione, l’ace lazione, la glicosilazione e l’aggiunta
+         di lipidi. Cenni sugli enzimi ed il loro funzionamento.
+    - Cenni di metabolismo: i conce di anabolismo e catabolismo, le reazioni di condensazione e di
+         idrolisi.
+
+
+ Unità didattica 2. I meccanismi cellulari di trasmissione e controllo dell’informazione genetica
+ e epigenetica (impegno didattico valutato in CFU=0,5)
+ Descrivere e interpretare:
+     - Il nucleo e il genoma delle cellule eucariotiche: I cromosomi lineari delle cellule eucariotiche. Il
+        cariotipo nell’uomo. La diploidia e i cromosomi omologhi. Organizzazione minimale di un
+        cromosoma eucariotico. Il DNA centromerico e telomerico.
+     - La cromatina: I nucleosomi. L’impaccamento del DNA e le proteine istoniche. L’istone H1 e la fibra
+        di 30 nm. L’eucromatina e l’eterocromatina, la metilazione del DNA. Il rimodellamento della
+        cromatina. Le modificazioni post-traduzionali degli istoni e l’epigenetica (l’esempio
+        dell’acetilazione). Le condensine e il ripiegamento della cromatina.
+     -  Il genoma umano: Cenni sull’organizzazione e caratteristiche delle sequenze che lo compongono.
+        Sequenze singole, famiglie geniche (globine, RNA ribosomiali), sequenze ripetute, sequenze
+        ripetute in tandem (minisatelliti, microsatelliti), sequenze ripetute intersperse (LINE, SINE e
+        retrovirus endogeni). Gli elementi mobili del DNA.
+
+
+Unità didattica 3. Il ﬂusso dell’informazione (impegno didattico valutato in CFU=1,0)
+Descrivere e interpretare:
+   - La replicazione del DNA nei procarioti e negli eucarioti: Il meccanismo semiconservativo. Le origini
+       di replicazione, la formazione del complesso d’inizio e la forcella replicativa. Lo srotolamento del
+       DNA: le DNA elicasi e le topoisomerasi. La primasi e l’innesco della replicazione. Le DNA polimerasi
+       e le attività di correzione degli errori. Il filamento continuo e discontinuo e i frammenti di Okazaki.
+       La rimozione dell’RNA e la DNA ligasi. La funzione dei telomeri e delle telomerasi. I telomeri e la
+       senescenza replicativa.
+   - I geni: Il concetto di gene e l’anatomia del gene procariotico ed eucariotico. Geni policistronici e
+       monocistronici. Promotori ed elementi regolativi in cis.
+   - Cenni sulla trascrizione nei procarioti: Il modello dell’operone Lac.
+   - Il controllo dell’espressione genica negli eucarioti: trascrizionale, post-trascrizionale, traduzionale
+       e post-traduzionale.
+   - La trascrizione negli eucarioti: Le tre RNA polimerasi (I, II, III). I fattori di trascrizione generali. La
+       TATA box. Promotori prossimali e distali (enhancer e silencer). I fattori di trascrizione specifici:
+       l’esempio dei recettori degli ormoni steroidei. Inizio, elongazione e terminazione della trascrizione
+       negli eucarioti.
+   - La maturazione degli RNA: Il capping, la poliadenilazione, lo splicing e lo splicing alternativo. Cenni
+       sullo spliceosoma e gli snRNA. I ribozimi. Editing dell’RNA. La regolazione della stabilità del
+       messaggero (Deadenilazione e decapucciamento, miRNA ed RNA interference).
+   - La sintesi delle proteine: Il meccanismo della traduzione. Gli attori della traduzione, mRNA, rRNA
+       e tRNA. La sintesi degli aminoacil-tRNA. I ribosomi. Sintesi e maturazione degli rRNA e dei tRNA. Il
+       codice genetico, i codoni e gli anticodoni. La ridondanza, la degenerazione, la non ambiguità e
+       l’universalità del codice genetico. I fattori di inizio, di elongazione e di terminazione nella
+       traduzione.
+   - La maturazione delle proteine: L’importanza del corretto ripiegamento delle proteine. Le proteine
+       chaperon. Gli errori di ripiegamento delle proteine. Cenni sui prioni.
+   - Regolazione dell’attività biologica delle proteine: La degradazione delle proteine. Degradazione
+       proteasomica ubiquitina dipendente. Proteine simili all’ubiquitina.
+
+
+Unità didattica 4. I meccanismi cellulari di trasmissione e controllo dei caratteri selvatici e
+mutati (impegno didattico valutato in CFU= 0,75)
+Descrivere e interpretare:
+   - Le variazioni del genoma: Sostituzione, inserzione o delezione di nucleotidi. Mutazioni geniche e
+       cromosomiche. Il fenomeno dell’espansione di sequenze ripetute. Cenni sui principali meccanismi
+       di riparazione del DNA nel danno a singolo e doppio filamento. Correlazioni con i fenomeni di
+       invecchiamento cellulare.
+   - Gli alleli: Omozigosi, eterozigosi ed eterozigosi composta. Dominanza e recessività. Genotipo e
+       fenotipo. Le leggi di Mendel. I caratteri singoli, la segregazione, l’assortimento indipendente.
+       Dominanza incompleta e codominanza. Alleli multipli (poliallelia, sistema AB0 dei gruppi
+       sanguigni). La pleiotropia. Epistasi (rapporti mendeliani atipici). Associazione completa e
+       incompleta. Mappe fisiche e genetiche. Gli alberi genealogici.
+   - L’espressione genica modulata dall’ambiente: Il concetto di penetranza ed espressività, caratteri
+       poligenici ed eredità quantitativa. Imprinting genomico.
+   - Cromosomi umani e cariotipo: La tecnica del bandeggio. Cariotipo umano euploide. Alterazioni del
+       cariotipo umano: variazioni del numero dei cromosomi (aneuploidia, poliploidia) e della struttura
+       dei cromosomi (traslocazioni, inversioni, delezioni e inserzioni). L’esempio della trisomia del
+        cromosoma 21. Ereditarietà autosomica (dominante e recessiva), ereditarietà associata al
+        cromosoma X (dominante e recessiva), al cromosoma Y, ereditarietà mitocondriale.
+
+
+
+Unità didattica 5. Le strutture cellulari: biogenesi, morfologia e funzioni (impegno didattico
+valutato in CFU=1,5)
+Descrivere e interpretare:
+    - Le membrane e i loro componenti. Il modello a mosaico fluido. L’importanza del glicocalice.
+       Asimmetria di membrana.
+   - Il trasporto attraverso la membrana plasmatica. Osmosi, diffusione, trasporto passivo. Le proteine
+       canale e i trasportatori. Il trasporto attivo. L’esempio dei trasportatori ABC e della pompa Na/K. Il
+       potenziale di membrana. Il potenziale d’azione.
+   - Lo smistamento delle proteine: I diversi compartimenti cellulari e le loro relazioni topologiche. I
+       segnali di indirizzamento ai compartimenti. Trasporto regolato attraverso i pori nucleari, tramite
+       traslocatori o tramite vescicole.
+   - Il nucleo: L’involucro nucleare. Il nucleolo. I pori nucleari. Le nucleoporine. Il trasporto nucleare. I
+       segnali di localizzazione nucleare e di esportazione nucleare. Il ruolo delle importine, delle
+       esportine, della proteina Ran e di RanGEF e RanGAP. Regolazione dell’importazione nucleare
+       (esempi: recettore degli ormoni steroidei, NfkB, SREBP1). Trasporto degli RNA dal nucleo al citosol.
+    - I mitocondri: struttura e funzioni. Il genoma mitocondriale e le modalità del flusso
+       dell’informazione nei mitocondri. Cenni di energetica: la respirazione cellulare (dalla glicolisi alla
+       catena di trasporto degli elettroni fino alla sintesi di ATP), le molecole che vi partecipano, il bilancio
+       energetico del processo. Il network mitocondriale e le sue dinamiche: fusione, fissione e le
+       proteine regolatorie. Il trasporto ai mitocondri: il segnale di indirizzamento alla matrice
+       mitocondriale, i traslocatori TOM, TIM, SAM e OXA. Il ruolo dell’energia nell’importazione delle
+       proteine alla matrice mitocondriale. L’importazione di proteine alla membrana mitocondriale
+       esterna, alla membrana mitocondriale interna e allo spazio intermembrana.
+   - I perossisomi: struttura e funzioni. Il trasporto ai perossisomi: i segnali e i loro recettori. Le
+       peculiarità del trasporto ai perossisomi. Le perossine e la biogenesi dei perossisomi. L’azione
+       detossificante dei perossisomi. Patologie legate ai perossisomi (sindrome di Zellweger).
+    - La via secretoria: il reticolo endoplasmatico liscio e ruvido, il cis-Golgi network, l’apparato di Golgi
+       e il trans-Golgi network. Il trasporto al reticolo endoplasmatico: la sequenza di indirizzamento, SRP
+       ed il suo recettore, il traslocone, la peptidasi del segnale. Le modificazioni delle proteine
+       neosintetizzate nel reticolo endoplasmatico. La glicosilazione ed il suo ruolo nel ripiegamento delle
+       proteine tramite calnexina e calreticulina. Il controllo di qualità del reticolo endoplasmatico
+       (esempi: calnexina e immunoglobuline). Ruolo delle proteine chaperon durante la traduzione ed il
+       trasporto agli organelli. Le risposte UPR e l’attivazione del sistema ERAD. L’esempio della fibrosi
+       cistica. Secrezione costitutiva e secrezione regolata.
+    - Il traffico vescicolare: Formazione delle vescicole. Le proteine di rivestimento ed i loro ruoli.
+       L’attracco, l’ormeggio e la fusione di vescicole ai compartimenti bersaglio. Ruolo di NSF, SNAPs,
+       SNARE e RAB. Il ruolo dei fosfoinositidi.
+   - L’endocitosi: Endocitosi in fase fluida e mediata da recettori. Endocitosi della transferrina, delle
+       LDL e dell’EGF: differenze e peculiarità. Endosomi precoci di smistamento e di riciclo, endosomi
+       tardivi, corpi multivescicolari e lisosomi. Il trasporto ai lisosomi e il mannosio-6-fosfato. Disfunzioni
+       lisosomali e malattie di accumulo. L’endocitosi nelle cellule polarizzate. La transcitosi (esempio
+       delle immunoglobuline). La fagocitosi e le sue funzioni.
+    -  L’autofagia: macroautofagia, microautofagia e autofagia mediata da chaperon molecolari.
+       L’esempio della mitofagia. Conseguenze delle alterazioni della via autofagica.
+    - Il citoscheletro. I microtubuli: Struttura e funzione dei microtubuli. Formazione, allungamento e
+       accorciamento dei microtubuli. Il ruolo del GTP nella stabilità dei microtubuli. Il centrosoma e il
+       complesso yTuRC. Proteine MAP motrici e non motrici. Le dineine e le chinesine. Esempi di
+       alterazioni nelle dineine citoplasmatiche. Le ciglia e i flagelli.
+    -   I microfilamenti: Struttura e funzioni dei microfilamenti di actina. Il processo di polimerizzazione
+        dell’actina: il ruolo dell’ATP e il complesso Arp2/3. Le proteine accessorie dell’actina. Le proteine
+        di collegamento: l’esempio della distrofina. Le miosine. Il sarcomero. Regolazione del citoscheletro
+        di actina tramite proteine della famiglia Rho (Rho, Rac e CDC42). La migrazione cellulare, l’esempio
+        della polarizzazione e chemiotassi dei neutrofili.
+    -   I filamenti intermedi: Polimerizzazione, struttura e funzioni. Le cheratine e la lamina nucleare. I
+        legami tra diversi elementi del citoscheletro. Le connessioni tra nucleoscheletro e citoscheletro.
+
+
+Unità didattica 6. La cellula e l’ambiente, la segnalazione cellulare e la trasduzione del
+segnale (impegno didattico valutato in CFU= 0,75)
+Descrivere e interpretare:
+   - La matrice extracellulare: struttura e funzioni. Degradazione della matrice extracellulare.
+       Ancoraggio alla matrice tramite le integrine. La meccanotrasduzione e le connessioni con il
+       citoscheletro. L’esempio della fibronectina.
+   - La comunicazione tra cellule: Il riconoscimento tra cellule e la formazione dei tessuti (caderine e
+       CAM). I diversi tipi di giunzioni cellulari: giunzioni occludenti, giunzioni aderenti, desmosomi ed
+       emidesmosomi, giunzioni comunicanti.
+   - La segnalazione cellulare da contatto, autocrina, paracrina, endocrina e sinaptica. La trasduzione
+       del segnale: elementi costitutivi e cascate regolative. I recettori di superficie e i recettori
+       intracellulari. L’esempio dell’ossido nitrico e gli ormoni lipidici. I recettori accoppiati a canali ionici.
+   - I recettori accoppiati a proteine G. Le proteine G monomeriche e trimeriche nella trasduzione del
+       segnale. Le proteine regolatorie: GEF e GAP. Secondi messaggeri e amplificazione del segnale.
+       Desensitizzazione recettoriale, l’esempio della visione.
+   - I recettori dotati di attività enzimatica: i recettori tirosin-chinasici, la via Ras-MAP chinasi. Gli
+       oncogeni e la trasduzione del segnale. Segnalazione del recettore per l'insulina e del recettore per
+       l’EGF. La segnalazione dei fosfoinositidi.
+
+
+Unità didattica 7. Il controllo della proliferazione e della sopravvivenza cellulare (impegno
+didattico valutato in CFU=0,75)
+Descrivere e interpretare:
+   - Il ciclo cellulare: Le fasi e i punti di controllo. Le cicline e le chinasi dipendenti da ciclina e la loro
+        modulazione. Le fasi della mitosi. L’ingresso in mitosi. La condensazione dei cromosomi.
+   - La formazione del fuso mitotico: i microtubuli astrali, del cinetocore e interpolari. I meccanoenzimi
+        della mitosi, il disassemblaggio della lamina nucleare e la dinamica degli organelli intracellulari. Il
+        complesso NDC80. Il movimento dei cromosomi e del fuso mitotico.
+   - Il completamento della mitosi: Il complesso APC/C o ciclosoma. La degradazione delle cicline e
+        della securina. La separazione dei cromatidi fratelli. La citodieresi. La mitosi asimmetrica.
+   - L’entrata in fase S: il ruolo dei fattori di crescita. La ciclina D-Cdk4/6. Fosforilazione di Rb e
+        attivazione di E2F. Rb nel retinoblastoma. Gli inibitori del complesso ciclina-CDK. Il danno al DNA
+        e l’attivazione di p53 per l’induzione del riparo o dell’apoptosi. Proto-oncogeni, oncogeni e geni
+        oncosoppressori.
+   - Cenni sulle cellule germinali. Meccanismo molecolare della meiosi e sue conseguenze genetiche.
+        Il crossing over. Le differenze tra mitosi e meiosi. Cause di aneuploidia. La meiosi nella
+        gametogenesi umana maschile e femminile. Il concetto della cellula staminale.
+   - La morte cellulare: necrosi e apoptosi. La via apoptotica intrinseca ed estrinseca. Le caspasi
+        iniziatrici ed esecutrici. La MOMP, il citocromo C e l’apoptosoma. Le proteine pro- e anti-
+        apoptotiche (la famiglia di BCL2). I recettori di morte e le vie di segnalazione.
+

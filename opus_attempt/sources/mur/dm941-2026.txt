@@ -1,0 +1,868 @@
+URL: https://www.mur.gov.it/sites/default/files/2026-07/Decreto%20Ministeriale%20n.%20941%20del%2010-7-2026.pdf | retrieved: 2026-10-23
+NOTE: text extracted with pdftotext -layout from the MUR PDF. Some MUR PDFs embed fonts with broken ligature maps, so 'ti'/'tt'/'tti'/'dd' may appear as '/', '?', '7', 'D', 'B', 'H', '1', '6', 'S'. The text is otherwise unaltered.
+
+                  ________________________________________________________________
+                  KH5RHFCV.AOOGABMUR.REGISTRO DECRETI.R.0000941.10-07-2026.h.22:49
+
+
+
+
+           Il Ministro dell’università e della ricerca
+VISTO il decreto-legge 9 gennaio 2020, n. 1, convertito, con modificazioni, dalla legge 5 marzo 2020,
+n. 12, e, in particolare, l’articolo 1, che istituisce il Ministero dell’Istruzione e il Ministero
+dell’Università e della Ricerca, con conseguente soppressione del Ministero dell’Istruzione,
+dell’Università e della Ricerca;
+
+VISTO il decreto legislativo 30 luglio 1999, n. 300, come modificato dal citato decreto-legge n. 1
+del 2020 e, in particolare, gli articoli 2, comma 1, n. 12), 51-bis, 51-ter e 51-quater, concernenti
+l’istituzione del Ministero dell’Università e della Ricerca, al quale «sono attribuite le funzioni e i
+compiti spettanti allo Stato in materia di istruzione universitaria, di ricerca scientifica, tecnologica e
+artistica e di alta formazione artistica musicale e coreutica» nonché la determinazione delle aree
+funzionali e l’ordinamento del suddetto Dicastero;
+
+VISTO il decreto del Presidente della Repubblica 21 ottobre 2022, con il quale la Sen. Anna Maria
+Bernini è nominata Ministro dell’Università e della Ricerca;
+
+VISTO il decreto del Presidente della Repubblica 4 aprile 2025, n. 62, recante: «Regolamento di
+organizzazione del Ministero dell’università e della ricerca», pubblicato in Gazzetta Ufficiale, serie
+generale n. 100 del 2 maggio 2025;
+
+VISTA la legge 7 agosto 1990, n. 241, recante “Nuove norme in materia di procedimento
+amministrativo e di diritto di accesso ai documenti amministrativi”;
+
+VISTA la legge 19 novembre 1990, n. 341, recante la “Riforma degli ordinamenti didattici
+universitari” e, in particolare, l’articolo 11, commi 1 e 2;
+
+VISTA la legge 5 febbraio 1992, n. 104, recante “Legge-quadro per l’assistenza, l’integrazione
+sociale e i diritti delle persone handicappate”, e in particolare, l’articolo 16, comma 5;
+
+VISTO il decreto legislativo 30 dicembre 1992, n. 502, recante “Riordino della disciplina in materia
+sanitaria, a norma dell’art. 1 della legge 23 ottobre 1992, n. 421”;
+
+VISTA la legge 2 agosto 1999, n. 264, recante “Norme in materia di accessi ai corsi universitari”, e,
+in particolare, gli articoli 1 e 3;
+
+VISTO il decreto legislativo 21 dicembre 1999, n. 517, recante “Disciplina dei rapporti fra Servizio
+sanitario nazionale ed università, a norma dell'articolo 6 della legge 30 novembre 1998, n. 419”;
+
+
+
+
+                                                    1
+           Il Ministro dell’università e della ricerca
+VISTO il decreto legislativo 25 luglio 1998, n. 286, recante “Testo unico delle disposizioni
+concernenti la disciplina dell'immigrazione e norme sulla condizione dello straniero” e, in particolare
+l’articolo 39, commi, 2 e 5;
+
+VISTO il decreto del Presidente della Repubblica 31 agosto 1999, n. 394, concernente «Regolamento
+recante norme di attuazione del testo unico delle disposizioni concernenti la disciplina
+dell'immigrazione e norme sulla condizione dello straniero, a norma dell'articolo 1, comma 6, del
+decreto legislativo 25 luglio 1998, n. 286»;
+
+VISTO il decreto legislativo 30 giugno 2003, n. 196, recante «Codice in materia di protezione dei
+dati personali», come modificato dal decreto legislativo 10 agosto 2018, n. 101, recante «Disposizioni
+per l’adeguamento della normativa nazionale alle disposizioni del regolamento (UE) 2016/679 del
+Parlamento europeo e del Consiglio, del 27 aprile 2016, relativo alla protezione delle persone fisiche
+con riguardo al trattamento dei dati personali, nonché alla libera circolazione di tali dati che abroga
+la direttiva 95/46/CE (regolamento generale sulla protezione dei dati)»;
+
+VISTO il decreto del Ministero della Pubblica Istruzione 7 dicembre 2006, n. 305, «Regolamento
+recante identificazione dei dati sensibili e giudiziari trattati e delle relative operazioni effettuate dal
+Ministero della Pubblica Istruzione, in attuazione degli articoli 20 e 21 del decreto legislativo 30
+giugno 2003, n. 196, recante Codice in materia di protezione dei dati personali»;
+
+VISTA la legge 30 dicembre 2010, n. 240, recante «Norme in materia di organizzazione delle
+università, di personale accademico e reclutamento, nonché delega al governo per incentivare la
+qualità e l’efficienza del sistema universitario»;
+
+VISTO il decreto ministeriale 22 ottobre 2004, n. 270, recante “Modifiche al regolamento recante
+norme concernenti l'autonomia didattica degli atenei, approvato con decreto del Ministro
+dell'università e della ricerca scientifica e tecnologica 3 novembre 1999, n. 509” e ss.mm.ii.;
+
+VISTO il decreto ministeriale del 14 ottobre 2021 n. 1154, con il quale sono stati ridefiniti gli
+indicatori per l’accreditamento iniziale e periodico delle sedi e dei Corsi universitari, nonché la
+valutazione e l’autovalutazione degli stessi, e ss.mm.ii.;
+
+VISTA la legge 12 aprile 2022, n. 33, recante «Disposizioni in materia di iscrizione contemporanea
+a due corsi di istruzione superiore»;
+
+VISTO il decreto del Ministro dell’Università e della Ricerca 29 luglio 2022, n. 930, recante
+“Disposizioni per consentire la contemporanea iscrizione a due corsi universitari”;
+
+
+
+
+                                                    2
+           Il Ministro dell’università e della ricerca
+VISTA la legge 14 marzo 2025, n. 26, recante “Delega al Governo per la revisione delle modalità di
+accesso ai corsi di laurea magistrale in medicina e chirurgia, in odontoiatria e protesi dentaria e in
+medicina veterinaria”;
+
+VISTO il decreto legislativo 15 maggio 2025, n. 71, recante “Disciplina delle nuove modalità di
+accesso ai corsi di laurea magistrale a ciclo unico in medicina e chirurgia (LM-41), in odontoiatria
+e protesi dentaria (LM-46) e in medicina veterinaria (LM-42)”; e, in particolare, gli articoli 4, comma
+3, e 5, comma 1, e l’articolo 6;
+
+VISTO il decreto del Ministro dell’Università e della Ricerca 30 maggio 2025, n. 418, recante
+«Disciplina di attuazione delle nuove modalità di accesso ai corsi di laurea magistrale a ciclo unico
+in Medicina e Chirurgia, Odontoiatria e Protesi Dentaria e Medicina Veterinaria – a.a. 2025-2026»;
+
+VISTO il decreto del Ministro dell’Università e della Ricerca 20 giugno 2025, n. 431, recante
+«Contributo forfettario e termini di iscrizione al semestre aperto, nonché date degli appelli degli
+esami per l’accesso ai corsi di laurea magistrale a ciclo unico in Medicina e Chirurgia, Odontoiatria
+e Protesi Dentaria e Medicina Veterinaria a.a. 2025-2026»;
+
+VISTO il decreto del Ministro dell’Università e della Ricerca 11 luglio 2025, n. 447, recante
+«Modalità di fruizione dei benefici del diritto allo studio in relazione alla riforma di cui al D. Lgs. n.
+71 del 15 maggio 2025»;
+
+VISTO il decreto del Ministro dell’Università e della Ricerca 16 luglio 2025, n. 454, recante
+«Definizione criteri per la formazione delle graduatorie di merito nazionali e modalità assegnazione
+sedi universitarie agli studenti di cui al D.Lgs. n. 71 del 15 maggio 2025 – a.a. 2025/2026»;
+
+VISTO il decreto del Ministro dell’Università e della Ricerca 4 agosto 2025, n. 557, recante
+«Modifica della penalizzazione delle risposte errate negli esami del semestre aperto per i corsi di
+laurea in Medicina e chirurgia, Odontoiatria e protesi dentaria e Medicina veterinaria»;
+
+VISTO il decreto del Ministro dell’Università e della Ricerca 20 ottobre 2025, n. 754, recante
+«Misure di semplificazione procedurale di cui all'Allegato 2 del D.M. 30 maggio 2025, n. 418»;
+
+VISTO il decreto del Ministro dell’Università e della Ricerca 22 dicembre 2025, n. 1115, recante
+«Definizione di ulteriori criteri per la formazione delle graduatorie di merito nazionali e dei criteri
+per lo svolgimento delle prove di recupero di Crediti formativi universitari-Cfu durante il semestre
+filtro di cui al D.Lgs. n. 71 del 2025 – a.a. 2025/2026»;
+
+
+
+
+                                                    3
+           Il Ministro dell’università e della ricerca
+VISTE le disposizioni ministeriali concernenti le procedure per l'ingresso, il soggiorno,
+l’immatricolazione degli studenti internazionali e il relativo riconoscimento dei titoli, per i corsi della
+formazione superiore in Italia valide per l'anno accademico 2026/2027;
+
+NELLE MORE dell’adozione delle disposizioni ministeriali concernenti le modalità di iscrizione per
+gli studenti internazionali ai corsi di laurea magistrale a ciclo unico in medicina e chirurgia,
+odontoiatria e protesi dentaria e medicina veterinaria, valide per l’anno accademico 2026/2027;
+
+VISTO il decreto del Segretario Generale del Ministero dell’Università e della Ricerca 6 febbraio
+2026, n. 162 con il quale è stato istituito il «Tavolo tecnico per la partecipazione studentesca
+all’attuazione e al miglioramento continuo della riforma per l’accesso a Medicina e Chirurgia,
+Odontoiatria e Protesi Dentaria e Medicina Veterinaria» con l’obiettivo di supportare il Ministero
+nell’attuazione e nel miglioramento continuo della riforma per l’accesso ai corsi di studio in Medicina
+e Chirurgia, Odontoiatria e Protesi Dentaria e Medicina Veterinaria di cui alla legge 14 marzo 2025
+n. 26 e relativi decreti attuativi;
+
+VISTO il decreto del Segretario Generale del Ministero dell’Università e della Ricerca del 31 marzo
+2026, n. 424, recante “Attivazione del Tavolo tecnico di cui al D.S.G. n. 162/2026”;
+
+VISTO il decreto del Ministro dell’università e della ricerca 21 maggio 2026, n. 690, con il quale è
+stato istituito il Gruppo di lavoro per lo svolgimento di attività di supporto al Ministro per analisi,
+studio, valutazione ed elaborazione di proposte di aggiornamento ed integrazione della disciplina in
+materia di accesso e di formazione nei corsi di studio di area di Scienze della Salute, nonché il Tavolo
+consultivo a supporto del predetto Gruppo di lavoro;
+
+TENUTO CONTO delle osservazioni e valutazioni emerse nell’ambito dei su menzionati Tavoli e
+Gruppi di lavoro, finalizzate ad una progressiva ottimizzazione del semestre filtro tramite l’adozione
+di misure integrative volte a garantirne una sua più efficace attuazione;
+
+RAVVISATA la necessità di assicurare il coordinamento sistematico, la semplificazione,
+l’integrazione e l’attualizzazione delle disposizioni contenute nei decreti del Ministro dell’Università
+e della Ricerca su citati e, in particolare, dei decreti nn. 418/2025, 431/2025, 454/2025, 557/2025,
+754/2025 e 1115/2025;
+
+VISTO il decreto del Ministro dell’Università e della Ricerca del 29 maggio 2026, n. 704 con il quale
+è stata istituita la Commissione incaricata dell’aggiornamento dei Syllabus relativi agli insegnamenti
+erogati nel semestre filtro e della definizione e validazione – anche in collaborazione con la
+Conferenza dei rettori delle università italiane (CRUI) –di un set di domande, corredate delle risposte
+
+
+
+
+                                                    4
+           Il Ministro dell’università e della ricerca
+ritenute corrette, da cui estrarre le prove da somministrare in occasione degli esami di profitto del
+semestre filtro per l’a.a. 2026/2027;
+
+RITENUTO di dover assicurare il tempestivo avvio delle attività didattiche dei corsi di studio
+afferenti alle Classi di Laurea Magistrale a Ciclo Unico di cui al presente decreto in coerenza con
+l’inizio dell’anno accademico 2026/2027.
+
+                                              DECRETA
+
+
+                                                Art. 1
+                                        (Disposizioni generali)
+
+1. Ai sensi dell’articolo 3, comma 1, del decreto legislativo 15 maggio 2025, n. 71, l’iscrizione degli
+   studenti dei Paesi UE e dei Paesi non UE di cui all’articolo 39, comma 5, del decreto legislativo
+   25 luglio 1998, n. 286, nonché dei Paesi non UE residenti all’estero, al semestre filtro dei corsi di
+   studio in lingua italiana attivati dalle Università statali per l’a.a. 2026-2027 nell’ambito delle
+   Classi di Laurea Magistrale a Ciclo Unico in Medicina e Chirurgia (LM-41), in Odontoiatria e
+   Protesi Dentaria (LM-46) e in Medicina Veterinaria (LM-42) è libera.
+
+2. Lo studente si iscrive a uno dei corsi di studio di cui al comma 1 e, contemporaneamente, a uno
+   dei corsi di studio di cui all’articolo 9, di seguito denominati “corsi affini”, fatto salvo quanto
+   previsto dall’articolo 3, comma 2. L’iscrizione contemporanea al semestre filtro e al corso di studio
+   affine è consentita anche in deroga al divieto di cui all’articolo 3 del decreto ministeriale 29 luglio
+   2022, n. 930.
+
+3. Ai sensi di quanto disposto dall’articolo 8, comma 3, del decreto legislativo 15 maggio 2025, n.
+   71, le disposizioni del presente decreto non si applicano ai corsi di studio erogati in lingua inglese
+   presso le università statali e non statali legalmente riconosciute.
+
+4. Per l’a.a. 2026/2027 le disposizioni del presente decreto non si applicano ai corsi di studio erogati
+   dalle università non statali legalmente riconosciute.
+
+
+
+                                                 Art. 2
+                                     (Iscrizione al semestre filtro)
+
+
+
+
+                                                    5
+           Il Ministro dell’università e della ricerca
+1. Ai fini dell’accesso al semestre filtro, lo studente procede all’iscrizione attraverso il sistema
+informatico disponibile sul sito Universitaly, secondo i termini e le modalità previsti dall’Allegato 1,
+che costituisce parte integrante del presente decreto, e indica:
+   a) la tipologia di corso di laurea magistrale a ciclo unico ove intende iscriversi tra Medicina e
+      Chirurgia/Classe LM-41, Odontoiatria e Protesi Dentaria/Classe LM-46, Medicina
+      Veterinaria/Classe LM-42;
+   b) l’Ateneo ove intende frequentare il semestre filtro tra quelli presso cui è attivata la Classe di
+      corso di laurea magistrale a ciclo unico cui intende immatricolarsi in esito al semestre filtro.
+      Tale scelta non deve necessariamente coincidere con una delle sedi di corso su cui si sceglie di
+      concorrere, ai sensi del successivo articolo 3, ai fini di una utile assegnazione al corso di laurea
+      magistrale prescelto;
+   c) la tipologia di corso di studio affine, tra quelli individuati dall’articolo 9, su cui intende
+      concorrere per l’ipotesi di mancata collocazione in posizione utile nella graduatoria di merito
+      di cui all’articolo 10 per l’ammissione al secondo semestre del corso di laurea magistrale
+      prescelto, salvo quanto previsto al successivo comma 2.
+
+2. Lo studente già iscritto ad un corso di studio affine tra quelli elencati all’articolo 9 non è obbligato
+ad effettuare la scelta del corso affine né, dunque, ad esercitare alcuna opzione di scelta di sede
+relativamente ad essi ai sensi del successivo articolo 3. Resta salva, in ogni caso, la facoltà per tale
+studente, qualora intenda modificare il proprio percorso formativo, di optare per la scelta di un corso
+affine diverso da quello a cui egli è già iscritto.
+
+3. Per iscriversi al semestre filtro lo studente deve:
+ - completare la procedura di iscrizione sul portale Universitaly, secondo i termini e le modalità di
+     cui all’Allegato 1;
+ - effettuare il pagamento del contributo forfettario di cui all’articolo 4, del presente decreto,
+     secondo le modalità e i termini previsti dall’Allegato 1.
+
+
+                                                 Art. 3
+                                           (Scelta delle sedi)
+
+1. All’atto dell’iscrizione al semestre filtro, secondo i termini e le modalità previsti dall’Allegato 1,
+lo studente deve altresì indicare:
+    a) le sedi del corso di laurea magistrale a ciclo unico di cui all’articolo 1, comma 1 per le quali
+        intende concorrere ai fini della prosecuzione degli studi nell’ipotesi di utile collocazione nella
+        graduatoria di merito di cui all’articolo 10. Lo studente è tenuto ad indicare almeno 10 sedi;
+
+
+
+
+                                                    6
+           Il Ministro dell’università e della ricerca
+    b) le sedi del corso di studio affine per le quali intende concorrere ai fini della prosecuzione degli
+       studi in caso di mancata collocazione in posizione utile nella graduatoria di merito di cui
+       all’articolo 10 per i corsi di laurea magistrale a ciclo unico di cui all’articolo 1, comma 1.
+
+2. Lo studente che, successivamente all’iscrizione al semestre filtro, ottiene un posto nell’ambito dei
+corsi affini di cui all’articolo 9 - ivi compresi i corsi di laurea ad accesso programmato nazionale e
+locale, in esito alle relative procedure di ingresso - è tenuto ad aggiornare, entro il termine previsto
+dall'Allegato 1, il proprio status nell’area personale del sito Universitaly.
+
+3. Il posto assegnato allo studente in esito alle procedure di accesso a un corso di laurea affine ad
+accesso programmato locale o nazionale, nonché il posto presso il quale lo studente risulti già
+immatricolato o iscritto in un corso affine rimangono riservati e non sono resi disponibili per nuove
+assegnazioni fino alla definizione delle graduatorie di merito nazionali di cui all’articolo 10.
+
+4. Il Ministero comunica alle università l’ateneo presso cui lo studente si iscrive per frequentare il
+semestre filtro e le sedi scelte per il corso di cui all’articolo 1 comma 1 e per il corso affine prescelti.
+
+5. Resta in ogni caso ferma la possibilità di iscriversi a un altro corso di studio afferente a Classi
+diverse da quelle individuate all’articolo 9, secondo quanto disposto dalla legge 12 aprile 2022, n. 33.
+
+7. L’iscrizione al semestre filtro presso università che hanno proposto istanza di accreditamento
+iniziale ancora non definita si intende condizionata all’esito positivo delle relative procedure di
+accreditamento. In caso di mancato accreditamento, lo studente dovrà provvedere ad indicare altra
+sede presso cui svolgere il semestre filtro mediante apposita procedura che verrà resa disponibile
+nella propria area personale. Parimenti, l’indicazione di tale università tra le sedi di cui al comma 1
+del presente articolo si intende condizionata all’esito positivo delle relative procedure di
+accreditamento.
+
+8. Successivamente alle attività di comunicazione di cui al comma 5 del presente articolo, e,
+comunque entro l’inizio delle attività formative, le università accertano il possesso del titolo di studio
+richiesto ai fini dell’accesso al semestre filtro.
+
+9. Oltre alla presentazione della domanda di iscrizione nei termini e con le modalità indicate
+all’Allegato 1, per gli studenti cui si applicano le “Procedure per l’ingresso, il soggiorno,
+l’immatricolazione degli studenti internazionali e il relativo riconoscimento dei titoli, per i corsi della
+formazione superiore in Italia”, è fatto obbligo di completare la relativa procedura, rinvenibile al link
+https://www.universitaly.it/studenti-stranieri, indispensabile per il rilascio del visto. Le università,
+ove lo studente interessato non possieda una idonea certificazione relativa alla conoscenza della
+
+
+
+
+                                                     7
+           Il Ministro dell’università e della ricerca
+lingua italiana, hanno il compito di verificare la competenza linguistica per l’accesso ai corsi, nelle
+forme previste dalle richiamate procedure.
+
+
+                                                Art. 4
+                                        (Contributo forfettario)
+
+1. Per l’iscrizione al semestre filtro, le università sono autorizzate a richiedere allo studente il
+pagamento di un contributo forfettario uniformato a livello nazionale, pari a euro 250,00
+(duecentocinquanta/00), fatti salvi i casi di esonero totale o parziale previsti dalla normativa vigente
+in materia di tasse universitarie.
+
+2. Il pagamento del contributo forfettario, entro e non oltre il termine previsto dall’Allegato 1,
+determina il perfezionamento della procedura di iscrizione dello studente al semestre filtro.
+
+3. Nel caso di mancato pagamento del contributo forfettario entro il termine di cui all’Allegato 1 o di
+pagamento effettuato oltre il termine, lo studente non è considerato iscritto al semestre filtro, a nulla
+rilevando la sola compilazione e invio della domanda di iscrizione.
+
+4. Lo studente che, al termine del semestre filtro, si immatricola ad uno dei corsi di laurea magistrale
+a ciclo unico di cui all’articolo 1, comma 1, ovvero ad un corso di studio non compreso tra quelli di
+cui all’articolo 9 del presente decreto, nella medesima o in diversa università rispetto a quella in cui
+ha frequentato il semestre filtro, è tenuto al pagamento delle tasse universitarie annuali, calcolate
+secondo le disposizioni vigenti nell’università di immatricolazione, decurtate del contributo
+corrisposto ai sensi del comma 1.
+
+5. Lo studente che, al termine del semestre filtro, si immatricola ad uno dei corsi di studio affini di
+cui all’articolo 9, nella medesima o in diversa università rispetto a quella in cui ha frequentato il
+semestre filtro, è tenuto al pagamento delle tasse universitarie annuali, calcolate secondo le
+disposizioni vigenti nell’università di immatricolazione, riparametrate in relazione alla durata del
+secondo semestre.
+
+6. Il pagamento delle tasse universitarie di cui ai commi 3 e 4 è effettuato prima dell’inizio delle
+attività didattiche del secondo semestre. Le università possono prevedere nella loro autonomia idonei
+piani di rateizzazione del pagamento dovuto.
+
+7. Gli studenti vincitori o idonei ai benefici per la tutela del diritto allo studio per il semestre filtro
+ottengono il rimborso delle somme eventualmente versate ai sensi del comma 1 e sono immatricolati
+al secondo semestre, ferma restando la verifica dei requisiti per l’immatricolazione previsti dal
+
+
+
+                                                    8
+           Il Ministro dell’università e della ricerca
+presente decreto, senza l’obbligo di pagamento di cui al comma 5. Gli studenti che hanno presentato
+domanda per l’accesso ai benefici per la tutela del diritto allo studio per il secondo semestre sono
+immatricolati allo stesso, ferma restando la verifica dei requisiti per l’immatricolazione previsti dal
+presente decreto, senza l’obbligo di pagamento di cui al comma 5, nelle more dell’acquisizione del
+diritto ai benefici. Nel caso in cui lo studente non rientri tra gli idonei o vincitori, il pagamento di cui
+al comma 5, ovvero la prima tranche dello stesso in caso di rateizzazione, è effettuato entro quindici
+giorni dalla pubblicazione della relativa graduatoria.
+
+
+                                                  Art. 5
+                                         (Status dello studente)
+
+1. Per effetto dell’iscrizione al semestre filtro ai sensi degli articoli 2 e 3, lo studente acquisisce lo
+status di “studente contemporaneamente iscritto” al corso di laurea magistrale a ciclo unico afferente
+alla Classe LM-41 o LM-46 o LM-42 prescelto e al corso di studio affine prescelto tra quelli di cui
+all’articolo 9, ai soli fini della prosecuzione del percorso di studi di cui all’art. 3, comma 1, lett. b).
+
+2. L’iscrizione al primo semestre di uno dei corsi di studio affini è gratuita e non comporta per lo
+studente il rispetto degli obblighi di frequenza eventualmente previsti dai regolamenti di Ateneo.
+
+3. Al fine di assicurare il godimento dei benefici in materia di diritto allo studio di cui all’articolo 4,
+comma 3, del decreto legislativo 15 maggio 2025, n. 71, si applicano le disposizioni del D.M. n. 447
+del 11 luglio 2025.
+
+
+                                                 Art. 6
+                                             (Semestre filtro)
+
+1. Le attività formative del semestre filtro iniziano il 1° settembre e si concludono almeno 10 giorni
+prima della data di svolgimento del primo esame di profitto.
+
+2. Il semestre filtro si compone dei seguenti insegnamenti, a cui sono assegnati 6 crediti formativi
+(CFU) ciascuno:
+     a) Chimica e propedeutica biochimica;
+     b) Fisica;
+     c) Biologia.
+
+
+
+
+                                                     9
+           Il Ministro dell’università e della ricerca
+3. Le università disciplinano, nell’esercizio della propria autonomia, le metodologie e le conseguenti
+modalità didattiche per l’erogazione delle attività formative, ai sensi della normativa vigente, con gli
+adeguati piani di studio, al fine di erogare gli insegnamenti di cui al comma 2.
+
+4. La frequenza ai corsi di studio è obbligatoria ai sensi delle direttive 2005/36/CE e 2013/55/UE. È
+onere dell’università predisporre un sistema per il controllo della partecipazione degli studenti alle
+attività didattiche.
+
+
+                                                Art. 7
+                                (Modalità di svolgimento degli esami)
+
+1. Gli esami di profitto dei tre insegnamenti di cui all’articolo 6, comma 2, si svolgono nella medesima
+data e contemporaneamente in tutte le università in cui è erogato il semestre filtro, anche in deroga
+all’eventuale divieto di sostenere esami nella medesima data previsto dai Regolamenti didattici di
+Ateneo.
+
+2. Al termine delle attività formative lo studente ha a disposizione una sessione di esame, nell’ambito
+della quale è chiamato a sostenere l’esame di profitto relativo a ciascuno dei tre insegnamenti di cui
+all’articolo 6, comma 2. La prima prova si svolge, di norma, entro i primi quindici giorni del mese di
+dicembre dell’anno di avvio del semestre, mentre la seconda prova si svolge, di norma, entro i primi
+quindici giorni del mese di gennaio dell’anno successivo. Con successivo provvedimento ministeriale
+sono fissate le date delle prove di esame. Lo studente è tenuto a sostenere almeno una delle due prove
+di esame previste per ciascuno dei tre insegnamenti di cui all’articolo 6, comma 2.
+
+3. Per lo svolgimento di ogni prova relativa a ciascuno insegnamento è assegnato un tempo pari a 50
+minuti.
+
+4. Ciascuna prova d’esame consiste nella somministrazione di trentuno (31) domande, di cui ventuno
+(21) a risposta multipla e dieci (10) a risposta con modalità a completamento, secondo quanto previsto
+dall’Allegato 2 che costituisce parte integrante del presente decreto.
+
+5. Le procedure connesse allo svolgimento degli esami di profitto di cui ai commi precedenti sono
+disciplinate nell’Allegato 2.
+
+6. Le università organizzano lo svolgimento degli esami di profitto nel rispetto delle garanzie previste
+per gli studenti con invalidità e disabilità a norma dell'articolo 16 della legge 5 febbraio 1992, n. 104,
+nonché per gli studenti con diagnosi di disturbi specifici di apprendimento (DSA) di cui alla legge 8
+ottobre 2010, n. 170, secondo quanto previsto dall’Allegato 2.
+
+
+
+
+                                                   10
+           Il Ministro dell’università e della ricerca
+                                                Art. 8
+                     (Definizione del punteggio, valutazione d’esame e rinuncia)
+
+1. Gli esami di profitto relativi agli insegnamenti di cui all’articolo 6, comma 2, sono valutati in
+trentesimi, oltre alla lode a cui è attribuito il valore di un punto. Ai fini dell’inserimento nelle
+graduatorie di cui all’articolo 10, il punteggio è attribuito come segue:
+   - 1 punto per ogni risposta esatta;
+   - 0 punti per ogni risposta omessa;
+   - meno 0,1 (- 0,1) punti per ogni risposta errata.
+
+2. Per la valutazione complessiva dei tre esami di profitto di cui al comma 1, sono attribuiti al massimo
+novantatré (93) punti.
+
+3. Ai fini della determinazione del voto d’esame per la carriera dello studente, i punteggi conseguiti
+negli esami di profitto sostenuti durante il semestre filtro si arrotondano all’unità più prossima solo
+qualora lo studente abbia superato l’esame conseguendo un punteggio uguale o superiore a diciotto
+su trenta (18/30).
+
+4. Nel caso in cui lo studente sostenga entrambe le prove calendarizzate per il medesimo
+insegnamento, ai fini della determinazione del punteggio prevale automaticamente la prova in cui lo
+studente ha conseguito il punteggio più elevato, purché sia pari o superiore a diciotto su trenta (18/30).
+
+5. Entro il giorno successivo alla pubblicazione degli esiti della seconda prova lo studente è tenuto a
+manifestare la propria volontà di accettare o rifiutare la votazione conseguita in ciascun insegnamento
+per il quale abbia riportato una votazione pari o superiore a diciotto su trenta (18/30). In mancanza di
+espressa manifestazione di volontà nel termine di cui al periodo precedente, la votazione si intende
+accettata. La votazione accettata rileva ai fini dell’inserimento e della collocazione dello studente
+nelle graduatorie di merito nazionali di cui all’articolo 10.
+
+6. Il rifiuto della votazione determina, in caso di utile collocazione nelle graduatorie di merito
+nazionali, l’obbligo di conseguire i crediti formativi con riferimento al relativo insegnamento, presso
+l’ateneo di assegnazione secondo le modalità previste dagli articoli 12 e 13.
+
+7. Le università possono prevedere che i punteggi conseguiti negli esami di profitto del semestre filtro
+non concorrano alla determinazione della media delle votazioni degli esami di profitto, previa
+richiesta dello studente.
+
+
+
+
+                                                   11
+           Il Ministro dell’università e della ricerca
+                                                 Art. 9
+                                              (Corsi affini)
+
+1. I corsi affini relativi alle Classi delle Lauree Magistrali a ciclo unico LM-41, LM-46 e LM-42 sono
+tutti i Corsi di studio afferenti alla Classe delle Lauree in Biotecnologie (L-2), alla Classe delle Lauree
+in Scienze Biologiche (L-13), alla Classe delle Lauree Magistrali a Ciclo Unico in Farmacia e
+Farmacia Industriale (LM-13), alla Classe delle Lauree in Scienze Zootecniche e Tecnologie delle
+Produzioni Animali (L-38), nonché, i corsi di studio afferenti alle Classi delle Lauree per le
+Professioni sanitarie che presentano un rapporto tra iscritti al primo anno e posti disponibili per il
+medesimo anno, riferito all’anno accademico precedente, inferiore a 0,9. Tali corsi di studio, per
+l’anno accademico 2026/2027, sono i seguenti:
+   a) Assistenza sanitaria afferente alla Classe L/SNT4;
+   b) Educazione professionale afferente alla Classe L/SNT2;
+   c) Infermieristica afferente alla Classe L/SNT1;
+   d) Podologia afferente alla Classe L/SNT2;
+   e) Tecniche audiometriche afferente alla Classe L/SNT3;
+   f) Tecniche audioprotesiche afferente alla Classe L/SNT3;
+   g) Tecniche della prevenzione nell’ambiente e nei luoghi di lavoro afferente alla Classe L/SNT4;
+   h) Terapia occupazionale afferente alla Classe L/SNT2;
+   i) Tecniche di laboratorio biomedico afferente alla Classe L/SNT3.
+Con provvedimento annuale il Ministero aggiorna l’elenco dei predetti corsi delle Classi di Laurea
+per le Professioni sanitarie, tenendo conto del criterio di cui al primo periodo.
+
+2. Gli studenti sono ammessi ai corsi di studio afferenti alle Classi individuate dal comma 1 secondo
+le modalità di cui all’articolo 13, comma 7.
+
+3. Fermo restando quanto previsto dall’articolo 4, comma 4, del decreto legislativo 15 maggio 2025,
+n. 71, per l’anno accademico 2026/2027 sono derogati, in caso di sovrannumero di cui all’art. 13
+comma 7, i requisiti di docenza relativi alla numerosità massima della Classe di cui al decreto
+ministeriale 14 ottobre 2021, n. 1154 e ss.mm.ii.
+
+4. Qualora in esito alla graduatoria dei corsi affini di cui all’Allegato 5 del presente decreto, residuino,
+anche una volta esauriti gli scorrimenti, dei posti presso corsi di studio ad accesso programmato, gli
+Atenei possono procedere all’indizione di una prova suppletiva di accesso al fine della loro integrale
+copertura. In tal caso, le università, nella loro autonomia e in coerenza con la normativa in materia di
+accesso ai corsi di laurea delle professioni sanitarie, valorizzano il percorso formativo dei candidati
+alla prova suppletiva che abbiano frequentato il semestre filtro per l’anno accademico 2026/2027 e
+che non risultino collocati nella graduatoria di merito nazionale in posizione utile per l’accesso ad
+uno dei corsi di studio previsti dal presente decreto.
+
+
+
+                                                    12
+           Il Ministro dell’università e della ricerca
+                                               Art. 10
+                         (Inserimento nelle graduatorie di merito nazionali)
+
+1. Le graduatorie di merito nazionali dei corsi afferenti alle Classi di Laurea Magistrale a Ciclo Unico
+LM-41 o LM-46 o LM-42 si compongono di tre sezioni alle quali gli studenti che hanno conseguito
+l’esame di profitto in almeno uno dei tre insegnamenti previsti nel semestre, accedono nel seguente
+ordine:
+a) nella prima sezione sono collocati gli studenti che hanno conseguito un punteggio uguale o
+   superiore a diciotto su trenta (18/30) in ciascun esame relativo agli insegnamenti di cui all’articolo
+   6, comma 2;
+b) nella seconda sezione sono collocati gli studenti che hanno conseguito un punteggio uguale o
+   superiore a diciotto su trenta (18/30) negli esami di profitto di due dei tre insegnamenti di cui
+   all’articolo 6, comma 2, fatto salvo il conseguimento dei crediti formativi universitari di cui
+   all’articolo 12, comma 1, in relazione all’insegnamento per il quale non è stato conseguito un
+   punteggio uguale o superiore a diciotto su trenta (18/30), ai fini della successiva immatricolazione
+   al secondo semestre del corso di laurea prescelto;
+c) nella terza sezione sono collocati gli studenti che hanno conseguito un punteggio uguale o superiore
+   a diciotto su trenta (18/30) negli esami di profitto relativi ad uno dei tre insegnamenti di cui
+   all’articolo 6, comma 2, fatto salvo il conseguimento dei crediti formativi universitari di cui
+   all’articolo 12, comma 1, in relazione agli insegnamenti per i quali non è stato conseguito un
+   punteggio uguale o superiore a diciotto su trenta (18/30), ai fini della successiva immatricolazione
+   al secondo semestre del corso di laurea prescelto.
+
+2. Gli studenti di cui al comma 1 accedono alla graduatoria di uno dei corsi afferenti alle Classi di
+Laurea Magistrale a Ciclo Unico LM-41 o LM-46 o LM-42, in relazione alle quali hanno effettuato
+l’iscrizione al semestre filtro, secondo le seguenti modalità:
+a) gli studenti di cui alla lettera a) del comma 1 sono collocati nelle graduatorie di merito nazionali
+   secondo l’ordine decrescente ottenuto dalla somma di n. 300 punti e il punteggio ottenuto negli
+   esami di profitto, risultante dalla somma aritmetica dei punteggi conseguiti e accettati;
+b) gli studenti di cui alla lettera b) del comma 1 sono collocati nelle graduatorie di merito nazionali
+   secondo l’ordine decrescente ottenuto dalla somma di n. 200 punti e il punteggio ottenuto in due
+   dei tre esami di profitto, risultante dalla somma aritmetica dei punteggi conseguiti e accettati, salvo
+   il conseguimento dei crediti formativi universitari di cui all’articolo 12, comma 1, ai fini della
+   successiva immatricolazione al secondo semestre del corso di studio prescelto;
+c) gli studenti di cui alla lettera c) del comma 1 sono collocati nelle graduatorie di merito nazionali
+   secondo l’ordine decrescente ottenuto dalla somma di n. 100 punti e il punteggio ottenuto in uno
+   degli esami di profitto conseguito e accettato, salvo il conseguimento dei crediti formativi
+
+
+                                                   13
+            Il Ministro dell’università e della ricerca
+   universitari di cui all’articolo 12, comma 1, ai fini della successiva immatricolazione al secondo
+   semestre del corso di studio prescelto.
+3. In caso di parità di punteggio si applicano i seguenti criteri:
+    a) in caso di parità tra uno o più studenti invalidi in possesso di certificato di invalidità uguale
+       o superiore al 66% o disabili con certificazione di cui all’articolo 3, comma 3, della legge
+       n.104 del 1992 e uno o più studenti non rientranti nelle predette categorie, viene preferito lo
+       studente invalido in possesso di certificato di invalidità uguale o superiore al 66% o disabile
+       con certificazione di cui all’articolo 3, comma 3, della legge n. 104 del 1992, presentate ai
+       sensi dell’Allegato 2;
+    b) nei casi di ulteriore parità prevale lo studente anagraficamente più giovane;
+    c) nei casi di ulteriore parità prevale lo studente con la media aritmetica più alta dei voti ottenuti
+       negli esami di profitto.
+4. Gli studenti di cui all’articolo 1, comma 1, collocati in posizione utile in ciascuna delle graduatorie
+di merito nazionali, sono assegnati e si immatricolano, nel caso di cui alla lettera a) del comma 1,
+ovvero si iscrivono ai fini del conseguimento dei crediti, nei casi previsti dalle lettere b) e c) del
+comma 1, in una delle sedi universitarie indicate, secondo l’ordine di preferenza scelto in sede di
+iscrizione, ovvero in altra sede sulla base della ricognizione dei posti disponibili non assegnati e delle
+ulteriori scelte effettuate dagli studenti, ai sensi dell’articolo 11, commi 2 e 3 del presente decreto e
+secondo le procedure e i termini previsti dagli Allegati 3 e 4 che costituiscono parte integrante del
+presente decreto.
+
+5. In caso di mancata immatricolazione/iscrizione nei termini prescritti dagli Allegati 3 e 4, lo studente
+decade dalla possibilità di immatricolarsi/iscriversi al corso di laurea magistrale a ciclo unico di
+assegnazione, ferma restando la possibilità di immatricolarsi e proseguire gli studi in uno dei corsi
+affini, di cui all’art. 9 del presente decreto, secondo le procedure ed i termini di cui all’Allegato 5.
+
+6. Gli eventuali posti non utilizzati nell’ambito delle graduatorie degli studenti dei Paesi non UE
+residenti all’estero, sono resi disponibili per le assegnazioni e le immatricolazioni degli studenti dei
+Paesi UE e dei Paesi non UE residenti in Italia, nelle relative graduatorie.
+
+7. In esito alle procedure di cui all’Allegato 3, gli eventuali posti residui sono utilizzati dalle università
+per cambi di sede relativi al primo anno, in relazione all’accertamento di gravi motivi debitamente
+documentati, ovvero per le procedure di iscrizione per anni successivi al primo di cui al medesimo
+allegato.
+
+8. Nel caso in cui la collocazione nelle graduatorie di merito di cui al comma 1 non consenta la
+prosecuzione del percorso di studi nei corsi di laurea magistrale a ciclo unico in medicina e chirurgia
+(LM-41) o odontoiatria e protesi dentaria (LM-46) o medicina veterinaria (LM-42), lo studente può
+proseguire nel corso di studio affine di cui all’articolo 9, indicato in sede di iscrizione in una delle
+
+
+
+                                                     14
+           Il Ministro dell’università e della ricerca
+sedi opzionate, secondo l’ordine di collocazione nelle graduatorie di merito e delle preferenze
+espresse. Lo studente è ammesso, anche in sovrannumero, di norma nel limite del venti per cento dei
+posti disponibili presso ciascuno ateneo, secondo le procedure ed i termini previsti dall’Allegato 5.
+
+9. Qualora lo studente di cui al comma 8 – a fronte della saturazione dei posti disponibili – non trovi
+utile collocazione presso le sedi opzionate al momento dell’iscrizione, può proseguire il percorso di
+studio presso una diversa sede, tenuto conto della redistribuzione dei posti non assegnati. A tal fine,
+lo studente procede a indicare un ordine di preferenza delle sedi ancora disponibili.
+
+10. Qualora lo studente, all’esito della procedura di cui al comma 9, non trovi utile collocazione, si
+procede all’assegnazione d’ufficio nella sede con disponibilità di posti più prossima alla
+residenza/domicilio indicati in sede d’iscrizione ai sensi dell’Allegato 1, numero 2, del presente
+decreto. In subordine, si procede all’assegnazione d’ufficio nella sede più prossima alla
+residenza/domicilio indicati in sede d’iscrizione.
+
+11. Lo studente è assegnato al corso affine secondo l’ordine decrescente del punteggio conseguito
+negli esami di profitto, risultante dalla somma aritmetica dei punteggi conseguiti e, in caso di parità,
+si applicano i criteri di cui al comma 3.
+
+12. In caso di mancata immatricolazione nei termini prescritti dall’Allegato 5, lo studente decade
+dalla possibilità di immatricolarsi.
+
+
+
+
+                                              Art. 11
+                                  (Ammissione al secondo semestre)
+
+1. Sono ammessi al secondo semestre dei corsi afferenti alle Classi di Laurea Magistrale a Ciclo
+Unico LM-41 o LM-46 o LM-42, gli studenti di cui all’articolo 1 del presente decreto che hanno
+conseguito tutti i crediti formativi universitari (“CFU”) stabiliti per gli esami di profitto del semestre
+filtro, di cui all’articolo 6, comma 2.
+
+2. Gli studenti di cui alla lettera a) dell’articolo 10, comma 1, collocati in posizione utile in ciascuna
+delle graduatorie di merito nazionali, sono assegnati e si immatricolano secondo le procedure e i
+termini previsti dagli Allegati 3 e 4 del presente decreto e accedono al secondo semestre dei corsi di
+laurea magistrale a ciclo unico in medicina e chirurgia (LM-41) o odontoiatria e protesi dentaria (LM-
+46) o medicina veterinaria (LM-42).
+
+3. Gli studenti di cui alle lettere b) e c) dell’articolo 10, comma 1, collocati in posizione utile in
+ciascuna delle graduatorie di merito nazionali, sono iscritti nelle sedi di assegnazione e si
+immatricolano nelle stesse a condizione del conseguimento dei crediti formativi di cui al successivo
+
+
+                                                   15
+           Il Ministro dell’università e della ricerca
+articolo 12, accedendo al secondo semestre dei corsi di laurea magistrale a ciclo unico in medicina e
+chirurgia (LM-41) o odontoiatria e protesi dentaria (LM-46) o medicina veterinaria (LM-42), secondo
+le procedure e i termini previsti dagli Allegati 3 e 4 del presente decreto.
+
+4. Gli studenti che non sono ammessi al secondo semestre dei corsi di studio di cui al comma 1
+possono iscriversi ad altro corso di studio nel rispetto dei requisiti di accesso previsti dalla normativa
+vigente e in presenza di posti disponibili, anche oltre i termini previsti dal Regolamento didattico di
+Ateneo, nel rispetto di quanto previsto dall’Allegato 5 del presente decreto.
+
+5. Nell’ipotesi di cui al comma 4, il riconoscimento dei crediti formativi universitari (CFU) conseguiti
+nel semestre filtro è rimesso alla valutazione dell’università ove lo studente si iscrive e può avvenire
+anche in forma parziale.
+
+
+
+
+                                             Art. 12
+                      (Completamento del conseguimento dei crediti formativi)
+
+1. Gli studenti di cui all’articolo 11, comma 3, sono tenuti al conseguimento dei crediti formativi
+universitari (CFU) non ottenuti all’esito degli esami di profitto, in tempo utile per l’immatricolazione
+al secondo semestre.
+
+2. Gli studenti di cui al comma 1 che si siano iscritti e che non abbiano completato il conseguimento
+dei crediti formativi entro il termine di cui al medesimo comma decadono dall’iscrizione.
+
+3. Per gli studenti che non hanno completato il conseguimento dei crediti, resta ferma la facoltà di
+immatricolarsi, anche oltre i termini previsti dai regolamenti didattici universitari, ad un corso di
+studio diverso, nel rispetto dei termini previsti dall’Allegato 5 del presente decreto.
+
+
+
+
+                                                 Art. 13
+                  (Criteri uniformi per il pieno conseguimento dei crediti formativi)
+
+1. Le prove per il recupero dei crediti formativi universitari (CFU) si articolano secondo gli standard
+e le modalità di verifica uniformi di cui al presente articolo.
+
+
+
+
+                                                   16
+           Il Ministro dell’università e della ricerca
+2. Le prove sono volte alla verifica dell’apprendimento degli obiettivi formativi in coerenza con i
+contenuti dei Syllabus di cui al D.M. n. 704 del 29 maggio 2026, per l’insegnamento per il quale lo
+studente non ha conseguito il punteggio uguale o superiore a diciotto su trenta (18/30).
+
+3. La verifica di cui al comma 2 consiste in una prova di recupero per ciascuno degli insegnamenti
+oggetto dell’esame di cui al medesimo comma, che è valutata in trentesimi. La valutazione è volta ad
+accertare l’acquisizione di solide conoscenze di base dei singoli insegnamenti.
+
+4. Le università determinano il numero di verifiche, comunque non inferiori a due per ciascun
+insegnamento oggetto di recupero. Le date di svolgimento delle prove e le modalità delle eventuali
+attività di recupero sono pubblicate da ciascun ateneo sul proprio sito istituzionale.
+
+5. Le prove di cui al presente articolo sono organizzate dagli Atenei, nell’esercizio dell’autonomia
+universitaria di cui all’articolo 33 della Costituzione, così come specificata dall’articolo 6 della legge
+n. 168 del 1989, e si concludono in tempo utile per l’immatricolazione al secondo semestre.
+
+6. Gli studenti di cui all’articolo 11, comma 3, che non si collochino in posizione utile nelle
+graduatorie di merito nazionali per i corsi di cui all’articolo 1, comma 1, del presente decreto, possono
+conseguire i crediti formativi di cui all’articolo 12, ai fini dell’ammissione ai corsi di studio affini di
+cui all’articolo 9, presso la sede assegnata per l’iscrizione ai sensi dell'Allegato 5. Le prove per il
+recupero dei crediti formativi universitari (CFU) si concludono in tempo utile per l’immatricolazione
+al secondo semestre. Resta salvo quanto previsto dall’articolo 8, comma 7.
+
+
+
+
+                                              Articolo 14
+                                           (Posti disponibili)
+
+1. Ai sensi dell’articolo 9, comma 2, del decreto legislativo 15 maggio 2025, n. 71, per i corsi di cui
+all’articolo 1, resta ferma la procedura di determinazione del numero nazionale dei posti disponibili
+di cui all’articolo 3 della legge 2 agosto 1999, n. 264. Per l’anno accademico 2026/2027, i posti per
+le immatricolazioni ai corsi di laurea magistrale a ciclo unico in medicina e chirurgia (LM-41),
+odontoiatria e protesi dentaria (LM-46) e medicina veterinaria (LM-42), destinati agli studenti di cui
+all’articolo 1 del presente decreto, sono definiti e ripartiti tra le università con successivi decreti del
+Ministro dell’Università e della Ricerca.
+
+2. Fermo restando quanto previsto dall’articolo 4, comma 4, del decreto legislativo 15 maggio 2025,
+n. 71, sono derogati per il corso di laurea magistrale a ciclo unico in medicina e chirurgia (LM-41)
+delle università statali i requisiti di docenza relativi alla numerosità massima della classe di cui al
+decreto ministeriale 14 ottobre 2021, n. 1154 e ss.mm.ii, ai fini della determinazione del potenziale
+
+
+
+                                                    17
+            Il Ministro dell’università e della ricerca
+formativo degli atenei e della conseguente definizione dei posti disponibili per l’immatricolazione ai
+corsi di laurea magistrale a ciclo unico in medicina e chirurgia (LM-41).
+
+
+
+
+                                                 Art. 15
+                                           (Studenti già iscritti)
+
+1. Fermo restando quanto previsto dall’articolo 1, comma 2, della legge 2 aprile 2022, n. 33, gli
+studenti iscritti, alla data di pubblicazione del presente decreto, ai corsi di studio di cui all’articolo 1,
+comma 1, ovvero ai corsi di studio di cui all’articolo 9, anche presso un’università non statale
+legalmente riconosciuta, che intendono proseguire gli studi in un corso afferente alle Classi LM-41,
+LM-46 o LM-42, sono tenuti a iscriversi al semestre filtro e a sostenere i relativi esami di profitto.
+Gli studenti di cui al primo periodo non sono tenuti a frequentare le lezioni purché producano
+documentazione idonea a dimostrare il rispetto degli obblighi di frequenza relativi agli insegnamenti
+di cui all’articolo 6, comma 2, presso il corso di studi di provenienza, fino all’armonizzazione dei
+piani di studio ai sensi dell’articolo 5, comma 2, del decreto legislativo 15 maggio 2025, n. 71.
+
+2. L’iscrizione ad anni successivi al primo ad un corso afferente alle Classi LM-41, LM-46 o LM-42,
+a seguito delle procedure di riconoscimento dei crediti e delle necessarie propedeuticità da parte
+dell’ateneo di destinazione, può avvenire esclusivamente nel limite dei posti che si siano resi
+disponibili. Gli studenti che intendono essere ammessi ad anni successivi al primo sono tenuti a
+presentare domanda presso le università di proprio interesse esclusivamente al momento della
+pubblicazione degli avvisi o dei bandi delle università relativi ai posti vacanti.
+
+
+
+
+                                                Art. 16
+                                  (Nuova iscrizione al semestre filtro)
+
+1. Lo studente può iscriversi al semestre filtro per un massimo di tre volte, anche in anni accademici
+non consecutivi.
+
+2. In caso di nuova iscrizione al semestre filtro, gli studenti che hanno già frequentato il predetto
+semestre in un precedente anno accademico sono esonerati dagli obblighi di frequenza del semestre
+filtro dell’anno accademico di nuova iscrizione, anche in deroga alle disposizioni dei regolamenti
+didattici di Ateneo.
+
+
+
+
+                                                     18
+            Il Ministro dell’università e della ricerca
+                                               Art. 17
+   (Informativa sul trattamento dei dati personali ai sensi degli articoli 13 e 14 del Regolamento
+                                           UE 679/2016)
+
+1. Le informazioni sul trattamento dei dati personali, ai sensi degli articoli 13 e 14 del Regolamento
+(UE) 2016/679 del Parlamento europeo e del Consiglio, del 27 aprile 2016, sono rese disponibili sul
+sito istituzionale del Ministero e all’interno del portale Universitaly.
+
+
+                                               Art. 18
+                      (Scuola superiore Sant’Anna di Pisa e Accademie militari)
+
+1. Gli studenti allievi della Scuola superiore Sant’Anna di Pisa che intendono avvalersi della riserva
+di posti prevista nella convenzione stipulata con l'Università di Pisa devono iscriversi al semestre
+filtro in una delle sedi universitarie statali e superare gli esami con un punteggio complessivo pari o
+superiore a quello dell’ultimo avente titolo all’immatricolazione al secondo semestre del corso di
+laurea magistrale a ciclo unico in medicina e chirurgia presso l’Università di Pisa.
+
+2. Le disposizioni di cui al presente decreto non si applicano ai candidati dell'Accademia navale di
+Livorno, dell'Accademia militare di Modena e dell'Accademia aeronautica di Pozzuoli che intendono
+avvalersi della riserva di posti prevista rispettivamente dalle Università di Pisa, di Bologna e di
+Modena - Reggio Emilia e di Napoli “Federico II”, tenuto conto che i relativi bandi di concorso,
+secondo le intese intercorse con il Ministero dell'Università e della Ricerca, prevedono la
+somministrazione di domande individuate con decreto del Ministero della difesa con riferimento ai
+Syllabus di cui all’articolo 13, comma 2, e che, in quanto tali, soddisfano le condizioni per l'accesso
+ai corsi di laurea magistrale previsti dalla normativa che li disciplina.
+
+
+                                                Art. 19
+                                       (Norme finali e transitorie)
+
+1. Le università, in relazione ai corsi afferenti alle Classi LM-41, LM-46 e LM-42 sono tenute ad
+adeguare i piani di studio, al fine di erogare nel semestre filtro gli insegnamenti di cui all’articolo 6,
+comma 2. A partire dall’anno accademico 2027/2028, le università avviano le procedure per
+l’adeguamento altresì dei piani di studio dei corsi affini.
+
+
+2. Gli avvisi e le notizie, relativi al semestre filtro, caricati nell’area riservata dello studente del sito
+Universitaly, ivi comprese quelle relative alla graduatoria e alla sede di assegnazione, hanno, a tutti
+gli effetti, valore di notifica nei confronti dello studente. Lo studente ha l’onere di consultare la
+
+
+
+                                                     19
+           Il Ministro dell’università e della ricerca
+propria area personale, e la mancata consultazione esonera l’Amministrazione da qualunque
+responsabilità in ordine alla mancata conoscenza di quanto ivi pubblicato.
+
+3. A decorrere dalla data di entrata in vigore del presente decreto, cessano di avere efficacia i decreti
+del Ministro dell’università e della ricerca 30 maggio 2025, n. 418; 20 giugno 2025, n. 431; 16 luglio
+2025, n. 454; 4 agosto 2025, n. 557; 20 ottobre 2025, n. 754 e 22 dicembre 2025, n. 1115, nonché il
+comma 1 dell’art. 5 del decreto del Ministro dell’università e della ricerca dell’11 luglio 2025, n. 447.
+
+
+
+
+                                                        IL MINISTRO
+                                              DELL’UNIVERSITÁ E DELLA RICERCA
+                                                        Sen. Anna Maria Bernini
+
+                                       Firmato digitalmente da
+                                       BERNINI ANNA MARIA
+                                       C=IT
+                                       O=MINISTERO
+                                       DELL'UNIVERSITA' E DELLA
+                                       RICERCA
+
+
+
+
+                                                   20
+

@@ -1,0 +1,263 @@
+URL: https://www.mur.gov.it/sites/default/files/2025-06/Decreto%20MInisteriale%20n.%20418%20Syllabus%20Chimica%20e%20Propedeutica%20Biochimica.pdf | retrieved: 2026-10-23
+NOTE: text extracted with pdftotext -layout from the MUR PDF. Some MUR PDFs embed fonts with broken ligature maps, so 'ti'/'tt'/'tti'/'dd' may appear as '/', '?', '7', 'D', 'B', 'H', '1', '6', 'S'. The text is otherwise unaltered.
+
+                  INSEGNAMENTO DI CHIMICA E PROPEDEUTICA BIOCHIMICA
+
+
+Lingua di Insegnamento: Italiano
+
+Prerequisi : sono richieste conoscenze di matema ca, ﬁsica, chimica e biologia che rispondono alla
+preparazione promossa dalle is tuzioni scolas che che organizzano a vità educa ve e dida che coeren
+con le Indicazioni nazionali per i licei e con le linee guida per gli is tu tecnici e per gli is tu professionali
+
+
+
+Obie vi Generali del Corso Integrato
+
+ Fornire le basi per la comprensione delle leggi fondamentali che governano la materia e le sue
+ trasformazioni con particolare attenzione ai fenomeni biologici a livello atomico e molecolare, in relazione
+ alle applicazioni biomediche.
+
+
+Obie vi speciﬁci del Corso Integrato
+
+
+
+ Conoscenza e comprensione
+ Al termine del corso lo studente sarà in grado di:
+      - descrivere la stru!ura e le trasformazioni della materia e interpretare i fenomeni molecolari che
+         trovano un riscontro negli organismi viven , con par colare riguardo agli equilibri acido-base, ai
+         tamponi ﬁsiologici, alle leggi dei gas e alla solubilità in equilibri eterogenei, ai fenomeni osmo ci e
+         alle proprietà delle soluzioni e alle reazioni di ossidoriduzione
+      - riconoscere le principali classi di compos organici e i diversi gruppi funzionali, descrivendone le
+         proprietà chimico-ﬁsiche e la rea vità, anche in relazione alle funzioni delle macromolecole
+         biologiche
+      - riconoscere le diverse classi di molecole di interesse biologico, descrivendone le stru!ure e
+         sapendone indicare le funzioni
+
+ Capacità di applicare conoscenza e comprensione
+ Al termine del corso lo studente sarà in grado di:
+
+     -   riconoscere la pologia di legami chimici ed eseguire semplici bilanciamen delle reazioni
+     -   eseguire semplici ma fondamentali calcoli sulle concentrazioni delle soluzioni e osmolarità
+     -   applicare le conoscenze acquisite nell’ambito della termodinamica ai processi di trasformazione
+         chimico-ﬁsica di interesse biomedico
+     -   applicare le conoscenze acquisite ai processi che governano la respirazione, il mantenimento
+         dell’equilibrio osmo co, gli equilibri acido-base dei ﬂuidi biologici
+     -   scrivere e riconoscere le formule e i legami chimici dei principali compos organici di interesse
+         biologico
+     -   applicare la conoscenza dei meccanismi delle reazioni dei compos organici alla comprensione
+         delle reazioni biochimiche e prevedere la rea vità delle biomolecole sulla base dei loro gruppi
+         funzionali
+
+ Autonomia di giudizio
+ Al termine del corso lo studente sarà in grado di:
+     1. valutare cri camente le informazioni
+     2. formare opinioni informate
+     3. prendere decisioni autonome
+
+ Abilità comunica ve:
+ Al termine del corso lo studente sarà in grado di:
+      1. esprimere in modo chiaro e eﬃcace le proprie informazioni e conoscenze
+
+ Capacità di apprendimento
+ Al termine del corso lo studente sarà in grado di:
+
+     1. apprendere in modo autonomo e con nuo
+     2. aggiornare le proprie competenze e conoscenze
+
+
+
+Obie vi speciﬁci di apprendimento
+
+Obie vi forma vi speciﬁci descri      per unità dida che:
+
+ Unità dida ca 1. La struttura dell’atomo, la tavola periodica degli elementi e i legami chimici
+ (impegno dida co valutato in CFU =0.5)
+ Descrivere e interpretare:
+     - La costituzione della materia. Fondamenti della teoria atomica. Struttura del nucleo atomico,
+         neutroni e protoni. Numero atomico e numero di massa. Massa atomica. Gli isotopi.
+     - Cenni alle proprietà magnetiche del nucleo come base per lo strumento diagnostico della
+         Risonanza Magnetica Nucleare.
+     - Elementi e composti: mole e molecola. I numeri quantici, gli orbitali, il principio di esclusione di
+         Pauli ed il principio di indeterminazione di Heisenberg. Regola di Hund. La configurazione
+         elettronica degli elementi.
+     - I radioisotopi e la radioattività. Il decadimento radioattivo (radiazioni α, β, positroni, gamma, X):
+         unità di misura anche rispetto all’effetto di tossicità biologica, correlazioni di interesse per
+         applicazioni biomediche.
+     - Il sistema periodico degli elementi. Proprietà periodiche: configurazione elettronica esterna,
+         volume atomico, potenziale di ionizzazione, affinità elettronica, elettronegatività. Elementi chimici
+         di rilevanza biologica. La regola dell’ottetto.
+     - Concetto di molecola e di ione poliatomico. Massa molecolare.
+     - Il legame chimico. Orbitale di legame. Legame covalente: omopolare, eteropolare, dativo. Legame
+         ad elettroni delocalizzati. Il legame ionico. Ibridazione degli orbitali: sp, sp2, sp3. Teoria VSEPR.
+         Orbitali molecolari sigma e pi-greco. Angolo di legame.
+     - Nomenclatura e struttura dei principali composti inorganici di interesse biomedico. Esempi di
+         struttura di composti chimici binari e ternari, scrittura e riconoscimento delle formule di struttura
+         (ossidi, acidi, basi, sali). Nomenclatura IUPAC e tradizionale. Interazioni deboli (legame idrogeno e
+         forze di van der Waals) e interazioni idrofobiche.
+
+
+ Unità dida ca 2. Stati di aggregazione della materia e principi di termodinamica (impegno dida co
+ valutato in CFU =0.5)
+ Descrivere e interpretare:
+     - Lo stato solido: solidi ionici, molecolari, covalenti e metallici.
+     - Lo stato aeriforme. Temperatura assoluta. Leggi di Boyle, Charles e Gay Lussac. Equazione di stato
+         dei gas perfetti. I gas reali e l’equazione di Van der Waals. La legge di Avogadro. Il concetto di mole
+         e il numero di Avogadro. Cenni sulla teoria cinetica dei gas. La legge di Maxwell-Boltzmann.
+     - Gas e vapori. L’equilibrio gas-liquido: la pressione di vapore.
+    -   Lo stato liquido: ebollizione, calore di evaporazione. Diagrammi di fase: confronto tra acqua ed
+        anidride carbonica. Tensione superficiale. Rilevanza dei cambiamenti di stato in medicina:
+        l’evaporazione del sudore e la termoregolazione. Esempio di applicazione della legge dei gas alla
+        respirazione.
+    -   I sistemi termodinamici. I principi della termodinamica. Definizioni delle funzioni di stato. Entalpia.
+        Trasformazioni esotermiche ed endotermiche (cambiamenti di stato). Entropia. Energia libera di
+        Gibbs. Trasformazioni reversibili e irreversibili (esoergoniche, endoergoniche). Energia libera ed
+        equilibrio chimico.
+
+
+Unità dida ca 3. Miscele e soluzioni e le proprietà colligative delle soluzioni (impegno dida co
+valutato in CFU=1)
+Descrivere e interpretare:
+    - Tipi di miscele: omogenee ed eterogenee (dispersioni, sospensioni, colloidi, aerosol).
+    - Tipi di soluzioni: soluzioni gassose, soluzioni liquide, soluzioni solide.
+    - Solubilità: l’acqua come solvente. L’acqua e i soluti ionici, proprietà degli elettroliti. Gli elettroliti
+        nei fluidi biologici. L’acqua e i soluti molecolari. Solubilità dei gas nei liquidi: la legge di Henry.
+    - Unità di misura della concentrazione delle soluzioni: percentuali peso/peso, peso/volume,
+        volume/volume. Molarità, frazione molare. Il concetto di equivalente in ambito biomedico.
+    - La concentrazione nelle miscele di gas: la legge di Dalton. L’aria e la sua composizione, aria
+        inspirata e aria espirata. Esempi di soluzioni rilevanti per aspetti biomedici.
+    - Definizione di proprietà colligativa. Interazioni tra solvente e soluto. La legge di Raoult.
+        Abbassamento della pressione di vapore. Innalzamento della temperatura di ebollizione.
+        Abbassamento della temperatura di congelamento.
+    - Soluzioni elettrolitiche e fattore correttivo di van't Hoff. Tipi di membrane e passaggio di soluti:
+        diffusione, osmosi e osmolarità. Confronto tra le proprietà osmotiche delle soluzioni.
+    - L’osmolarità dei liquidi intracellulari ed extracellulari. Soluzioni isotoniche, ipertoniche e
+        ipotoniche.
+
+
+Unità dida ca 4. Generalità sulle reazioni chimiche, cine ca ed equilibrio chimico (impegno dida co
+valutato in CFU=0.5)
+Descrivere e interpretare:
+    - Definizioni delle reazioni chimiche.
+    - Conservazione di massa, energia e carica ele!rica. Reversibilità. Tipi di reazioni chimiche. Reazioni
+        di neutralizzazione. Reazioni di precipitazione. Reazioni di ossido-riduzione. Bilanciamento delle
+        reazioni.
+    - Definizione di cinetica di reazione. Reazioni a più stadi. Fattori che influenzano la velocità di una
+        reazione. Ordine di una reazione e molecolarità. La legge di Arrhenius e la teoria degli urti efficaci.
+        L’energia di attivazione. La teoria dello stato di transizione. I catalizzatori: catalizzatori omogenei
+        ed eterogenei.
+    - Cenni sui catalizzatori biologici: gli enzimi.
+    - Equilibrio chimico.
+    - Reazioni reversibili ed irreversibili. Costante di equilibrio e legge d'azione di massa. Equilibrio
+        chimico omogeneo ed eterogeneo. Differenza tra equilibrio chimico e stato stazionario. Principio
+        dell'equilibrio mobile. Il quoziente di reazione. Effetto della temperatura sulla costante di
+        equilibrio. Equilibri multipli. Equilibri eterogenei solido-liquido. Prodotto di solubilità, effetto dello
+        ione in comune. Rilevanza degli equilibri chimici nei processi biologici.
+
+
+Unità dida ca 5. Acidi, basi, sali, pH, soluzioni tampone; reazioni di ossido-riduzione ed ele6rochimica
+(impegno dida co valutato in CFU= 1)
+Descrivere e interpretare:
+    -   La teoria di Arrhenius. La teoria di Bronsted e Lowry. Cenni sulla teoria di Lewis. La reazione di
+        autoprotolisi dell'acqua. La Kw. Il concetto di pH e pOH. Costanti di dissociazione, Ka e Kb. Acidi
+        forti e acidi deboli, pKa e pKb. Indicatori di pH. Il pH di una soluzione di acido/base forte o di
+        acido/base debole. Acidi poliprotici e basi poliprotiche. Forza relativa di un acido e di una base.
+        Reazioni acido-base. Relazione tra la struttura chimica e la forza degli acidi. I sali, comportamento
+        acido o basico dei sali in acqua, costante di idrolisi. Solubilità e pH, esempi di interesse biomedico:
+        ossalato di calcio e fosfato di calcio. Gli argomenti saranno trattati con esempi numerici per
+        coadiuvare la comprensione dei fenomeni descritti.
+    -   Soluzioni tampone, esempi di tamponi di acidi deboli e basi deboli. L’equazione di Henderson e
+        Hasselbalch. Efficienza di un sistema tampone. L’equilibrio acido-base nei fluidi biologici: il
+        tampone acido carbonico/bicarbonato, il tampone diidrogeno fosfato/ idrogenofosfato, le
+        proteine come sistemi tampone. Il pH del sangue e i tamponi del sangue. L’importanza e la
+        funzione dei tamponi in ambito biomedico.
+    -   Il numero di ossidazione e le reazioni di ossido-riduzione. I sistemi elettrochimici. Definizione di
+        anodo e catodo. Tipi di conduttori.
+    -   I semielementi. I potenziali redox standard. L’equazione di Nernst. Reazioni spontanee e lavoro
+        chimico: relazione tra variazione di energia libera di Gibbs e differenza di potenziale. La relazione
+        tra potenziali di riduzione e costante di equilibrio. Pile a concentrazione.
+    -   Importanza delle reazioni di ossido-riduzione in ambito biomedico.
+
+
+Unità dida ca 6. Proprietà del carbonio e reattività dei composti organici, idrocarburi, alogenuri
+alchilici, idrocarburi aromatici e derivati (impegno dida co valutato in CFU= 0.5)
+Descrivere e interpretare:
+    - Proprietà e ibridazione del carbonio. I gruppi funzionali. Rappresentazione dei composti carboniosi
+    - Regole generali di nomenclatura IUPAC.
+    - Ossidazioni e riduzioni in chimica organica. Tipi di reazioni organiche. Effetto induttivo: elettron
+          donatore, elettron attrattore. Effetto di delocalizzazione o mesomero.
+    - Rottura di un legame: omolitico ed eterolitico. Carbocationi e carboanioni. Stabilità dei
+          carbocationi. Nucleofili ed elettrofili.
+    - Acidità e basicità dei composti organici.
+    - Idrocarburi saturi ed insaturi.
+    - Alcani e cicloalcani: nomenclatura IUPAC, proprietà chimico-fisiche e reazioni caratteristiche.
+          Tensione di legame nei cicloalcani. Reazioni degli alcani: ossidazione, sostituzione radicalica.
+    - Alcheni: nomenclatura IUPAC, proprietà chimico-fisiche e principali reazioni (addizione elettrofila,
+          stabilità dei carbocationi). Delocalizzazione elettronica e dieni coniugati.
+    - Idrocarburi ciclici ed eterociclici. Gli alogeno derivati degli idrocarburi. Le reazioni degli alogenuri
+          alchilici: sostituzione nucleofila con meccanismo SN2 e SN1, reazioni di eliminazione con
+          meccanismo E1 ed E2.
+    - Il benzene, composti aromatici e regola di Huckel.
+    - Nomenclatura degli idrocarburi aromatici. Derivati del benzene. Reazioni del benzene:
+          sostituzione elettrofila aromatica. Effetto attivante e disattivante dei sostituenti.
+    - Tossicità dei composti aromatici.
+
+
+Unità dida ca 7. I gruppi funzionali e isomerie: alcoli, fenoli, eteri, tioli e tioeteri; aldeidi e chetoni;
+acidi carbossilici e derivati, ammine e ammidi (impegno dida co valutato in CFU= 1)
+Descrivere e interpretare:
+    - Proprietà chimico-fisiche e nomenclatura. Reazioni degli alcoli: disidratazione, ossidazione
+         sostituzione nucleofila. Alcol di rilevanza biomedica: l’etanolo. Alcoli aromatici, fenolo e derivati;
+         acidità del fenolo. Eteri. Tioli e tioeteri. Epossidi.
+    -   Proprietà chimico-fisiche e nomenclatura delle aldeidi e dei chetoni. Reazioni delle aldeidi e dei
+        chetoni: ossidazione, riduzione, reazioni di addizione nucleofila. Emiacetali ed emichetali, acetali
+        e chetali.
+    -   Proprietà dell’idrogeno in alfa al carbonile. Tautomeria cheto-enolica e sua importanza biologica.
+    -   Reazione di condensazione aldolica. Chinoni ed idrochinoni. Un esempio di rilevanza biomedica:
+        l’ubichinone.
+    -   Proprietà chimico-fisiche e nomenclatura. Reazioni degli acidi carbossilici: salificazione,
+        sostituzione nucleofila acilica.
+    -   Derivati degli acidi carbossilici: alogenuri acilici, anidridi, esteri e tioesteri, ammidi, acilfosfati.
+        Esterificazione di Fisher. Idrolisi basica e acida degli esteri. Condensazione di Claisen. Reazioni degli
+        acidi carbossilici contenenti altri gruppi funzionali: formazione dei lattoni e decarbossilazione dei
+        chetoacidi.
+    -   I derivati organici dell’acido fosforico. L’importanza degli acilfosfati in Biochimica.
+    -   Proprietà chimico-fisiche e nomenclatura delle ammine. Basicità e reazioni delle ammine:
+        nucleofilicità delle ammine, alchilazione. Nitrosammine. Ammonio quaternario: la colina. Immine
+        o basi di Shiff.
+    -   Esempi di importanza biomedica: l’urea.
+    -   Reazioni di idrolisi delle ammidi.
+    -   Definizione e tipi di isomeria: isomeri costituzionali e stereoisomeri (isomeri conformazionali e
+        configurazionali).
+    -   Potere ottico rotatorio specifico. Convenzione di Fischer e convenzione destrogira/levogira.
+    -   Diasteromeri, epimeri, anomeri e mesocomposti. Miscele racemiche. Cenni sulle regole di priorità.
+        Convenzione E/Z e convenzione R/S
+    -   Significato degli enantiomeri, diastereoisomeri e forme meso nelle scienze biomediche.
+
+
+
+Unità dida ca 8. Amminoacidi e proteine, carboidra , lipidi, nucleo di e polinucleo di (impegno
+dida co valutato in CFU= 1)
+Descrivere e interpretare:
+    - Struttura e nomenclatura degli amminoacidi, nomi abbreviati. Classificazione degli amminoacidi in
+        base al gruppo R. Amminoacidi essenziali o non essenziali.
+    - Identificazione e caratteristiche delle catene laterali degli amminoacidi proteici. Stereochimica
+        degli amminoacidi e rappresentazione secondo la convenzione di Fischer.
+    - Proprietà acido-base degli amminoacidi e punto isoelettrico.
+    - ll legame peptidico e sua formazione. Caratteristiche del legame peptidico. Livelli strutturali delle
+        proteine: struttura primaria, secondaria, terziaria e quaternaria. Interazioni deboli e ponti
+        disolfuro.
+    - Struttura, nomenclatura e stereochimica dei carboidrati. Monosaccaridi: isomeri, epimeri,
+        anomeri e tautomeri. Amminozuccheri. Ciclizzazione dei monosaccaridi. Mutarotazione. Reazioni
+        dei monosaccaridi: ossidazione, riduzione, reazione di Maillard e prodotti di Amadori,
+        condensazione. Il legame glicosidico. Disaccaridi. Oligosaccaridi e loro derivati. Polisaccaridi:
+        omopolisaccaridi (amido, cellulosa, glicogeno) ed eteropolisaccaridi (glicosamminoglicani).
+    - Struttura e nomenclatura degli acidi grassi. Acidi grassi saturi ed insaturi. Acidi grassi essenziali.
+        Insaturazione e proprietà fisiche e chimiche. I trigliceridi e la loro funzioni: oli e grassi. Lipidi
+        complessi: glicerofosfolipidi, sfingolipidi, glicolipidi. Colesterolo e derivati steroidei di interesse
+        biomedico.
+    - Basi azotate: definizione e caratteristiche strutturali dei nucleosidi e dei nucleotidi Nucleotidi e
+        polinucleotidi. Struttura chimica ed importanza biologica dell’ATP e di altri nucleotidi liberi.
+        Legame fosfodiesterico.
+
